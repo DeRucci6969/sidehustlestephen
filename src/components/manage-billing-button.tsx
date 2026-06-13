@@ -1,0 +1,50 @@
+"use client";
+
+import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+
+export function ManageBillingButton() {
+  const [status, setStatus] = useState<"idle" | "loading" | "setup" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  async function openPortal() {
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/portal", { method: "POST" });
+      const data = (await response.json()) as { url?: string; mode?: string; message?: string; error?: string };
+
+      if (data.url) {
+        window.location.href = data.url;
+        return;
+      }
+
+      if (data.mode === "setup_required") {
+        setStatus("setup");
+        setMessage(data.message ?? "Billing portal setup is not configured yet.");
+        return;
+      }
+
+      setStatus("error");
+      setMessage(data.error ?? "Billing portal is not available for this account yet.");
+    } catch {
+      setStatus("error");
+      setMessage("Billing portal request failed.");
+    }
+  }
+
+  return (
+    <div>
+      <button
+        onClick={openPortal}
+        disabled={status === "loading"}
+        className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[var(--obsidian)] px-5 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(7,10,15,0.18)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+      >
+        {status === "loading" ? "Opening..." : "Manage billing"}
+        <ArrowUpRight size={16} />
+      </button>
+      {message ? <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">{message}</p> : null}
+    </div>
+  );
+}

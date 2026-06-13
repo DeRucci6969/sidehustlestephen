@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "cafe-menu-refresh-package",
+    "file": "/visuals/pack-cards/cafe-menu-refresh-package-v2.jpg",
+    "title": "Coffee shop interior",
+    "source": "https://images.unsplash.com/photo-1554118811-1e0d58224f24",
+    "library": "Unsplash",
+    "search": "coffee shop",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "google-business-profile-rescue",
+    "file": "/visuals/pack-cards/google-business-profile-rescue-v2.jpg",
+    "title": "Small business storefront",
+    "source": "https://images.unsplash.com/photo-1744813446945-e56c932be648",
+    "library": "Unsplash",
+    "search": "storefront",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "gym-churn-report",
+    "file": "/visuals/pack-cards/gym-churn-report-v2.jpg",
+    "title": "Gym training space",
+    "source": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f",
+    "library": "Unsplash",
+    "search": "gym interior",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "shopify-cart-audit",
+    "file": "/visuals/pack-cards/shopify-cart-audit-v2.jpg",
+    "title": "Packaging and shipping boxes",
+    "source": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+    "library": "Unsplash",
+    "search": "packaging boxes",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "ugc-brief-generator",
+    "file": "/visuals/pack-cards/ugc-brief-generator-v2.jpg",
+    "title": "Camera production setup",
+    "source": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+    "library": "Unsplash",
+    "search": "camera desk",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "realtor-suburb-snapshot",
+    "file": "/visuals/pack-cards/realtor-suburb-snapshot-v2.jpg",
+    "title": "Residential property exterior",
+    "source": "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+    "library": "Unsplash",
+    "search": "real estate house",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "ai-inbox-triage-trades",
+    "file": "/visuals/pack-cards/ai-inbox-triage-trades-v2.jpg",
+    "title": "Trade tools and jobsite work",
+    "source": "https://images.unsplash.com/photo-1581092160562-40aa08e78837",
+    "library": "Unsplash",
+    "search": "trades tools",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "review-testimonial-service",
+    "file": "/visuals/pack-cards/review-testimonial-service-v2.jpg",
+    "title": "Customer support and review workflow",
+    "source": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b",
+    "library": "Unsplash",
+    "search": "customer support laptop",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "manual-workflow-concierge",
+    "file": "/visuals/pack-cards/manual-workflow-concierge-v2.jpg",
+    "title": "Team planning meeting",
+    "source": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0",
+    "library": "Unsplash",
+    "search": "office planning",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "airbnb-guest-guide-refresh",
+    "file": "/visuals/pack-cards/airbnb-guest-guide-refresh-v2.jpg",
+    "title": "Rental apartment interior",
+    "source": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+    "library": "Unsplash",
+    "search": "apartment interior",
+    "license": "Unsplash License"
+  }
+]

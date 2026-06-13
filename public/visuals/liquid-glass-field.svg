@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.42" stop-color="#edf5f8"/>
+      <stop offset="0.72" stop-color="#fff4ea"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffc08b" stop-opacity="0.16"/>
+      <stop offset="0.48" stop-color="#ec6a1e" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dfeef5" stop-opacity="0.86"/>
+      <stop offset="0.5" stop-color="#b9d3df" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.12"/>
+      </feComponentTransfer>
+    </filter>
+    <clipPath id="wave">
+      <path d="M0 862C218 748 362 900 562 783C780 657 929 547 1194 660C1510 794 1620 506 1885 586C2134 662 2208 831 2400 760V1500H0Z"/>
+    </clipPath>
+  </defs>
+  <rect width="2400" height="1500" fill="url(#sky)"/>
+  <g opacity="0.88">
+    <path d="M-140 1040C180 860 462 1120 780 922C1104 720 1295 483 1692 640C1960 746 2178 690 2520 490" fill="none" stroke="#ffffff" stroke-width="132" stroke-linecap="round" opacity="0.72"/>
+    <path d="M-120 1115C180 932 484 1184 820 1000C1140 826 1376 642 1724 778C2008 888 2176 860 2520 690" fill="none" stroke="#d7e8ef" stroke-width="76" stroke-linecap="round" opacity="0.62"/>
+    <path d="M-180 920C180 730 478 962 806 772C1136 582 1328 370 1742 512C2028 610 2178 560 2540 352" fill="none" stroke="#ffffff" stroke-width="58" stroke-linecap="round" opacity="0.78"/>
+  </g>
+  <g clip-path="url(#wave)" opacity="0.9">
+    <rect y="500" width="2400" height="1000" fill="url(#blue)"/>
+    <path d="M-120 1280C210 1055 448 1372 760 1138C1115 872 1314 760 1640 945C1962 1128 2112 1006 2520 820" fill="none" stroke="#ffffff" stroke-width="70" stroke-linecap="round" opacity="0.62"/>
+    <path d="M-160 1376C230 1120 524 1442 890 1210C1240 988 1438 852 1802 1026C2055 1147 2238 1060 2528 930" fill="none" stroke="#b7d3df" stroke-width="38" stroke-linecap="round" opacity="0.48"/>
+    <path d="M-100 1190C244 982 520 1250 846 1014C1120 816 1374 722 1718 874C1984 992 2232 920 2520 760" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" opacity="0.5"/>
+  </g>
+  <g opacity="0.65" filter="url(#soft)">
+    <path d="M1120 170L1780 70L2135 536L1530 710Z" fill="url(#copper)"/>
+    <path d="M1540 255L2178 354L2240 800L1740 662Z" fill="#ffffff" opacity="0.45"/>
+    <path d="M284 180L786 118L942 560L400 650Z" fill="#ffffff" opacity="0.5"/>
+  </g>
+  <g opacity="0.82">
+    <path d="M1296 246L1832 164L2092 498L1552 592Z" fill="#ffffff" opacity="0.34"/>
+    <path d="M1328 274L1810 204L2038 488L1560 560Z" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+    <path d="M1468 330L1870 272L1958 384L1540 452Z" fill="url(#copper)" opacity="0.8"/>
+    <path d="M392 258L782 210L890 512L472 574Z" fill="#ffffff" opacity="0.34"/>
+    <path d="M420 294L762 250L842 494L502 536Z" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.58"/>
+  </g>
+  <rect width="2400" height="1500" filter="url(#grain)" opacity="0.42"/>
+</svg>
