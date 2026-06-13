@@ -48,6 +48,14 @@ Required before live auth/payments:
 - `STRIPE_WEBHOOK_SECRET`
 - `STRIPE_PRICE_ID`
 
+Supabase database setup:
+
+- Apply `supabase/migrations/20260613000000_launchpad_membership.sql` in the Supabase SQL editor or through the Supabase CLI.
+- Enable email magic-link auth in Supabase Auth.
+- Add the deployed site URL and `/auth/callback` redirect URL in Supabase Auth settings.
+- Use the publishable/anon key for `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+- Use the service-role secret for `SUPABASE_SERVICE_ROLE_KEY`; Stripe webhooks need it to write subscription status.
+
 ## Product Decisions
 
 - Product: Side Hustle Stephen - The Launchpad
