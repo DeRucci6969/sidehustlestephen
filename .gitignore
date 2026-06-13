@@ -16,3 +16,4 @@ yarn-error.log*
 tmp/
 __pycache__/
 *.py[cod]
+.vercel
