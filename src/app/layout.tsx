@@ -1,32 +1,45 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SiteSchema } from "@/components/site-schema";
+import { UnlockActivityToast } from "@/components/unlock-activity-toast";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
-  title: "Side Hustle Stephen - The Launchpad",
-  description: "The full business packs, launch assets, and playbooks behind Side Hustle Stephen's short-form ideas.",
+  metadataBase: new URL(siteConfig.url),
+  title: siteConfig.name,
+  description: siteConfig.description,
   openGraph: {
-    title: "Side Hustle Stephen - The Launchpad",
+    title: siteConfig.name,
     description: "Unlock the full business packs, launch assets, scripts, and playbooks behind Side Hustle Stephen's short-form ideas.",
     type: "website",
     url: "/",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Side Hustle Stephen",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Side Hustle Stephen - The Launchpad",
-    description: "Premium side hustle launch packs, scripts, and playbooks for $12/month.",
+    title: siteConfig.name,
+    description: "Premium side hustle launch packs, scripts, and playbooks for $9/month.",
+    images: [siteConfig.ogImage],
   },
 };
 
@@ -36,10 +49,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="antialiased">
         <SiteSchema />
         {children}
+        <UnlockActivityToast />
+        <Analytics />
       </body>
     </html>
   );

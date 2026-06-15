@@ -1,54 +1,60 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowUpRight, Clock3, LockKeyhole, Target } from "lucide-react";
+import { ArrowUpRight, Clock3, LockKeyhole, Target, WalletCards } from "lucide-react";
 import type { BusinessPack } from "@/data/packs";
 
 export function PackCard({ pack, featured = false }: { pack: BusinessPack; featured?: boolean }) {
   return (
     <Link
       href={`/packs/${pack.slug}`}
-      className="glass group relative block h-full overflow-hidden rounded-[2rem] p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_34px_84px_rgba(32,48,62,0.18)]"
+      className="glass pack-card-surface group relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-lg p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_54px_rgba(0,0,0,0.2)]"
     >
-      <div className="mini-visual absolute inset-x-4 top-4 h-36 overflow-hidden rounded-[1.5rem] transition duration-300 group-hover:scale-[1.015]">
-        <Image
-          src={`/visuals/pack-cards/${pack.slug}-v2.jpg`}
-          alt=""
-          fill
-          sizes="(min-width: 1024px) 360px, (min-width: 768px) 45vw, calc(100vw - 4rem)"
-          className="object-cover contrast-[1.04] saturate-[0.98]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/18 via-transparent to-white/20" />
-        <div className="absolute inset-0 ring-1 ring-inset ring-white/65" />
-      </div>
-      <div className="relative pt-44">
-        <div className="mb-8 flex items-start justify-between gap-4">
+      <div className="relative z-10 flex h-full flex-col">
+        <div className="mb-7 flex items-start justify-between gap-4">
           <div className="flex flex-wrap gap-2">
-            <span className="frosted-pill rounded-full px-3 py-1 text-xs font-semibold text-[var(--graphite)]">{pack.category}</span>
-            {featured ? <span className="rounded-full bg-[var(--orange-glass)] px-3 py-1 text-xs font-semibold text-[var(--safety-orange)]">Featured</span> : null}
+            <span className="rounded-full border border-[rgba(22,32,50,0.12)] bg-white/76 px-3 py-1 text-xs font-bold text-[var(--graphite)]">{pack.category}</span>
+            {featured ? <span className="rounded-full border border-[rgba(0,148,255,0.16)] bg-[var(--orange-glass)] px-3 py-1 text-xs font-bold text-[var(--safety-orange)]">Featured</span> : null}
           </div>
-          <span className="rounded-full bg-[var(--obsidian)] p-2 text-white shadow-lg transition group-hover:rotate-12">
+          <span className="rounded-full bg-[var(--safety-orange)] p-2 text-white shadow-lg shadow-[rgba(0,148,255,0.18)] transition group-hover:rotate-12">
             <ArrowUpRight size={16} />
           </span>
         </div>
-        <h3 className="text-2xl font-bold leading-none tracking-[-0.035em] text-[var(--navy-ink)]">{pack.title}</h3>
-        <p className="premium-copy mt-3 min-h-12 text-sm leading-6">{pack.hook}</p>
-        <div className="mt-6 space-y-2">
-          <div className="flex items-center gap-2 rounded-2xl bg-white/58 px-3 py-3 text-xs font-semibold ring-1 ring-white/70">
+
+        <div className="dark-pack-panel rounded-lg p-5">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Launch pack</p>
+          <h3 className="mt-3 break-words text-3xl font-semibold leading-[1.02] tracking-normal text-white">{pack.title}</h3>
+          <p className="mt-4 min-h-12 text-sm leading-6 text-white/70">{pack.hook}</p>
+        </div>
+
+        <div className="my-6 rounded-lg border border-[rgba(22,32,50,0.1)] bg-white/76 p-4 text-[var(--navy-ink)] shadow-[inset_0_1px_0_rgba(255,255,255,0.82),0_12px_28px_rgba(22,32,50,0.06)]">
+          <p className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[var(--graphite)]">First buyer</p>
+          <div className="mt-3 flex items-start gap-3">
             <Target size={14} className="shrink-0 text-[var(--safety-orange)]" />
-            <span className="truncate">{pack.buyer}</span>
-          </div>
-          <div className="grid grid-cols-3 gap-2 text-xs font-semibold">
-            <span className="rounded-2xl bg-white/58 px-3 py-3 ring-1 ring-white/70">{pack.startupCost}</span>
-            <span className="flex items-center gap-1 rounded-2xl bg-white/58 px-3 py-3 ring-1 ring-white/70">
-              <Clock3 size={13} className="shrink-0 text-[var(--graphite)]" />
-              <span>{pack.timeToFirstSale}</span>
-            </span>
-            <span className="rounded-2xl bg-white/58 px-3 py-3 ring-1 ring-white/70">{pack.difficulty}</span>
+            <p className="text-sm font-semibold leading-5 text-[var(--navy-ink)]">{pack.buyer}</p>
           </div>
         </div>
-        <div className="mt-5 flex items-center gap-2 text-xs font-semibold text-[var(--graphite)]">
-          <LockKeyhole size={14} />
-          {pack.assets.length} member assets included
+
+        <div className="mt-auto space-y-3">
+          <div className="grid grid-cols-1 gap-2 text-xs font-bold text-[var(--graphite)] sm:grid-cols-3">
+            <span className="rounded-lg bg-white/76 px-3 py-3 ring-1 ring-[rgba(22,32,50,0.08)]">
+              <WalletCards size={13} className="mb-1 text-[var(--safety-orange)]" />
+              {pack.startupCost}
+            </span>
+            <span className="rounded-lg bg-white/76 px-3 py-3 ring-1 ring-[rgba(22,32,50,0.08)]">
+              <Clock3 size={13} className="mb-1 text-[var(--safety-orange)]" />
+              {pack.timeToFirstSale}
+            </span>
+            <span className="rounded-lg bg-white/76 px-3 py-3 ring-1 ring-[rgba(22,32,50,0.08)]">
+              <span className="mb-1 block font-mono text-[0.62rem] uppercase tracking-[0.12em] text-[var(--safety-orange)]">Level</span>
+              {pack.difficulty}
+            </span>
+          </div>
+          <div className="flex items-center justify-between gap-3 border-t border-[rgba(22,32,50,0.1)] pt-4">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[var(--graphite)]">
+              <LockKeyhole size={14} />
+              {pack.assets.length} member assets
+            </div>
+            <span className="text-xs font-bold text-[var(--safety-orange)]">View pack</span>
+          </div>
         </div>
       </div>
     </Link>

@@ -49,8 +49,8 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
 
   return (
     <div>
-      <div className="glass mb-7 grid gap-3 rounded-[2rem] p-3 md:grid-cols-[1fr_auto]">
-        <label className="frosted-pill flex h-12 min-w-0 items-center gap-3 rounded-full px-4">
+      <div className="glass mb-7 grid gap-3 rounded-lg p-3 md:grid-cols-[1fr_auto]">
+        <label className="flex h-12 min-w-0 items-center gap-3 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.78)]">
           <Search size={18} className="shrink-0 text-[var(--graphite)]" />
           <span className="sr-only">Search packs</span>
           <input
@@ -60,7 +60,7 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
             className="w-full min-w-0 bg-transparent text-sm font-medium outline-none placeholder:text-[var(--graphite)]"
           />
         </label>
-        <label className="frosted-pill flex h-12 items-center gap-3 rounded-full px-4">
+        <label className="flex h-12 items-center gap-3 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.78)]">
           <ArrowDownWideNarrow size={18} className="text-[var(--graphite)]" />
           <span className="sr-only">Sort packs</span>
           <select
@@ -85,7 +85,7 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
               className={
                 active
                   ? "accent-cta h-10 shrink-0 rounded-full px-4 text-sm font-semibold"
-                  : "frosted-pill h-10 shrink-0 rounded-full px-4 text-sm font-semibold text-[var(--graphite)]"
+                  : "h-10 shrink-0 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 text-sm font-semibold text-[var(--text-secondary)] shadow-[0_10px_28px_rgba(22,32,50,0.08)] transition hover:bg-[rgba(0,148,255,0.08)] hover:text-[var(--navy-ink)]"
               }
             >
               {item}

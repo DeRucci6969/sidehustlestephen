@@ -1,4 +1,4 @@
-# Side Hustle Stephen - The Launchpad
+# Side Hustle Stephen
 
 Next.js MVP for a premium membership archive of business launch packs.
 
@@ -24,11 +24,12 @@ http://localhost:3000
 - Dedicated pack pages with public previews
 - Locked member asset sections
 - Pricing, account, success, legal, robots, and sitemap routes
-- Magic-link-only join modal skeleton
-- Stripe Checkout route skeleton
-- Stripe webhook route skeleton
+- Magic-link-only join modal
+- Stripe Checkout subscription route
+- Stripe webhook subscription sync
 - Member download route wired to generated asset files
 - Full generated member asset library under `content/member-assets`
+- Vercel Analytics instrumentation for join, magic-link, and billing events
 
 ## Environment Setup
 
@@ -58,8 +59,8 @@ Supabase database setup:
 
 ## Product Decisions
 
-- Product: Side Hustle Stephen - The Launchpad
-- Price: $12/month
+- Product: Side Hustle Stephen
+- Price: $9/month
 - Auth: Supabase magic link only
 - Join UI: modal
 - Access: all-access subscription only

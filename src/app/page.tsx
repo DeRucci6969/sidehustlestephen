@@ -1,131 +1,115 @@
 import Link from "next/link";
-import { ArrowRight, Download, Layers, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Search } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
-import { PackCard } from "@/components/pack-card";
 import { PackMatcher } from "@/components/pack-matcher";
-import { Section } from "@/components/section";
-import { featuredPacks, newlyAddedPacks, packs, popularPacks } from "@/data/packs";
+import { QuoteCarousel } from "@/components/quote-carousel";
+import { packs, popularPacks } from "@/data/packs";
 
 export default function Home() {
+  const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
+
   return (
     <>
       <Header />
       <main>
-        <section className="mx-auto grid w-full max-w-7xl items-center gap-6 px-4 pb-10 pt-6 sm:px-8 sm:pb-14 lg:min-h-[760px] lg:grid-cols-[1.04fr_0.96fr]">
-          <div className="mobile-frame min-w-0">
-            <div className="frosted-pill mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-[var(--graphite)]">
-              <Sparkles size={16} className="text-[var(--safety-orange)]" />
-              The full packs behind the videos
-            </div>
-            <h1
-              className="display-type balanced max-w-4xl break-words"
-              style={{ fontSize: "clamp(2rem, 10vw, 8.2rem)" }}
-            >
-              <span className="block">Take the</span>
-              <span className="block">first practical</span>
-              <span className="block">step.</span>
-            </h1>
-            <p className="premium-copy mt-7 max-w-xs text-base leading-8 sm:max-w-2xl sm:text-lg">
-              Pick a business idea, download the launch assets, and make the next move with scripts, pricing, and a simple first-week plan.
-            </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <JoinButton label="Unlock all packs for $12/month" className="w-full sm:w-auto" />
-              <Link
-                href="/packs"
-                className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-[var(--obsidian)] sm:w-auto"
+        <section className="launch-shell flex w-full items-start px-4 pb-14 pt-12 sm:px-8 lg:min-h-[min(900px,calc(100svh-5rem))] lg:items-center lg:pb-20 lg:pt-8">
+          <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="mobile-frame min-w-0">
+              <h1
+                className="display-type balanced max-w-4xl break-words"
+                style={{ fontSize: "clamp(3.2rem, 8vw, 6.8rem)" }}
               >
-                Browse archive
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-            <div className="mobile-frame mt-10 grid grid-cols-2 gap-3 sm:max-w-2xl sm:grid-cols-3">
-              {[
-                ["10", "launch packs"],
-                ["31", "member assets"],
-                ["1-7", "day starters"],
-              ].map(([value, label]) => (
-                <div key={label} className="glass-soft rounded-[1.35rem] p-4">
-                  <p className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">{value}</p>
-                  <p className="mt-1 text-xs font-semibold text-[var(--graphite)]">{label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mobile-frame grid min-h-[560px] gap-4 sm:grid-cols-2 sm:grid-rows-[1.08fr_0.92fr] lg:min-h-[620px]">
-            <div className="liquid-panel glass relative overflow-hidden rounded-[2.4rem] p-6 sm:col-span-2">
-              <div className="relative flex h-full min-h-[310px] flex-col justify-between">
-                <div className="flex items-center justify-between">
-                  <span className="frosted-pill rounded-full px-4 py-2 text-sm font-bold text-[var(--safety-orange)]">All-access</span>
-                  <span className="rounded-full bg-[var(--obsidian)] px-4 py-2 font-mono text-sm text-white">$12/mo</span>
-                </div>
-                <div className="max-w-md">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Member archive</p>
-                  <h2 className="mt-3 text-5xl font-bold leading-[0.92] tracking-[-0.05em] text-[var(--navy-ink)] sm:text-6xl">Every asset in one premium vault.</h2>
-                </div>
-              </div>
-            </div>
-            <div className="glass overflow-hidden rounded-[2rem] p-5">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">What unlocks</h2>
-              <div className="mt-6 space-y-3">
-                {[
-                  ["Detailed playbooks", Layers],
-                  ["Downloadable assets", Download],
-                  ["Outreach scripts and pricing", Sparkles],
-                ].map(([label, Icon]) => (
-                  <div key={label as string} className="flex items-center gap-4 rounded-2xl bg-white/38 p-4 ring-1 ring-white/60">
-                    <Icon className="text-[var(--safety-orange)]" size={20} />
-                    <span className="font-semibold">{label as string}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="glass-ink overflow-hidden rounded-[2rem] p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/55">Start here</p>
-              <p className="mt-8 text-6xl font-bold tracking-[-0.06em]">01</p>
-              <p className="mt-3 text-sm font-medium leading-6 text-white/70">Pick a pack by buyer, cost, and time-to-first-sale, then use the included assets to launch faster.</p>
-            </div>
-          </div>
-          <div className="glass-soft rounded-[1.5rem] p-3 lg:hidden">
-            <p className="px-2 pb-3 text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Latest packs</p>
-            <div className="grid gap-3">
-              {newlyAddedPacks.slice(0, 2).map((pack) => (
-                <Link key={pack.slug} href={`/packs/${pack.slug}`} className="rounded-2xl bg-white/75 p-4">
-                  <p className="text-sm font-semibold">{pack.title}</p>
-                  <p className="mt-1 text-xs leading-5 text-[var(--graphite)]">{pack.hook}</p>
+                <span className="block">Start a</span>
+                <span className="block">simple business</span>
+                <span className="block">today.</span>
+              </h1>
+              <p className="premium-copy mt-7 max-w-xs text-base leading-8 sm:max-w-2xl sm:text-lg">
+                Choose one service idea, unlock the assets behind it, and use the prompts, pricing, outreach, and delivery files to start selling with less guesswork.
+              </p>
+              <form
+                action="/packs"
+                className="mt-8 flex items-center gap-2 overflow-hidden rounded-full border border-[rgba(10,12,16,0.1)] bg-[rgba(255,253,248,0.86)] p-2 shadow-[0_14px_36px_rgba(10,12,16,0.06)] backdrop-blur-sm"
+                style={{ width: "min(100%, calc(100vw - 2rem))", maxWidth: "36rem" }}
+              >
+                <Search size={18} className="ml-3 shrink-0 text-[var(--graphite)]" />
+                <label htmlFor="hero-business-search" className="sr-only">
+                  Find a business
+                </label>
+                <input
+                  id="hero-business-search"
+                  name="search"
+                  type="search"
+                  placeholder="Find a business"
+                  className="h-10 min-w-0 flex-1 bg-transparent text-sm font-semibold text-[var(--navy-ink)] outline-none placeholder:text-[var(--graphite)]"
+                />
+                <button
+                  type="submit"
+                  aria-label="Search business packs"
+                  className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--obsidian)] text-white transition hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(10,12,16,0.2)]"
+                >
+                  <ArrowRight size={17} />
+                </button>
+              </form>
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                <JoinButton label="Unlock Packs" className="w-full sm:w-auto" />
+                <Link
+                  href="/packs"
+                  className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-[var(--text-primary)] sm:w-auto"
+                >
+                  Browse archive
+                  <ArrowRight size={16} />
                 </Link>
-              ))}
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold text-[var(--graphite)]">
+                <span>{packs.length} launch packs</span>
+                <span className="h-1 w-1 rounded-full bg-[var(--safety-orange)]" />
+                <span>{totalAssets} member assets</span>
+                <span className="h-1 w-1 rounded-full bg-[var(--safety-orange)]" />
+                <span>Prompts, scripts, pricing, delivery files</span>
+              </div>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <div className="flex -space-x-2" aria-hidden="true">
+                  {["1", "2", "3", "4"].map((initial, index) => (
+                    <span
+                      key={initial}
+                      className="grid h-9 w-9 place-items-center rounded-full border-2 border-[var(--studio-white)] text-xs font-bold text-white shadow-[0_8px_18px_rgba(10,12,16,0.12)]"
+                      style={{
+                        background:
+                          index % 2 === 0
+                            ? "linear-gradient(135deg, #0b0d10, #1688ff)"
+                            : "linear-gradient(135deg, #4ca8ff, #0f172a)",
+                      }}
+                    >
+                      {initial}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-sm font-semibold text-[var(--navy-ink)]">
+                  Start with one buyer, one offer, one outreach script, and one delivery checklist.
+                </p>
+              </div>
+            </div>
+
+            <div className="hero-image-stage mobile-frame relative min-h-[420px] lg:min-h-[680px]">
+              <Image
+                src="/visuals/hero/side-hustle-stephen-character-hero.png"
+                alt="A Side Hustle Stephen creator working from a laptop with coffee."
+                fill
+                priority
+                unoptimized
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="hero-character-image"
+              />
             </div>
           </div>
         </section>
 
         <PackMatcher packs={packs} />
-
-        <Section eyebrow="Newly added" title="Fresh launch packs">
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {newlyAddedPacks.map((pack) => (
-              <PackCard key={pack.slug} pack={pack} />
-            ))}
-          </div>
-        </Section>
-
-        <Section eyebrow="Featured" title="Best places to start">
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {featuredPacks.map((pack) => (
-              <PackCard key={pack.slug} pack={pack} featured />
-            ))}
-          </div>
-        </Section>
-
-        <Section eyebrow="Most popular" title="What viewers are saving">
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {popularPacks.map((pack) => (
-              <PackCard key={pack.slug} pack={pack} />
-            ))}
-          </div>
-        </Section>
+        <QuoteCarousel />
+        <PackMatcher packs={popularPacks} eyebrow="Most popular" title="Most popular." sortByPopularity />
       </main>
       <Footer />
     </>

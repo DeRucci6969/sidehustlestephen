@@ -2,19 +2,20 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ManageBillingButton } from "@/components/manage-billing-button";
 import { getMembershipStatus } from "@/lib/membership";
+import { siteConfig } from "@/lib/site";
 import { CheckCircle2, LockKeyhole, Settings2 } from "lucide-react";
 
 export const metadata = {
-  title: "Account | Side Hustle Stephen - The Launchpad",
+  title: "Account | Side Hustle Stephen",
 };
 
 export default async function AccountPage() {
   const membership = await getMembershipStatus();
   const setupItems = [
-    "Magic-link auth creates the member session",
-    "Stripe Checkout starts the $12/month subscription",
-    "Webhook sync marks the Supabase profile active",
-    "Private asset links unlock from each pack page",
+    "Magic-link sign-in keeps access tied to your email",
+    `Stripe manages your ${siteConfig.priceLabel} subscription`,
+    "Member status unlocks the archive automatically",
+    "Private asset links are available from each pack page",
   ];
 
   return (
@@ -26,12 +27,12 @@ export default async function AccountPage() {
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Account</p>
             <h1 className="mt-3 text-5xl font-semibold tracking-tight">Membership dashboard</h1>
             <p className="mt-5 max-w-2xl leading-7 text-[var(--graphite)]">
-              Your account will show membership status, renewal state, billing management, and asset access once Supabase and Stripe are configured.
+              Check your membership status, open billing management, and return to the archive whenever you need the launch assets.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {[
-                ["Status", membership === "active" ? "Active" : membership === "setup_required" ? "Setup mode" : "Inactive"],
-                ["Plan", "$12/month"],
+                ["Status", membership === "active" ? "Active" : membership === "setup_required" ? "Temporarily unavailable" : "Inactive"],
+                ["Plan", siteConfig.priceLabel],
                 ["Access", "All packs"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl bg-white/70 p-4">
@@ -49,7 +50,7 @@ export default async function AccountPage() {
             <div className="glass-soft rounded-[1.75rem] p-6">
               <div className="flex items-center gap-3">
                 <Settings2 className="text-[var(--safety-orange)]" size={20} />
-                <h2 className="font-semibold">Activation path</h2>
+                <h2 className="font-semibold">Access path</h2>
               </div>
               <div className="mt-5 space-y-3">
                 {setupItems.map((item) => (
@@ -63,10 +64,10 @@ export default async function AccountPage() {
             <div className="glass-soft rounded-[1.75rem] p-6">
               <div className="flex items-center gap-3">
                 <LockKeyhole className="text-[var(--safety-orange)]" size={20} />
-                <h2 className="font-semibold">Setup note</h2>
+                <h2 className="font-semibold">Billing help</h2>
               </div>
               <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">
-                Billing management remains disabled until Stripe customer records are synced through webhooks.
+                Billing opens through Stripe for active subscribers. If your payment just completed, give access a moment to sync and refresh this page.
               </p>
             </div>
           </aside>

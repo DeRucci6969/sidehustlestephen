@@ -45,12 +45,17 @@ export async function GET(_req: Request, { params }: { params: Promise<{ assetId
   }
 
   const assetPath = path.join(process.cwd(), "content", "member-assets", manifestEntry.packSlug, manifestEntry.filename);
-  const file = await readFile(assetPath);
-  return new NextResponse(file, {
-    headers: {
-      "Content-Type": contentTypes[manifestEntry.type] ?? "application/octet-stream",
-      "Content-Disposition": `attachment; filename="${manifestEntry.filename}"`,
-      "Cache-Control": "private, no-store",
-    },
-  });
+
+  try {
+    const file = await readFile(assetPath);
+    return new NextResponse(file, {
+      headers: {
+        "Content-Type": contentTypes[manifestEntry.type] ?? "application/octet-stream",
+        "Content-Disposition": `attachment; filename="${manifestEntry.filename}"`,
+        "Cache-Control": "private, no-store",
+      },
+    });
+  } catch {
+    return NextResponse.json({ error: "Asset file is unavailable" }, { status: 404 });
+  }
 }

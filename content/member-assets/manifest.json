@@ -8,7 +8,7 @@
     "description": "Cold DM and email scripts for first contact.",
     "path": "content/member-assets/cafe-menu-refresh-package/cafe-outreach-script.docx",
     "filename": "cafe-outreach-script.docx",
-    "bytes": 7841
+    "bytes": 6621
   },
   {
     "id": "asset-cafe-pricing",
@@ -19,7 +19,7 @@
     "description": "Starter, standard, and retainer pricing ladder.",
     "path": "content/member-assets/cafe-menu-refresh-package/menu-refresh-pricing-sheet.xlsx",
     "filename": "menu-refresh-pricing-sheet.xlsx",
-    "bytes": 13188
+    "bytes": 11423
   },
   {
     "id": "asset-cafe-checklist",
@@ -30,7 +30,7 @@
     "description": "What to check before sending final assets.",
     "path": "content/member-assets/cafe-menu-refresh-package/delivery-checklist.pdf",
     "filename": "delivery-checklist.pdf",
-    "bytes": 14767
+    "bytes": 11108
   },
   {
     "id": "asset-cafe-prompts",
@@ -41,7 +41,7 @@
     "description": "Practical prompts for cafe audits, menu copy, outreach, handoff notes, and monthly refresh ideas.",
     "path": "content/member-assets/cafe-menu-refresh-package/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7824
+    "bytes": 7854
   },
   {
     "id": "asset-cafe-intake",
@@ -52,7 +52,7 @@
     "description": "Editable client intake questions for menu source files, brand details, approvals, and delivery formats.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7385
+    "bytes": 6233
   },
   {
     "id": "asset-cafe-email-templates",
@@ -63,7 +63,7 @@
     "description": "Ready-to-adapt emails for outreach, intake, approvals, delivery, follow-up, and monthly refresh offers.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7324
+    "bytes": 6201
   },
   {
     "id": "asset-cafe-faqs",
@@ -74,7 +74,7 @@
     "description": "Buyer-facing FAQs that explain scope, turnaround, approvals, files, and what is not included.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7435
+    "bytes": 6314
   },
   {
     "id": "asset-gbp-audit",
@@ -85,7 +85,7 @@
     "description": "A scan list for profile photos, categories, hours, and FAQs.",
     "path": "content/member-assets/google-business-profile-rescue/profile-audit-checklist.pdf",
     "filename": "profile-audit-checklist.pdf",
-    "bytes": 15244
+    "bytes": 11576
   },
   {
     "id": "asset-gbp-pitch",
@@ -96,7 +96,7 @@
     "description": "Email and Loom pitch structure.",
     "path": "content/member-assets/google-business-profile-rescue/rescue-sprint-pitch.docx",
     "filename": "rescue-sprint-pitch.docx",
-    "bytes": 7194
+    "bytes": 5911
   },
   {
     "id": "asset-gbp-prompts",
@@ -107,7 +107,7 @@
     "description": "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery.",
     "path": "content/member-assets/google-business-profile-rescue/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7480
+    "bytes": 7505
   },
   {
     "id": "asset-gbp-intake",
@@ -118,7 +118,7 @@
     "description": "Editable intake questions for profile access, services, hours, photos, FAQs, review rules, and approval owners.",
     "path": "content/member-assets/google-business-profile-rescue/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7383
+    "bytes": 6234
   },
   {
     "id": "asset-gbp-email-templates",
@@ -129,7 +129,7 @@
     "description": "Ready-to-adapt emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests.",
     "path": "content/member-assets/google-business-profile-rescue/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7322
+    "bytes": 6216
   },
   {
     "id": "asset-gbp-faqs",
@@ -140,7 +140,7 @@
     "description": "Buyer-facing FAQs that explain profile rescue scope, ranking disclaimers, access, approvals, and maintenance.",
     "path": "content/member-assets/google-business-profile-rescue/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7443
+    "bytes": 6327
   },
   {
     "id": "asset-gym-report",
@@ -151,7 +151,7 @@
     "description": "A spreadsheet for tagging cancellations and surfacing trends.",
     "path": "content/member-assets/gym-churn-report/churn-report-template.xlsx",
     "filename": "churn-report-template.xlsx",
-    "bytes": 12981
+    "bytes": 11230
   },
   {
     "id": "asset-gym-call",
@@ -162,7 +162,7 @@
     "description": "Monthly call structure and recommendations format.",
     "path": "content/member-assets/gym-churn-report/retention-review-agenda.pdf",
     "filename": "retention-review-agenda.pdf",
-    "bytes": 14853
+    "bytes": 11188
   },
   {
     "id": "asset-gym-prompts",
@@ -173,7 +173,7 @@
     "description": "Practical prompts for cancellation analysis, retention recommendations, owner calls, and member-save experiments.",
     "path": "content/member-assets/gym-churn-report/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7480
+    "bytes": 7514
   },
   {
     "id": "asset-gym-intake",
@@ -184,7 +184,7 @@
     "description": "Editable intake questions for cancellation exports, member privacy, churn tags, membership types, and owner goals.",
     "path": "content/member-assets/gym-churn-report/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7395
+    "bytes": 6245
   },
   {
     "id": "asset-gym-email-templates",
@@ -195,7 +195,7 @@
     "description": "Ready-to-adapt emails for gym owner outreach, data requests, report delivery, action follow-up, and renewal.",
     "path": "content/member-assets/gym-churn-report/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7347
+    "bytes": 6230
   },
   {
     "id": "asset-gym-faqs",
@@ -206,7 +206,7 @@
     "description": "Buyer-facing FAQs that explain data needs, privacy, retention claims, monthly cadence, and staff involvement.",
     "path": "content/member-assets/gym-churn-report/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7452
+    "bytes": 6341
   },
   {
     "id": "asset-shopify-audit",
@@ -217,7 +217,7 @@
     "description": "A practical review checklist for cart and checkout friction.",
     "path": "content/member-assets/shopify-cart-audit/cart-audit-checklist.pdf",
     "filename": "cart-audit-checklist.pdf",
-    "bytes": 14969
+    "bytes": 11315
   },
   {
     "id": "asset-shopify-email",
@@ -228,7 +228,7 @@
     "description": "Starter copy blocks for small stores.",
     "path": "content/member-assets/shopify-cart-audit/abandoned-cart-email-swipe.docx",
     "filename": "abandoned-cart-email-swipe.docx",
-    "bytes": 7559
+    "bytes": 6267
   },
   {
     "id": "asset-shopify-prompts",
@@ -239,7 +239,7 @@
     "description": "Practical prompts for store audits, checkout objections, abandoned-cart copy, and fix prioritisation.",
     "path": "content/member-assets/shopify-cart-audit/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7426
+    "bytes": 7470
   },
   {
     "id": "asset-shopify-intake",
@@ -250,7 +250,7 @@
     "description": "Editable intake questions for store access, products, policies, email platform, brand voice, and approval-sensitive claims.",
     "path": "content/member-assets/shopify-cart-audit/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7383
+    "bytes": 6243
   },
   {
     "id": "asset-shopify-email-templates",
@@ -261,7 +261,7 @@
     "description": "Ready-to-adapt emails for audit outreach, policy requests, findings delivery, implementation follow-up, and upsells.",
     "path": "content/member-assets/shopify-cart-audit/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7337
+    "bytes": 6233
   },
   {
     "id": "asset-shopify-faqs",
@@ -272,7 +272,7 @@
     "description": "Buyer-facing FAQs that explain audit scope, conversion disclaimers, access, implementation, and email compliance.",
     "path": "content/member-assets/shopify-cart-audit/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7430
+    "bytes": 6323
   },
   {
     "id": "asset-ugc-brief",
@@ -283,7 +283,7 @@
     "description": "A complete structure for product-specific creator briefs.",
     "path": "content/member-assets/ugc-brief-generator/ugc-brief-template.docx",
     "filename": "ugc-brief-template.docx",
-    "bytes": 7521
+    "bytes": 6268
   },
   {
     "id": "asset-ugc-hooks",
@@ -294,7 +294,7 @@
     "description": "Reusable short-form ad hook patterns.",
     "path": "content/member-assets/ugc-brief-generator/hook-bank.pdf",
     "filename": "hook-bank.pdf",
-    "bytes": 16463
+    "bytes": 12816
   },
   {
     "id": "asset-ugc-prompts",
@@ -305,7 +305,7 @@
     "description": "Practical prompts for product angles, creator briefs, hook variations, shot lists, and usage-rights checks.",
     "path": "content/member-assets/ugc-brief-generator/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7341
+    "bytes": 7390
   },
   {
     "id": "asset-ugc-intake",
@@ -316,7 +316,7 @@
     "description": "Editable intake questions for product facts, buyer objections, proof points, creator constraints, and usage rights.",
     "path": "content/member-assets/ugc-brief-generator/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7355
+    "bytes": 6214
   },
   {
     "id": "asset-ugc-email-templates",
@@ -327,7 +327,7 @@
     "description": "Ready-to-adapt emails for ecommerce brand outreach, product info requests, brief delivery, revision requests, and monthly brief retainers.",
     "path": "content/member-assets/ugc-brief-generator/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7305
+    "bytes": 6218
   },
   {
     "id": "asset-ugc-faqs",
@@ -338,7 +338,7 @@
     "description": "Buyer-facing FAQs that explain brief scope, creator responsibilities, claim safety, usage rights, and revisions.",
     "path": "content/member-assets/ugc-brief-generator/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7427
+    "bytes": 6328
   },
   {
     "id": "asset-realtor-report",
@@ -349,7 +349,7 @@
     "description": "A repeatable structure for local market summaries.",
     "path": "content/member-assets/realtor-suburb-snapshot/suburb-snapshot-template.xlsx",
     "filename": "suburb-snapshot-template.xlsx",
-    "bytes": 12776
+    "bytes": 11013
   },
   {
     "id": "asset-realtor-pitch",
@@ -360,7 +360,7 @@
     "description": "Outreach script for agents and principals.",
     "path": "content/member-assets/realtor-suburb-snapshot/agent-pitch-script.docx",
     "filename": "agent-pitch-script.docx",
-    "bytes": 7205
+    "bytes": 5933
   },
   {
     "id": "asset-realtor-prompts",
@@ -371,7 +371,7 @@
     "description": "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture.",
     "path": "content/member-assets/realtor-suburb-snapshot/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7378
+    "bytes": 7427
   },
   {
     "id": "asset-realtor-intake",
@@ -382,7 +382,7 @@
     "description": "Editable intake questions for target suburbs, data sources, agency tone, compliance approval, and posting cadence.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7387
+    "bytes": 6256
   },
   {
     "id": "asset-realtor-email-templates",
@@ -393,7 +393,7 @@
     "description": "Ready-to-adapt emails for agent outreach, sample delivery, source requests, weekly handoff, and retainer renewal.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7312
+    "bytes": 6226
   },
   {
     "id": "asset-realtor-faqs",
@@ -404,7 +404,7 @@
     "description": "Buyer-facing FAQs that explain source use, compliance, market commentary limits, cadence, and deliverables.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7421
+    "bytes": 6320
   },
   {
     "id": "asset-trades-map",
@@ -415,7 +415,7 @@
     "description": "A simple lead triage workflow diagram.",
     "path": "content/member-assets/ai-inbox-triage-trades/inbox-workflow-map.pdf",
     "filename": "inbox-workflow-map.pdf",
-    "bytes": 15331
+    "bytes": 11689
   },
   {
     "id": "asset-trades-replies",
@@ -426,7 +426,7 @@
     "description": "Common quote and follow-up response templates.",
     "path": "content/member-assets/ai-inbox-triage-trades/reply-template-pack.docx",
     "filename": "reply-template-pack.docx",
-    "bytes": 7310
+    "bytes": 6049
   },
   {
     "id": "asset-trades-prompts",
@@ -437,7 +437,7 @@
     "description": "Practical prompts for lead classification, missing-info replies, quote triage, and owner-approved workflows.",
     "path": "content/member-assets/ai-inbox-triage-trades/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7409
+    "bytes": 7465
   },
   {
     "id": "asset-trades-intake",
@@ -448,7 +448,7 @@
     "description": "Editable intake questions for inquiry types, emergency rules, quote fields, approval roles, and communication channels.",
     "path": "content/member-assets/ai-inbox-triage-trades/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7369
+    "bytes": 6249
   },
   {
     "id": "asset-trades-email-templates",
@@ -459,7 +459,7 @@
     "description": "Ready-to-adapt emails for trades owner outreach, workflow setup, approval rules, weekly summaries, and ongoing triage.",
     "path": "content/member-assets/ai-inbox-triage-trades/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7318
+    "bytes": 6229
   },
   {
     "id": "asset-trades-faqs",
@@ -470,7 +470,7 @@
     "description": "Buyer-facing FAQs that explain human approval, emergency handling, inbox access, template setup, and automation limits.",
     "path": "content/member-assets/ai-inbox-triage-trades/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7443
+    "bytes": 6345
   },
   {
     "id": "asset-reviews-replies",
@@ -481,7 +481,7 @@
     "description": "Tone-safe reply examples for positive and negative reviews.",
     "path": "content/member-assets/review-testimonial-service/review-reply-swipe-file.docx",
     "filename": "review-reply-swipe-file.docx",
-    "bytes": 7246
+    "bytes": 5970
   },
   {
     "id": "asset-reviews-cards",
@@ -492,7 +492,7 @@
     "description": "Formats for turning reviews into social proof graphics.",
     "path": "content/member-assets/review-testimonial-service/testimonial-card-specs.pdf",
     "filename": "testimonial-card-specs.pdf",
-    "bytes": 14861
+    "bytes": 11147
   },
   {
     "id": "asset-reviews-prompts",
@@ -503,7 +503,7 @@
     "description": "Practical prompts for review replies, testimonial extraction, trust-card copy, and escalation-safe language.",
     "path": "content/member-assets/review-testimonial-service/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7396
+    "bytes": 7442
   },
   {
     "id": "asset-reviews-intake",
@@ -514,7 +514,7 @@
     "description": "Editable intake questions for review platforms, reply tone, escalation rules, proof claims, and design approvals.",
     "path": "content/member-assets/review-testimonial-service/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7383
+    "bytes": 6245
   },
   {
     "id": "asset-reviews-email-templates",
@@ -525,7 +525,7 @@
     "description": "Ready-to-adapt emails for local business outreach, review approval, monthly delivery, escalation notes, and testimonial usage.",
     "path": "content/member-assets/review-testimonial-service/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7329
+    "bytes": 6231
   },
   {
     "id": "asset-reviews-faqs",
@@ -536,7 +536,7 @@
     "description": "Buyer-facing FAQs that explain review reply scope, testimonial permissions, escalation, claim safety, and monthly cadence.",
     "path": "content/member-assets/review-testimonial-service/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7443
+    "bytes": 6352
   },
   {
     "id": "asset-manual-score",
@@ -547,7 +547,7 @@
     "description": "Criteria for deciding whether to automate.",
     "path": "content/member-assets/manual-workflow-concierge/manual-validation-scorecard.pdf",
     "filename": "manual-validation-scorecard.pdf",
-    "bytes": 16210
+    "bytes": 12559
   },
   {
     "id": "asset-manual-workflow",
@@ -558,7 +558,7 @@
     "description": "Offer structure and delivery map.",
     "path": "content/member-assets/manual-workflow-concierge/workflow-concierge-template.docx",
     "filename": "workflow-concierge-template.docx",
-    "bytes": 7340
+    "bytes": 6089
   },
   {
     "id": "asset-manual-prompts",
@@ -569,7 +569,7 @@
     "description": "Practical prompts for niche selection, workflow mapping, manual SOPs, client reports, and automation backlog decisions.",
     "path": "content/member-assets/manual-workflow-concierge/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7411
+    "bytes": 7458
   },
   {
     "id": "asset-manual-intake",
@@ -580,7 +580,7 @@
     "description": "Editable intake questions for workflow pain, current process, inputs, approvals, exceptions, and success criteria.",
     "path": "content/member-assets/manual-workflow-concierge/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7370
+    "bytes": 6233
   },
   {
     "id": "asset-manual-email-templates",
@@ -591,7 +591,7 @@
     "description": "Ready-to-adapt emails for niche outreach, pilot setup, input requests, weekly reporting, and renewal after validation.",
     "path": "content/member-assets/manual-workflow-concierge/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7346
+    "bytes": 6243
   },
   {
     "id": "asset-manual-faqs",
@@ -602,7 +602,7 @@
     "description": "Buyer-facing FAQs that explain manual-first delivery, software boundaries, pilot scope, data handling, and automation timing.",
     "path": "content/member-assets/manual-workflow-concierge/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7452
+    "bytes": 6345
   },
   {
     "id": "asset-airbnb-outline",
@@ -613,7 +613,7 @@
     "description": "Sections and prompts for a polished guest guide.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/guest-guide-outline.docx",
     "filename": "guest-guide-outline.docx",
-    "bytes": 7417
+    "bytes": 6152
   },
   {
     "id": "asset-airbnb-upsell",
@@ -624,7 +624,7 @@
     "description": "Simple optional add-ons hosts can include.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/host-upsell-ideas.pdf",
     "filename": "host-upsell-ideas.pdf",
-    "bytes": 16532
+    "bytes": 12906
   },
   {
     "id": "asset-airbnb-prompts",
@@ -635,7 +635,7 @@
     "description": "Practical prompts for guest-guide copy, local recommendations, house-rule clarity, and host upsell ideas.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 7377
+    "bytes": 7431
   },
   {
     "id": "asset-airbnb-intake",
@@ -646,7 +646,7 @@
     "description": "Editable intake questions for listing details, check-in steps, house rules, local recommendations, and host approvals.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7365
+    "bytes": 6242
   },
   {
     "id": "asset-airbnb-email-templates",
@@ -657,7 +657,7 @@
     "description": "Ready-to-adapt emails for host outreach, guest-guide intake, fact approvals, final handoff, and refresh reminders.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7325
+    "bytes": 6239
   },
   {
     "id": "asset-airbnb-faqs",
@@ -668,6 +668,6 @@
     "description": "Buyer-facing FAQs that explain guide scope, host approvals, local recommendation checks, guest messaging, and refresh cadence.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7449
+    "bytes": 6362
   }
 ]

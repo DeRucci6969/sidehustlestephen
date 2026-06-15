@@ -21,12 +21,12 @@ export default async function SuccessPage({
             <CheckCircle2 size={30} />
           </div>
           <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Success</p>
-          <h1 className="mt-3 text-5xl font-semibold tracking-tight">Membership activation is in progress.</h1>
+          <h1 className="mt-3 text-5xl font-semibold tracking-tight">Your membership is activating.</h1>
           <p className="mt-5 leading-7 text-[var(--graphite)]">
-            If Stripe webhooks and Supabase sync are configured, your member access should be available shortly. Continue back to the pack and refresh if the unlock state is still updating.
+            Your access should be available shortly. Continue back to the pack and refresh if the unlock state is still updating.
           </p>
           <div className="mt-7 grid gap-3 text-left sm:grid-cols-3">
-            {["Payment received", "Webhook sync", "Assets unlock"].map((step, index) => (
+            {["Payment received", "Access update", "Assets unlock"].map((step, index) => (
               <div key={step} className="rounded-2xl bg-white/70 p-4">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[var(--graphite)]">Step {index + 1}</p>
                 <p className="mt-2 text-sm font-semibold">{step}</p>

@@ -1,134 +1,105 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { ArrowRight, Gauge, TimerReset, WalletCards, type LucideIcon } from "lucide-react";
+import { useMemo, useRef } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight, LockKeyhole } from "lucide-react";
 import type { BusinessPack } from "@/data/packs";
 
-type Preference = {
-  budget: "zero" | "low" | "any";
-  speed: "fast" | "patient";
-  lane: "local" | "online" | "b2b";
+type PackMatcherProps = {
+  packs: BusinessPack[];
+  eyebrow?: string;
+  title?: string;
+  sortByPopularity?: boolean;
 };
 
-const options = {
-  budget: [
-    { value: "zero", label: "$0 start" },
-    { value: "low", label: "$1-$500 ok" },
-    { value: "any", label: "Any budget" },
-  ],
-  speed: [
-    { value: "fast", label: "First sale this week" },
-    { value: "patient", label: "Better recurring upside" },
-  ],
-  lane: [
-    { value: "local", label: "Local businesses" },
-    { value: "online", label: "Online brands" },
-    { value: "b2b", label: "B2B operators" },
-  ],
-} as const;
-
-type MatcherGroup = {
-  key: keyof Preference;
-  label: string;
-  Icon: LucideIcon;
-  options: ReadonlyArray<{ value: Preference[keyof Preference]; label: string }>;
-};
-
-const matcherGroups: MatcherGroup[] = [
-  { key: "budget", label: "Startup cost", Icon: WalletCards, options: options.budget },
-  { key: "speed", label: "Timeline", Icon: TimerReset, options: options.speed },
-  { key: "lane", label: "Buyer lane", Icon: Gauge, options: options.lane },
-];
-
-function scorePack(pack: BusinessPack, preference: Preference) {
-  let score = pack.popularityScore;
-
-  if (preference.budget === "zero" && pack.startupCost === "$0") score += 14;
-  if (preference.budget === "low" && ["$1-$50", "$0-$50", "$1-$500", "$0-$500"].includes(pack.startupCost)) score += 8;
-  if (preference.speed === "fast" && pack.timeToFirstSale === "1-7 days") score += 16;
-  if (preference.speed === "patient" && pack.timeToFirstSale === "2-4 weeks") score += 10;
-  if (preference.lane === "local" && pack.category === "Local Service") score += 16;
-  if (preference.lane === "online" && ["Ecommerce", "Creator Business"].includes(pack.category)) score += 16;
-  if (preference.lane === "b2b" && ["B2B Service", "AI Tool"].includes(pack.category)) score += 16;
-
-  return score;
-}
-
-export function PackMatcher({ packs }: { packs: BusinessPack[] }) {
-  const [preference, setPreference] = useState<Preference>({
-    budget: "zero",
-    speed: "fast",
-    lane: "local",
-  });
-
-  const matches = useMemo(
-    () =>
-      [...packs]
-        .sort((a, b) => scorePack(b, preference) - scorePack(a, preference))
-        .slice(0, 3),
-    [packs, preference],
+export function PackMatcher({
+  packs,
+  eyebrow = "Business packs",
+  title = "Browse practical starts.",
+  sortByPopularity = false,
+}: PackMatcherProps) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const carouselPacks = useMemo(
+    () => (sortByPopularity ? [...packs].sort((a, b) => b.popularityScore - a.popularityScore) : packs),
+    [packs, sortByPopularity],
   );
 
-  return (
-    <section className="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8">
-      <div className="grid gap-5 lg:grid-cols-[0.72fr_1fr]">
-        <div className="liquid-panel glass rounded-[2.2rem] p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Pack matcher</p>
-          <h2 className="display-type mt-3 text-4xl sm:text-5xl">Find the cleanest first move.</h2>
-          <p className="premium-copy mt-4 text-sm leading-6">
-            Pick the constraints that match the viewer. The matcher surfaces the packs most likely to feel immediately actionable.
-          </p>
-          <div className="mt-6 space-y-5">
-            {matcherGroups.map(({ key, label, Icon, options: group }) => (
-              <fieldset key={key}>
-                <legend className="mb-2 flex items-center gap-2 text-sm font-semibold">
-                  <Icon size={16} className="text-[var(--safety-orange)]" />
-                  {label}
-                </legend>
-                <div className="flex flex-wrap gap-2">
-                  {group.map((option) => {
-                    const active = preference[key] === option.value;
-                    return (
-                      <button
-                        key={option.value}
-                        type="button"
-                        onClick={() => setPreference((current) => ({ ...current, [key]: option.value }))}
-                        className={
-                          active
-                            ? "accent-cta h-10 rounded-full px-4 text-sm font-semibold"
-                            : "frosted-pill h-10 rounded-full px-4 text-sm font-semibold text-[var(--graphite)]"
-                        }
-                      >
-                        {option.label}
-                      </button>
-                    );
-                  })}
-                </div>
-              </fieldset>
-            ))}
-          </div>
-        </div>
+  function scrollCarousel(direction: -1 | 1) {
+    trackRef.current?.scrollBy({
+      left: direction * 420,
+      behavior: "smooth",
+    });
+  }
 
-        <div className="grid gap-3">
-          {matches.map((pack, index) => (
-            <Link key={pack.slug} href={`/packs/${pack.slug}`} className="glass-soft group grid gap-4 rounded-[1.75rem] p-5 sm:grid-cols-[auto_1fr_auto] sm:items-center">
-              <span className="accent-cta flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold">0{index + 1}</span>
-              <span className="min-w-0">
-                <span className="block text-xl font-bold leading-none tracking-[-0.035em] text-[var(--navy-ink)]">{pack.title}</span>
-                <span className="premium-copy mt-1 block text-sm leading-6">{pack.hook}</span>
-                <span className="mt-3 flex flex-wrap gap-2 text-xs font-bold text-[var(--navy-ink)]">
-                  <span className="rounded-full border border-[rgba(5,8,20,0.08)] bg-white/90 px-3 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.82),0_8px_22px_rgba(32,48,62,0.07)]">{pack.buyer}</span>
-                  <span className="rounded-full border border-[rgba(5,8,20,0.08)] bg-white/90 px-3 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.82),0_8px_22px_rgba(32,48,62,0.07)]">{pack.timeToFirstSale}</span>
-                  <span className="rounded-full border border-[rgba(5,8,20,0.08)] bg-white/90 px-3 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.82),0_8px_22px_rgba(32,48,62,0.07)]">{pack.startupCost}</span>
-                </span>
-              </span>
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-[var(--obsidian)] ring-1 ring-white/90 transition group-hover:translate-x-0.5">
-                <ArrowRight size={17} />
-              </span>
-            </Link>
-          ))}
+  return (
+    <section className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8">
+      <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">{eyebrow}</p>
+          <h2 className="display-type mt-3 text-4xl sm:text-5xl">{title}</h2>
         </div>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => scrollCarousel(-1)}
+            aria-label="Scroll business packs left"
+            className="frosted-pill grid h-11 w-11 place-items-center rounded-full text-[var(--navy-ink)] transition hover:-translate-y-0.5"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollCarousel(1)}
+            aria-label="Scroll business packs right"
+            className="accent-cta grid h-11 w-11 place-items-center rounded-full transition hover:-translate-y-0.5"
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
+      </div>
+
+      <div
+        ref={trackRef}
+        className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-3"
+      >
+        {carouselPacks.map((pack) => (
+          <Link
+            key={pack.slug}
+            href={`/packs/${pack.slug}`}
+            className="glass pack-card-surface group flex min-h-[390px] w-[min(82vw,22rem)] flex-none snap-start flex-col rounded-lg p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_54px_rgba(0,0,0,0.18)]"
+          >
+            <div className="mb-5 flex items-start justify-between gap-3">
+              <span className="rounded-full border border-[rgba(22,32,50,0.12)] bg-white/76 px-3 py-1 text-xs font-bold text-[var(--graphite)]">
+                {pack.category}
+              </span>
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--safety-orange)] text-white shadow-[0_12px_30px_rgba(0,148,255,0.18)] transition group-hover:rotate-12">
+                <ArrowRight size={16} />
+              </span>
+            </div>
+
+            <div className="dark-pack-panel rounded-lg p-5">
+              <p className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Launch pack</p>
+              <h3 className="mt-3 text-3xl font-semibold leading-[1.02] tracking-normal text-white">{pack.title}</h3>
+              <p className="mt-4 text-sm leading-6 text-white/70">{pack.hook}</p>
+            </div>
+
+            <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold text-[var(--navy-ink)]">
+              {pack.assets.slice(0, 4).map((asset) => (
+                <span key={asset.id} className="rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-3 py-2">
+                  {asset.title}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-auto flex items-center justify-between gap-3 border-t border-[rgba(22,32,50,0.1)] pt-5">
+              <span className="flex items-center gap-2 text-xs font-semibold text-[var(--graphite)]">
+                <LockKeyhole size={14} />
+                {pack.assets.length} assets
+              </span>
+              <span className="text-xs font-bold text-[var(--safety-orange)]">View pack</span>
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );

@@ -33,7 +33,7 @@ export default async function ContinueCheckoutPage({
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Secure link confirmed</p>
           <h1 className="mt-3 text-5xl font-semibold tracking-tight">Continue to checkout.</h1>
           <p className="mt-5 leading-7 text-[var(--graphite)]">
-            Your account link is ready. Continue to Stripe to unlock The Launchpad for $12/month.
+            Your account link is ready. Continue to Stripe to unlock every pack for $9/month.
           </p>
           <button className="accent-cta mt-8 inline-flex h-11 items-center rounded-full px-5 text-sm font-semibold transition hover:-translate-y-0.5">
             Continue to Stripe

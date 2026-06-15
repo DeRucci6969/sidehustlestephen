@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { ArrowUpRight } from "lucide-react";
 
 export function ManageBillingButton() {
@@ -10,27 +11,32 @@ export function ManageBillingButton() {
   async function openPortal() {
     setStatus("loading");
     setMessage("");
+    track("Billing Portal Requested");
 
     try {
       const response = await fetch("/api/portal", { method: "POST" });
       const data = (await response.json()) as { url?: string; mode?: string; message?: string; error?: string };
 
       if (data.url) {
+        track("Billing Portal Opened");
         window.location.href = data.url;
         return;
       }
 
       if (data.mode === "setup_required") {
         setStatus("setup");
-        setMessage(data.message ?? "Billing portal setup is not configured yet.");
+        setMessage("Billing management is temporarily unavailable. Try again shortly.");
+        track("Billing Portal Setup Required");
         return;
       }
 
       setStatus("error");
       setMessage(data.error ?? "Billing portal is not available for this account yet.");
+      track("Billing Portal Failed");
     } catch {
       setStatus("error");
-      setMessage("Billing portal request failed.");
+      setMessage("Billing portal request failed. Try again shortly.");
+      track("Billing Portal Failed");
     }
   }
 

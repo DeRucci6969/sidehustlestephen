@@ -34,10 +34,23 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Authentication required before checkout." }, { status: 401 });
   }
 
+  const { data: existing } = await supabase
+    .from("subscriptions")
+    .select("stripe_customer_id")
+    .eq("supabase_user_id", user.id)
+    .not("stripe_customer_id", "is", null)
+    .order("updated_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  const existingCustomerId = existing?.stripe_customer_id ?? null;
+
   const stripe = getStripe();
   const session = await stripe.checkout.sessions.create({
     mode: "subscription",
-    customer_email: user.email ?? body.email,
+    ...(existingCustomerId
+      ? { customer: existingCustomerId }
+      : { customer_email: user.email ?? body.email }),
     client_reference_id: user.id,
     line_items: [{ price: process.env.STRIPE_PRICE_ID!, quantity: 1 }],
     success_url: absoluteUrl(`/success?return_to=${encodeURIComponent(returnTo)}`),

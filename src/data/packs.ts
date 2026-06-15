@@ -32,6 +32,7 @@ export type PackPageDetail = {
   whyDetails: string[];
   firstMoveAnalysis: string[];
   launchSprintDetails: string[];
+  firstTenLeadsPlan?: string[];
 };
 
 export const packs: BusinessPack[] = [
@@ -311,6 +312,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 2: create 3 sample before/after menu sections for the best prospects.",
       "Day 3-4: send owner-specific DMs/emails with the sample and a fixed starter price.",
       "Day 5-7: close one paid refresh, collect source files, deliver the first version within 48 hours, and ask about a monthly specials retainer.",
+    ],
+    firstTenLeadsPlan: [
+      "Search Google Maps for cafes within one suburb or walking strip.",
+      "Prioritise independent cafes with active Instagram posts and older Google menu photos.",
+      "Capture one screenshot of the outdated menu, price mismatch, missing QR link, or unclear specials board.",
+      "Check whether the cafe posts specials, seasonal items, catering, or events at least monthly.",
+      "Choose 10 cafes where the owner can see the issue without a long explanation.",
+      "Make three small mockups only: one counter menu section, one Instagram specials tile, and one QR menu check note.",
+      "Send the mockup to the owner or manager with a fixed starter offer and 48-hour turnaround.",
+      "Follow up after two days with one extra observation, not a generic reminder.",
+      "Offer the smallest paid version first: one menu section plus final export checklist.",
+      "After delivery, ask whether they want a monthly specials refresh before the next menu change.",
     ],
   },
   "google-business-profile-rescue": {

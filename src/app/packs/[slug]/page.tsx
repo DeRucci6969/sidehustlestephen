@@ -8,7 +8,7 @@ import { getPack, memberAssetDetails, packPageDetails, packs } from "@/data/pack
 import { getMembershipStatus } from "@/lib/membership";
 
 function getAssetPresentation(title: string, type: string) {
-  if (title.includes("Intake")) return { label: "Scope", Icon: ClipboardList, tone: "bg-[#fff1e7] text-[var(--safety-orange)]" };
+  if (title.includes("Intake")) return { label: "Scope", Icon: ClipboardList, tone: "bg-[rgba(28,32,28,0.06)] text-[var(--obsidian)]" };
   if (title.includes("Email") || title.includes("Script") || title.includes("Pitch") || title.includes("Swipe") || title.includes("Reply")) {
     return { label: "Sell", Icon: Mail, tone: "bg-[#eef6f8] text-[#1f6b83]" };
   }
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!pack) return {};
 
   return {
-    title: `${pack.title} | Side Hustle Stephen - The Launchpad`,
-    description: `${pack.hook} Get the full launch pack, assets, and playbook inside The Launchpad.`,
+    title: `${pack.title} | Side Hustle Stephen`,
+    description: `${pack.hook} Get the full launch pack, assets, and playbook with membership.`,
   };
 }
 
@@ -46,6 +46,14 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
     { name: "Standard", price: "$300-$750", detail: "Adds polish, revisions, templates, and a sharper delivery package." },
     { name: "Retainer", price: "$250-$1k/mo", detail: "Turns the one-off service into recurring maintenance or reporting." },
   ];
+  const relatedPacks = packs
+    .filter((candidate) => candidate.slug !== pack.slug)
+    .sort((a, b) => {
+      const categoryScore = Number(b.category === pack.category) - Number(a.category === pack.category);
+      if (categoryScore !== 0) return categoryScore;
+      return b.popularityScore - a.popularityScore;
+    })
+    .slice(0, 3);
   const launchSprint = detail?.launchSprintDetails ?? ["Pick a tight buyer segment", ...pack.firstSteps, "Package proof and follow up"].slice(0, 5);
   const assetTypes = Array.from(new Set(pack.assets.map((asset) => asset.type))).join(", ");
   const firstAssetTitle = pack.assets[0]?.title ?? "launch asset";
@@ -60,28 +68,28 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
     <>
       <Header />
       <main className="mx-auto w-full max-w-6xl overflow-hidden px-4 py-10 sm:px-8">
-        <Link href="/packs" className="frosted-pill mb-7 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-[var(--graphite)]">
+        <Link href="/packs" className="frosted-pill mb-7 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-[var(--text-primary)]">
           <ArrowLeft size={16} />
           Back to archive
         </Link>
         <section className="liquid-panel glass overflow-hidden rounded-[2.5rem] p-7 sm:p-10">
           <div className="flex flex-wrap gap-2">
             {[pack.category, pack.startupCost, pack.timeToFirstSale, pack.difficulty].map((chip) => (
-              <span key={chip} className="frosted-pill rounded-full px-3 py-2 text-xs font-semibold text-[var(--graphite)] sm:px-4 sm:text-sm">
+              <span key={chip} className="frosted-pill rounded-full px-3 py-2 text-xs font-semibold text-[var(--text-primary)] sm:px-4 sm:text-sm">
                 {chip}
               </span>
             ))}
           </div>
           <h1
             className="display-type balanced mt-8 max-w-4xl break-words"
-            style={{ fontSize: "clamp(2.8rem, 10vw, 6.2rem)" }}
+            style={{ fontSize: "clamp(2.8rem, 8vw, 4rem)" }}
           >
             {pack.title}
           </h1>
           <p className="premium-copy mt-6 max-w-2xl text-lg leading-8 sm:text-xl">{pack.hook}</p>
-          <div className="mt-7 max-w-3xl rounded-[2rem] bg-white/45 p-4 ring-1 ring-white/60 sm:p-5">
+          <div className="mt-7 max-w-3xl rounded-lg bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)] sm:p-5">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">What you are unlocking</p>
-            <p className="mt-2 text-lg font-bold leading-7 tracking-[-0.025em] text-[var(--navy-ink)]">
+            <p className="mt-2 text-lg font-bold leading-7 tracking-normal text-[var(--navy-ink)]">
               A sellable offer for {pack.buyer.toLowerCase()}, with the scripts, checklists, workbooks, and handoff material to pitch it, deliver it, and turn the first job into a repeatable service.
             </p>
           </div>
@@ -91,15 +99,15 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
               ["Cost", pack.startupCost],
               ["First sale", pack.timeToFirstSale],
             ].map(([label, value]) => (
-              <div key={label} className="rounded-2xl bg-white/45 p-4 ring-1 ring-white/60">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[var(--graphite)]">{label}</p>
+              <div key={label} className="rounded-lg bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]">{label}</p>
                 <p className="mt-2 font-semibold">{value}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <JoinButton label="Unlock this launch pack" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
-            <a href="#member-assets" className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-[var(--obsidian)] sm:w-auto">
+            <a href="#member-assets" className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-[var(--text-primary)] sm:w-auto">
               Preview assets
               <ArrowRight size={16} />
             </a>
@@ -110,7 +118,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
           <div className="space-y-6">
             <div className="glass-ink rounded-[2rem] p-6">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/55">Startable offer</p>
-              <h2 className="mt-3 text-4xl font-bold leading-none tracking-[-0.055em] text-white">Sell the first version before you build anything bigger.</h2>
+              <h2 className="mt-3 text-4xl font-bold leading-none tracking-normal text-white">Sell the first version before you build anything bigger.</h2>
               <div className="mt-6 grid gap-3 md:grid-cols-3">
                 {[
                   ["What to sell", `A focused ${pack.title.toLowerCase()} starter package.`],
@@ -130,7 +138,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
               ) : null}
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">Overview</h2>
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">Overview</h2>
               <div className="mt-5 grid gap-3">
                 {[
                   ["The problem", detail?.problem ?? pack.summary],
@@ -140,30 +148,30 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 ].map(([label, value]) => (
                   <div key={label} className="rounded-2xl bg-white/45 p-4 ring-1 ring-white/60">
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">{label}</p>
-                    <p className="mt-2 text-sm leading-6 text-[var(--graphite)]">{value}</p>
+                    <p className="mt-2 text-sm leading-6 text-[var(--text-primary)]">{value}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">Why it works</h2>
-              <p className="mt-4 leading-7 text-[var(--graphite)]">{pack.whyItWorks}</p>
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">Why it works</h2>
+              <p className="mt-4 leading-7 text-[var(--text-primary)]">{pack.whyItWorks}</p>
               <div className="mt-5 space-y-3">
                 {(detail?.whyDetails ?? []).map((item) => (
                   <div key={item} className="flex items-start gap-3 rounded-2xl bg-white/45 p-4 ring-1 ring-white/60">
                     <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[var(--validation-green)]" />
-                    <p className="text-sm font-semibold leading-6 text-[var(--graphite)]">{item}</p>
+                    <p className="text-sm font-semibold leading-6 text-[var(--text-primary)]">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div id="member-assets" className="liquid-panel glass relative scroll-mt-24 overflow-hidden rounded-[2rem] p-6 shadow-[0_0_0_1px_rgba(201,71,0,0.28),0_0_60px_rgba(201,71,0,0.22),0_28px_90px_rgba(32,48,62,0.16)]">
-              <div className="absolute inset-0 rounded-[2rem] ring-1 ring-[rgba(255,152,86,0.46)]" />
+            <div id="member-assets" className="liquid-panel glass relative scroll-mt-24 overflow-hidden rounded-lg p-6 shadow-[0_0_0_1px_rgba(246,245,242,0.18),0_28px_90px_rgba(0,0,0,0.28)]">
+              <div className="absolute inset-0 rounded-lg ring-1 ring-[rgba(28,32,28,0.18)]" />
               <div className="relative">
                 <div className="mb-5 flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Member assets</p>
-                    <h2 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">
+                    <h2 className="mt-2 text-3xl font-bold tracking-normal text-[var(--navy-ink)]">
                       {isMember ? "Ready to download" : "Unlock the files that make this launchable"}
                     </h2>
                   </div>
@@ -171,7 +179,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                     <LockKeyhole size={20} />
                   </div>
                 </div>
-                <p className="max-w-2xl text-sm font-medium leading-6 text-[var(--graphite)]">
+                <p className="max-w-2xl text-sm font-medium leading-6 text-[var(--text-primary)]">
                   These are the practical files that turn the idea into an offer you can sell: scripts, workbooks, scorecards, checklists, examples, delivery runbooks, and client handoff material. You are not starting from a blank page.
                 </p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -180,17 +188,17 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                     ["Included", `${pack.assets.length} member assets`],
                     ["Use them to", "Pitch, deliver, and follow up"],
                   ].map(([label, value]) => (
-                    <div key={label} className="rounded-2xl bg-white/45 p-3 ring-1 ring-white/60">
-                      <p className="text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[var(--graphite)]">{label}</p>
+                    <div key={label} className="rounded bg-[rgba(28,32,28,0.045)] p-3 ring-1 ring-[rgba(28,32,28,0.08)]">
+                      <p className="text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]">{label}</p>
                       <p className="mt-1 text-sm font-bold text-[var(--navy-ink)]">{value}</p>
                     </div>
                   ))}
                 </div>
                 <div className="mt-5 grid gap-2 sm:grid-cols-4">
                   {assetWorkflow.map(([label, copy]) => (
-                    <div key={label} className="rounded-2xl bg-white/46 px-4 py-3 ring-1 ring-white/70">
+                    <div key={label} className="rounded bg-[rgba(28,32,28,0.045)] px-4 py-3 ring-1 ring-[rgba(28,32,28,0.08)]">
                       <p className="text-xs font-black uppercase tracking-[0.14em] text-[var(--safety-orange)]">{label}</p>
-                      <p className="mt-1 text-sm font-semibold leading-5 text-[var(--graphite)]">{copy}</p>
+                      <p className="mt-1 text-sm font-semibold leading-5 text-[var(--text-primary)]">{copy}</p>
                     </div>
                   ))}
                 </div>
@@ -199,22 +207,22 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                     const assetPresentation = getAssetPresentation(asset.title, asset.type);
                     const Icon = assetPresentation.Icon;
                     return (
-                    <div key={asset.id} className="group rounded-[1.25rem] bg-white/68 p-4 ring-1 ring-white/80 transition duration-200 hover:-translate-y-0.5 hover:bg-white/82 hover:shadow-[0_18px_45px_rgba(32,48,62,0.12)]">
+                    <div key={asset.id} className="group rounded-lg bg-[rgba(246,245,242,0.62)] p-4 ring-1 ring-[rgba(28,32,28,0.08)] transition duration-200 hover:-translate-y-0.5 hover:bg-[rgba(246,245,242,0.78)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.16)]">
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex min-w-0 items-start gap-3">
                           <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl ring-1 ring-white/75 ${assetPresentation.tone}`}>
                             <Icon size={18} />
                           </span>
                           <div className="min-w-0">
-                            <span className="block text-base font-bold leading-5 tracking-[-0.02em] text-[var(--navy-ink)]">{asset.title}</span>
-                            <span className="mt-1 inline-flex rounded-full bg-white/75 px-2 py-0.5 text-[0.68rem] font-black uppercase tracking-[0.13em] text-[var(--graphite)]">
+                            <span className="block text-base font-bold leading-5 tracking-normal text-[var(--navy-ink)]">{asset.title}</span>
+                            <span className="mt-1 inline-flex rounded-full bg-white/75 px-2 py-0.5 text-[0.68rem] font-black uppercase tracking-[0.13em] text-[var(--text-primary)]">
                               {assetPresentation.label}
                             </span>
                           </div>
                         </div>
                         <span className="shrink-0 rounded-full bg-[var(--obsidian)] px-2.5 py-1 text-xs font-bold text-white">{asset.type}</span>
                       </div>
-                      <p className="mt-2 text-sm leading-6 text-[var(--graphite)]">{memberAssetDetails[asset.id] ?? asset.description}</p>
+                      <p className="mt-2 text-sm leading-6 text-[var(--text-primary)]">{memberAssetDetails[asset.id] ?? asset.description}</p>
                       {isMember ? (
                         <a href={`/api/download/${asset.id}`} className="accent-cta mt-3 inline-flex h-9 items-center gap-2 rounded-full px-4 text-sm font-bold">
                           <Download size={15} />
@@ -231,7 +239,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                   })}
                 </div>
                 {!isMember ? (
-                  <div className="mt-5 rounded-2xl bg-[rgba(5,8,20,0.9)] p-4 text-white shadow-[0_18px_55px_rgba(5,8,20,0.22)]">
+                  <div className="mt-5 rounded-lg bg-[var(--deep-forest)] p-4 text-white shadow-[0_18px_55px_rgba(0,0,0,0.24)]">
                     <p className="text-sm font-semibold leading-6 text-white/76">
                       Unlock this pack when you want the practical files, not just the idea. Use them to send the first pitch, scope the first paid job, and deliver with a clean handoff.
                     </p>
@@ -243,7 +251,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
               </div>
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">First moves</h2>
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">First moves</h2>
               <div className="mt-5 space-y-3">
                 {(detail?.firstMoveAnalysis ?? pack.firstSteps).map((step, index) => (
                   <div key={step} className="flex items-start gap-4 rounded-2xl bg-white/70 p-4">
@@ -256,7 +264,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
               </div>
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">What the full pack adds</h2>
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">What the full pack adds</h2>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 {[
                   ["A first offer you can actually sell", `Position the starter version for ${pack.buyer.toLowerCase()} without inventing a whole agency.`],
@@ -265,35 +273,71 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                   ["A path to repeat revenue", "Use the first delivery to identify the standard package, retainer, or next sprint."],
                 ].map(([title, copy]) => (
                   <div key={title} className="rounded-2xl bg-white/70 p-4">
-                    <p className="text-sm font-bold tracking-[-0.02em] text-[var(--navy-ink)]">{title}</p>
-                    <p className="mt-2 text-sm font-semibold leading-6 text-[var(--graphite)]">{copy}</p>
+                    <p className="text-sm font-bold tracking-normal text-[var(--navy-ink)]">{title}</p>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">{copy}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">Offer ladder</h2>
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">Offer ladder</h2>
               <div className="mt-5 grid gap-3 md:grid-cols-3">
                 {offerLadder.map((offer) => (
                   <div key={offer.name} className="rounded-2xl bg-white/70 p-4">
                     <p className="text-sm font-bold text-[var(--safety-orange)]">{offer.name}</p>
                     <p className="mt-2 text-2xl font-semibold tracking-tight">{offer.price}</p>
-                    <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">{offer.detail}</p>
+                    <p className="mt-3 text-sm leading-6 text-[var(--text-primary)]">{offer.detail}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
-              <h2 className="text-3xl font-bold tracking-[-0.04em] text-[var(--navy-ink)]">Launch sprint</h2>
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">Launch sprint</h2>
               <div className="mt-5 space-y-3">
                 {launchSprint.map((step, index) => (
                   <div key={`${step}-${index}`} className="flex items-start gap-3 rounded-2xl bg-white/70 p-4">
                     <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[var(--validation-green)]" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--graphite)]">Step {index + 1}</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]">Step {index + 1}</p>
                       <p className="mt-1 font-semibold">{step}</p>
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+            {detail?.firstTenLeadsPlan ? (
+              <div className="glass-soft rounded-[1.75rem] p-6">
+                <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">First 10 leads plan</h2>
+                <p className="mt-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">
+                  Use this as the first prospecting sprint. The point is not to spam cafes; it is to find 10 owners who can immediately see the problem.
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {detail.firstTenLeadsPlan.map((step, index) => (
+                    <div key={step} className="rounded-2xl bg-white/70 p-4 ring-1 ring-white/60">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">Lead step {index + 1}</p>
+                      <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">{step}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+            <div className="glass-soft rounded-[1.75rem] p-6">
+              <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">Related launch packs</h2>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {relatedPacks.map((relatedPack) => (
+                  <Link
+                    key={relatedPack.slug}
+                    href={`/packs/${relatedPack.slug}`}
+                    className="group rounded-2xl bg-white/70 p-4 ring-1 ring-white/60 transition hover:-translate-y-0.5 hover:bg-white"
+                  >
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">{relatedPack.category}</p>
+                    <p className="mt-2 text-sm font-bold leading-5 text-[var(--navy-ink)]">{relatedPack.title}</p>
+                    <p className="mt-2 text-xs font-semibold leading-5 text-[var(--graphite)]">{relatedPack.hook}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[var(--safety-orange)]">
+                      View related pack
+                      <ArrowRight size={13} className="transition group-hover:translate-x-0.5" />
+                    </span>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -331,14 +375,14 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 <Target className="text-[var(--safety-orange)]" size={20} />
                 <h3 className="font-semibold">Best buyer</h3>
               </div>
-              <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">{pack.buyer}</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-primary)]">{pack.buyer}</p>
             </div>
             <div className="glass-soft rounded-[1.75rem] p-6">
               <div className="flex items-center gap-3">
                 <BadgeDollarSign className="text-[var(--safety-orange)]" size={20} />
                 <h3 className="font-semibold">What to charge first</h3>
               </div>
-              <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">
+              <p className="mt-3 text-sm leading-6 text-[var(--text-primary)]">
                 Start with the {offerLadder[0].name.toLowerCase()} version at {offerLadder[0].price}. Keep scope narrow, deliver fast, then use the result to pitch the standard package or retainer.
               </p>
             </div>
@@ -347,7 +391,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 <LockKeyhole size={22} />
               </div>
               <h2 className="text-2xl font-semibold tracking-tight">Unlock the full launch pack</h2>
-              <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">
+              <p className="mt-3 text-sm leading-6 text-[var(--text-primary)]">
                 Become a member to access the complete playbook, asset downloads, outreach scripts, and launch checklist.
               </p>
               <div className="mt-6">
@@ -359,7 +403,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 <ShieldCheck className="text-[var(--validation-green)]" size={20} />
                 <h3 className="font-semibold">The catch</h3>
               </div>
-              <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">{pack.caveat}</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-primary)]">{pack.caveat}</p>
             </div>
           </aside>
         </section>

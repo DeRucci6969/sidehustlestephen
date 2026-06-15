@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Privacy | Side Hustle Stephen - The Launchpad",
+  title: "Privacy | Side Hustle Stephen",
 };
 
 export default function PrivacyPage() {
@@ -10,14 +10,14 @@ export default function PrivacyPage() {
     {
       title: "1. Who this policy applies to",
       body: [
-        "This Privacy Policy explains how Side Hustle Stephen - The Launchpad collects, uses, stores, and discloses personal information when you visit the website, create an account, subscribe, download assets, contact us, or interact with our marketing.",
-        "This policy is intended to be conservative and transparent. It should be reviewed by a qualified lawyer before public launch, especially if analytics, advertising pixels, email marketing tools, affiliates, community features, or additional data collection are added.",
+        "This Privacy Policy explains how Side Hustle Stephen collects, uses, stores, and discloses personal information when you visit the website, create an account, subscribe, download assets, contact us, or interact with our marketing.",
+        "This policy is intended to be conservative and transparent. We may update it if analytics, advertising pixels, email marketing tools, affiliates, community features, or additional data collection are added.",
       ],
     },
     {
       title: "2. What we collect",
       body: [
-        "We collect the minimum personal information reasonably needed to provide the service, operate the website, communicate with you, improve The Launchpad, comply with law, and market our own products and services.",
+        "We collect the minimum personal information reasonably needed to provide the service, operate the website, communicate with you, improve Side Hustle Stephen, comply with law, and market our own products and services.",
         "This may include your name if you provide it, email address, account details, login and authentication records, subscription status, billing identifiers, Stripe customer or subscription IDs, download and access records, support messages, marketing preferences, device and browser information, IP address, approximate location derived from technical data, referral source, pages viewed, and interactions with emails or website features.",
         "We do not intentionally collect sensitive information such as health information, government identifiers, racial or ethnic origin, political opinions, religious beliefs, biometric data, precise location, or information about children. Please do not send us sensitive information unless we specifically request it and have explained why.",
       ],
@@ -39,8 +39,8 @@ export default function PrivacyPage() {
     {
       title: "5. How we use information",
       body: [
-        "We use personal information to provide and operate The Launchpad, authenticate users, send login links, process payments, manage subscriptions, provide member access, deliver downloads, respond to support requests, maintain records, prevent fraud and abuse, secure the service, troubleshoot errors, improve content and product decisions, and comply with legal obligations.",
-        "We may also use your contact details and usage information to send service updates, product announcements, educational content, launch pack updates, offers, surveys, and marketing about The Launchpad or closely related products and services. You can opt out of promotional emails at any time.",
+        "We use personal information to provide and operate Side Hustle Stephen, authenticate users, send login links, process payments, manage subscriptions, provide member access, deliver downloads, respond to support requests, maintain records, prevent fraud and abuse, secure the service, troubleshoot errors, improve content and product decisions, and comply with legal obligations.",
+        "We may also use your contact details and usage information to send service updates, product announcements, educational content, launch pack updates, offers, surveys, and marketing about Side Hustle Stephen or closely related products and services. You can opt out of promotional emails at any time.",
       ],
     },
     {
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
     {
       title: "8. Disclosure to service providers",
       body: [
-        "We may disclose personal information to trusted service providers that help us operate The Launchpad, including hosting providers, database providers, authentication providers, payment processors, email providers, analytics providers, customer support tools, security tools, professional advisers, and contractors.",
+        "We may disclose personal information to trusted service providers that help us operate Side Hustle Stephen, including hosting providers, database providers, authentication providers, payment processors, email providers, analytics providers, customer support tools, security tools, professional advisers, and contractors.",
         "These providers may process information on our behalf or as independent providers under their own terms and privacy policies. We only intend to share information that is reasonably necessary for the relevant service.",
       ],
     },
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
       title: "9. Legal, safety, and business disclosures",
       body: [
         "We may use or disclose personal information if required or permitted by law, court order, subpoena, regulator request, tax obligation, payment dispute, chargeback, fraud investigation, security incident, rights enforcement, or to protect the rights, safety, property, or security of us, users, service providers, or the public.",
-        "If The Launchpad is involved in a merger, acquisition, financing, restructure, asset sale, or similar business transaction, personal information may be disclosed as part of due diligence or transferred as part of that transaction, subject to reasonable confidentiality and legal safeguards.",
+        "If Side Hustle Stephen is involved in a merger, acquisition, financing, restructure, asset sale, or similar business transaction, personal information may be disclosed as part of due diligence or transferred as part of that transaction, subject to reasonable confidentiality and legal safeguards.",
       ],
     },
     {
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
       title: "12. Security",
       body: [
         "We take reasonable technical and organisational steps to protect personal information from misuse, interference, loss, unauthorised access, modification, and disclosure. These steps may include access controls, reputable hosting and payment providers, encrypted connections, limited admin access, and monitoring for abuse.",
-        "No internet service, email system, payment system, database, or storage method is completely secure. You are responsible for keeping your email account, device, and login links secure because access to your email may allow access to your Launchpad account.",
+        "No internet service, email system, payment system, database, or storage method is completely secure. You are responsible for keeping your email account, device, and login links secure because access to your email may allow access to your Side Hustle Stephen account.",
       ],
     },
     {
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
     {
       title: "17. Children",
       body: [
-        "The Launchpad is intended for adults and is not directed to children. We do not knowingly collect personal information from children. If you believe a child has provided personal information to us, contact us so we can take appropriate steps.",
+        "Side Hustle Stephen is intended for adults and is not directed to children. We do not knowingly collect personal information from children. If you believe a child has provided personal information to us, contact us so we can take appropriate steps.",
       ],
     },
     {
@@ -141,12 +141,6 @@ export default function PrivacyPage() {
         "We may update this Privacy Policy from time to time. The updated version will apply from the date it is posted or from any later date stated on the page. If changes are material, we may take additional steps to notify users where required by law.",
       ],
     },
-    {
-      title: "20. Contact",
-      body: [
-        "To ask a privacy question, make a request, opt out of marketing, or make a privacy complaint, contact us through the contact method provided on the website or by replying to official account emails from The Launchpad.",
-      ],
-    },
   ];
 
   return (
@@ -159,13 +153,13 @@ export default function PrivacyPage() {
           <p className="premium-copy mt-4 text-sm font-semibold">Last updated: 11 June 2026</p>
           <div className="mt-6 rounded-[1.5rem] bg-white/58 p-4 text-sm leading-7 text-[var(--graphite)] ring-1 ring-white/70 sm:p-5">
             <p>
-              We use personal information to provide The Launchpad, manage accounts and subscriptions, improve the service, keep it secure, respond to users, and market our own related products and services. We do not intend to sell personal information or use it for unrelated third-party marketing.
+              We use personal information to provide Side Hustle Stephen, manage accounts and subscriptions, improve the service, keep it secure, respond to users, and market our own related products and services. We do not intend to sell personal information or use it for unrelated third-party marketing.
             </p>
           </div>
           <div className="mt-8 space-y-7 leading-7 text-[var(--graphite)]">
             {sections.map((section) => (
               <section key={section.title} className="border-t border-[rgba(5,8,20,0.09)] pt-6">
-                <h2 className="text-xl font-bold tracking-[-0.02em] text-[var(--navy-ink)]">{section.title}</h2>
+                <h2 className="text-xl font-bold tracking-normal text-[var(--navy-ink)]">{section.title}</h2>
                 <div className="mt-3 space-y-3">
                   {section.body.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>

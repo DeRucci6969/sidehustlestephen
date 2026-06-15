@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { packs } from "@/data/packs";
-
-const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/packs", "/pricing", "/account", "/terms", "/privacy"];
@@ -9,11 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes.map((path) => ({
-      url: `${baseUrl}${path}`,
+      url: `${siteConfig.url}${path}`,
       lastModified: now,
     })),
     ...packs.map((pack) => ({
-      url: `${baseUrl}/packs/${pack.slug}`,
+      url: `${siteConfig.url}/packs/${pack.slug}`,
       lastModified: new Date(pack.publishedAt),
     })),
   ];

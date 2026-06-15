@@ -14,14 +14,23 @@ from xml.sax.saxutils import escape
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "content" / "member-assets"
 BRAND = "Side Hustle Stephen - The Launchpad"
-ACCENT = "D94A00"
-ACCENT_DARK = "A53A00"
-ACCENT_SOFT = "FFF1E7"
-TEXT = "070A0F"
-MUTED = "5E6774"
-INK = "12172A"
-LINE = "D7DEE6"
-PANEL = "F7FAFC"
+
+# Visual system aligned to the ElevenLabs brand: warm off-white surfaces,
+# black-first monochrome structure, a single functional blue highlight, and
+# warm "stone" greys. Type is a clean grotesque (Arial) for guaranteed
+# cross-platform rendering in Word / Google Docs / Pages / LibreOffice.
+FONT = "Arial"            # body + headings (universally available grotesque)
+FONT_DISPLAY = "Arial"    # display weight handled via bold, not a custom face
+ACCENT = "0A59D2"         # functional blue: key numbers, links, active states
+ACCENT_DARK = "052F70"    # deep blue for secondary emphasis
+ACCENT_SOFT = "EEF4FF"    # light blue tint for callout fills
+BLACK = "0A0A0A"          # ElevenLabs near-black: header bands, primary rules
+TEXT = "0A0A0A"           # primary body text
+MUTED = "57534E"          # stone-600 muted text / labels
+INK = "0A0A0A"            # headings (monochrome, not navy)
+LINE = "E0DFDD"           # warm hairline borders
+PANEL = "F5F3F1"          # warm stone panel fill
+BG = "FDFCFC"             # warm off-white page/surface background
 
 
 @dataclass
@@ -351,6 +360,20 @@ def premium_handoff_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[s
     ]
 
 
+def shared_standard_pointer(pack: Pack) -> tuple[str, list[str]]:
+    """Compact reference replacing the long repeated handoff block on every asset.
+
+    The full delivery standards live once per pack, in the AI Prompt Pack, so the
+    other assets stay focused on their unique content instead of repeating ~6
+    identical sections."""
+    return ("Delivery standards (shared)", [
+        f"This asset is for {pack.buyer.lower()}; replace bracketed fields with their specifics before sending.",
+        "Full delivery standards - inputs to collect, evidence capture, pricing and scope guardrails, and the pre-send QA list - live once in this pack's AI Prompt Pack.",
+        "Verify every fact, price, date, hour, link, and claim against a source, and keep approvals in writing.",
+        "Never imply guaranteed revenue, rankings, bookings, retention, or ad performance.",
+    ])
+
+
 ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
     "asset-cafe-script": [
         ("Worked prospect example", [
@@ -539,7 +562,7 @@ def script_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
         "airbnb-guest-guide-refresh": "a guest guide refresh that reduces repeat questions and improves stay quality",
         "ugc-brief-generator": "a product-specific creator brief with hooks, shots, and usage notes",
     }[pack.slug]
-    return core_sections(pack) + [
+    return [
         ("Cold email: direct audit opener", [
             f"Subject: quick {pack.title.lower()} idea",
             f"Hi [Name], I noticed [specific visible issue]. I put together a quick example of how I would improve it for {pack.buyer.lower()}.",
@@ -1353,7 +1376,7 @@ PROMPT_PACK_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
 
 
 def prompt_pack_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
-    return core_sections(pack) + PROMPT_PACK_SECTIONS[asset.id] + [
+    return PROMPT_PACK_SECTIONS[asset.id] + [
         ("Prompt quality rules", [
             "Always paste real context before asking for output.",
             "Ask for tables when comparing options, prioritising issues, or creating delivery checklists.",
@@ -1382,7 +1405,7 @@ PACK_DELIVERABLES: dict[str, str] = {
 
 
 def client_intake_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
-    return core_sections(pack) + [
+    return [
         ("How to use this form", [
             f"Send this form before starting the {pack.title.lower()} so the client provides {PACK_DELIVERABLES[pack.slug]}.",
             "Ask the client to answer unknown items with 'not sure' rather than guessing.",
@@ -1424,11 +1447,12 @@ def client_intake_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str
             "Delivery approved: editable file, final export, implementation notes, and next-step recommendation.",
             "Renewal trigger approved: monthly refresh, weekly report, next sprint, or one-off closeout.",
         ]),
-    ] + premium_handoff_sections(pack, asset)
+        shared_standard_pointer(pack),
+    ]
 
 
 def client_email_template_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
-    return core_sections(pack) + [
+    return [
         ("How to use these emails", [
             "Replace every bracketed field with buyer-specific context before sending.",
             "Lead with one visible issue or operational pain, not a broad agency pitch.",
@@ -1469,11 +1493,12 @@ def client_email_template_sections(pack: Pack, asset: Asset) -> list[tuple[str, 
             "Day 10: offer a smaller paid starter version.",
             "Day 21: close the loop and offer a useful checklist or example.",
         ]),
-    ] + premium_handoff_sections(pack, asset)
+        shared_standard_pointer(pack),
+    ]
 
 
 def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
-    return core_sections(pack) + [
+    return [
         ("How to use these FAQs", [
             "Place these on the sales page, in a proposal, or below the checkout section for this pack.",
             "Keep answers concrete and scope-based; avoid broad promises.",
@@ -1503,11 +1528,13 @@ def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]
             "It helps customers understand scope, turnaround, approvals, and risk before they unlock the full pack.",
             "Pair it with the intake form and email templates so the buyer can move from browsing to starting.",
         ]),
-    ] + premium_handoff_sections(pack, asset)
+        shared_standard_pointer(pack),
+    ]
 
 
 def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     if asset.id in PROMPT_PACK_SECTIONS:
+        # The AI Prompt Pack is the single home for the full shared standards.
         return prompt_pack_sections(pack, asset) + premium_handoff_sections(pack, asset)
     if asset.id.endswith("-intake"):
         return client_intake_sections(pack, asset)
@@ -1516,13 +1543,7 @@ def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     if asset.id.endswith("-faqs"):
         return client_faq_sections(pack, asset)
     if asset.id in DOCX_ASSET_SECTIONS:
-        return core_sections(pack) + DOCX_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + premium_handoff_sections(pack, asset) + [
-            ("Commercial use note", [
-                "Review every bracketed field before sending.",
-                "Do not claim guaranteed revenue, rankings, bookings, retention, or ad performance.",
-                "Keep buyer approval for facts, claims, prices, legal-sensitive statements, and final exports.",
-            ]),
-        ]
+        return DOCX_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
     if any(token in asset.title for token in ["Script", "Swipe", "Template", "Outline", "Pitch", "Pack"]):
         sections = script_sections(pack, asset)
     else:
@@ -1568,13 +1589,13 @@ def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
                 "Upsells: keep optional, transparent, and genuinely useful.",
             ]),
         ]
-    return sections
+    return sections + [shared_standard_pointer(pack)]
 
 
 def pdf_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     if asset.id in PDF_ASSET_SECTIONS:
-        return PDF_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + premium_handoff_sections(pack, asset)
-    return checklist_sections(pack, asset) + asset_polish_sections(asset) + premium_handoff_sections(pack, asset)
+        return PDF_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
+    return checklist_sections(pack, asset) + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
 
 
 def p(text: str, style: str | None = None) -> str:
@@ -1599,16 +1620,33 @@ def bullet(text: str) -> str:
 
 
 def checkbox(text: str) -> str:
+    # Clean ballot-box glyph renders consistently across Word, Google Docs,
+    # Pages and LibreOffice (unlike content-controls, which vanish off Word).
     return (
         '<w:p><w:pPr><w:pStyle w:val="Checklist"/></w:pPr>'
-        f'<w:r><w:t xml:space="preserve">[ ] {escape(text)}</w:t></w:r></w:p>'
+        f'<w:r><w:t xml:space="preserve">☐  {escape(text)}</w:t></w:r></w:p>'
     )
 
 
 def rule() -> str:
     return (
         '<w:p><w:pPr><w:pBdr><w:bottom w:val="single" w:sz="8" w:space="1" '
-        f'w:color="{ACCENT}"/></w:pBdr><w:spacing w:before="70" w:after="210"/></w:pPr></w:p>'
+        f'w:color="{BLACK}"/></w:pBdr><w:spacing w:before="70" w:after="210"/></w:pPr></w:p>'
+    )
+
+
+def toc_field() -> str:
+    # Auto-building table of contents from Heading 1 section titles. Word/Pages
+    # populate on open or on field update; the placeholder shows until then.
+    return (
+        '<w:p><w:pPr><w:pStyle w:val="Kicker"/></w:pPr><w:r><w:t>IN THIS DOCUMENT</w:t></w:r></w:p>'
+        '<w:p><w:pPr><w:rPr><w:color w:val="' + MUTED + '"/><w:sz w:val="18"/></w:rPr></w:pPr>'
+        '<w:r><w:fldChar w:fldCharType="begin"/></w:r>'
+        '<w:r><w:instrText xml:space="preserve"> TOC \\o "1-1" \\h \\z \\u </w:instrText></w:r>'
+        '<w:r><w:fldChar w:fldCharType="separate"/></w:r>'
+        '<w:r><w:rPr><w:color w:val="' + MUTED + '"/><w:sz w:val="18"/></w:rPr>'
+        '<w:t xml:space="preserve">Right-click and choose Update Field to build the contents.</w:t></w:r>'
+        '<w:r><w:fldChar w:fldCharType="end"/></w:r></w:p>'
     )
 
 
@@ -1619,15 +1657,17 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
         "Send for approval before publishing.",
     ]
     body = [
-        p(BRAND, "Subtitle"),
+        p(BRAND.upper(), "BrandBand"),
         p(asset.title, "Title"),
         p(pack.title, "Heading2"),
         p(asset.description, "Lead"),
+        p(pack.hook, "Tagline"),
         rule(),
         p(f"Buyer: {pack.buyer}", "Meta"),
-        p(f"Category: {pack.category} | Startup cost: {pack.startup_cost} | First sale: {pack.time_to_first_sale} | Difficulty: {pack.difficulty}", "Meta"),
+        p(f"Category: {pack.category}  /  Startup cost: {pack.startup_cost}  /  First sale: {pack.time_to_first_sale}  /  Difficulty: {pack.difficulty}", "Meta"),
         p("Operator standard", "Kicker"),
         p("Use this as a working asset. Replace bracketed details with buyer-specific information, verify every sensitive fact, and keep approvals in writing.", "IntenseQuote"),
+        toc_field(),
         p("Before sending", "Heading3"),
         *[checkbox(item) for item in quick_start],
         page_break(),
@@ -1647,18 +1687,20 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
 </w:document>"""
     styles_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-  <w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:sz w:val="21"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:after="150" w:line="300" w:lineRule="auto"/><w:widowControl/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:rPr><w:rFonts w:ascii="Aptos Display" w:hAnsi="Aptos Display"/><w:b/><w:sz w:val="50"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:before="90" w:after="140" w:line="920" w:lineRule="auto"/><w:keepNext/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Subtitle"><w:name w:val="Subtitle"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:b/><w:caps/><w:sz w:val="16"/><w:color w:val="{ACCENT_DARK}"/></w:rPr><w:pPr><w:spacing w:after="120"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Lead"><w:name w:val="Lead"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:sz w:val="24"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:before="80" w:after="160" w:line="340" w:lineRule="auto"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Kicker"><w:name w:val="Kicker"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:b/><w:caps/><w:sz w:val="15"/><w:color w:val="{ACCENT_DARK}"/></w:rPr><w:pPr><w:spacing w:before="180" w:after="70"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:rPr><w:rFonts w:ascii="Aptos Display" w:hAnsi="Aptos Display"/><w:b/><w:sz w:val="25"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:keepNext/><w:spacing w:before="320" w:after="120"/><w:pBdr><w:bottom w:val="single" w:sz="6" w:space="5" w:color="{LINE}"/></w:pBdr></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:b/><w:sz w:val="23"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="130"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Heading3"><w:name w:val="heading 3"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:before="150" w:after="80"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Meta"><w:name w:val="Meta"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:b/><w:sz w:val="18"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="95"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="ListParagraph"><w:name w:val="List Paragraph"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:sz w:val="20"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:after="110" w:line="292" w:lineRule="auto"/><w:ind w:left="540" w:hanging="220"/><w:widowControl/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Checklist"><w:name w:val="Checklist"/><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:after="92" w:line="280" w:lineRule="auto"/><w:shd w:fill="{PANEL}"/><w:pBdr><w:left w:val="single" w:sz="10" w:space="8" w:color="{LINE}"/></w:pBdr></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="IntenseQuote"><w:name w:val="Intense Quote"/><w:rPr><w:i/><w:color w:val="{INK}"/><w:sz w:val="20"/></w:rPr><w:pPr><w:spacing w:before="90" w:after="170" w:line="292" w:lineRule="auto"/><w:shd w:fill="{ACCENT_SOFT}"/><w:pBdr><w:left w:val="single" w:sz="18" w:space="8" w:color="{ACCENT}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="21"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:after="150" w:line="300" w:lineRule="auto"/><w:widowControl/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="BrandBand"><w:name w:val="BrandBand"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:caps/><w:sz w:val="15"/><w:color w:val="{BLACK}"/><w:spacing w:val="30"/></w:rPr><w:pPr><w:pBdr><w:bottom w:val="single" w:sz="18" w:space="6" w:color="{BLACK}"/></w:pBdr><w:spacing w:before="0" w:after="240"/><w:jc w:val="left"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:rPr><w:rFonts w:ascii="{FONT_DISPLAY}" w:hAnsi="{FONT_DISPLAY}"/><w:b/><w:sz w:val="56"/><w:color w:val="{INK}"/><w:spacing w:val="-10"/></w:rPr><w:pPr><w:spacing w:before="60" w:after="60" w:line="300" w:lineRule="auto"/><w:keepNext/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Subtitle"><w:name w:val="Subtitle"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:caps/><w:sz w:val="16"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="120"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Tagline"><w:name w:val="Tagline"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="22"/><w:color w:val="{ACCENT}"/></w:rPr><w:pPr><w:spacing w:before="0" w:after="150" w:line="300" w:lineRule="auto"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Lead"><w:name w:val="Lead"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="24"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:before="80" w:after="60" w:line="340" w:lineRule="auto"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Kicker"><w:name w:val="Kicker"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:caps/><w:sz w:val="15"/><w:color w:val="{MUTED}"/><w:spacing w:val="24"/></w:rPr><w:pPr><w:spacing w:before="180" w:after="70"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:rPr><w:rFonts w:ascii="{FONT_DISPLAY}" w:hAnsi="{FONT_DISPLAY}"/><w:b/><w:sz w:val="26"/><w:color w:val="{INK}"/><w:spacing w:val="-4"/></w:rPr><w:pPr><w:keepNext/><w:spacing w:before="340" w:after="130"/><w:pBdr><w:bottom w:val="single" w:sz="6" w:space="6" w:color="{LINE}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="23"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="60"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading3"><w:name w:val="heading 3"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:before="150" w:after="80"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Meta"><w:name w:val="Meta"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="18"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="95"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="ListParagraph"><w:name w:val="List Paragraph"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="20"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:after="110" w:line="292" w:lineRule="auto"/><w:ind w:left="540" w:hanging="220"/><w:widowControl/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Checklist"><w:name w:val="Checklist"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:after="92" w:line="280" w:lineRule="auto"/><w:shd w:fill="{PANEL}"/><w:pBdr><w:left w:val="single" w:sz="14" w:space="8" w:color="{BLACK}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="IntenseQuote"><w:name w:val="Intense Quote"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:color w:val="{INK}"/><w:sz w:val="20"/></w:rPr><w:pPr><w:spacing w:before="90" w:after="170" w:line="292" w:lineRule="auto"/><w:shd w:fill="{PANEL}"/><w:pBdr><w:left w:val="single" w:sz="18" w:space="10" w:color="{BLACK}"/></w:pBdr></w:pPr></w:style>
 </w:styles>"""
     content_types = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -1687,8 +1729,8 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
     <w:lvl w:ilvl="0">
       <w:start w:val="1"/>
       <w:numFmt w:val="bullet"/>
-      <w:lvlText w:val="•"/>
-      <w:pPr><w:ind w:left="720" w:hanging="240"/></w:pPr>
+      <w:lvlText w:val="–"/>
+      <w:pPr><w:ind w:left="540" w:hanging="220"/></w:pPr>
     </w:lvl>
   </w:abstractNum>
   <w:num w:numId="1"><w:abstractNumId w:val="1"/></w:num>
@@ -1704,7 +1746,7 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
 <Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>Side Hustle Stephen Asset Generator</Application></Properties>"""
     footer_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-  <w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="4" w:space="3" w:color="{LINE}"/></w:pBdr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/><w:sz w:val="16"/><w:color w:val="{MUTED}"/></w:rPr><w:t xml:space="preserve">{escape(BRAND)} | {escape(pack.title)} | Verify facts before client use</w:t></w:r></w:p>
+  <w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="4" w:space="3" w:color="{LINE}"/></w:pBdr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="16"/><w:color w:val="{MUTED}"/></w:rPr><w:t xml:space="preserve">{escape(BRAND)}  /  {escape(pack.title)}  /  Verify facts before client use</w:t></w:r></w:p>
 </w:ftr>"""
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("[Content_Types].xml", content_types)
@@ -1718,7 +1760,23 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
         z.writestr("docProps/app.xml", app_xml)
 
 
+_PDF_UNICODE = {
+    "‘": "'", "’": "'", "“": '"', "”": '"',
+    "–": "-", "—": "-", "−": "-", "…": "...",
+    " ": " ", "•": "-", "☐": "[ ]", "☑": "[x]",
+}
+
+
+def pdf_sanitize(text: str) -> str:
+    """Fold curly punctuation / dashes / bullets to ASCII so the latin-1 PDF
+    stream never emits a stray '?' replacement character."""
+    for src, dst in _PDF_UNICODE.items():
+        text = text.replace(src, dst)
+    return text
+
+
 def pdf_escape(text: str) -> str:
+    text = pdf_sanitize(text)
     return text.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
 
 
@@ -1744,6 +1802,19 @@ def pdf_stroke_line(x1: int, y1: int, x2: int, y2: int, rgb: tuple[float, float,
     return f"{r:.3f} {g:.3f} {b:.3f} RG\n{x1} {y1} m {x2} {y2} l S"
 
 
+def pdf_flow_notes(start_y: int, notes: list[str], x: int = 72, size: int = 10, width: int = 92, leading: int = 13) -> list[str]:
+    """Emit one or more wrapped note lines flowing downward, so long strings on
+    the worksheet pages never run off the right edge of the page."""
+    out: list[str] = []
+    y = start_y
+    for note in notes:
+        for line in wrap(note, width):
+            out.append(pdf_text(x, y, size, line))
+            y -= leading
+        y -= 4
+    return out
+
+
 def special_pdf_pages(asset: Asset) -> list[bytes]:
     ops: list[str] = []
     if asset.id == "asset-trades-map":
@@ -1765,8 +1836,8 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
             "192 644 m 232 644 l S", "352 644 m 392 644 l S",
             "132 620 m 132 568 l S", "292 620 m 292 568 l S", "452 620 m 452 568 l S",
             "132 520 m 132 468 l S", "292 520 m 292 468 l S", "452 520 m 452 468 l S",
-            pdf_text(72, 360, 10, "Rule: AI may draft, but urgent/safety issues and all outbound messages require human approval."),
         ]
+        ops += pdf_flow_notes(360, ["Rule: AI may draft, but urgent/safety issues and all outbound messages require human approval."])
     elif asset.id == "asset-manual-score":
         ops += [pdf_text(72, 744, 22, "Manual Validation Scorecard"), pdf_text(72, 720, 10, "Score before automating. Do not automate weak demand.")]
         headers = ["Criterion", "Weight", "Score 1-5", "Weighted"]
@@ -1790,7 +1861,7 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
             for label, width in zip(row, widths):
                 ops += [pdf_box(x, y, width, row_h), pdf_text(x + 8, y + 19, 9, label)]
                 x += width
-        ops += [pdf_text(72, 405, 10, "Decision: below 18/25 = keep manual or stop. 18-21 = keep manual. 22+ after 3 paid deliveries = automate one step.")]
+        ops += pdf_flow_notes(405, ["Decision: below 18/25 = keep manual or stop. 18-21 = keep manual. 22+ after 3 paid deliveries = automate one step."])
     elif asset.id == "asset-reviews-cards":
         ops += [pdf_text(72, 744, 22, "Testimonial Card Layout Specs"), pdf_text(72, 720, 10, "Use exact review language. One claim per card.")]
         specs = [
@@ -1800,7 +1871,7 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
         ]
         for x, y, w, h, label in specs:
             ops += [pdf_box(x, y, w, h), pdf_text(x + 10, y + h - 22, 10, label), pdf_text(x + 10, y + 20, 8, "Quote + source context + logo")]
-        ops += [pdf_text(72, 270, 10, "Safe margins: 90 px minimum. Quote length: square 26 words, story 34 words, banner 22 words.")]
+        ops += pdf_flow_notes(270, ["Safe margins: 90 px minimum. Quote length: square 26 words, story 34 words, banner 22 words."])
     elif asset.id == "asset-airbnb-upsell":
         ops += [pdf_text(72, 744, 22, "Host Upsell Matrix"), pdf_text(72, 720, 10, "Choose optional add-ons that are easy to fulfill and transparent for guests.")]
         headers = ["Offer", "Guest trigger", "Effort", "Margin", "Approved?"]
@@ -1823,10 +1894,10 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
             for label, width in zip(row, widths):
                 ops += [pdf_box(x, y, width, row_h), pdf_text(x + 8, y + 20, 8, label)]
                 x += width
-        ops += [
-            pdf_text(72, 420, 10, "Rules: disclose price before purchase, confirm host fulfillment capacity, and avoid promises outside platform policy."),
-            pdf_text(72, 396, 10, "Default message: I can arrange [offer] for [$] if you would like it ready by [time]."),
-        ]
+        ops += pdf_flow_notes(420, [
+            "Rules: disclose price before purchase, confirm host fulfillment capacity, and avoid promises outside platform policy.",
+            "Default message: I can arrange [offer] for [$] if you would like it ready by [time].",
+        ])
     elif asset.id in {"asset-cafe-checklist", "asset-gbp-audit", "asset-shopify-audit", "asset-gym-call"}:
         ops += [pdf_text(72, 744, 22, asset.title), pdf_text(72, 720, 10, "Working checklist page. Mark each item before client handoff.")]
         y = 660
@@ -1858,48 +1929,77 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
             for label, width in zip(row, widths):
                 ops += [pdf_box(x, y, width, row_h), pdf_text(x + 8, y + 20, 8, label)]
                 x += width
-        ops += [
-            pdf_text(72, 420, 10, "Rule: if a buyer could misunderstand the recommendation, rewrite it as a clear operational next step."),
-            pdf_text(72, 396, 10, "Handoff: summarize what changed, what needs approval, and what you recommend doing next."),
-        ]
-    ops.append(pdf_text(72, 32, 8, f"{BRAND} | Visual worksheet"))
+        ops += pdf_flow_notes(420, [
+            "Rule: if a buyer could misunderstand the recommendation, rewrite it as a clear operational next step.",
+            "Handoff: summarize what changed, what needs approval, and what you recommend doing next.",
+        ])
+    ops.append(pdf_text(72, 32, 8, f"{BRAND}  /  Visual worksheet"))
     return ["\n".join(ops).encode("latin-1", "replace")]
+
+
+_BLACK = (0.039, 0.039, 0.039)
+_BLUE = (0.039, 0.349, 0.824)
+_BG = (0.992, 0.988, 0.988)
+_PANEL = (0.961, 0.953, 0.945)
+_LINE = (0.878, 0.875, 0.867)
+_MUTED = (0.341, 0.325, 0.306)
+_INK = (0.039, 0.039, 0.039)
 
 
 def pdf_cover_page(pack: Pack, asset: Asset) -> bytes:
     ops = [
-        pdf_fill(0, 0, 612, 792, (0.985, 0.99, 0.99)),
-        pdf_fill(54, 636, 504, 7, (0.85, 0.29, 0)),
-        pdf_fill(54, 104, 504, 78, (1.0, 0.945, 0.905)),
-        pdf_fill(420, 500, 96, 96, (0.82, 0.9, 0.92)),
-        pdf_fill(440, 520, 96, 96, (1.0, 0.61, 0.34)),
-        "0 0 0 RG",
-        "0.03 0.04 0.08 rg",
-        pdf_text(72, 724, 10, BRAND.upper()),
-        pdf_text_bold(72, 604, 30, asset.title),
-        pdf_text_bold(72, 566, 13, pack.title),
+        pdf_fill(0, 0, 612, 792, _BG),
+        # ElevenLabs-style full-bleed black header band
+        pdf_fill(0, 720, 612, 72, _BLACK),
+        # restrained blue accent block, top-right
+        pdf_fill(516, 736, 40, 40, _BLUE),
+        "1 1 1 rg",
+        pdf_text_bold(54, 752, 11, BRAND.upper()),
+        "0.78 0.80 0.82 rg",
+        pdf_text(54, 734, 9, "MEMBER ASSET"),
     ]
-    desc_y = 536
-    for line in wrap(asset.description, 78):
-        ops.append(pdf_text(72, desc_y, 10, line))
-        desc_y -= 14
+    # Title block
+    ops += [f"{_INK[0]:.3f} {_INK[1]:.3f} {_INK[2]:.3f} rg"]
+    title_y = 636
+    for line in wrap(asset.title, 30):
+        ops.append(pdf_text_bold(54, title_y, 30, line))
+        title_y -= 34
     ops += [
-        pdf_fill(72, 418, 132, 54, (1.0, 1.0, 1.0)),
-        pdf_fill(222, 418, 132, 54, (1.0, 1.0, 1.0)),
-        pdf_fill(372, 418, 132, 54, (1.0, 1.0, 1.0)),
-        pdf_text_bold(84, 452, 8, "BUYER"),
-        pdf_text(84, 434, 9, pack.buyer[:24]),
-        pdf_text_bold(234, 452, 8, "CATEGORY"),
-        pdf_text(234, 434, 9, pack.category),
-        pdf_text_bold(384, 452, 8, "FIRST SALE"),
-        pdf_text(384, 434, 9, pack.time_to_first_sale),
-        pdf_text_bold(92, 150, 9, "Before sending"),
+        f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg",
+        pdf_text_bold(54, title_y - 2, 13, pack.title),
     ]
-    note_y = 132
-    for line in wrap("Replace placeholders, verify facts, keep approvals in writing, and avoid guaranteed revenue, ranking, retention, booking, or ad-performance claims.", 74):
-        ops.append(pdf_text(92, note_y, 10, line))
-        note_y -= 13
-    ops.append(pdf_text(72, 32, 8, f"{BRAND} | Cover"))
+    # thin rule under the title
+    ops.append(pdf_stroke_line(54, title_y - 18, 558, title_y - 18, _LINE))
+    desc_y = title_y - 44
+    ops.append(f"{_INK[0]:.3f} {_INK[1]:.3f} {_INK[2]:.3f} rg")
+    for line in wrap(asset.description, 78):
+        ops.append(pdf_text(54, desc_y, 11, line))
+        desc_y -= 15
+    # Snapshot chips (warm panels, full buyer text, no truncation)
+    chip_y = 392
+    chips = [("BUYER", pack.buyer), ("CATEGORY", pack.category), ("FIRST SALE", pack.time_to_first_sale), ("DIFFICULTY", pack.difficulty)]
+    cx = 54
+    cw = 123
+    for label, value in chips:
+        ops.append(pdf_fill(cx, chip_y, cw - 9, 58, _PANEL))
+        ops.append(pdf_fill(cx, chip_y, 3, 58, _BLACK))
+        ops.append(f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg")
+        ops.append(pdf_text_bold(cx + 12, chip_y + 40, 8, label))
+        ops.append(f"{_INK[0]:.3f} {_INK[1]:.3f} {_INK[2]:.3f} rg")
+        for i, line in enumerate(wrap(value, 16)):
+            ops.append(pdf_text(cx + 12, chip_y + 22 - i * 12, 9, line))
+        cx += cw
+    # Before-sending note on a warm panel
+    ops.append(pdf_fill(54, 96, 504, 86, _PANEL))
+    ops.append(pdf_fill(54, 96, 3, 86, _BLUE))
+    ops.append(f"{_INK[0]:.3f} {_INK[1]:.3f} {_INK[2]:.3f} rg")
+    ops.append(pdf_text_bold(70, 158, 9, "BEFORE SENDING"))
+    note_y = 140
+    for line in wrap("Replace placeholders, verify facts, keep approvals in writing, and avoid guaranteed revenue, ranking, retention, booking, or ad-performance claims.", 80):
+        ops.append(pdf_text(70, note_y, 10, line))
+        note_y -= 14
+    ops.append(f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg")
+    ops.append(pdf_text(54, 40, 8, f"{BRAND}  /  Cover"))
     return "\n".join(ops).encode("latin-1", "replace")
 
 
@@ -1919,7 +2019,17 @@ def wrap(text: str, width: int) -> list[str]:
     return lines
 
 
+def _pdf_line_step(text: str, size: int, bold: bool) -> int:
+    if text == "":
+        return 14
+    return max(14, size + 5) + (6 if (bold and size >= 15) else 0)
+
+
 def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, list[str]]]) -> None:
+    # Prepend a visible contents list so long PDFs have navigation (E4).
+    contents = ("Inside this document", [f"{i:02d}  {heading}" for i, (heading, _items) in enumerate(sections, start=1)])
+    sections = [contents, *sections]
+
     lines: list[tuple[str, int, bool]] = [(BRAND, 10, False), (asset.title, 22, True), (pack.title, 13, False), (asset.description, 11, False), ("", 11, False)]
     for heading, items in sections:
         lines.append((heading, 15, True))
@@ -1932,7 +2042,7 @@ def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, lis
     current: list[tuple[str, int, bool]] = []
     y = 760
     for line in lines:
-        step = max(14, line[1] + 5)
+        step = _pdf_line_step(*line)
         if y - step < 54:
             pages.append(current)
             current = []
@@ -1960,19 +2070,20 @@ def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, lis
                 cursor_y -= 14
                 continue
             font = "F2" if bold else "F1"
-            color = "0.07 0.09 0.16 rg" if bold else "0.03 0.04 0.08 rg"
+            color = "0.039 0.039 0.039 rg"  # near-black for both heads and body (monochrome)
             safe = pdf_escape(text)
             if bold and size >= 15:
-                content_ops.append(pdf_fill(54, cursor_y - 9, 504, 24, (1.0, 0.965, 0.94)))
-                content_ops.append(pdf_stroke_line(54, cursor_y - 12, 558, cursor_y - 12))
+                content_ops.append(pdf_fill(54, cursor_y - 9, 504, 24, _PANEL))
+                content_ops.append(pdf_fill(54, cursor_y - 9, 3, 24, _BLACK))
+                content_ops.append(pdf_stroke_line(54, cursor_y - 12, 558, cursor_y - 12, _LINE))
             content_ops.append(color)
             content_ops.append(f"BT /{font} {size} Tf 72 {cursor_y} Td ({safe}) Tj ET")
             cursor_y -= max(14, size + 5)
             if bold and size >= 15:
                 cursor_y -= 6
-        content_ops.append("0.36 0.40 0.45 rg")
-        content_ops.append(pdf_stroke_line(72, 44, 540, 44))
-        content_ops.append(f"BT /F1 8 Tf 72 28 Td ({pdf_escape(BRAND)} | {pdf_escape(asset.title)} | Page {page_index} of {total_pages}) Tj ET")
+        content_ops.append(f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg")
+        content_ops.append(pdf_stroke_line(72, 44, 540, 44, _LINE))
+        content_ops.append(f"BT /F1 8 Tf 72 28 Td ({pdf_escape(BRAND)}  /  {pdf_escape(asset.title)}  /  Page {page_index} of {total_pages}) Tj ET")
         content_streams.append("\n".join(content_ops).encode("latin-1", "replace"))
     for content in content_streams:
         content_id = len(objects) + 1
@@ -2005,20 +2116,57 @@ def col_letter(index: int) -> str:
     return letters
 
 
-def cell_xml(row: int, col: int, value: Any) -> str:
+# Cell style ids (must match the cellXfs order in the XLSX styles part below):
+#   0 body text   1 header   2 panel text   3 currency$   4 number   5 percent
+_CUR_KW = ("price", "fee", "cost", "revenue", "retainer", "rent", "quote", "deposit", "at risk", "budget", "spend")
+_PCT_KW = ("rate", "clearance", "percent", "weight", "margin %")
+_PCT_RE = re.compile(r"^\s*-?\d+(?:\.\d+)?\s*%\s*$")
+
+
+def _cell_format(header: str, rowlabel: str, value: Any) -> str:
+    """Return 'cur' | 'pct' | 'num' | 'text' for a data cell, using both the
+    column header and the row's first-column label (sheets are mixed-orientation)."""
+    text = f"{header} {rowlabel}".lower()
+    if isinstance(value, str) and _PCT_RE.match(value):
+        return "pct"
+    is_formula = isinstance(value, str) and value.startswith("=")
+    numeric = isinstance(value, (int, float)) or is_formula
+    if not numeric:
+        return "text"
+    if any(k in text for k in _PCT_KW):
+        return "pct"
+    if any(k in text for k in _CUR_KW):
+        return "cur"
+    return "num"
+
+
+def cell_xml(row: int, col: int, value: Any, header: str = "", rowlabel: str = "") -> str:
     ref = f"{col_letter(col)}{row}"
-    style = ' s="1"' if row == 1 else ' s="2"'
+    if row == 1:
+        return f'<c r="{ref}" t="inlineStr" s="1"><is><t>{escape(str(value))}</t></is></c>'
+    fmt = _cell_format(header, rowlabel, value)
+    style_for = {"cur": "3", "num": "4", "pct": "5"}.get(fmt, "2")
     if isinstance(value, str) and value.startswith("="):
-        return f'<c r="{ref}" s="2"><f>{escape(value[1:])}</f></c>'
+        return f'<c r="{ref}" s="{style_for}"><f>{escape(value[1:])}</f></c>'
+    if fmt == "pct" and isinstance(value, str) and _PCT_RE.match(value):
+        num = float(value.strip().rstrip("%")) / 100
+        return f'<c r="{ref}" s="5"><v>{num}</v></c>'
     if isinstance(value, (int, float)):
-        return f'<c r="{ref}"{style}><v>{value}</v></c>'
-    return f'<c r="{ref}" t="inlineStr"{style}><is><t>{escape(str(value))}</t></is></c>'
+        return f'<c r="{ref}" s="{style_for}"><v>{value}</v></c>'
+    return f'<c r="{ref}" t="inlineStr" s="2"><is><t>{escape(str(value))}</t></is></c>'
 
 
 def sheet_xml(rows: list[list[Any]]) -> str:
+    headers_row = [str(v) for v in rows[0]] if rows else []
     row_xml = []
     for r_idx, row in enumerate(rows, start=1):
-        cells = "".join(cell_xml(r_idx, c_idx, value) for c_idx, value in enumerate(row, start=1))
+        rowlabel = str(row[0]) if row else ""
+        cells = "".join(
+            cell_xml(r_idx, c_idx, value,
+                     header=headers_row[c_idx - 1] if c_idx - 1 < len(headers_row) else "",
+                     rowlabel=rowlabel)
+            for c_idx, value in enumerate(row, start=1)
+        )
         height = 26 if r_idx == 1 else 42
         row_xml.append(f'<row r="{r_idx}" ht="{height}" customHeight="1">{cells}</row>')
     max_cols = max((len(row) for row in rows), default=1)
@@ -2037,7 +2185,7 @@ def sheet_xml(rows: list[list[Any]]) -> str:
         validations = f'<dataValidations count="{len(validation_nodes)}">{"".join(validation_nodes)}</dataValidations>'
     return f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
-  <sheetPr><tabColor rgb="FFD94A00"/></sheetPr>
+  <sheetPr><tabColor rgb="FF{BLACK}"/></sheetPr>
   <sheetFormatPr defaultRowHeight="30"/>
   <cols><col min="1" max="1" width="20" customWidth="1"/><col min="2" max="2" width="52" customWidth="1"/><col min="3" max="3" width="30" customWidth="1"/><col min="4" max="8" width="24" customWidth="1"/></cols>
   <sheetViews><sheetView workbookViewId="0" showGridLines="0" zoomScale="85" zoomScaleNormal="85"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>
@@ -2205,42 +2353,41 @@ def enrich_workbook(asset: Asset, sheets: dict[str, list[list[Any]]]) -> dict[st
         ["Approval point", polish_items[2] if len(polish_items) > 2 else "Mark facts, claims, and prices that need approval.", "Never publish uncertain details."],
         ["Upsell path", polish_items[3] if len(polish_items) > 3 else "Convert the first delivery into a retainer or next sprint.", "Use after the first asset is approved."],
     ])
-    enriched.setdefault("Delivery Runbook", [
-        ["Step", "Action", "Owner", "Status"],
-        [1, "Collect source material and visible proof before editing.", "You", "Open"],
-        [2, "Create the first buyer-specific draft using only verified inputs.", "You", "Open"],
-        [3, "Mark every uncertain fact or claim for approval.", "You", "Open"],
-        [4, "Send working file, final export, and summary of changes.", "You", "Open"],
-        [5, "Log before/after evidence and next recommended paid step.", "You", "Open"],
-    ])
-    enriched.setdefault("Client Handoff", [
-        ["Section", "Client-facing detail", "Owner", "Status"],
-        ["What changed", f"Summarize the finished {asset.title.lower()} in plain language.", "You", "Open"],
-        ["Approval needed", "List facts, prices, dates, claims, or policy details the client must confirm.", "Client", "Open"],
-        ["Files delivered", "Name the editable file, final export, and any screenshots or source notes.", "You", "Open"],
-        ["Recommended next step", "State the next paid step or implementation action.", "You", "Open"],
-        ["Renewal trigger", "Define when to follow up: weekly, monthly, or after a measurable event.", "You", "Open"],
-    ])
-    enriched.setdefault("QA Checklist", [
-        ["Check", "Required?", "Status", "Notes"],
-        ["All placeholders removed or marked", "Yes", "Open", ""],
-        ["Links, prices, dates, hours, and claims verified", "Yes", "Open", ""],
-        ["Buyer approval captured for sensitive details", "Yes", "Open", ""],
-        ["Final export opens correctly", "Yes", "Open", ""],
-        ["No guaranteed revenue/ranking/performance claims", "Yes", "Open", ""],
-        ["Filename includes buyer, asset, and date", "No", "Open", ""],
-    ])
-    enriched.setdefault("Renewal Tracker", [
-        ["Date", "Client", "Delivered Asset", "Measured Signal", "Next Offer", "Status"],
-        ["2026-07-01", "Example Client", asset.title, "Approval received", "Monthly refresh", "Open"],
-        ["", "", "", "", "", "Open"],
-        ["", "", "", "", "", "Open"],
+    # One consolidated operating sheet instead of four near-identical filler tabs
+    # (Delivery Runbook + Client Handoff + QA Checklist + Renewal Tracker).
+    enriched.setdefault("Delivery & QA", [
+        ["Stage", "Do this", "Owner", "Status"],
+        ["1. Collect", "Gather source material and visible proof before editing.", "You", "Open"],
+        ["2. Draft", "Create the first buyer-specific draft using only verified inputs.", "You", "Open"],
+        ["3. Flag", "Mark every uncertain fact, price, or claim for client approval.", "You", "Open"],
+        ["4. Approve", "Client confirms facts, prices, dates, claims, and policy details.", "Client", "Open"],
+        ["5. Deliver", "Send working file, final export, and a summary of what changed.", "You", "Open"],
+        ["6. Renew", "Log before/after evidence and the next recommended paid step.", "You", "Open"],
+        ["QA - placeholders removed or marked", "Required before sending", "You", "Open"],
+        ["QA - links, prices, dates, hours, claims verified", "Required before sending", "You", "Open"],
+        ["QA - no guaranteed revenue/ranking/performance claims", "Required before sending", "You", "Open"],
+        ["QA - filename includes buyer, asset, and date", "Recommended", "You", "Open"],
     ])
     return enriched
 
 
-def make_xlsx(path: Path, asset: Asset) -> None:
-    sheets = enrich_workbook(asset, workbook_for(asset.id))
+def make_xlsx(path: Path, pack: Pack, asset: Asset) -> None:
+    start_here = {
+        "Start Here": [
+            ["Side Hustle Stephen - The Launchpad", ""],
+            ["Asset", asset.title],
+            ["Pack", pack.title],
+            ["What this is", asset.description],
+            ["Buyer", pack.buyer],
+            ["Category", pack.category],
+            ["Startup cost", pack.startup_cost],
+            ["Time to first sale", pack.time_to_first_sale],
+            ["Difficulty", pack.difficulty],
+            ["How to use", "Work left to right through the tabs. Replace the sample values, keep the formulas, and verify every fact before client use."],
+            ["Delivery standards", "Full delivery standards, inputs, and QA live once in this pack's AI Prompt Pack."],
+        ]
+    }
+    sheets = {**start_here, **enrich_workbook(asset, workbook_for(asset.id))}
     workbook_sheets = []
     rels = []
     content_overrides = []
@@ -2269,12 +2416,20 @@ def make_xlsx(path: Path, asset: Asset) -> None:
         z.writestr("_rels/.rels", root_rels)
         z.writestr("xl/workbook.xml", workbook_xml)
         z.writestr("xl/_rels/workbook.xml.rels", workbook_rels)
-        z.writestr("xl/styles.xml", """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        z.writestr("xl/styles.xml", f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
-  <fonts count="3"><font><sz val="10"/><name val="Aptos"/><color rgb="FF070A0F"/></font><font><b/><color rgb="FFFFFFFF"/><sz val="10"/><name val="Aptos"/></font><font><sz val="9"/><name val="Aptos"/><color rgb="FF12172A"/></font></fonts>
-  <fills count="5"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF12172A"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFFFF7F1"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFF7FAFC"/><bgColor indexed="64"/></patternFill></fill></fills>
-  <borders count="2"><border/><border><left style="thin"><color rgb="FFD7DEE6"/></left><right style="thin"><color rgb="FFD7DEE6"/></right><top style="thin"><color rgb="FFD7DEE6"/></top><bottom style="thin"><color rgb="FFD7DEE6"/></bottom></border></borders>
-  <cellXfs count="3"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"><alignment vertical="center" wrapText="1"/></xf><xf numFmtId="0" fontId="1" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center" wrapText="1"/></xf><xf numFmtId="0" fontId="2" fillId="4" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf></cellXfs>
+  <numFmts count="3"><numFmt numFmtId="164" formatCode="&quot;$&quot;#,##0"/><numFmt numFmtId="165" formatCode="#,##0"/><numFmt numFmtId="166" formatCode="0%"/></numFmts>
+  <fonts count="3"><font><sz val="10"/><name val="{FONT}"/><color rgb="FF{TEXT}"/></font><font><b/><color rgb="FFFFFFFF"/><sz val="10"/><name val="{FONT}"/></font><font><sz val="9"/><name val="{FONT}"/><color rgb="FF{TEXT}"/></font></fonts>
+  <fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF{BLACK}"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FF{PANEL}"/><bgColor indexed="64"/></patternFill></fill></fills>
+  <borders count="2"><border/><border><left style="thin"><color rgb="FF{LINE}"/></left><right style="thin"><color rgb="FF{LINE}"/></right><top style="thin"><color rgb="FF{LINE}"/></top><bottom style="thin"><color rgb="FF{LINE}"/></bottom></border></borders>
+  <cellXfs count="6">
+    <xf numFmtId="0" fontId="0" fillId="0" borderId="0" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
+    <xf numFmtId="0" fontId="1" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center" wrapText="1"/></xf>
+    <xf numFmtId="0" fontId="2" fillId="3" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
+    <xf numFmtId="164" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+    <xf numFmtId="165" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+    <xf numFmtId="166" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+  </cellXfs>
 </styleSheet>""")
 
 
@@ -2293,7 +2448,7 @@ def generate() -> list[dict[str, Any]]:
             elif asset.type == "PDF":
                 make_pdf(path, pack, asset, pdf_sections(pack, asset))
             elif asset.type == "XLSX":
-                make_xlsx(path, asset)
+                make_xlsx(path, pack, asset)
             else:
                 raise ValueError(asset.type)
             manifest.append({
