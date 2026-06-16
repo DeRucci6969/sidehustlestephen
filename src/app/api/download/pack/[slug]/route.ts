@@ -8,6 +8,7 @@ import { getMembershipContext } from "@/lib/membership";
 import { safeAttachmentFilename } from "@/lib/request-security";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 import { recordMemberDownload } from "@/lib/download-audit";
+import { recordAnalyticsEvent } from "@/lib/first-party-analytics";
 import assetManifest from "../../../../../../content/member-assets/manifest.json";
 
 type AssetManifestEntry = {
@@ -88,6 +89,11 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
       downloadType: "pack_zip",
       packSlug: slug,
       assetCount: entries.length,
+    });
+    void recordAnalyticsEvent(req, {
+      eventName: "Pack Zip Served",
+      path: `/api/download/pack/${slug}`,
+      properties: { pack: slug, asset_count: entries.length },
     });
     return new NextResponse(Buffer.from(zip), {
       headers: {

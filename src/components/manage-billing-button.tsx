@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { track } from "@vercel/analytics";
 import { ArrowUpRight } from "lucide-react";
+import { trackFirstPartyEvent } from "@/lib/client-analytics";
 
 export function ManageBillingButton() {
   const [status, setStatus] = useState<"idle" | "loading" | "setup" | "error">("idle");
@@ -12,6 +13,7 @@ export function ManageBillingButton() {
     setStatus("loading");
     setMessage("");
     track("Billing Portal Requested");
+    trackFirstPartyEvent("Billing Portal Requested");
 
     try {
       const response = await fetch("/api/portal", { method: "POST" });
@@ -19,6 +21,7 @@ export function ManageBillingButton() {
 
       if (data.url) {
         track("Billing Portal Opened");
+        trackFirstPartyEvent("Billing Portal Opened");
         window.location.href = data.url;
         return;
       }
@@ -27,16 +30,19 @@ export function ManageBillingButton() {
         setStatus("setup");
         setMessage("Billing management is temporarily unavailable. Try again shortly.");
         track("Billing Portal Setup Required");
+        trackFirstPartyEvent("Billing Portal Setup Required");
         return;
       }
 
       setStatus("error");
       setMessage(data.error ?? "Billing portal is not available for this account yet.");
       track("Billing Portal Failed");
+      trackFirstPartyEvent("Billing Portal Failed");
     } catch {
       setStatus("error");
       setMessage("Billing portal request failed. Try again shortly.");
       track("Billing Portal Failed");
+      trackFirstPartyEvent("Billing Portal Failed");
     }
   }
 

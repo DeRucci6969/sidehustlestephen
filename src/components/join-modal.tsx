@@ -6,6 +6,7 @@ import { track } from "@vercel/analytics";
 import { ArrowRight, Mail, X } from "lucide-react";
 import { cx } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
+import { trackFirstPartyEvent } from "@/lib/client-analytics";
 
 type JoinButtonProps = {
   label?: string;
@@ -23,6 +24,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
 
   async function openModal() {
     track("Join Modal Opened", { returnTo: returnTo ?? "current_path" });
+    trackFirstPartyEvent("Join Modal Opened", { properties: { return_to: returnTo ?? "current_path" } });
     setStatus("checking");
 
     try {
@@ -37,6 +39,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
         const data = (await res.json()) as { url?: string; mode?: string };
         if (data.url) {
           track("Checkout Opened From Existing Session", { returnTo: checkoutReturnTo });
+          trackFirstPartyEvent("Checkout Opened From Existing Session", { properties: { return_to: checkoutReturnTo } });
           window.location.href = data.url;
           return;
         }
@@ -97,6 +100,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
     event.preventDefault();
     setStatus("sending");
     track("Magic Link Requested", { returnTo: returnTo ?? window.location.pathname });
+    trackFirstPartyEvent("Magic Link Requested", { properties: { return_to: returnTo ?? window.location.pathname } });
     try {
       const res = await fetch("/api/auth/magic-link", {
         method: "POST",
@@ -106,14 +110,17 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
       const data = (await res.json()) as { ok?: boolean; mode?: string; error?: string };
       if (data.mode === "setup_required") {
         track("Magic Link Setup Required");
+        trackFirstPartyEvent("Magic Link Setup Required");
         setStatus("setup");
       } else if (data.ok) {
         track("Magic Link Sent");
+        trackFirstPartyEvent("Magic Link Sent");
         setStatus("sent");
       }
       else throw new Error(data.error ?? "Magic link failed");
     } catch {
       track("Magic Link Failed");
+      trackFirstPartyEvent("Magic Link Failed");
       setStatus("error");
     }
   }

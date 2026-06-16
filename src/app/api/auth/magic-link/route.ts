@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { track as trackServer } from "@vercel/analytics/server";
 import { createClient } from "@supabase/supabase-js";
 import { absoluteUrl, safeInternalPath } from "@/lib/utils";
+import { recordAnalyticsEvent } from "@/lib/first-party-analytics";
 import { getSupabasePublishableKey, hasSupabaseConfig } from "@/lib/supabase";
 import { rejectCrossOriginRequest } from "@/lib/request-security";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
@@ -38,6 +39,11 @@ export async function POST(req: Request) {
   const returnTo = safeInternalPath(body.returnTo);
   console.log(JSON.stringify({ level: "info", msg: "magic_link_requested", route: "/api/auth/magic-link", requestId, returnTo }));
   void trackServer("Magic Link Requested Server", { return_to: returnTo }, { request: req });
+  void recordAnalyticsEvent(req, {
+    eventName: "Magic Link Requested Server",
+    path: "/api/auth/magic-link",
+    properties: { return_to: returnTo },
+  });
 
   if (!hasSupabaseConfig()) {
     console.warn(JSON.stringify({ level: "warn", msg: "magic_link_setup_required", route: "/api/auth/magic-link", requestId, reason: "supabase_missing", ms: Date.now() - start }));
@@ -65,5 +71,10 @@ export async function POST(req: Request) {
 
   console.log(JSON.stringify({ level: "info", msg: "magic_link_sent", route: "/api/auth/magic-link", requestId, returnTo, ms: Date.now() - start }));
   void trackServer("Magic Link Sent Server", { return_to: returnTo }, { request: req });
+  void recordAnalyticsEvent(req, {
+    eventName: "Magic Link Sent Server",
+    path: "/api/auth/magic-link",
+    properties: { return_to: returnTo },
+  });
   return NextResponse.json({ ok: true });
 }

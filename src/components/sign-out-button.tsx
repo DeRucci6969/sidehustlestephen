@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { track } from "@vercel/analytics";
 import { LogOut } from "lucide-react";
+import { trackFirstPartyEvent } from "@/lib/client-analytics";
 import { cx } from "@/lib/utils";
 
 type SignOutButtonProps = {
@@ -16,6 +17,7 @@ export function SignOutButton({ className, compact = false }: SignOutButtonProps
   async function signOut() {
     setLoading(true);
     track("Sign Out Requested");
+    trackFirstPartyEvent("Sign Out Requested");
 
     try {
       await fetch("/api/auth/sign-out", { method: "POST" });

@@ -4,6 +4,7 @@ import { safeInternalPath } from "@/lib/utils";
 import { hasStripeConfig } from "@/lib/stripe";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 import { createMembershipCheckoutUrl } from "@/lib/checkout";
+import { recordAnalyticsEvent } from "@/lib/first-party-analytics";
 import { rejectCrossOriginRequest } from "@/lib/request-security";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 
@@ -27,6 +28,11 @@ export async function POST(req: Request) {
 
   console.log(JSON.stringify({ level: "info", msg: "checkout_requested", route: "/api/checkout", requestId, returnTo, hasEmail: Boolean(body.email) }));
   void trackServer("Checkout Requested", { return_to: returnTo, has_email: Boolean(body.email) }, { request: req });
+  void recordAnalyticsEvent(req, {
+    eventName: "Checkout Requested Server",
+    path: "/api/checkout",
+    properties: { return_to: returnTo, has_email: Boolean(body.email) },
+  });
 
   if (!hasSupabaseConfig()) {
     console.warn(JSON.stringify({ level: "warn", msg: "checkout_setup_required", route: "/api/checkout", requestId, reason: "supabase_missing", ms: Date.now() - start }));
@@ -72,5 +78,10 @@ export async function POST(req: Request) {
 
   console.log(JSON.stringify({ level: "info", msg: "checkout_url_created", route: "/api/checkout", requestId, returnTo, ms: Date.now() - start }));
   void trackServer("Checkout URL Created", { return_to: returnTo }, { request: req });
+  void recordAnalyticsEvent(req, {
+    eventName: "Checkout URL Created Server",
+    path: "/api/checkout",
+    properties: { return_to: returnTo },
+  });
   return NextResponse.json({ url });
 }

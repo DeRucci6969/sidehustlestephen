@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import { track } from "@vercel/analytics";
+import { usePathname } from "next/navigation";
+import { trackFirstPartyEvent } from "@/lib/client-analytics";
 
 type AnalyticsValue = string | number | boolean | null;
 
@@ -17,6 +19,17 @@ const propertyMap: Record<string, string> = {
 };
 
 export function AnalyticsInteractionTracker() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    trackFirstPartyEvent("Page Viewed", {
+      path: `${pathname}${window.location.search}`,
+      properties: {
+        title: document.title,
+      },
+    });
+  }, [pathname]);
+
   useEffect(() => {
     function onClick(event: MouseEvent) {
       const target = event.target instanceof Element ? event.target.closest<HTMLElement>("[data-analytics-event]") : null;
@@ -32,6 +45,7 @@ export function AnalyticsInteractionTracker() {
       });
 
       track(target.dataset.analyticsEvent, properties);
+      trackFirstPartyEvent(target.dataset.analyticsEvent, { properties });
     }
 
     document.addEventListener("click", onClick, { capture: true });

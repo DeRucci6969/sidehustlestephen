@@ -5,6 +5,7 @@ import { track } from "@vercel/analytics";
 import { ArrowDownWideNarrow, Search } from "lucide-react";
 import { PackCard } from "@/components/pack-card";
 import type { BusinessPack } from "@/data/packs";
+import { trackFirstPartyEvent } from "@/lib/client-analytics";
 
 type SortMode = "newest" | "popular" | "fastest";
 
@@ -61,6 +62,14 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
         sort,
         result_count: filteredPacks.length,
       });
+      trackFirstPartyEvent("Archive Search Used", {
+        properties: {
+          query: normalizedQuery,
+          category,
+          sort,
+          result_count: filteredPacks.length,
+        },
+      });
     }, 900);
 
     return () => window.clearTimeout(timer);
@@ -88,6 +97,7 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
               const nextSort = event.target.value as SortMode;
               setSort(nextSort);
               track("Archive Sort Changed", { sort: nextSort, category });
+              trackFirstPartyEvent("Archive Sort Changed", { properties: { sort: nextSort, category } });
             }}
             className="h-full min-w-0 flex-1 bg-transparent text-sm font-semibold outline-none"
           >
@@ -109,6 +119,7 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
               onClick={() => {
                 setCategory(item);
                 track("Archive Category Selected", { category: item, sort });
+                trackFirstPartyEvent("Archive Category Selected", { properties: { category: item, sort } });
               }}
               className={
                 active

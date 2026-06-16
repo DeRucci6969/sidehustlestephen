@@ -30,6 +30,7 @@ http://localhost:3000
 - Member download route wired to generated asset files
 - Full generated member asset library under `content/member-assets`
 - Vercel Analytics instrumentation for join, magic-link, and billing events
+- First-party Supabase analytics events for page views, archive search/filter intent, pack views, CTA clicks, checkout/magic-link milestones, and member downloads
 
 ## Environment Setup
 

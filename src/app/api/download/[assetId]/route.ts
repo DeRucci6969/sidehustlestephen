@@ -7,6 +7,7 @@ import { getMembershipContext } from "@/lib/membership";
 import { safeAttachmentFilename } from "@/lib/request-security";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 import { recordMemberDownload } from "@/lib/download-audit";
+import { recordAnalyticsEvent } from "@/lib/first-party-analytics";
 import assetManifest from "../../../../../content/member-assets/manifest.json";
 
 type AssetManifestEntry = {
@@ -81,6 +82,11 @@ export async function GET(req: Request, { params }: { params: Promise<{ assetId:
       packSlug: manifestEntry.packSlug,
       assetId,
       assetCount: 1,
+    });
+    void recordAnalyticsEvent(req, {
+      eventName: "Asset Download Served",
+      path: `/api/download/${assetId}`,
+      properties: { asset: assetId, pack: manifestEntry.packSlug, asset_type: manifestEntry.type },
     });
     return new NextResponse(file, {
       headers: {
