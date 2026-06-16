@@ -16,6 +16,14 @@ const csp = [
   ...(process.env.NODE_ENV === "production" ? ["upgrade-insecure-requests"] : []),
 ].join("; ");
 
+const scannerPathPatterns = [
+  /^\/wp(?:-|\/|$)/i,
+  /^\/xmlrpc\.php$/i,
+  /^\/(?:phpmyadmin|pma|mysqladmin)(?:\/|$)/i,
+  /^\/(?:\.env|\.git|\.svn|vendor\/|composer\.(?:json|lock))(?:\/|$)/i,
+  /\.(?:php|asp|aspx|jsp)$/i,
+];
+
 function withSecurityHeaders(response: NextResponse) {
   response.headers.set("Content-Security-Policy", csp);
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
@@ -27,6 +35,10 @@ function withSecurityHeaders(response: NextResponse) {
   return response;
 }
 
+function isScannerPath(pathname: string) {
+  return scannerPathPatterns.some((pattern) => pattern.test(pathname));
+}
+
 export function proxy(request: NextRequest) {
   const host = request.headers.get("host");
 
@@ -34,6 +46,18 @@ export function proxy(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.hostname = "www.sidehustlestephen.com";
     return withSecurityHeaders(NextResponse.redirect(url, 308));
+  }
+
+  if (isScannerPath(request.nextUrl.pathname)) {
+    console.warn(JSON.stringify({ level: "warn", msg: "scanner_path_blocked", path: request.nextUrl.pathname }));
+    return withSecurityHeaders(
+      new NextResponse("Not found", {
+        status: 404,
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      }),
+    );
   }
 
   return withSecurityHeaders(NextResponse.next());
