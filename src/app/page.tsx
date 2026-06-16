@@ -9,6 +9,13 @@ import { PackMatcher } from "@/components/pack-matcher";
 import { QuoteCarousel } from "@/components/quote-carousel";
 import { packs, popularPacks } from "@/data/packs";
 
+const memberInitials = [
+  { initial: "J", className: "bg-[#111827] text-white" },
+  { initial: "M", className: "bg-[#f6f5f2] text-[var(--obsidian)]" },
+  { initial: "P", className: "bg-[#1f8fff] text-white" },
+  { initial: "S", className: "bg-[#e9f5ff] text-[var(--navy-ink)]" },
+];
+
 export default function Home() {
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
 
@@ -72,6 +79,18 @@ export default function Home() {
                 <span>Prompts, scripts, pricing, delivery files</span>
               </div>
               <div className="mt-5 rounded-lg bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
+                <div className="mb-3 flex flex-wrap items-center gap-3">
+                  <div className="flex -space-x-2" aria-hidden="true">
+                    {memberInitials.map((member) => (
+                      <span key={member.initial} className={`grid h-9 w-9 place-items-center rounded-full border-2 border-[var(--studio-white)] text-sm font-black shadow-[0_8px_18px_rgba(10,12,16,0.12)] ${member.className}`}>
+                        {member.initial}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-sm font-semibold text-[var(--navy-ink)]">
+                    250+ active members
+                  </p>
+                </div>
                 <p className="text-sm font-semibold leading-6 text-[var(--navy-ink)]">
                   No fake income promises. Just practical launch files for finding a buyer, making the offer, and delivering the first paid version.
                 </p>
