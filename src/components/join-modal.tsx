@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { track } from "@vercel/analytics";
 import { ArrowRight, Mail, X } from "lucide-react";
 import { cx } from "@/lib/utils";
@@ -15,12 +16,36 @@ type JoinButtonProps = {
 export function JoinButton({ label = "Unlock Packs", returnTo, className }: JoinButtonProps) {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "setup" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "checking" | "sending" | "sent" | "setup" | "error">("idle");
   const triggerRef = useRef<HTMLButtonElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
-  function openModal() {
+  async function openModal() {
     track("Join Modal Opened", { returnTo: returnTo ?? "current_path" });
+    setStatus("checking");
+
+    try {
+      const checkoutReturnTo = returnTo ?? window.location.pathname;
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ returnTo: checkoutReturnTo }),
+      });
+
+      if (res.status !== 401) {
+        const data = (await res.json()) as { url?: string; mode?: string };
+        if (data.url) {
+          track("Checkout Opened From Existing Session", { returnTo: checkoutReturnTo });
+          window.location.href = data.url;
+          return;
+        }
+      }
+    } catch {
+      // Fall back to email sign-in below.
+    }
+
+    setStatus("idle");
     setOpen(true);
   }
 
@@ -39,6 +64,26 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") closeModal();
+      if (event.key !== "Tab") return;
+
+      const focusable = Array.from(
+        modalRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((element) => element.offsetParent !== null);
+
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
 
     document.addEventListener("keydown", onKeyDown);
@@ -76,35 +121,38 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
   return (
     <>
       <button
+        type="button"
         ref={triggerRef}
         onClick={openModal}
+        disabled={status === "checking"}
         className={cx(
-          "accent-cta inline-flex h-11 max-w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition hover:-translate-y-0.5",
+          "accent-cta inline-flex h-11 max-w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-80",
           className,
         )}
       >
-        <span className="truncate">{label}</span>
+        <span className="truncate">{status === "checking" ? "Opening checkout" : label}</span>
         <ArrowRight size={16} />
       </button>
-      {open ? (
+      {open ? createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#162032]/72 px-5 backdrop-blur-xl"
+          className="fixed inset-0 z-50 flex items-end justify-center overflow-y-auto bg-[#162032]/72 px-3 py-4 backdrop-blur-xl sm:items-center sm:px-5"
           onClick={(event) => {
             if (event.target === event.currentTarget) closeModal();
           }}
         >
-          <div className="glass relative w-full max-w-lg rounded-lg p-7" role="dialog" aria-modal="true" aria-labelledby="join-title">
+          <div ref={modalRef} className="glass relative max-h-[calc(100dvh-2rem)] w-full max-w-lg overflow-y-auto rounded-lg p-5 sm:p-7" role="dialog" aria-modal="true" aria-labelledby="join-title">
             <button
               aria-label="Close join modal"
-              className="absolute right-5 top-5 rounded-full p-2 text-[var(--graphite)] hover:bg-black/5"
+              type="button"
+              className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full text-[var(--graphite)] hover:bg-black/5 sm:right-5 sm:top-5"
               onClick={closeModal}
             >
               <X size={18} />
             </button>
-            <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-lg bg-[var(--orange-glass)] text-[var(--safety-orange)] ring-1 ring-[rgba(0,148,255,0.16)]">
+            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--orange-glass)] text-[var(--safety-orange)] ring-1 ring-[rgba(0,148,255,0.16)] sm:mb-8 sm:h-14 sm:w-14">
               <Mail size={24} />
             </div>
-            <h2 id="join-title" className="text-3xl font-semibold tracking-normal text-[var(--navy-ink)]">
+            <h2 id="join-title" className="pr-10 text-2xl font-semibold tracking-normal text-[var(--navy-ink)] sm:text-3xl">
               Unlock every pack
             </h2>
             <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">
@@ -121,6 +169,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
                 className="h-13 w-full rounded-lg border border-[rgba(22,32,50,0.14)] bg-white/80 px-4 text-base text-[var(--navy-ink)] outline-none ring-[var(--safety-orange)] transition placeholder:text-[var(--graphite)] focus:ring-1"
               />
               <button
+                type="submit"
                 disabled={status === "sending"}
                 className="accent-cta flex h-13 w-full items-center justify-center gap-2 rounded px-5 font-semibold transition disabled:cursor-not-allowed disabled:opacity-70"
               >
@@ -129,20 +178,21 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
               </button>
             </form>
             {status === "sent" ? (
-              <p className="mt-4 text-sm text-[var(--graphite)]">
+              <p className="mt-4 text-sm text-[var(--graphite)]" role="status" aria-live="polite">
                 Check your email for the secure sign-in link. It will return you to checkout after sign-in.
               </p>
             ) : null}
             {status === "setup" ? (
-              <p className="mt-4 text-sm text-[var(--graphite)]">
+              <p className="mt-4 text-sm text-[var(--graphite)]" role="status" aria-live="polite">
                 Secure sign-in is temporarily unavailable. Try again shortly.
               </p>
             ) : null}
             {status === "error" ? (
-              <p className="mt-4 text-sm text-[var(--amber-risk)]">Something went wrong. Try again shortly.</p>
+              <p className="mt-4 text-sm text-[var(--amber-risk)]" role="alert">Something went wrong. Try again shortly.</p>
             ) : null}
           </div>
-        </div>
+        </div>,
+        document.body,
       ) : null}
     </>
   );

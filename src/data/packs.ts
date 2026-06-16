@@ -29,6 +29,7 @@ export type PackPageDetail = {
   solution: string;
   delivery: string;
   firstClients: string;
+  startableOffer?: string;
   whyDetails: string[];
   firstMoveAnalysis: string[];
   launchSprintDetails: string[];
@@ -85,6 +86,59 @@ export const packs: BusinessPack[] = [
       { id: "asset-gbp-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for profile access, services, hours, photos, FAQs, and approvals." },
       { id: "asset-gbp-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests." },
       { id: "asset-gbp-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for profile scope, ranking disclaimers, access, approvals, and maintenance." },
+    ],
+  },
+  {
+    slug: "airbnb-photo-refresh-service",
+    title: "Airbnb Photo Refresh Service",
+    hook: "Turn flat listing photos into bookable lifestyle scenes.",
+    category: "Local Service",
+    buyer: "Short-term rental hosts",
+    startupCost: "$0-$50",
+    timeToFirstSale: "1-7 days",
+    difficulty: "Easy",
+    summary: "An AI-assisted listing photo refresh that improves lighting, ambience, composition, and adds realistic lifestyle models enjoying the space.",
+    whyItWorks: "Hosts already know photos drive clicks, but many listings feel empty, flat, or sterile. A strong before/after sample makes the value obvious before a sales call.",
+    firstSteps: ["Find flat listing photos", "Create one lifestyle sample", "Pitch a fixed refresh pack"],
+    caveat: "Preserve the real property and amenities; sell ambience and lifestyle context, not misleading edits.",
+    featured: true,
+    popularityScore: 97,
+    publishedAt: "2026-06-15",
+    assets: [
+      { id: "asset-airbnb-photo-prompts", title: "Photo Improvement Prompt Pack", type: "DOCX", description: "Copy-paste prompts for GPT Image 2, Nano Banana, and other image tools to improve ambience, lighting, composition, and add realistic adults enjoying the space." },
+      { id: "asset-airbnb-photo-audit", title: "Listing Photo Audit Checklist", type: "PDF", description: "A visual audit worksheet for spotting low-appeal listing photos, sample opportunities, edit risks, and before/after proof points." },
+      { id: "asset-airbnb-photo-pricing", title: "Photo Refresh Pricing Calculator", type: "XLSX", description: "Starter, standard, premium, and retainer pricing calculator for per-photo and per-listing refresh packages." },
+      { id: "asset-airbnb-photo-outreach", title: "Host Outreach Scripts", type: "DOCX", description: "Cold email, DM, Loom, and follow-up scripts built around sending a proactive before/after sample to hosts." },
+      { id: "asset-airbnb-photo-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for listing URL, source photos, approved edit boundaries, model direction, rooms, usage, and host approvals." },
+      { id: "asset-airbnb-photo-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for sample delivery, paid refresh scope, source file requests, approval rounds, final handoff, and monthly/seasonal refresh offers." },
+      { id: "asset-airbnb-photo-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs covering ethical edits, model usage, photo ownership, turnaround, platform-safe claims, revisions, and deliverables." },
+    ],
+  },
+  {
+    slug: "drone-roof-photo-inspection",
+    title: "Drone Roof Photo Inspection",
+    hook: "Clear roof photos and a simple visual report without anyone climbing a ladder.",
+    category: "Local Service",
+    buyer: "Roofers, agents, solar installers, and homeowners",
+    startupCost: "$251-$1k",
+    timeToFirstSale: "2-4 weeks",
+    difficulty: "Medium",
+    summary: "A drone-assisted roof photo documentation service that captures close-up roof images, short video, and a claim-safe visual report for people who need roof visibility.",
+    whyItWorks: "Roofs are high-stakes and hard to inspect from the ground. When a buyer sees clear overhead photos, the value is immediate without you claiming to certify structural condition.",
+    firstSteps: ["Buy or borrow a compliant drone", "Offer one free sample roof", "Package the report"],
+    caveat: "This is visual photo documentation, not a structural, engineering, safety, insurance, or building inspection.",
+    featured: true,
+    popularityScore: 96,
+    publishedAt: "2026-06-15",
+    assets: [
+      { id: "asset-drone-roof-outreach", title: "Drone Outreach Script", type: "DOCX", description: "Cold call, DM, email, and follow-up scripts for roofers, agents, solar installers, and property managers built around the free sample roof offer." },
+      { id: "asset-drone-roof-report", title: "Roof Photo Report Template", type: "DOCX", description: "A client-ready visual report template with property details, photo grid, visible-area notes, video link, and visual-only disclaimer language." },
+      { id: "asset-drone-roof-pricing", title: "Drone Roof Pricing Sheet", type: "XLSX", description: "Basic, standard, video, rush, and recurring partner pricing with quote builder and weekly capacity calculator." },
+      { id: "asset-drone-roof-safety", title: "Safety & Legal Checklist", type: "PDF", description: "Pre-flight checklist covering local drone rules, permission, airspace, weather, privacy, insurance, hazards, and visual-only scope boundaries." },
+      { id: "asset-drone-roof-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Claim-safe prompts for report write-ups, visible issue notes, photo captions, free-sample pitches, agent blurbs, and delivery QA." },
+      { id: "asset-drone-roof-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for property details, owner permission, roof areas to capture, access constraints, intended use, and delivery format." },
+      { id: "asset-drone-roof-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for free sample offers, booking confirmation, pre-flight requirements, report delivery, follow-up, and recurring partner retainers." },
+      { id: "asset-drone-roof-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for visual-only scope, drone legality, owner permission, weather, turnaround, roof access, pricing, and recurring reports." },
     ],
   },
   {
@@ -352,6 +406,90 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 6-7: deliver the first sprint as an approval pack: profile score, copy drafts, photo checklist, FAQ prompts, and review prompt.",
     ],
   },
+  "airbnb-photo-refresh-service": {
+    problem:
+      "Many short-stay listings have technically accurate photos that still feel empty, cold, dark, or hard to imagine using. Rooms are photographed without people, lighting is flat, the best lifestyle moments are missing, and the listing blends into every other property in the area. Hosts often know photos matter, but they do not want to book a photographer for every seasonal refresh or small improvement.",
+    solution:
+      "You sell an AI-assisted listing photo refresh: improve lighting, warmth, ambience, crop, visual hierarchy, and add realistic adult lifestyle models using the space in a platform-safe way. The core offer is a small set of before/after images that make the stay feel more desirable while preserving the real property, layout, amenities, view, and host-approved facts.",
+    delivery:
+      "Start from the public listing photos or host-supplied originals. Pick the weakest high-impact rooms, write room-specific enhancement prompts, generate sample edits, QA for realism and property accuracy, then deliver before/after files with a short usage and approval note. Keep a strict edit log so the host can see what changed and approve anything that affects representation.",
+    firstClients:
+      "Search Airbnb, Stayz, direct-booking sites, and property manager portfolios for listings with good spaces but flat photos. Improve one public photo as a tasteful sample, watermark it if needed, and send it with a fixed-fee refresh offer for 6-12 images.",
+    startableOffer:
+      "A 6-photo AI listing refresh with one proactive before/after sample, warmer ambience, realistic lifestyle-model scenes, an edit-risk log, and host-approved final exports.",
+    whyDetails: [
+      "The sales proof is visual. A host does not need to understand AI workflows; they can compare the old photo to a warmer, more bookable lifestyle version.",
+      "The work is fast to sample because listing photos are public and the first pitch can be built around one proactive before/after.",
+      "The offer has natural expansion paths: seasonal refreshes, new hero photos, direct-booking website images, social promos, and listing-wide visual consistency.",
+    ],
+    firstMoveAnalysis: [
+      "Do not start by promising higher occupancy. Start by showing that the current listing feels less inviting than the space deserves.",
+      "Only add models in ways that make the real space easier to imagine: sitting on the balcony, reading in the lounge, making coffee, unpacking luggage, or enjoying breakfast. Do not add amenities, views, furniture, or room size that are not there.",
+      "Lead with one polished sample and a tight offer: refresh 6 images, one style direction, one revision round, final web-ready exports.",
+    ],
+    launchSprintDetails: [
+      "Day 1: find 30 listings with strong locations but flat, empty, poorly lit, or sterile photos.",
+      "Day 2: create 5 tasteful before/after samples using the prompt pack and save exact prompts for repeatability.",
+      "Day 3-4: send sample-led outreach to hosts and property managers with a fixed 6-photo starter offer.",
+      "Day 5-6: close one paid refresh, collect source files and edit boundaries, then deliver the first sample set within 48 hours.",
+      "Day 7: package before/after proof, ask for approval, and offer a seasonal or listing-wide refresh as the next step.",
+    ],
+    firstTenLeadsPlan: [
+      "Search one city or holiday region and filter for entire homes with 10+ reviews and average-looking photos.",
+      "Prioritise listings where the physical space is good but the first five photos feel empty, dim, cold, cluttered, or poorly cropped.",
+      "Avoid luxury listings with professional photography; they are harder to improve and less likely to need a starter refresh.",
+      "Save the listing URL, host/property manager name, first photo issue, and one room that would benefit from a model enjoying the space.",
+      "Create only one sample per prospect so the pitch stays fast and scalable.",
+      "Use gentle edits first: light, warmth, ambience, crop, declutter, then add one realistic adult model only where it makes sense.",
+      "Watermark or low-res the sample if sending publicly, and state that final files require host approval.",
+      "Send a short message: one observation, one before/after sample, one fixed package price, one turnaround window.",
+      "Follow up with a second room idea, not a generic reminder.",
+      "After the first paid job, ask whether they want a seasonal hero-photo refresh before their next peak booking period.",
+    ],
+  },
+  "drone-roof-photo-inspection": {
+    problem:
+      "Homeowners, property managers, agents, roofers, and solar installers often need to see roof condition, gutters, panels, tiles, flashing, or storm-affected areas without sending someone up a ladder. Ground-level photos are weak, trades do not always want to attend before quoting, and agents or owners need clear documentation fast. The risk is that buyers want visibility, but they do not need an expensive structural inspection for every first look.",
+    solution:
+      "You sell a drone roof photo documentation service: fly with permission, capture a clean photo set and short video, then deliver a tidy 1-2 page visual report that flags visible areas of interest. The offer is deliberately claim-safe: you are not certifying structural condition, diagnosing damage, or replacing a roofer, engineer, surveyor, or insurance assessor. You are giving people clear visual evidence from angles they cannot safely capture themselves.",
+    delivery:
+      "Confirm permission, local drone rules, airspace, weather, access, privacy boundaries, and insurance before booking. On site, capture wide roof context, each roof plane, gutters, valleys, flashing, penetrations, solar panels, visible debris, and any client-requested areas. Deliver same-day where possible with labelled photos, a short video link, and a visual-only report that separates observable facts from recommendations to contact a qualified professional.",
+    firstClients:
+      "Start with roofers, real estate agents, solar installers, property managers, and storm-prone suburbs. Offer one free sample roof to a partner so they can see the report format and reuse it in a quote, listing conversation, or client update. One useful flyover gives you a concrete before/after sales asset and a referral path into repeat partners.",
+    startableOffer:
+      "A one-roof drone flyover with 12-20 labelled photos, a short video, and a visual-only report that helps the client see roof areas without climbing.",
+    whyDetails: [
+      "The buyer feels the problem immediately: the roof is valuable, hard to see, and inconvenient or unsafe to inspect casually.",
+      "A consumer or prosumer drone creates a clear capability gap. You can do something most homeowners and many service sellers cannot do quickly themselves.",
+      "The deliverable is tangible. A labelled photo report is easier to buy, forward, and reuse than a vague inspection service pitch.",
+      "Partner channels are natural: roofers, agents, solar installers, and property managers all see repeat situations where roof visibility helps the next conversation.",
+    ],
+    firstMoveAnalysis: [
+      "Do not position this as a building inspection. Lead with visual documentation, close-up photos, and a report that helps a qualified person decide the next step.",
+      "Use the free sample roof as proof. Pick a willing owner, agent, roofer, or installer and create a polished sample report before asking for repeat work.",
+      "Start with partner buyers before one-off homeowners. A roofer or agent who likes the report can refer multiple jobs; a homeowner is usually a single transaction.",
+      "Make compliance part of the offer. Permission, airspace, weather, privacy, and visual-only disclaimers should sound professional, not like fine print.",
+    ],
+    launchSprintDetails: [
+      "Day 1: confirm the local drone requirements that apply to paid work, including registration, licensing, airspace, privacy, and liability insurance.",
+      "Day 2: build one sample report using a permissioned roof and practise the flight shot list: wide context, roof planes, gutters, valleys, flashing, penetrations, panels, and visible debris.",
+      "Day 3-4: contact 30 roofers, agents, solar installers, and property managers with a free sample roof offer and a one-page example report.",
+      "Day 5-6: complete one free sample or discounted first report, deliver it same day, and ask which client conversation it helps them with.",
+      "Day 7: turn the sample into a partner offer: per-report pricing, recurring monthly allocation, rush add-on, and before/after job documentation.",
+    ],
+    firstTenLeadsPlan: [
+      "List 10 roofers who quote residential roof repairs, gutter cleaning, roof restoration, or storm damage work.",
+      "List 5 solar installers who need pre-quote roof visibility, panel checks, or before/after job documentation.",
+      "List 5 real estate agents with active listings in suburbs where roof condition questions commonly slow buyer confidence.",
+      "List 5 property managers or strata managers responsible for maintenance documentation across multiple properties.",
+      "Find one permissioned sample roof and create a clean report before sending broad outreach.",
+      "Call or email each lead with one specific use case: pre-quote photos, listing support, storm documentation, or job closeout proof.",
+      "Offer one free sample roof to the best partner prospect, not to everyone.",
+      "Track whether each prospect cares about price, turnaround, compliance, report format, or recurring volume.",
+      "After the sample, ask who else in their workflow needs this visibility: estimator, owner, seller, buyer, insurer, tenant, or installer.",
+      "Convert the strongest response into a simple recurring offer: 4 reports per month, priority scheduling, consistent report format, and optional video add-on.",
+    ],
+  },
   "gym-churn-report": {
     problem:
       "Boutique gyms see cancellations every month but rarely know what is controllable. Cancellation notes sit in inboxes, spreadsheets, or staff memory. Owners react emotionally, discount too quickly, or miss patterns around timetable, onboarding, injury, price, and member experience.",
@@ -589,6 +727,36 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for profile mini-audits, rescue sprint pitches, owner approval requests, final handoffs, and ethical review-request copy.",
   "asset-gbp-faqs":
     "A DOCX buyer FAQ pack covering profile rescue scope, ranking disclaimers, access requirements, owner approvals, review rules, and ongoing maintenance.",
+  "asset-airbnb-photo-prompts":
+    "A DOCX prompt system with room-specific image enhancement prompts, realistic lifestyle-model insertion prompts, ambience and lighting variations, negative prompts, before/after sample copy, QA prompts, and edit-boundary rules for GPT Image 2, Nano Banana, and similar tools.",
+  "asset-airbnb-photo-audit":
+    "A PDF listing-photo audit worksheet for scoring weak images, identifying lifestyle-model opportunities, preserving property accuracy, ranking hero-photo candidates, and deciding which proactive sample to send first.",
+  "asset-airbnb-photo-pricing":
+    "An XLSX pricing workbook with per-photo and per-listing packages, rush fees, revision allowances, sample tracking, seasonal refresh options, quote formulas, and edit-risk logging.",
+  "asset-airbnb-photo-outreach":
+    "A DOCX outreach kit with sample-led cold emails, DMs, Loom scripts, property-manager angles, follow-ups, objection handling, and approval-safe positioning for AI-assisted listing photo refreshes.",
+  "asset-airbnb-photo-intake":
+    "A DOCX client intake form for listing links, source-photo ownership, edit permissions, model direction, rooms to prioritise, property accuracy boundaries, usage rights, and host approval workflow.",
+  "asset-airbnb-photo-email-templates":
+    "A DOCX email template pack for proactive sample delivery, paid refresh scope, source file requests, edit-boundary approvals, final before/after handoff, revision requests, and seasonal refresh upsells.",
+  "asset-airbnb-photo-faqs":
+    "A DOCX buyer FAQ pack covering ethical AI edits, model usage, representation accuracy, photo rights, platform-safe listing claims, revision rounds, turnaround, and what should not be changed.",
+  "asset-drone-roof-outreach":
+    "A DOCX outreach kit with cold call scripts, emails, DMs, free-sample roof positioning, partner pitches for roofers/agents/solar installers, follow-ups, and claim-safe objection handling.",
+  "asset-drone-roof-report":
+    "A DOCX visual report template with property details, flight summary, photo grid, visible-area notes, short video link, recommended next-step language, and visual-only disclaimer blocks.",
+  "asset-drone-roof-pricing":
+    "An XLSX pricing workbook with basic, standard, video, rush, partner retainer, and weekly capacity calculators plus quote builder and illustrative unit-economics sheets.",
+  "asset-drone-roof-safety":
+    "A PDF pre-flight checklist covering local drone regulations, owner permission, airspace, weather, site hazards, privacy, insurance, battery checks, shot list, and no-structural-inspection boundaries.",
+  "asset-drone-roof-prompts":
+    "A DOCX AI prompt pack for visual report write-ups, visible issue flagging, photo captions, client-safe disclaimers, agent/roofer blurbs, outreach copy, and final report QA.",
+  "asset-drone-roof-intake":
+    "A DOCX client intake form for property address, owner permission, roof areas to capture, access notes, flight restrictions, intended use, report recipients, and delivery format.",
+  "asset-drone-roof-email-templates":
+    "A DOCX email template pack for free sample offers, partner outreach, booking confirmation, permission/weather checks, report delivery, follow-up, and recurring report offers.",
+  "asset-drone-roof-faqs":
+    "A DOCX buyer FAQ pack covering visual-only scope, what is not certified, whether anyone climbs the roof, local drone compliance, weather delays, turnaround, pricing, and recurring work.",
   "asset-gym-report":
     "An XLSX retention workbook with raw cancellation tagging, dashboard formulas, revenue-at-risk summary, action plan, call notes, worked example, QA, and renewal tracking.",
   "asset-gym-call":

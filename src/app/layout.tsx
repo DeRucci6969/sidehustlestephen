@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { AnalyticsInteractionTracker } from "@/components/analytics-interaction-tracker";
 import { SiteSchema } from "@/components/site-schema";
 import { UnlockActivityToast } from "@/components/unlock-activity-toast";
 import { siteConfig } from "@/lib/site";
@@ -54,7 +56,9 @@ export default function RootLayout({
         <SiteSchema />
         {children}
         <UnlockActivityToast />
+        <AnalyticsInteractionTracker />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

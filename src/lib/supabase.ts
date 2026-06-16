@@ -2,8 +2,12 @@ import { createServerClient } from "@supabase/ssr";
 import { createClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 
+export function getSupabasePublishableKey() {
+  return process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+}
+
 export function hasSupabaseConfig() {
-  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && getSupabasePublishableKey());
 }
 
 export function hasSupabaseAdminConfig() {
@@ -11,13 +15,14 @@ export function hasSupabaseAdminConfig() {
 }
 
 export async function createSupabaseServerClient() {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+  const publishableKey = getSupabasePublishableKey();
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !publishableKey) {
     throw new Error("Supabase environment variables are not configured");
   }
 
   const cookieStore = await cookies();
 
-  return createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY, {
+  return createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL, publishableKey, {
     cookies: {
       getAll() {
         return cookieStore.getAll();

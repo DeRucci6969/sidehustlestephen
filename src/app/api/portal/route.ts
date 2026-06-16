@@ -2,8 +2,19 @@ import { NextResponse } from "next/server";
 import { absoluteUrl } from "@/lib/utils";
 import { getStripe, hasStripeConfig } from "@/lib/stripe";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
+import { rejectCrossOriginRequest } from "@/lib/request-security";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 
-export async function POST() {
+export async function POST(req: Request) {
+  const crossOriginResponse = rejectCrossOriginRequest(req);
+  if (crossOriginResponse) return crossOriginResponse;
+
+  const ipRateLimitResponse = await checkRateLimit({
+    action: "billing_portal",
+    rules: [{ scope: "ip", identifier: getClientIp(req), limit: 20, windowSeconds: 10 * 60 }],
+  });
+  if (ipRateLimitResponse) return ipRateLimitResponse;
+
   if (!hasStripeConfig()) {
     return NextResponse.json({
       mode: "setup_required",
@@ -26,6 +37,12 @@ export async function POST() {
   if (!user) {
     return NextResponse.json({ error: "Authentication required." }, { status: 401 });
   }
+
+  const userRateLimitResponse = await checkRateLimit({
+    action: "billing_portal",
+    rules: [{ scope: "user", identifier: user.id, limit: 10, windowSeconds: 60 * 60 }],
+  });
+  if (userRateLimitResponse) return userRateLimitResponse;
 
   const { data: subscription } = await supabase
     .from("subscriptions")

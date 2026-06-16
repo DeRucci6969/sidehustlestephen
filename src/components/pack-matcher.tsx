@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import type { KeyboardEvent } from "react";
 import { useMemo, useRef } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight, LockKeyhole } from "lucide-react";
 import type { BusinessPack } from "@/data/packs";
@@ -29,6 +30,17 @@ export function PackMatcher({
       left: direction * 420,
       behavior: "smooth",
     });
+  }
+
+  function onTrackKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollCarousel(-1);
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollCarousel(1);
+    }
   }
 
   return (
@@ -60,13 +72,20 @@ export function PackMatcher({
 
       <div
         ref={trackRef}
+        tabIndex={0}
+        aria-label={`${title} carousel`}
+        onKeyDown={onTrackKeyDown}
         className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-3"
       >
         {carouselPacks.map((pack) => (
           <Link
             key={pack.slug}
             href={`/packs/${pack.slug}`}
-            className="glass pack-card-surface group flex min-h-[390px] w-[min(82vw,22rem)] flex-none snap-start flex-col rounded-lg p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_54px_rgba(0,0,0,0.18)]"
+            data-analytics-event="Pack Card Opened"
+            data-analytics-pack={pack.slug}
+            data-analytics-category={pack.category}
+            data-analytics-location={sortByPopularity ? "popular_carousel" : "homepage_carousel"}
+            className="glass pack-card-surface group flex min-h-[390px] w-[min(88vw,21rem)] flex-none snap-start flex-col rounded-lg p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_54px_rgba(0,0,0,0.18)] sm:w-[min(82vw,22rem)]"
           >
             <div className="mb-5 flex items-start justify-between gap-3">
               <span className="rounded-full border border-[rgba(22,32,50,0.12)] bg-white/76 px-3 py-1 text-xs font-bold text-[var(--graphite)]">
@@ -83,7 +102,7 @@ export function PackMatcher({
               <p className="mt-4 text-sm leading-6 text-white/70">{pack.hook}</p>
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold text-[var(--navy-ink)]">
+            <div className="mb-6 mt-5 flex flex-wrap gap-2 text-xs font-bold text-[var(--navy-ink)]">
               {pack.assets.slice(0, 4).map((asset) => (
                 <span key={asset.id} className="rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-3 py-2">
                   {asset.title}

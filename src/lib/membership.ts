@@ -2,9 +2,23 @@ import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 
 export type MembershipStatus = "active" | "inactive" | "setup_required";
 
-export async function getMembershipStatus(): Promise<MembershipStatus> {
+export type MembershipContext = {
+  status: MembershipStatus;
+  isAuthenticated: boolean;
+  isMember: boolean;
+  email: string | null;
+  userId: string | null;
+};
+
+export async function getMembershipContext(): Promise<MembershipContext> {
   if (!hasSupabaseConfig()) {
-    return "setup_required";
+    return {
+      status: "setup_required",
+      isAuthenticated: false,
+      isMember: false,
+      email: null,
+      userId: null,
+    };
   }
 
   const supabase = await createSupabaseServerClient();
@@ -13,7 +27,13 @@ export async function getMembershipStatus(): Promise<MembershipStatus> {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return "inactive";
+    return {
+      status: "inactive",
+      isAuthenticated: false,
+      isMember: false,
+      email: null,
+      userId: null,
+    };
   }
 
   const { data: subscription } = await supabase
@@ -27,7 +47,13 @@ export async function getMembershipStatus(): Promise<MembershipStatus> {
 
   if (subscription?.status === "active" || subscription?.status === "trialing") {
     if (!subscription.current_period_end || new Date(subscription.current_period_end).getTime() > Date.now()) {
-      return "active";
+      return {
+        status: "active",
+        isAuthenticated: true,
+        isMember: true,
+        email: user.email ?? null,
+        userId: user.id,
+      };
     }
   }
 
@@ -38,8 +64,25 @@ export async function getMembershipStatus(): Promise<MembershipStatus> {
     .maybeSingle();
 
   if (profile?.membership_status === "active") {
-    return "active";
+    return {
+      status: "active",
+      isAuthenticated: true,
+      isMember: true,
+      email: user.email ?? null,
+      userId: user.id,
+    };
   }
 
-  return "inactive";
+  return {
+    status: "inactive",
+    isAuthenticated: true,
+    isMember: false,
+    email: user.email ?? null,
+    userId: user.id,
+  };
+}
+
+export async function getMembershipStatus(): Promise<MembershipStatus> {
+  const context = await getMembershipContext();
+  return context.status;
 }

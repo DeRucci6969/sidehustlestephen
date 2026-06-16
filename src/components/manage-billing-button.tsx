@@ -43,6 +43,7 @@ export function ManageBillingButton() {
   return (
     <div>
       <button
+        type="button"
         onClick={openPortal}
         disabled={status === "loading"}
         className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[var(--obsidian)] px-5 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(7,10,15,0.18)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
@@ -50,7 +51,11 @@ export function ManageBillingButton() {
         {status === "loading" ? "Opening..." : "Manage billing"}
         <ArrowUpRight size={16} />
       </button>
-      {message ? <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">{message}</p> : null}
+      {message ? (
+        <p className="mt-3 text-sm leading-6 text-[var(--graphite)]" role={status === "error" ? "alert" : "status"} aria-live="polite">
+          {message}
+        </p>
+      ) : null}
     </div>
   );
 }

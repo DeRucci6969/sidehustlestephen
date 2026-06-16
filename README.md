@@ -48,6 +48,8 @@ Required before live auth/payments:
 - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 - `STRIPE_WEBHOOK_SECRET`
 - `STRIPE_PRICE_ID`
+- `RESEND_API_KEY`
+- `RESEND_FROM`
 
 Supabase database setup:
 
@@ -56,6 +58,25 @@ Supabase database setup:
 - Add the deployed site URL and `/auth/callback` redirect URL in Supabase Auth settings.
 - Use the publishable/anon key for `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 - Use the service-role secret for `SUPABASE_SERVICE_ROLE_KEY`; Stripe webhooks need it to write subscription status.
+
+Branded Supabase auth emails:
+
+- Templates live in `supabase/auth-templates/confirmation.html` and `supabase/auth-templates/magic-link.html`.
+- Apply them with `SUPABASE_ACCESS_TOKEN=... npm run supabase:email-templates`.
+- Create the token at `https://supabase.com/dashboard/account/tokens`.
+- Supabase projects created after 3 June 2026 on Free tier cannot customize auth templates while using Supabase's default SMTP. Upgrade to Pro or configure custom SMTP first.
+
+Supabase Auth hardening:
+
+- Enable leaked-password protection with `SUPABASE_ACCESS_TOKEN=... npm run supabase:auth-security`.
+- This requires Supabase Pro or above.
+
+Resend email setup:
+
+- Configure Supabase Auth SMTP with Resend so magic-link emails use the verified Side Hustle Stephen domain.
+- Use `RESEND_API_KEY` for app transactional emails.
+- Use `RESEND_FROM=Side Hustle Stephen <no-reply@sidehustlestephen.com>` after the domain is verified in Resend.
+- Stripe sends a member welcome email from the webhook after Checkout completes.
 
 ## Product Decisions
 

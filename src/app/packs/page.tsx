@@ -14,16 +14,16 @@ export default function PacksPage() {
   return (
     <>
       <Header />
-      <main className="mx-auto w-full max-w-7xl overflow-hidden px-5 py-12 sm:px-8">
-        <div className="mb-10 grid min-w-0 gap-6 lg:grid-cols-[1fr_0.45fr] lg:items-end">
+      <main className="mx-auto w-full max-w-7xl overflow-hidden px-4 py-8 sm:px-8 sm:py-12">
+        <div className="mb-6 grid min-w-0 gap-6 sm:mb-10 lg:grid-cols-[1fr_0.45fr] lg:items-end">
           <div className="min-w-0 max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Archive</p>
-            <h1 className="display-type balanced mt-3 break-words text-[clamp(2.7rem,13vw,4rem)]">Business packs you can actually launch.</h1>
-            <p className="premium-copy mt-5 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">
+            <h1 className="display-type balanced mt-3 break-words text-[clamp(2.35rem,11.5vw,4rem)] leading-[1.03]">Business packs you can actually launch.</h1>
+            <p className="premium-copy mt-4 max-w-2xl text-base leading-7 sm:mt-5 sm:text-lg sm:leading-8">
               Browse {packs.length} business packs. Public previews are open; full playbooks and downloads unlock with membership.
             </p>
           </div>
-          <div className="liquid-panel glass min-w-0 rounded-lg p-4 sm:p-5">
+          <div className="liquid-panel glass hidden min-w-0 rounded-lg p-4 sm:block sm:p-5">
             <p className="text-sm font-semibold text-[var(--graphite)]">Archive snapshot</p>
             <div className="mt-4 grid min-w-0 grid-cols-[repeat(3,minmax(0,1fr))] gap-2 text-center">
               <div className="min-w-0 rounded-lg bg-white/55 p-3 ring-1 ring-white/70">

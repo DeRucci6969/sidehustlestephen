@@ -5,6 +5,7 @@ import math
 import os
 import re
 import zipfile
+from datetime import date
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -13,7 +14,7 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "content" / "member-assets"
-BRAND = "Side Hustle Stephen - The Launchpad"
+BRAND = "Side Hustle Stephen"
 
 # Visual system aligned to the ElevenLabs brand: warm off-white surfaces,
 # black-first monochrome structure, a single functional blue highlight, and
@@ -102,6 +103,53 @@ PACKS: list[Pack] = [
             Asset("asset-gbp-intake", "Client Intake Form", "DOCX", "Editable intake questions for profile access, services, hours, photos, FAQs, review rules, and approval owners."),
             Asset("asset-gbp-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests."),
             Asset("asset-gbp-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs that explain profile rescue scope, ranking disclaimers, access, approvals, and maintenance."),
+        ],
+    ),
+    Pack(
+        "airbnb-photo-refresh-service",
+        "Airbnb Photo Refresh Service",
+        "Turn flat listing photos into bookable lifestyle scenes.",
+        "Local Service",
+        "Short-term rental hosts",
+        "$0-$50",
+        "1-7 days",
+        "Easy",
+        "An AI-assisted listing photo refresh that improves lighting, ambience, composition, and adds realistic lifestyle models enjoying the space.",
+        "Hosts already know photos drive clicks, but many listings feel empty, flat, or sterile. A strong before/after sample makes the value obvious before a sales call.",
+        ["Find flat listing photos", "Create one lifestyle sample", "Pitch a fixed refresh pack"],
+        "Preserve the real property and amenities; sell ambience and lifestyle context, not misleading edits.",
+        [
+            Asset("asset-airbnb-photo-prompts", "Photo Improvement Prompt Pack", "DOCX", "Copy-paste prompts for GPT Image 2, Nano Banana, and other image tools to improve ambience, lighting, composition, and add realistic adults enjoying the space."),
+            Asset("asset-airbnb-photo-audit", "Listing Photo Audit Checklist", "PDF", "A visual audit worksheet for spotting low-appeal listing photos, sample opportunities, edit risks, and before/after proof points."),
+            Asset("asset-airbnb-photo-pricing", "Photo Refresh Pricing Calculator", "XLSX", "Starter, standard, premium, and retainer pricing calculator for per-photo and per-listing refresh packages."),
+            Asset("asset-airbnb-photo-outreach", "Host Outreach Scripts", "DOCX", "Cold email, DM, Loom, and follow-up scripts built around sending a proactive before/after sample to hosts."),
+            Asset("asset-airbnb-photo-intake", "Client Intake Form", "DOCX", "Editable intake questions for listing URL, source photos, approved edit boundaries, model direction, rooms, usage, and host approvals."),
+            Asset("asset-airbnb-photo-email-templates", "Client Email Templates", "DOCX", "Emails for sample delivery, paid refresh scope, source file requests, approval rounds, final handoff, and monthly/seasonal refresh offers."),
+            Asset("asset-airbnb-photo-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs covering ethical edits, model usage, photo ownership, turnaround, platform-safe claims, revisions, and deliverables."),
+        ],
+    ),
+    Pack(
+        "drone-roof-photo-inspection",
+        "Drone Roof Photo Inspection",
+        "Clear roof photos and a simple visual report without anyone climbing a ladder.",
+        "Local Service",
+        "Roofers, agents, solar installers, and homeowners",
+        "$251-$1k",
+        "2-4 weeks",
+        "Medium",
+        "A drone-assisted roof photo documentation service that captures close-up roof images, short video, and a claim-safe visual report for people who need roof visibility.",
+        "Roofs are high-stakes and hard to inspect from the ground. When a buyer sees clear overhead photos, the value is immediate without you claiming to certify structural condition.",
+        ["Confirm local drone rules", "Offer one free sample roof", "Package the report"],
+        "This is visual photo documentation, not a structural, engineering, safety, insurance, or building inspection.",
+        [
+            Asset("asset-drone-roof-outreach", "Drone Outreach Script", "DOCX", "Cold call, DM, email, and follow-up scripts for roofers, agents, solar installers, and property managers built around the free sample roof offer."),
+            Asset("asset-drone-roof-report", "Roof Photo Report Template", "DOCX", "A client-ready visual report template with property details, photo grid, visible-area notes, video link, and visual-only disclaimer language."),
+            Asset("asset-drone-roof-pricing", "Drone Roof Pricing Sheet", "XLSX", "Basic, standard, video, rush, and recurring partner pricing with quote builder and weekly capacity calculator."),
+            Asset("asset-drone-roof-safety", "Safety & Legal Checklist", "PDF", "Pre-flight checklist covering local drone rules, permission, airspace, weather, privacy, insurance, hazards, and visual-only scope boundaries."),
+            Asset("asset-drone-roof-prompts", "AI Prompt Pack", "DOCX", "Claim-safe prompts for report write-ups, visible issue notes, photo captions, free-sample pitches, agent blurbs, and delivery QA."),
+            Asset("asset-drone-roof-intake", "Client Intake Form", "DOCX", "Editable intake questions for property details, owner permission, roof areas to capture, access constraints, intended use, and delivery format."),
+            Asset("asset-drone-roof-email-templates", "Client Email Templates", "DOCX", "Emails for free sample offers, booking confirmation, pre-flight requirements, report delivery, follow-up, and recurring partner retainers."),
+            Asset("asset-drone-roof-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs for visual-only scope, drone legality, owner permission, weather, turnaround, roof access, pricing, and recurring reports."),
         ],
     ),
     Pack(
@@ -543,6 +591,30 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Track which upsells guests actually request before making them prominent.",
         ]),
     ],
+    "asset-drone-roof-report": [
+        ("Visual-only report language standard", [
+            "Use visible, appears, shown in Photo [x], and may be worth qualified review.",
+            "Avoid damaged, unsafe, failed, compliant, repair required, waterproof, structurally sound, claimable, or certified.",
+            "Mark limitations clearly when shadows, tree cover, pitch, access, privacy, or flight safety prevents full visibility.",
+            "Every report should make the next step obvious without pretending to replace a qualified professional.",
+        ]),
+    ],
+    "asset-drone-roof-safety": [
+        ("Commercial readiness standard", [
+            "Treat permission, airspace, weather, privacy, and insurance as go/no-go items, not admin details.",
+            "Document who authorised the flight before arrival.",
+            "Keep a simple log of flight date, property, weather, limitations, and report delivery.",
+            "If a paid job requires rules you cannot confidently comply with, decline or refer it out.",
+        ]),
+    ],
+    "asset-drone-roof-prompts": [
+        ("Prompting standard", [
+            "Ask AI to rewrite for claim safety, not to diagnose the roof.",
+            "Ask for tables when turning photo notes into a report so every observation is tied to an image number.",
+            "Run a legal-risk pass before delivery and remove any sentence that sounds like certification.",
+            "Keep a reusable prompt log for each roof type, buyer type, and report use case.",
+        ]),
+    ],
 }
 
 
@@ -554,6 +626,8 @@ def script_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     base_offer = {
         "cafe-menu-refresh-package": "a menu refresh across print, Instagram, Google Business, and QR menus",
         "google-business-profile-rescue": "a profile rescue sprint for photos, services, hours, FAQs, and review prompts",
+        "airbnb-photo-refresh-service": "an AI-assisted Airbnb listing photo refresh with before/after samples, edit-risk notes, and host-approved lifestyle scenes",
+        "drone-roof-photo-inspection": "a visual drone roof photo report with labelled photos, a short video, and claim-safe handoff notes",
         "shopify-cart-audit": "a checkout friction and abandoned-cart email audit",
         "realtor-suburb-snapshot": "a weekly suburb snapshot agents can post, email, and send to warm leads",
         "ai-inbox-triage-trades": "an inbox triage workflow that labels leads and drafts human-approved replies",
@@ -637,6 +711,20 @@ def checklist_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
             "Recent photos show real work, premises, staff, and proof of activity.",
             "Services and descriptions use plain customer language, not internal jargon.",
             "Review request prompt is ethical, simple, and sent after a real service moment.",
+        ],
+        "asset-airbnb-photo-audit": [
+            "Listing photos are bright enough to understand the room within three seconds.",
+            "The first five photos show the strongest room, sleeping setup, bathroom, kitchen/living area, and lifestyle context.",
+            "Any AI edit preserves real property layout, amenities, views, room size, furniture, and access details.",
+            "Lifestyle models are realistic adults and do not imply amenities, parties, views, or experiences the property cannot provide.",
+            "Before/after samples are labelled as visual refresh concepts and approved by the host before publication.",
+        ],
+        "asset-drone-roof-safety": [
+            "Confirm local drone rules, registration/licensing requirements, airspace restrictions, and any permission or notification requirements before accepting paid work.",
+            "Get property-owner or authorised-agent permission in writing before flying and avoid capturing neighbouring private areas where possible.",
+            "Check weather, wind, visibility, battery level, return-to-home settings, obstacles, trees, power lines, birds, people, traffic, and safe launch/landing area.",
+            "Carry or confirm suitable drone liability insurance for paid work before offering commercial reports.",
+            "Label the service as visual photo documentation only; do not certify structural condition, safety, insurance coverage, code compliance, or repair urgency.",
         ],
         "asset-gym-call": [
             "Start with churn count, churn rate, and top cancellation reasons.",
@@ -774,6 +862,136 @@ DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Do not claim guaranteed rankings, map-pack placement, review volume, or revenue.",
             "Use ethical review prompts only; never ask for fake, gated, or incentivized reviews.",
             "Keep business owner approval for categories, claims, services, and hours.",
+        ]),
+    ],
+    "asset-airbnb-photo-outreach": [
+        ("Best prospects", [
+            "Short-stay listings with good spaces but dim, empty, cold, cluttered, or sterile first-five photos.",
+            "Hosts with strong reviews but weak hero photos; the product is good, the visual merchandising is underperforming.",
+            "Property managers with multiple listings and inconsistent photo quality across similar properties.",
+            "Avoid listings with already excellent professional photography unless you can offer seasonal refreshes or direct-booking crops.",
+        ]),
+        ("Cold email: proactive sample opener", [
+            "Subject: quick visual refresh idea for [listing name]",
+            "Hi [Name], I noticed [specific room/photo] in your [listing/location] property has good potential, but the image feels [flat/dim/empty/cold] compared with the stay it is selling.",
+            "I made a small concept showing how that photo could feel warmer and more bookable while preserving the real property details. The final version would only be used with your approval.",
+            "I offer a fixed 6-photo refresh: lighting, ambience, crop, and tasteful lifestyle scenes where appropriate. Want me to send the sample?",
+        ]),
+        ("Cold email: direct before/after attached", [
+            "Subject: sample refresh for [listing]",
+            "Hi [Name], I put together a quick before/after concept for your [room/photo]. I kept the property details intact and focused on ambience, light, and helping guests imagine using the space.",
+            "If useful, I can refresh 6 listing photos in this style with one approval round and web-ready exports. The starter refresh is [price] and can be turned around in [timeframe].",
+            "Would you like me to price the full set?",
+        ]),
+        ("DM version", [
+            "Hey [Name], I saw your [listing/room] photo and made a quick concept showing how it could feel warmer and more lived-in while keeping the real space accurate.",
+            "I do fixed Airbnb photo refreshes using host-approved AI edits: lighting, ambience, crop, and realistic lifestyle scenes. Want me to send the sample?",
+        ]),
+        ("Loom script", [
+            "0:00-0:10 - Show the current listing photo and name the visible issue: dim, empty, cold, cluttered, weak crop, or missing lifestyle context.",
+            "0:10-0:30 - Show the refreshed sample and explain what changed: light, warmth, composition, guest context, and visual appeal.",
+            "0:30-0:45 - State the boundary: the edit must preserve real property facts and requires host approval before use.",
+            "0:45-1:00 - Offer the fixed starter: 6 photos, one style direction, one revision round, web-ready exports.",
+        ]),
+        ("Follow-up sequence", [
+            "Day 2: send one additional room idea, such as balcony coffee scene, bedroom arrival moment, or kitchen breakfast scene.",
+            "Day 5: ask whether they already have a seasonal photo refresh process before peak booking periods.",
+            "Day 10: offer a smaller paid starter: one approved hero image plus prompt/edit log.",
+            "Day 21: close the loop with a short checklist: five photo issues that reduce listing appeal.",
+        ]),
+        ("Objection handling", [
+            "Is this misleading? The offer preserves the real property and only uses host-approved edits. No fake amenities, views, room size, bed count, or layout changes.",
+            "We already have photos. This is not a replacement shoot; it is a fast visual merchandising refresh for existing photos.",
+            "Will Airbnb allow this? The host must approve and decide platform use. The service focuses on truthful, property-preserving enhancements.",
+            "Why add people? People help guests imagine using the space. The model should support the room, not become the product.",
+        ]),
+        ("Close and handoff copy", [
+            "Great. For the starter refresh I need the listing URL, original source photos where possible, the rooms you want prioritised, and any edit boundaries.",
+            "I will return before/after files, a short edit log, usage notes, and any images that need explicit approval before publication.",
+            "If any edit changes a property fact or feels too stylised, I will regenerate rather than ask you to publish it.",
+        ]),
+    ],
+    "asset-drone-roof-outreach": [
+        ("Best prospects", [
+            "Roofers who quote residential repairs, gutter work, storm damage, roof restorations, or maintenance jobs.",
+            "Real estate agents who need listing support, pre-sale condition context, or buyer-question documentation.",
+            "Solar installers who need pre-quote roof visibility, panel context, or before/after job documentation.",
+            "Property managers, strata managers, and landlords who need fast visual documentation without climbing access.",
+        ]),
+        ("Cold call: free sample roof", [
+            "Hi [Name], I run a drone roof photo service for [roofers/agents/solar installers] who need clear roof visibility without sending someone up a ladder.",
+            "I am offering one free sample roof for a local partner this week: a short flyover, labelled roof photos, and a simple visual report you can show a client.",
+            "This is not a structural inspection or certification; it is clean photo documentation from above. Would a sample report be useful for one property you already have permission to access?",
+        ]),
+        ("Cold email: roofer partner", [
+            "Subject: free sample roof report for your next quote",
+            "Hi [Name], I noticed you handle [roof repairs/gutters/restoration] around [area]. I help roofers get clear drone photos and a simple visual roof report before quoting or documenting work.",
+            "The useful part is speed: photos from above, visible areas flagged, and no one climbing a ladder just to get first-look images. It is visual documentation only, not a structural inspection.",
+            "I am offering one free sample roof for a local roofer this week. Want me to send the sample report format?",
+        ]),
+        ("Cold email: agent or property manager", [
+            "Subject: roof visibility for [listing/property]",
+            "Hi [Name], roof questions can slow down a listing, maintenance decision, or owner update because the roof is hard to see from the ground.",
+            "I provide drone roof photos, a short video, and a simple visual-only report that can be shared with the owner, seller, buyer, or tradesperson. No structural certification; just clear roof visibility.",
+            "Would you like a sample report for one property where you already have owner permission?",
+        ]),
+        ("DM version", [
+            "Hey [Name], I do drone roof photo reports for local [roofers/agents/solar installers]. It is a short flyover, clear roof photos, and a visual-only report - no structural certification. I am offering one free sample roof this week if you have a property with owner permission.",
+        ]),
+        ("Follow-up sequence", [
+            "Day 2: send a sample report screenshot and ask which use case matters most: quoting, listing support, storm docs, solar pre-check, or owner update.",
+            "Day 5: offer a tiny paid first job if they do not want to use the free sample slot.",
+            "Day 10: share the pre-flight checklist to show professionalism: permission, airspace, weather, privacy, and visual-only scope.",
+            "Day 21: close the loop with a recurring partner offer: 4 reports per month with priority scheduling.",
+        ]),
+        ("Objection handling", [
+            "Is this an inspection? No. It is visual photo documentation only. A qualified roofer, engineer, builder, or assessor should interpret structural condition.",
+            "Is this legal? Paid drone rules vary by country and location. Flights should only happen where the operator can comply with local drone, airspace, privacy, and permission requirements.",
+            "Do you need to climb the roof? No. The point is to capture visibility from above without ladder access.",
+            "Will it find every problem? No. It can show visible areas of interest from the captured angles; it cannot guarantee hidden damage detection.",
+        ]),
+        ("Close and booking copy", [
+            "Great. To book the flyover I need written permission from the owner or authorised agent, the property address, any specific areas to capture, preferred timing, and any access or privacy notes.",
+            "I will confirm weather and airspace before attending. If conditions are not suitable, I will reschedule rather than force the flight.",
+            "The final delivery is a photo set, short video link, and visual-only report. Anything that looks like repair advice should be reviewed by a qualified professional.",
+        ]),
+    ],
+    "asset-drone-roof-report": [
+        ("Report cover", [
+            "Property: [address]",
+            "Client: [name / company]",
+            "Date captured: [date]",
+            "Operator: [business name]",
+            "Purpose: visual roof photo documentation only.",
+            "Delivery: photo set, short video link, and visual report.",
+        ]),
+        ("Scope statement", [
+            "This report provides visual photo documentation captured by drone from accessible exterior angles.",
+            "This is not a structural inspection, engineering report, building inspection, safety certification, insurance assessment, or repair recommendation.",
+            "Visible areas of interest are noted only to help the client decide whether a qualified roofer, builder, engineer, installer, or assessor should review further.",
+        ]),
+        ("Photo grid fields", [
+            "Photo number: [01]",
+            "Area: [front roof plane / rear roof plane / gutter / valley / flashing / solar panel / penetration / ridge / debris]",
+            "Observation: [visible-only note]",
+            "Image file: [filename]",
+            "Recommended next step: [monitor / ask roofer / provide to installer / no action from visual review]",
+        ]),
+        ("Visible-area note examples", [
+            "Leaves or debris are visible in the gutter area shown in Photo 04.",
+            "A colour or texture difference is visible on the roof plane shown in Photo 07; qualified review may be useful if this is a concern.",
+            "Solar panels are visible from above in Photos 09-11. No electrical or performance assessment is provided.",
+            "The valley area shown in Photo 06 is partially obscured by shadow; additional review may be needed if the client requires certainty.",
+        ]),
+        ("Video link section", [
+            "Short flyover video: [link]",
+            "Video purpose: orientation and context only.",
+            "Notes: [wind/weather/shadow/access limitations].",
+        ]),
+        ("Client handoff note", [
+            "Attached are the labelled roof photos, short video, and visual-only report.",
+            "Please share this with your roofer, installer, agent, owner, or assessor if you need a professional interpretation.",
+            "If you need additional angles, closer photos, or a repeat flyover after weather or repairs, I can quote a follow-up visit.",
         ]),
     ],
     "asset-shopify-email": [
@@ -1143,6 +1361,27 @@ PDF_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Keep all upsells optional, transparent, and easy for the host to fulfill.",
         ]),
     ],
+    "asset-drone-roof-safety": checklist_sections(*find_pack_for_asset("asset-drone-roof-safety")) + [
+        ("Pre-flight decision gate", [
+            "Do not fly if local rules, airspace status, owner permission, weather, visibility, battery condition, or launch area are unclear.",
+            "Do not fly over people, traffic, neighbouring private areas, animals, power lines, or unsafe obstacles.",
+            "Reschedule if wind, rain, glare, shadow, or visibility would make the photo set misleading or unsafe.",
+            "Document any limitation in the report: tree cover, shadows, steep pitch, obstruction, access, privacy boundary, or weather.",
+        ]),
+        ("Shot list", [
+            "Wide context photo of the property and roof orientation.",
+            "Front, rear, left, and right roof planes where visible and permitted.",
+            "Gutters, valleys, ridges, flashing, vents, chimneys, skylights, penetrations, and solar panels if present.",
+            "Any client-requested area of interest, captured from multiple safe angles where possible.",
+            "Short video flyover for orientation only, not diagnosis.",
+        ]),
+        ("Report boundary check", [
+            "Say visible area of interest, not confirmed defect.",
+            "Say qualified professional review may be useful, not repair required.",
+            "Say visual photo documentation, not inspection certificate.",
+            "Avoid hidden damage, waterproofing, electrical, structural, safety, or insurance conclusions.",
+        ]),
+    ],
 }
 
 
@@ -1172,6 +1411,116 @@ PROMPT_PACK_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Create an owner handoff note for a completed menu refresh. Include files delivered, items needing approval, QR test result, publishing checklist, and suggested next refresh date.",
             "Build a monthly refresh checklist for a cafe that changes specials often. Include inputs to collect, recurring assets to update, approval deadline, and optional retainer upsell.",
             "Turn this completed menu refresh into an anonymised case study note. Inputs: before state, after state, owner feedback, implementation date. Do not include private data or unapproved claims.",
+        ]),
+    ],
+    "asset-airbnb-photo-prompts": [
+        ("How to use these prompts", [
+            "Use only host-owned, host-approved, or public listing photos for private sample concepts. Do not publish final images without written host approval.",
+            "Preserve the real property: layout, furniture, windows, amenities, view, access, bed count, room size, and permanent finishes.",
+            "Use bracketed placeholders before every generation: [room], [time_of_day], [lighting_style], [guest_type], [activity], [mood], [crop], [edit_boundary].",
+            "Mark every AI-enhanced sample as a concept until the host approves publication and confirms the edited scene still represents the stay accurately.",
+            "Use realistic adult lifestyle scenes only; avoid children, parties, unsafe behaviour, pets unless confirmed, fake amenities, fake views, or exaggerated luxury.",
+        ]),
+        ("Photo audit prompts", [
+            "Act as a short-term-rental photo merchandising reviewer. Review these listing photos: [paste notes or image descriptions]. Return a table with Photo, Current weakness, Booking impact, Safe edit opportunity, Host approval needed, Risk.",
+            "Review the first five photos of this listing: [paste]. Recommend the best order for clicks and guest understanding. Preserve true property facts and flag misleading edits.",
+            "Identify which photos are candidates for AI-assisted lighting, ambience, composition, decluttering, or realistic adult lifestyle context. Do not suggest edits that change property facts.",
+            "Score this listing photo from 1-5 for brightness, warmth, visual hierarchy, lifestyle context, perceived cleanliness, and booking appeal. Then recommend one safe edit that would create the strongest before/after sample.",
+            "Find the single best proactive sample photo for this listing: [listing notes]. Prioritise a photo where the property has good bones but the image is flat, empty, dim, cold, cluttered, or poorly cropped.",
+        ]),
+        ("Universal image improvement prompt", [
+            "Edit this [room] short-stay listing photo for [platform/use]. Preserve the exact property layout, furniture, windows, amenities, view, access points, room scale, architecture, bed count, and permanent finishes. Improve [lighting_style], [time_of_day] ambience, colour balance, cleanliness, crop, verticals, and visual hierarchy. Add [number] realistic adult [guest_type] naturally [activity] only if it makes the real space easier to imagine. Keep the result photorealistic, premium, warm, and booking-friendly. Do not add new amenities, fake views, extra furniture, extra space, text, logos, children, parties, unsafe behaviour, or distorted architecture.",
+            "Create three tasteful variations of this same image: 1) [morning/bright] clarity, 2) [golden-hour/warm] lifestyle, 3) [evening/cosy] ambience. Keep property facts identical across all versions. Return a short note describing what changed and what the host must approve.",
+            "Improve this listing photo without adding people. Preserve all property facts. Focus only on light, colour, composition, lens correction, perceived cleanliness, shadows, texture, and booking-platform polish. Keep the result realistic rather than over-staged.",
+        ]),
+        ("Living area prompts", [
+            "Create a warm lifestyle version of this living room with [one/two] realistic adult guests [reading / drinking coffee / planning the day / relaxing after arrival]. Preserve sofa, furniture placement, windows, wall art, view, room size, and floor plan exactly. Lighting: [soft morning / golden hour / cosy evening]. Mood: welcoming, calm, premium, believable.",
+            "Refresh this lounge image for the hero slot of a short-stay listing. Correct vertical lines, brighten shadows, warm the room, reduce visual clutter, and make the seating area feel inviting. If adding people, place [guest_type] naturally on existing seating without blocking important amenities.",
+            "Turn this empty lounge into a subtle arrival moment: [two adults] setting down bags and settling in. Keep the room truthful, avoid hotel-ad exaggeration, and do not add new decor, furniture, fireplaces, views, or appliances.",
+        ]),
+        ("Bedroom prompts", [
+            "Refresh this bedroom listing photo for higher booking appeal. Preserve bed size, layout, windows, furniture, wall positions, ceiling height, and floor area. Improve linen neatness, warmth, natural light, and composition. Add [one adult guest] [reading / placing luggage / opening curtains] only if realistic and non-intrusive.",
+            "Create a calm premium bedroom scene at [time_of_day]. Make the bed look clean and inviting without changing the actual bed size or room scale. Keep decor, walls, lamps, wardrobe, and window positions accurate.",
+            "Improve this bedroom image for a couple-friendly listing. Add two realistic adults only as a subtle lifestyle cue, such as one person reading near the bed and another unpacking. Do not imply additional amenities or make the room appear larger.",
+        ]),
+        ("Kitchen and dining prompts", [
+            "Enhance this kitchen photo while preserving cabinet layout, appliances, benchtop size, sink position, windows, and finishes. Improve warmth, cleanliness, reflections, and crop. Add [one/two adult guests] naturally [making coffee / preparing breakfast / placing groceries] without adding appliances or changing the kitchen.",
+            "Create a breakfast lifestyle scene in this dining area with [two adults] enjoying coffee and a simple meal. Preserve table size, chairs, lighting fixtures, room scale, and view. Keep styling realistic for a short-stay guest photo.",
+            "Refresh this kitchen/dining image for a direct-booking website. Make the space feel usable and clean. Remove only minor visual clutter if safe; do not replace benchtops, add luxury appliances, or alter storage.",
+        ]),
+        ("Outdoor and balcony prompts", [
+            "Improve this balcony/patio listing photo at [golden hour / morning / blue hour]. Preserve the real view, railing, furniture, plants, boundaries, neighbouring buildings, and outdoor space size. Add [one/two adult guests] [having coffee / reading / watching sunset] only if they fit naturally.",
+            "Create a relaxing outdoor lifestyle scene for this short-stay photo. Do not improve the view beyond what exists. Do not add pools, fire pits, ocean, skyline, greenery, furniture, or privacy screens unless present in the source image.",
+            "Refresh this outdoor entertaining photo for warmer ambience and better booking appeal. Preserve all permanent features and furniture placement. Correct exposure, colour, shadows, and composition; avoid making the space look larger.",
+        ]),
+        ("Bathroom and detail prompts", [
+            "Refresh this bathroom image while preserving tile, vanity, mirror, shower, toilet, fixtures, window, and room scale. Improve brightness, cleanliness, reflections, verticals, and white balance. Do not add spa amenities, extra towels, plants, windows, or luxury finishes that are not present.",
+            "Create a premium detail-crop version of this bathroom/kitchen/bedside image. Emphasise texture, cleanliness, light, and guest readiness. Do not change materials, brands, fixtures, or dimensions.",
+            "Improve this amenities photo for clarity and warmth. Keep every object accurate. Remove only distracting shadows or minor mess; do not add products, appliances, labels, or extras the host does not provide.",
+        ]),
+        ("Lifestyle model insertion prompts", [
+            "Add [one adult / two adults] into this photo as realistic guests enjoying the real space. Placement: [specific location]. Activity: [activity]. Wardrobe: neutral, modern, travel-appropriate. Pose: natural, candid, not promotional. Preserve property scale and do not obscure important features.",
+            "Create a remote-work lifestyle scene in this listing photo with [one adult] using a laptop at the existing desk/table. Preserve desk size, chair, outlets, windows, and room layout. Do not imply dedicated office equipment unless present.",
+            "Create a couple-weekend lifestyle scene in this [room] with two adults [activity]. Keep the scene quiet and premium, not party-focused. Maintain realistic body scale, shadows, reflections, and contact points with furniture.",
+            "Create a solo-traveller lifestyle scene in this [room] with one adult [reading / making coffee / unpacking]. Keep the person secondary to the room so the property remains the product.",
+        ]),
+        ("Negative prompts and guardrails", [
+            "Negative prompt: no architecture changes, no extra windows, no fake view, no additional rooms, no room enlargement, no added amenities, no extra furniture, no altered bed count, no changed appliances, no text, no logos, no unrealistic bodies, no warped hands, no duplicate limbs, no distorted reflections, no party scene, no children, no unsafe behaviour.",
+            "If the tool changes property facts, regenerate with stronger constraints: preserve exact geometry, preserve all furniture, preserve existing view, keep camera angle, do not stylise, photorealistic edit only.",
+            "If a model looks pasted in, regenerate with: realistic contact shadows, correct perspective, accurate scale, natural pose, matching light direction, matching lens depth, no fashion-shoot styling.",
+            "If the room looks too luxurious, regenerate with: subtle improvement only, realistic short-stay listing style, no new decor, no premium materials, no exaggerated cleanliness, preserve original finishes.",
+        ]),
+        ("Before/after sample prompts", [
+            "Create one sales sample from this public listing photo. Goal: show the host a tasteful improvement, not a finished publication file. Preserve property facts, improve lighting and ambience, optionally add [one adult guest] [activity], and output a short before/after note with: visible issue, safe edit, why it helps booking appeal, host approval needed.",
+            "Write a 90-word explanation for this before/after sample. Avoid technical AI language. Emphasise that the edit keeps the property truthful while helping guests imagine using the space.",
+            "Generate a low-pressure offer note attached to this sample: fixed package, photo count, turnaround, revision round, source files needed, and approval workflow.",
+        ]),
+        ("QA prompts", [
+            "QA this edited listing photo against the original. Check property accuracy, model realism, lighting consistency, reflections, shadows, scale, furniture, windows, amenities, view, room size, safety, and platform-safe representation. Return Pass/Revise plus specific fixes.",
+            "Compare original and edited image descriptions: [original] vs [edited]. List every property fact that changed, every possible guest-misleading risk, and the safest regeneration prompt.",
+            "Create a final host approval checklist for this edited image: room, source file, prompt used, edit type, model added yes/no, property facts preserved, risks, approval status, final filename.",
+        ]),
+        ("Sales and delivery prompts", [
+            "Write a host outreach email offering a one-photo before/after sample. Mention the specific listing-photo weakness and state that all edits preserve real property details and require host approval.",
+            "Create a Loom script for showing a host one photo refresh sample: current photo issue, safe improvement, booking-confidence reason, edit boundaries, and fixed refresh offer.",
+            "Create a final handoff note for a photo refresh package with before/after filenames, edit-risk notes, approved usage, platform-safe caveats, and recommended next refresh date.",
+            "Write a follow-up to a host who opened the sample but did not reply. Add one more concrete room idea and keep the ask to a yes/no: should I price a 6-photo starter refresh?",
+            "Write a property-manager version of the pitch for someone managing multiple listings. Position the service as a seasonal visual refresh system with consistent approval and edit-risk logs.",
+        ]),
+    ],
+    "asset-drone-roof-prompts": [
+        ("How to use these prompts", [
+            "Use AI to draft report language, captions, outreach, and QA notes; do not let AI certify roof condition or diagnose structural issues.",
+            "Paste only client-approved information and remove private details before using external AI tools.",
+            "Replace every bracketed field before sending: [property], [client], [area], [photo number], [visible observation], [next step], [qualified professional].",
+            "Keep language visual and cautious: visible, appears, shown in photo, area of interest, further review may be useful.",
+            "Avoid absolute statements: safe, unsafe, compliant, failed, guaranteed, storm-damaged, insurable, repair required, structurally sound.",
+        ]),
+        ("Photo report write-up prompts", [
+            "Act as a claim-safe visual documentation assistant. Turn these drone roof photo notes into a 1-2 page visual-only report: [paste notes]. Use sections: property details, flight summary, photo observations, video link, limitations, recommended next steps. Do not provide structural, engineering, insurance, or repair conclusions.",
+            "Create concise captions for these roof photos: [paste photo notes]. Each caption must include Area, Visible observation, and Suggested professional follow-up if needed. Use cautious language and avoid diagnosing damage.",
+            "Rewrite these rough roof observations into client-safe wording: [paste]. Replace certainty with visual language. Flag any sentence that sounds like a structural inspection or repair advice.",
+        ]),
+        ("Visible issue flagging prompts", [
+            "Review these image descriptions from a drone roof flyover: [paste]. Identify visible areas of interest only. Return Photo, Area, What is visible, Why the client may care, Suggested qualified reviewer, Confidence based on visibility, and Limitations.",
+            "Create a photo priority list from these roof images: [paste]. Put the clearest context photos first, then gutters/valleys/flashing/penetrations/panels/debris, then any limited-visibility images.",
+            "Generate a limitations note for these flight conditions: [weather, shadows, wind, access limits, tree cover, privacy limits]. Keep it professional and short.",
+        ]),
+        ("Client-safe disclaimer prompts", [
+            "Draft a plain-English visual-only disclaimer for a drone roof photo report. It must say this is not a structural inspection, engineering report, building inspection, safety certification, insurance assessment, or repair quote.",
+            "Rewrite this report note so it does not imply certification: [paste note]. Keep the helpful observation but remove inspection, diagnosis, guarantee, safety, compliance, or repair certainty.",
+            "Create three versions of a report footer disclaimer: concise, standard, and formal. Keep all versions readable for homeowners and agents.",
+        ]),
+        ("Outreach prompts", [
+            "Write a cold email to a local roofer offering one free sample roof. Mention clear overhead photos, simple visual report, no ladder needed for first-look documentation, and no structural certification.",
+            "Write a cold call script for a solar installer who may need roof visibility before quoting. Include permission, weather, and visual-only scope in natural language.",
+            "Write a real estate agent pitch for roof visibility during listing preparation. Keep it practical and avoid promising sale outcomes.",
+            "Create five follow-up messages after sending a sample report to a roofer, agent, solar installer, property manager, or homeowner.",
+        ]),
+        ("Report QA prompts", [
+            "QA this drone roof report before sending: [paste report]. Check for unsupported claims, structural-certification language, repair advice, insurance promises, missing permission note, missing limitations, unclear photo labels, and vague next steps. Return a table of fixes and a polished version.",
+            "Find every sentence that could create legal risk in this report: [paste]. Explain the risk and rewrite each sentence as visual documentation language.",
+            "Create a final send checklist for this job using: [client, address, photos, video link, report]. Include owner permission, file naming, disclaimer, limitations, and follow-up offer.",
         ]),
     ],
     "asset-gbp-prompts": [
@@ -1393,6 +1742,8 @@ def prompt_pack_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]
 PACK_DELIVERABLES: dict[str, str] = {
     "cafe-menu-refresh-package": "menu files, specials, QR/menu links, Google details, and final export formats",
     "google-business-profile-rescue": "Google profile details, services, photos, FAQs, review rules, and approval owners",
+    "airbnb-photo-refresh-service": "listing URL, source photos, approved edit boundaries, model direction, usage rights, and host approvals",
+    "drone-roof-photo-inspection": "property address, owner permission, roof areas to capture, access constraints, local flight requirements, intended use, and delivery format",
     "gym-churn-report": "cancellation exports, member privacy rules, churn tags, membership types, and retention goals",
     "shopify-cart-audit": "store URLs, priority products, policies, email platform details, brand voice, and approved claims",
     "ugc-brief-generator": "product facts, customer proof, buyer objections, creator constraints, and usage rights",
@@ -1498,6 +1849,39 @@ def client_email_template_sections(pack: Pack, asset: Asset) -> list[tuple[str, 
 
 
 def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    if pack.slug == "drone-roof-photo-inspection":
+        return [
+            ("How to use these FAQs", [
+                "Use these answers on the sales page, proposal, booking form, and delivery email for the drone roof photo service.",
+                "Keep the service positioned as visual photo documentation, not a structural, engineering, safety, building, insurance, or repair inspection.",
+                "Adjust the local drone-rule wording to your jurisdiction before publishing.",
+                "Add one real client objection after every few sales calls so the FAQ becomes more useful over time.",
+            ]),
+            ("Buyer FAQs", [
+                "What do I receive? You receive a set of roof photos, a short orientation video when scoped, and a simple visual report showing labelled roof areas that were visible from the drone.",
+                "Is this a building or structural inspection? No. This is visual photo documentation only. It does not certify roof condition, safety, waterproofing, code compliance, insurance coverage, or repair urgency.",
+                "Who is this for? Homeowners, roofers, real estate agents, solar installers, property managers, and anyone who needs clear roof visibility without climbing a ladder.",
+                "Do you need permission to fly? Yes. The property owner or authorised representative must approve the flight, and the operator must follow applicable local drone rules and airspace restrictions.",
+                "Can you fly anywhere? No. Weather, wind, airspace, nearby people, power lines, privacy boundaries, access, and local regulations may limit or prevent a flight.",
+                "How fast can this be delivered? Many simple jobs can be booked and delivered within the pack's 2-4 week first-sale window, but actual turnaround depends on weather, access, approvals, and local flight requirements.",
+                "What do you need from me? Property address, owner permission, areas of concern, safe access notes, intended use, preferred delivery format, and any privacy or access restrictions.",
+                "Can the report be used for insurance or repair decisions? It can help a qualified person see visible roof areas, but it should not replace a licensed inspection, insurer assessment, engineer report, or roofer diagnosis.",
+                "What if the drone cannot see part of the roof? The report should mark any limitations clearly, such as tree cover, shadows, steep pitch, access boundaries, privacy limits, or unsafe flight conditions.",
+                "Can this become recurring? Yes. Agents, roofers, solar installers, and property managers may need recurring pre-listing, post-storm, maintenance, or project documentation reports.",
+            ]),
+            ("Objection-handling notes", [
+                "If the buyer asks whether you can confirm damage, restate that you provide visibility and documentation for review, not diagnosis.",
+                "If the buyer is worried about privacy, explain your permission process, shot boundaries, and how you avoid neighbouring private areas where possible.",
+                "If the buyer wants a sample, offer one free or discounted sample roof with labelled photos and a visual-only note.",
+                "If the buyer asks why they should not just use a roofer, position this as a fast documentation layer that can help them decide whether a qualified roofer should review the roof.",
+            ]),
+            ("Website preview copy", [
+                "Use this FAQ pack to explain the service clearly before a homeowner, agent, roofer, or solar installer books.",
+                "It helps buyers understand permission, safety, turnaround, scope, and report limitations before paying.",
+                "Pair it with the intake form, safety checklist, and report template so every paid job starts with clean expectations.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     return [
         ("How to use these FAQs", [
             "Place these on the sales page, in a proposal, or below the checkout section for this pack.",
@@ -1608,6 +1992,50 @@ def p(text: str, style: str | None = None) -> str:
     )
 
 
+def tc(text: str, width: int, style: str = "TableCell", fill: str | None = None) -> str:
+    fill_xml = f'<w:shd w:fill="{fill}"/>' if fill else ""
+    return (
+        f'<w:tc><w:tcPr><w:tcW w:w="{width}" w:type="dxa"/>{fill_xml}'
+        f'<w:tcMar><w:top w:w="120" w:type="dxa"/><w:left w:w="150" w:type="dxa"/>'
+        f'<w:bottom w:w="120" w:type="dxa"/><w:right w:w="150" w:type="dxa"/></w:tcMar>'
+        f'<w:vAlign w:val="center"/></w:tcPr>{p(text, style)}</w:tc>'
+    )
+
+
+def table(rows: list[list[str]], widths: list[int], header: bool = True,
+          label_col: bool = False, min_row_h: int | None = None) -> str:
+    grid = "".join(f'<w:gridCol w:w="{width}"/>' for width in widths)
+    out = [
+        '<w:tbl><w:tblPr><w:tblW w:w="0" w:type="auto"/><w:tblInd w:w="0" w:type="dxa"/>'
+        '<w:tblBorders>'
+        f'<w:top w:val="single" w:sz="6" w:color="{LINE}"/>'
+        f'<w:left w:val="single" w:sz="6" w:color="{LINE}"/>'
+        f'<w:bottom w:val="single" w:sz="6" w:color="{LINE}"/>'
+        f'<w:right w:val="single" w:sz="6" w:color="{LINE}"/>'
+        f'<w:insideH w:val="single" w:sz="4" w:color="{LINE}"/>'
+        f'<w:insideV w:val="single" w:sz="4" w:color="{LINE}"/>'
+        '</w:tblBorders><w:tblLook w:firstRow="1" w:noHBand="0" w:noVBand="1"/></w:tblPr>'
+        f'<w:tblGrid>{grid}</w:tblGrid>'
+    ]
+    for r_idx, row in enumerate(rows):
+        is_head = header and r_idx == 0
+        data_index = (r_idx - 1) if header else r_idx
+        cells = []
+        for c_idx, value in enumerate(row):
+            if is_head:
+                style, fill = "TableHeader", BLACK
+            elif label_col and c_idx == 0:
+                style, fill = "TableLabel", PANEL
+            else:
+                style = "TableCell"
+                fill = PANEL if data_index % 2 == 0 else None
+            cells.append(tc(value, widths[c_idx], style, fill))
+        tr_pr = f'<w:trPr><w:trHeight w:val="{min_row_h}" w:hRule="atLeast"/></w:trPr>' if (min_row_h and not is_head) else ""
+        out.append(f'<w:tr>{tr_pr}{"".join(cells)}</w:tr>')
+    out.append("</w:tbl>")
+    return "".join(out)
+
+
 def page_break() -> str:
     return '<w:p><w:r><w:br w:type="page"/></w:r></w:p>'
 
@@ -1620,11 +2048,9 @@ def bullet(text: str) -> str:
 
 
 def checkbox(text: str) -> str:
-    # Clean ballot-box glyph renders consistently across Word, Google Docs,
-    # Pages and LibreOffice (unlike content-controls, which vanish off Word).
     return (
         '<w:p><w:pPr><w:pStyle w:val="Checklist"/></w:pPr>'
-        f'<w:r><w:t xml:space="preserve">☐  {escape(text)}</w:t></w:r></w:p>'
+        f'<w:r><w:t xml:space="preserve">[ ]  {escape(text)}</w:t></w:r></w:p>'
     )
 
 
@@ -1650,11 +2076,100 @@ def toc_field() -> str:
     )
 
 
+def _smart_trim(text: str, limit: int) -> str:
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rsplit(" ", 1)[0].rstrip(" ,.;:-")
+    return f"{cut or text[:limit]}…"
+
+
+def static_contents(sections: list[tuple[str, list[str]]]) -> list[str]:
+    rows = [["Section", "What it covers"]]
+    for index, (heading, items) in enumerate(sections, start=1):
+        preview = items[0] if items else "Reference section"
+        rows.append([f"{index:02d}", f"{heading} — {_smart_trim(preview, 92)}"])
+    return [
+        p("In this document", "Kicker"),
+        table(rows, [1180, 7940], header=True),
+    ]
+
+
+def render_section_item(section_heading: str, item: str) -> list[str]:
+    if item.startswith("Subject:"):
+        return [p(item, "EmailSubject")]
+    if "faq" in section_heading.lower() and "? " in item:
+        question, answer = item.split("? ", 1)
+        return [p(f"{question}?", "Heading3"), p(answer)]
+    if any(token in section_heading.lower() for token in ["email", "prompt", "script", "example", "copy", "reply"]):
+        return [p(item, "ExampleBlock")]
+    if len(item) > 180:
+        return [p(item, "ExampleBlock")]
+    return [bullet(item)]
+
+
+_DEF_SKIP_TOKENS = ("email", "prompt", "script", "example", "copy", "reply", "swipe", "loom", "how to use", "preview")
+_DEF_HEADER_MAP: list[tuple[tuple[str, ...], tuple[str, str]]] = [
+    (("follow-up", "sequence"), ("When", "What to send")),
+    (("objection",), ("Objection", "How to respond")),
+    (("snapshot",), ("Attribute", "Value")),
+    (("milestone",), ("Milestone", "Gate before next step")),
+    (("pricing", "scope", "guardrail"), ("Scope", "What it includes")),
+    (("usage", "rights"), ("Right", "Detail")),
+    (("prospect",), ("Prospect", "Why they fit")),
+    (("variant",), ("Variant", "What to include")),
+    (("step", "sop"), ("Step", "Action")),
+    (("field",), ("Field", "Detail")),
+    (("recommendation",), ("Recommendation", "Detail")),
+]
+_DEF_RE = re.compile(r"^([^:]{2,40}):\s+(\S.*)$")
+
+
+def maybe_definition_table(heading: str, items: list[str]) -> tuple[list[str], list[list[str]]] | None:
+    """Render-time conversion of `Label: value` definition lists into 2-col tables.
+
+    Returns (headers, rows) when a section is predominantly label/value pairs, else
+    None so the section keeps its bullet/callout rendering."""
+    hl = heading.lower()
+    if any(token in hl for token in _DEF_SKIP_TOKENS) or len(items) < 3:
+        return None
+    rows: list[list[str]] = []
+    matched = 0
+    for item in items:
+        m = _DEF_RE.match(item)
+        if m and "." not in m.group(1):
+            rows.append([m.group(1).strip(), m.group(2).strip()])
+            matched += 1
+        else:
+            rows.append(["", item])
+    if matched / len(items) < 0.8:
+        return None
+    headers = ("Field", "Detail")
+    for keys, hdr in _DEF_HEADER_MAP:
+        if any(k in hl for k in keys):
+            headers = hdr
+            break
+    return list(headers), rows
+
+
 def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, list[str]]]) -> None:
     quick_start = [
         "Replace bracketed fields.",
         "Verify facts and claims.",
         "Send for approval before publishing.",
+    ]
+    action_board = [
+        ["Move", "What to check", "Output"],
+        ["1. Scope", "Buyer, input files, sensitive claims, approval owner", "Clean project brief"],
+        ["2. Build", "Use the template, prompts, checklist, or workbook sections", "Buyer-specific asset"],
+        ["3. Approve", "Facts, prices, dates, links, policies, and public claims", "Approved final version"],
+        ["4. Follow up", "Next refresh, retainer, or second sprint", "Clear paid next step"],
+    ]
+    snapshot_table = [
+        ["Buyer", pack.buyer],
+        ["Category", pack.category],
+        ["Startup cost", pack.startup_cost],
+        ["First sale", pack.time_to_first_sale],
+        ["Difficulty", pack.difficulty],
     ]
     body = [
         p(BRAND.upper(), "BrandBand"),
@@ -1663,26 +2178,49 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
         p(asset.description, "Lead"),
         p(pack.hook, "Tagline"),
         rule(),
-        p(f"Buyer: {pack.buyer}", "Meta"),
-        p(f"Category: {pack.category}  /  Startup cost: {pack.startup_cost}  /  First sale: {pack.time_to_first_sale}  /  Difficulty: {pack.difficulty}", "Meta"),
+        table(snapshot_table, [2200, 6980], header=False, label_col=True),
         p("Operator standard", "Kicker"),
         p("Use this as a working asset. Replace bracketed details with buyer-specific information, verify every sensitive fact, and keep approvals in writing.", "IntenseQuote"),
-        toc_field(),
+        p("Launch action board", "Kicker"),
+        table(action_board, [1620, 3960, 3600], header=True),
+        *static_contents(sections),
         p("Before sending", "Heading3"),
         *[checkbox(item) for item in quick_start],
-        page_break(),
     ]
+    is_intake = asset.title.lower().endswith("intake form") or "intake" in asset.id
+    intake_field_headings = {"client details", "project scope", "pack-specific intake prompts"}
     for index, (heading, items) in enumerate(sections, start=1):
         body.append(p(f"{index:02d} / {heading}", "Heading1"))
+        heading_key = heading.lower()
+        if is_intake and heading_key in intake_field_headings:
+            rows = [["Field", "Your answer"]]
+            for item in items:
+                if ": " in item:
+                    label = item.split(": ", 1)[0]
+                elif "? " in item:
+                    label = item.split("? ", 1)[0] + "?"
+                else:
+                    label = item
+                rows.append([label, ""])
+            body.append(table(rows, [4180, 5000], header=True, min_row_h=560))
+            continue
+        if is_intake and heading_key == "approval checklist":
+            body.extend(checkbox(item) for item in items)
+            continue
+        definition_table = maybe_definition_table(heading, items)
+        if definition_table is not None:
+            headers, rows = definition_table
+            body.append(table([headers, *rows], [3000, 6180], header=True, label_col=True))
+            continue
         for item in items:
-            body.append(bullet(item))
+            body.extend(render_section_item(heading, item))
     body.append(p("Commercial use note", "Heading1"))
     body.append(p("These templates are practical launch materials. They do not guarantee revenue, rankings, retention, or advertising performance. Validate claims with buyer data and keep approvals in writing."))
     document_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
   <w:body>
     {''.join(body)}
-    <w:sectPr><w:footerReference w:type="default" r:id="rId3"/><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="1008" w:right="936" w:bottom="864" w:left="936" w:footer="432"/><w:cols w:space="720"/></w:sectPr>
+    <w:sectPr><w:footerReference w:type="default" r:id="rId3"/><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="1180" w:right="1440" w:bottom="1000" w:left="1440" w:footer="432"/><w:cols w:space="720"/></w:sectPr>
   </w:body>
 </w:document>"""
     styles_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1694,13 +2232,18 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
   <w:style w:type="paragraph" w:styleId="Tagline"><w:name w:val="Tagline"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="22"/><w:color w:val="{ACCENT}"/></w:rPr><w:pPr><w:spacing w:before="0" w:after="150" w:line="300" w:lineRule="auto"/></w:pPr></w:style>
   <w:style w:type="paragraph" w:styleId="Lead"><w:name w:val="Lead"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="24"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:before="80" w:after="60" w:line="340" w:lineRule="auto"/></w:pPr></w:style>
   <w:style w:type="paragraph" w:styleId="Kicker"><w:name w:val="Kicker"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:caps/><w:sz w:val="15"/><w:color w:val="{MUTED}"/><w:spacing w:val="24"/></w:rPr><w:pPr><w:spacing w:before="180" w:after="70"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:rPr><w:rFonts w:ascii="{FONT_DISPLAY}" w:hAnsi="{FONT_DISPLAY}"/><w:b/><w:sz w:val="26"/><w:color w:val="{INK}"/><w:spacing w:val="-4"/></w:rPr><w:pPr><w:keepNext/><w:spacing w:before="340" w:after="130"/><w:pBdr><w:bottom w:val="single" w:sz="6" w:space="6" w:color="{LINE}"/></w:pBdr></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="23"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="60"/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Heading3"><w:name w:val="heading 3"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:before="150" w:after="80"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:rPr><w:rFonts w:ascii="{FONT_DISPLAY}" w:hAnsi="{FONT_DISPLAY}"/><w:b/><w:sz w:val="30"/><w:color w:val="{INK}"/><w:spacing w:val="-6"/></w:rPr><w:pPr><w:keepNext/><w:spacing w:before="360" w:after="140"/><w:pBdr><w:bottom w:val="single" w:sz="12" w:space="7" w:color="{BLACK}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="24"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:after="70"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading3"><w:name w:val="heading 3"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="22"/><w:color w:val="{ACCENT}"/></w:rPr><w:pPr><w:keepNext/><w:spacing w:before="190" w:after="70"/></w:pPr></w:style>
   <w:style w:type="paragraph" w:styleId="Meta"><w:name w:val="Meta"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="18"/><w:color w:val="{MUTED}"/></w:rPr><w:pPr><w:spacing w:after="95"/></w:pPr></w:style>
   <w:style w:type="paragraph" w:styleId="ListParagraph"><w:name w:val="List Paragraph"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="20"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:after="110" w:line="292" w:lineRule="auto"/><w:ind w:left="540" w:hanging="220"/><w:widowControl/></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Checklist"><w:name w:val="Checklist"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:after="92" w:line="280" w:lineRule="auto"/><w:shd w:fill="{PANEL}"/><w:pBdr><w:left w:val="single" w:sz="14" w:space="8" w:color="{BLACK}"/></w:pBdr></w:pPr></w:style>
-  <w:style w:type="paragraph" w:styleId="IntenseQuote"><w:name w:val="Intense Quote"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:color w:val="{INK}"/><w:sz w:val="20"/></w:rPr><w:pPr><w:spacing w:before="90" w:after="170" w:line="292" w:lineRule="auto"/><w:shd w:fill="{PANEL}"/><w:pBdr><w:left w:val="single" w:sz="18" w:space="10" w:color="{BLACK}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Checklist"><w:name w:val="Checklist"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:after="92" w:line="280" w:lineRule="auto"/><w:shd w:fill="{ACCENT_SOFT}"/><w:pBdr><w:left w:val="single" w:sz="18" w:space="8" w:color="{ACCENT}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="IntenseQuote"><w:name w:val="Intense Quote"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:color w:val="{INK}"/><w:sz w:val="21"/></w:rPr><w:pPr><w:spacing w:before="90" w:after="170" w:line="292" w:lineRule="auto"/><w:shd w:fill="{PANEL}"/><w:pBdr><w:left w:val="single" w:sz="24" w:space="10" w:color="{BLACK}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="ExampleBlock"><w:name w:val="Example Block"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="21"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:before="60" w:after="120" w:line="288" w:lineRule="auto"/><w:shd w:fill="{ACCENT_SOFT}"/><w:pBdr><w:left w:val="single" w:sz="14" w:space="8" w:color="{ACCENT}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="EmailSubject"><w:name w:val="Email Subject"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="21"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:keepNext/><w:spacing w:before="150" w:after="0" w:line="284" w:lineRule="auto"/><w:shd w:fill="{ACCENT_SOFT}"/><w:pBdr><w:top w:val="single" w:sz="14" w:space="6" w:color="{ACCENT}"/><w:left w:val="single" w:sz="14" w:space="8" w:color="{ACCENT}"/></w:pBdr></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="TableHeader"><w:name w:val="Table Header"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:caps/><w:sz w:val="18"/><w:color w:val="FFFFFF"/><w:spacing w:val="14"/></w:rPr><w:pPr><w:spacing w:before="0" w:after="0" w:line="250" w:lineRule="auto"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="TableCell"><w:name w:val="Table Cell"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="20"/><w:color w:val="{TEXT}"/></w:rPr><w:pPr><w:spacing w:before="0" w:after="0" w:line="262" w:lineRule="auto"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="TableLabel"><w:name w:val="Table Label"/><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:b/><w:sz w:val="20"/><w:color w:val="{INK}"/></w:rPr><w:pPr><w:spacing w:before="0" w:after="0" w:line="262" w:lineRule="auto"/></w:pPr></w:style>
 </w:styles>"""
     content_types = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -1746,7 +2289,7 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
 <Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>Side Hustle Stephen Asset Generator</Application></Properties>"""
     footer_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-  <w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="4" w:space="3" w:color="{LINE}"/></w:pBdr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="16"/><w:color w:val="{MUTED}"/></w:rPr><w:t xml:space="preserve">{escape(BRAND)}  /  {escape(pack.title)}  /  Verify facts before client use</w:t></w:r></w:p>
+  <w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="4" w:space="3" w:color="{LINE}"/></w:pBdr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="16"/><w:color w:val="{MUTED}"/></w:rPr><w:t xml:space="preserve">{escape(BRAND)} / {escape(pack.title)} / Page </w:t></w:r><w:r><w:rPr><w:rFonts w:ascii="{FONT}" w:hAnsi="{FONT}"/><w:sz w:val="16"/><w:color w:val="{MUTED}"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:instrText xml:space="preserve"> PAGE </w:instrText></w:r><w:r><w:fldChar w:fldCharType="end"/></w:r></w:p>
 </w:ftr>"""
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("[Content_Types].xml", content_types)
@@ -1815,6 +2358,47 @@ def pdf_flow_notes(start_y: int, notes: list[str], x: int = 72, size: int = 10, 
     return out
 
 
+def pdf_grid(headers: list[str], rows: list[list[str]], widths: list[int],
+             x0: int = 72, y0: int = 648, row_h: int = 30,
+             header_size: int = 9, body_size: int = 9) -> list[str]:
+    """Draw a styled table: panel header band with blue caps text, zebra body rows,
+    hairline borders, wrapped cell text. Returns PDF content ops."""
+    ops: list[str] = [f"{_LINE[0]:.3f} {_LINE[1]:.3f} {_LINE[2]:.3f} RG"]
+    total_w = sum(widths)
+    ops.append(pdf_fill(x0, y0, total_w, row_h, _PANEL))
+    x = x0
+    for label, w in zip(headers, widths):
+        ops.append(pdf_box(x, y0, w, row_h))
+        ops.append(f"{_BLUE[0]:.3f} {_BLUE[1]:.3f} {_BLUE[2]:.3f} rg")
+        ops.append(pdf_text_bold(x + 8, y0 + row_h - 13, header_size, label))
+        x += w
+    for r, row in enumerate(rows, start=1):
+        y = y0 - row_h * r
+        if r % 2 == 0:
+            ops.append(pdf_fill(x0, y, total_w, row_h, _PANEL))
+        ops.append(f"{_LINE[0]:.3f} {_LINE[1]:.3f} {_LINE[2]:.3f} RG")
+        x = x0
+        for val, w in zip(row, widths):
+            ops.append(pdf_box(x, y, w, row_h))
+            ops.append("0.039 0.039 0.039 rg")
+            for i, line in enumerate(wrap(str(val), max(6, int(w / 5.4)))[:2]):
+                ops.append(pdf_text(x + 8, y + row_h - 13 - i * 11, body_size, line))
+            x += w
+    return ops
+
+
+def pdf_arrow(x1: int, y1: int, x2: int, y2: int, rgb: tuple[float, float, float] = (0.341, 0.325, 0.306)) -> str:
+    r, g, b = rgb
+    ang = math.atan2(y2 - y1, x2 - x1)
+    head = 6.0
+    lx, ly = x2 - head * math.cos(ang - 0.5), y2 - head * math.sin(ang - 0.5)
+    rx, ry = x2 - head * math.cos(ang + 0.5), y2 - head * math.sin(ang + 0.5)
+    return (
+        f"{r:.3f} {g:.3f} {b:.3f} RG\n{x1} {y1} m {x2} {y2} l S\n"
+        f"{x2} {y2} m {lx:.1f} {ly:.1f} l S\n{x2} {y2} m {rx:.1f} {ry:.1f} l S"
+    )
+
+
 def special_pdf_pages(asset: Asset) -> list[bytes]:
     ops: list[str] = []
     if asset.id == "asset-trades-map":
@@ -1833,35 +2417,34 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
         for x, y, w, h, label in boxes:
             ops += [pdf_box(x, y, w, h), pdf_text(x + 12, y + 26, 10, label)]
         ops += [
-            "192 644 m 232 644 l S", "352 644 m 392 644 l S",
-            "132 620 m 132 568 l S", "292 620 m 292 568 l S", "452 620 m 452 568 l S",
-            "132 520 m 132 468 l S", "292 520 m 292 468 l S", "452 520 m 452 468 l S",
+            pdf_arrow(192, 644, 230, 644),
+            pdf_arrow(352, 644, 390, 644),
+            pdf_arrow(132, 620, 132, 570),
+            pdf_arrow(292, 620, 292, 570),
+            pdf_arrow(452, 620, 452, 570),
+            pdf_arrow(132, 520, 132, 470),
+            pdf_arrow(292, 520, 292, 470),
+            pdf_arrow(452, 520, 452, 470),
+            pdf_arrow(392, 634, 356, 634),
         ]
+        ops += [f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg", pdf_text(358, 626, 7, "need info: reclassify")]
         ops += pdf_flow_notes(360, ["Rule: AI may draft, but urgent/safety issues and all outbound messages require human approval."])
     elif asset.id == "asset-manual-score":
-        ops += [pdf_text(72, 744, 22, "Manual Validation Scorecard"), pdf_text(72, 720, 10, "Score before automating. Do not automate weak demand.")]
-        headers = ["Criterion", "Weight", "Score 1-5", "Weighted"]
-        widths = [240, 80, 100, 100]
-        x0, y0, row_h = 72, 660, 32
-        x = x0
-        for label, width in zip(headers, widths):
-            ops += [pdf_box(x, y0, width, row_h), pdf_text(x + 8, y0 + 19, 9, label)]
-            x += width
-        rows = [
-            ("Pain frequency", "20%", "", ""),
-            ("Current cost of pain", "20%", "", ""),
-            ("Manual deliverability", "20%", "", ""),
-            ("Willingness to pay evidence", "25%", "", ""),
-            ("Repeatability", "15%", "", ""),
-            ("Total /25", "100%", "", ""),
-        ]
-        for r, row in enumerate(rows, start=1):
-            x = x0
-            y = y0 - row_h * r
-            for label, width in zip(row, widths):
-                ops += [pdf_box(x, y, width, row_h), pdf_text(x + 8, y + 19, 9, label)]
-                x += width
-        ops += pdf_flow_notes(405, ["Decision: below 18/25 = keep manual or stop. 18-21 = keep manual. 22+ after 3 paid deliveries = automate one step."])
+        ops += [pdf_text(72, 744, 22, "Manual Validation Scorecard"), pdf_text(72, 720, 10, "Score each criterion from 1 to 5. Add them for a total out of 25.")]
+        ops += pdf_grid(["Criterion", "Score (1-5)"], [
+            ["Pain frequency", ""],
+            ["Current cost of the pain", ""],
+            ["Manual deliverability", ""],
+            ["Willingness-to-pay evidence", ""],
+            ["Repeatability", ""],
+            ["Total score (out of 25)", ""],
+        ], [330, 150], x0=72, y0=648, row_h=32)
+        ops += [f"{_INK[0]:.3f} {_INK[1]:.3f} {_INK[2]:.3f} rg", pdf_text_bold(72, 430, 11, "Decision guide")]
+        ops += pdf_grid(["Total score", "Decision"], [
+            ["Below 18 / 25", "Keep manual, or stop - demand is not proven yet"],
+            ["18 - 21 / 25", "Keep selling manually and improve the delivery SOP"],
+            ["22+ / 25", "After 3 paid deliveries, automate one low-risk step"],
+        ], [120, 360], x0=72, y0=408, row_h=30)
     elif asset.id == "asset-reviews-cards":
         ops += [pdf_text(72, 744, 22, "Testimonial Card Layout Specs"), pdf_text(72, 720, 10, "Use exact review language. One claim per card.")]
         specs = [
@@ -1871,33 +2454,33 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
         ]
         for x, y, w, h, label in specs:
             ops += [pdf_box(x, y, w, h), pdf_text(x + 10, y + h - 22, 10, label), pdf_text(x + 10, y + 20, 8, "Quote + source context + logo")]
-        ops += pdf_flow_notes(270, ["Safe margins: 90 px minimum. Quote length: square 26 words, story 34 words, banner 22 words."])
+        ops += pdf_grid(["Format", "Pixel size", "Safe margin", "Max quote words"], [
+            ["Square", "1080 x 1080", "90 px", "26 words"],
+            ["Story", "1080 x 1920", "90 px", "34 words"],
+            ["Website banner", "1600 x 600", "90 px", "22 words"],
+        ], [140, 120, 110, 140], x0=72, y0=300, row_h=30)
     elif asset.id == "asset-airbnb-upsell":
         ops += [pdf_text(72, 744, 22, "Host Upsell Matrix"), pdf_text(72, 720, 10, "Choose optional add-ons that are easy to fulfill and transparent for guests.")]
-        headers = ["Offer", "Guest trigger", "Effort", "Margin", "Approved?"]
-        widths = [130, 170, 70, 70, 80]
-        x0, y0, row_h = 72, 660, 34
-        x = x0
-        for label, width in zip(headers, widths):
-            ops += [pdf_box(x, y0, width, row_h), pdf_text(x + 8, y0 + 20, 9, label)]
-            x += width
-        rows = [
-            ("Breakfast basket", "Late arrival / first morning", "Low", "$", ""),
-            ("Late checkout", "Evening flight / weekend stay", "Low", "$$", ""),
-            ("Local itinerary", "Family / couple / work trip", "Medium", "$$", ""),
-            ("Celebration setup", "Birthday / anniversary", "Medium", "$$", ""),
-            ("Pantry restock", "Long stay / remote worker", "Medium", "$", ""),
-        ]
-        for r, row in enumerate(rows, start=1):
-            x = x0
-            y = y0 - row_h * r
-            for label, width in zip(row, widths):
-                ops += [pdf_box(x, y, width, row_h), pdf_text(x + 8, y + 20, 8, label)]
-                x += width
+        ops += pdf_grid(["Offer", "Guest trigger", "Effort", "Margin", "Approved?"], [
+            ["Breakfast basket", "Late arrival / first morning", "Low", "$", ""],
+            ["Late checkout", "Evening flight / weekend stay", "Low", "$$", ""],
+            ["Local itinerary", "Family / couple / work trip", "Medium", "$$", ""],
+            ["Celebration setup", "Birthday / anniversary", "Medium", "$$", ""],
+            ["Pantry restock", "Long stay / remote worker", "Medium", "$", ""],
+        ], [130, 170, 70, 70, 80], x0=72, y0=650, row_h=34)
         ops += pdf_flow_notes(420, [
             "Rules: disclose price before purchase, confirm host fulfillment capacity, and avoid promises outside platform policy.",
             "Default message: I can arrange [offer] for [$] if you would like it ready by [time].",
         ])
+    elif asset.id == "asset-ugc-hooks":
+        ops += [pdf_text(72, 744, 22, "Hook Bank"), pdf_text(72, 720, 10, "Pick one hook angle per video, then match it to the audience temperature.")]
+        ops += pdf_grid(["Hook type", "Pattern", "Best for"], [
+            ["Problem-aware", "Name the exact frustration the buyer already feels", "Cold audiences"],
+            ["Before / after", "Show the product state change in one sentence", "Visual products"],
+            ["Myth", "Challenge a lazy assumption in the category", "Educating buyers"],
+            ["Proof", "Lead with a result, review phrase, or repeat behaviour", "Strong reviews"],
+            ["Demo", "Show the product in use before explaining anything", "Obvious-use products"],
+        ], [130, 250, 110], x0=72, y0=648, row_h=42)
     elif asset.id in {"asset-cafe-checklist", "asset-gbp-audit", "asset-shopify-audit", "asset-gym-call"}:
         ops += [pdf_text(72, 744, 22, asset.title), pdf_text(72, 720, 10, "Working checklist page. Mark each item before client handoff.")]
         y = 660
@@ -1909,26 +2492,13 @@ def special_pdf_pages(asset: Asset) -> list[bytes]:
             y -= 36
     else:
         ops += [pdf_text(72, 744, 22, asset.title), pdf_text(72, 720, 10, "Client worksheet: use this page while turning the asset into a buyer-ready deliverable.")]
-        headers = ["Area", "Decision", "Owner", "Done?"]
-        widths = [150, 210, 80, 80]
-        x0, y0, row_h = 72, 660, 34
-        x = x0
-        for label, width in zip(headers, widths):
-            ops += [pdf_box(x, y0, width, row_h), pdf_text(x + 8, y0 + 20, 9, label)]
-            x += width
-        rows = [
-            ("Buyer context", "Specific business, segment, and visible pain", "You", ""),
-            ("Source proof", "Screenshots, URLs, reviews, data, or examples saved", "You", ""),
-            ("Approval risk", "Claims, prices, hours, legal-sensitive facts checked", "Client", ""),
-            ("Delivery", "Working file, final export, and next step included", "You", ""),
-            ("Follow-up", "Renewal angle or paid next step identified", "You", ""),
-        ]
-        for r, row in enumerate(rows, start=1):
-            x = x0
-            y = y0 - row_h * r
-            for label, width in zip(row, widths):
-                ops += [pdf_box(x, y, width, row_h), pdf_text(x + 8, y + 20, 8, label)]
-                x += width
+        ops += pdf_grid(["Area", "Decision", "Owner", "Done?"], [
+            ["Buyer context", "Specific business, segment, and visible pain", "You", ""],
+            ["Source proof", "Screenshots, URLs, reviews, data, or examples saved", "You", ""],
+            ["Approval risk", "Claims, prices, hours, legal-sensitive facts checked", "Client", ""],
+            ["Delivery", "Working file, final export, and next step included", "You", ""],
+            ["Follow-up", "Renewal angle or paid next step identified", "You", ""],
+        ], [150, 210, 80, 80], x0=72, y0=650, row_h=34)
         ops += pdf_flow_notes(420, [
             "Rule: if a buyer could misunderstand the recommendation, rewrite it as a clear operational next step.",
             "Handoff: summarize what changed, what needs approval, and what you recommend doing next.",
@@ -2035,7 +2605,7 @@ def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, lis
         lines.append((heading, 15, True))
         for item in items:
             prefix = "- "
-            for idx, line in enumerate(wrap(item, 88)):
+            for idx, line in enumerate(wrap(item, 82)):
                 lines.append(((prefix if idx == 0 else "  ") + line, 10, False))
         lines.append(("", 10, False))
     pages: list[list[tuple[str, int, bool]]] = []
@@ -2063,24 +2633,37 @@ def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, lis
     objects.append(b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>")
     total_pages = len(content_streams) + len(pages)
     for page_index, page in enumerate(pages, start=1 + len(content_streams)):
-        content_ops = []
-        cursor_y = 760
+        content_ops = [
+            pdf_fill(0, 0, 612, 792, _BG),
+            pdf_fill(0, 760, 612, 32, _BLACK),
+            "1 1 1 rg",
+            pdf_text_bold(54, 774, 8, BRAND.upper()),
+            f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg",
+            pdf_text(430, 774, 8, f"PAGE {page_index} OF {total_pages}"),
+        ]
+        cursor_y = 718
         for text, size, bold in page:
             if text == "":
-                cursor_y -= 14
+                cursor_y -= 11
                 continue
             font = "F2" if bold else "F1"
-            color = "0.039 0.039 0.039 rg"  # near-black for both heads and body (monochrome)
-            safe = pdf_escape(text)
-            if bold and size >= 15:
-                content_ops.append(pdf_fill(54, cursor_y - 9, 504, 24, _PANEL))
-                content_ops.append(pdf_fill(54, cursor_y - 9, 3, 24, _BLACK))
-                content_ops.append(pdf_stroke_line(54, cursor_y - 12, 558, cursor_y - 12, _LINE))
-            content_ops.append(color)
-            content_ops.append(f"BT /{font} {size} Tf 72 {cursor_y} Td ({safe}) Tj ET")
-            cursor_y -= max(14, size + 5)
-            if bold and size >= 15:
-                cursor_y -= 6
+            is_heading = bold and size >= 15
+            is_bullet = text.startswith("- ")
+            is_cont = text.startswith("  ") and not is_bullet
+            if is_heading:
+                content_ops.append(pdf_fill(54, cursor_y - 10, 504, 28, _PANEL))
+                content_ops.append(pdf_fill(54, cursor_y - 10, 4, 28, _BLUE))
+                content_ops.append(pdf_stroke_line(54, cursor_y - 14, 558, cursor_y - 14, _LINE))
+            elif is_bullet:
+                content_ops.append(pdf_fill(72, cursor_y - 4, 6, 6, _BLUE))
+            heading_color = f"{_BLUE[0]} {_BLUE[1]} {_BLUE[2]} rg"
+            content_ops.append(heading_color if is_heading else "0.039 0.039 0.039 rg")
+            text_x = 88 if (is_bullet or is_cont) else 72
+            rendered_text = text[2:] if (is_bullet or is_cont) else text
+            content_ops.append(f"BT /{font} {size} Tf {text_x} {cursor_y} Td ({pdf_escape(rendered_text)}) Tj ET")
+            cursor_y -= max(14, size + 6)
+            if is_heading:
+                cursor_y -= 8
         content_ops.append(f"{_MUTED[0]:.3f} {_MUTED[1]:.3f} {_MUTED[2]:.3f} rg")
         content_ops.append(pdf_stroke_line(72, 44, 540, 44, _LINE))
         content_ops.append(f"BT /F1 8 Tf 72 28 Td ({pdf_escape(BRAND)}  /  {pdf_escape(asset.title)}  /  Page {page_index} of {total_pages}) Tj ET")
@@ -2140,23 +2723,38 @@ def _cell_format(header: str, rowlabel: str, value: Any) -> str:
     return "num"
 
 
+_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _excel_serial(value: str) -> int:
+    y, m, d = (int(part) for part in value.split("-"))
+    return (date(y, m, d) - date(1899, 12, 30)).days
+
+
 def cell_xml(row: int, col: int, value: Any, header: str = "", rowlabel: str = "") -> str:
     ref = f"{col_letter(col)}{row}"
     if row == 1:
         return f'<c r="{ref}" t="inlineStr" s="1"><is><t>{escape(str(value))}</t></is></c>'
+    # Real Excel dates (sortable/filterable) instead of text strings.
+    if isinstance(value, str) and _ISO_DATE_RE.match(value):
+        return f'<c r="{ref}" s="{"11" if row % 2 == 0 else "10"}"><v>{_excel_serial(value)}</v></c>'
     fmt = _cell_format(header, rowlabel, value)
-    style_for = {"cur": "3", "num": "4", "pct": "5"}.get(fmt, "2")
+    # Zebra banding: even data rows render on white (no fill), odd on panel.
+    white = row % 2 == 0
+    text_s = "6" if white else "2"
+    pct_s = "9" if white else "5"
+    fmt_s = {"cur": "7" if white else "3", "num": "8" if white else "4", "pct": pct_s}.get(fmt, text_s)
     if isinstance(value, str) and value.startswith("="):
-        return f'<c r="{ref}" s="{style_for}"><f>{escape(value[1:])}</f></c>'
+        return f'<c r="{ref}" s="{fmt_s}"><f>{escape(value[1:])}</f></c>'
     if fmt == "pct" and isinstance(value, str) and _PCT_RE.match(value):
         num = float(value.strip().rstrip("%")) / 100
-        return f'<c r="{ref}" s="5"><v>{num}</v></c>'
+        return f'<c r="{ref}" s="{pct_s}"><v>{num}</v></c>'
     if isinstance(value, (int, float)):
-        return f'<c r="{ref}" s="{style_for}"><v>{value}</v></c>'
-    return f'<c r="{ref}" t="inlineStr" s="2"><is><t>{escape(str(value))}</t></is></c>'
+        return f'<c r="{ref}" s="{fmt_s}"><v>{value}</v></c>'
+    return f'<c r="{ref}" t="inlineStr" s="{text_s}"><is><t>{escape(str(value))}</t></is></c>'
 
 
-def sheet_xml(rows: list[list[Any]]) -> str:
+def sheet_xml(rows: list[list[Any]], sheet_name: str = "") -> str:
     headers_row = [str(v) for v in rows[0]] if rows else []
     row_xml = []
     for r_idx, row in enumerate(rows, start=1):
@@ -2171,29 +2769,51 @@ def sheet_xml(rows: list[list[Any]]) -> str:
         row_xml.append(f'<row r="{r_idx}" ht="{height}" customHeight="1">{cells}</row>')
     max_cols = max((len(row) for row in rows), default=1)
     max_rows = max(len(rows), 1)
+    # Only put a filter on real record tables, not vertical key/value sheets.
+    is_record_table = max_cols >= 3 and max_rows >= 5
     filter_ref = f"A1:{col_letter(max_cols)}{max_rows}"
+    # Per-sheet column widths derived from content length (clamped), not one profile.
+    col_widths = []
+    for c in range(max_cols):
+        longest = max((len(str(row[c])) for row in rows if c < len(row)), default=10)
+        col_widths.append(min(58, max(12, longest + 3)))
+    cols_xml = "".join(
+        f'<col min="{i + 1}" max="{i + 1}" width="{w}" customWidth="1"/>'
+        for i, w in enumerate(col_widths)
+    )
     validations = ""
     headers = [str(value).lower() for value in rows[0]] if rows else []
     validation_nodes = []
+    conditional_nodes = []
     for idx, header in enumerate(headers, start=1):
         if header in {"status", "required?", "saved?"}:
             col = col_letter(idx)
             validation_nodes.append(
                 f'<dataValidation type="list" allowBlank="1" sqref="{col}2:{col}200"><formula1>"Open,In progress,Done,Yes,No,Approved"</formula1></dataValidation>'
             )
+            conditional_nodes.append(
+                f'<conditionalFormatting sqref="{col}2:{col}200">'
+                f'<cfRule type="containsText" operator="containsText" text="Done" dxfId="0" priority="{idx * 3 - 2}"><formula>NOT(ISERROR(SEARCH("Done",{col}2)))</formula></cfRule>'
+                f'<cfRule type="containsText" operator="containsText" text="Approved" dxfId="0" priority="{idx * 3 - 1}"><formula>NOT(ISERROR(SEARCH("Approved",{col}2)))</formula></cfRule>'
+                f'<cfRule type="containsText" operator="containsText" text="Open" dxfId="1" priority="{idx * 3}"><formula>NOT(ISERROR(SEARCH("Open",{col}2)))</formula></cfRule>'
+                f'</conditionalFormatting>'
+            )
     if validation_nodes:
         validations = f'<dataValidations count="{len(validation_nodes)}">{"".join(validation_nodes)}</dataValidations>'
+    sheet_note = f"Side Hustle Stephen - {sheet_name}" if sheet_name else "Side Hustle Stephen"
     return f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
   <sheetPr><tabColor rgb="FF{BLACK}"/></sheetPr>
   <sheetFormatPr defaultRowHeight="30"/>
-  <cols><col min="1" max="1" width="20" customWidth="1"/><col min="2" max="2" width="52" customWidth="1"/><col min="3" max="3" width="30" customWidth="1"/><col min="4" max="8" width="24" customWidth="1"/></cols>
+  <cols>{cols_xml}</cols>
   <sheetViews><sheetView workbookViewId="0" showGridLines="0" zoomScale="85" zoomScaleNormal="85"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>
   <sheetData>{''.join(row_xml)}</sheetData>
-  <autoFilter ref="{filter_ref}"/>
+  {f'<autoFilter ref="{filter_ref}"/>' if is_record_table else ''}
+  {''.join(conditional_nodes)}
   {validations}
   <pageMargins left="0.45" right="0.45" top="0.6" bottom="0.6" header="0.3" footer="0.3"/>
   <pageSetup orientation="landscape" fitToWidth="1" fitToHeight="0"/>
+  <headerFooter><oddHeader>&amp;L{escape(sheet_note)}&amp;R&amp;D</oddHeader><oddFooter>&amp;LVerify facts before client use&amp;RPage &amp;P of &amp;N</oddFooter></headerFooter>
 </worksheet>"""
 
 
@@ -2244,6 +2864,120 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Scope", "I will refresh your customer-facing menu assets across the agreed formats and return final files ready to use."],
                 ["Approval", "You approve item names, prices, allergens, sold-out items, and final exports before publishing."],
                 ["Not included", "Photography, new brand identity, paid ads, printing costs, and menu engineering are not included unless scoped separately."],
+            ],
+        }
+    if asset_id == "asset-airbnb-photo-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Use Pricing Ladder to choose a package based on photo count and edit risk."],
+                [2, "Use Quote Builder for one listing. Edit only input rows in column B."],
+                [3, "Use Edit Risk Log to flag any change that could mislead guests."],
+                [4, "Use Retainer Tracker for seasonal or monthly photo refresh clients."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "One-time Price", "Per Extra Photo", "Best For"],
+                ["Sample Refresh", "1 before/after concept + edit-risk notes", 49, 25, "Cold outreach proof"],
+                ["Starter Listing", "5 refreshed photos + handoff notes", 199, 30, "Small hosts testing demand"],
+                ["Standard Listing", "12 refreshed photos + reorder notes + captions", 399, 25, "Most listings"],
+                ["Premium Listing", "20 refreshed photos + seasonal scene variants", 699, 20, "High-value listings"],
+                ["Seasonal Retainer", "6 monthly/seasonal refreshes + approval log", 249, 20, "Hosts updating regularly"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base package price", 399],
+                ["Included photos", 12],
+                ["Requested photos", 15],
+                ["Per extra photo", 25],
+                ["Rush fee", 75],
+                ["Edit-risk review fee", 50],
+                ["Estimated quote", "=B2+MAX(0,B4-B3)*B5+B6+B7"],
+                ["Deposit due at 50%", "=B8*0.5"],
+            ],
+            "Edit Risk Log": [
+                ["Photo", "Proposed edit", "Risk", "Host approval", "Status"],
+                ["Living room", "Improve light and add two adults relaxing", "Low", "Required", "Open"],
+                ["Bedroom", "Tidy bedding and warm lighting", "Low", "Required", "Open"],
+                ["Balcony", "Do not alter view or furniture", "High", "Required", "Open"],
+                ["Kitchen", "Declutter bench only", "Medium", "Required", "Open"],
+            ],
+            "Retainer Tracker": [
+                ["Month", "Client", "Refreshes Included", "Refreshes Used", "Extra Photo Fee", "Extra Revenue"],
+                ["July", "Example Host", 6, 8, 20, "=MAX(0,D2-C2)*E2"],
+                ["August", "", 6, 0, 20, "=MAX(0,D3-C3)*E3"],
+                ["September", "", 6, 0, 20, "=MAX(0,D4-C4)*E4"],
+            ],
+            "Client Inputs": [
+                ["Input", "Owner", "Required?", "Status"],
+                ["Listing URL", "Client", "Yes", "Open"],
+                ["Original source photos", "Client", "Yes", "Open"],
+                ["Approved edit boundaries", "Client", "Yes", "Open"],
+                ["Model direction and usage limits", "Client", "Yes", "Open"],
+                ["Rooms to prioritise", "Client", "Yes", "Open"],
+            ],
+        }
+    if asset_id == "asset-drone-roof-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Choose a package based on report depth, video, travel, turnaround, and flight complexity."],
+                [2, "Use Quote Builder for one property. Edit only the input values in column B."],
+                [3, "Use Partner Retainer for agents, roofers, solar installers, and property managers who can send repeat work."],
+                [4, "Keep all pricing language illustrative and avoid guaranteed inspection, insurance, repair, or revenue outcomes."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "Price", "Best For", "Notes"],
+                ["Sample Roof", "1 short flyover + 6 labelled photos + sample visual note", 0, "Partner proof", "Use selectively for high-fit prospects"],
+                ["Basic Report", "12 photos + 1-page visual report", 149, "Homeowner peace of mind", "Visual documentation only"],
+                ["Standard Report", "20 photos + short video + 2-page visual report", 249, "Most buyers", "Core offer"],
+                ["Priority Report", "Standard report + 24-hour priority scheduling", 349, "Urgent owner or agent need", "Weather and airspace permitting"],
+                ["Partner Pack", "4 reports per month", 799, "Agents, roofers, solar installers", "Priority booking slots"],
+                ["Extra Property", "Additional nearby property same day", 125, "Route efficiency", "Same area and same flight conditions only"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base package price", 249],
+                ["Travel surcharge", 35],
+                ["Extra photos", 8],
+                ["Price per extra photo", 5],
+                ["Rush fee", 75],
+                ["Video add-on", 50],
+                ["Estimated quote", "=B2+B3+(B4*B5)+B6+B7"],
+                ["Deposit due at 50%", "=B8*0.5"],
+            ],
+            "Partner Retainer": [
+                ["Partner", "Reports Included", "Monthly Fee", "Reports Used", "Extra Report Fee", "Extra Revenue"],
+                ["Example Roofer", 4, 799, 5, 175, "=MAX(0,D2-B2)*E2"],
+                ["Example Agent", 2, 449, 2, 175, "=MAX(0,D3-B3)*E3"],
+                ["Example Solar Installer", 6, 1099, 7, 150, "=MAX(0,D4-B4)*E4"],
+                ["Example Property Manager", 8, 1399, 9, 150, "=MAX(0,D5-B5)*E5"],
+            ],
+            "Unit Economics": [
+                ["Metric", "Illustrative Value", "Formula/Note"],
+                ["Reports per week", 10, "Illustrative capacity only"],
+                ["Average report price", 250, "Use around/roughly language in sales copy"],
+                ["Weekly revenue", "=B2*B3", ""],
+                ["Monthly revenue", "=B4*4", ""],
+                ["Annual revenue", "=B5*12", ""],
+                ["Drone cost", 750, "Replace with actual purchase or rental cost"],
+                ["Reports to recover drone cost", "=ROUNDUP(B7/B3,0)", ""],
+                ["Insurance, licensing, training, software, and travel", "Add actuals", "Do not ignore operating costs"],
+            ],
+            "Client Inputs": [
+                ["Input", "Owner", "Required?", "Status"],
+                ["Property address", "Client", "Yes", "Open"],
+                ["Owner or authorised-agent permission", "Client", "Yes", "Open"],
+                ["Roof areas of interest", "Client", "No", "Open"],
+                ["Access and launch notes", "Client", "Yes", "Open"],
+                ["Report recipients and intended use", "Client", "Yes", "Open"],
+                ["Privacy boundaries or neighbouring-property restrictions", "Client", "Yes", "Open"],
+            ],
+            "Proposal Copy": [
+                ["Section", "Client-facing copy"],
+                ["Scope", "I will capture roof photos from permitted drone angles and deliver a labelled visual report with a short handoff note."],
+                ["Boundary", "This is visual photo documentation only, not a structural, engineering, safety, insurance, or repair inspection."],
+                ["Approval", "The property owner or authorised representative confirms permission, access, intended use, and any privacy limits before the flight."],
+                ["Not included", "Repairs, roof access by ladder, insurance claim advice, engineering opinion, code compliance, and guaranteed damage detection are not included."],
             ],
         }
     if asset_id == "asset-gym-report":
@@ -2304,13 +3038,13 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
             [4, "Use Content Calendar and Lead Follow-up to turn the snapshot into outreach."],
         ],
         "Snapshot Inputs": [
-            ["Field", "Value", "Source"],
-            ["Suburb", "Example Suburb", "Public market source"],
-            ["Median sale price", 850000, "Replace with current data"],
-            ["Listings this week", 42, "Replace with current data"],
-            ["Auction clearance", "62%", "Replace with current data"],
-            ["Median rent", 620, "Replace with current data"],
-            ["Days on market", 31, "Replace with current data"],
+            ["Field", "Value", "Source", "Date captured"],
+            ["Suburb", "Example Suburb", "Public market source", "2026-06-12"],
+            ["Median sale price", 850000, "Replace with current data", "2026-06-12"],
+            ["Listings this week", 42, "Replace with current data", "2026-06-12"],
+            ["Auction clearance", "62%", "Replace with current data", "2026-06-12"],
+            ["Median rent", 620, "Replace with current data", "2026-06-12"],
+            ["Days on market", 31, "Replace with current data", "2026-06-12"],
         ],
         "Weekly Snapshot": [
             ["Metric", "Current", "Previous", "Change"],
@@ -2374,7 +3108,7 @@ def enrich_workbook(asset: Asset, sheets: dict[str, list[list[Any]]]) -> dict[st
 def make_xlsx(path: Path, pack: Pack, asset: Asset) -> None:
     start_here = {
         "Start Here": [
-            ["Side Hustle Stephen - The Launchpad", ""],
+            ["Side Hustle Stephen - The Launchpad"],
             ["Asset", asset.title],
             ["Pack", pack.title],
             ["What this is", asset.description],
@@ -2393,7 +3127,7 @@ def make_xlsx(path: Path, pack: Pack, asset: Asset) -> None:
     content_overrides = []
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
         for idx, (name, rows) in enumerate(sheets.items(), start=1):
-            z.writestr(f"xl/worksheets/sheet{idx}.xml", sheet_xml(rows))
+            z.writestr(f"xl/worksheets/sheet{idx}.xml", sheet_xml(rows, name))
             workbook_sheets.append(f'<sheet name="{escape(name)}" sheetId="{idx}" r:id="rId{idx}"/>')
             rels.append(f'<Relationship Id="rId{idx}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet{idx}.xml"/>')
             content_overrides.append(f'<Override PartName="/xl/worksheets/sheet{idx}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>')
@@ -2418,18 +3152,28 @@ def make_xlsx(path: Path, pack: Pack, asset: Asset) -> None:
         z.writestr("xl/_rels/workbook.xml.rels", workbook_rels)
         z.writestr("xl/styles.xml", f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
-  <numFmts count="3"><numFmt numFmtId="164" formatCode="&quot;$&quot;#,##0"/><numFmt numFmtId="165" formatCode="#,##0"/><numFmt numFmtId="166" formatCode="0%"/></numFmts>
+  <numFmts count="4"><numFmt numFmtId="164" formatCode="&quot;$&quot;#,##0"/><numFmt numFmtId="165" formatCode="#,##0"/><numFmt numFmtId="166" formatCode="0%"/><numFmt numFmtId="167" formatCode="yyyy-mm-dd"/></numFmts>
   <fonts count="3"><font><sz val="10"/><name val="{FONT}"/><color rgb="FF{TEXT}"/></font><font><b/><color rgb="FFFFFFFF"/><sz val="10"/><name val="{FONT}"/></font><font><sz val="9"/><name val="{FONT}"/><color rgb="FF{TEXT}"/></font></fonts>
   <fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF{BLACK}"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FF{PANEL}"/><bgColor indexed="64"/></patternFill></fill></fills>
   <borders count="2"><border/><border><left style="thin"><color rgb="FF{LINE}"/></left><right style="thin"><color rgb="FF{LINE}"/></right><top style="thin"><color rgb="FF{LINE}"/></top><bottom style="thin"><color rgb="FF{LINE}"/></bottom></border></borders>
-  <cellXfs count="6">
+  <cellXfs count="12">
     <xf numFmtId="0" fontId="0" fillId="0" borderId="0" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
     <xf numFmtId="0" fontId="1" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center" wrapText="1"/></xf>
     <xf numFmtId="0" fontId="2" fillId="3" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
     <xf numFmtId="164" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
     <xf numFmtId="165" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
     <xf numFmtId="166" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+    <xf numFmtId="0" fontId="2" fillId="0" borderId="1" applyFont="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>
+    <xf numFmtId="164" fontId="2" fillId="0" borderId="1" applyNumberFormat="1" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+    <xf numFmtId="165" fontId="2" fillId="0" borderId="1" applyNumberFormat="1" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+    <xf numFmtId="166" fontId="2" fillId="0" borderId="1" applyNumberFormat="1" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>
+    <xf numFmtId="167" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>
+    <xf numFmtId="167" fontId="2" fillId="0" borderId="1" applyNumberFormat="1" applyFont="1" applyBorder="1" applyAlignment="1"><alignment horizontal="left" vertical="center"/></xf>
   </cellXfs>
+  <dxfs count="2">
+    <dxf><fill><patternFill patternType="solid"><fgColor rgb="FFEAF8F0"/></patternFill></fill><font><color rgb="FF0F6B3F"/><b/></font></dxf>
+    <dxf><fill><patternFill patternType="solid"><fgColor rgb="FFFFF4E8"/></patternFill></fill><font><color rgb="FF8A4B00"/><b/></font></dxf>
+  </dxfs>
 </styleSheet>""")
 
 

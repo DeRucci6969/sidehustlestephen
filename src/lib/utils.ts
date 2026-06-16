@@ -3,8 +3,18 @@ export function cx(...classes: Array<string | false | null | undefined>) {
 }
 
 export function absoluteUrl(path: string) {
-  const base = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-  return `${base}${path}`;
+  const fallbackBase = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
+  const configuredBase = process.env.NEXT_PUBLIC_APP_URL ?? fallbackBase;
+  let base = fallbackBase;
+
+  try {
+    base = new URL(configuredBase).origin;
+  } catch {
+    base = new URL(fallbackBase).origin;
+  }
+
+  const safePath = path.startsWith("/") && !path.startsWith("//") && !path.includes("://") ? path : "/";
+  return `${base}${safePath}`;
 }
 
 export function safeInternalPath(value: string | null | undefined, fallback = "/packs") {

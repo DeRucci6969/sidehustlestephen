@@ -1,8 +1,10 @@
-import { Check, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Check, Crown, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
 import { packs } from "@/data/packs";
+import { getMembershipContext } from "@/lib/membership";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
@@ -10,23 +12,24 @@ export const metadata = {
   description: "Unlock every Side Hustle Stephen launch pack and asset for $9/month.",
 };
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const viewer = await getMembershipContext();
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
   const included = ["Full backlog access", "Launch assets and scripts", "Member-only playbooks", "Private download links"];
   const faqs = [
     ["Is this one pack or all packs?", "One membership unlocks every current and future business pack in the archive."],
     ["Can I cancel?", "Yes. Active subscribers can manage billing and cancellation through the Stripe Customer Portal."],
-    ["Are results guaranteed?", "No. The packs provide execution support, assets, and playbooks, not income guarantees."],
+    ["Move faster from idea to offer", "Use ready-made prompts, scripts, pricing tools, and delivery files to turn a simple business idea into a client-ready offer."],
   ];
 
   return (
     <>
-      <Header />
-      <main className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8">
+      <Header viewer={viewer} />
+      <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-8 sm:py-12">
         <section className="grid min-h-[60vh] items-center gap-8 lg:grid-cols-[0.9fr_0.7fr]">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Membership</p>
-            <h1 className="display-type mt-3 text-5xl sm:text-[64px]">Every pack. Every asset. {siteConfig.priceLabel}.</h1>
+            <h1 className="display-type mt-3 break-words text-[clamp(2.35rem,11vw,4rem)] leading-[1.02]">Every pack. Every asset. {siteConfig.priceLabel}.</h1>
             <p className="premium-copy mt-6 max-w-2xl text-lg leading-8">
               All-access membership to the business pack archive, including {packs.length} business packs and every new pack added after launch.
             </p>
@@ -38,9 +41,9 @@ export default function PricingPage() {
               ))}
             </div>
           </div>
-          <div className="liquid-panel glass rounded-lg p-7 orange-focus">
+          <div className="liquid-panel glass rounded-lg p-5 orange-focus sm:p-7">
             <div className="flex items-baseline gap-2">
-              <span className="text-7xl font-bold tracking-normal text-[var(--navy-ink)]">{siteConfig.priceLabel.split("/")[0]}</span>
+              <span className="text-6xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-7xl">{siteConfig.priceLabel.split("/")[0]}</span>
               <span className="text-[var(--graphite)]">/ month</span>
             </div>
             <div className="mt-7 space-y-4">
@@ -53,12 +56,31 @@ export default function PricingPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-8">
-              <JoinButton label="Unlock Packs" returnTo="/packs" className="w-full" />
-            </div>
+            {viewer.isMember ? (
+              <div className="mt-8 rounded-lg bg-[var(--deep-forest)] p-4 text-white">
+                <div className="flex items-center gap-2 text-sm font-bold">
+                  <Crown size={17} className="text-[var(--orange-hot)]" />
+                  Member access active
+                </div>
+                <p className="mt-2 text-sm leading-6 text-white/68">You already have access to every pack and asset in the archive.</p>
+                <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                  <Link href="/packs" className="accent-cta inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold">
+                    Browse packs
+                    <ArrowRight size={16} />
+                  </Link>
+                  <Link href="/account" className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-white/10 px-5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15">
+                    Account
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="mt-8">
+                <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock Packs"} returnTo="/packs" className="w-full" />
+              </div>
+            )}
             <div className="mt-5 flex items-start gap-3 rounded bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
               <ShieldCheck size={18} className="mt-0.5 shrink-0 text-[var(--validation-green)]" />
-              <p className="text-sm leading-6 text-[var(--graphite)]">No income guarantees. The value is practical execution structure and downloadable launch assets.</p>
+              <p className="text-sm leading-6 text-[var(--graphite)]">Built for practical execution: prompts, scripts, pricing tools, and downloadable launch assets in one place.</p>
             </div>
           </div>
         </section>

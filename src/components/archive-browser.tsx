@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 import { ArrowDownWideNarrow, Search } from "lucide-react";
 import { PackCard } from "@/components/pack-card";
 import type { BusinessPack } from "@/data/packs";
@@ -19,6 +20,7 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
   });
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState<SortMode>("popular");
+  const lastTrackedQueryRef = useRef("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -47,9 +49,26 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
       });
   }, [category, packs, query, sort]);
 
+  useEffect(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (normalizedQuery.length < 2 || normalizedQuery === lastTrackedQueryRef.current) return;
+
+    const timer = window.setTimeout(() => {
+      lastTrackedQueryRef.current = normalizedQuery;
+      track("Archive Search Used", {
+        query: normalizedQuery,
+        category,
+        sort,
+        result_count: filteredPacks.length,
+      });
+    }, 900);
+
+    return () => window.clearTimeout(timer);
+  }, [category, filteredPacks.length, query, sort]);
+
   return (
     <div>
-      <div className="glass mb-7 grid gap-3 rounded-lg p-3 md:grid-cols-[1fr_auto]">
+      <div className="glass mb-5 grid min-w-0 gap-3 rounded-lg p-3 md:grid-cols-[1fr_auto]">
         <label className="flex h-12 min-w-0 items-center gap-3 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.78)]">
           <Search size={18} className="shrink-0 text-[var(--graphite)]" />
           <span className="sr-only">Search packs</span>
@@ -57,16 +76,20 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search by buyer, category, or idea"
-            className="w-full min-w-0 bg-transparent text-sm font-medium outline-none placeholder:text-[var(--graphite)]"
+            className="h-full w-full min-w-0 bg-transparent text-sm font-medium outline-none placeholder:text-[var(--graphite)]"
           />
         </label>
-        <label className="flex h-12 items-center gap-3 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.78)]">
-          <ArrowDownWideNarrow size={18} className="text-[var(--graphite)]" />
+        <label className="flex h-12 min-w-0 items-center gap-3 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.78)]">
+          <ArrowDownWideNarrow size={18} className="shrink-0 text-[var(--graphite)]" />
           <span className="sr-only">Sort packs</span>
           <select
             value={sort}
-            onChange={(event) => setSort(event.target.value as SortMode)}
-            className="bg-transparent text-sm font-semibold outline-none"
+            onChange={(event) => {
+              const nextSort = event.target.value as SortMode;
+              setSort(nextSort);
+              track("Archive Sort Changed", { sort: nextSort, category });
+            }}
+            className="h-full min-w-0 flex-1 bg-transparent text-sm font-semibold outline-none"
           >
             <option value="popular">Most popular</option>
             <option value="newest">Newest</option>
@@ -75,17 +98,22 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
         </label>
       </div>
 
-      <div className="mb-7 flex gap-2 overflow-x-auto pb-1">
+      <div className="mb-5 flex flex-wrap gap-2 pb-1">
         {categories.map((item) => {
           const active = item === category;
           return (
             <button
               key={item}
-              onClick={() => setCategory(item)}
+              type="button"
+              aria-pressed={active}
+              onClick={() => {
+                setCategory(item);
+                track("Archive Category Selected", { category: item, sort });
+              }}
               className={
                 active
-                  ? "accent-cta h-10 shrink-0 rounded-full px-4 text-sm font-semibold"
-                  : "h-10 shrink-0 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 text-sm font-semibold text-[var(--text-secondary)] shadow-[0_10px_28px_rgba(22,32,50,0.08)] transition hover:bg-[rgba(0,148,255,0.08)] hover:text-[var(--navy-ink)]"
+                  ? "accent-cta h-11 shrink-0 rounded-full px-4 text-sm font-semibold"
+                  : "h-11 shrink-0 rounded-full border border-[rgba(22,32,50,0.1)] bg-white/72 px-4 text-sm font-semibold text-[var(--text-secondary)] shadow-[0_10px_28px_rgba(22,32,50,0.08)] transition hover:bg-[rgba(0,148,255,0.08)] hover:text-[var(--navy-ink)]"
               }
             >
               {item}
@@ -108,7 +136,7 @@ export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
       </div>
 
       {filteredPacks.length === 0 ? (
-        <div className="glass-soft rounded-[1.75rem] p-8 text-center">
+        <div className="glass-soft rounded-lg p-6 text-center sm:p-8">
           <h2 className="text-2xl font-semibold tracking-tight">No matching packs</h2>
           <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">Try a broader buyer, category, or business type.</p>
         </div>
