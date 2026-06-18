@@ -153,6 +153,30 @@ PACKS: list[Pack] = [
         ],
     ),
     Pack(
+        "power-washing-driveway-sprint",
+        "Power Washing Driveway Sprint",
+        "Dirty concrete is an easy before-and-after local service.",
+        "Local Service",
+        "Homeowners, landlords, property managers, and small commercial sites",
+        "$101-$500",
+        "1-7 days",
+        "Medium",
+        "A simple exterior cleaning service focused on driveways, paths, bins, small shopfronts, and other visible surfaces with fast before-and-after proof.",
+        "Power washing has obvious visual proof, local buyer demand, and a clear first offer when you keep the scope narrow and quote by surface, access, and risk.",
+        ["Rent or borrow a suitable washer", "Clean one sample surface", "Pitch neighbours and local properties"],
+        "Check local water rules, surface suitability, runoff, insurance, and safety before accepting paid work.",
+        [
+            Asset("asset-powerwash-outreach", "Power Washing Outreach Scripts", "DOCX", "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around visible before-and-after proof."),
+            Asset("asset-powerwash-pricing", "Power Washing Quote Calculator", "XLSX", "Starter, standard, add-on, travel, surface-risk, and recurring maintenance quote builder."),
+            Asset("asset-powerwash-safety", "Job Safety & Surface Checklist", "PDF", "Pre-job checklist for water access, surface type, runoff, nearby hazards, photos, insurance, and no-damage scope boundaries."),
+            Asset("asset-powerwash-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for quote notes, door-to-door scripts, photo-based estimates, surface-risk language, and maintenance upsells."),
+            Asset("asset-powerwash-intake", "Client Intake Form", "DOCX", "Editable intake questions for address, surface type, water access, staining, drainage, photos, timing, and approval boundaries."),
+            Asset("asset-powerwash-email-templates", "Client Email Templates", "DOCX", "Emails for sample offers, quote requests, booking confirmation, pre-job prep, completion handoff, and maintenance reminders."),
+            Asset("asset-powerwash-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs for surfaces, water use, runoff, safety, damage limitations, weather, pricing, and recurring cleans."),
+            Asset("asset-powerwash-proof", "Before & After Proof Kit", "DOCX", "Photo playbook for consistent before/after proof, plus permission, file-naming, and posting templates that turn results into referrals."),
+        ],
+    ),
+    Pack(
         "gym-churn-report",
         "Boutique Gym Churn Report",
         "Gyms know members cancel, but not why.",
@@ -329,6 +353,24 @@ PACKS: list[Pack] = [
         ],
     ),
 ]
+
+
+_AUTOMATION_DESC = (
+    "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, "
+    "follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and "
+    "run on a cadence with human approval."
+)
+
+
+def _pack_token(assets: list[Asset]) -> str:
+    common = os.path.commonprefix([asset.id[len("asset-"):] for asset in assets])
+    return common.rsplit("-", 1)[0]
+
+
+# Every pack leads with a scheduled-automation pack - the most appealing asset for buyers.
+for _pack in PACKS:
+    _token = _pack_token(_pack.assets)
+    _pack.assets.insert(0, Asset(f"asset-{_token}-automation", "AI Automation Pack", "DOCX", _AUTOMATION_DESC))
 
 
 def find_pack_for_asset(asset_id: str) -> tuple[Pack, Asset]:
@@ -615,6 +657,44 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Keep a reusable prompt log for each roof type, buyer type, and report use case.",
         ]),
     ],
+    "asset-powerwash-outreach": [
+        ("Sample prospect example", [
+            "Prospect: homeowner with a visibly dirty driveway beside two cleaner neighbouring properties.",
+            "Observation to lead with: the driveway has clear before/after potential and water access appears simple from the front tap.",
+            "Starter offer: one driveway or path clean with a test patch, before/after photos, and a fixed quote after photo review.",
+            "Best next step: send the sample photo and ask whether they want a quick estimate from driveway photos.",
+        ]),
+        ("Offer boundaries", [
+            "Sell one simple visible surface first: driveway, front path, patio, bin pad, or shopfront entry.",
+            "Do not offer delicate surfaces, roofs, painted areas, cracked pavers, electrical areas, heavy oil remediation, or chemical work until properly equipped and insured.",
+            "Use before/after proof, not income claims or vague exterior-cleaning promises.",
+            "Cluster-book adjacent jobs only when travel, setup, and water access still make the numbers work.",
+        ]),
+    ],
+    "asset-powerwash-pricing": [
+        ("Pricing calibration", [
+            "Quote by surface size, surface risk, staining, travel, setup time, water access, drainage, and pack-down time.",
+            "A small first job still needs a minimum fee; do not underquote because the surface looks easy from the street.",
+            "Charge more for oil staining, chewing gum, poor drainage, awkward access, rush jobs, or multi-surface bundles.",
+            "Recurring maintenance is strongest for shopfront entries, bin pads, strata/common areas, rentals, and pre-listing refreshes.",
+        ]),
+    ],
+    "asset-powerwash-safety": [
+        ("Surface and safety standard", [
+            "Start every job with photos, a test patch, water-access confirmation, drainage review, and clear no-damage boundaries.",
+            "Use lower-risk surfaces first: basic concrete driveways, paths, and bin pads. Avoid delicate surfaces until trained.",
+            "Check runoff, nearby drains, gardens, pets, electrical points, loose stones, old paint, cracked surfaces, and people walking through the work area.",
+            "If local water restrictions, runoff rules, insurance, or surface suitability are unclear, do not accept the paid job.",
+        ]),
+    ],
+    "asset-powerwash-prompts": [
+        ("Prompting standard", [
+            "Use AI for quote notes, outreach, and handoff language, not for deciding whether a surface is safe to clean.",
+            "Ask the model to separate visible facts, assumptions, client approval items, and job risks.",
+            "Keep all buyer-facing copy practical: surface, quote range, water access, weather window, and before/after proof.",
+            "Remove any sentence that sounds like guaranteed restoration, permanent stain removal, or zero damage risk.",
+        ]),
+    ],
 }
 
 
@@ -628,6 +708,7 @@ def script_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
         "google-business-profile-rescue": "a profile rescue sprint for photos, services, hours, FAQs, and review prompts",
         "airbnb-photo-refresh-service": "an AI-assisted Airbnb listing photo refresh with before/after samples, edit-risk notes, and host-approved lifestyle scenes",
         "drone-roof-photo-inspection": "a visual drone roof photo report with labelled photos, a short video, and claim-safe handoff notes",
+        "power-washing-driveway-sprint": "a fixed-scope driveway, path, patio, bin-area, or shopfront power washing sprint with before/after proof and surface-safety checks",
         "shopify-cart-audit": "a checkout friction and abandoned-cart email audit",
         "realtor-suburb-snapshot": "a weekly suburb snapshot agents can post, email, and send to warm leads",
         "ai-inbox-triage-trades": "an inbox triage workflow that labels leads and drafts human-approved replies",
@@ -725,6 +806,13 @@ def checklist_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
             "Check weather, wind, visibility, battery level, return-to-home settings, obstacles, trees, power lines, birds, people, traffic, and safe launch/landing area.",
             "Carry or confirm suitable drone liability insurance for paid work before offering commercial reports.",
             "Label the service as visual photo documentation only; do not certify structural condition, safety, insurance coverage, code compliance, or repair urgency.",
+        ],
+        "asset-powerwash-safety": [
+            "Confirm local water restrictions, runoff rules, insurance needs, and any site-specific permission before accepting paid work.",
+            "Check surface type, condition, cracks, loose material, paint, sealant, drainage, staining, nearby gardens, pets, electrical outlets, and foot traffic.",
+            "Confirm water access, parking/setup area, hose route, weather window, and where dirty water will flow.",
+            "Take before photos from fixed angles, complete a small test patch, and get approval before continuing.",
+            "Avoid delicate, painted, sealed, old, cracked, roof, electrical, or chemical-heavy surfaces unless properly trained, insured, and scoped.",
         ],
         "asset-gym-call": [
             "Start with churn count, churn rate, and top cancellation reasons.",
@@ -992,6 +1080,114 @@ DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Attached are the labelled roof photos, short video, and visual-only report.",
             "Please share this with your roofer, installer, agent, owner, or assessor if you need a professional interpretation.",
             "If you need additional angles, closer photos, or a repeat flyover after weather or repairs, I can quote a follow-up visit.",
+        ]),
+    ],
+    "asset-powerwash-proof": [
+        ("How to use this kit", [
+            "Shoot the before photo the moment you arrive, before any water touches the surface.",
+            "Use the same phone, the same spot, and the same framing for the after photo so the only thing that changes is the surface.",
+            "Capture proof on every job, even small ones; the photo is the asset that wins the next neighbour and landlord.",
+            "Never fake the result. Straightening, cropping, and light exposure fixes are fine; editing the surface itself is not.",
+        ]),
+        ("Matched before/after shots", [
+            "Angle: stand in the same spot for both photos and mark it with a cone, pot, or chalk.",
+            "Distance: frame the full surface plus one fixed landmark such as a gate, step, or drain.",
+            "Height: shoot from chest height, not down at your feet, so the surface reads clearly.",
+            "Lighting: use the same time of day where possible and avoid harsh shadow lines across the wet area.",
+            "Reference: keep one unchanged object in frame so the viewer trusts the comparison.",
+        ]),
+        ("Test patch sequence", [
+            "Step 1: photograph the dirtiest representative section before cleaning.",
+            "Step 2: clean one small patch at your planned pressure and dwell time.",
+            "Step 3: photograph the same patch and confirm no etching, lifting, or surface damage.",
+            "Step 4: only then quote and clean the full surface, matching the proven settings.",
+        ]),
+        ("Photo permission", [
+            "Ask before posting: 'Happy for me to share the before/after of your [surface]? I never show house numbers, faces, or anything identifying.'",
+            "Get a yes in writing; a text reply is enough. Save it with the job file.",
+            "Crop out house numbers, number plates, mailboxes, and people unless the owner specifically approves them.",
+            "For landlords and strata, confirm who owns the right to approve public use before posting.",
+        ]),
+        ("File naming system", [
+            "Format: suburb_surface_before-or-after_date.",
+            "Example: northcote_driveway_before_2026-06-17.jpg.",
+            "Folders: one folder per job holding the before, the after, and the permission reply together.",
+            "Backup: keep originals and only ever post copies so the unedited proof survives.",
+        ]),
+        ("Caption copy templates", [
+            "Before and after on a [suburb] driveway today. Same angle, same phone, no filters, just a proper clean. Booking [area] this week.",
+            "This [path / bin pad / entry] took about [time]. If yours looks like the 'before', send me two photos for a quick range.",
+            "Pre-listing clean for a [suburb] rental. Clean entries photograph better and show tenants the place is cared for.",
+        ]),
+        ("Turn proof into referrals", [
+            "Send the owner the after photo within an hour, while they can still see the wet result.",
+            "Ask one direct question: 'Know a neighbour whose driveway looks like your before photo?'",
+            "Offer a small same-street discount if a neighbour books within the week.",
+            "Reuse the strongest before/after as the sample image in your next round of outreach.",
+        ]),
+        ("Proof quality checklist", [
+            "Before photo captured dry, on arrival, from the marked spot.",
+            "After photo matches the angle, distance, height, and framing.",
+            "A fixed landmark appears in both photos.",
+            "Permission saved and identifying details cropped.",
+            "Files named and backed up before anything is posted.",
+        ]),
+    ],
+    "asset-powerwash-outreach": [
+        ("Best prospects", [
+            "Homeowners with visibly dirty but simple concrete driveways, paths, patios, or bin areas.",
+            "Landlords and property managers preparing a rental for photos, inspections, or end-of-lease handover.",
+            "Small shops with grimy entries, outdoor dining edges, bins, gum, or foot-traffic marks.",
+            "Strata or common-area contacts with repeat paths, bin pads, car parks, and entrances.",
+            "Avoid first-time prospects where the surface looks delicate, damaged, painted, sealed, steep, or poorly drained.",
+        ]),
+        ("Neighbour note", [
+            "Hi [Name], I just cleaned [nearby sample / my driveway / a neighbour's path] and noticed your [driveway/path/bin area] has the same easy before-and-after potential.",
+            "I do fixed-scope power washing for simple concrete and paved surfaces. I check water access, drainage, surface condition, and test a small patch before cleaning.",
+            "If you send a couple of photos, I can give you a quick range and the next weather window.",
+        ]),
+        ("Door-hanger style copy", [
+            "Your driveway/path has an easy clean-up opportunity.",
+            "I clean simple concrete, paths, patios, bin pads, and shopfront entries with before/after photos and a clear quote before work starts.",
+            "Text [phone] with two photos for a quick estimate. No roof work, no delicate surfaces, no guessing.",
+        ]),
+        ("DM script", [
+            "Hey [Name], quick local note. I noticed the [driveway/path/shop entry] at [property] could probably be cleaned up with a simple power washing sprint.",
+            "I can quote from photos first, then confirm water access and surface condition before booking. Want me to send the starter range?",
+        ]),
+        ("Property manager email", [
+            "Subject: quick clean-up for paths, bin pads, and entries",
+            "Hi [Name], I help local property managers with small power washing jobs: paths, bin pads, entries, patios, and pre-listing surface refreshes.",
+            "The offer is simple: photo-based quote, surface check, before/after photos, and a short completion note. Useful for end-of-lease, inspections, and listing prep.",
+            "Do you have one property where a small exterior clean-up would help this week?",
+        ]),
+        ("Small shop email", [
+            "Subject: front entry clean-up idea",
+            "Hi [Name], I noticed the front entry/bin area at [shop] has visible foot-traffic staining. That is a small thing customers see before they walk in.",
+            "I do fixed-scope power washing for shopfront entries, paths, and bin pads. I can quote from photos, check water access, and work around quiet trading hours.",
+            "Want me to send a quick range for that area?",
+        ]),
+        ("Call script", [
+            "Hi [Name], I am local and do small power washing jobs for driveways, paths, bin pads, and shop entries.",
+            "I am not pitching a full exterior clean. The starter version is one surface, a test patch, before/after photos, and a clear quote before I start.",
+            "Would it be useful if I texted you a sample and you sent back a photo for a quick range?",
+        ]),
+        ("Follow-up sequence", [
+            "Day 2: send the before/after sample again and ask whether they want a photo-based range.",
+            "Day 5: mention the next good weather window and one practical prep note.",
+            "Day 10: offer a smaller first surface such as front path, bin pad, or entry.",
+            "Day 21: close the loop and ask whether a quarterly maintenance reminder would be useful.",
+        ]),
+        ("Objection handling", [
+            "I can do it myself: true. The value is saving setup time, getting a cleaner result, and avoiding surface or runoff mistakes.",
+            "Will it remove every stain? No. Some stains may fade rather than disappear. I will test a patch and set expectations first.",
+            "Could it damage the surface? High pressure can damage the wrong surface. That is why I check surface type, condition, and test patch before continuing.",
+            "Too expensive: reduce scope to the highest-visibility surface, not the whole property.",
+        ]),
+        ("Close and booking copy", [
+            "Great. Please send the address, 3-5 photos, surface type if known, water access location, preferred timing, and any areas to avoid.",
+            "I will confirm the quote range, weather window, and any risk notes before booking.",
+            "After the job I will send before/after photos and a simple maintenance reminder if you want one.",
         ]),
     ],
     "asset-shopify-email": [
@@ -1382,6 +1578,33 @@ PDF_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Avoid hidden damage, waterproofing, electrical, structural, safety, or insurance conclusions.",
         ]),
     ],
+    "asset-powerwash-safety": checklist_sections(*find_pack_for_asset("asset-powerwash-safety")) + [
+        ("Go/no-go decision gate", [
+            "Do not start if water access, permission, runoff path, surface type, local rules, insurance, weather, or safe work area are unclear.",
+            "Do not clean delicate stone, old timber, painted surfaces, sealed surfaces, roofs, electrical areas, cracked surfaces, or heavy chemical stains without proper training and scope.",
+            "Do not promise complete stain removal. Oil, rust, gum, paint, mould, and age marks may need specialist treatment or may only improve partially.",
+            "Stop if the test patch lifts paint, loosens surface material, creates unsafe runoff, affects neighbouring property, or reveals a surface risk.",
+        ]),
+        ("Pre-job photo list", [
+            "Wide photo of the whole surface from the client-facing angle.",
+            "Close-up of stains, cracks, loose areas, drains, edges, gardens, and nearby walls or doors.",
+            "Water access point and hose route.",
+            "Runoff path and any drains, gardens, neighbouring boundaries, or footpaths affected.",
+            "After photos from the same angles, plus one close-up proof area.",
+        ]),
+        ("Client prep checklist", [
+            "Move cars, bins, furniture, mats, toys, and loose items from the work area.",
+            "Keep pets and children away from the surface during work and drying.",
+            "Confirm outdoor power points, doors, windows, and drainage areas that need protection.",
+            "Confirm whether detergent is allowed or whether water-only cleaning is required.",
+            "Approve the test patch before full cleaning continues.",
+        ]),
+        ("Completion handoff", [
+            "Send before/after photos, any areas that did not fully lift, and any surface limitations noticed.",
+            "Recommend drying time and when the client can move items back.",
+            "Offer the next clean window: quarterly, pre-listing, end-of-lease, seasonal, or after heavy weather.",
+        ]),
+    ],
 }
 
 
@@ -1521,6 +1744,44 @@ PROMPT_PACK_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "QA this drone roof report before sending: [paste report]. Check for unsupported claims, structural-certification language, repair advice, insurance promises, missing permission note, missing limitations, unclear photo labels, and vague next steps. Return a table of fixes and a polished version.",
             "Find every sentence that could create legal risk in this report: [paste]. Explain the risk and rewrite each sentence as visual documentation language.",
             "Create a final send checklist for this job using: [client, address, photos, video link, report]. Include owner permission, file naming, disclaimer, limitations, and follow-up offer.",
+        ]),
+    ],
+    "asset-powerwash-prompts": [
+        ("How to use these prompts", [
+            "Use AI for sales copy, quote notes, handoff messages, and surface-risk language; do not use it as a substitute for training, insurance, local rules, or surface judgement.",
+            "Replace every bracketed field with real property details before sending anything to a client.",
+            "Ask the model to mark unknown facts instead of guessing water access, surface type, drainage, stain type, or safety boundaries.",
+            "Avoid promising complete stain removal, zero damage risk, guaranteed restoration, or permanent cleanliness.",
+            "Keep the service narrow: one visible surface, quote from photos, test patch, before/after proof, and clear maintenance option.",
+        ]),
+        ("Photo-based quote prompts", [
+            "Act as a practical power washing quote assistant. Review these client photos and notes: [paste surface, size estimate, staining, access, drainage, water, hazards]. Return a table with Surface, Visible issue, Risk, Quote factor, Missing info, Recommended scope.",
+            "Turn these property notes into a conservative quote range: [paste]. Include setup time, travel, water access, surface size, staining, drainage, risk, and what is excluded.",
+            "Create a pre-job question list for this power washing lead: [paste property notes]. Separate must-have answers from nice-to-have details.",
+            "Write a test-patch approval note for a client. Surface: [surface]. Risk: [risk]. Explain that the test patch confirms surface response before the full clean.",
+        ]),
+        ("Outreach prompts", [
+            "Write a short neighbour note for a homeowner with this visible surface issue: [issue]. Mention a simple driveway/path clean, photo-based quote, test patch, and before/after proof. Keep it under 110 words.",
+            "Write a DM to a local shop owner about cleaning their front entry or bin pad. Include trading-hour sensitivity and no pressure.",
+            "Write a property manager email offering path, bin pad, common-area, and pre-listing power washing. Make the offer operational, not cosmetic fluff.",
+            "Create five follow-up messages after sending a power washing sample photo. Each should add one useful note: weather, water access, test patch, cluster booking, or maintenance timing.",
+        ]),
+        ("Surface-risk language prompts", [
+            "Rewrite this client message so it sets realistic expectations about staining and surface risk: [paste]. Avoid sounding scary, but do not promise complete stain removal.",
+            "Create a plain-English exclusions list for a beginner power washing service. Exclude roofs, electrical areas, delicate stone, old timber, painted surfaces, sealed surfaces, cracked surfaces, and specialist chemical work unless scoped separately.",
+            "Write a completion note for a job where some oil staining improved but did not fully disappear. Keep it professional and suggest the next realistic option.",
+            "Create a client-safe runoff and water access note for this property: [details]. Mention local rules and client approval without legal overreach.",
+        ]),
+        ("Delivery prompts", [
+            "Create a pre-job checklist from these details: [client, address, surface, water access, hazards, weather, scope]. Return client prep, operator prep, test patch, and completion photos.",
+            "Write a booking confirmation email for a power washing job. Include arrival window, water access, cleared surface, pets/children, weather caveat, and payment terms.",
+            "Create a final handoff message with before/after photos, what was cleaned, limitations, drying time, and a maintenance reminder.",
+            "Generate three recurring maintenance offers for this buyer type: [homeowner / landlord / shop / property manager]. Keep the cadence realistic and easy to accept.",
+        ]),
+        ("QA prompts", [
+            "QA this quote before I send it: [paste quote]. Check for missing water access, unclear surface scope, unsupported stain promises, underpriced travel/setup time, missing exclusions, and vague next steps.",
+            "Review this client-facing power washing page copy: [paste]. Remove hype, income claims, guaranteed restoration, legal overreach, and unsafe promises. Return safer practical wording.",
+            "Create a final job log from these notes: [paste]. Include before photos taken, test patch result, cleaned areas, limitations, client approval, after photos, and recommended next clean date.",
         ]),
     ],
     "asset-gbp-prompts": [
@@ -1744,6 +2005,7 @@ PACK_DELIVERABLES: dict[str, str] = {
     "google-business-profile-rescue": "Google profile details, services, photos, FAQs, review rules, and approval owners",
     "airbnb-photo-refresh-service": "listing URL, source photos, approved edit boundaries, model direction, usage rights, and host approvals",
     "drone-roof-photo-inspection": "property address, owner permission, roof areas to capture, access constraints, local flight requirements, intended use, and delivery format",
+    "power-washing-driveway-sprint": "property address, surface photos, water access, drainage, surface condition, stain type, hazards, timing, and client approval boundaries",
     "gym-churn-report": "cancellation exports, member privacy rules, churn tags, membership types, and retention goals",
     "shopify-cart-audit": "store URLs, priority products, policies, email platform details, brand voice, and approved claims",
     "ugc-brief-generator": "product facts, customer proof, buyer objections, creator constraints, and usage rights",
@@ -1916,7 +2178,67 @@ def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]
     ]
 
 
+def automation_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    buyer = pack.buyer
+    service = pack.title.lower()
+    return [
+        ("How to use these automations", [
+            "Each automation below is a ready prompt you can paste into an AI agent (ChatGPT, Claude, or an agent platform) and run on a schedule.",
+            "Give the agent only the inputs shown in [brackets], and keep a human approval step before anything is sent, published, or billed.",
+            "Start with one automation, prove it for a week, then add the next so you learn to trust each output.",
+            "Send each output to where you already work: inbox drafts, your CRM, or a shared job doc.",
+        ]),
+        ("Automation schedule", [
+            "Daily lead triage: every weekday morning.",
+            "Weekly prospect list: every Monday.",
+            "Outreach drafting: twice a week.",
+            "Follow-up sequencer: every weekday.",
+            "Delivery QA: before every handoff.",
+            "Weekly report and client update: every Friday.",
+            "Proof and referral repurposing: after each completed job.",
+        ]),
+        ("Daily lead triage — runs every weekday morning", [
+            f"You are an intake assistant for a {service} serving {buyer.lower()}. Here are the new enquiries from the last 24 hours: [paste messages]. "
+            "For each one, return a row with: sender, channel, intent (new job / question / complaint / spam), urgency (high/medium/low), the single missing detail to ask for, and a one-line suggested reply. "
+            "Do not send anything. Put any urgent or safety-related message at the top for immediate human review.",
+        ]),
+        ("Weekly prospect list — runs every Monday", [
+            f"You are a local lead researcher for a {service}. Target buyer: {buyer}. "
+            "Using [area / suburb / list source], produce 10 prospects who visibly have the problem this service solves. "
+            "Return a table: name, location, the visible problem you would reference, the best first channel, and a one-line opener. Exclude anyone who looks high-risk, delicate, or out of scope.",
+        ]),
+        ("Outreach drafting prompt — runs twice a week", [
+            f"You write first-contact outreach for a {service} aimed at {buyer.lower()}. Here is the prospect list: [paste rows]. "
+            "For each prospect, draft a short, specific message that names the visible problem, offers the fixed-scope starter, and asks one easy yes/no question. "
+            "Keep it under 90 words, with no hype and no guarantees. Return each draft labelled by prospect for human review before sending.",
+        ]),
+        ("Follow-up sequencer prompt — runs every weekday", [
+            "You manage polite follow-ups. Here are prospects with no reply and the days since first contact: [paste]. "
+            "For each, draft the next message based on the gap: day 2 adds one new observation or sample, day 5 asks if it is handled internally, day 10 offers a smaller paid starter, day 21 closes the loop. "
+            "Group drafts by prospect, never chase more than four times, and hold anything that should get a personal human note.",
+        ]),
+        ("Delivery QA prompt — runs before every handoff", [
+            f"You are a delivery reviewer for a {service}. Here is the draft deliverable: [paste]. "
+            "Check it against this standard: every fact, price, date, and claim is verifiable; nothing promises guaranteed results; the buyer can act within 30 seconds; every bracketed placeholder is replaced. "
+            "Return a pass/fix list with the exact lines to change, then return it to the human owner instead of sending.",
+        ]),
+        ("Weekly report and client update — runs every Friday", [
+            f"You report on a {service}. Here is this week's activity: [prospects contacted, replies, jobs booked, jobs delivered, revenue, issues]. "
+            "Produce two outputs: (1) an internal summary with the top three numbers and the one bottleneck to fix next week; (2) a short, friendly update for each active client stating what was done, what is next, and any approval needed. "
+            "Keep every claim factual and flag anything that needs owner approval.",
+        ]),
+        ("Proof and referral repurposing — runs after each completed job", [
+            f"You repurpose finished work for a {service}. Here are the job details and before/after notes: [paste]. "
+            "Draft: one social caption with the result and a soft call to action, one short message asking the client for a referral or review, and one line to add this example to the outreach sample library. "
+            "Do not invent results or show identifying details without approval.",
+        ]),
+        shared_standard_pointer(pack),
+    ]
+
+
 def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    if asset.id.endswith("-automation"):
+        return automation_sections(pack, asset)
     if asset.id in PROMPT_PACK_SECTIONS:
         # The AI Prompt Pack is the single home for the full shared standards.
         return prompt_pack_sections(pack, asset) + premium_handoff_sections(pack, asset)
@@ -2109,6 +2431,7 @@ def render_section_item(section_heading: str, item: str) -> list[str]:
 
 _DEF_SKIP_TOKENS = ("email", "prompt", "script", "example", "copy", "reply", "swipe", "loom", "how to use", "preview")
 _DEF_HEADER_MAP: list[tuple[tuple[str, ...], tuple[str, str]]] = [
+    (("schedule",), ("Automation", "When to run")),
     (("follow-up", "sequence"), ("When", "What to send")),
     (("objection",), ("Objection", "How to respond")),
     (("snapshot",), ("Attribute", "Value")),
@@ -2978,6 +3301,81 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Boundary", "This is visual photo documentation only, not a structural, engineering, safety, insurance, or repair inspection."],
                 ["Approval", "The property owner or authorised representative confirms permission, access, intended use, and any privacy limits before the flight."],
                 ["Not included", "Repairs, roof access by ladder, insurance claim advice, engineering opinion, code compliance, and guaranteed damage detection are not included."],
+            ],
+        }
+    if asset_id == "asset-powerwash-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Choose a package based on surface type, size, staining, access, drainage, and weather window."],
+                [2, "Use Quote Builder for one property. Edit only the input values in column B."],
+                [3, "Use Recurring Maintenance for quarterly, shopfront, bin-pad, strata, and property-manager work."],
+                [4, "Use Job Log after each delivery to track proof, limitations, and referral opportunities."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "Price", "Best For", "Notes"],
+                ["Sample Strip", "Small test patch + before/after photo", 0, "Proof for neighbour or landlord", "Use selectively, not as free labour"],
+                ["Starter Path", "Front path or small entry clean", 89, "Tiny paid first job", "Keep scope tight"],
+                ["Driveway Sprint", "Single driveway or patio + before/after photos", 179, "Most homeowners", "Core offer"],
+                ["Driveway + Path", "Driveway plus front path/entry", 249, "Higher visible impact", "Check water and drainage"],
+                ["Shopfront Entry", "Entry, footpath edge, bin pad, or small frontage", 199, "Small local shops", "Schedule around quiet hours"],
+                ["Property Manager Bundle", "2-3 simple surfaces same property", 399, "Rentals and inspections", "Photo handoff included"],
+                ["Quarterly Maintenance", "Repeat clean reminder and priority slot", 149, "Shops, bin areas, strata", "Price by surface and access"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base package price", 179],
+                ["Travel/setup fee", 35],
+                ["Surface risk fee", 25],
+                ["Heavy staining add-on", 45],
+                ["Extra surface count", 1],
+                ["Price per extra surface", 60],
+                ["Cluster booking discount", 25],
+                ["Estimated quote", "=B2+B3+B4+B5+(B6*B7)-B8"],
+                ["Deposit due at 30%", "=B9*0.3"],
+            ],
+            "Recurring Maintenance": [
+                ["Client Type", "Cadence", "Included Area", "Suggested Fee", "Best Trigger"],
+                ["Homeowner", "Quarterly", "Driveway or front path", 149, "Seasonal grime or pre-event clean"],
+                ["Landlord", "Per tenancy", "Driveway/path/patio", 199, "End-of-lease or pre-listing"],
+                ["Shop", "Monthly", "Entry and bin area", 149, "Foot traffic and customer impression"],
+                ["Strata/common area", "Monthly or quarterly", "Paths/bin pads/entries", 299, "Shared-area complaints"],
+                ["Property manager", "As needed", "Rental refresh bundle", 399, "Inspection or listing prep"],
+            ],
+            "Job Profit Check": [
+                ["Metric", "Illustrative Value", "Formula/Note"],
+                ["Quote", "='Quote Builder'!B9", "From quote builder"],
+                ["Equipment rental", 60, "Use actual rental or depreciation"],
+                ["Fuel/transport", 20, "Use actual"],
+                ["Cleaning supplies", 10, "Use actual"],
+                ["Total hard cost", "=B3+B4+B5", ""],
+                ["Gross margin", "=B2-B6", ""],
+                ["Job hours", 2.5, "Travel, setup, cleaning, pack-down, handoff"],
+                ["Hourly gross", "=IF(B8=0,\"\",B7/B8)", ""],
+            ],
+            "Client Inputs": [
+                ["Input", "Owner", "Required?", "Status"],
+                ["Property address", "Client", "Yes", "Open"],
+                ["Photos of each surface", "Client", "Yes", "Open"],
+                ["Water access location", "Client", "Yes", "Open"],
+                ["Surface type and known sealant/paint", "Client", "Yes", "Open"],
+                ["Drainage/runoff concerns", "Client", "Yes", "Open"],
+                ["Heavy stains, oil, gum, rust, mould, or paint", "Client", "No", "Open"],
+                ["Pets, children, parking, or access constraints", "Client", "No", "Open"],
+            ],
+            "Job Log": [
+                ["Job", "Before photos?", "Test patch?", "Limitations", "After photos?", "Referral asked?", "Next reminder"],
+                ["Example driveway", "Yes", "Passed", "Old oil mark improved only", "Yes", "Yes", "3 months"],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+            ],
+            "Proposal Copy": [
+                ["Section", "Client-facing copy"],
+                ["Scope", "I will clean the agreed surface, complete a test patch first, and send before/after photos after the job."],
+                ["Boundary", "Some staining may improve rather than disappear completely, and delicate or damaged surfaces may be excluded."],
+                ["Approval", "You confirm water access, surface area, items to move, hazards, and any areas to avoid before work starts."],
+                ["Not included", "Roof cleaning, delicate surfaces, specialist chemical treatment, repairs, water supply issues, and guaranteed stain removal are not included unless scoped separately."],
             ],
         }
     if asset_id == "asset-gym-report":

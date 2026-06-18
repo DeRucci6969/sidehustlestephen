@@ -2,18 +2,64 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ArchiveBrowser } from "@/components/archive-browser";
 import { packs } from "@/data/packs";
+import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: "Business Pack Archive | Side Hustle Stephen",
-  description: "Browse the full archive of business launch packs, side hustle playbooks, and member assets.",
+  description: "Browse practical launch packs with buyer profiles, first-client plans, pricing guidance, outreach scripts, and member-only startup assets.",
+  alternates: {
+    canonical: "/packs",
+  },
+  openGraph: {
+    title: "Business Pack Archive | Side Hustle Stephen",
+    description: "Browse practical launch packs built around simple first-client businesses, outreach scripts, delivery files, and member assets.",
+    url: "/packs",
+    type: "website",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Side Hustle Stephen business pack archive",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business Pack Archive | Side Hustle Stephen",
+    description: "Browse practical launch packs, first-client plans, scripts, pricing files, and delivery assets.",
+    images: [siteConfig.ogImage],
+  },
 };
 
 export default function PacksPage() {
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
+  const archiveSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Business Pack Archive",
+    description: metadata.description,
+    url: `${siteConfig.url}/packs`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: packs.map((pack, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${siteConfig.url}/packs/${pack.slug}`,
+        name: pack.title,
+        description: pack.summary,
+      })),
+    },
+  };
 
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(archiveSchema) }}
+      />
       <main className="mx-auto w-full max-w-7xl overflow-hidden px-4 py-8 sm:px-8 sm:py-12">
         <div className="mb-6 grid min-w-0 gap-6 sm:mb-10 lg:grid-cols-[1fr_0.45fr] lg:items-end">
           <div className="min-w-0 max-w-3xl">

@@ -10,6 +10,10 @@ import { ArrowRight, CheckCircle2, Crown, LockKeyhole, Sparkles, UserCircle2 } f
 
 export const metadata = {
   title: "Account | Side Hustle Stephen",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default async function AccountPage() {

@@ -34,9 +34,10 @@ export type PackPageDetail = {
   firstMoveAnalysis: string[];
   launchSprintDetails: string[];
   firstTenLeadsPlan?: string[];
+  offerLadder?: { name: string; price: string; detail: string }[];
 };
 
-export const packs: BusinessPack[] = [
+const basePacks: BusinessPack[] = [
   {
     slug: "cafe-menu-refresh-package",
     title: "Cafe Menu Refresh Package",
@@ -139,6 +140,33 @@ export const packs: BusinessPack[] = [
       { id: "asset-drone-roof-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for property details, owner permission, roof areas to capture, access constraints, intended use, and delivery format." },
       { id: "asset-drone-roof-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for free sample offers, booking confirmation, pre-flight requirements, report delivery, follow-up, and recurring partner retainers." },
       { id: "asset-drone-roof-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for visual-only scope, drone legality, owner permission, weather, turnaround, roof access, pricing, and recurring reports." },
+    ],
+  },
+  {
+    slug: "power-washing-driveway-sprint",
+    title: "Power Washing Driveway Sprint",
+    hook: "Dirty concrete is an easy before-and-after local service.",
+    category: "Local Service",
+    buyer: "Homeowners, landlords, property managers, and small commercial sites",
+    startupCost: "$101-$500",
+    timeToFirstSale: "1-7 days",
+    difficulty: "Medium",
+    summary: "A simple exterior cleaning service focused on driveways, paths, bins, small shopfronts, and other visible surfaces with fast before-and-after proof.",
+    whyItWorks: "Power washing has obvious visual proof, local buyer demand, and a clear first offer when you keep the scope narrow and quote by surface, access, and risk.",
+    firstSteps: ["Rent or borrow a suitable washer", "Clean one sample surface", "Pitch neighbours and local properties"],
+    caveat: "Check local water rules, surface suitability, runoff, insurance, and safety before accepting paid work.",
+    featured: true,
+    popularityScore: 94,
+    publishedAt: "2026-06-17",
+    assets: [
+      { id: "asset-powerwash-outreach", title: "Power Washing Outreach Scripts", type: "DOCX", description: "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around visible before-and-after proof." },
+      { id: "asset-powerwash-pricing", title: "Power Washing Quote Calculator", type: "XLSX", description: "Starter, standard, add-on, travel, surface-risk, and recurring maintenance quote builder." },
+      { id: "asset-powerwash-safety", title: "Job Safety & Surface Checklist", type: "PDF", description: "Pre-job checklist for water access, surface type, runoff, nearby hazards, photos, insurance, and no-damage scope boundaries." },
+      { id: "asset-powerwash-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for quote notes, door-to-door scripts, photo-based estimates, surface-risk language, and maintenance upsells." },
+      { id: "asset-powerwash-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for address, surface type, water access, staining, drainage, photos, timing, and approval boundaries." },
+      { id: "asset-powerwash-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for sample offers, quote requests, booking confirmation, pre-job prep, completion handoff, and maintenance reminders." },
+      { id: "asset-powerwash-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for surfaces, water use, runoff, safety, damage limitations, weather, pricing, and recurring cleans." },
+      { id: "asset-powerwash-proof", title: "Before & After Proof Kit", type: "DOCX", description: "A photo playbook for consistent before/after proof, plus permission, file-naming, and posting templates that turn results into referrals." },
     ],
   },
   {
@@ -337,6 +365,30 @@ export const packs: BusinessPack[] = [
   },
 ];
 
+const AUTOMATION_ASSET_DESCRIPTION =
+  "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing — each ready to paste into an agent and run on a cadence with human approval.";
+
+function automationAssetFor(assets: PackAsset[]): PackAsset {
+  const parts = assets.map((asset) => asset.id.replace(/^asset-/, ""));
+  let prefix = parts[0] ?? "";
+  for (const part of parts) {
+    while (prefix && !part.startsWith(prefix)) prefix = prefix.slice(0, -1);
+  }
+  const token = prefix.replace(/-[^-]*$/, "").replace(/-$/, "");
+  return {
+    id: `asset-${token}-automation`,
+    title: "AI Automation Pack",
+    type: "DOCX",
+    description: AUTOMATION_ASSET_DESCRIPTION,
+  };
+}
+
+// Every pack leads with a scheduled-automation pack — the most appealing asset for buyers.
+export const packs: BusinessPack[] = basePacks.map((pack) => ({
+  ...pack,
+  assets: [automationAssetFor(pack.assets), ...pack.assets],
+}));
+
 export function getPack(slug: string) {
   return packs.find((pack) => pack.slug === slug);
 }
@@ -389,6 +441,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Capture before screenshots, score the profile, write customer-language service descriptions, prepare FAQ/review prompt drafts, and give the owner a short implementation checklist. Avoid ranking promises; sell profile clarity.",
     firstClients:
       "Search local service categories in your area and find profiles with obvious trust gaps. Send a 3-point audit and offer a fixed-fee rescue sprint.",
+    startableOffer:
+      "A fixed-fee Google profile rescue sprint with a 3-point public audit, owner-approved service copy, FAQ drafts, photo checklist, and review-request wording that avoids ranking promises.",
     whyDetails: [
       "The buyer can see the problem immediately because Google is public and customer-facing.",
       "The work is bounded: you are improving completeness, clarity, and trust signals, not trying to become their full marketing agency.",
@@ -404,6 +458,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 2: create 5 mini-audits with screenshots and one recommended fix each.",
       "Day 3-5: send mini-audits with a fixed rescue sprint offer.",
       "Day 6-7: deliver the first sprint as an approval pack: profile score, copy drafts, photo checklist, FAQ prompts, and review prompt.",
+    ],
+    firstTenLeadsPlan: [
+      "Pick one local service category where trust matters before the call: plumbers, electricians, dentists, accountants, mechanics, cleaners, or salons.",
+      "Search Google Maps in one suburb and save 25 profiles with weak photos, missing services, stale hours, thin descriptions, unanswered reviews, or no FAQs.",
+      "Prioritise owner-operated businesses with a website, recent reviews, and signs they are still active. Skip abandoned profiles and large chains.",
+      "For each prospect, capture three screenshots only: one visible issue, one missed trust-builder, and one quick win the owner can approve.",
+      "Build a tiny audit note for the 10 best leads using plain customer language, not SEO jargon.",
+      "Write one sample service description, FAQ, or review-request line so the owner sees the work before you ask for a call.",
+      "Send the mini-audit to the owner with a fixed rescue sprint price, a no-ranking-guarantee caveat, and a 48-hour handoff promise.",
+      "Follow up with one extra screenshot or customer-facing observation, not a generic bump message.",
+      "Close the smallest version first: public profile audit, approval-ready copy, photo checklist, FAQ drafts, and implementation notes.",
+      "After delivery, offer a monthly profile hygiene check for new photos, hours, services, FAQs, and review-response prompts.",
     ],
   },
   "airbnb-photo-refresh-service": {
@@ -488,6 +554,55 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Track whether each prospect cares about price, turnaround, compliance, report format, or recurring volume.",
       "After the sample, ask who else in their workflow needs this visibility: estimator, owner, seller, buyer, insurer, tenant, or installer.",
       "Convert the strongest response into a simple recurring offer: 4 reports per month, priority scheduling, consistent report format, and optional video add-on.",
+    ],
+  },
+  "power-washing-driveway-sprint": {
+    problem:
+      "Driveways, paths, bin areas, patios, small shopfronts, and exterior walls get visibly dirty, but most owners ignore them until they look bad in person or in listing photos. The problem is obvious, local, and easy to prove with one clean strip, but beginners often make the offer too broad, underquote the job, or ignore water, runoff, surface, and damage risks.",
+    solution:
+      "You sell a fixed-scope power washing sprint for one visible surface: driveway, path, bin pad, patio, small storefront, or property-manager common area. The starter offer includes a photo-based quote, pre-job surface check, one clean area, before/after photos, and a maintenance reminder.",
+    delivery:
+      "Confirm water access, drainage, surface type, staining, nearby hazards, local water rules, weather, and owner approval before booking. Take before photos, test a small patch, clean from low-risk to higher-risk areas, avoid delicate surfaces unless qualified, and send after photos with a short care note and recurring maintenance option.",
+    firstClients:
+      "Start with visible dirty driveways, paths, shopfronts, bin pads, and small rental properties in one local area. Clean one permissioned sample strip or one discounted first job, photograph the before/after, then pitch nearby owners with the exact same narrow service.",
+    startableOffer:
+      "A driveway or path clean for one property, quoted from photos, with a pre-job surface check, one approval boundary, before/after proof, and an optional 3-month maintenance reminder.",
+    whyDetails: [
+      "The proof is visual. A buyer can understand the difference from one before/after photo without a long sales explanation.",
+      "The equipment can be rented or borrowed for the first jobs, so the beginner can test demand before buying a commercial setup.",
+      "The offer works street by street: one visible clean surface can create neighbour referrals, landlord work, shopfront refreshes, and property-manager maintenance leads.",
+      "Recurring work is natural when you sell quarterly paths, bin areas, shopfront entries, strata/common areas, and pre-listing cleanups.",
+    ],
+    firstMoveAnalysis: [
+      "Do not pitch exterior cleaning broadly. Start with one surface, one clear price range, and one result the buyer can see.",
+      "Do not touch delicate, painted, sealed, cracked, electrical, roof, or high-risk surfaces until you understand equipment, pressure, detergents, insurance, and local rules.",
+      "Use a test patch and before photos on every job. The goal is a clean visible result without creating damage, runoff issues, or neighbour complaints.",
+      "Quote the first jobs conservatively: travel, setup, water access, surface size, staining, drainage, and pack-down time all count.",
+    ],
+    launchSprintDetails: [
+      "Day 1: confirm local water restrictions, runoff rules, insurance needs, equipment rental options, and surfaces you will not clean yet.",
+      "Day 2: clean one permissioned sample area and capture strong before/after photos from the same angle.",
+      "Day 3: list 40 nearby homes, rentals, shopfronts, and small commercial properties with visibly dirty but simple surfaces.",
+      "Day 4-5: send neighbour notes, DMs, emails, or door-hanger style messages with your sample photo and a fixed starter range.",
+      "Day 6: book one paid driveway/path clean, confirm water access and surface risk, and deliver with before/after proof.",
+      "Day 7: ask for two neighbour referrals and offer a quarterly maintenance reminder or bundled adjacent-property discount.",
+    ],
+    firstTenLeadsPlan: [
+      "Pick one tight area: your street, one suburb loop, a row of small shops, or a group of rental properties.",
+      "Find 10 prospects with visible concrete, pavers, paths, bin pads, patios, or entrances that look dirty but not damaged or delicate.",
+      "Avoid high-risk first jobs: painted surfaces, old timber, soft stone, roofs, electrical areas, heavy oil, bad drainage, or surfaces near sensitive landscaping.",
+      "For each lead, note the surface type, visible issue, likely water access, parking/setup access, and one safe starter scope.",
+      "Create one proof photo from a permissioned sample clean, using the same before/after angle and no exaggerated editing.",
+      "Send a short note: the visible issue, the simple starter clean, the expected range, and a request for photos or a quick look before quoting.",
+      "Offer a small cluster discount if two neighbours book the same day, but do not discount below your travel and setup costs.",
+      "Follow up after two days with one practical note: weather window, water access reminder, or how the test patch works.",
+      "For landlords and property managers, pitch pre-listing, end-of-lease, bin-area, or common-area refreshes rather than one-off driveway vanity.",
+      "After the first paid job, ask for a referral to the next neighbour, landlord, strata contact, or shop owner while the before/after result is fresh.",
+    ],
+    offerLadder: [
+      { name: "Single surface clean", price: "$80-$250", detail: "One driveway, path, patio, or bin pad, quoted from photos with a pre-job surface check and before/after proof." },
+      { name: "Full exterior refresh", price: "$300-$750", detail: "Driveway plus paths, entry, and one or two extra surfaces, with a care note and a tidy completion handoff." },
+      { name: "Quarterly maintenance", price: "$80-$200 / visit", detail: "A recurring clean of priority surfaces for homes, rentals, strata, or shopfronts on a fixed schedule." },
     ],
   },
   "gym-churn-report": {
@@ -757,6 +872,22 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for free sample offers, partner outreach, booking confirmation, permission/weather checks, report delivery, follow-up, and recurring report offers.",
   "asset-drone-roof-faqs":
     "A DOCX buyer FAQ pack covering visual-only scope, what is not certified, whether anyone climbs the roof, local drone compliance, weather delays, turnaround, pricing, and recurring work.",
+  "asset-powerwash-outreach":
+    "A DOCX outreach kit with neighbour notes, door-hanger copy, DMs, emails, call scripts, cluster-booking angles, follow-ups, and objection handling for visible dirty surfaces.",
+  "asset-powerwash-pricing":
+    "An XLSX quote calculator with driveway/path packages, add-ons, travel, surface-risk fees, cluster discounts, recurring maintenance, and job-profit checks.",
+  "asset-powerwash-safety":
+    "A PDF job checklist for water access, surface type, drainage, runoff, hazards, before/after photos, test patches, weather, insurance, and surfaces to avoid.",
+  "asset-powerwash-prompts":
+    "A DOCX AI prompt pack for photo-based quote notes, local outreach, surface-risk wording, completion messages, maintenance reminders, and final job QA.",
+  "asset-powerwash-intake":
+    "A DOCX client intake form for address, surface photos, water access, drainage, stains, nearby hazards, timing, pets, parking, and approval boundaries.",
+  "asset-powerwash-email-templates":
+    "A DOCX email template pack for sample-led outreach, quote requests, booking confirmation, pre-job prep, completion handoff, referrals, and maintenance reminders.",
+  "asset-powerwash-faqs":
+    "A DOCX buyer FAQ pack covering surfaces, water use, runoff, test patches, weather delays, damage limitations, safety boundaries, pricing, and recurring cleans.",
+  "asset-powerwash-proof":
+    "A DOCX before/after proof playbook: how to frame matched shots, lighting and angle rules, a test-patch sequence, photo permission wording, a file-naming system, and caption templates that turn each result into neighbour and landlord referrals.",
   "asset-gym-report":
     "An XLSX retention workbook with raw cancellation tagging, dashboard formulas, revenue-at-risk summary, action plan, call notes, worked example, QA, and renewal tracking.",
   "asset-gym-call":

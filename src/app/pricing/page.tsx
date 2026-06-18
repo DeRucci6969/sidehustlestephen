@@ -9,22 +9,73 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: "Pricing | Side Hustle Stephen",
-  description: "Unlock every Side Hustle Stephen launch pack and asset for $9/month.",
+  description: "Unlock every Side Hustle Stephen launch pack, outreach script, pricing file, delivery checklist, prompt pack, and member asset for $9/month.",
+  alternates: {
+    canonical: "/pricing",
+  },
+  openGraph: {
+    title: "Pricing | Side Hustle Stephen",
+    description: "Unlock every launch pack, outreach script, pricing file, delivery checklist, prompt pack, and member asset.",
+    url: "/pricing",
+    type: "website",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Side Hustle Stephen pricing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing | Side Hustle Stephen",
+    description: "Unlock every launch pack and member asset for $9/month.",
+    images: [siteConfig.ogImage],
+  },
 };
 
 export default async function PricingPage() {
   const viewer = await getMembershipContext();
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
   const included = ["Full backlog access", "Launch assets and scripts", "Member-only playbooks", "Private download links"];
+  const assetExamples = [
+    ["Outreach", "Cold emails, DMs, call scripts, follow-ups, and first-buyer pitch angles."],
+    ["Pricing", "Quote calculators, starter ranges, retainer ladders, and scope boundaries."],
+    ["Delivery", "Checklists, SOPs, intake forms, client handoff copy, and QA notes."],
+    ["AI support", "Prompt packs for research, outreach, delivery, reporting, and proof repurposing."],
+  ];
+  const firstActions = [
+    "Pick one launch pack that matches a buyer you can reach this week.",
+    "Use the pricing and outreach assets to send the first 20 messages.",
+    "Deliver the first narrow version before trying to build a bigger offer.",
+  ];
   const faqs = [
     ["Is this one pack or all packs?", "One membership unlocks every current and future business pack in the archive."],
     ["Can I cancel?", "Yes. Active subscribers can manage billing and cancellation through the Stripe Customer Portal."],
-    ["Move faster from idea to offer", "Use ready-made prompts, scripts, pricing tools, and delivery files to turn a simple business idea into a client-ready offer."],
+    ["What can I do after joining?", "Use ready-made prompts, scripts, pricing tools, and delivery files to turn a simple business idea into a client-ready offer."],
   ];
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  };
 
   return (
     <>
       <Header viewer={viewer} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-8 sm:py-12">
         <section className="grid min-h-[60vh] items-center gap-8 lg:grid-cols-[0.9fr_0.7fr]">
           <div>
@@ -91,6 +142,39 @@ export default async function PricingPage() {
               <p className="premium-copy mt-3 text-sm leading-6">{answer}</p>
             </div>
           ))}
+        </section>
+        <section className="mt-10 grid gap-5 lg:grid-cols-[0.85fr_0.55fr]">
+          <div className="glass-soft rounded-lg p-5 sm:p-6">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">What unlocks</p>
+            <h2 className="mt-3 text-3xl font-bold leading-none tracking-normal text-[var(--navy-ink)]">Not a folder of ideas. A stack of launch files.</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {assetExamples.map(([title, copy]) => (
+                <div key={title} className="rounded-lg bg-white/70 p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
+                  <h3 className="font-bold tracking-normal text-[var(--navy-ink)]">{title}</h3>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-[var(--graphite)]">{copy}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="dark-pack-panel rounded-lg p-5 sm:p-6">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/50">First move</p>
+            <h2 className="mt-3 text-2xl font-bold leading-tight tracking-normal text-white">What to do after joining</h2>
+            <div className="mt-5 space-y-3">
+              {firstActions.map((item, index) => (
+                <div key={item} className="flex items-start gap-3 rounded-lg bg-white/10 p-4 ring-1 ring-white/15">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--orange-glass)] text-sm font-black text-[var(--orange-hot)]">
+                    {index + 1}
+                  </span>
+                  <p className="text-sm font-semibold leading-6 text-white/76">{item}</p>
+                </div>
+              ))}
+            </div>
+            {!viewer.isMember ? (
+              <div className="mt-6">
+                <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock the archive"} returnTo="/packs" className="w-full" />
+              </div>
+            ) : null}
+          </div>
         </section>
       </main>
       <Footer />

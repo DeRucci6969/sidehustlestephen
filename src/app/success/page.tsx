@@ -5,6 +5,14 @@ import { Footer } from "@/components/footer";
 import { TrackOnMount } from "@/components/track-on-mount";
 import { safeInternalPath } from "@/lib/utils";
 
+export const metadata = {
+  title: "Membership Activating | Side Hustle Stephen",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 export default async function SuccessPage({
   searchParams,
 }: {

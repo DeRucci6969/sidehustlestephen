@@ -89,7 +89,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
   const detail = packPageDetails[pack.slug];
   const viewer = await getMembershipContext();
   const isMember = viewer.isMember;
-  const offerLadder = [
+  const offerLadder = detail?.offerLadder ?? [
     { name: "Starter", price: "$99-$249", detail: `A focused first version for ${pack.buyer.toLowerCase()}.` },
     { name: "Standard", price: "$300-$750", detail: "Adds polish, revisions, templates, and a sharper delivery package." },
     { name: "Retainer", price: "$250-$1k/mo", detail: "Turns the one-off service into recurring maintenance or reporting." },

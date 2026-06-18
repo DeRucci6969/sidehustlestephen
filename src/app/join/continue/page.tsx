@@ -6,6 +6,14 @@ import { createMembershipCheckoutUrl } from "@/lib/checkout";
 import { hasStripeConfig } from "@/lib/stripe";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 
+export const metadata = {
+  title: "Continue Checkout | Side Hustle Stephen",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 export default async function ContinueCheckoutPage({
   searchParams,
 }: {

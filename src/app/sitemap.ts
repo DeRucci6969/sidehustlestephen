@@ -3,7 +3,7 @@ import { packs } from "@/data/packs";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/packs", "/pricing", "/account", "/terms", "/privacy"];
+  const staticRoutes = ["", "/packs", "/pricing", "/terms", "/privacy"];
   const now = new Date();
 
   return [
