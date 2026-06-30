@@ -1,20 +1,45 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Search } from "lucide-react";
+import { BlogCard } from "@/components/blog-card";
 import { Header } from "@/components/header";
 import { AssetTypesSection } from "@/components/asset-types-section";
 import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
 import { PackMatcher } from "@/components/pack-matcher";
 import { QuoteCarousel } from "@/components/quote-carousel";
+import { featuredBlogPosts } from "@/data/blog";
 import { packs, popularPacks } from "@/data/packs";
+import { siteConfig } from "@/lib/site";
 
-const memberInitials = [
-  { initial: "J", className: "bg-[#111827] text-white" },
-  { initial: "M", className: "bg-[#f6f5f2] text-[var(--obsidian)]" },
-  { initial: "P", className: "bg-[#1f8fff] text-white" },
-  { initial: "S", className: "bg-[#e9f5ff] text-[var(--navy-ink)]" },
-];
+export const metadata = {
+  title: "Side Hustle Stephen | Practical Launch Packs for Simple Businesses",
+  description: "Browse practical side hustle launch packs with outreach scripts, pricing files, prompts, delivery checklists, and first-client plans.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Side Hustle Stephen | Practical Launch Packs",
+    description: "Simple business ideas backed by launch files, scripts, pricing tools, prompts, and delivery systems.",
+    url: "/",
+    type: "website",
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Side Hustle Stephen",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Side Hustle Stephen | Practical Launch Packs",
+    description: "Launch packs for simple services you can pitch, price, and deliver.",
+    images: [siteConfig.ogImage],
+  },
+};
 
 export default function Home() {
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
@@ -62,7 +87,7 @@ export default function Home() {
                 </button>
               </form>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-                <JoinButton label="Unlock Packs" className="w-full sm:w-auto" />
+                <JoinButton label="Unlock Packs" returnTo="/packs" className="w-full sm:w-auto" />
                 <Link
                   href="/packs"
                   className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-[var(--text-primary)] sm:w-auto"
@@ -79,18 +104,9 @@ export default function Home() {
                 <span>Prompts, scripts, pricing, delivery files</span>
               </div>
               <div className="mt-5 rounded-lg bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
-                <div className="mb-3 flex flex-wrap items-center gap-3">
-                  <div className="flex -space-x-2" aria-hidden="true">
-                    {memberInitials.map((member) => (
-                      <span key={member.initial} className={`grid h-9 w-9 place-items-center rounded-full border-2 border-[var(--studio-white)] text-sm font-black shadow-[0_8px_18px_rgba(10,12,16,0.12)] ${member.className}`}>
-                        {member.initial}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-sm font-semibold text-[var(--navy-ink)]">
-                    250+ active members
-                  </p>
-                </div>
+                <p className="mb-3 text-sm font-bold text-[var(--navy-ink)]">
+                  Built for first-client operators
+                </p>
                 <p className="text-sm font-semibold leading-6 text-[var(--navy-ink)]">
                   No fake income promises. Just practical launch files for finding a buyer, making the offer, and delivering the first paid version.
                 </p>
@@ -103,7 +119,6 @@ export default function Home() {
                 alt="A Side Hustle Stephen creator working from a laptop with coffee."
                 fill
                 priority
-                unoptimized
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="hero-character-image"
               />
@@ -113,6 +128,29 @@ export default function Home() {
 
         <PackMatcher packs={packs} />
         <QuoteCarousel />
+        <section className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8">
+          <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Blog</p>
+              <h2 className="display-type mt-3 text-4xl sm:text-5xl">Practical guides.</h2>
+              <p className="premium-copy mt-3 text-sm font-semibold leading-6 sm:text-base sm:leading-7">
+                Use the articles to pick the move, then open the matching launch pack for scripts, pricing, prompts, and delivery files.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold text-[var(--text-primary)] sm:w-auto"
+            >
+              Read the blog
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {featuredBlogPosts.map((post, index) => (
+              <BlogCard key={post.slug} post={post} featured={index === 0} />
+            ))}
+          </div>
+        </section>
         <PackMatcher packs={popularPacks} eyebrow="Most popular" title="Most popular." sortByPopularity />
         <AssetTypesSection />
       </main>

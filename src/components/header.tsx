@@ -13,10 +13,11 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
   const viewer = providedViewer ?? (await getMembershipContext());
   const navItems = [
     ["Archive", "/packs"],
+    ["Blog", "/blog"],
     ["Pricing", "/pricing"],
     ["Account", "/account"],
   ];
-  const mobileNavItems = viewer.isAuthenticated ? navItems : navItems.slice(0, 2);
+  const mobileNavItems = viewer.isAuthenticated ? navItems : navItems.filter(([label]) => label !== "Account");
 
   return (
     <header className="sticky top-0 z-40 mx-auto flex w-full max-w-7xl items-center justify-between gap-2 px-3 py-2 sm:gap-3 sm:px-8 sm:py-4">

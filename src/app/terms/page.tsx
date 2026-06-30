@@ -3,6 +3,10 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: "Terms | Side Hustle Stephen",
+  description: "Terms for using Side Hustle Stephen launch packs, member assets, subscriptions, downloads, and educational business templates.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

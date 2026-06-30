@@ -23,6 +23,7 @@ export function Footer() {
         </div>
         <nav className="flex flex-wrap items-center gap-2 font-semibold sm:gap-3">
           <Link className="inline-flex h-11 items-center rounded-full px-2 hover:bg-white/60 sm:px-3" href="/packs">Archive</Link>
+          <Link className="inline-flex h-11 items-center rounded-full px-2 hover:bg-white/60 sm:px-3" href="/blog">Blog</Link>
           <Link className="inline-flex h-11 items-center rounded-full px-2 hover:bg-white/60 sm:px-3" href="/pricing">Pricing</Link>
           <Link className="inline-flex h-11 items-center rounded-full px-2 hover:bg-white/60 sm:px-3" href="/terms">Terms</Link>
           <Link className="inline-flex h-11 items-center rounded-full px-2 hover:bg-white/60 sm:px-3" href="/privacy">Privacy</Link>

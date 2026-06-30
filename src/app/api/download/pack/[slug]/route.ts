@@ -28,22 +28,39 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
   const start = Date.now();
   const requestId = req.headers.get("x-vercel-id");
   const { slug } = await params;
+  const analyticsPath = `/api/download/pack/${slug}`;
+
+  async function trackDownloadOutcome(outcome: string, properties: Record<string, string | number | boolean | null> = {}) {
+    await recordAnalyticsEvent(req, {
+      eventName: "Pack Zip Download Attempt",
+      path: analyticsPath,
+      properties: { pack: slug, outcome, ...properties },
+    });
+  }
+
+  await trackDownloadOutcome("requested");
+
   const ipRateLimitResponse = await checkRateLimit({
     action: "download_attempt",
     rules: [{ scope: "ip", identifier: getClientIp(req), limit: 120, windowSeconds: 10 * 60 }],
   });
-  if (ipRateLimitResponse) return ipRateLimitResponse;
+  if (ipRateLimitResponse) {
+    await trackDownloadOutcome("rate_limited");
+    return ipRateLimitResponse;
+  }
 
   const pack = getPack(slug);
 
   if (!pack) {
     console.warn(JSON.stringify({ level: "warn", msg: "pack_zip_not_found", route: "/api/download/pack/[slug]", requestId, pack: slug, ms: Date.now() - start }));
+    await trackDownloadOutcome("pack_not_found");
     return NextResponse.json({ error: "Pack not found" }, { status: 404 });
   }
 
   const viewer = await getMembershipContext();
   if (!viewer.isMember) {
     console.warn(JSON.stringify({ level: "warn", msg: "pack_zip_membership_required", route: "/api/download/pack/[slug]", requestId, pack: slug, ms: Date.now() - start }));
+    await trackDownloadOutcome("membership_required");
     return NextResponse.json(
       {
         error: "Membership required",
@@ -67,6 +84,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
 
   if (!entries.length) {
     console.error(JSON.stringify({ level: "error", msg: "pack_zip_manifest_missing", route: "/api/download/pack/[slug]", requestId, pack: slug, ms: Date.now() - start }));
+    await trackDownloadOutcome("manifest_missing");
     return NextResponse.json({ error: "Asset files not found" }, { status: 404 });
   }
 
@@ -90,9 +108,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
       packSlug: slug,
       assetCount: entries.length,
     });
-    void recordAnalyticsEvent(req, {
+    await recordAnalyticsEvent(req, {
       eventName: "Pack Zip Served",
-      path: `/api/download/pack/${slug}`,
+      path: analyticsPath,
       properties: { pack: slug, asset_count: entries.length },
     });
     return new NextResponse(Buffer.from(zip), {
@@ -105,6 +123,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
     });
   } catch (error) {
     console.error(JSON.stringify({ level: "error", msg: "pack_zip_file_unavailable", route: "/api/download/pack/[slug]", requestId, pack: slug, error: error instanceof Error ? error.message : String(error), ms: Date.now() - start }));
+    await trackDownloadOutcome("file_unavailable");
     return NextResponse.json({ error: "One or more asset files are unavailable" }, { status: 404 });
   }
 }

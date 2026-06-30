@@ -1,4 +1,4 @@
-import { Bot, Calculator, ClipboardCheck, FileText, MailPlus, MessageSquareText } from "lucide-react";
+import { Bot, Calculator, ClipboardCheck, FileText, MailPlus, MessageSquareText, Repeat2 } from "lucide-react";
 import { JoinButton } from "@/components/join-modal";
 
 const assetTypes = [
@@ -7,6 +7,12 @@ const assetTypes = [
     description: "Reusable prompts for research, positioning, copy, audits, and client delivery so you are not starting from a blank chat window.",
     outcome: "Think faster",
     icon: Bot,
+  },
+  {
+    title: "AI automation packs",
+    description: "Scheduled agent prompts for prospecting, follow-up, delivery QA, reporting, and proof repurposing with human approval built in.",
+    outcome: "Run weekly",
+    icon: Repeat2,
   },
   {
     title: "Outreach scripts",

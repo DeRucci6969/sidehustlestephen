@@ -3,6 +3,10 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: "Privacy | Side Hustle Stephen",
+  description: "How Side Hustle Stephen collects, uses, stores, and protects account, subscription, analytics, and download information.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

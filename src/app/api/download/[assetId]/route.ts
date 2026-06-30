@@ -28,22 +28,39 @@ export async function GET(req: Request, { params }: { params: Promise<{ assetId:
   const start = Date.now();
   const requestId = req.headers.get("x-vercel-id");
   const { assetId } = await params;
+  const analyticsPath = `/api/download/${assetId}`;
+
+  async function trackDownloadOutcome(outcome: string, properties: Record<string, string | number | boolean | null> = {}) {
+    await recordAnalyticsEvent(req, {
+      eventName: "Asset Download Attempt",
+      path: analyticsPath,
+      properties: { asset: assetId, outcome, ...properties },
+    });
+  }
+
+  await trackDownloadOutcome("requested");
+
   const ipRateLimitResponse = await checkRateLimit({
     action: "download_attempt",
     rules: [{ scope: "ip", identifier: getClientIp(req), limit: 120, windowSeconds: 10 * 60 }],
   });
-  if (ipRateLimitResponse) return ipRateLimitResponse;
+  if (ipRateLimitResponse) {
+    await trackDownloadOutcome("rate_limited");
+    return ipRateLimitResponse;
+  }
 
   const asset = packs.flatMap((pack) => pack.assets).find((item) => item.id === assetId);
 
   if (!asset) {
     console.warn(JSON.stringify({ level: "warn", msg: "asset_download_not_found", route: "/api/download/[assetId]", requestId, assetId, ms: Date.now() - start }));
+    await trackDownloadOutcome("asset_not_found");
     return NextResponse.json({ error: "Asset not found" }, { status: 404 });
   }
 
   const viewer = await getMembershipContext();
   if (!viewer.isMember) {
     console.warn(JSON.stringify({ level: "warn", msg: "asset_download_membership_required", route: "/api/download/[assetId]", requestId, assetId, ms: Date.now() - start }));
+    await trackDownloadOutcome("membership_required", { asset_type: asset.type });
     return NextResponse.json(
       {
         error: "Membership required",
@@ -67,6 +84,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ assetId:
   const manifestEntry = (assetManifest as AssetManifestEntry[]).find((item) => item.id === assetId);
   if (!manifestEntry) {
     console.error(JSON.stringify({ level: "error", msg: "asset_download_manifest_missing", route: "/api/download/[assetId]", requestId, assetId, ms: Date.now() - start }));
+    await trackDownloadOutcome("manifest_missing", { asset_type: asset.type });
     return NextResponse.json({ error: "Asset file not found" }, { status: 404 });
   }
 
@@ -83,9 +101,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ assetId:
       assetId,
       assetCount: 1,
     });
-    void recordAnalyticsEvent(req, {
+    await recordAnalyticsEvent(req, {
       eventName: "Asset Download Served",
-      path: `/api/download/${assetId}`,
+      path: analyticsPath,
       properties: { asset: assetId, pack: manifestEntry.packSlug, asset_type: manifestEntry.type },
     });
     return new NextResponse(file, {
@@ -98,6 +116,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ assetId:
     });
   } catch (error) {
     console.error(JSON.stringify({ level: "error", msg: "asset_download_file_unavailable", route: "/api/download/[assetId]", requestId, assetId, error: error instanceof Error ? error.message : String(error), ms: Date.now() - start }));
+    await trackDownloadOutcome("file_unavailable", { asset_type: manifestEntry.type, pack: manifestEntry.packSlug });
     return NextResponse.json({ error: "Asset file is unavailable" }, { status: 404 });
   }
 }

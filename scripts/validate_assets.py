@@ -23,10 +23,12 @@ def main() -> None:
     generator_ids = asset_ids_from_text(GENERATOR)
 
     # Automation assets are injected programmatically (identical token logic in both
-    # packs.ts and the generator), so they are not literal ids in source. Exclude them
-    # from the literal cross-check and instead assert every pack has exactly one.
+    # packs.ts and the generator). They may appear as app-side detail copy, but they
+    # should not be required as literal generator entries. Exclude them from the
+    # literal cross-check and instead assert every pack has exactly one in manifest.
     automation_ids = {item_id for item_id in manifest_ids if item_id.endswith("-automation")}
     manifest_core = manifest_ids - automation_ids
+    app_core = app_ids - {item_id for item_id in app_ids if item_id.endswith("-automation")}
 
     by_pack: dict[str, list[str]] = {}
     for item in manifest:
@@ -37,9 +39,9 @@ def main() -> None:
     if packs_missing_automation:
         raise SystemExit(f"Packs missing an automation asset: {packs_missing_automation}")
 
-    missing_from_manifest = app_ids - manifest_core
+    missing_from_manifest = app_core - manifest_core
     missing_from_app = manifest_core - app_ids
-    missing_from_generator = app_ids - generator_ids
+    missing_from_generator = app_core - generator_ids
     if missing_from_manifest or missing_from_app or missing_from_generator:
         raise SystemExit(
             "Asset ID mismatch: "

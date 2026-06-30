@@ -42,7 +42,7 @@ export function QuoteCarousel() {
       <div className="quote-section relative overflow-hidden rounded-lg px-6 py-12 text-center text-white sm:px-10 sm:py-16 lg:px-16 lg:py-20">
         <figure className="relative z-10 mx-auto flex max-w-5xl flex-col items-center">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-white/40">
-            {String(index + 1).padStart(2, "0")} / {quotes.length}
+            Field note {String(index + 1).padStart(2, "0")} / {quotes.length}
           </p>
           <blockquote key={index} className="quote-text mt-5 text-[clamp(1.85rem,10vw,5rem)] leading-[1.04] text-white sm:leading-[1.02]">
             {quotes[index]}

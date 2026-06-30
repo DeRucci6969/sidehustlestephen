@@ -9,6 +9,8 @@ export type BusinessPack = {
   slug: string;
   title: string;
   hook: string;
+  seoTitle?: string;
+  seoDescription?: string;
   category: string;
   buyer: string;
   startupCost: string;
@@ -21,6 +23,7 @@ export type BusinessPack = {
   featured?: boolean;
   popularityScore: number;
   publishedAt: string;
+  ogImage?: string;
   assets: PackAsset[];
 };
 
@@ -30,6 +33,12 @@ export type PackPageDetail = {
   delivery: string;
   firstClients: string;
   startableOffer?: string;
+  publicPreview?: {
+    title: string;
+    intro: string;
+    steps: string[];
+    lockedAssetTease: string;
+  };
   whyDetails: string[];
   firstMoveAnalysis: string[];
   launchSprintDetails: string[];
@@ -42,6 +51,9 @@ const basePacks: BusinessPack[] = [
     slug: "cafe-menu-refresh-package",
     title: "Cafe Menu Refresh Package",
     hook: "If you can use Canva, sell this to local cafes.",
+    seoTitle: "Cafe Menu Refresh Launch Pack | Outreach Scripts and Pricing Sheet",
+    seoDescription:
+      "Start a cafe menu refresh service with local cafe outreach scripts, pricing sheet, delivery checklist, client intake form, prompt pack, and handoff templates.",
     category: "Local Service",
     buyer: "Independent cafes",
     startupCost: "$0-$50",
@@ -68,6 +80,9 @@ const basePacks: BusinessPack[] = [
     slug: "google-business-profile-rescue",
     title: "Google Business Profile Rescue",
     hook: "Most local businesses lose trust before people visit.",
+    seoTitle: "Google Business Profile Rescue Launch Pack | Audit Checklist and Outreach Scripts",
+    seoDescription:
+      "Start a Google Business Profile rescue service with a practical audit checklist, local business outreach scripts, pricing guidance, FAQ prompts, and delivery assets.",
     category: "Local Service",
     buyer: "Local service businesses",
     startupCost: "$0",
@@ -93,6 +108,9 @@ const basePacks: BusinessPack[] = [
     slug: "airbnb-photo-refresh-service",
     title: "Airbnb Photo Refresh Service",
     hook: "Turn flat listing photos into bookable lifestyle scenes.",
+    seoTitle: "Airbnb Photo Refresh Launch Pack | Host Outreach Scripts and Photo Prompts",
+    seoDescription:
+      "Start an Airbnb photo refresh service with host outreach scripts, listing photo audit checklist, pricing calculator, photo prompts, and client templates.",
     category: "Local Service",
     buyer: "Short-term rental hosts",
     startupCost: "$0-$50",
@@ -119,6 +137,9 @@ const basePacks: BusinessPack[] = [
     slug: "drone-roof-photo-inspection",
     title: "Drone Roof Photo Inspection",
     hook: "Clear roof photos and a simple visual report without anyone climbing a ladder.",
+    seoTitle: "Drone Roof Photo Inspection Launch Pack | Report Template and Pricing Sheet",
+    seoDescription:
+      "Start a visual drone roof photo service with outreach scripts, roof photo report template, safety checklist, pricing sheet, prompt pack, and client forms.",
     category: "Local Service",
     buyer: "Roofers, agents, solar installers, and homeowners",
     startupCost: "$251-$1k",
@@ -146,6 +167,9 @@ const basePacks: BusinessPack[] = [
     slug: "power-washing-driveway-sprint",
     title: "Power Washing Driveway Sprint",
     hook: "Dirty concrete is an easy before-and-after local service.",
+    seoTitle: "Power Washing Driveway Launch Pack | Quote Calculator and Outreach Scripts",
+    seoDescription:
+      "Start a driveway power washing service with local outreach scripts, quote calculator, job safety checklist, proof kit, prompts, and client templates.",
     category: "Local Service",
     buyer: "Homeowners, landlords, property managers, and small commercial sites",
     startupCost: "$101-$500",
@@ -170,9 +194,70 @@ const basePacks: BusinessPack[] = [
     ],
   },
   {
+    slug: "garage-shelf-installation",
+    title: "Garage Shelf Installation",
+    hook: "Turn a cluttered garage into an organised wall of storage in one afternoon.",
+    seoTitle: "Garage Shelf Installation Launch Pack | Quote Calculator and Outreach Scripts",
+    seoDescription:
+      "Start a garage shelf installation service with a quote calculator, neighbour outreach scripts, safety checklist, intake form, prompt pack, and client email templates.",
+    category: "Local Service",
+    buyer: "Homeowners, renters, landlords, and property managers",
+    startupCost: "$101-$500",
+    timeToFirstSale: "1-7 days",
+    difficulty: "Medium",
+    summary: "A simple install service that mounts manufactured shelving, overhead racks, and hooks to clear a garage floor, with fast before-and-after proof that sells the next job.",
+    whyItWorks: "Almost every garage is cluttered, the fix is highly visible, and a few hundred dollars of tools lets you deliver a result owners happily pay for and neighbours instantly want.",
+    firstSteps: ["Buy a drill, stud finder and level", "Organise one garage for proof", "Pitch the street with the before-and-after"],
+    caveat: "You install manufactured shelving and racks, not structural or load-bearing modifications. Locate wiring and pipes before drilling and respect product weight ratings.",
+    featured: true,
+    popularityScore: 95,
+    publishedAt: "2026-06-19",
+    assets: [
+      { id: "asset-garage-outreach", title: "Garage Outreach Scripts", type: "DOCX", description: "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around the before-and-after garage transformation." },
+      { id: "asset-garage-pricing", title: "Garage Install Quote Calculator", type: "XLSX", description: "Single-bay, double, and premium install tiers with add-ons, materials, travel, quote builder, profit check, and recurring-organising options." },
+      { id: "asset-garage-install", title: "Install & Safety Checklist", type: "PDF", description: "Pre-install checklist for wall type, locating wiring/pipes, anchor selection, load ratings, level mounting, before/after photos, and clean scope boundaries." },
+      { id: "asset-garage-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for photo-based quotes, wall-layout suggestions, anchor/load notes, local-group posts, and referral follow-ups." },
+      { id: "asset-garage-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for garage size, what to store, wall material, access, budget, photos, and approval boundaries." },
+      { id: "asset-garage-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, and referral/maintenance reminders." },
+      { id: "asset-garage-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for wall types, weight limits, what is included, materials, timeline, mess, and structural/safety boundaries." },
+    ],
+  },
+  {
+    slug: "mobile-headlight-restoration",
+    title: "Mobile Headlight Restoration",
+    hook: "Cloudy headlights are a small fix with obvious before-and-after proof.",
+    seoTitle: "Mobile Headlight Restoration Launch Pack | Pricing, Outreach Scripts, and Safety Checklist",
+    seoDescription:
+      "Start a mobile headlight restoration service with a pricing calculator, car-owner outreach scripts, safety checklist, intake form, proof kit, prompts, and client templates.",
+    category: "Local Service",
+    buyer: "Car owners, used-car sellers, landlords with fleets, and local dealers",
+    startupCost: "$51-$150",
+    timeToFirstSale: "1-7 days",
+    difficulty: "Easy",
+    summary: "A mobile car-care service that restores cloudy plastic headlights using a fixed process, clear scope boundaries, and strong before-and-after photos.",
+    whyItWorks: "The problem is visible in daylight, the result is easy to show, and many owners want the car to look cleaner before selling, inspecting, or driving at night.",
+    firstSteps: ["Buy a starter restoration kit", "Restore one permissioned car for proof", "Pitch owners with cloudy headlights"],
+    caveat: "Do not promise like-new results, roadworthiness, legal compliance, or permanent restoration. Some lenses need replacement.",
+    popularityScore: 93,
+    publishedAt: "2026-06-28",
+    assets: [
+      { id: "asset-headlight-outreach", title: "Headlight Outreach Scripts", type: "DOCX", description: "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof." },
+      { id: "asset-headlight-pricing", title: "Headlight Restoration Quote Calculator", type: "XLSX", description: "Single-car, two-car, dealer batch, add-on, travel, material cost, and profit-check pricing workbook." },
+      { id: "asset-headlight-safety", title: "Restoration Safety Checklist", type: "PDF", description: "Pre-job checklist for lens condition, masking, sanding grit sequence, UV sealant, PPE, weather, paint protection, and result boundaries." },
+      { id: "asset-headlight-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy." },
+      { id: "asset-headlight-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for car make/model, lens condition, photos, location, access, weather window, expectations, and approval boundaries." },
+      { id: "asset-headlight-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for sample-led outreach, quote requests, booking confirmation, pre-job prep, completion handoff, referral asks, and dealer batch follow-ups." },
+      { id: "asset-headlight-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for what restoration can and cannot fix, sealant, weather, timing, price, safety, and when replacement is better." },
+      { id: "asset-headlight-proof", title: "Before & After Proof Kit", type: "DOCX", description: "A photo playbook for matched headlight shots, consent wording, file naming, marketplace captions, and referral follow-ups." },
+    ],
+  },
+  {
     slug: "gym-churn-report",
     title: "Boutique Gym Churn Report",
     hook: "Gyms know members cancel, but not why.",
+    seoTitle: "Boutique Gym Churn Report Launch Pack | Retention Report Template",
+    seoDescription:
+      "Start a boutique gym churn report service with retention review agenda, churn report spreadsheet, gym owner outreach emails, intake form, and AI prompts.",
     category: "B2B Service",
     buyer: "Boutique gyms and studios",
     startupCost: "$0",
@@ -180,13 +265,15 @@ const basePacks: BusinessPack[] = [
     difficulty: "Medium",
     summary: "A monthly retention report that turns messy cancellation reasons into three actionable fixes.",
     whyItWorks: "Retention is directly tied to gym revenue, and small studios rarely have clean insight into churn reasons.",
-    firstSteps: ["Define cancellation tags", "Build a simple report", "Pitch a monthly review"],
+    firstSteps: ["Find 10 retention-active studios", "Send a dummy churn snapshot", "Pitch an anonymized one-month review"],
     caveat: "You need clean enough data and owner buy-in.",
     featured: true,
     popularityScore: 92,
     publishedAt: "2026-06-07",
     assets: [
       { id: "asset-gym-report", title: "Churn Report Template", type: "XLSX", description: "A spreadsheet for tagging cancellations and surfacing trends." },
+      { id: "asset-gym-outreach", title: "Gym Owner Outreach Scripts", type: "DOCX", description: "Email, DM, call, and follow-up scripts built around public retention clues and anonymized-data starter offers." },
+      { id: "asset-gym-pricing", title: "Churn Report Pricing Calculator", type: "XLSX", description: "Snapshot, sprint, and monthly report pricing with quote builder, data-scope guardrails, and profit check." },
       { id: "asset-gym-call", title: "Retention Review Agenda", type: "PDF", description: "Monthly call structure and recommendations format." },
       { id: "asset-gym-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for cancellation analysis, retention recommendations, owner calls, and member-save experiments." },
       { id: "asset-gym-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for cancellation exports, privacy, churn tags, memberships, and goals." },
@@ -198,6 +285,9 @@ const basePacks: BusinessPack[] = [
     slug: "shopify-cart-audit",
     title: "Shopify Cart Audit Pack",
     hook: "Most small stores do not need more traffic first.",
+    seoTitle: "Shopify Cart Audit Launch Pack | Checklist, Pricing, and Email Swipe",
+    seoDescription:
+      "Start a Shopify cart audit service with checkout friction checklist, abandoned-cart email swipe, pricing calculator, client intake form, and outreach templates.",
     category: "Ecommerce",
     buyer: "Small Shopify stores",
     startupCost: "$0",
@@ -212,6 +302,7 @@ const basePacks: BusinessPack[] = [
     assets: [
       { id: "asset-shopify-audit", title: "Cart Audit Checklist", type: "PDF", description: "A practical review checklist for cart and checkout friction." },
       { id: "asset-shopify-email", title: "Abandoned Cart Email Swipe", type: "DOCX", description: "Starter copy blocks for small stores." },
+      { id: "asset-shopify-pricing", title: "Cart Audit Pricing Calculator", type: "XLSX", description: "Starter audit, full audit, implementation, and monthly cleanup pricing with quote builder and profit check." },
       { id: "asset-shopify-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for store audits, checkout objections, abandoned-cart copy, and fix prioritisation." },
       { id: "asset-shopify-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for store access, products, policies, email platform, voice, and claims." },
       { id: "asset-shopify-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for audit outreach, policy requests, findings delivery, implementation follow-up, and upsells." },
@@ -222,6 +313,9 @@ const basePacks: BusinessPack[] = [
     slug: "ugc-brief-generator",
     title: "UGC Brief Generator",
     hook: "Brands do not need more creators. They need better briefs.",
+    seoTitle: "UGC Brief Generator Launch Pack | Creator Brief Template and Hook Bank",
+    seoDescription:
+      "Start a UGC brief service for ecommerce brands with creator brief templates, hook bank, client intake form, outreach emails, and AI prompt pack.",
     category: "Creator Business",
     buyer: "Ecommerce brands",
     startupCost: "$0",
@@ -246,6 +340,9 @@ const basePacks: BusinessPack[] = [
     slug: "realtor-suburb-snapshot",
     title: "Realtor Suburb Snapshot Reports",
     hook: "Real estate agents need local content every week.",
+    seoTitle: "Realtor Suburb Snapshot Launch Pack | Agent Pitch Script and Report Template",
+    seoDescription:
+      "Start a suburb snapshot report service for real estate agents with pitch scripts, report spreadsheet, client intake form, source-safe prompts, and emails.",
     category: "B2B Service",
     buyer: "Real estate agents",
     startupCost: "$0",
@@ -270,6 +367,9 @@ const basePacks: BusinessPack[] = [
     slug: "ai-inbox-triage-trades",
     title: "AI Inbox Triage for Trades",
     hook: "Plumbers do not need an AI agent. They need inbox triage.",
+    seoTitle: "AI Inbox Triage for Trades Launch Pack | Reply Templates and Workflow Map",
+    seoDescription:
+      "Start an AI-assisted inbox triage service for trades with workflow map, reply templates, intake form, owner-approved prompts, and client emails.",
     category: "AI Tool",
     buyer: "Trades businesses",
     startupCost: "$1-$50",
@@ -294,6 +394,9 @@ const basePacks: BusinessPack[] = [
     slug: "review-testimonial-service",
     title: "Review Reply + Testimonial Clips",
     hook: "Turn boring customer reviews into sales assets.",
+    seoTitle: "Review Reply and Testimonial Clips Launch Pack | Swipe File and Specs",
+    seoDescription:
+      "Start a review reply and testimonial asset service with reply swipe file, testimonial card specs, client intake form, approval emails, and AI prompts.",
     category: "B2B Service",
     buyer: "Local businesses",
     startupCost: "$1-$50",
@@ -318,6 +421,9 @@ const basePacks: BusinessPack[] = [
     slug: "manual-workflow-concierge",
     title: "Manual Workflow Concierge",
     hook: "Do not build the AI app. Sell the manual workflow first.",
+    seoTitle: "Manual Workflow Concierge Launch Pack | Workflow Template and Scorecard",
+    seoDescription:
+      "Start a manual workflow concierge service with validation scorecard, workflow template, client intake form, outreach emails, and automation prompts.",
     category: "AI Tool",
     buyer: "Niche B2B operators",
     startupCost: "$0",
@@ -343,6 +449,9 @@ const basePacks: BusinessPack[] = [
     slug: "airbnb-guest-guide-refresh",
     title: "Airbnb Guest Guide Refresh",
     hook: "Hosts forget the easiest guest-experience upgrade.",
+    seoTitle: "Airbnb Guest Guide Refresh Launch Pack | Host Guide Template and Upsells",
+    seoDescription:
+      "Start an Airbnb guest guide refresh service with guest guide outline, host upsell ideas, client intake form, host outreach emails, and AI prompts.",
     category: "Local Service",
     buyer: "Short-term rental hosts",
     startupCost: "$0",
@@ -368,6 +477,19 @@ const basePacks: BusinessPack[] = [
 const AUTOMATION_ASSET_DESCRIPTION =
   "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing — each ready to paste into an agent and run on a cadence with human approval.";
 
+const packOgImages: Record<string, string> = {
+  "ai-inbox-triage-trades": "/visuals/pack-cards/ai-inbox-triage-trades-v2.jpg",
+  "airbnb-guest-guide-refresh": "/visuals/pack-cards/airbnb-guest-guide-refresh-v2.jpg",
+  "cafe-menu-refresh-package": "/visuals/pack-cards/cafe-menu-refresh-package-v2.jpg",
+  "google-business-profile-rescue": "/visuals/pack-cards/google-business-profile-rescue-v2.jpg",
+  "gym-churn-report": "/visuals/pack-cards/gym-churn-report-v2.jpg",
+  "manual-workflow-concierge": "/visuals/pack-cards/manual-workflow-concierge-v2.jpg",
+  "realtor-suburb-snapshot": "/visuals/pack-cards/realtor-suburb-snapshot-v2.jpg",
+  "review-testimonial-service": "/visuals/pack-cards/review-testimonial-service-v2.jpg",
+  "shopify-cart-audit": "/visuals/pack-cards/shopify-cart-audit-v2.jpg",
+  "ugc-brief-generator": "/visuals/pack-cards/ugc-brief-generator-v2.jpg",
+};
+
 function automationAssetFor(assets: PackAsset[]): PackAsset {
   const parts = assets.map((asset) => asset.id.replace(/^asset-/, ""));
   let prefix = parts[0] ?? "";
@@ -386,11 +508,32 @@ function automationAssetFor(assets: PackAsset[]): PackAsset {
 // Every pack leads with a scheduled-automation pack — the most appealing asset for buyers.
 export const packs: BusinessPack[] = basePacks.map((pack) => ({
   ...pack,
+  ogImage: packOgImages[pack.slug],
   assets: [automationAssetFor(pack.assets), ...pack.assets],
 }));
 
 export function getPack(slug: string) {
   return packs.find((pack) => pack.slug === slug);
+}
+
+export function categorySlug(category: string) {
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+export const packCategories = Array.from(new Set(packs.map((pack) => pack.category))).map((category) => ({
+  name: category,
+  slug: categorySlug(category),
+  count: packs.filter((pack) => pack.category === category).length,
+}));
+
+export function getPacksByCategorySlug(slug: string) {
+  const category = packCategories.find((item) => item.slug === slug);
+  if (!category) return null;
+
+  return {
+    category,
+    packs: packs.filter((pack) => pack.category === category.name),
+  };
 }
 
 export const packPageDetails: Record<string, PackPageDetail> = {
@@ -403,6 +546,20 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Start by collecting the current menu, prices, specials, logo, and Google profile link. Build one sample menu section first, get approval, then complete the final exports and send a short handoff showing what changed and what the owner must approve before publishing.",
     firstClients:
       "Walk or search a local cafe strip, identify outdated menu photos or inconsistent specials, create one visible before/after mockup, and send it directly to the owner with a tiny paid starter offer.",
+    startableOffer:
+      "A 48-hour cafe menu refresh for one menu section, one Instagram specials tile, and one QR or Google menu check, delivered with owner approval and final export notes.",
+    publicPreview: {
+      title: "Free preview: cafe menu issue scan",
+      intro:
+        "Use this quick scan before pitching. It helps you find a visible cafe menu problem and turn it into a useful sample without giving away the full outreach and pricing workflow.",
+      steps: [
+        "Visible issue: find one mismatch between the printed menu, Instagram specials, Google menu photo, QR menu, opening hours, or current pricing.",
+        "Tiny sample: redesign one menu section or specials tile only, using the cafe's current wording and avoiding fake prices or unapproved claims.",
+        "Starter pitch: offer a fixed 48-hour refresh with one approval round, final files, and a monthly specials option after delivery.",
+      ],
+      lockedAssetTease:
+        "Members get the cafe outreach script, pricing sheet, delivery checklist, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "The pain is visible before a sales call, so prospecting is concrete: blurry menu photos, old specials, missing QR links, and mismatched pricing are easy to spot.",
       "The buyer already understands the value of menus because customers use them every day. You are not educating the market; you are removing a neglected operational annoyance.",
@@ -431,6 +588,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Offer the smallest paid version first: one menu section plus final export checklist.",
       "After delivery, ask whether they want a monthly specials refresh before the next menu change.",
     ],
+    offerLadder: [
+      { name: "Starter menu fix", price: "$99-$249", detail: "One menu section, specials tile, or QR menu cleanup with one approval round and final web-ready export." },
+      { name: "Full menu refresh", price: "$300-$750", detail: "Print menu, Instagram tiles, QR/menu link check, Google menu note, and a clean owner handoff." },
+      { name: "Monthly specials retainer", price: "$150-$500 / mo", detail: "Recurring specials, price changes, event menus, seasonal items, and menu-file maintenance." },
+    ],
   },
   "google-business-profile-rescue": {
     problem:
@@ -443,6 +605,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Search local service categories in your area and find profiles with obvious trust gaps. Send a 3-point audit and offer a fixed-fee rescue sprint.",
     startableOffer:
       "A fixed-fee Google profile rescue sprint with a 3-point public audit, owner-approved service copy, FAQ drafts, photo checklist, and review-request wording that avoids ranking promises.",
+    publicPreview: {
+      title: "Free preview: 3-point profile rescue audit",
+      intro:
+        "Use this small public preview to decide whether a business is worth pitching. It gives the owner a useful observation without giving away the full member workflow.",
+      steps: [
+        "Trust gap: note one thing a buyer checks before calling, such as hours, services, photos, reviews, or FAQs.",
+        "Visible fix: write the exact customer-facing improvement, for example a clearer service description or missing FAQ.",
+        "Safe pitch: frame the offer as profile clarity and approval-ready cleanup, not a promise to rank higher.",
+      ],
+      lockedAssetTease:
+        "Members get the full profile audit checklist, rescue sprint pitch, intake form, approval emails, FAQ prompts, and handoff wording.",
+    },
     whyDetails: [
       "The buyer can see the problem immediately because Google is public and customer-facing.",
       "The work is bounded: you are improving completeness, clarity, and trust signals, not trying to become their full marketing agency.",
@@ -471,6 +645,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Close the smallest version first: public profile audit, approval-ready copy, photo checklist, FAQ drafts, and implementation notes.",
       "After delivery, offer a monthly profile hygiene check for new photos, hours, services, FAQs, and review-response prompts.",
     ],
+    offerLadder: [
+      { name: "Mini rescue audit", price: "$99-$199", detail: "A 3-point public profile audit with screenshots, owner-safe recommendations, and one approval-ready copy sample." },
+      { name: "Profile rescue sprint", price: "$250-$600", detail: "Services, FAQs, photo checklist, review-request wording, approval notes, and a no-ranking-guarantee handoff." },
+      { name: "Monthly profile hygiene", price: "$100-$350 / mo", detail: "A light monthly check for hours, photos, services, FAQs, review replies, and seasonal updates." },
+    ],
   },
   "airbnb-photo-refresh-service": {
     problem:
@@ -483,6 +662,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Search Airbnb, Stayz, direct-booking sites, and property manager portfolios for listings with good spaces but flat photos. Improve one public photo as a tasteful sample, watermark it if needed, and send it with a fixed-fee refresh offer for 6-12 images.",
     startableOffer:
       "A 6-photo AI listing refresh with one proactive before/after sample, warmer ambience, realistic lifestyle-model scenes, an edit-risk log, and host-approved final exports.",
+    publicPreview: {
+      title: "Free preview: listing photo sample check",
+      intro:
+        "Use this public check to decide whether a listing is worth pitching. The goal is one tasteful before/after sample, not a misleading property makeover.",
+      steps: [
+        "Photo gap: choose one listing photo that is accurate but flat, dim, empty, cold, cluttered, or poorly cropped.",
+        "Safe edit: improve light, warmth, crop, ambience, and visual focus without adding amenities, views, furniture, room size, or unapproved claims.",
+        "Host pitch: send one low-res sample with a fixed 6-photo refresh offer and a clear note that final images need host approval.",
+      ],
+      lockedAssetTease:
+        "Members get the photo improvement prompt pack, listing audit checklist, pricing calculator, host outreach scripts, intake form, emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "The sales proof is visual. A host does not need to understand AI workflows; they can compare the old photo to a warmer, more bookable lifestyle version.",
       "The work is fast to sample because listing photos are public and the first pitch can be built around one proactive before/after.",
@@ -512,6 +703,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Follow up with a second room idea, not a generic reminder.",
       "After the first paid job, ask whether they want a seasonal hero-photo refresh before their next peak booking period.",
     ],
+    offerLadder: [
+      { name: "6-photo starter refresh", price: "$99-$249", detail: "Six host-approved images with one style direction, one revision round, and a simple edit-risk log." },
+      { name: "Listing-wide refresh", price: "$300-$750", detail: "A full listing photo pass with hero image options, room-by-room edits, and before/after handoff notes." },
+      { name: "Seasonal refresh retainer", price: "$150-$500 / update", detail: "Quarterly or pre-peak refreshes for seasonal scenes, direct-booking assets, and new hero photos." },
+    ],
   },
   "drone-roof-photo-inspection": {
     problem:
@@ -524,6 +720,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Start with roofers, real estate agents, solar installers, property managers, and storm-prone suburbs. Offer one free sample roof to a partner so they can see the report format and reuse it in a quote, listing conversation, or client update. One useful flyover gives you a concrete before/after sales asset and a referral path into repeat partners.",
     startableOffer:
       "A one-roof drone flyover with 12-20 labelled photos, a short video, and a visual-only report that helps the client see roof areas without climbing.",
+    publicPreview: {
+      title: "Free preview: roof photo scope check",
+      intro:
+        "Use this check before pitching or flying. It keeps the offer focused on visual documentation and avoids drifting into inspection claims.",
+      steps: [
+        "Buyer use case: choose one need, such as pre-quote roof visibility, listing support, solar panel photo documentation, storm documentation, or job closeout proof.",
+        "Permission and rules: confirm owner permission, local drone rules, airspace, weather, privacy boundaries, and insurance before any paid flight.",
+        "Visual-only scope: offer labelled photos and a short report, not structural certification, damage diagnosis, safety advice, or insurance conclusions.",
+      ],
+      lockedAssetTease:
+        "Members get the drone outreach script, roof photo report template, pricing sheet, safety checklist, prompt pack, intake form, emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "The buyer feels the problem immediately: the roof is valuable, hard to see, and inconvenient or unsafe to inspect casually.",
       "A consumer or prosumer drone creates a clear capability gap. You can do something most homeowners and many service sellers cannot do quickly themselves.",
@@ -555,6 +763,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "After the sample, ask who else in their workflow needs this visibility: estimator, owner, seller, buyer, insurer, tenant, or installer.",
       "Convert the strongest response into a simple recurring offer: 4 reports per month, priority scheduling, consistent report format, and optional video add-on.",
     ],
+    offerLadder: [
+      { name: "Basic roof photo set", price: "$150-$250", detail: "One permissioned flyover with 12-20 labelled photos and visual-only delivery notes." },
+      { name: "Photo report plus video", price: "$250-$450", detail: "Photo set, short video link, 1-2 page visual report, and client-safe handoff language." },
+      { name: "Partner report bundle", price: "$800-$2k / mo", detail: "Recurring monthly reports for roofers, agents, installers, or property managers with priority scheduling." },
+    ],
   },
   "power-washing-driveway-sprint": {
     problem:
@@ -567,6 +780,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Start with visible dirty driveways, paths, shopfronts, bin pads, and small rental properties in one local area. Clean one permissioned sample strip or one discounted first job, photograph the before/after, then pitch nearby owners with the exact same narrow service.",
     startableOffer:
       "A driveway or path clean for one property, quoted from photos, with a pre-job surface check, one approval boundary, before/after proof, and an optional 3-month maintenance reminder.",
+    publicPreview: {
+      title: "Free preview: surface quote safety check",
+      intro:
+        "Use this quick check before quoting. It helps you find a visible first job while avoiding risky surfaces that can turn a simple clean into a costly mistake.",
+      steps: [
+        "Obvious proof: choose one dirty but simple surface where a before/after photo will be clear, such as concrete, pavers, a path, bin pad, or shopfront entrance.",
+        "Risk screen: avoid painted, sealed, cracked, delicate, electrical, roof, poor-drainage, oil-heavy, or sensitive landscaping areas until you know the rules and equipment.",
+        "Quote boundary: ask for photos, water access, surface type, size, staining, drainage, and timing before giving the final price.",
+      ],
+      lockedAssetTease:
+        "Members get the outreach scripts, quote calculator, job safety checklist, before/after proof kit, intake form, emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "The proof is visual. A buyer can understand the difference from one before/after photo without a long sales explanation.",
       "The equipment can be rented or borrowed for the first jobs, so the beginner can test demand before buying a commercial setup.",
@@ -605,6 +830,128 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       { name: "Quarterly maintenance", price: "$80-$200 / visit", detail: "A recurring clean of priority surfaces for homes, rentals, strata, or shopfronts on a fixed schedule." },
     ],
   },
+  "garage-shelf-installation": {
+    problem:
+      "Almost every garage becomes a graveyard of boxes, bikes, and bins that the owner can't even walk through. People hate it but never fix it because they don't know where to start, which shelving to buy, or how to mount it safely. Beginners often make the offer too broad, undercharge for labour, confuse materials with labour, or ignore wall type, wiring, and weight limits.",
+    solution:
+      "You sell a fixed-scope install: mount manufactured shelving, overhead racks, and hooks to get everything off the floor in a single afternoon. The starter offer includes a photo-based quote, a wall and service check, a clear layout, a level install, and before/after photos that sell the next job.",
+    delivery:
+      "Confirm garage size, wall material, ceiling height, what's being stored, who supplies materials, and any wiring or pipes before booking. Take before photos, scan for studs and services, mount into suitable fixings within product weight ratings, keep walkways and the car clear, clean up, and hand off with after photos and weight guidance.",
+    firstClients:
+      "Start with visibly cluttered single and double garages in one local area. Organise one garage cheap or free, photograph the before/after, then pitch the same narrow service to neighbours, local groups, landlords, and new-build owners.",
+    startableOffer:
+      "A single-wall shelving install for one garage, quoted from photos, with a wall and service check, a clear layout, a level install within weight ratings, and before/after proof.",
+    publicPreview: {
+      title: "Free preview: garage install lead check",
+      intro:
+        "Use this quick check before pitching. It helps you spot a safe, simple first job without giving away the quote calculator, outreach scripts, and install checklist.",
+      steps: [
+        "Visible pain: choose a garage with cluttered floors, unused wall space, or storage boxes that make the result obvious in a before/after photo.",
+        "Safe starter scope: confirm the first offer is manufactured shelving or hooks only, with no structural work, heavy ceiling loads, or unknown wall risks.",
+        "Quote boundary: ask for photos, wall type, garage size, what needs storing, and who supplies materials before giving a final price.",
+      ],
+      lockedAssetTease:
+        "Members get the full quote calculator, neighbour outreach scripts, install and safety checklist, intake form, prompt pack, emails, FAQs, and automation prompts.",
+    },
+    whyDetails: [
+      "The proof is visual. One before/after photo of a transformed garage sells the result without a long pitch.",
+      "The toolkit is cheap. A drill, stud finder, and level let a beginner deliver a premium-looking result and test demand before scaling.",
+      "It works street by street: one clean garage creates neighbour referrals, landlord work, and new-build leads.",
+      "It scales with people. When leads outpace you, a trained second installer follows the same fixed-scope checklist.",
+    ],
+    firstMoveAnalysis: [
+      "Do not offer 'garage organising' broadly. Sell one clear install, one price structure, and one visible result.",
+      "Separate labour from materials in every quote so margins stay clear and clients aren't surprised.",
+      "Always locate wiring and pipes and confirm wall type before drilling; mount into studs or rated anchors within weight limits.",
+      "Refer structural changes, load-bearing work, and heavy ceiling-mounted loads to a qualified trade.",
+    ],
+    launchSprintDetails: [
+      "Day 1: buy or confirm a drill, stud + live-wire detector, level, and a basic anchor kit; decide who supplies shelving.",
+      "Day 2: organise one permissioned garage and capture strong before/after photos from the same angle.",
+      "Day 3: list 40 nearby homes, rentals, and new builds with cluttered or empty garages.",
+      "Day 4-5: post the before/after in local groups and send neighbour notes, DMs, and door-hangers with a fixed starter range.",
+      "Day 6: book one paid single-wall install, confirm wall type and services, and deliver with before/after proof.",
+      "Day 7: ask for two neighbour referrals and offer a premium storage-wall upgrade or a per-property landlord bundle.",
+    ],
+    firstTenLeadsPlan: [
+      "Pick one tight area: your street, one suburb loop, a new-build estate, or a group of rentals.",
+      "Find 10 prospects with cluttered single/double garages or bare walls that need storage.",
+      "Avoid high-risk first jobs: unknown wall types, suspected wiring/pipe runs, heavy ceiling loads, or structural requests.",
+      "For each lead, note garage size, wall material, what they want stored, ceiling height, and one safe starter scope.",
+      "Create one proof photo from a permissioned sample install using the same before/after angle.",
+      "Send a short note: the cluttered-garage problem, the one-afternoon fix, the expected range, and a request for photos before quoting.",
+      "Offer a small cluster discount if two neighbours book the same week, but never below your travel and setup cost.",
+      "Follow up after two days with one useful note: wall type, what to store, or how the layout will work.",
+      "For landlords and builders, pitch per-property install bundles for rentals, end-of-build handovers, and display homes.",
+      "After the first paid job, ask for a referral to the next neighbour or landlord while the before/after is fresh.",
+    ],
+    offerLadder: [
+      { name: "Single-wall install", price: "$300-$450", detail: "One wall of manufactured shelving in a single-car garage, quoted from photos with a wall/service check and before/after proof." },
+      { name: "Full storage wall", price: "$500-$900", detail: "Shelving plus an overhead rack, pegboard, and hooks for a full transformation, with a tidy completion handoff." },
+      { name: "Per-property bundle", price: "POA / unit", detail: "Repeat installs for landlords and builders across rentals, new builds, and display homes on a fixed per-unit scope." },
+    ],
+  },
+  "mobile-headlight-restoration": {
+    problem:
+      "Cloudy plastic headlights make a car look neglected and can reduce light clarity at night. Owners notice the yellow haze but often ignore it because the job feels fiddly, messy, or too small for a mechanic. Used-car sellers, rideshare drivers, family-car owners, and small dealers all have a visible problem that can be improved without turning it into a full detailing business.",
+    solution:
+      "You sell a mobile headlight restoration service with a narrow scope: inspect the lens, mask paint, wet sand through the right grit sequence, polish, apply UV protection, and send matched before/after photos. The offer is deliberately honest: improve clarity and appearance where the lens is restorable, but do not promise like-new lights or legal compliance.",
+    delivery:
+      "Confirm photos, car make/model, lens condition, weather, workspace, water/power access, and owner expectations before booking. On site, clean the lens, mask surrounding paint, test a small area where appropriate, sand and polish carefully, apply UV sealant, photograph the result from the same angle, and give the owner aftercare and replacement warnings if the lens is too damaged.",
+    firstClients:
+      "Start with one permissioned car, then use the matched before/after proof in local Facebook groups, marketplace listings, driveway notes, rideshare groups, used-car seller searches, and small dealer outreach. Lead with the visible cloudy headlight, not a generic car-detailing pitch.",
+    startableOffer:
+      "A same-day mobile headlight restoration for one car, with lens condition check, paint masking, sanding/polish sequence, UV sealant, before/after photos, and honest result boundaries.",
+    publicPreview: {
+      title: "Free preview: cloudy headlight lead check",
+      intro:
+        "Use this quick check before pitching. It helps you find an easy first job without promising a result the lens cannot support.",
+      steps: [
+        "Visible pain: choose a car with cloudy, yellowed plastic headlights where the haze is easy to see in daylight photos.",
+        "Safe starter scope: offer restoration only when the lens is plastic and not cracked, full of moisture, deeply crazed, or better suited to replacement.",
+        "Proof pitch: send a matched before/after sample and quote a fixed pair-of-headlights price with clear result and weather boundaries.",
+      ],
+      lockedAssetTease:
+        "Members get the outreach scripts, quote calculator, restoration safety checklist, proof kit, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+    },
+    whyDetails: [
+      "The sales proof is obvious. A cloudy headlight beside a restored headlight makes the value visible without a long explanation.",
+      "The startup cost is low compared with larger detailing or mechanical services, and the first jobs can be done with a basic restoration kit, PPE, and careful process control.",
+      "The offer fits several buyer lanes: private car owners, used-car sellers, rideshare drivers, small dealers, fleet owners, and mobile detailers who want a simple add-on.",
+      "The work creates local proof fast because every job can produce a matched before/after photo and a referral ask.",
+    ],
+    firstMoveAnalysis: [
+      "Do not pitch full car detailing. Sell one narrow result: clearer-looking headlights with a UV-protection handoff and honest limits.",
+      "Do not promise compliance, permanent restoration, or like-new output. Some lenses are too cracked, moisture-filled, or damaged and need replacement.",
+      "Use matched photos from the same angle and lighting. The proof should be clean, not exaggerated.",
+      "Quote the first jobs by pair, travel distance, lens condition, materials, and weather window so the job stays profitable.",
+    ],
+    launchSprintDetails: [
+      "Day 1: buy a starter restoration kit, PPE, masking tape, microfiber cloths, compound, and UV sealant; write your no-cracked-lens boundary.",
+      "Day 2: restore one permissioned car and capture matched before/after photos from the same angle.",
+      "Day 3: list 40 local prospects: cars for sale, rideshare drivers, neighbours, marketplace sellers, small dealers, and family-car owners.",
+      "Day 4-5: send sample-led outreach with the before/after photo, fixed starter price, weather window, and clear result boundary.",
+      "Day 6: book one paid car, confirm lens photos and access, restore the pair, and send aftercare notes.",
+      "Day 7: ask for two referrals, post the proof in one local group if approved, and pitch a dealer or fleet batch price.",
+    ],
+    firstTenLeadsPlan: [
+      "Pick one tight area: your suburb, workplace car park, local marketplace listings, rideshare group, or used-car dealer strip.",
+      "Find 10 cars with visibly cloudy plastic headlights and no obvious cracks, heavy moisture, or severe internal damage.",
+      "Prioritise private sellers, older family cars, rideshare drivers, delivery drivers, and small dealers where cleaner lights improve presentation.",
+      "Create one permissioned before/after sample first so the outreach is visual.",
+      "Send a short note: the visible headlight haze, the fixed pair price, the approximate job time, and the honest boundary that some lenses need replacement.",
+      "Offer a two-car neighbour or household bundle only when travel and setup still make sense.",
+      "Follow up after two days with one useful note about UV sealant and aftercare, not a generic bump.",
+      "For used-car sellers, frame the service around better presentation before photos and inspections, not guaranteed sale price.",
+      "For dealers and fleets, pitch a batch morning with a per-car rate and before/after photo log.",
+      "After the first paid job, ask whether the owner has a second car, family member, neighbour, driver group, or dealer contact with the same issue.",
+    ],
+    offerLadder: [
+      { name: "Single-car restoration", price: "$79-$149", detail: "One pair of plastic headlights with cleaning, masking, sanding/polish sequence, UV sealant, and before/after proof." },
+      { name: "Two-car household bundle", price: "$140-$250", detail: "Two cars at the same address or nearby, with shared setup and aftercare notes." },
+      { name: "Dealer or fleet batch", price: "$50-$100 / car", detail: "Half-day batch work for small dealers, rideshare groups, delivery fleets, or property operators with photo logs." },
+    ],
+  },
   "gym-churn-report": {
     problem:
       "Boutique gyms see cancellations every month but rarely know what is controllable. Cancellation notes sit in inboxes, spreadsheets, or staff memory. Owners react emotionally, discount too quickly, or miss patterns around timetable, onboarding, injury, price, and member experience.",
@@ -614,6 +961,20 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Collect cancellation notes, tag each cancellation, summarize trends, calculate save rate and revenue at risk, then run a short monthly review call with a focused action plan.",
     firstClients:
       "Start with boutique studios that already run memberships and have public signs of retention pressure: class packs, intro offers, schedule changes, or heavy promotional posting.",
+    startableOffer:
+      "A one-month churn snapshot for one boutique gym, using exported cancellation notes, simple reason tags, revenue-at-risk estimates, and three owner-approved retention actions.",
+    publicPreview: {
+      title: "Free preview: churn clue check",
+      intro:
+        "Use this public preview before pitching. It helps you find a credible retention angle without asking for private member data in the first message.",
+      steps: [
+        "Public clue: find one sign the studio already cares about retention, such as intro offers, class-pack discounts, timetable changes, win-back posts, or review complaints.",
+        "Dummy snapshot: build a tiny example using realistic sample data so the owner understands the report before sharing any private cancellation notes.",
+        "Safe pitch: offer an anonymized one-month churn review with three owner-approved actions, not a promise to reduce cancellations.",
+      ],
+      lockedAssetTease:
+        "Members get the churn report workbook, gym owner outreach scripts, pricing calculator, retention agenda, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "Retention is directly tied to revenue, so the owner already feels the cost of churn.",
       "The service is not abstract analytics. It turns messy cancellation reasons into a short action plan the studio can use next month.",
@@ -630,6 +991,23 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Week 2-3: run one paid manual report from exported cancellation notes.",
       "Week 4: review results with the owner and propose a monthly retention report cadence.",
     ],
+    firstTenLeadsPlan: [
+      "List 10 boutique gyms, pilates studios, martial arts gyms, yoga studios, or small group training businesses with active membership offers.",
+      "Prioritise studios that post intro offers, timetable changes, win-back offers, or member challenges because they already care about retention.",
+      "Skip large chains first. You want an owner or manager who can approve a small manual report quickly.",
+      "Capture one public retention clue for each lead: intro offer, class-pack discount, cancellation wording, review complaint, or schedule-change post.",
+      "Prepare a sample churn snapshot with dummy data so the owner understands the deliverable without sharing private member data.",
+      "Send a short pitch asking who reviews cancellations and offering a fixed one-month manual report.",
+      "Offer to start with anonymized cancellation reasons, not full system access.",
+      "Follow up with one retention question tied to their studio, such as onboarding, class times, injury pauses, pricing, or member communication.",
+      "Close the first version as a manual report plus a 30-minute review call.",
+      "After delivery, propose a monthly cadence that tracks changes, actions taken, and next retention experiments.",
+    ],
+    offerLadder: [
+      { name: "One-month churn snapshot", price: "$250-$500", detail: "A manual report from exported or anonymized cancellation notes with tags, themes, and three owner-approved actions." },
+      { name: "Retention review sprint", price: "$600-$1.2k", detail: "Churn report, revenue-at-risk view, save-script ideas, onboarding fixes, and a 30-minute owner review call." },
+      { name: "Monthly retention report", price: "$500-$1.5k / mo", detail: "Recurring trend tracking, cancellation tags, action follow-up, and a monthly retention agenda." },
+    ],
   },
   "shopify-cart-audit": {
     problem:
@@ -640,21 +1018,54 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Review product pages, cart, checkout flow, shipping/returns language, mobile readability, and abandoned-cart emails. Rank each issue by impact and effort, then deliver copy blocks and implementation notes.",
     firstClients:
       "Find small stores running ads or posting actively, add products to cart on mobile, and capture three trust/friction observations. Pitch a paid audit using those screenshots.",
+    startableOffer:
+      "A 48-hour Shopify cart and trust audit with five screenshot-backed fixes, abandoned-cart email copy, and a priority list the owner can implement without a redesign.",
+    publicPreview: {
+      title: "Free preview: mobile cart friction check",
+      intro:
+        "Use this quick check before pitching. It gives the store owner one useful observation while keeping the full scoring sheet, pricing calculator, and email swipe for members.",
+      steps: [
+        "Buyer hesitation: add one product to cart on mobile and find the clearest moment where a buyer might pause, such as shipping, returns, trust proof, payment, discount code, or delivery timing.",
+        "Tiny fix: write one improved line of copy the store could test without a redesign.",
+        "Safe pitch: offer a fixed 48-hour audit with screenshot-backed fixes, not a promised conversion or revenue lift.",
+      ],
+      lockedAssetTease:
+        "Members get the cart audit checklist, abandoned-cart swipe, pricing calculator, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "Store owners already care about conversion, so the offer maps to an existing priority.",
       "The audit is easier to buy than vague marketing help because the deliverable is a concrete list of fixes and copy.",
       "You can deliver manually without needing access to the store at first; screenshots and public flows reveal enough for a paid diagnostic.",
+      "The new pricing calculator makes the offer easier to quote without drifting into unpaid implementation work.",
     ],
     firstMoveAnalysis: [
       "Lead with one friction screenshot, not a claim about conversion lift.",
       "Avoid revenue guarantees. Frame recommendations around confidence, clarity, and reduced hesitation.",
       "Prioritize fixes the owner can implement quickly before suggesting deeper redesign.",
+      "Separate audit, copywriting, and implementation in the quote so the first paid job stays clean.",
     ],
     launchSprintDetails: [
       "Day 1: audit 20 small Shopify stores on mobile and save screenshots.",
       "Day 2: write 5 short teardown emails with one cart issue and one abandoned-email idea.",
       "Day 3-5: pitch a fixed-fee audit with a 48-hour turnaround.",
       "Day 6-7: deliver one audit with prioritized fixes, email swipe copy, and a retest checklist.",
+    ],
+    firstTenLeadsPlan: [
+      "Find 10 small Shopify stores that are actively posting, running ads, or launching products but still feel founder-operated.",
+      "Prioritise stores with unclear shipping, buried returns, weak product proof, generic abandoned-cart copy, or mobile checkout friction.",
+      "Add one product to cart on mobile and capture only the most obvious hesitation point.",
+      "Check whether the store has email capture, abandoned-cart messaging, trust badges, reviews, and visible delivery expectations.",
+      "Write one screenshot-backed observation for each lead in plain buyer language.",
+      "Draft one improved cart line, shipping note, or abandoned-cart subject line as the sample.",
+      "Send the sample to the founder or ecommerce manager with a fixed audit offer and 48-hour turnaround.",
+      "Avoid promising revenue lift. Frame the audit around reducing hesitation and making the next purchase step clearer.",
+      "Follow up with a second practical fix, such as returns wording, product proof, or delivery timing.",
+      "After the first audit, offer implementation support or a monthly conversion cleanup for new products and campaigns.",
+    ],
+    offerLadder: [
+      { name: "Mini cart teardown", price: "$99-$199", detail: "Three screenshot-backed fixes, one improved cart line, and one abandoned-cart subject line." },
+      { name: "Full cart audit", price: "$300-$750", detail: "Mobile cart review, trust copy, abandoned-cart email rewrite, priority list, and implementation notes." },
+      { name: "Monthly conversion cleanup", price: "$250-$1k / mo", detail: "Recurring product-launch checks, cart copy updates, email refreshes, and post-campaign friction reviews." },
     ],
   },
   "ugc-brief-generator": {
@@ -666,6 +1077,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Pick one product, research the page and reviews, identify buyer objections, write hooks and shots, and package the brief so a creator can film without needing a long brand call.",
     firstClients:
       "Start with ecommerce brands already using creators or ads. Rewrite one weak product brief as a sample and send it to the founder or marketing lead.",
+    startableOffer:
+      "A creator brief sprint for one product, including five hooks, a shot list, claim boundaries, objection angles, usage notes, and creator handoff copy.",
     whyDetails: [
       "Brands do not need to be convinced that content matters; they need better direction for the content they already commission.",
       "The deliverable is fast to understand because a good brief immediately feels more specific than a generic creator request.",
@@ -682,6 +1095,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 3-5: send the sample and offer a paid full brief pack.",
       "Day 6-7: deliver one full brief with hooks, shot list, claims checklist, and approval notes.",
     ],
+    firstTenLeadsPlan: [
+      "List 10 ecommerce brands that already post UGC-style videos or run creator ads.",
+      "Pick brands where one product has clear reviews, objections, use cases, and visual demo potential.",
+      "Skip brands with polished agency-level creative systems at first. Look for messy but active creator output.",
+      "Review one product page, three reviews, and recent social posts for each lead.",
+      "Write one sample hook and three-shot outline that is more specific than their current creator instructions.",
+      "Note one claim or usage-rights boundary so the sample feels commercially careful.",
+      "Send the mini-brief to the founder, marketing lead, or creator manager with a fixed one-product brief offer.",
+      "Position the service as better creator direction, not content strategy.",
+      "Follow up with a second hook based on a customer objection or review phrase.",
+      "After delivery, pitch a monthly brief pack for new products, seasonal campaigns, or ad tests.",
+    ],
   },
   "realtor-suburb-snapshot": {
     problem:
@@ -692,6 +1117,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Choose one suburb, collect public data with sources, summarize movements carefully, write three talking points, and package the snapshot into content formats the agent can publish after approval.",
     firstClients:
       "Target agents who post regularly but lack consistent suburb-specific analysis. Send a one-page sample for their core suburb.",
+    startableOffer:
+      "A weekly suburb snapshot for one agent, with sourced local notes, three plain-English talking points, one email intro, and two social captions for approval.",
     whyDetails: [
       "Agents already pay for positioning and content; this gives them a recurring local asset.",
       "The deliverable is repeatable by suburb, agency, or agent pod.",
@@ -708,6 +1135,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Week 2-3: deliver one paid weekly snapshot and get approval feedback.",
       "Week 4: propose a four-week content retainer for one suburb.",
     ],
+    firstTenLeadsPlan: [
+      "Choose one suburb with active listings, recent sales, and several agents posting online.",
+      "List 10 agents who consistently post listings, auctions, open homes, or market updates.",
+      "Skip agents who already publish polished data-backed suburb reports every week.",
+      "For each lead, identify their core suburb and one missing content angle buyers or sellers would care about.",
+      "Build one sample snapshot using public sources and include source names or dates.",
+      "Write one email intro and two caption options in the agent's likely tone.",
+      "Send the sample with a fixed weekly snapshot offer for one suburb.",
+      "Avoid unsupported market predictions. Make it clear that the agent approves all commentary before publishing.",
+      "Follow up with one extra local talking point or source the agent could use this week.",
+      "After the first paid snapshot, offer a four-week retainer for the agent's main suburb or listing farm area.",
+    ],
   },
   "ai-inbox-triage-trades": {
     problem:
@@ -718,6 +1157,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Map inquiry types, define required fields, write reply templates, build labels or folders, and create a daily summary of quote opportunities and urgent items.",
     firstClients:
       "Start with trades businesses that visibly use forms or social DMs and have slow or inconsistent response patterns. Pitch a manual triage setup before offering automation.",
+    startableOffer:
+      "A trades inbox triage setup with inquiry labels, missing-info reply templates, urgent-message rules, and a daily owner-approved lead summary.",
     whyDetails: [
       "The buyer understands missed calls and unanswered messages as lost revenue.",
       "The service improves response quality without asking the business to trust a fully autonomous AI agent.",
@@ -734,6 +1175,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Week 2-3: sell a paid setup for labels, templates, and daily summary format.",
       "Week 4: propose ongoing triage or incremental automation for repeated low-risk steps.",
     ],
+    firstTenLeadsPlan: [
+      "List 10 local trades businesses with visible enquiry channels: website forms, Facebook pages, Instagram DMs, email addresses, or service request pages.",
+      "Prioritise plumbers, electricians, roofers, cleaners, landscapers, and HVAC operators where missed messages can cost real jobs.",
+      "Look for signs of admin strain: slow replies in reviews, vague quote forms, multiple contact channels, or owner-run social pages.",
+      "Map the likely inquiry types for each lead: emergency, quote, missing info, supplier, complaint, or no-fit request.",
+      "Draft one missing-information reply template for a common job type in that trade.",
+      "Send the owner a short note about faster lead handling, not AI automation.",
+      "Offer a fixed setup: labels, templates, urgent rules, and a daily summary format.",
+      "Keep human approval central. Say clearly that nothing customer-facing is sent automatically without owner approval.",
+      "Follow up with one practical example of a cleaner quote request message for their trade.",
+      "After setup, offer weekly triage maintenance or automation of only the lowest-risk repeated steps.",
+    ],
   },
   "review-testimonial-service": {
     problem:
@@ -744,6 +1197,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Audit recent reviews, draft replies by sentiment, flag escalation risks, extract exact customer language, and package approved quotes into card formats and website snippets.",
     firstClients:
       "Find local businesses with recent reviews and inconsistent responses. Send two sample replies and one testimonial card idea using only approved public review language.",
+    startableOffer:
+      "A monthly review hygiene sprint with reply drafts, escalation notes, testimonial quote extraction, and simple card copy using only real customer language.",
     whyDetails: [
       "Reviews are already proof; the business just has not operationalized them.",
       "The monthly cadence matches how reviews arrive over time.",
@@ -760,6 +1215,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 3-5: pitch a monthly review hygiene and testimonial service.",
       "Day 6-7: deliver one batch: replies, escalation log, extracted claims, and card specs.",
     ],
+    firstTenLeadsPlan: [
+      "List 10 local businesses with recent Google reviews, Facebook reviews, or marketplace reviews.",
+      "Prioritise businesses with good reviews that are unanswered, unevenly answered, or not repackaged anywhere else.",
+      "Skip sensitive disputes, medical claims, legal claims, or anything that needs specialist review.",
+      "For each lead, choose two reviews: one positive review worth replying to and one proof quote worth repackaging.",
+      "Write two tone-safe reply drafts and one testimonial card idea using the customer's exact public language.",
+      "Send the sample to the owner with a fixed monthly review hygiene offer.",
+      "State clearly that all replies, quotes, and proof assets need owner approval before posting.",
+      "Follow up with one missed trust asset, such as a website snippet, story post, or sales-page quote block.",
+      "Close the first batch around a small number of recent reviews, not the entire review history.",
+      "After delivery, offer a monthly cadence for new reviews, reply drafts, testimonial cards, and escalation notes.",
+    ],
   },
   "manual-workflow-concierge": {
     problem:
@@ -770,6 +1237,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Pick one niche, define one weekly outcome, collect inputs, deliver manually with a QA checklist, track repeated steps, and only automate the smallest low-risk task after paid demand is proven.",
     firstClients:
       "Find niche operators who already do the painful workflow manually or inconsistently. Sell a pilot outcome, not software access.",
+    startableOffer:
+      "A two-week manual workflow pilot that delivers one repeated business outcome, logs exceptions, and produces a simple automation backlog after paid demand is proven.",
     whyDetails: [
       "Manual delivery proves willingness to pay before engineering spend.",
       "The workflow exposes real edge cases that a speculative product brief would miss.",
@@ -786,6 +1255,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Week 2-3: deliver the outcome manually and log time, inputs, decisions, and exceptions.",
       "Week 4: decide whether to continue manually, raise price, narrow the niche, or automate one repeated step.",
     ],
+    firstTenLeadsPlan: [
+      "Pick one narrow operator type with a repeated weekly workflow, such as recruiters, brokers, agencies, clinic admins, or niche consultants.",
+      "List 10 operators who visibly publish, hire, sell, or serve enough volume to have repeated admin pain.",
+      "Choose one weekly outcome they likely care about: lead list cleanup, report drafting, inbox summary, quote prep, or client update assembly.",
+      "Do not mention building software. Frame the offer as a manual pilot that proves whether the outcome is worth paying for.",
+      "Write a one-sentence pilot promise with inputs, output, cadence, and approval step.",
+      "Send a short note asking how they currently handle that repeated workflow.",
+      "Offer to run the first version manually for two weeks with a capped scope.",
+      "Track every exception, missing input, approval delay, and repeated step during delivery.",
+      "After the pilot, present the result, time saved, failure points, and automation backlog.",
+      "Only pitch automation after the buyer has paid for and used the manual outcome.",
+    ],
   },
   "airbnb-guest-guide-refresh": {
     problem:
@@ -796,6 +1277,8 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Audit the listing and guest friction points, collect host rules and local picks, write guest-friendly instructions, organize the guide, and deliver a refresh checklist so the host can keep it current.",
     firstClients:
       "Start with hosts whose listings mention repeated rules or have reviews referencing communication, arrival, parking, or amenities. Offer a fixed guest guide refresh.",
+    startableOffer:
+      "A guest guide refresh for one short-term rental, covering arrival, Wi-Fi, parking, house rules, local picks, checkout, and a host approval checklist.",
     whyDetails: [
       "Hosts feel the cost through repeated guest messages and preventable confusion.",
       "The output is easy to judge because a good guide immediately feels clearer and more guest-friendly.",
@@ -812,10 +1295,24 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 3-5: pitch a fixed refresh with guide outline, local picks, and checkout instructions.",
       "Day 6-7: deliver the guide, approval checklist, and optional upsell ideas.",
     ],
+    firstTenLeadsPlan: [
+      "List 10 short-term rental hosts or property managers with active listings in one destination or suburb.",
+      "Prioritise listings with reviews mentioning check-in, parking, rules, Wi-Fi, noise, amenities, local tips, or communication.",
+      "Skip listings run by polished property managers with strong branded guidebooks at first.",
+      "For each lead, note one guest question the listing does not answer clearly.",
+      "Draft one sample guide section, such as arrival, parking, Wi-Fi, checkout, or local breakfast picks.",
+      "Send the sample to the host with a fixed guest guide refresh offer.",
+      "Frame the service around fewer repeated questions and a smoother guest experience, not guaranteed better reviews.",
+      "Ask for host-approved facts before writing anything guests will rely on.",
+      "Follow up with one practical improvement based on a public review or listing gap.",
+      "After delivery, offer a seasonal refresh for local recommendations, rules, amenities, and upsell options.",
+    ],
   },
 };
 
 export const memberAssetDetails: Record<string, string> = {
+  "asset-cafe-automation":
+    "A DOCX automation pack with scheduled agent prompts for cafe lead spotting, owner-specific outreach drafts, monthly specials follow-ups, delivery QA, and before-after proof repurposing.",
   "asset-cafe-script":
     "A DOCX outreach pack with cold email, DM, Loom, follow-up, objection handling, intake prompts, a worked cafe prospect example, and handoff copy you can adapt before contacting owners.",
   "asset-cafe-pricing":
@@ -842,6 +1339,10 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for profile mini-audits, rescue sprint pitches, owner approval requests, final handoffs, and ethical review-request copy.",
   "asset-gbp-faqs":
     "A DOCX buyer FAQ pack covering profile rescue scope, ranking disclaimers, access requirements, owner approvals, review rules, and ongoing maintenance.",
+  "asset-gbp-automation":
+    "A DOCX automation pack with scheduled agent prompts for local profile scans, mini-audit drafting, rescue sprint follow-ups, approval reminders, and monthly profile hygiene reports.",
+  "asset-airbnb-photo-automation":
+    "A DOCX automation pack with scheduled agent prompts for weak-listing scans, sample-led outreach, edit-boundary checks, refresh QA, seasonal follow-ups, and proof repurposing.",
   "asset-airbnb-photo-prompts":
     "A DOCX prompt system with room-specific image enhancement prompts, realistic lifestyle-model insertion prompts, ambience and lighting variations, negative prompts, before/after sample copy, QA prompts, and edit-boundary rules for GPT Image 2, Nano Banana, and similar tools.",
   "asset-airbnb-photo-audit":
@@ -856,6 +1357,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for proactive sample delivery, paid refresh scope, source file requests, edit-boundary approvals, final before/after handoff, revision requests, and seasonal refresh upsells.",
   "asset-airbnb-photo-faqs":
     "A DOCX buyer FAQ pack covering ethical AI edits, model usage, representation accuracy, photo rights, platform-safe listing claims, revision rounds, turnaround, and what should not be changed.",
+  "asset-drone-roof-automation":
+    "A DOCX automation pack with scheduled agent prompts for partner prospecting, permission reminders, weather-delay messages, visual-report QA, recurring partner follow-ups, and referral proof posts.",
   "asset-drone-roof-outreach":
     "A DOCX outreach kit with cold call scripts, emails, DMs, free-sample roof positioning, partner pitches for roofers/agents/solar installers, follow-ups, and claim-safe objection handling.",
   "asset-drone-roof-report":
@@ -872,6 +1375,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for free sample offers, partner outreach, booking confirmation, permission/weather checks, report delivery, follow-up, and recurring report offers.",
   "asset-drone-roof-faqs":
     "A DOCX buyer FAQ pack covering visual-only scope, what is not certified, whether anyone climbs the roof, local drone compliance, weather delays, turnaround, pricing, and recurring work.",
+  "asset-powerwash-automation":
+    "A DOCX automation pack with scheduled agent prompts for neighbour prospecting, quote follow-ups, pre-job reminders, completion handoffs, maintenance reminders, and before-after proof distribution.",
   "asset-powerwash-outreach":
     "A DOCX outreach kit with neighbour notes, door-hanger copy, DMs, emails, call scripts, cluster-booking angles, follow-ups, and objection handling for visible dirty surfaces.",
   "asset-powerwash-pricing":
@@ -888,8 +1393,48 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX buyer FAQ pack covering surfaces, water use, runoff, test patches, weather delays, damage limitations, safety boundaries, pricing, and recurring cleans.",
   "asset-powerwash-proof":
     "A DOCX before/after proof playbook: how to frame matched shots, lighting and angle rules, a test-patch sequence, photo permission wording, a file-naming system, and caption templates that turn each result into neighbour and landlord referrals.",
+  "asset-garage-automation":
+    "A DOCX automation pack with scheduled agent prompts for street-by-street prospecting, photo quote triage, booking reminders, install handoff messages, referral asks, and landlord follow-ups.",
+  "asset-garage-outreach":
+    "A DOCX outreach kit with neighbour notes, local-group posts, DMs, emails, call scripts, follow-ups, and before/after proof angles for selling one-afternoon garage shelf installs.",
+  "asset-garage-pricing":
+    "An XLSX quote calculator with single-wall, full storage wall, add-on, travel, materials handling, profit check, proposal copy, and per-property bundle pricing.",
+  "asset-garage-install":
+    "A PDF install and safety checklist for wall type, service locating, stud/fixing selection, load ratings, layout, level mounting, cleanup, and no-structural-work boundaries.",
+  "asset-garage-prompts":
+    "A DOCX AI prompt pack for photo-based quotes, garage layout suggestions, safe scope wording, local outreach, completion handoff copy, and referral follow-ups.",
+  "asset-garage-intake":
+    "A DOCX client intake form for garage size, wall material, ceiling height, storage needs, supplied materials, access, budget, approval boundaries, and known service runs.",
+  "asset-garage-email-templates":
+    "A DOCX email template pack for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, referral asks, and landlord or builder follow-up.",
+  "asset-garage-faqs":
+    "A DOCX buyer FAQ pack covering wall types, weight limits, manufactured shelving scope, materials, installation time, mess, exclusions, and when a qualified trade is required.",
+  "asset-headlight-automation":
+    "A DOCX automation pack with scheduled agent prompts for cloudy-headlight lead spotting, sample-led outreach, quote follow-ups, booking reminders, completion handoffs, proof posts, and dealer batch follow-ups.",
+  "asset-headlight-outreach":
+    "A DOCX outreach kit with neighbour notes, marketplace messages, DMs, emails, call scripts, dealer batch pitches, follow-ups, and before/after proof angles for selling mobile headlight restoration.",
+  "asset-headlight-pricing":
+    "An XLSX quote calculator with single-car, two-car, dealer batch, travel, material cost, lens-condition, quote builder, job profit, and referral tracking sheets.",
+  "asset-headlight-safety":
+    "A PDF restoration checklist for lens condition, masking, grit sequence, polishing, UV sealant, PPE, weather, paint protection, before/after photos, and no-like-new-result boundaries.",
+  "asset-headlight-prompts":
+    "A DOCX AI prompt pack for photo-based lead scoring, quote notes, marketplace posts, safety wording, completion handoffs, referral asks, and dealer batch outreach.",
+  "asset-headlight-intake":
+    "A DOCX client intake form for car make/model, lens photos, damage, moisture, location, access, weather window, expectations, and approval boundaries.",
+  "asset-headlight-email-templates":
+    "A DOCX email template pack for sample-led outreach, quote requests, booking confirmation, pre-job prep, completion handoff, aftercare, referrals, and dealer batch follow-up.",
+  "asset-headlight-faqs":
+    "A DOCX buyer FAQ pack covering what restoration can fix, what needs replacement, sealant, timing, weather, price, aftercare, and safety boundaries.",
+  "asset-headlight-proof":
+    "A DOCX before/after proof playbook with matched photo angles, lens condition notes, consent wording, file naming, marketplace captions, and referral messages.",
+  "asset-gym-automation":
+    "A DOCX automation pack with scheduled agent prompts for churn data requests, cancellation-tag reviews, owner-call prep, monthly report QA, action follow-ups, and renewal prompts.",
   "asset-gym-report":
     "An XLSX retention workbook with raw cancellation tagging, dashboard formulas, revenue-at-risk summary, action plan, call notes, worked example, QA, and renewal tracking.",
+  "asset-gym-outreach":
+    "A DOCX outreach kit with boutique gym owner emails, DMs, call scripts, Loom structure, follow-ups, objection handling, public retention-clue examples, and privacy-safe starter-offer language.",
+  "asset-gym-pricing":
+    "An XLSX pricing workbook with dummy sample, one-month snapshot, retention sprint, monthly report, multi-location add-on, quote builder, data-scope guardrails, profit check, and proposal copy.",
   "asset-gym-call":
     "A PDF agenda and recommendation guide for a monthly churn review, including save-rate discussion, controllable churn analysis, sample recommendations, and next-action ownership.",
   "asset-gym-prompts":
@@ -900,6 +1445,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for gym owner outreach, churn data requests, report delivery, monthly action follow-up, and retainer renewal.",
   "asset-gym-faqs":
     "A DOCX buyer FAQ pack covering data needs, privacy, retention disclaimers, monthly cadence, owner calls, staff roles, and what the report can and cannot prove.",
+  "asset-shopify-automation":
+    "A DOCX automation pack with scheduled agent prompts for store prospecting, cart audit notes, abandoned-cart copy drafts, client follow-ups, implementation checks, and post-audit upsell ideas.",
   "asset-shopify-audit":
     "A PDF cart and checkout audit checklist with product-page trust scoring, shipping/returns checks, mobile checkout review, priority scoring, and fix ranking.",
   "asset-shopify-email":
@@ -924,6 +1471,10 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for ecommerce brand outreach, product information requests, brief delivery, revision requests, creator handoff, and monthly brief retainers.",
   "asset-ugc-faqs":
     "A DOCX buyer FAQ pack covering brief scope, creator responsibilities, usage rights, claim safety, deliverables, revision rounds, and what the pack does not include.",
+  "asset-ugc-automation":
+    "A DOCX automation pack with scheduled agent prompts for ecommerce prospecting, product-angle research, creator brief drafts, claim-safety checks, revision follow-ups, and retainer prompts.",
+  "asset-realtor-automation":
+    "A DOCX automation pack with scheduled agent prompts for suburb source checks, weekly snapshot drafting, agent outreach, compliance review reminders, delivery handoffs, and renewal prompts.",
   "asset-realtor-report":
     "An XLSX suburb snapshot workbook with source log, weekly snapshot formulas, content calendar, lead follow-up prompts, compliance log, worked example, and QA sheets.",
   "asset-realtor-pitch":
@@ -948,6 +1499,10 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for trades owner outreach, inbox workflow setup, approval rule confirmation, weekly summaries, missing-info patterns, and ongoing triage.",
   "asset-trades-faqs":
     "A DOCX buyer FAQ pack covering human approval, emergency handling, inbox access, AI boundaries, quote rules, implementation, and ongoing workflow support.",
+  "asset-trades-automation":
+    "A DOCX automation pack with scheduled agent prompts for inbox summaries, lead classification checks, missing-info reply drafts, owner approval queues, weekly reports, and workflow improvements.",
+  "asset-reviews-automation":
+    "A DOCX automation pack with scheduled agent prompts for review monitoring, reply drafting, testimonial extraction, escalation checks, monthly proof delivery, and renewal follow-ups.",
   "asset-reviews-replies":
     "A DOCX swipe file for review replies with positive, neutral, negative, escalation, privacy, testimonial extraction, and public tone rules.",
   "asset-reviews-cards":
@@ -972,6 +1527,10 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for niche outreach, manual pilot setup, input requests, weekly client reporting, exception follow-up, and renewal after validation.",
   "asset-manual-faqs":
     "A DOCX buyer FAQ pack covering manual-first delivery, software boundaries, pilot scope, data handling, approvals, automation timing, and what validation means.",
+  "asset-manual-automation":
+    "A DOCX automation pack with scheduled agent prompts for niche prospecting, manual delivery logs, weekly client reports, exception reviews, automation backlog scoring, and renewal follow-ups.",
+  "asset-airbnb-automation":
+    "A DOCX automation pack with scheduled agent prompts for listing-gap scans, guest-guide sample sections, host outreach, fact approval reminders, seasonal refresh checks, and upsell follow-ups.",
   "asset-airbnb-outline":
     "A DOCX guest guide outline with arrival, house rhythm, local recommendations, emergency info, checkout copy, completed sample page, and host approval checklist.",
   "asset-airbnb-upsell":

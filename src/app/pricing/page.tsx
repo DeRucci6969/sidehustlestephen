@@ -3,13 +3,13 @@ import { ArrowRight, Check, Crown, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
-import { packs } from "@/data/packs";
+import { newlyAddedPacks, packs } from "@/data/packs";
 import { getMembershipContext } from "@/lib/membership";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: "Pricing | Side Hustle Stephen",
-  description: "Unlock every Side Hustle Stephen launch pack, outreach script, pricing file, delivery checklist, prompt pack, and member asset for $9/month.",
+  description: `Unlock every Side Hustle Stephen launch pack, outreach script, pricing file, delivery checklist, prompt pack, and member asset for ${siteConfig.priceLabel}.`,
   alternates: {
     canonical: "/pricing",
   },
@@ -31,7 +31,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Pricing | Side Hustle Stephen",
-    description: "Unlock every launch pack and member asset for $9/month.",
+    description: `Unlock every launch pack and member asset for ${siteConfig.priceLabel}.`,
     images: [siteConfig.ogImage],
   },
 };
@@ -39,6 +39,7 @@ export const metadata = {
 export default async function PricingPage() {
   const viewer = await getMembershipContext();
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
+  const includedToday = newlyAddedPacks.slice(0, 4);
   const included = ["Full backlog access", "Launch assets and scripts", "Member-only playbooks", "Private download links"];
   const assetExamples = [
     ["Outreach", "Cold emails, DMs, call scripts, follow-ups, and first-buyer pitch angles."],
@@ -90,6 +91,27 @@ export default async function PricingPage() {
                   {item}
                 </div>
               ))}
+            </div>
+            <div className="mt-5 max-w-2xl rounded-lg bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Included today</p>
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {includedToday.map((pack) => (
+                  <Link
+                    key={pack.slug}
+                    href={`/packs/${pack.slug}`}
+                    className="group rounded-lg bg-white/64 p-3 ring-1 ring-[rgba(28,32,28,0.08)] transition hover:-translate-y-0.5 hover:bg-white"
+                  >
+                    <span className="block text-sm font-bold leading-5 tracking-normal text-[var(--navy-ink)]">{pack.title}</span>
+                    <span className="mt-1 block text-xs font-semibold leading-5 text-[var(--graphite)]">
+                      {pack.buyer} - {pack.assets.length} assets
+                    </span>
+                    <span className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[var(--safety-orange)]">
+                      View pack
+                      <ArrowRight size={13} className="transition group-hover:translate-x-0.5" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
           <div className="liquid-panel glass rounded-lg p-5 orange-focus sm:p-7">

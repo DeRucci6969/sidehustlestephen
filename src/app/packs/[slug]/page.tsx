@@ -1,15 +1,18 @@
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, BadgeDollarSign, CheckCircle2, ClipboardList, Crown, Download, FileQuestion, FileText, LockKeyhole, Mail, Rocket, ShieldCheck, Sparkles, Table2, Target } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeDollarSign, CheckCircle2, ClipboardList, Crown, Download, FileQuestion, FileText, LockKeyhole, Mail, Repeat2, Rocket, ShieldCheck, Sparkles, Table2, Target } from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
 import { TrackOnMount } from "@/components/track-on-mount";
-import { getPack, memberAssetDetails, packPageDetails, packs } from "@/data/packs";
+import { categorySlug, getPack, memberAssetDetails, packPageDetails, packs } from "@/data/packs";
 import { getMembershipContext } from "@/lib/membership";
 import { siteConfig } from "@/lib/site";
 
+export const dynamicParams = false;
+
 function getAssetPresentation(title: string, type: string) {
+  if (title.includes("Automation")) return { label: "Automate", Icon: Repeat2, tone: "bg-[#eaf8f0] text-[var(--validation-green)]" };
   if (title.includes("Intake")) return { label: "Scope", Icon: ClipboardList, tone: "bg-[rgba(28,32,28,0.06)] text-[var(--obsidian)]" };
   if (title.includes("Email") || title.includes("Script") || title.includes("Pitch") || title.includes("Swipe") || title.includes("Reply")) {
     return { label: "Sell", Icon: Mail, tone: "bg-[#eef6f8] text-[#1f6b83]" };
@@ -25,10 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const pack = getPack(slug);
   if (!pack) return {};
-  const description = `${pack.hook} A practical launch pack for ${pack.buyer.toLowerCase()} with outreach, pricing, delivery, and member assets.`;
+  const description = pack.seoDescription ?? `${pack.hook} A practical launch pack for ${pack.buyer.toLowerCase()} with outreach, pricing, delivery, and member assets.`;
+  const socialImage = pack.ogImage ?? siteConfig.ogImage;
 
   return {
-    title: `${pack.title} | Side Hustle Stephen`,
+    title: pack.seoTitle ?? `${pack.title} | Side Hustle Stephen`,
     description,
     alternates: {
       canonical: `/packs/${pack.slug}`,
@@ -37,11 +41,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${pack.title} | ${siteConfig.name}`,
       description,
       url: `/packs/${pack.slug}`,
-      type: "article",
+      type: "website",
       siteName: siteConfig.name,
       images: [
         {
-          url: siteConfig.ogImage,
+          url: socialImage,
           width: 1200,
           height: 630,
           alt: `${pack.title} launch pack`,
@@ -52,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${pack.title} | ${siteConfig.name}`,
       description,
-      images: [siteConfig.ogImage],
+      images: [socialImage],
     },
   };
 }
@@ -104,7 +108,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
     .slice(0, 3);
   const launchSprint = detail?.launchSprintDetails ?? ["Pick a tight buyer segment", ...pack.firstSteps, "Package proof and follow up"].slice(0, 5);
   const assetTypes = Array.from(new Set(pack.assets.map((asset) => asset.type))).join(", ");
-  const firstAssetTitle = pack.assets[0]?.title ?? "launch asset";
+  const firstAssetTitle = pack.assets.find((asset) => asset.title !== "AI Automation Pack")?.title ?? pack.assets[0]?.title ?? "launch asset";
   const startableOffer = detail?.startableOffer ?? `A focused ${pack.title} starter package.`;
   const packFaqs = getPackFaqs(pack, detail);
   const faqSchema = {
@@ -118,6 +122,56 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
         text: answer,
       },
     })),
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Business Pack Archive",
+        item: `${siteConfig.url}/packs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: pack.category,
+        item: `${siteConfig.url}/packs/categories/${categorySlug(pack.category)}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: pack.title,
+        item: `${siteConfig.url}/packs/${pack.slug}`,
+      },
+    ],
+  };
+  const packSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: pack.title,
+    description: pack.summary,
+    url: `${siteConfig.url}/packs/${pack.slug}`,
+    image: pack.ogImage ? `${siteConfig.url}${pack.ogImage}` : `${siteConfig.url}${siteConfig.ogImage}`,
+    datePublished: pack.publishedAt,
+    about: pack.category,
+    audience: {
+      "@type": "Audience",
+      audienceType: pack.buyer,
+    },
+    hasPart: pack.assets.map((asset) => ({
+      "@type": "CreativeWork",
+      name: asset.title,
+      description: asset.description,
+      encodingFormat: asset.type,
+      isAccessibleForFree: false,
+    })),
+    isPartOf: {
+      "@type": "CollectionPage",
+      name: "Business Pack Archive",
+      url: `${siteConfig.url}/packs`,
+    },
   };
   const assetWorkflow = [
     ["Scope", "Collect clean inputs"],
@@ -141,6 +195,10 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbSchema, packSchema]) }}
+      />
       <main className="mx-auto w-full max-w-6xl overflow-hidden px-4 py-8 sm:px-8 sm:py-10">
         <Link href="/packs" className="frosted-pill mb-5 inline-flex h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-[var(--text-primary)] sm:mb-7">
           <ArrowLeft size={16} />
@@ -148,7 +206,13 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
         </Link>
         <section className="liquid-panel glass overflow-hidden rounded-lg p-5 sm:rounded-[2rem] sm:p-10">
           <div className="flex flex-wrap gap-2">
-            {[pack.category, pack.startupCost, pack.timeToFirstSale, pack.difficulty].map((chip) => (
+            <Link
+              href={`/packs/categories/${categorySlug(pack.category)}`}
+              className="frosted-pill rounded-full px-3 py-1.5 text-xs font-semibold text-[var(--text-primary)] transition hover:-translate-y-0.5 hover:bg-white/82 sm:px-4 sm:py-2 sm:text-sm"
+            >
+              {pack.category}
+            </Link>
+            {[pack.startupCost, pack.timeToFirstSale, pack.difficulty].map((chip) => (
               <span key={chip} className="frosted-pill rounded-full px-3 py-1.5 text-xs font-semibold text-[var(--text-primary)] sm:px-4 sm:py-2 sm:text-sm">
                 {chip}
               </span>
@@ -258,6 +322,38 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 ))}
               </div>
             </div>
+            {detail?.publicPreview ? (
+              <div className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="max-w-2xl">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Public preview</p>
+                    <h2 className="mt-3 text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{detail.publicPreview.title}</h2>
+                    <p className="mt-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">{detail.publicPreview.intro}</p>
+                  </div>
+                  <span className="inline-flex w-fit rounded-full bg-[var(--orange-glass)] px-3 py-1.5 text-xs font-black uppercase tracking-[0.13em] text-[var(--safety-orange)]">
+                    Free sample
+                  </span>
+                </div>
+                <div className="mt-5 grid gap-3">
+                  {detail.publicPreview.steps.map((step, index) => (
+                    <div key={step} className="pack-detail-tile-strong flex items-start gap-4 rounded-2xl p-4">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--orange-glass)] font-bold text-[var(--safety-orange)]">
+                        {index + 1}
+                      </span>
+                      <p className="pt-1 text-sm font-semibold leading-6 text-[var(--text-primary)]">{step}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-5 rounded-lg bg-[var(--deep-forest)] p-4 text-white">
+                  <p className="text-sm font-semibold leading-6 text-white/78">{detail.publicPreview.lockedAssetTease}</p>
+                  {!isMember ? (
+                    <div className="mt-4">
+                      <JoinButton label="Unlock the full workflow" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
             <div id="member-assets" className="liquid-panel glass relative scroll-mt-24 overflow-hidden rounded-lg p-5 shadow-[0_0_0_1px_rgba(246,245,242,0.18),0_28px_90px_rgba(0,0,0,0.28)] sm:p-6">
               <div className="absolute inset-0 rounded-lg ring-1 ring-[rgba(28,32,28,0.18)]" />
               <div className="relative">

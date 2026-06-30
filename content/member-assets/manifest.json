@@ -451,6 +451,193 @@
     "bytes": 7919
   },
   {
+    "id": "asset-garage-automation",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "AI Automation Pack",
+    "type": "DOCX",
+    "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
+    "path": "content/member-assets/garage-shelf-installation/ai-automation-pack.docx",
+    "filename": "ai-automation-pack.docx",
+    "bytes": 8074
+  },
+  {
+    "id": "asset-garage-outreach",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Garage Outreach Scripts",
+    "type": "DOCX",
+    "description": "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around the before-and-after garage transformation.",
+    "path": "content/member-assets/garage-shelf-installation/garage-outreach-scripts.docx",
+    "filename": "garage-outreach-scripts.docx",
+    "bytes": 8021
+  },
+  {
+    "id": "asset-garage-pricing",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Garage Install Quote Calculator",
+    "type": "XLSX",
+    "description": "Single-bay, double, and premium install tiers with add-ons, materials, travel, quote builder, profit check, and recurring-organising options.",
+    "path": "content/member-assets/garage-shelf-installation/garage-install-quote-calculator.xlsx",
+    "filename": "garage-install-quote-calculator.xlsx",
+    "bytes": 15467
+  },
+  {
+    "id": "asset-garage-install",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Install & Safety Checklist",
+    "type": "PDF",
+    "description": "Pre-install checklist for wall type, locating wiring/pipes, anchor selection, load ratings, level mounting, before/after photos, and clean scope boundaries.",
+    "path": "content/member-assets/garage-shelf-installation/install-safety-checklist.pdf",
+    "filename": "install-safety-checklist.pdf",
+    "bytes": 21330
+  },
+  {
+    "id": "asset-garage-prompts",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "AI Prompt Pack",
+    "type": "DOCX",
+    "description": "Practical prompts for photo-based quotes, wall-layout suggestions, anchor/load notes, local-group posts, and referral follow-ups.",
+    "path": "content/member-assets/garage-shelf-installation/ai-prompt-pack.docx",
+    "filename": "ai-prompt-pack.docx",
+    "bytes": 9431
+  },
+  {
+    "id": "asset-garage-intake",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Client Intake Form",
+    "type": "DOCX",
+    "description": "Editable intake questions for garage size, what to store, wall material, access, budget, photos, and approval boundaries.",
+    "path": "content/member-assets/garage-shelf-installation/client-intake-form.docx",
+    "filename": "client-intake-form.docx",
+    "bytes": 7401
+  },
+  {
+    "id": "asset-garage-email-templates",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Client Email Templates",
+    "type": "DOCX",
+    "description": "Emails for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, and referral/maintenance reminders.",
+    "path": "content/member-assets/garage-shelf-installation/client-email-templates.docx",
+    "filename": "client-email-templates.docx",
+    "bytes": 7334
+  },
+  {
+    "id": "asset-garage-faqs",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Client FAQs",
+    "type": "DOCX",
+    "description": "Buyer-facing FAQs for wall types, weight limits, what is included, materials, timeline, mess, and structural/safety boundaries.",
+    "path": "content/member-assets/garage-shelf-installation/client-faqs.docx",
+    "filename": "client-faqs.docx",
+    "bytes": 7275
+  },
+  {
+    "id": "asset-headlight-automation",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "AI Automation Pack",
+    "type": "DOCX",
+    "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
+    "path": "content/member-assets/mobile-headlight-restoration/ai-automation-pack.docx",
+    "filename": "ai-automation-pack.docx",
+    "bytes": 8085
+  },
+  {
+    "id": "asset-headlight-outreach",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Headlight Outreach Scripts",
+    "type": "DOCX",
+    "description": "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof.",
+    "path": "content/member-assets/mobile-headlight-restoration/headlight-outreach-scripts.docx",
+    "filename": "headlight-outreach-scripts.docx",
+    "bytes": 8026
+  },
+  {
+    "id": "asset-headlight-pricing",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Headlight Restoration Quote Calculator",
+    "type": "XLSX",
+    "description": "Single-car, two-car, dealer batch, add-on, travel, material cost, and profit-check pricing workbook.",
+    "path": "content/member-assets/mobile-headlight-restoration/headlight-restoration-quote-calculator.xlsx",
+    "filename": "headlight-restoration-quote-calculator.xlsx",
+    "bytes": 15101
+  },
+  {
+    "id": "asset-headlight-safety",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Restoration Safety Checklist",
+    "type": "PDF",
+    "description": "Pre-job checklist for lens condition, masking, sanding grit sequence, UV sealant, PPE, weather, paint protection, and result boundaries.",
+    "path": "content/member-assets/mobile-headlight-restoration/restoration-safety-checklist.pdf",
+    "filename": "restoration-safety-checklist.pdf",
+    "bytes": 14694
+  },
+  {
+    "id": "asset-headlight-prompts",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "AI Prompt Pack",
+    "type": "DOCX",
+    "description": "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy.",
+    "path": "content/member-assets/mobile-headlight-restoration/ai-prompt-pack.docx",
+    "filename": "ai-prompt-pack.docx",
+    "bytes": 9418
+  },
+  {
+    "id": "asset-headlight-intake",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Client Intake Form",
+    "type": "DOCX",
+    "description": "Editable intake questions for car make/model, lens condition, photos, location, access, weather window, expectations, and approval boundaries.",
+    "path": "content/member-assets/mobile-headlight-restoration/client-intake-form.docx",
+    "filename": "client-intake-form.docx",
+    "bytes": 7418
+  },
+  {
+    "id": "asset-headlight-email-templates",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Client Email Templates",
+    "type": "DOCX",
+    "description": "Emails for sample-led outreach, quote requests, booking confirmation, pre-job prep, completion handoff, referral asks, and dealer batch follow-ups.",
+    "path": "content/member-assets/mobile-headlight-restoration/client-email-templates.docx",
+    "filename": "client-email-templates.docx",
+    "bytes": 7364
+  },
+  {
+    "id": "asset-headlight-faqs",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Client FAQs",
+    "type": "DOCX",
+    "description": "Buyer-facing FAQs for what restoration can and cannot fix, sealant, weather, timing, price, safety, and when replacement is better.",
+    "path": "content/member-assets/mobile-headlight-restoration/client-faqs.docx",
+    "filename": "client-faqs.docx",
+    "bytes": 7277
+  },
+  {
+    "id": "asset-headlight-proof",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Before & After Proof Kit",
+    "type": "DOCX",
+    "description": "Photo playbook for matched headlight shots, consent wording, file naming, marketplace captions, and referral follow-ups.",
+    "path": "content/member-assets/mobile-headlight-restoration/before-after-proof-kit.docx",
+    "filename": "before-after-proof-kit.docx",
+    "bytes": 6308
+  },
+  {
     "id": "asset-gym-automation",
     "packSlug": "gym-churn-report",
     "packTitle": "Boutique Gym Churn Report",
@@ -471,6 +658,28 @@
     "path": "content/member-assets/gym-churn-report/churn-report-template.xlsx",
     "filename": "churn-report-template.xlsx",
     "bytes": 12504
+  },
+  {
+    "id": "asset-gym-outreach",
+    "packSlug": "gym-churn-report",
+    "packTitle": "Boutique Gym Churn Report",
+    "title": "Gym Owner Outreach Scripts",
+    "type": "DOCX",
+    "description": "Email, DM, call, and follow-up scripts built around public retention clues and anonymized-data starter offers.",
+    "path": "content/member-assets/gym-churn-report/gym-owner-outreach-scripts.docx",
+    "filename": "gym-owner-outreach-scripts.docx",
+    "bytes": 8007
+  },
+  {
+    "id": "asset-gym-pricing",
+    "packSlug": "gym-churn-report",
+    "packTitle": "Boutique Gym Churn Report",
+    "title": "Churn Report Pricing Calculator",
+    "type": "XLSX",
+    "description": "Snapshot, sprint, and monthly report pricing with quote builder, data-scope guardrails, and profit check.",
+    "path": "content/member-assets/gym-churn-report/churn-report-pricing-calculator.xlsx",
+    "filename": "churn-report-pricing-calculator.xlsx",
+    "bytes": 13047
   },
   {
     "id": "asset-gym-call",
@@ -559,6 +768,17 @@
     "path": "content/member-assets/shopify-cart-audit/abandoned-cart-email-swipe.docx",
     "filename": "abandoned-cart-email-swipe.docx",
     "bytes": 7345
+  },
+  {
+    "id": "asset-shopify-pricing",
+    "packSlug": "shopify-cart-audit",
+    "packTitle": "Shopify Cart Audit Pack",
+    "title": "Cart Audit Pricing Calculator",
+    "type": "XLSX",
+    "description": "Starter audit, full audit, implementation, and monthly cleanup pricing with quote builder and profit check.",
+    "path": "content/member-assets/shopify-cart-audit/cart-audit-pricing-calculator.xlsx",
+    "filename": "cart-audit-pricing-calculator.xlsx",
+    "bytes": 14397
   },
   {
     "id": "asset-shopify-prompts",

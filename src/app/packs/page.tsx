@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ArchiveBrowser } from "@/components/archive-browser";
-import { packs } from "@/data/packs";
+import { JoinButton } from "@/components/join-modal";
+import { packCategories, packs } from "@/data/packs";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
@@ -35,6 +37,7 @@ export const metadata = {
 
 export default function PacksPage() {
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
+  const schemaPacks = [...packs].sort((a, b) => b.popularityScore - a.popularityScore);
   const archiveSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -43,7 +46,7 @@ export default function PacksPage() {
     url: `${siteConfig.url}/packs`,
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: packs.map((pack, index) => ({
+      itemListElement: schemaPacks.map((pack, index) => ({
         "@type": "ListItem",
         position: index + 1,
         url: `${siteConfig.url}/packs/${pack.slug}`,
@@ -68,6 +71,15 @@ export default function PacksPage() {
             <p className="premium-copy mt-4 max-w-2xl text-base leading-7 sm:mt-5 sm:text-lg sm:leading-8">
               Browse {packs.length} business packs. Public previews are open; full playbooks and downloads unlock with membership.
             </p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <JoinButton label="Unlock the archive" returnTo="/packs" className="w-full sm:w-auto" />
+              <Link
+                href="/pricing"
+                className="frosted-pill inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold text-[var(--text-primary)] sm:w-auto"
+              >
+                See pricing
+              </Link>
+            </div>
           </div>
           <div className="liquid-panel glass hidden min-w-0 rounded-lg p-4 sm:block sm:p-5">
             <p className="text-sm font-semibold text-[var(--graphite)]">Archive snapshot</p>
@@ -87,6 +99,22 @@ export default function PacksPage() {
             </div>
           </div>
         </div>
+        <section className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {packCategories.map((category) => (
+            <Link
+              key={category.slug}
+              href={`/packs/categories/${category.slug}`}
+              className="glass-soft group rounded-lg p-4 transition hover:-translate-y-0.5 hover:bg-white/78 hover:shadow-[0_18px_42px_rgba(22,32,50,0.12)]"
+            >
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">Category</p>
+              <h2 className="mt-2 text-lg font-bold leading-tight tracking-normal text-[var(--navy-ink)]">{category.name}</h2>
+              <p className="mt-2 text-sm font-semibold text-[var(--graphite)]">{category.count} {category.count === 1 ? "pack" : "packs"}</p>
+              <span className="mt-4 inline-flex text-sm font-bold text-[var(--safety-orange)] transition group-hover:translate-x-0.5">
+                Browse category
+              </span>
+            </Link>
+          ))}
+        </section>
         <ArchiveBrowser packs={packs} />
       </main>
       <Footer />
