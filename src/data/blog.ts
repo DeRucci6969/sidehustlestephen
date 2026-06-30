@@ -29,6 +29,163 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-start-a-google-business-profile-rescue-service",
+    title: "How to Start a Google Business Profile Rescue Service",
+    seoTitle: "How to Start a Google Business Profile Rescue Service | First-Client Plan",
+    description:
+      "A practical guide to starting a Google Business Profile rescue service with a clear buyer, fixed starter offer, pricing guidance, outreach plan, and safe delivery boundaries.",
+    category: "Local Service",
+    publishedAt: "2026-06-30",
+    updatedAt: "2026-06-30",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
+    shortAnswer:
+      "To start a Google Business Profile rescue service, choose one local business category, find visible profile problems, create a tiny audit sample, and sell a fixed cleanup sprint. The offer should improve profile clarity, trust signals, service copy, photos, FAQs, and review-request wording. Do not promise rankings, calls, map-pack positions, or guaranteed leads.",
+    keyPoints: [
+      "Best buyers are local businesses with weak public profiles: trades, clinics, salons, cleaners, cafes, mechanics, studios, and home services.",
+      "The starter offer should be a profile hygiene sprint, not local SEO magic.",
+      "Use public clues for outreach: missing services, stale photos, unanswered reviews, thin descriptions, wrong hours, or no FAQs.",
+      "A realistic starter price can sit in the low hundreds when scope is tight, but quote from time, access, approvals, and revision risk.",
+      "The next step after one cleanup is a monthly profile hygiene check, review-request workflow, or content refresh.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for beginners who want a simple B2B local service with a visible problem and a reachable buyer. You are not selling advanced SEO. You are selling profile clarity, customer trust, and a clean handoff for businesses that have let their public listing drift.",
+          "Good buyer lanes include electricians, plumbers, roofers, dentists, physios, salons, cleaners, cafes, mechanics, accountants, gyms, and home service companies. The best early prospects are owner-operated businesses where the person who feels the pain can approve a small sprint.",
+          "Avoid regulated claims and sensitive advice. You can help organise public profile information and draft owner-approved copy. You should not pretend to be Google, guarantee rankings, create fake reviews, or publish unapproved claims.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "A weak Google Business Profile makes a business look less current than it really is. Common problems are old opening hours, thin service descriptions, missing categories, stale photos, no FAQs, unanswered reviews, weak booking links, and photos that do not show the actual service clearly.",
+          "The buyer already has a reason to care because customers use the profile before calling, visiting, booking, or comparing options. Your pitch is not that you will make them famous. Your pitch is that their public front door should not look neglected.",
+          "The useful language is profile rescue, profile cleanup, profile hygiene, profile trust check, or local listing refresh. That sounds practical. It also keeps the promise inside what you can actually control.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "Keep the first version small enough to buy quickly. A good starter sprint might include a public profile audit, screenshot-backed issue list, service description drafts, FAQ drafts, photo checklist, review-request wording, and a final handoff note.",
+          "Make the exclusions clear. You are not promising rankings, more phone calls, review volume, ad performance, legal compliance, medical claims, financial advice, or platform approval. You are also not logging into the profile unless the owner gives proper access and written approval.",
+          "The clean one-sentence offer is: I help local businesses clean up weak Google Business Profiles by fixing public trust gaps, drafting better service copy, and giving the owner an approval-ready handoff.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "A narrow starter audit can be priced lower than a full rescue sprint because it has less delivery risk. A useful starting ladder is: mini audit, cleanup sprint, and monthly hygiene check.",
+          "As a starting point, a mini audit might be priced around $49-$150, a fixed cleanup sprint around $200-$600, and monthly profile hygiene around $100-$400 per month. These are not promises or market rules. Adjust for business size, number of locations, access needs, approvals, photos, reviews, and how much copy you are drafting.",
+          "Do not price only from vibes. Estimate the time to audit, write, revise, coordinate approvals, collect assets, and hand over final notes. If the buyer wants review replies, photo sourcing, website edits, multi-location work, or monthly posting, quote that separately.",
+        ],
+      },
+      {
+        heading: "Build a tiny proof sample",
+        paragraphs: [
+          "The first proof sample should be useful without giving away the whole job. Pick one prospect and create a 3-point public audit. Use screenshots, but do not expose private information or make claims you cannot verify.",
+          "A strong sample might say: your profile lists emergency plumbing, but the services section does not explain it; three reviews mention blocked drains, but there is no FAQ for same-day help; the latest exterior photo is from two years ago. Then show one draft improvement.",
+          "Keep it approval-safe. Draft copy should be labelled as a suggested starting point. The business owner still needs to verify services, prices, hours, qualifications, and local requirements before publishing.",
+        ],
+      },
+      {
+        heading: "Find the first 20 prospects",
+        paragraphs: [
+          "Start with one category in one area. For example: emergency plumbers in Brisbane, dentists in Manchester, roofers in Phoenix, salons in Sydney, or cleaners in Austin. The tighter the lane, the easier it is to spot repeated problems and write messages that sound specific.",
+          "Look for visible gaps: no services listed, old photos, unanswered reviews, vague descriptions, no appointment link, missing FAQs, mismatched hours, poor category fit, or no owner updates. Write one note per prospect. That note becomes the reason for outreach.",
+          "Do not scrape aggressively or spam. Build a small list by hand first. Twenty researched prospects will teach you more than two hundred lazy messages.",
+        ],
+      },
+      {
+        heading: "Send a specific outreach message",
+        paragraphs: [
+          "The first message should be short. Name the business, mention one public clue, offer the small audit, and ask one easy question.",
+          "Example: Hi Jess, I noticed your profile has great reviews for colour work, but the services section does not mention balayage or colour correction. I made a quick 3-point profile cleanup note. Want me to send it over?",
+          "If they reply, offer the paid next step: a fixed rescue sprint with audit, copy drafts, FAQ drafts, photo checklist, and handoff notes. Want the scripts, pricing file, and delivery checklist? Open the Google Business Profile Rescue launch pack.",
+        ],
+      },
+      {
+        heading: "Deliver without overpromising",
+        paragraphs: [
+          "Delivery should be boring in the best way. Confirm the owner, profile URL, services, service area, approved wording, photos, hours, contact details, booking links, and review boundaries. Save before screenshots, then send draft changes for approval.",
+          "Use cautious copy. Say things like profile clarity, customer trust, owner-approved service copy, and cleaner handoff. Avoid ranking promises, lead promises, fake urgency, fake scarcity, or anything that suggests guaranteed business outcomes.",
+          "The final handoff should include what changed, what still needs owner action, what to review monthly, and which issues were deliberately left out because they need professional judgment or platform access.",
+        ],
+      },
+      {
+        heading: "Turn the first job into repeat work",
+        paragraphs: [
+          "A one-time rescue is useful, but the recurring version is profile hygiene. Many small businesses need monthly checks for hours, photos, seasonal services, review prompts, service copy, posts, and broken links.",
+          "Pitch recurring only after the first job is clean. The message is simple: I can check this once a month, catch stale details, draft owner-approved updates, and keep the profile from drifting again.",
+          "This is not passive income. It is a practical maintenance service. That is fine. The point is to build a repeatable client workflow instead of chasing a new idea every Monday.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: profile rescue sprint for a local electrician",
+      steps: [
+        "Choose one suburb and list 20 electricians with public Google profiles.",
+        "Find five profiles with visible trust gaps: no emergency service detail, old photos, unanswered reviews, vague service copy, or missing FAQs.",
+        "Create a 3-point sample for the strongest prospect using only public information.",
+        "Send a short message offering to share the sample, not a broad SEO pitch.",
+        "If they reply, quote a fixed cleanup sprint: audit, service copy, FAQs, photo checklist, and review-request wording.",
+        "Ask the owner to verify services, licensing language, hours, phone number, service area, and emergency claims before anything is published.",
+        "Deliver a handoff note with monthly checks and a simple hygiene retainer option.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one local business category.",
+      "Choose one suburb, city area, or service niche.",
+      "List 20 Google Business Profiles by hand.",
+      "Score each profile for services, photos, FAQs, reviews, hours, links, and description clarity.",
+      "Choose the five profiles with the clearest public gaps.",
+      "Create one 3-point mini audit sample.",
+      "Write a fixed rescue sprint with scope, price range, turnaround, and exclusions.",
+      "Send five specific outreach messages today.",
+      "Track replies, objections, access questions, and price pushback.",
+      "Turn the first paid job into a reusable checklist and handoff template.",
+    ],
+    commonMistakes: [
+      "Promising map rankings, call growth, review growth, or revenue results.",
+      "Selling local SEO when the first offer is really profile cleanup.",
+      "Creating fake reviews, fake photos, fake customer stories, or unverified claims.",
+      "Asking for profile access before trust, scope, and approvals are clear.",
+      "Auditing every type of business instead of learning one buyer lane first.",
+      "Doing the full rescue for free instead of sharing a tiny sample.",
+      "Ignoring regulated wording for medical, legal, finance, trades, or safety-heavy services.",
+    ],
+    faqs: [
+      {
+        question: "Is a Google Business Profile rescue service the same as local SEO?",
+        answer:
+          "No. A beginner-friendly rescue service should focus on profile hygiene, clarity, owner-approved copy, photos, FAQs, and handoff notes. Local SEO can be broader and more technical. Do not promise rankings or leads.",
+      },
+      {
+        question: "Who buys Google Business Profile cleanup?",
+        answer:
+          "Owner-operated local businesses are the cleanest first buyer: trades, salons, clinics, cafes, cleaners, mechanics, studios, and home service companies. Look for businesses with visible profile gaps and a reachable owner.",
+      },
+      {
+        question: "How much should I charge for a profile rescue sprint?",
+        answer:
+          "A simple starter sprint might sit around $200-$600 when scope is tight, but the quote depends on time, approvals, number of services, photos, review work, access, and revisions. Price from the actual work, not from a creator video.",
+      },
+      {
+        question: "Do I need access to the client's Google profile?",
+        answer:
+          "Not for the first audit or draft. For implementation, use proper owner-approved access and document what you are changing. Some clients may prefer to publish your handoff themselves.",
+      },
+      {
+        question: "What should I offer after the first cleanup?",
+        answer:
+          "Offer a monthly hygiene check: profile review, stale detail scan, photo checklist, FAQ draft, review-request wording, and owner-approved update notes. Keep it practical and bounded.",
+      },
+    ],
+    disclaimer:
+      "This guide is educational and practical, not a guarantee of rankings, leads, clients, revenue, or platform approval. Adapt the offer to local laws, platform rules, industry requirements, and each client's approved facts.",
+  },
+  {
     slug: "how-to-start-a-local-service-business-this-week",
     title: "How to Start a Local Service Business This Week",
     seoTitle: "How to Start a Local Service Business This Week | Simple First-Client Plan",

@@ -150,6 +150,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <p className="mt-3 text-xl font-bold leading-8 tracking-normal text-white">{post.shortAnswer}</p>
             </section>
 
+            {relatedPacks[0] ? (
+              <section className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Use the matching launch pack</p>
+                <div className="mt-3 grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
+                  <div>
+                    <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{relatedPacks[0].title}</h2>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">
+                      Want the scripts, pricing file, and delivery checklist? Open the launch pack and use the working files with this guide.
+                    </p>
+                  </div>
+                  <Link
+                    href={`/packs/${relatedPacks[0].slug}`}
+                    data-analytics-event="Blog Top Pack CTA Clicked"
+                    data-analytics-pack={relatedPacks[0].slug}
+                    data-analytics-location="blog_top_cta"
+                    className="accent-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-bold md:w-auto"
+                  >
+                    Open pack
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
+              </section>
+            ) : null}
+
             <section className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
               <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">Key points</h2>
               <div className="mt-5 grid gap-3">
