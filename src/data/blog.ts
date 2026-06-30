@@ -609,9 +609,166 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "Use this as a decision filter, not a guarantee. Validate demand with real buyers before spending heavily on tools, ads, inventory, or software.",
   },
+  {
+    slug: "service-business-pricing-guide-for-beginners",
+    title: "Service Business Pricing Guide for Beginners",
+    seoTitle: "Service Business Pricing Guide for Beginners | First-Client Rates",
+    description:
+      "A practical guide to pricing a beginner service business with starter offers, quote math, scope boundaries, examples, and first-client pricing rules.",
+    category: "Pricing",
+    publishedAt: "2026-07-01",
+    updatedAt: "2026-07-01",
+    readingTime: "12 min read",
+    relatedPackSlugs: [
+      "cafe-menu-refresh-package",
+      "google-business-profile-rescue",
+      "mobile-headlight-restoration",
+      "power-washing-driveway-sprint",
+      "shopify-cart-audit",
+    ],
+    shortAnswer:
+      "Price a beginner service business by starting with one fixed offer, estimating the real delivery time, adding hard costs, setting a simple profit floor, and naming exactly what is not included. Do not copy a random creator's price. Build a quote you can deliver without resentment.",
+    keyPoints: [
+      "Beginner pricing should be simple enough for a buyer to approve and strong enough that the job is worth doing.",
+      "A fixed starter package usually sells better than a vague hourly service.",
+      "Quote from time, materials, travel, tools, revision risk, access risk, and approval complexity.",
+      "Low first-client pricing can make sense, but free full projects teach the wrong lesson.",
+      "The best upsell is a cleaner second job: maintenance, refreshes, monthly checks, or a larger scoped sprint.",
+    ],
+    body: [
+      {
+        heading: "Start with the smallest paid outcome",
+        paragraphs: [
+          "The easiest service to price is a small, clear outcome. A cafe menu refresh. A Google profile rescue sprint. A two-car headlight restoration. A driveway wash. A Shopify cart audit. The buyer can understand the job without a workshop on your entire business model.",
+          "Avoid pricing a broad service menu on day one. If you sell marketing help, operations help, local SEO, AI automation, or ecommerce optimisation, the buyer has to guess what is included. Guessing slows the sale and creates scope creep.",
+          "Write the first offer as: I help this buyer fix this problem by delivering this output. If that sentence is fuzzy, the price will be fuzzy too.",
+        ],
+      },
+      {
+        heading: "Use a simple quote formula",
+        paragraphs: [
+          "A practical first quote starts with delivery hours, adds hard costs, adds travel or setup, and adds a risk buffer for approvals, revisions, access, weather, materials, or messy client inputs.",
+          "A simple formula is: estimated hours x target hourly floor + direct costs + travel/setup + risk buffer. Then round it into a package price the buyer can understand.",
+          "Your hourly floor is not the same as what you tell the buyer. It is your private check. If a $150 job takes six hours, you learned something useful before you learned it three clients deep.",
+        ],
+      },
+      {
+        heading: "Build a starter pricing ladder",
+        paragraphs: [
+          "Most beginner services work better with three levels: a tiny diagnostic, a core sprint, and a recurring or expanded version. This gives cautious buyers a low-friction first step without making your main offer look random.",
+          "For example, a Google Business Profile rescue service could have a $49-$150 mini audit, a $200-$600 cleanup sprint, and a $100-$400 monthly hygiene check. Those are starting points, not rules. The quote changes with locations, services, photos, approvals, and how much copy you are drafting.",
+          "A cafe menu refresh could use a one-section refresh, a full menu asset cleanup, and a monthly specials retainer. A mobile headlight service could use single-car, two-car, dealer batch, and travel add-on pricing. Match the ladder to how the job is actually delivered.",
+        ],
+      },
+      {
+        heading: "Price the first client without training them to expect free work",
+        paragraphs: [
+          "A discounted first job can be reasonable if you are honest about why it is discounted: you are validating the offer, tightening the process, or building a permissioned example. A free full project is different. It often attracts weak buyers and hides whether the service has real demand.",
+          "A better first-client deal is a paid pilot with a clear boundary. For example: I am doing the first five menu refreshes at a starter rate while I refine the workflow. You still pay, you still approve the work, and the scope is still fixed.",
+          "Do not invent scarcity or fake demand. Just say the quiet commercial truth: this is an early version, the price is lower than the future version, and the output is clearly defined.",
+        ],
+      },
+      {
+        heading: "Add scope boundaries before the buyer asks",
+        paragraphs: [
+          "Scope boundaries make pricing stronger. They tell the buyer what they are buying, what they are not buying, and where a new quote starts. This is especially important for services with revisions, physical risk, compliance concerns, platform access, or client approvals.",
+          "A Shopify cart audit might include screenshot-backed recommendations and one abandoned-cart email rewrite. It should not include full store implementation, legal policy writing, guaranteed conversion increases, or unlimited copy changes unless priced separately.",
+          "A driveway power washing job might include one surface, photos, surface-risk checks, and a fixed time window. It should not include repairs, stain removal guarantees, unsafe runoff handling, or extra surfaces unless quoted.",
+        ],
+      },
+      {
+        heading: "Use price anchors carefully",
+        paragraphs: [
+          "Price anchors help buyers compare options, but they should be grounded in real delivery. Do not use a giant fake premium package just to make the middle package look cheap. That makes the business feel slippery.",
+          "A clean anchor is a higher-scope version that genuinely takes more work. More service descriptions. More locations. More photos. More surfaces. More products. Faster turnaround. Monthly maintenance. These are real pricing variables.",
+          "If you cannot explain why the higher price exists, remove it.",
+        ],
+      },
+      {
+        heading: "Know when to charge hourly",
+        paragraphs: [
+          "Fixed packages are easier to sell for repeatable starter services, but hourly can still work when the job is exploratory, messy, or dependent on unknown client systems. The trick is not to hide from uncertainty.",
+          "If you charge hourly, set a minimum block and a cap before approval. For example: two-hour audit block, then written approval before any extra work. That protects both sides.",
+          "For most first-client services, use hourly pricing privately and package pricing publicly. The buyer gets a clear decision. You get a sanity check.",
+        ],
+      },
+      {
+        heading: "Turn pricing objections into better packaging",
+        paragraphs: [
+          "When a buyer says it is too expensive, do not immediately discount. Ask whether the issue is price, timing, scope, trust, or urgency. Those are different problems.",
+          "If the buyer wants a cheaper option, reduce scope instead of cutting price for the same work. Offer a mini audit, one-page refresh, one product category, one suburb, one surface, or one approval round.",
+          "The goal is not to win every buyer. The goal is to find the smallest paid version that proves demand and teaches you what the market actually values.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: pricing a cafe menu refresh",
+      steps: [
+        "Define the paid outcome: refresh one outdated menu into approved files for Google, Instagram, and QR menu use.",
+        "Estimate delivery time: 30 minutes audit, 90 minutes design/copy cleanup, 30 minutes client approval, 30 minutes final export and handoff.",
+        "Add direct costs: design tool, stock assets if approved, file conversion, and any printing coordination if included.",
+        "Set a private hourly floor and check whether the starter price clears it.",
+        "Create three options: one-section refresh, full menu refresh, and monthly specials update.",
+        "Name exclusions: photography, printing, full brand redesign, menu engineering, unlimited revisions, and unapproved price changes.",
+        "After the first job, note what took longer and raise the next quote if approvals or source files were messy.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one service you can deliver this week.",
+      "Write the buyer, problem, output, turnaround, and exclusions.",
+      "Estimate delivery hours honestly.",
+      "List direct costs, travel, software, materials, and setup.",
+      "Choose a private hourly floor.",
+      "Create a tiny diagnostic, core sprint, and recurring or expanded option.",
+      "Write the price and scope on one page.",
+      "Send it to five relevant prospects with a specific sample or audit clue.",
+      "Track objections without changing the price mid-conversation.",
+      "After delivery, update the price from what actually happened.",
+    ],
+    commonMistakes: [
+      "Copying someone else's price without knowing their market, proof, costs, or scope.",
+      "Charging hourly in public while still promising a vague outcome.",
+      "Offering unlimited revisions because it sounds generous.",
+      "Discounting the same scope instead of reducing the deliverable.",
+      "Ignoring travel, materials, tool costs, access delays, and approval time.",
+      "Using fake scarcity, fake proof, or guaranteed results to justify the price.",
+      "Keeping first-client prices forever because raising prices feels awkward.",
+    ],
+    faqs: [
+      {
+        question: "What is a good first price for a service business?",
+        answer:
+          "There is no universal first price. A useful starter price covers estimated time, costs, and delivery risk while staying easy for the buyer to understand. Many simple starter services begin with a small paid diagnostic or a fixed sprint, then adjust after real delivery data.",
+      },
+      {
+        question: "Should I charge hourly or fixed price?",
+        answer:
+          "Use fixed pricing for repeatable starter offers and hourly pricing for uncertain or exploratory work. Even with fixed pricing, calculate your private hourly floor so you know whether the package is worth doing.",
+      },
+      {
+        question: "Is it okay to discount the first client?",
+        answer:
+          "Yes, if the scope is clear and the reason is honest. A paid starter rate can help validate the offer. Free full projects are riskier because they do not prove willingness to pay.",
+      },
+      {
+        question: "How do I raise prices after the first few clients?",
+        answer:
+          "Raise prices when you know the job takes longer than expected, demand is real, your proof is stronger, or the scope includes more complexity. Explain the current package clearly rather than apologising for the new price.",
+      },
+      {
+        question: "What should be included in a starter package?",
+        answer:
+          "Include a clear output, turnaround, number of revisions or approvals, client inputs, and exclusions. Keep the package small enough to deliver well and specific enough that the buyer knows what they are approving.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical pricing education, not financial, legal, tax, or earnings advice. Adapt prices to your market, costs, local rules, skill level, and delivery risk.",
+  },
 ];
 
-export const featuredBlogPosts = blogPosts.slice(0, 3);
+export const featuredBlogPosts = [...blogPosts]
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title))
+  .slice(0, 3);
 
 export function getBlogPost(slug: string) {
   return blogPosts.find((post) => post.slug === slug);

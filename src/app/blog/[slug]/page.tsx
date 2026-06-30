@@ -59,7 +59,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const relatedPacks = post.relatedPackSlugs
     .map((packSlug) => getPack(packSlug))
     .filter((pack): pack is BusinessPack => Boolean(pack));
-  const relatedPosts = blogPosts.filter((candidate) => candidate.slug !== post.slug).slice(0, 2);
+  const relatedPosts = blogPosts
+    .filter((candidate) => candidate.slug !== post.slug)
+    .map((candidate) => {
+      const sharedPacks = candidate.relatedPackSlugs.filter((packSlug) => post.relatedPackSlugs.includes(packSlug)).length;
+      const categoryMatch = candidate.category === post.category ? 2 : 0;
+      return { candidate, score: sharedPacks + categoryMatch };
+    })
+    .sort((a, b) => b.score - a.score || b.candidate.publishedAt.localeCompare(a.candidate.publishedAt))
+    .slice(0, 2)
+    .map(({ candidate }) => candidate);
   const bottomCtaPacks = popularPacks.slice(0, 3);
   const articleSchema = {
     "@context": "https://schema.org",
