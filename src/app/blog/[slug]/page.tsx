@@ -69,7 +69,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     .sort((a, b) => b.score - a.score || b.candidate.publishedAt.localeCompare(a.candidate.publishedAt))
     .slice(0, 2)
     .map(({ candidate }) => candidate);
-  const bottomCtaPacks = popularPacks.slice(0, 3);
+  const bottomCtaPacks = [
+    ...relatedPacks,
+    ...popularPacks.filter((pack) => !post.relatedPackSlugs.includes(pack.slug)),
+  ].slice(0, 3);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -275,6 +278,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <Link
                     key={pack.slug}
                     href={`/packs/${pack.slug}`}
+                    data-analytics-event="Blog Bottom Pack CTA Clicked"
+                    data-analytics-pack={pack.slug}
+                    data-analytics-location="blog_bottom_cta"
                     className="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15 transition hover:-translate-y-0.5 hover:bg-white/15"
                   >
                     <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--orange-hot)]">{pack.category}</p>

@@ -764,6 +764,171 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical pricing education, not financial, legal, tax, or earnings advice. Adapt prices to your market, costs, local rules, skill level, and delivery risk.",
   },
+  {
+    slug: "how-to-start-a-mobile-headlight-restoration-business",
+    title: "How to Start a Mobile Headlight Restoration Business",
+    seoTitle: "How to Start a Mobile Headlight Restoration Business | First-Client Guide",
+    description:
+      "A practical guide to starting a mobile headlight restoration business with starter tools, pricing, outreach, safety boundaries, proof photos, and a first-client plan.",
+    category: "Local Service",
+    publishedAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    shortAnswer:
+      "To start a mobile headlight restoration business, learn one safe restoration process, restore one permissioned car for proof, price a narrow mobile service, and pitch car owners with cloudy headlights. Sell cosmetic restoration and better lens clarity, not roadworthiness, legal compliance, permanent results, or guaranteed night-driving performance.",
+    keyPoints: [
+      "Best first buyers are used-car sellers, neighbours, small fleets, local dealers, rideshare drivers, and car owners with visibly cloudy plastic headlights.",
+      "Start with one service: two-headlight restoration with masking, sanding, polishing, UV protection, cleanup, and before-and-after photos.",
+      "A practical starter price can sit around $60-$180 per car, but quote from materials, travel, lens condition, time, weather, and batch size.",
+      "Use proof photos carefully: matched angles, same lighting, permission to use the images, and no exaggerated claims.",
+      "The first job should teach your process, timing, material cost, and how often lenses are too far gone for restoration.",
+    ],
+    body: [
+      {
+        heading: "Who this business is for",
+        paragraphs: [
+          "This is for someone who wants a simple local service with visible before-and-after proof. You do not need a big audience, a fancy website, or a huge tool setup to test demand. You do need patience, care around paintwork, and enough discipline to say no when the lens condition is wrong.",
+          "The cleanest early buyers are people who already care how the car looks: used-car sellers, rideshare drivers, parents with older cars, neighbours, small delivery fleets, local dealers, mechanics, and detailing shops that do not offer headlight work in-house.",
+          "This is not a passive income play. It is a mobile job with prep, materials, weather, cleanup, customer expectations, and repeatable local outreach. That is the point. The problem is easy to see, and the first offer is easy to explain.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Plastic headlight lenses can become cloudy, yellowed, or hazy over time. The owner sees the car looking older than it should, especially when they are selling it, preparing for photos, or comparing it with cleaner cars nearby.",
+          "Your offer is a cosmetic restoration sprint for cloudy plastic headlights. You are helping the owner improve appearance and lens clarity where restoration is suitable. You are not certifying the vehicle, guaranteeing legal compliance, or promising that every headlight can be saved.",
+          "The useful pitch is simple: I restore cloudy plastic headlights at your location, take before-and-after photos, and tell you upfront if the lenses look too damaged for a sensible restoration.",
+        ],
+      },
+      {
+        heading: "Learn the process before charging",
+        paragraphs: [
+          "Do one permissioned practice car before selling. Ideally, use an older car owned by you, family, or a friend who understands it is a practice job. Follow the product instructions exactly and document each step.",
+          "A basic process usually includes cleaning, masking surrounding paint, wet sanding through the correct grit sequence, polishing, wiping clean, and applying UV protection or sealant. The exact products matter less than following a safe, consistent process and not rushing near paint or trim.",
+          "Do not skip the boring safety checks. You need suitable weather, shade if required by the product, clean water, microfiber towels, tape, gloves, eye protection, and a plan for dust, residue, runoff, and cleanup.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "Keep the first paid offer narrow: restore two plastic headlights at the customer's location, where access, weather, and lens condition are suitable. Include inspection, masking, restoration, UV protection, cleanup, and before-and-after photos.",
+          "Name the exclusions before the buyer asks. You are not replacing lenses, opening headlight assemblies, fixing electrical faults, repairing condensation inside the housing, painting, certifying roadworthiness, or guaranteeing permanent results.",
+          "A clear one-line offer is: I help local car owners clean up cloudy plastic headlights with a mobile restoration service, careful masking, UV protection, and honest limits when replacement is the better answer.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "A sensible pricing ladder might include a single-car restoration, a two-car neighbour bundle, a dealer batch price, and a travel add-on outside your core area. Keep the menu short enough that the buyer can choose quickly.",
+          "As a starting point, a single two-headlight job might sit around $60-$180, with higher quotes for travel, heavier oxidation, larger vehicles, awkward access, or extra prep time. Dealer or fleet batches may use a lower per-car rate because setup and travel are shared.",
+          "Price from the real job, not from a viral post. Count sanding discs, polish, sealant, tape, towels, travel, weather risk, setup, cleanup, customer messages, and the time spent taking proof photos.",
+        ],
+      },
+      {
+        heading: "Create proof that sells the job",
+        paragraphs: [
+          "Before-and-after proof is the strongest sales asset in this business, but it needs to be honest. Take photos from the same angle, same distance, and similar lighting. Do not darken the before photo or brighten the after photo to fake the result.",
+          "Ask for permission before using customer images in messages, flyers, marketplace posts, or social content. If you are using a practice car, say that. There is nothing wrong with early proof as long as it is labelled honestly.",
+          "Good proof is boringly clear: here was the lens before, here is the lens after, here is the car type, here is what was included, and here are the limits. No fake testimonials. No miracle language.",
+        ],
+      },
+      {
+        heading: "Find the first 20 prospects",
+        paragraphs: [
+          "Start close to home. Walk your street, ask friends, check local marketplace listings, visit small used-car yards, and look for older cars with cloudy headlights in public places where approaching the owner is appropriate.",
+          "Used-car sellers are a strong first lane because photos matter. If a seller is asking a real price for a car but the headlights make it look tired, your message has a clear reason to exist.",
+          "Build a simple list with the car type, location, visible condition, likely buyer type, and outreach angle. Twenty researched prospects will beat a lazy post that says you now do headlights.",
+        ],
+      },
+      {
+        heading: "Use outreach that points to the visible issue",
+        paragraphs: [
+          "The first message should be short and specific. Do not lead with a life story or a giant menu of car-care services. Mention the visible problem, the fixed offer, and an easy next step.",
+          "Example: Hi Sam, I saw your Corolla listing and noticed the headlights look a bit cloudy in the photos. I do mobile headlight restoration locally. It is a fixed two-headlight service with before-and-after photos, and I can tell you upfront if the lenses are too far gone. Want the details?",
+          "For neighbours, a softer version works: I am doing a few local headlight restorations this week while tightening the process. If your headlights are cloudy, I can inspect them and give you a fixed quote before doing anything.",
+        ],
+      },
+      {
+        heading: "Deliver the first job cleanly",
+        paragraphs: [
+          "Before you start, confirm the car, location, access, weather, lens condition, expected result, and what happens if the lens is cracked, peeling, wet inside, or unsuitable. Take before photos with permission.",
+          "Work slowly around paint, trim, badges, and panel gaps. Keep your materials organised, clean as you go, and do not let the customer talk you into rushing a step that the product instructions require.",
+          "At the end, show the result in daylight, explain care basics, send the photos, and ask for a review or referral only if the customer is happy. The first few jobs are also your process audit, so write down what took longer than expected.",
+        ],
+      },
+      {
+        heading: "Turn one job into a local service",
+        paragraphs: [
+          "After one clean job, the next move is not a rebrand. It is repetition. Use the same proof format, same quote checklist, same scope boundaries, and same follow-up message for the next 20 prospects.",
+          "Add simple upsells only when they fit: second car at the same address, neighbour bundle, dealer batch day, or a basic exterior quick-clean partner offer with a detailer. Do not pile on services before the core job is repeatable.",
+          "If you want the practical version, open the Mobile Headlight Restoration launch pack. It gives you the quote calculator, outreach scripts, safety checklist, intake form, proof kit, prompts, and client email templates.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first-client plan for used-car sellers",
+      steps: [
+        "Choose one local marketplace or neighbourhood group with active used-car listings.",
+        "Find 20 cars where the listing photos show visibly cloudy plastic headlights.",
+        "Write down the car model, seller name, suburb, asking price, and why the headlights weaken the listing photos.",
+        "Restore one permissioned practice car and take honest matched before-and-after photos.",
+        "Send five sellers a short message offering a fixed two-headlight restoration before their next inspection or buyer viewing.",
+        "Quote from lens condition, travel, materials, and weather rather than offering one price for every car.",
+        "After delivery, ask for permission to use the before-and-after photo and note what changed in your process.",
+      ],
+    },
+    firstActionChecklist: [
+      "Buy or borrow a suitable starter restoration kit and basic protective gear.",
+      "Read the product instructions before touching a car.",
+      "Restore one permissioned practice vehicle.",
+      "Take matched before-and-after photos without editing the result dishonestly.",
+      "Write a one-page offer with inclusions, exclusions, price range, and weather requirements.",
+      "List 20 prospects: neighbours, used-car sellers, local dealers, rideshare drivers, or small fleets.",
+      "Send five specific messages today.",
+      "Use an intake checklist before accepting the first paid job.",
+      "Track material cost, time on site, travel, objections, and result quality.",
+      "Raise or adjust the next quote based on what the first job actually took.",
+    ],
+    commonMistakes: [
+      "Promising like-new headlights when the lens may be too damaged.",
+      "Selling safety, legal compliance, or inspection outcomes instead of cosmetic restoration and clearer lenses.",
+      "Skipping masking because the job looks quick.",
+      "Taking proof photos in different lighting to exaggerate the result.",
+      "Forgetting travel, weather, materials, cleanup, and customer messaging when pricing.",
+      "Accepting cracked, peeling, wet, or internally damaged headlights that should be replaced or professionally assessed.",
+      "Adding too many car-care services before the headlight process is repeatable.",
+    ],
+    faqs: [
+      {
+        question: "Is mobile headlight restoration a good beginner service?",
+        answer:
+          "It can be a good beginner local service because the problem is visible, tools are relatively affordable, and proof photos are clear. It still requires careful process, safety gear, realistic expectations, and honest scope boundaries.",
+      },
+      {
+        question: "How much should I charge for headlight restoration?",
+        answer:
+          "A starter two-headlight job might sit around $60-$180, depending on lens condition, materials, travel, weather, vehicle type, and local demand. Batch work for dealers or fleets may use a different per-car rate because setup and travel are shared.",
+      },
+      {
+        question: "What tools do I need to start?",
+        answer:
+          "A basic starter setup usually includes a headlight restoration kit, masking tape, microfiber towels, water spray bottle, gloves, eye protection, polish or compound, UV protection or sealant, and a way to take consistent before-and-after photos.",
+      },
+      {
+        question: "Can I promise headlights will look new?",
+        answer:
+          "No. Some headlights restore well, some improve only partly, and some need replacement. Promise a careful restoration process and honest assessment, not a perfect or permanent result.",
+      },
+      {
+        question: "Who should I pitch first?",
+        answer:
+          "Start with used-car sellers, neighbours, small local dealers, rideshare drivers, and older car owners with visibly cloudy headlights. A visible problem plus a clear before-and-after sample makes outreach much easier.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not automotive, legal, safety, roadworthiness, or inspection advice. Follow product instructions, use suitable protective gear, check local rules, and decline jobs where replacement or professional assessment is the better option.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]
