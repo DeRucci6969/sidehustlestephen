@@ -7,15 +7,15 @@ import { blogPosts } from "@/data/blog";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
-  title: "Blog | Practical Side Hustle Guides",
+  title: "Side Hustle Guides | First Clients, Pricing, and Outreach Scripts",
   description:
-    "Practical side hustle guides for choosing simple business ideas, getting first clients, pricing starter offers, and using launch packs.",
+    "Practical side hustle guides for choosing simple service businesses, getting first clients, pricing starter offers, writing outreach scripts, and using launch packs.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Blog | Side Hustle Stephen",
-    description: "Practical guides for turning simple business ideas into first-client launch plans.",
+    title: "Side Hustle Guides | Side Hustle Stephen",
+    description: "First-client guides, pricing guides, outreach plans, and launch-pack links for simple service businesses.",
     url: "/blog",
     type: "website",
     siteName: siteConfig.name,
@@ -30,8 +30,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Side Hustle Stephen",
-    description: "Practical side hustle guides with first-client plans and launch pack links.",
+    title: "Side Hustle Guides | Side Hustle Stephen",
+    description: "Practical side hustle guides with pricing, outreach, first-client plans, and launch pack links.",
     images: [siteConfig.ogImage],
   },
 };
@@ -41,7 +41,7 @@ export default function BlogPage() {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Side Hustle Stephen Blog",
+    name: "Side Hustle Stephen Side Hustle Guides",
     description: metadata.description,
     url: `${siteConfig.url}/blog`,
     blogPost: sortedPosts.map((post) => ({
@@ -66,10 +66,10 @@ export default function BlogPage() {
           <div className="min-w-0 max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Blog</p>
             <h1 className="display-type balanced mt-3 break-words text-[clamp(2.35rem,11.5vw,4.5rem)] leading-[1.02]">
-              Practical notes for getting the first buyer.
+              Side hustle guides for getting the first buyer.
             </h1>
             <p className="premium-copy mt-4 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">
-              Short, direct guides for choosing startable ideas, finding first clients, pricing starter offers, and using launch packs without getting lost in planning.
+              Short, direct guides for choosing startable ideas, finding first clients, pricing starter offers, writing outreach, and using launch packs without getting lost in planning.
             </p>
           </div>
           <div className="dark-pack-panel rounded-lg p-5 sm:p-6">

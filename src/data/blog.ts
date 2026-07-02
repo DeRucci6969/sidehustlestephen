@@ -929,6 +929,163 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical business education, not automotive, legal, safety, roadworthiness, or inspection advice. Follow product instructions, use suitable protective gear, check local rules, and decline jobs where replacement or professional assessment is the better option.",
   },
+  {
+    slug: "how-to-start-an-airbnb-photo-refresh-service",
+    title: "How to Start an Airbnb Photo Refresh Service",
+    seoTitle: "How to Start an Airbnb Photo Refresh Service | Host Outreach Plan",
+    description:
+      "A practical guide to starting an Airbnb photo refresh service with host buyers, ethical image edits, pricing, outreach, proof samples, and clear delivery boundaries.",
+    category: "Local Service",
+    publishedAt: "2026-07-03",
+    updatedAt: "2026-07-03",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["airbnb-photo-refresh-service", "airbnb-guest-guide-refresh", "ugc-brief-generator"],
+    shortAnswer:
+      "To start an Airbnb photo refresh service, find short-term rental listings with flat but accurate photos, create one tasteful before-and-after sample, and sell a fixed photo refresh pack to hosts or property managers. Preserve the real property, layout, amenities, view, room size, and host-approved facts. Sell better presentation, not fake rooms or guaranteed bookings.",
+    keyPoints: [
+      "Best first buyers are short-term rental hosts, small property managers, co-hosts, and direct-booking operators with decent spaces but weak listing photos.",
+      "The starter offer should refresh a small set of existing listing photos for lighting, warmth, composition, clutter, and booking-platform polish.",
+      "Use AI and editing tools carefully: do not add amenities, change room size, hide defects, alter views, or make the property materially misleading.",
+      "A practical starter price can sit around $99-$400 for a small photo set, then rise with source-file quality, number of images, revisions, turnaround, and approval needs.",
+      "The first-client route is sample-led outreach: one low-res preview, clear boundaries, and a fixed 6-photo or 10-photo refresh offer.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for someone who can spot weak visual presentation and improve it without pretending the property is something it is not. You do not need to become a full property photographer on day one. You are selling a narrow visual refresh for hosts who already have photos but know they feel flat, dark, cluttered, cold, or inconsistent.",
+          "Good early buyers include solo Airbnb hosts, small co-hosting teams, boutique property managers, serviced apartment operators, and direct-booking owners. The cleanest prospects have real demand for better listing assets but do not have a design person cleaning up every photo before upload.",
+          "This is not a booking guarantee. It is not a way to fake luxury. It is a presentation service that helps the host show the real stay more clearly and warmly.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Many listings have a decent property hidden behind poor photos. The room might be attractive, but the image is dark. The bed looks messy. The kitchen feels cold. The hero photo is cropped badly. The patio looks unused. The photo order does not show the stay clearly.",
+          "A host does not always need a new shoot immediately. Sometimes they need a cleaner version of the existing photos, a stronger hero image, a more consistent set, and clear notes on which images should be replaced later by a photographer.",
+          "Your job is to improve presentation while protecting trust. Better light, better crop, realistic warmth, cleaner composition, and truthful lifestyle context can help. Fake pools, fake views, fake room scale, fake extra beds, and hidden defects will damage the host and your reputation.",
+        ],
+      },
+      {
+        heading: "Define the ethical edit boundary",
+        paragraphs: [
+          "Before you pitch, write a simple rule: every refreshed image must preserve the real property facts. The room size, furniture, amenities, windows, view, layout, permanent fixtures, access, cleanliness expectations, and safety-relevant details should stay truthful.",
+          "Safe edits are usually presentation edits: exposure, colour, warmth, lens correction, crop, shadow balance, small clutter cleanup, image order, and platform-ready export. Riskier edits include adding people, changing decor, removing visible damage, or making a cramped room look bigger.",
+          "If you use AI-generated edits, label the workflow internally and get host approval before anything is published. For lifestyle model edits, keep adults realistic, non-intrusive, and clearly there to show use of the space, not to imply amenities or experiences that do not exist.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "Start with a fixed photo refresh pack. A clean first offer might include a listing photo audit, one sample refresh, 6 edited images, photo-order notes, export files, and one approval round. Keep the scope narrow enough that the buyer can say yes quickly.",
+          "Name what is not included. Do not include photography, staging, listing copy rewrite, revenue management, booking guarantees, platform compliance review, legal advice, or unlimited image revisions unless you quote those separately.",
+          "A simple one-line offer is: I help short-term rental hosts turn flat listing photos into warmer, clearer booking-platform images while preserving the real property facts.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "A starter ladder can be simple: mini audit, 6-photo refresh, 12-photo refresh, and seasonal hero-photo refresh. That gives hosts a small first step and gives you a cleaner path to repeat work before busy periods.",
+          "As a starting point, a mini audit might sit around $49-$100, a 6-photo refresh around $99-$250, and a larger listing refresh around $250-$600. These are working ranges, not promises or rules. The real quote depends on source photo quality, number of images, revision rounds, tool costs, turnaround, and how much judgment the job needs.",
+          "Price from the actual work. Count the audit, sample, editing time, export time, messages, approvals, file management, revision risk, and any paid software. If the host wants you to rewrite the listing, build a guest guide, or create social ads, that is a separate scope.",
+        ],
+      },
+      {
+        heading: "Create a proof sample",
+        paragraphs: [
+          "The easiest way to sell this service is to show one low-risk sample. Pick one public listing photo that is flat but not misleading to edit. Improve light, warmth, crop, and visual clarity. Do not make structural changes or add anything the listing does not genuinely have.",
+          "Watermark the sample if you want to protect the work. Keep it low-res for outreach. The sample should make the host think, yes, that is still my place, just presented better.",
+          "Do not send a full free refresh. One useful sample is enough to prove taste and start a conversation. The paid job is the full set, source-file collection, approval round, exports, and final handoff.",
+        ],
+      },
+      {
+        heading: "Find the first 20 prospects",
+        paragraphs: [
+          "Start with one market and one property type: beach units, city studios, cabins, family homes, tiny houses, serviced apartments, or local weekend stays. A tight lane helps you spot repeated photo issues and write better outreach.",
+          "Look for listings with decent reviews or promising spaces but weak visuals: dark hero photo, inconsistent colour, messy beds, poor crop, cluttered kitchen, empty patio, no lifestyle context, or photo order that hides the best room.",
+          "Use public information respectfully. Do not scrape aggressively or spam hosts. Build a small list by hand first: listing name, host or manager, visible photo issue, best sample candidate, and likely paid offer.",
+        ],
+      },
+      {
+        heading: "Send sample-led outreach",
+        paragraphs: [
+          "Your first message should be short, specific, and easy to answer. Lead with the visible issue and the sample, not with a giant pitch about design, AI, or revenue.",
+          "Example: Hi Mia, I noticed your living-room photo has a great view but looks a bit dark as the hero image. I made a low-res sample refresh that keeps the room and view accurate, just warmer and cleaner for the listing. Want me to send it over?",
+          "If they reply, pitch the paid pack: I can refresh 6 listing photos, send platform-ready files, include photo-order notes, and keep everything host-approved before upload. Want the scripts, pricing file, and delivery checklist? Open the Airbnb Photo Refresh launch pack.",
+        ],
+      },
+      {
+        heading: "Deliver without misleading guests",
+        paragraphs: [
+          "Before editing, collect the listing URL, source photos, host-approved facts, rooms to prioritise, edit boundaries, preferred mood, file sizes, and what must not be changed. Confirm whether people, pets, food, views, decor changes, and clutter cleanup are allowed.",
+          "Keep before files and export final files clearly. Send a handoff note that explains what changed, which images are safe to upload, and which photos need host review because they affect property facts or guest expectations.",
+          "The best long-term service is trust-safe. Hosts want better clicks, but they also need guests to arrive and feel the listing was honest. That is the line you protect.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: 6-photo refresh for a coastal studio",
+      steps: [
+        "Choose one area with many short-term rental listings and filter for small studios or one-bedroom stays.",
+        "Find 20 listings with decent spaces but weak photo presentation.",
+        "Pick one public image where the main issue is lighting, crop, warmth, or clutter, not a missing amenity.",
+        "Create one low-res sample that preserves room size, view, furniture, layout, and permanent fixtures.",
+        "Send a short message offering to share the sample and explaining that all final edits need host approval.",
+        "If the host replies, quote a 6-photo refresh with one approval round, export files, and photo-order notes.",
+        "After delivery, offer a seasonal hero-photo refresh or guest guide refresh as the next narrow service.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one short-term rental buyer lane.",
+      "Write your ethical edit boundary in plain English.",
+      "List 20 listings with flat but fixable photos.",
+      "Choose five sample candidates where the edit can stay truthful.",
+      "Create one low-res before-and-after sample.",
+      "Write a fixed 6-photo offer with inclusions, exclusions, turnaround, and price range.",
+      "Send five specific outreach messages today.",
+      "Track replies, objections, edit concerns, source-file issues, and pricing pushback.",
+      "Use an approval checklist before any final image is published.",
+      "Turn the first paid job into a reusable audit, edit, export, and handoff workflow.",
+    ],
+    commonMistakes: [
+      "Changing the property facts to make the listing look more expensive than it is.",
+      "Adding fake amenities, fake views, fake room scale, or fake luxury details.",
+      "Promising more bookings, higher nightly rates, or platform ranking improvements.",
+      "Sending a full free refresh instead of one sample.",
+      "Ignoring host approval before using or publishing edited images.",
+      "Quoting by image count only while forgetting audit time, revisions, exports, and messaging.",
+      "Pitching every property type instead of learning one host lane first.",
+    ],
+    faqs: [
+      {
+        question: "Is an Airbnb photo refresh service the same as photography?",
+        answer:
+          "No. Photography creates new source images. A photo refresh service improves existing images through careful editing, audit notes, image order, and platform-ready exports. Some hosts may still need a real photographer.",
+      },
+      {
+        question: "Can I use AI to edit listing photos?",
+        answer:
+          "You can use AI carefully as part of the workflow, but the final image should preserve the real property facts and be approved by the host. Do not add amenities, change room size, hide meaningful defects, or create a misleading stay.",
+      },
+      {
+        question: "Who should I pitch first?",
+        answer:
+          "Start with solo hosts, co-hosts, small property managers, and direct-booking operators who have decent spaces but weak photos. Look for dark images, poor crops, inconsistent colour, messy presentation, or a weak hero photo.",
+      },
+      {
+        question: "How much should I charge for a photo refresh?",
+        answer:
+          "A small starter refresh might sit around $99-$250 for 6 photos, while larger listing refreshes may sit around $250-$600 depending on image quality, revision rounds, turnaround, and scope. Treat these as starting points and quote from the actual work.",
+      },
+      {
+        question: "What should I offer after the first job?",
+        answer:
+          "Offer a seasonal hero-photo refresh, photo-order audit, guest guide refresh, or direct-booking image set. Keep the upsell connected to the host's next visible listing problem.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, platform compliance, photography, property, or revenue advice. Hosts should approve final images and ensure every listing photo accurately represents the property and guest experience.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]
