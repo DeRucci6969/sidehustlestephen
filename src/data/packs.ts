@@ -69,6 +69,7 @@ const basePacks: BusinessPack[] = [
     assets: [
       { id: "asset-cafe-script", title: "Cafe Outreach Script", type: "DOCX", description: "Cold DM and email scripts for first contact." },
       { id: "asset-cafe-pricing", title: "Menu Refresh Pricing Sheet", type: "XLSX", description: "Starter, standard, and retainer pricing ladder." },
+      { id: "asset-cafe-quote", title: "Cafe Proposal & Quote Template", type: "DOCX", description: "Copyable proposal, quote, scope, approval, and monthly refresh wording for cafe owners." },
       { id: "asset-cafe-checklist", title: "Delivery Checklist", type: "PDF", description: "What to check before sending final assets." },
       { id: "asset-cafe-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for cafe audits, menu copy, outreach, handoff notes, and monthly refresh ideas." },
       { id: "asset-cafe-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for menu files, brand details, approvals, and delivery formats." },
@@ -98,6 +99,7 @@ const basePacks: BusinessPack[] = [
     assets: [
       { id: "asset-gbp-audit", title: "Profile Audit Checklist", type: "PDF", description: "A scan list for profile photos, categories, hours, and FAQs." },
       { id: "asset-gbp-pitch", title: "Rescue Sprint Pitch", type: "DOCX", description: "Email and Loom pitch structure." },
+      { id: "asset-gbp-pricing", title: "Profile Rescue Pricing Calculator", type: "XLSX", description: "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails." },
       { id: "asset-gbp-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery." },
       { id: "asset-gbp-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for profile access, services, hours, photos, FAQs, and approvals." },
       { id: "asset-gbp-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests." },
@@ -357,6 +359,7 @@ const basePacks: BusinessPack[] = [
     assets: [
       { id: "asset-realtor-report", title: "Suburb Snapshot Template", type: "XLSX", description: "A repeatable structure for local market summaries." },
       { id: "asset-realtor-pitch", title: "Agent Pitch Script", type: "DOCX", description: "Outreach script for agents and principals." },
+      { id: "asset-realtor-pricing", title: "Suburb Snapshot Pricing Calculator", type: "XLSX", description: "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy." },
       { id: "asset-realtor-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture." },
       { id: "asset-realtor-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for suburbs, data sources, agency tone, compliance, and cadence." },
       { id: "asset-realtor-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for agent outreach, sample delivery, source requests, weekly handoff, and renewal." },
@@ -615,7 +618,7 @@ export const packPageDetails: Record<string, PackPageDetail> = {
         "Safe pitch: frame the offer as profile clarity and approval-ready cleanup, not a promise to rank higher.",
       ],
       lockedAssetTease:
-        "Members get the full profile audit checklist, rescue sprint pitch, intake form, approval emails, FAQ prompts, and handoff wording.",
+        "Members get the full profile audit checklist, rescue sprint pitch, pricing calculator, intake form, approval emails, FAQ prompts, and handoff wording.",
     },
     whyDetails: [
       "The buyer can see the problem immediately because Google is public and customer-facing.",
@@ -1119,15 +1122,29 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Target agents who post regularly but lack consistent suburb-specific analysis. Send a one-page sample for their core suburb.",
     startableOffer:
       "A weekly suburb snapshot for one agent, with sourced local notes, three plain-English talking points, one email intro, and two social captions for approval.",
+    publicPreview: {
+      title: "Free preview: suburb content sample check",
+      intro:
+        "Use this check before pitching an agent. It keeps the sample useful, source-backed, and small enough that you are not doing a full weekly report for free.",
+      steps: [
+        "Suburb lane: choose one suburb the agent already farms through listings, open homes, appraisal content, or local social posts.",
+        "Source note: collect two or three public data points with source names and dates. If a metric is missing, say so instead of guessing.",
+        "Sample output: write one talking point, one email intro, and one caption for approval. Do not predict prices, appraisals, yields, listings, or leads.",
+      ],
+      lockedAssetTease:
+        "Members get the suburb snapshot workbook, agent pitch script, pricing calculator, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+    },
     whyDetails: [
       "Agents already pay for positioning and content; this gives them a recurring local asset.",
       "The deliverable is repeatable by suburb, agency, or agent pod.",
       "Source discipline makes the service feel professional and reduces risk around unsupported market claims.",
+      "A fixed pricing ladder makes the first sale easier because agents can buy one sample before committing to weekly local content.",
     ],
     firstMoveAnalysis: [
       "Do not pitch national market commentary. Pick one suburb and one agent's existing audience.",
       "Use sources and dates. If a metric is missing, say so rather than guessing.",
       "Make the output immediately publishable: one snapshot, one email intro, two captions.",
+      "Sell a one-suburb sample first, then move to a four-week content retainer once the agent sees the handoff and approval workflow.",
     ],
     launchSprintDetails: [
       "Week 1: build one source-backed sample for a suburb with active agents.",
@@ -1146,6 +1163,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Avoid unsupported market predictions. Make it clear that the agent approves all commentary before publishing.",
       "Follow up with one extra local talking point or source the agent could use this week.",
       "After the first paid snapshot, offer a four-week retainer for the agent's main suburb or listing farm area.",
+    ],
+    offerLadder: [
+      { name: "Paid sample snapshot", price: "$99-$199", detail: "One suburb sample with source log, one talking point, one email intro, and two social captions." },
+      { name: "Weekly suburb snapshot", price: "$200-$350", detail: "Source-backed weekly report, publish-ready captions, email copy, and approval handoff for one suburb." },
+      { name: "Four-week content retainer", price: "$750-$1.5k / mo", detail: "Weekly snapshots, source logs, lead-nurture prompts, extra captions, and recurring approval workflow." },
     ],
   },
   "ai-inbox-triage-trades": {
@@ -1317,6 +1339,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX outreach pack with cold email, DM, Loom, follow-up, objection handling, intake prompts, a worked cafe prospect example, and handoff copy you can adapt before contacting owners.",
   "asset-cafe-pricing":
     "An XLSX workbook with pricing ladder, quote builder, retainer tracker, client input checklist, worked example, delivery runbook, QA checklist, and renewal tracker.",
+  "asset-cafe-quote":
+    "A DOCX proposal and quote template with cafe owner summary copy, starter/full/retainer scopes, approval terms, exclusions, timeline, invoice wording, and monthly refresh upsell language.",
   "asset-cafe-checklist":
     "A branded PDF checklist for final delivery: print/social/QR exports, owner approval, before-after evidence, quality checks, and client handoff standards.",
   "asset-cafe-prompts":
@@ -1331,6 +1355,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A PDF audit worksheet covering categories, services, photos, reviews, FAQs, profile trust gaps, profile rescue examples, and owner approval checkpoints.",
   "asset-gbp-pitch":
     "A DOCX pitch kit with email copy, Loom structure, proposal bullets, no-ranking-guarantee language, and risk-safe positioning for local business owners.",
+  "asset-gbp-pricing":
+    "An XLSX workbook with mini-audit, rescue sprint, and monthly profile hygiene pricing, a quote builder, scope guardrails, profit check, and proposal wording that avoids ranking guarantees.",
   "asset-gbp-prompts":
     "A DOCX AI prompt pack for Google Business Profile rescue work, including profile audit prompts, service-description prompts, FAQ prompts, ethical review-request prompts, and sprint handoff prompts.",
   "asset-gbp-intake":
@@ -1479,6 +1505,8 @@ export const memberAssetDetails: Record<string, string> = {
     "An XLSX suburb snapshot workbook with source log, weekly snapshot formulas, content calendar, lead follow-up prompts, compliance log, worked example, and QA sheets.",
   "asset-realtor-pitch":
     "A DOCX pitch kit for agents and principals with suburb-content outreach, sample weekly deliverable, compliance reminders, follow-up offer, and filled example intro.",
+  "asset-realtor-pricing":
+    "An XLSX pricing calculator with sample snapshot, weekly, four-week retainer, extra suburb, rush, and source-scope pricing, plus quote builder, profit check, guardrails, and compliance-safe proposal copy.",
   "asset-realtor-prompts":
     "A DOCX AI prompt pack for realtor suburb reports, including source-backed snapshot prompts, agent content prompts, appraisal lead nurture prompts, compliance-safe commentary, and handoff prompts.",
   "asset-realtor-intake":

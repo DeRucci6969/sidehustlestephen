@@ -33,6 +33,17 @@
     "bytes": 12592
   },
   {
+    "id": "asset-cafe-quote",
+    "packSlug": "cafe-menu-refresh-package",
+    "packTitle": "Cafe Menu Refresh Package",
+    "title": "Cafe Proposal & Quote Template",
+    "type": "DOCX",
+    "description": "Copyable proposal, quote, scope, approval, and monthly refresh wording for cafe owners.",
+    "path": "content/member-assets/cafe-menu-refresh-package/cafe-proposal-quote-template.docx",
+    "filename": "cafe-proposal-quote-template.docx",
+    "bytes": 8314
+  },
+  {
     "id": "asset-cafe-checklist",
     "packSlug": "cafe-menu-refresh-package",
     "packTitle": "Cafe Menu Refresh Package",
@@ -119,6 +130,17 @@
     "path": "content/member-assets/google-business-profile-rescue/rescue-sprint-pitch.docx",
     "filename": "rescue-sprint-pitch.docx",
     "bytes": 6809
+  },
+  {
+    "id": "asset-gbp-pricing",
+    "packSlug": "google-business-profile-rescue",
+    "packTitle": "Google Business Profile Rescue",
+    "title": "Profile Rescue Pricing Calculator",
+    "type": "XLSX",
+    "description": "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails.",
+    "path": "content/member-assets/google-business-profile-rescue/profile-rescue-pricing-calculator.xlsx",
+    "filename": "profile-rescue-pricing-calculator.xlsx",
+    "bytes": 13157
   },
   {
     "id": "asset-gbp-prompts",
@@ -933,6 +955,17 @@
     "path": "content/member-assets/realtor-suburb-snapshot/agent-pitch-script.docx",
     "filename": "agent-pitch-script.docx",
     "bytes": 6866
+  },
+  {
+    "id": "asset-realtor-pricing",
+    "packSlug": "realtor-suburb-snapshot",
+    "packTitle": "Realtor Suburb Snapshot Reports",
+    "title": "Suburb Snapshot Pricing Calculator",
+    "type": "XLSX",
+    "description": "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy.",
+    "path": "content/member-assets/realtor-suburb-snapshot/suburb-snapshot-pricing-calculator.xlsx",
+    "filename": "suburb-snapshot-pricing-calculator.xlsx",
+    "bytes": 13257
   },
   {
     "id": "asset-realtor-prompts",

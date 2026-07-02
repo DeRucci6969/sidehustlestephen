@@ -76,6 +76,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-cafe-script", "Cafe Outreach Script", "DOCX", "Cold DM and email scripts for first contact."),
             Asset("asset-cafe-pricing", "Menu Refresh Pricing Sheet", "XLSX", "Starter, standard, and retainer pricing ladder."),
+            Asset("asset-cafe-quote", "Cafe Proposal & Quote Template", "DOCX", "Copyable proposal, quote, scope, approval, and monthly refresh wording for cafe owners."),
             Asset("asset-cafe-checklist", "Delivery Checklist", "PDF", "What to check before sending final assets."),
             Asset("asset-cafe-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for cafe audits, menu copy, outreach, handoff notes, and monthly refresh ideas."),
             Asset("asset-cafe-intake", "Client Intake Form", "DOCX", "Editable client intake questions for menu source files, brand details, approvals, and delivery formats."),
@@ -99,6 +100,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-gbp-audit", "Profile Audit Checklist", "PDF", "A scan list for profile photos, categories, hours, and FAQs."),
             Asset("asset-gbp-pitch", "Rescue Sprint Pitch", "DOCX", "Email and Loom pitch structure."),
+            Asset("asset-gbp-pricing", "Profile Rescue Pricing Calculator", "XLSX", "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails."),
             Asset("asset-gbp-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery."),
             Asset("asset-gbp-intake", "Client Intake Form", "DOCX", "Editable intake questions for profile access, services, hours, photos, FAQs, review rules, and approval owners."),
             Asset("asset-gbp-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests."),
@@ -308,6 +310,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-realtor-report", "Suburb Snapshot Template", "XLSX", "A repeatable structure for local market summaries."),
             Asset("asset-realtor-pitch", "Agent Pitch Script", "DOCX", "Outreach script for agents and principals."),
+            Asset("asset-realtor-pricing", "Suburb Snapshot Pricing Calculator", "XLSX", "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy."),
             Asset("asset-realtor-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture."),
             Asset("asset-realtor-intake", "Client Intake Form", "DOCX", "Editable intake questions for target suburbs, data sources, agency tone, compliance approval, and posting cadence."),
             Asset("asset-realtor-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for agent outreach, sample delivery, source requests, weekly handoff, and retainer renewal."),
@@ -536,6 +539,14 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Raise price when there are multiple locations, poor source files, rush turnaround, or more than one approval stakeholder.",
         ]),
     ],
+    "asset-cafe-quote": [
+        ("Quote calibration", [
+            "Send the smallest quote that matches the visible problem; do not lead with a full rebrand.",
+            "Use the proposal to confirm source files, owner approvals, export formats, and turnaround before starting.",
+            "Keep print coordination, photography, menu engineering, ad design, and brand strategy out of scope unless priced separately.",
+            "Add the monthly refresh option only after the starter quote feels clearly useful and the cafe changes specials or prices often.",
+        ]),
+    ],
     "asset-cafe-checklist": [
         ("Before-after evidence list", [
             "Before screenshot: old menu photo, missing QR destination, or inconsistent Instagram special.",
@@ -556,6 +567,14 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Say: profile clarity, trust signals, current information, and easier customer decisions.",
             "Do not say: guaranteed ranking lift, more calls, map pack placement, or review growth.",
             "Sell the sprint as a visible hygiene cleanup with an approval checklist, not SEO magic.",
+        ]),
+    ],
+    "asset-gbp-pricing": [
+        ("Pricing calibration", [
+            "Mini audits should be cheap enough to buy from a screenshot-led pitch, but still paid so the owner values the work.",
+            "The rescue sprint price should rise when there are many services, multiple locations, messy hours, weak photos, or more than one approval owner.",
+            "Monthly hygiene only makes sense when the business changes photos, services, opening hours, offers, FAQs, or review-response needs regularly.",
+            "Keep the proposal language focused on profile clarity and current information. Do not imply map rankings, call volume, or review growth.",
         ]),
     ],
     "asset-gym-report": [
@@ -648,6 +667,14 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "One email intro for warm appraisal leads.",
             "Two social captions: one seller-focused, one buyer-focused.",
             "Source log included for agency approval.",
+        ]),
+    ],
+    "asset-realtor-pricing": [
+        ("Pricing calibration", [
+            "Sell the first sample snapshot as a small paid test, not a promise of listings, appraisals, or leads.",
+            "Raise price when the agent wants multiple suburbs, rush turnaround, several content formats, custom source pulls, or principal review coordination.",
+            "Weekly or four-week retainers make sense only when the agent has a clear farm area and approval process.",
+            "Keep the quote focused on source-backed content production. Do not provide investment advice, price predictions, legal advice, or agency compliance advice.",
         ]),
     ],
     "asset-trades-map": [
@@ -1015,6 +1042,65 @@ DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Confirmed item names, prices, add-ons, allergens, and sold-out items.",
             "Logo, brand colors, Instagram handle, Google profile link, and QR destination.",
             "Preferred final formats: A4, A3, square, story, website PDF, QR menu PDF.",
+        ]),
+    ],
+    "asset-cafe-quote": [
+        ("Proposal header", [
+            "Cafe: [Cafe name]",
+            "Prepared for: [Owner or manager name]",
+            "Prepared by: [Your name]",
+            "Date: [Date]",
+            "Quote valid until: [Date, usually 7-14 days]",
+        ]),
+        ("Owner summary", [
+            "I noticed [specific visible issue], which can make it harder for customers to quickly understand what to order or where the current menu lives.",
+            "This quote covers a focused menu refresh using your existing menu information. The goal is not a full rebrand. The goal is cleaner customer-facing menu assets that are easier to update, approve, and use across the places customers already check.",
+            "I will mark anything that needs your approval instead of guessing prices, item names, allergens, availability, opening hours, or claims.",
+        ]),
+        ("Starter quote block", [
+            "Starter Menu Fix - [price]",
+            "Included: one menu section or specials board refresh, one square Instagram panel, one print-ready export, one approval round, and final delivery checklist.",
+            "Best for: testing the refresh on one visible menu problem before committing to the full menu.",
+            "Turnaround: [24-72 hours] after source files and approval details are received.",
+        ]),
+        ("Full refresh quote block", [
+            "Full Menu Refresh - [price]",
+            "Included: print menu refresh, QR menu file or link check, three Instagram panels, Google menu note, owner approval list, and final handoff checklist.",
+            "Best for: cafes with stale menu photos, inconsistent specials, unreadable counter menus, or several customer-facing formats that no longer match.",
+            "Turnaround: [3-5 business days] after source files, prices, and brand inputs are received.",
+        ]),
+        ("Monthly refresh option", [
+            "Monthly Specials Refresh - [monthly price]",
+            "Included: [number] specials/menu updates per month, refreshed social panel, QR/menu link check, and quick owner approval message.",
+            "Best for: cafes that change specials, seasonal items, hours, events, or prices often enough that the menu keeps drifting.",
+            "Extra refreshes: [price] each, quoted before work starts.",
+        ]),
+        ("Scope boundaries", [
+            "Included: menu layout cleanup, short menu copy tidy-up, export formatting, QR/menu link check, and owner approval notes.",
+            "Not included unless quoted separately: photography, printing costs, food styling, new brand identity, logo design, paid ads, website development, menu engineering, legal advice, allergen advice, or guaranteed sales results.",
+            "The owner is responsible for confirming item names, ingredients, allergens, prices, taxes, availability, claims, and venue details before publishing.",
+        ]),
+        ("Client inputs required", [
+            "Current menu file, photos, or source text.",
+            "Confirmed item names, prices, add-ons, modifiers, dietary notes, allergens, and sold-out or seasonal items.",
+            "Logo, brand colours, fonts if available, Instagram handle, Google profile link, website/menu link, and QR destination.",
+            "Preferred final sizes and formats: print PDF, web PDF, Instagram square, Instagram story, QR menu, counter display, or other agreed exports.",
+            "One owner or manager who can approve the final version.",
+        ]),
+        ("Approval and revision terms", [
+            "The quote includes [number] approval round. Extra revisions after approval are billed at [hourly or fixed price].",
+            "I will send a draft for factual approval before final export. Anything marked [APPROVAL NEEDED] should not be published until confirmed.",
+            "If prices, menu items, allergens, or brand direction change after approval, I will quote the extra update before doing the work.",
+        ]),
+        ("Invoice wording", [
+            "Description: Cafe menu refresh package for [Cafe name].",
+            "Deliverables: [starter/full/monthly scope], final exports, approval checklist, and handoff note.",
+            "Payment terms: [deposit due before work starts / payment due on delivery / other agreed terms].",
+            "Notes: client confirms menu facts, pricing, allergens, claims, and publication approvals before use.",
+        ]),
+        ("Close message", [
+            "If this scope looks right, reply with approval and send the current menu files or photos. I will confirm the working timeline once I have the source material.",
+            "If you want to keep this tiny, start with the Starter Menu Fix. If it helps, we can roll the same style into the full menu or a monthly specials refresh.",
         ]),
     ],
     "asset-gbp-pitch": [
@@ -3409,6 +3495,67 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Not included", "Photography, new brand identity, paid ads, printing costs, and menu engineering are not included unless scoped separately."],
             ],
         }
+    if asset_id == "asset-gbp-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Choose the starter package based on visible public profile gaps and owner approval complexity."],
+                [2, "Use Quote Builder for one business. Edit only the input values in column B."],
+                [3, "Use Scope Guardrails before sending a proposal so the offer stays profile hygiene, not SEO guarantees."],
+                [4, "Use Monthly Hygiene only when the business has recurring profile changes or review-response needs."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "Price", "Best For", "Notes"],
+                ["Mini Rescue Audit", "3-point audit, screenshots, one service or FAQ copy sample", 149, "Cold outreach first sale", "No profile access required"],
+                ["Profile Rescue Sprint", "Services, FAQs, hours/photo checklist, review-request wording, approval notes", 450, "Most local service businesses", "Core offer"],
+                ["Multi-Service Cleanup", "Sprint plus extra service descriptions and FAQ set", 700, "Businesses with many service lines", "Raise price for messy inputs"],
+                ["Monthly Profile Hygiene", "Monthly check for hours, photos, services, FAQs, review replies, and seasonal updates", 225, "Ongoing maintenance", "Fixed monthly cadence"],
+                ["Extra Location Add-On", "Repeat audit and cleanup for one extra location", 175, "Small multi-location operators", "Per location"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base sprint price", 450],
+                ["Extra service descriptions requested", 6],
+                ["Service descriptions included", 3],
+                ["Price per extra service", 35],
+                ["Extra FAQ answers requested", 6],
+                ["FAQ answers included", 5],
+                ["Price per extra FAQ", 25],
+                ["Extra locations", 1],
+                ["Price per extra location", 175],
+                ["Rush fee", 75],
+                ["Estimated quote", "=B2+MAX(0,B3-B4)*B5+MAX(0,B6-B7)*B8+B9*B10+B11"],
+                ["Deposit due at 50%", "=B12*0.5"],
+            ],
+            "Scope Guardrails": [
+                ["Scope Item", "Included?", "Notes"],
+                ["Public profile audit with screenshots", "Yes", "Use visible facts and customer-facing issues"],
+                ["Owner-approved service descriptions", "Yes", "Owner confirms wording before use"],
+                ["FAQ drafts", "Yes", "Avoid legal, medical, tax, finance, or regulated advice"],
+                ["Photo checklist", "Yes", "Recommend photo types, do not source unlicensed images"],
+                ["Review-request wording", "Yes", "Ethical request wording only"],
+                ["Ranking guarantees", "No", "Never promise map pack placement or call increases"],
+                ["Review gating or incentives", "No", "Do not suggest filtering, rewarding, or pressuring reviews"],
+            ],
+            "Profit Check": [
+                ["Metric", "Illustrative Value", "Formula/Note"],
+                ["Quote", "='Quote Builder'!B12", "From quote builder"],
+                ["Audit hours", 1.5, "Profile scan and screenshots"],
+                ["Copy hours", 2, "Services, FAQs, review wording"],
+                ["Handoff hours", 1, "Approval notes and final pack"],
+                ["Total hours", "=B3+B4+B5", ""],
+                ["Software/tools", 10, "Use actual costs"],
+                ["Gross before time", "=B2-B7", ""],
+                ["Hourly gross", "=IF(B6=0,\"\",B8/B6)", ""],
+            ],
+            "Proposal Copy": [
+                ["Section", "Client-facing copy"],
+                ["Scope", "I will clean up the customer-facing parts of your Google Business Profile: services, FAQs, hours/photo checklist, review-request wording, and approval notes."],
+                ["Boundary", "This is a profile clarity and trust-signal cleanup. It does not guarantee rankings, calls, reviews, or revenue."],
+                ["Approval", "You approve categories, services, hours, service areas, photos, FAQs, and any review-request wording before use."],
+                ["Not included", "SEO campaigns, ads, review gating, legal/compliance advice, photography, website edits, and ongoing management are not included unless scoped separately."],
+            ],
+        }
     if asset_id == "asset-airbnb-photo-pricing":
         return {
             "Instructions": [
@@ -3913,6 +4060,67 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Boundary", "This report is designed to improve decision quality and follow-up discipline. It does not guarantee lower churn, saved revenue, or member retention."],
                 ["Approval", "You approve the data export, tags, sensitive-data exclusions, action wording, and who receives the report before anything is shared."],
                 ["Not included", "CRM setup, legal/privacy advice, direct member contact, health advice, employment advice, or unlimited consulting are not included unless scoped separately."],
+            ],
+        }
+    if asset_id == "asset-realtor-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Choose a package based on suburb count, publishing cadence, source complexity, content formats, and approval workflow."],
+                [2, "Use Quote Builder for one agent or agency pod. Edit only the input values in column B."],
+                [3, "Use Source Scope before quoting so the client understands what data you will and will not collect."],
+                [4, "Use Proposal Copy to keep claims source-backed, approval-led, and free from market predictions or investment advice."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "Price", "Best For", "Notes"],
+                ["Paid Sample Snapshot", "One suburb snapshot + source log + 1 email intro + 2 captions", 149, "Cold outreach first sale", "No recurring commitment"],
+                ["Weekly Snapshot", "One weekly suburb snapshot + source log + content pack", 250, "Solo agents", "Core weekly offer"],
+                ["Four-Week Content Sprint", "4 weekly snapshots + approval tracker + lead-nurture prompts", 850, "Agents testing consistency", "Best starter retainer"],
+                ["Monthly Farm Area Retainer", "Weekly snapshots for one farm area + extra content variants", 1200, "Agents with active local positioning", "Recurring service"],
+                ["Extra Suburb Add-On", "Repeat source scan and snapshot for one extra suburb", 175, "Agents covering nearby suburbs", "Per suburb per week"],
+                ["Principal Review Coordination", "Extra approval pass and compliance log", 100, "Agencies with principal review", "Add when needed"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base package price", 850],
+                ["Suburbs included", 1],
+                ["Suburbs requested", 2],
+                ["Price per extra suburb", 175],
+                ["Extra captions requested", 4],
+                ["Captions included", 8],
+                ["Price per extra caption", 25],
+                ["Principal review coordination", 100],
+                ["Rush fee", 75],
+                ["Estimated quote", "=B2+MAX(0,B4-B3)*B5+MAX(0,B6-B7)*B8+B9+B10"],
+                ["Deposit due at 50%", "=B11*0.5"],
+            ],
+            "Source Scope": [
+                ["Scope Item", "Included?", "Notes"],
+                ["Public listing and market sources", "Yes", "Record source name or URL and date captured"],
+                ["Weekly source log", "Yes", "Every metric needs a visible source"],
+                ["Plain-English talking points", "Yes", "Use cautious language and avoid predictions"],
+                ["Email intro and captions", "Yes", "Agent approves before publishing"],
+                ["Price forecasts", "No", "Do not predict prices, appraisals, yields, or investment outcomes"],
+                ["Legal or compliance advice", "No", "Agent or principal handles licensing and compliance approval"],
+                ["Private client data", "No", "Do not request unless separately scoped with proper approval"],
+            ],
+            "Profit Check": [
+                ["Metric", "Illustrative Value", "Formula/Note"],
+                ["Quote", "='Quote Builder'!B11", "From quote builder"],
+                ["Source research hours", 1.5, "Public data collection and source log"],
+                ["Writing hours", 1.5, "Snapshot, talking points, email intro, captions"],
+                ["Approval/handoff hours", 0.75, "Client review notes and revisions"],
+                ["Total hours", "=B3+B4+B5", ""],
+                ["Software/tools", 10, "Use actual costs"],
+                ["Gross before time", "=B2-B7", ""],
+                ["Hourly gross", "=IF(B6=0,\"\",B8/B6)", ""],
+            ],
+            "Proposal Copy": [
+                ["Section", "Client-facing copy"],
+                ["Scope", "I will create source-backed suburb snapshot content for the agreed suburb, including a source log, plain-English talking points, one email intro, and social captions for approval."],
+                ["Boundary", "This is content production using public sources. It does not include price predictions, appraisal advice, investment advice, legal advice, or guaranteed leads/listings."],
+                ["Approval", "You approve all market commentary, source references, compliance wording, and publish-ready content before use."],
+                ["Not included", "Ad management, CRM setup, private client data work, valuation advice, legal/compliance advice, and unapproved market claims are not included unless scoped separately."],
             ],
         }
     return {
