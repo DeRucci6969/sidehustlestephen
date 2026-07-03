@@ -1086,6 +1086,155 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical business education, not legal, platform compliance, photography, property, or revenue advice. Hosts should approve final images and ensure every listing photo accurately represents the property and guest experience.",
   },
+  {
+    slug: "how-to-start-a-garage-shelf-installation-business",
+    title: "How to Start a Garage Shelf Installation Business",
+    seoTitle: "How to Start a Garage Shelf Installation Business | First-Client Plan",
+    description:
+      "A practical guide to starting a garage shelf installation business with a clear buyer, safe starter scope, pricing guidance, before-and-after proof, and outreach plan.",
+    category: "Local Service",
+    publishedAt: "2026-07-04",
+    updatedAt: "2026-07-04",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["garage-shelf-installation", "power-washing-driveway-sprint", "mobile-headlight-restoration"],
+    shortAnswer:
+      "To start a garage shelf installation business, sell one narrow result: clear the garage floor by installing manufactured shelving, racks, and hooks in a safe, fixed-scope job. Start with one proof install, quote from photos, separate labour from materials, avoid structural work, and pitch homeowners, renters, landlords, and property managers with before-and-after proof.",
+    keyPoints: [
+      "Best first buyers are homeowners, renters with permission, landlords, property managers, and new-build owners with cluttered garages or unused wall space.",
+      "The starter offer should be manufactured shelving and hooks only, not custom carpentry, structural changes, or heavy ceiling-load work.",
+      "Quote from photos, wall type, garage size, what needs storing, material supply, travel, and install risk.",
+      "A practical first proof asset is one same-angle before-and-after garage photo with written permission.",
+      "The next sale often comes from neighbours, landlords, builders, or property managers who can repeat the same install scope.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for someone who can handle basic tools, follow product instructions, and keep scope tight. You are not selling custom renovations. You are helping people get boxes, bikes, tools, and tubs off the garage floor with manufactured shelves, racks, pegboards, and hooks.",
+          "Good first buyers include busy homeowners, renters with landlord approval, landlords preparing rentals, small property managers, and new-build owners who moved in before setting up storage. They already feel the pain every time they open the garage door.",
+          "The service is practical, visual, and local. That is the point. The result is easy to understand from one photo, and the buyer can decide without a long strategy call.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Most garages become storage dumps because the owner does not know what to buy, where to mount it, or how to avoid drilling into the wrong place. The problem is not inspiration. It is decision fatigue, physical clutter, and a job they keep postponing.",
+          "A clean starter offer fixes that by turning one wall into organised storage. You confirm the storage need, check the wall type, install the agreed products, and leave the owner with more usable floor space.",
+          "The buyer is not paying for shelves alone. They are paying for a safe plan, the right placement, level mounting, less clutter, and the job finally being finished.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "Start with one simple productised service: a single-wall garage shelf install. It might include a photo-based quote, light layout plan, manufactured shelving or hooks, installation into suitable fixings, cleanup, before-and-after photos, and basic weight-limit guidance.",
+          "Make exclusions clear. Do not include structural changes, electrical work, plumbing changes, custom carpentry, unknown ceiling loads, hazardous material removal, or heavy overhead storage unless you are properly qualified and insured.",
+          "A clear one-line offer is: I install manufactured garage shelving and hooks to clear the floor in one afternoon, with a photo-based quote and before-and-after proof.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Do not bundle materials and labour casually. Shelf prices vary, wall types vary, and a cheap-looking job can become unprofitable if travel, anchors, awkward access, or extra sorting time are ignored.",
+          "A starter single-wall install might sit around $300-$450 in labour when scope is simple, while larger storage-wall jobs can move into the $500-$900 range. Treat those as working ranges, not rules. Quote from your local market, skill, travel, insurance, tools, materials, and risk.",
+          "Separate the quote into labour, materials, travel, add-ons, and exclusions. If the client supplies the shelves, confirm product type and weight rating before you accept the job.",
+        ],
+      },
+      {
+        heading: "Create proof before pitching hard",
+        paragraphs: [
+          "Your first proof job can be your own garage, a family garage, or a discounted permissioned install. The goal is not to work for free forever. The goal is to create one credible before-and-after photo from the same angle.",
+          "Photograph the garage before anything moves. Install the shelves, clear the floor, take the after photo from the same spot, and save permission before using it in outreach.",
+          "Do not exaggerate the result. The strongest proof is honest: same garage, same angle, cleaner floor, mounted storage, clear walkway, and no fake claims.",
+        ],
+      },
+      {
+        heading: "Find the first 20 prospects",
+        paragraphs: [
+          "Start with one tight area: your street, a local Facebook group, a new-build estate, a landlord network, or a property manager list. The first version works best when travel and setup time are low.",
+          "Look for buyers who already show the pain: garages full of boxes, unused wall space, moving boxes after a recent purchase, rental turnovers, or builders handing over homes with bare garages.",
+          "Keep the lead list simple: name, area, buyer type, likely storage need, wall or access clue, and the safest starter offer. Do not pitch heavy ceiling racks or structural work as your first job.",
+        ],
+      },
+      {
+        heading: "Send specific outreach",
+        paragraphs: [
+          "Lead with the before-and-after, not a broad handyman pitch. The buyer needs to see the floor clearance, the shelf wall, and the fact that the job is a defined install.",
+          "Example: Hi Sam, I have been doing one-afternoon garage shelf installs around [area]. The simple version is a single storage wall with manufactured shelves and hooks so the floor is usable again. I can quote from photos before booking. Want me to send the before-and-after?",
+          "If they reply, ask for photos, garage size, wall type if known, what needs storing, who supplies materials, and whether they rent or own the property. Then quote the narrow version first.",
+        ],
+      },
+      {
+        heading: "Deliver safely and professionally",
+        paragraphs: [
+          "Before drilling, confirm wall material, likely service runs, shelf product rating, client approval, and what the shelves will hold. Use a stud finder, live-wire detector where appropriate, level, suitable anchors, and product instructions.",
+          "Keep walkways, car clearance, garage-door travel, vents, access panels, and exits clear. If the owner asks for load-bearing changes, heavy overhead storage, or anything that looks structural, refer it to a qualified trade.",
+          "After the install, send a short handoff: what was installed, weight-limit reminder, any owner action items, before-and-after photos, and a referral ask while the result is fresh.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: single-wall garage install for a new homeowner",
+      steps: [
+        "Choose one local area with recent home moves or new builds.",
+        "Complete one permissioned single-wall shelf install and capture same-angle before-and-after photos.",
+        "Post or send the proof with written permission and no identifying details.",
+        "Ask interested prospects for garage photos, what they need to store, wall type if known, and whether they want you to supply materials.",
+        "Quote labour separately from materials and include a clear exclusion for structural work.",
+        "Install only the agreed manufactured shelves, hooks, or racks within product ratings.",
+        "Send the completion handoff and ask for one neighbour, landlord, or property manager referral.",
+      ],
+    },
+    firstActionChecklist: [
+      "Confirm you have or can borrow the basic tools: drill, bits, level, stud finder, live-wire detector, tape measure, PPE, and suitable anchors.",
+      "Write your scope boundary: manufactured shelving and hooks only, no structural work.",
+      "Choose one proof garage and get permission to photograph it.",
+      "Take before photos before moving anything.",
+      "Install a small, clean, rated storage wall.",
+      "Take after photos from the same angle.",
+      "Write a starter offer with inclusions, exclusions, turnaround, and a labour range.",
+      "List 20 local prospects: homeowners, landlords, property managers, new-build owners, and renters with approval.",
+      "Send five specific messages using the proof photo.",
+      "Track objections about price, materials, wall type, timing, and safety so the next quote improves.",
+    ],
+    commonMistakes: [
+      "Selling broad garage organising instead of one fixed install.",
+      "Quoting without photos, wall type, storage weight, or material responsibilities.",
+      "Including materials in the labour price without checking shelf cost and product rating.",
+      "Ignoring wiring, pipes, garage-door travel, vents, access panels, or exits.",
+      "Promising structural safety or heavy load capacity beyond the product rating.",
+      "Posting before-and-after photos without written permission.",
+      "Adding unrelated handyman jobs before the install workflow is repeatable.",
+    ],
+    faqs: [
+      {
+        question: "Is garage shelf installation a good beginner local service?",
+        answer:
+          "It can be a practical beginner service if you have basic tool competence, keep scope narrow, follow product instructions, avoid structural work, and price the job properly. Start with simple manufactured shelves and hooks before taking on anything complex.",
+      },
+      {
+        question: "How much should I charge for garage shelf installation?",
+        answer:
+          "A simple single-wall install might sit around $300-$450 in labour, while larger storage-wall jobs may sit around $500-$900 depending on wall type, travel, materials, product complexity, access, and risk. Quote from the actual job, not a generic online range.",
+      },
+      {
+        question: "Who should I pitch first?",
+        answer:
+          "Start with homeowners, new-build owners, landlords, property managers, and renters with approval. Neighbour referrals work well because the before-and-after result is easy to understand.",
+      },
+      {
+        question: "Should I supply the shelving?",
+        answer:
+          "You can, but separate materials from labour and confirm product ratings. Some clients may already have shelves. Either way, approve the exact products before booking the install.",
+      },
+      {
+        question: "What should I avoid?",
+        answer:
+          "Avoid structural changes, heavy unknown ceiling loads, electrical or plumbing work, unsafe wall types, blocked exits, and any job where the product rating or fixing method is unclear. Refer complex work to a qualified trade.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not building, engineering, legal, safety, or trade advice. Follow product instructions, check local requirements, use proper safety gear, carry appropriate insurance, and refer structural or high-risk work to qualified professionals.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]

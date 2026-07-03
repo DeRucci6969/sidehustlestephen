@@ -199,6 +199,7 @@ PACKS: list[Pack] = [
             Asset("asset-garage-intake", "Client Intake Form", "DOCX", "Editable intake questions for garage size, what to store, wall material, access, budget, photos, and approval boundaries."),
             Asset("asset-garage-email-templates", "Client Email Templates", "DOCX", "Emails for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, and referral/maintenance reminders."),
             Asset("asset-garage-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs for wall types, weight limits, what is included, materials, timeline, mess, and structural/safety boundaries."),
+            Asset("asset-garage-proof", "Before & After Proof Kit", "DOCX", "Photo angles, consent wording, file naming, local-group captions, and referral prompts for turning one garage install into the next lead."),
         ],
     ),
     Pack(
@@ -1842,6 +1843,43 @@ PDF_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Keep one folder per car with lens condition notes, approval, before photos, after photos, and aftercare message.",
         ]),
     ],
+    "asset-garage-proof": [
+        ("Before/after photo standard", [
+            "Take wide before photos before moving boxes, sweeping, or unpacking shelves.",
+            "Use the same corner, doorway, height, and phone lens for the after photo so the floor clearance is obvious.",
+            "Shoot one wide wall photo, one floor-clearance photo, one close-up of fixings, and one final car-clearance or walkway photo.",
+            "Do not hide unsafe loads, blocked exits, loose fixings, exposed wiring, or anything the owner needs to review.",
+        ]),
+        ("Consent wording", [
+            "Ask before posting: 'Happy for me to share the before/after of the garage install? I will crop out house numbers, number plates, names, kids' items, and anything personal.'",
+            "Save the written yes with the job file before posting, even if it is just a text reply.",
+            "For rentals, strata, builders, and property managers, confirm who can approve public use of the photos.",
+            "If the client says no, keep the images for private delivery QA and do not use them in outreach.",
+        ]),
+        ("File naming", [
+            "Format: suburb_garage_before_wall_date.jpg.",
+            "Format: suburb_garage_after_wall_date.jpg.",
+            "Keep one folder per job with before photos, after photos, layout notes, product weight ratings, consent, and the completion handoff.",
+            "Keep original photos untouched and post only cropped copies.",
+        ]),
+        ("Caption templates", [
+            "One-afternoon garage storage wall in [suburb]. Same garage, same angle, floor cleared with manufactured shelving and hooks. Message me with photos for a quote.",
+            "Before/after from a single-wall garage shelf install. No structural work, just a clean layout, rated fixings, and a safer place for the clutter.",
+            "Rental garage tidy-up before handover. Useful for landlords who want storage that looks planned, not patched together.",
+        ]),
+        ("Referral prompts", [
+            "Thanks again. If a neighbour has the same garage-floor problem, send them the before/after and I can quote from photos first.",
+            "I am booking two same-street installs this week. If someone nearby wants shelves or hooks installed, I can reduce travel/setup time.",
+            "For landlords/builders: I can price the same manufactured shelf install across multiple garages if the wall type and layout are consistent.",
+        ]),
+        ("Proof quality checklist", [
+            "Before photos captured before moving anything.",
+            "After photos match the same angle and show usable floor clearance.",
+            "One close-up shows clean level mounting and fixings, without implying structural certification.",
+            "Weight-limit guidance and any owner action items are saved in the completion handoff.",
+            "Consent is saved and identifying details are cropped before public use.",
+        ]),
+    ],
 }
 
 
@@ -2503,37 +2541,37 @@ def automation_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]
             "Weekly report and client update: every Friday.",
             "Proof and referral repurposing: after each completed job.",
         ]),
-        ("Daily lead triage — runs every weekday morning", [
+        ("Daily lead triage - runs every weekday morning", [
             f"You are an intake assistant for a {service} serving {buyer.lower()}. Here are the new enquiries from the last 24 hours: [paste messages]. "
             "For each one, return a row with: sender, channel, intent (new job / question / complaint / spam), urgency (high/medium/low), the single missing detail to ask for, and a one-line suggested reply. "
             "Do not send anything. Put any urgent or safety-related message at the top for immediate human review.",
         ]),
-        ("Weekly prospect list — runs every Monday", [
+        ("Weekly prospect list - runs every Monday", [
             f"You are a local lead researcher for a {service}. Target buyer: {buyer}. "
             "Using [area / suburb / list source], produce 10 prospects who visibly have the problem this service solves. "
             "Return a table: name, location, the visible problem you would reference, the best first channel, and a one-line opener. Exclude anyone who looks high-risk, delicate, or out of scope.",
         ]),
-        ("Outreach drafting prompt — runs twice a week", [
+        ("Outreach drafting prompt - runs twice a week", [
             f"You write first-contact outreach for a {service} aimed at {buyer.lower()}. Here is the prospect list: [paste rows]. "
             "For each prospect, draft a short, specific message that names the visible problem, offers the fixed-scope starter, and asks one easy yes/no question. "
             "Keep it under 90 words, with no hype and no guarantees. Return each draft labelled by prospect for human review before sending.",
         ]),
-        ("Follow-up sequencer prompt — runs every weekday", [
+        ("Follow-up sequencer prompt - runs every weekday", [
             "You manage polite follow-ups. Here are prospects with no reply and the days since first contact: [paste]. "
             "For each, draft the next message based on the gap: day 2 adds one new observation or sample, day 5 asks if it is handled internally, day 10 offers a smaller paid starter, day 21 closes the loop. "
             "Group drafts by prospect, never chase more than four times, and hold anything that should get a personal human note.",
         ]),
-        ("Delivery QA prompt — runs before every handoff", [
+        ("Delivery QA prompt - runs before every handoff", [
             f"You are a delivery reviewer for a {service}. Here is the draft deliverable: [paste]. "
             "Check it against this standard: every fact, price, date, and claim is verifiable; nothing promises guaranteed results; the buyer can act within 30 seconds; every bracketed placeholder is replaced. "
             "Return a pass/fix list with the exact lines to change, then return it to the human owner instead of sending.",
         ]),
-        ("Weekly report and client update — runs every Friday", [
+        ("Weekly report and client update - runs every Friday", [
             f"You report on a {service}. Here is this week's activity: [prospects contacted, replies, jobs booked, jobs delivered, revenue, issues]. "
             "Produce two outputs: (1) an internal summary with the top three numbers and the one bottleneck to fix next week; (2) a short, friendly update for each active client stating what was done, what is next, and any approval needed. "
             "Keep every claim factual and flag anything that needs owner approval.",
         ]),
-        ("Proof and referral repurposing — runs after each completed job", [
+        ("Proof and referral repurposing - runs after each completed job", [
             f"You repurpose finished work for a {service}. Here are the job details and before/after notes: [paste]. "
             "Draft: one social caption with the result and a soft call to action, one short message asking the client for a referral or review, and one line to add this example to the outreach sample library. "
             "Do not invent results or show identifying details without approval.",
@@ -2715,7 +2753,7 @@ def static_contents(sections: list[tuple[str, list[str]]]) -> list[str]:
     rows = [["Section", "What it covers"]]
     for index, (heading, items) in enumerate(sections, start=1):
         preview = items[0] if items else "Reference section"
-        rows.append([f"{index:02d}", f"{heading} — {_smart_trim(preview, 92)}"])
+        rows.append([f"{index:02d}", f"{heading} - {_smart_trim(preview, 92)}"])
     return [
         p("In this document", "Kicker"),
         table(rows, [1180, 7940], header=True),
@@ -2901,7 +2939,7 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
     <w:lvl w:ilvl="0">
       <w:start w:val="1"/>
       <w:numFmt w:val="bullet"/>
-      <w:lvlText w:val="–"/>
+      <w:lvlText w:val="-"/>
       <w:pPr><w:ind w:left="540" w:hanging="220"/></w:pPr>
     </w:lvl>
   </w:abstractNum>

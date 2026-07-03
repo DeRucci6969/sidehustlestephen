@@ -201,7 +201,7 @@ const basePacks: BusinessPack[] = [
     hook: "Turn a cluttered garage into an organised wall of storage in one afternoon.",
     seoTitle: "Garage Shelf Installation Launch Pack | Quote Calculator and Outreach Scripts",
     seoDescription:
-      "Start a garage shelf installation service with a quote calculator, neighbour outreach scripts, safety checklist, intake form, prompt pack, and client email templates.",
+      "Start a garage shelf installation service with a quote calculator, neighbour outreach scripts, safety checklist, proof kit, intake form, prompt pack, and client email templates.",
     category: "Local Service",
     buyer: "Homeowners, renters, landlords, and property managers",
     startupCost: "$101-$500",
@@ -222,6 +222,7 @@ const basePacks: BusinessPack[] = [
       { id: "asset-garage-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for garage size, what to store, wall material, access, budget, photos, and approval boundaries." },
       { id: "asset-garage-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, and referral/maintenance reminders." },
       { id: "asset-garage-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for wall types, weight limits, what is included, materials, timeline, mess, and structural/safety boundaries." },
+      { id: "asset-garage-proof", title: "Before & After Proof Kit", type: "DOCX", description: "Photo angles, consent wording, file naming, local-group captions, and referral prompts for turning one garage install into the next lead." },
     ],
   },
   {
@@ -478,7 +479,7 @@ const basePacks: BusinessPack[] = [
 ];
 
 const AUTOMATION_ASSET_DESCRIPTION =
-  "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing — each ready to paste into an agent and run on a cadence with human approval.";
+  "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.";
 
 const packOgImages: Record<string, string> = {
   "ai-inbox-triage-trades": "/visuals/pack-cards/ai-inbox-triage-trades-v2.jpg",
@@ -508,7 +509,7 @@ function automationAssetFor(assets: PackAsset[]): PackAsset {
   };
 }
 
-// Every pack leads with a scheduled-automation pack — the most appealing asset for buyers.
+// Every pack leads with a scheduled-automation pack, the most appealing asset for buyers.
 export const packs: BusinessPack[] = basePacks.map((pack) => ({
   ...pack,
   ogImage: packOgImages[pack.slug],
@@ -1435,6 +1436,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX email template pack for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, referral asks, and landlord or builder follow-up.",
   "asset-garage-faqs":
     "A DOCX buyer FAQ pack covering wall types, weight limits, manufactured shelving scope, materials, installation time, mess, exclusions, and when a qualified trade is required.",
+  "asset-garage-proof":
+    "A DOCX before/after proof kit with fixed photo angles, client consent wording, identifying-detail rules, file naming, local-group captions, landlord/builder proof angles, and referral prompts.",
   "asset-headlight-automation":
     "A DOCX automation pack with scheduled agent prompts for cloudy-headlight lead spotting, sample-led outreach, quote follow-ups, booking reminders, completion handoffs, proof posts, and dealer batch follow-ups.",
   "asset-headlight-outreach":

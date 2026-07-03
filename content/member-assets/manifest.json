@@ -8,7 +8,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/cafe-menu-refresh-package/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8053
+    "bytes": 8037
   },
   {
     "id": "asset-cafe-script",
@@ -19,7 +19,7 @@
     "description": "Cold DM and email scripts for first contact.",
     "path": "content/member-assets/cafe-menu-refresh-package/cafe-outreach-script.docx",
     "filename": "cafe-outreach-script.docx",
-    "bytes": 7658
+    "bytes": 7644
   },
   {
     "id": "asset-cafe-pricing",
@@ -41,7 +41,7 @@
     "description": "Copyable proposal, quote, scope, approval, and monthly refresh wording for cafe owners.",
     "path": "content/member-assets/cafe-menu-refresh-package/cafe-proposal-quote-template.docx",
     "filename": "cafe-proposal-quote-template.docx",
-    "bytes": 8314
+    "bytes": 8301
   },
   {
     "id": "asset-cafe-checklist",
@@ -63,7 +63,7 @@
     "description": "Practical prompts for cafe audits, menu copy, outreach, handoff notes, and monthly refresh ideas.",
     "path": "content/member-assets/cafe-menu-refresh-package/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9132
+    "bytes": 9116
   },
   {
     "id": "asset-cafe-intake",
@@ -74,7 +74,7 @@
     "description": "Editable client intake questions for menu source files, brand details, approvals, and delivery formats.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7303
+    "bytes": 7288
   },
   {
     "id": "asset-cafe-email-templates",
@@ -85,7 +85,7 @@
     "description": "Ready-to-adapt emails for outreach, intake, approvals, delivery, follow-up, and monthly refresh offers.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7216
+    "bytes": 7203
   },
   {
     "id": "asset-cafe-faqs",
@@ -96,7 +96,7 @@
     "description": "Buyer-facing FAQs that explain scope, turnaround, approvals, files, and what is not included.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7187
+    "bytes": 7174
   },
   {
     "id": "asset-gbp-automation",
@@ -107,7 +107,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/google-business-profile-rescue/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8053
+    "bytes": 8039
   },
   {
     "id": "asset-gbp-audit",
@@ -129,7 +129,7 @@
     "description": "Email and Loom pitch structure.",
     "path": "content/member-assets/google-business-profile-rescue/rescue-sprint-pitch.docx",
     "filename": "rescue-sprint-pitch.docx",
-    "bytes": 6809
+    "bytes": 6796
   },
   {
     "id": "asset-gbp-pricing",
@@ -151,7 +151,7 @@
     "description": "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery.",
     "path": "content/member-assets/google-business-profile-rescue/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8755
+    "bytes": 8741
   },
   {
     "id": "asset-gbp-intake",
@@ -162,7 +162,7 @@
     "description": "Editable intake questions for profile access, services, hours, photos, FAQs, review rules, and approval owners.",
     "path": "content/member-assets/google-business-profile-rescue/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7297
+    "bytes": 7281
   },
   {
     "id": "asset-gbp-email-templates",
@@ -173,7 +173,7 @@
     "description": "Ready-to-adapt emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests.",
     "path": "content/member-assets/google-business-profile-rescue/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7232
+    "bytes": 7218
   },
   {
     "id": "asset-gbp-faqs",
@@ -184,7 +184,7 @@
     "description": "Buyer-facing FAQs that explain profile rescue scope, ranking disclaimers, access, approvals, and maintenance.",
     "path": "content/member-assets/google-business-profile-rescue/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7199
+    "bytes": 7186
   },
   {
     "id": "asset-airbnb-photo-automation",
@@ -195,7 +195,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/airbnb-photo-refresh-service/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8061
+    "bytes": 8046
   },
   {
     "id": "asset-airbnb-photo-prompts",
@@ -206,7 +206,7 @@
     "description": "Copy-paste prompts for GPT Image 2, Nano Banana, and other image tools to improve ambience, lighting, composition, and add realistic adults enjoying the space.",
     "path": "content/member-assets/airbnb-photo-refresh-service/photo-improvement-prompt-pack.docx",
     "filename": "photo-improvement-prompt-pack.docx",
-    "bytes": 12760
+    "bytes": 12746
   },
   {
     "id": "asset-airbnb-photo-audit",
@@ -239,7 +239,7 @@
     "description": "Cold email, DM, Loom, and follow-up scripts built around sending a proactive before/after sample to hosts.",
     "path": "content/member-assets/airbnb-photo-refresh-service/host-outreach-scripts.docx",
     "filename": "host-outreach-scripts.docx",
-    "bytes": 7919
+    "bytes": 7904
   },
   {
     "id": "asset-airbnb-photo-intake",
@@ -250,7 +250,7 @@
     "description": "Editable intake questions for listing URL, source photos, approved edit boundaries, model direction, rooms, usage, and host approvals.",
     "path": "content/member-assets/airbnb-photo-refresh-service/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7356
+    "bytes": 7341
   },
   {
     "id": "asset-airbnb-photo-email-templates",
@@ -261,7 +261,7 @@
     "description": "Emails for sample delivery, paid refresh scope, source file requests, approval rounds, final handoff, and monthly/seasonal refresh offers.",
     "path": "content/member-assets/airbnb-photo-refresh-service/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7286
+    "bytes": 7273
   },
   {
     "id": "asset-airbnb-photo-faqs",
@@ -272,7 +272,7 @@
     "description": "Buyer-facing FAQs covering ethical edits, model usage, photo ownership, turnaround, platform-safe claims, revisions, and deliverables.",
     "path": "content/member-assets/airbnb-photo-refresh-service/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7243
+    "bytes": 7230
   },
   {
     "id": "asset-drone-roof-automation",
@@ -283,7 +283,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/drone-roof-photo-inspection/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8077
+    "bytes": 8063
   },
   {
     "id": "asset-drone-roof-outreach",
@@ -294,7 +294,7 @@
     "description": "Cold call, DM, email, and follow-up scripts for roofers, agents, solar installers, and property managers built around the free sample roof offer.",
     "path": "content/member-assets/drone-roof-photo-inspection/drone-outreach-script.docx",
     "filename": "drone-outreach-script.docx",
-    "bytes": 7873
+    "bytes": 7859
   },
   {
     "id": "asset-drone-roof-report",
@@ -305,7 +305,7 @@
     "description": "A client-ready visual report template with property details, photo grid, visible-area notes, video link, and visual-only disclaimer language.",
     "path": "content/member-assets/drone-roof-photo-inspection/roof-photo-report-template.docx",
     "filename": "roof-photo-report-template.docx",
-    "bytes": 7464
+    "bytes": 7450
   },
   {
     "id": "asset-drone-roof-pricing",
@@ -338,7 +338,7 @@
     "description": "Claim-safe prompts for report write-ups, visible issue notes, photo captions, free-sample pitches, agent blurbs, and delivery QA.",
     "path": "content/member-assets/drone-roof-photo-inspection/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9580
+    "bytes": 9567
   },
   {
     "id": "asset-drone-roof-intake",
@@ -349,7 +349,7 @@
     "description": "Editable intake questions for property details, owner permission, roof areas to capture, access constraints, intended use, and delivery format.",
     "path": "content/member-assets/drone-roof-photo-inspection/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7398
+    "bytes": 7384
   },
   {
     "id": "asset-drone-roof-email-templates",
@@ -360,7 +360,7 @@
     "description": "Emails for free sample offers, booking confirmation, pre-flight requirements, report delivery, follow-up, and recurring partner retainers.",
     "path": "content/member-assets/drone-roof-photo-inspection/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7342
+    "bytes": 7328
   },
   {
     "id": "asset-drone-roof-faqs",
@@ -371,7 +371,7 @@
     "description": "Buyer-facing FAQs for visual-only scope, drone legality, owner permission, weather, turnaround, roof access, pricing, and recurring reports.",
     "path": "content/member-assets/drone-roof-photo-inspection/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7473
+    "bytes": 7461
   },
   {
     "id": "asset-powerwash-automation",
@@ -382,7 +382,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/power-washing-driveway-sprint/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8077
+    "bytes": 8062
   },
   {
     "id": "asset-powerwash-outreach",
@@ -393,7 +393,7 @@
     "description": "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around visible before-and-after proof.",
     "path": "content/member-assets/power-washing-driveway-sprint/power-washing-outreach-scripts.docx",
     "filename": "power-washing-outreach-scripts.docx",
-    "bytes": 8429
+    "bytes": 8415
   },
   {
     "id": "asset-powerwash-pricing",
@@ -426,7 +426,7 @@
     "description": "Practical prompts for quote notes, door-to-door scripts, photo-based estimates, surface-risk language, and maintenance upsells.",
     "path": "content/member-assets/power-washing-driveway-sprint/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9667
+    "bytes": 9654
   },
   {
     "id": "asset-powerwash-intake",
@@ -437,7 +437,7 @@
     "description": "Editable intake questions for address, surface type, water access, staining, drainage, photos, timing, and approval boundaries.",
     "path": "content/member-assets/power-washing-driveway-sprint/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7411
+    "bytes": 7396
   },
   {
     "id": "asset-powerwash-email-templates",
@@ -448,7 +448,7 @@
     "description": "Emails for sample offers, quote requests, booking confirmation, pre-job prep, completion handoff, and maintenance reminders.",
     "path": "content/member-assets/power-washing-driveway-sprint/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7325
+    "bytes": 7311
   },
   {
     "id": "asset-powerwash-faqs",
@@ -459,7 +459,7 @@
     "description": "Buyer-facing FAQs for surfaces, water use, runoff, safety, damage limitations, weather, pricing, and recurring cleans.",
     "path": "content/member-assets/power-washing-driveway-sprint/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7268
+    "bytes": 7256
   },
   {
     "id": "asset-powerwash-proof",
@@ -470,7 +470,7 @@
     "description": "Photo playbook for consistent before/after proof, plus permission, file-naming, and posting templates that turn results into referrals.",
     "path": "content/member-assets/power-washing-driveway-sprint/before-after-proof-kit.docx",
     "filename": "before-after-proof-kit.docx",
-    "bytes": 7919
+    "bytes": 7904
   },
   {
     "id": "asset-garage-automation",
@@ -481,7 +481,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/garage-shelf-installation/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8074
+    "bytes": 8060
   },
   {
     "id": "asset-garage-outreach",
@@ -492,7 +492,7 @@
     "description": "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around the before-and-after garage transformation.",
     "path": "content/member-assets/garage-shelf-installation/garage-outreach-scripts.docx",
     "filename": "garage-outreach-scripts.docx",
-    "bytes": 8021
+    "bytes": 8006
   },
   {
     "id": "asset-garage-pricing",
@@ -525,7 +525,7 @@
     "description": "Practical prompts for photo-based quotes, wall-layout suggestions, anchor/load notes, local-group posts, and referral follow-ups.",
     "path": "content/member-assets/garage-shelf-installation/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9431
+    "bytes": 9417
   },
   {
     "id": "asset-garage-intake",
@@ -536,7 +536,7 @@
     "description": "Editable intake questions for garage size, what to store, wall material, access, budget, photos, and approval boundaries.",
     "path": "content/member-assets/garage-shelf-installation/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7401
+    "bytes": 7387
   },
   {
     "id": "asset-garage-email-templates",
@@ -547,7 +547,7 @@
     "description": "Emails for sample offers, quote requests, booking confirmation, pre-install prep, completion handoff, and referral/maintenance reminders.",
     "path": "content/member-assets/garage-shelf-installation/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7334
+    "bytes": 7320
   },
   {
     "id": "asset-garage-faqs",
@@ -558,7 +558,18 @@
     "description": "Buyer-facing FAQs for wall types, weight limits, what is included, materials, timeline, mess, and structural/safety boundaries.",
     "path": "content/member-assets/garage-shelf-installation/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7275
+    "bytes": 7263
+  },
+  {
+    "id": "asset-garage-proof",
+    "packSlug": "garage-shelf-installation",
+    "packTitle": "Garage Shelf Installation",
+    "title": "Before & After Proof Kit",
+    "type": "DOCX",
+    "description": "Photo angles, consent wording, file naming, local-group captions, and referral prompts for turning one garage install into the next lead.",
+    "path": "content/member-assets/garage-shelf-installation/before-after-proof-kit.docx",
+    "filename": "before-after-proof-kit.docx",
+    "bytes": 6352
   },
   {
     "id": "asset-headlight-automation",
@@ -569,7 +580,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/mobile-headlight-restoration/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8085
+    "bytes": 8071
   },
   {
     "id": "asset-headlight-outreach",
@@ -580,7 +591,7 @@
     "description": "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof.",
     "path": "content/member-assets/mobile-headlight-restoration/headlight-outreach-scripts.docx",
     "filename": "headlight-outreach-scripts.docx",
-    "bytes": 8026
+    "bytes": 8011
   },
   {
     "id": "asset-headlight-pricing",
@@ -613,7 +624,7 @@
     "description": "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy.",
     "path": "content/member-assets/mobile-headlight-restoration/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9418
+    "bytes": 9401
   },
   {
     "id": "asset-headlight-intake",
@@ -624,7 +635,7 @@
     "description": "Editable intake questions for car make/model, lens condition, photos, location, access, weather window, expectations, and approval boundaries.",
     "path": "content/member-assets/mobile-headlight-restoration/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7418
+    "bytes": 7403
   },
   {
     "id": "asset-headlight-email-templates",
@@ -635,7 +646,7 @@
     "description": "Emails for sample-led outreach, quote requests, booking confirmation, pre-job prep, completion handoff, referral asks, and dealer batch follow-ups.",
     "path": "content/member-assets/mobile-headlight-restoration/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7364
+    "bytes": 7351
   },
   {
     "id": "asset-headlight-faqs",
@@ -646,7 +657,7 @@
     "description": "Buyer-facing FAQs for what restoration can and cannot fix, sealant, weather, timing, price, safety, and when replacement is better.",
     "path": "content/member-assets/mobile-headlight-restoration/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7277
+    "bytes": 7264
   },
   {
     "id": "asset-headlight-proof",
@@ -657,7 +668,7 @@
     "description": "Photo playbook for matched headlight shots, consent wording, file naming, marketplace captions, and referral follow-ups.",
     "path": "content/member-assets/mobile-headlight-restoration/before-after-proof-kit.docx",
     "filename": "before-after-proof-kit.docx",
-    "bytes": 6308
+    "bytes": 6295
   },
   {
     "id": "asset-gym-automation",
@@ -668,7 +679,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/gym-churn-report/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8042
+    "bytes": 8027
   },
   {
     "id": "asset-gym-report",
@@ -690,7 +701,7 @@
     "description": "Email, DM, call, and follow-up scripts built around public retention clues and anonymized-data starter offers.",
     "path": "content/member-assets/gym-churn-report/gym-owner-outreach-scripts.docx",
     "filename": "gym-owner-outreach-scripts.docx",
-    "bytes": 8007
+    "bytes": 7991
   },
   {
     "id": "asset-gym-pricing",
@@ -723,7 +734,7 @@
     "description": "Practical prompts for cancellation analysis, retention recommendations, owner calls, and member-save experiments.",
     "path": "content/member-assets/gym-churn-report/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8781
+    "bytes": 8766
   },
   {
     "id": "asset-gym-intake",
@@ -734,7 +745,7 @@
     "description": "Editable intake questions for cancellation exports, member privacy, churn tags, membership types, and owner goals.",
     "path": "content/member-assets/gym-churn-report/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7308
+    "bytes": 7294
   },
   {
     "id": "asset-gym-email-templates",
@@ -745,7 +756,7 @@
     "description": "Ready-to-adapt emails for gym owner outreach, data requests, report delivery, action follow-up, and renewal.",
     "path": "content/member-assets/gym-churn-report/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7244
+    "bytes": 7230
   },
   {
     "id": "asset-gym-faqs",
@@ -756,7 +767,7 @@
     "description": "Buyer-facing FAQs that explain data needs, privacy, retention claims, monthly cadence, and staff involvement.",
     "path": "content/member-assets/gym-churn-report/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7215
+    "bytes": 7203
   },
   {
     "id": "asset-shopify-automation",
@@ -767,7 +778,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/shopify-cart-audit/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8030
+    "bytes": 8015
   },
   {
     "id": "asset-shopify-audit",
@@ -789,7 +800,7 @@
     "description": "Starter copy blocks for small stores.",
     "path": "content/member-assets/shopify-cart-audit/abandoned-cart-email-swipe.docx",
     "filename": "abandoned-cart-email-swipe.docx",
-    "bytes": 7345
+    "bytes": 7330
   },
   {
     "id": "asset-shopify-pricing",
@@ -811,7 +822,7 @@
     "description": "Practical prompts for store audits, checkout objections, abandoned-cart copy, and fix prioritisation.",
     "path": "content/member-assets/shopify-cart-audit/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8718
+    "bytes": 8704
   },
   {
     "id": "asset-shopify-intake",
@@ -822,7 +833,7 @@
     "description": "Editable intake questions for store access, products, policies, email platform, brand voice, and approval-sensitive claims.",
     "path": "content/member-assets/shopify-cart-audit/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7314
+    "bytes": 7300
   },
   {
     "id": "asset-shopify-email-templates",
@@ -833,7 +844,7 @@
     "description": "Ready-to-adapt emails for audit outreach, policy requests, findings delivery, implementation follow-up, and upsells.",
     "path": "content/member-assets/shopify-cart-audit/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7243
+    "bytes": 7230
   },
   {
     "id": "asset-shopify-faqs",
@@ -844,7 +855,7 @@
     "description": "Buyer-facing FAQs that explain audit scope, conversion disclaimers, access, implementation, and email compliance.",
     "path": "content/member-assets/shopify-cart-audit/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7201
+    "bytes": 7188
   },
   {
     "id": "asset-ugc-automation",
@@ -855,7 +866,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/ugc-brief-generator/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8028
+    "bytes": 8013
   },
   {
     "id": "asset-ugc-brief",
@@ -866,7 +877,7 @@
     "description": "A complete structure for product-specific creator briefs.",
     "path": "content/member-assets/ugc-brief-generator/ugc-brief-template.docx",
     "filename": "ugc-brief-template.docx",
-    "bytes": 7427
+    "bytes": 7411
   },
   {
     "id": "asset-ugc-hooks",
@@ -888,7 +899,7 @@
     "description": "Practical prompts for product angles, creator briefs, hook variations, shot lists, and usage-rights checks.",
     "path": "content/member-assets/ugc-brief-generator/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8654
+    "bytes": 8640
   },
   {
     "id": "asset-ugc-intake",
@@ -899,7 +910,7 @@
     "description": "Editable intake questions for product facts, buyer objections, proof points, creator constraints, and usage rights.",
     "path": "content/member-assets/ugc-brief-generator/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7278
+    "bytes": 7263
   },
   {
     "id": "asset-ugc-email-templates",
@@ -910,7 +921,7 @@
     "description": "Ready-to-adapt emails for ecommerce brand outreach, product info requests, brief delivery, revision requests, and monthly brief retainers.",
     "path": "content/member-assets/ugc-brief-generator/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7234
+    "bytes": 7220
   },
   {
     "id": "asset-ugc-faqs",
@@ -921,7 +932,7 @@
     "description": "Buyer-facing FAQs that explain brief scope, creator responsibilities, claim safety, usage rights, and revisions.",
     "path": "content/member-assets/ugc-brief-generator/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7197
+    "bytes": 7184
   },
   {
     "id": "asset-realtor-automation",
@@ -932,7 +943,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/realtor-suburb-snapshot/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8039
+    "bytes": 8025
   },
   {
     "id": "asset-realtor-report",
@@ -954,7 +965,7 @@
     "description": "Outreach script for agents and principals.",
     "path": "content/member-assets/realtor-suburb-snapshot/agent-pitch-script.docx",
     "filename": "agent-pitch-script.docx",
-    "bytes": 6866
+    "bytes": 6853
   },
   {
     "id": "asset-realtor-pricing",
@@ -976,7 +987,7 @@
     "description": "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture.",
     "path": "content/member-assets/realtor-suburb-snapshot/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8687
+    "bytes": 8673
   },
   {
     "id": "asset-realtor-intake",
@@ -987,7 +998,7 @@
     "description": "Editable intake questions for target suburbs, data sources, agency tone, compliance approval, and posting cadence.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7342
+    "bytes": 7327
   },
   {
     "id": "asset-realtor-email-templates",
@@ -998,7 +1009,7 @@
     "description": "Ready-to-adapt emails for agent outreach, sample delivery, source requests, weekly handoff, and retainer renewal.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7249
+    "bytes": 7236
   },
   {
     "id": "asset-realtor-faqs",
@@ -1009,7 +1020,7 @@
     "description": "Buyer-facing FAQs that explain source use, compliance, market commentary limits, cadence, and deliverables.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7199
+    "bytes": 7187
   },
   {
     "id": "asset-trades-automation",
@@ -1020,7 +1031,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/ai-inbox-triage-trades/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8040
+    "bytes": 8026
   },
   {
     "id": "asset-trades-map",
@@ -1042,7 +1053,7 @@
     "description": "Common quote and follow-up response templates.",
     "path": "content/member-assets/ai-inbox-triage-trades/reply-template-pack.docx",
     "filename": "reply-template-pack.docx",
-    "bytes": 7101
+    "bytes": 7088
   },
   {
     "id": "asset-trades-prompts",
@@ -1053,7 +1064,7 @@
     "description": "Practical prompts for lead classification, missing-info replies, quote triage, and owner-approved workflows.",
     "path": "content/member-assets/ai-inbox-triage-trades/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8747
+    "bytes": 8734
   },
   {
     "id": "asset-trades-intake",
@@ -1064,7 +1075,7 @@
     "description": "Editable intake questions for inquiry types, emergency rules, quote fields, approval roles, and communication channels.",
     "path": "content/member-assets/ai-inbox-triage-trades/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7335
+    "bytes": 7320
   },
   {
     "id": "asset-trades-email-templates",
@@ -1075,7 +1086,7 @@
     "description": "Ready-to-adapt emails for trades owner outreach, workflow setup, approval rules, weekly summaries, and ongoing triage.",
     "path": "content/member-assets/ai-inbox-triage-trades/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7246
+    "bytes": 7233
   },
   {
     "id": "asset-trades-faqs",
@@ -1086,7 +1097,7 @@
     "description": "Buyer-facing FAQs that explain human approval, emergency handling, inbox access, template setup, and automation limits.",
     "path": "content/member-assets/ai-inbox-triage-trades/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7224
+    "bytes": 7210
   },
   {
     "id": "asset-reviews-automation",
@@ -1097,7 +1108,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/review-testimonial-service/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8056
+    "bytes": 8041
   },
   {
     "id": "asset-reviews-replies",
@@ -1108,7 +1119,7 @@
     "description": "Tone-safe reply examples for positive and negative reviews.",
     "path": "content/member-assets/review-testimonial-service/review-reply-swipe-file.docx",
     "filename": "review-reply-swipe-file.docx",
-    "bytes": 7016
+    "bytes": 7003
   },
   {
     "id": "asset-reviews-cards",
@@ -1130,7 +1141,7 @@
     "description": "Practical prompts for review replies, testimonial extraction, trust-card copy, and escalation-safe language.",
     "path": "content/member-assets/review-testimonial-service/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8700
+    "bytes": 8689
   },
   {
     "id": "asset-reviews-intake",
@@ -1141,7 +1152,7 @@
     "description": "Editable intake questions for review platforms, reply tone, escalation rules, proof claims, and design approvals.",
     "path": "content/member-assets/review-testimonial-service/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7318
+    "bytes": 7304
   },
   {
     "id": "asset-reviews-email-templates",
@@ -1152,7 +1163,7 @@
     "description": "Ready-to-adapt emails for local business outreach, review approval, monthly delivery, escalation notes, and testimonial usage.",
     "path": "content/member-assets/review-testimonial-service/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7250
+    "bytes": 7238
   },
   {
     "id": "asset-reviews-faqs",
@@ -1163,7 +1174,7 @@
     "description": "Buyer-facing FAQs that explain review reply scope, testimonial permissions, escalation, claim safety, and monthly cadence.",
     "path": "content/member-assets/review-testimonial-service/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7221
+    "bytes": 7209
   },
   {
     "id": "asset-manual-automation",
@@ -1174,7 +1185,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/manual-workflow-concierge/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8043
+    "bytes": 8028
   },
   {
     "id": "asset-manual-score",
@@ -1196,7 +1207,7 @@
     "description": "Offer structure and delivery map.",
     "path": "content/member-assets/manual-workflow-concierge/workflow-concierge-template.docx",
     "filename": "workflow-concierge-template.docx",
-    "bytes": 7195
+    "bytes": 7181
   },
   {
     "id": "asset-manual-prompts",
@@ -1207,7 +1218,7 @@
     "description": "Practical prompts for niche selection, workflow mapping, manual SOPs, client reports, and automation backlog decisions.",
     "path": "content/member-assets/manual-workflow-concierge/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8715
+    "bytes": 8703
   },
   {
     "id": "asset-manual-intake",
@@ -1218,7 +1229,7 @@
     "description": "Editable intake questions for workflow pain, current process, inputs, approvals, exceptions, and success criteria.",
     "path": "content/member-assets/manual-workflow-concierge/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7311
+    "bytes": 7297
   },
   {
     "id": "asset-manual-email-templates",
@@ -1229,7 +1240,7 @@
     "description": "Ready-to-adapt emails for niche outreach, pilot setup, input requests, weekly reporting, and renewal after validation.",
     "path": "content/member-assets/manual-workflow-concierge/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7266
+    "bytes": 7253
   },
   {
     "id": "asset-manual-faqs",
@@ -1240,7 +1251,7 @@
     "description": "Buyer-facing FAQs that explain manual-first delivery, software boundaries, pilot scope, data handling, and automation timing.",
     "path": "content/member-assets/manual-workflow-concierge/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7225
+    "bytes": 7213
   },
   {
     "id": "asset-airbnb-automation",
@@ -1251,7 +1262,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8052
+    "bytes": 8037
   },
   {
     "id": "asset-airbnb-outline",
@@ -1262,7 +1273,7 @@
     "description": "Sections and prompts for a polished guest guide.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/guest-guide-outline.docx",
     "filename": "guest-guide-outline.docx",
-    "bytes": 7164
+    "bytes": 7148
   },
   {
     "id": "asset-airbnb-upsell",
@@ -1284,7 +1295,7 @@
     "description": "Practical prompts for guest-guide copy, local recommendations, house-rule clarity, and host upsell ideas.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8681
+    "bytes": 8667
   },
   {
     "id": "asset-airbnb-intake",
@@ -1295,7 +1306,7 @@
     "description": "Editable intake questions for listing details, check-in steps, house rules, local recommendations, and host approvals.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7317
+    "bytes": 7303
   },
   {
     "id": "asset-airbnb-email-templates",
@@ -1306,7 +1317,7 @@
     "description": "Ready-to-adapt emails for host outreach, guest-guide intake, fact approvals, final handoff, and refresh reminders.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7256
+    "bytes": 7242
   },
   {
     "id": "asset-airbnb-faqs",
@@ -1317,6 +1328,6 @@
     "description": "Buyer-facing FAQs that explain guide scope, host approvals, local recommendation checks, guest messaging, and refresh cadence.",
     "path": "content/member-assets/airbnb-guest-guide-refresh/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7234
+    "bytes": 7220
   }
 ]
