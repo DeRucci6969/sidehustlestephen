@@ -1235,6 +1235,171 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical business education, not building, engineering, legal, safety, or trade advice. Follow product instructions, check local requirements, use proper safety gear, carry appropriate insurance, and refer structural or high-risk work to qualified professionals.",
   },
+  {
+    slug: "how-to-start-an-ai-inbox-triage-service-for-trades",
+    title: "How to Start an AI Inbox Triage Service for Trades",
+    seoTitle: "How to Start an AI Inbox Triage Service for Trades | First-Client Guide",
+    description:
+      "A practical guide to starting an AI-assisted inbox triage service for trades with one buyer lane, reply templates, urgent-message rules, pricing, outreach, and safe human approval.",
+    category: "AI Tool",
+    publishedAt: "2026-07-04",
+    updatedAt: "2026-07-04",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["ai-inbox-triage-trades", "manual-workflow-concierge", "google-business-profile-rescue"],
+    shortAnswer:
+      "To start an AI inbox triage service for trades, pick one trade, map the common enquiry types, create owner-approved reply templates, and sell a small setup that labels messages, collects missing job details, and gives the owner a daily lead summary. Do not sell a fully autonomous AI agent on day one. Sell cleaner inbox handling with human approval.",
+    keyPoints: [
+      "Best first buyers are owner-operated plumbers, electricians, roofers, cleaners, landscapers, HVAC operators, and other trades with quote requests across email, forms, calls, and social DMs.",
+      "The first offer is a triage setup, not a giant AI automation agency.",
+      "Keep urgent, safety, complaint, refund, legal, and price-sensitive messages under human control.",
+      "A realistic starter setup can sit in the low hundreds when scope is tight, with monthly maintenance added only after the workflow proves useful.",
+      "The easiest proof is a before-and-after inbox map: messy incoming messages turned into labels, reply templates, required fields, and a daily owner summary.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for beginners who want an AI-adjacent service with a real operational problem and a buyer who already feels it. Trades businesses do not need a pitch about the future of agents. They need fewer missed leads, fewer half-baked quote requests, and less admin chaos at the end of the day.",
+          "Good buyer lanes include plumbers, electricians, roofers, cleaners, landscapers, pest control operators, HVAC businesses, mobile mechanics, and other owner-run trades. Start with one trade first. A plumber inbox has different urgency rules from a landscaper inbox, and that detail is where the useful service lives.",
+          "This is not a replacement for a receptionist, emergency dispatcher, estimator, licensed trade judgment, or customer service manager. It is a small workflow that helps sort, draft, and summarize messages so the owner can respond faster and with better information.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "A small trade business often gets enquiries through too many places: website forms, Gmail, Facebook, Instagram, missed calls, text messages, quote platforms, and old customers replying to previous threads. The owner checks messages between jobs, after hours, or when the van is finally parked.",
+          "The result is predictable. Some leads sit unanswered. Some quote requests arrive without photos, address, timing, access details, or job type. Some messages are urgent but look like normal enquiries. Some are not a fit but still take attention.",
+          "Your service creates order. You define the common message types, required fields, reply templates, urgent rules, and daily summary. The buyer is not paying for AI magic. They are paying for a cleaner lead-handling routine.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "The first version should be a setup sprint with clear boundaries. A useful starter package might include an inbox audit, enquiry-type map, label structure, missing-information reply templates, urgent-message rules, daily summary format, and owner approval workflow.",
+          "Keep implementation simple. You may start with Gmail labels, saved replies, form fields, a spreadsheet, Zapier, Make, Notion, or another lightweight tool the client already understands. Use AI for drafting and sorting support, but do not let it send customer-facing replies without explicit approval.",
+          "A clean offer line is: I help trades businesses turn messy quote enquiries into labelled leads, missing-info replies, urgent flags, and a daily owner-approved summary. Want the workflow map, reply templates, and setup prompts? Open the AI Inbox Triage for Trades launch pack.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Price from the size and mess of the workflow, not from the word AI. A tiny setup for one inbox and five templates is different from a multi-channel workflow with forms, automations, owner training, and weekly reporting.",
+          "As a starting point, a narrow inbox audit might sit around $99-$250, a setup sprint around $250-$900, and a light monthly maintenance plan around $150-$600 per month. These are examples, not promises. Adjust for channels, message volume, tools, urgency rules, documentation, approvals, and support expectations.",
+          "Avoid quoting a retainer before you understand the flow. Sell the setup first, measure where messages slow down, then offer monthly improvements only if the owner sees value.",
+        ],
+      },
+      {
+        heading: "Map the enquiry types",
+        paragraphs: [
+          "Before writing any automation, list the actual message types the trade receives. For a plumber, that might be emergency leak, blocked drain, hot water issue, renovation quote, service area question, invoice query, supplier message, complaint, and spam.",
+          "For each type, decide what information is needed before the owner can act. A blocked drain quote may need address, photos, access, timing, property type, and whether water is currently backing up. A renovation quote may need plans, timing, budget range, site address, and who owns the decision.",
+          "This map becomes the product. It lets you build better forms, labels, prompts, saved replies, and summaries. It also stops you from building a generic chatbot that annoys customers and creates extra cleanup work.",
+        ],
+      },
+      {
+        heading: "Write owner-approved reply templates",
+        paragraphs: [
+          "Reply templates should collect missing information politely and reduce back-and-forth. Keep them short, specific, and easy for the owner to approve. The goal is not to sound clever. The goal is to get usable job details.",
+          "Example: Thanks for reaching out. To check whether we can quote this properly, could you send the suburb, a clear photo of the issue, whether access is available today, and whether this is urgent or can wait until the next business day?",
+          "Create separate templates for quote requests, emergency routing, missing photos, no-fit jobs, follow-ups, and booking confirmation. Mark anything involving safety, disputes, refunds, legal issues, staff conduct, or emergency promises as owner-review only.",
+        ],
+      },
+      {
+        heading: "Build a simple daily summary",
+        paragraphs: [
+          "A daily summary is often more useful than a complicated automation. The owner wants to know: what came in, what is urgent, what needs a reply, what needs a quote, what is missing information, and which leads look ready to book.",
+          "A practical summary might group messages into urgent, quote-ready, waiting on customer, follow-up, not a fit, and admin. Include customer name, job type, suburb, source, required action, and suggested next reply.",
+          "If AI helps draft the summary, keep a human review step. The owner should be able to scan the summary quickly and trust that customer-facing action still needs approval unless they deliberately choose otherwise.",
+        ],
+      },
+      {
+        heading: "Find the first 20 prospects",
+        paragraphs: [
+          "Pick one trade and one local area. Look for owner-operated businesses with several enquiry paths: website form, email, Facebook page, Instagram, quote button, or phone-first site with slow written follow-up.",
+          "Use public clues. Reviews may mention slow replies, missed calls, booking confusion, unclear quotes, or great work once the job finally gets booked. Websites may ask for too little information. Social pages may have unanswered comments asking for price or availability.",
+          "Do not spam every trade in town. Build a small researched list. Twenty specific prospects are enough to test whether the pain is real and whether your pitch language lands.",
+        ],
+      },
+      {
+        heading: "Send a specific outreach message",
+        paragraphs: [
+          "Your outreach should not say, I build AI agents. That sounds expensive, vague, and risky. Lead with the workflow problem.",
+          "Example: Hi Dan, I noticed your website has a general contact form, Facebook quote button, and emergency phone line, but the form does not ask for photos, suburb, access, or urgency. I made a simple lead-triage map for plumbing enquiries that could reduce missing-info back-and-forth. Want me to send the sample?",
+          "If they reply, offer a paid setup sprint: audit the enquiry flow, create labels, write missing-info templates, define urgent rules, and deliver a daily summary format. Start with one buyer, one offer, one outreach script.",
+        ],
+      },
+      {
+        heading: "Deliver safely",
+        paragraphs: [
+          "Delivery starts with boundaries. Confirm which channels are in scope, who approves replies, what counts as urgent, what the business will not say, and which issues must be escalated to the owner immediately.",
+          "Do not automate emergency promises, legal claims, safety advice, regulated work, refunds, complaints, employment issues, or anything that requires licensed judgment. For trades, the wrong message can create real operational risk.",
+          "The final handoff should include the workflow map, labels, templates, prompt notes, escalation rules, and a one-week review checklist. The owner should know exactly what changed and what still needs human decision-making.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: inbox triage setup for a local plumber",
+      steps: [
+        "Choose one local plumbing business with website, Facebook, email, and phone enquiries.",
+        "Map the common enquiry types: emergency leak, blocked drain, hot water, renovation quote, invoice, supplier, complaint, and not-a-fit request.",
+        "Create required fields for each quote type: suburb, photos, access, urgency, property type, and preferred time.",
+        "Write five owner-approved templates: missing info, emergency routing, quote-ready acknowledgement, follow-up, and no-fit response.",
+        "Set up labels or folders for urgent, quote-ready, waiting on customer, follow-up, admin, and review required.",
+        "Create a daily owner summary with source, customer name, job type, suburb, required action, and suggested reply.",
+        "Review the first week manually before proposing any low-risk automation.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one trade, not all local businesses.",
+      "Write down the common enquiry types for that trade.",
+      "Define what information a good quote request needs.",
+      "Create one sample label structure.",
+      "Draft three missing-information reply templates.",
+      "Write urgent-message and owner-review rules.",
+      "Create a one-page daily summary format.",
+      "List 20 local prospects with visible enquiry channels.",
+      "Send five sample-led outreach messages.",
+      "Track objections about access, privacy, cost, owner approval, and emergency handling.",
+    ],
+    commonMistakes: [
+      "Selling a fully autonomous AI agent before understanding the inbox.",
+      "Letting AI send replies without explicit owner approval.",
+      "Ignoring urgent, safety, complaint, refund, or licensed-work boundaries.",
+      "Building in too many tools before proving the manual workflow.",
+      "Using one generic reply template for every trade.",
+      "Asking for inbox access before trust, scope, privacy, and approval rules are clear.",
+      "Pricing from AI hype instead of setup time, message volume, channels, and support risk.",
+    ],
+    faqs: [
+      {
+        question: "Is AI inbox triage the same as an AI receptionist?",
+        answer:
+          "No. A beginner-friendly triage service sorts messages, drafts replies, collects missing details, flags urgent items, and summarizes leads for owner approval. An AI receptionist is a broader operational role with higher risk and stronger setup requirements.",
+      },
+      {
+        question: "Who should I pitch first?",
+        answer:
+          "Start with one trade where missed or messy enquiries are expensive: plumbers, electricians, roofers, HVAC operators, cleaners, landscapers, pest control businesses, or mobile mechanics. Owner-operated firms are usually easier to reach than large chains.",
+      },
+      {
+        question: "How much should I charge for a trades inbox triage setup?",
+        answer:
+          "A narrow audit might be $99-$250, a setup sprint might be $250-$900, and monthly maintenance might be $150-$600 per month. Quote from actual scope, channels, volume, approval needs, support risk, and tool complexity.",
+      },
+      {
+        question: "Do I need to access the client's inbox?",
+        answer:
+          "Not for the first sample. Use public enquiry paths and example templates first. If a client buys the setup, define access, privacy, approval, retention, and offboarding rules before touching live messages.",
+      },
+      {
+        question: "What should never be automated without review?",
+        answer:
+          "Emergency promises, safety advice, legal claims, refunds, complaints, staff issues, licensed trade judgment, price-sensitive quotes, and anything the owner has not approved should stay under human control.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, safety, privacy, employment, emergency-response, or trade advice. Keep owner approval in the loop, protect customer data, check tool permissions, and escalate urgent or regulated messages to the business owner.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]

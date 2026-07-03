@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
 import { TrackOnMount } from "@/components/track-on-mount";
+import { blogPosts } from "@/data/blog";
 import { categorySlug, getPack, memberAssetDetails, packPageDetails, packs } from "@/data/packs";
 import { getMembershipContext } from "@/lib/membership";
 import { siteConfig } from "@/lib/site";
@@ -105,6 +106,10 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
       if (categoryScore !== 0) return categoryScore;
       return b.popularityScore - a.popularityScore;
     })
+    .slice(0, 3);
+  const relatedGuides = blogPosts
+    .filter((post) => post.relatedPackSlugs.includes(pack.slug))
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt))
     .slice(0, 3);
   const launchSprint = detail?.launchSprintDetails ?? ["Pick a tight buyer segment", ...pack.firstSteps, "Package proof and follow up"].slice(0, 5);
   const assetTypes = Array.from(new Set(pack.assets.map((asset) => asset.type))).join(", ");
@@ -548,6 +553,34 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                       <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">Lead step {index + 1}</p>
                       <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">{step}</p>
                     </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+            {relatedGuides.length ? (
+              <div className="glass-soft rounded-[1.75rem] p-6">
+                <h2 className="text-3xl font-bold tracking-normal text-[var(--navy-ink)]">Related guides</h2>
+                <p className="mt-3 text-sm font-semibold leading-6 text-[var(--text-primary)]">
+                  Use these articles to turn the pack into a first-client plan, pricing decision, or outreach sprint.
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  {relatedGuides.map((guide) => (
+                    <Link
+                      key={guide.slug}
+                      href={`/blog/${guide.slug}`}
+                      data-analytics-event="Pack Related Guide Clicked"
+                      data-analytics-pack={pack.slug}
+                      data-analytics-location="pack_related_guides"
+                      className="pack-detail-tile group rounded-2xl p-4 transition hover:-translate-y-0.5 hover:bg-white"
+                    >
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">{guide.category}</p>
+                      <p className="mt-2 text-sm font-bold leading-5 text-[var(--navy-ink)]">{guide.title}</p>
+                      <p className="mt-2 text-xs font-semibold leading-5 text-[var(--graphite)]">{guide.readingTime}</p>
+                      <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[var(--safety-orange)]">
+                        Read guide
+                        <ArrowRight size={13} className="transition group-hover:translate-x-0.5" />
+                      </span>
+                    </Link>
                   ))}
                 </div>
               </div>
