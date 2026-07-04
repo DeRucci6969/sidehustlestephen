@@ -100,6 +100,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-gbp-audit", "Profile Audit Checklist", "PDF", "A scan list for profile photos, categories, hours, and FAQs."),
             Asset("asset-gbp-pitch", "Rescue Sprint Pitch", "DOCX", "Email and Loom pitch structure."),
+            Asset("asset-gbp-proof", "Profile Proof Kit", "DOCX", "Before/after screenshot plan, proof-safe sample notes, owner approval wording, and follow-up prompts for turning one public audit into a paid rescue sprint."),
             Asset("asset-gbp-pricing", "Profile Rescue Pricing Calculator", "XLSX", "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails."),
             Asset("asset-gbp-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery."),
             Asset("asset-gbp-intake", "Client Intake Form", "DOCX", "Editable intake questions for profile access, services, hours, photos, FAQs, review rules, and approval owners."),
@@ -568,6 +569,19 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Say: profile clarity, trust signals, current information, and easier customer decisions.",
             "Do not say: guaranteed ranking lift, more calls, map pack placement, or review growth.",
             "Sell the sprint as a visible hygiene cleanup with an approval checklist, not SEO magic.",
+        ]),
+    ],
+    "asset-gbp-proof": [
+        ("Proof-safe positioning", [
+            "Use the proof kit to show visible profile improvements, not to claim search performance.",
+            "Before screenshots should show customer-facing gaps: stale hours, thin services, weak photos, unanswered reviews, missing FAQs, or unclear booking links.",
+            "After samples should be labelled as proposed owner-approved copy, photo checklist, FAQ draft, or profile hygiene note.",
+            "Do not imply that the sample will increase rankings, calls, reviews, leads, bookings, or revenue.",
+        ]),
+        ("Best sample to send first", [
+            "Choose one buyer lane and one visible issue so the sample feels specific.",
+            "A strong first sample is a one-page profile clarity note with three screenshots, three fixes, and one owner approval list.",
+            "Keep implementation steps behind the paid sprint. The free sample should prove you saw the problem, not deliver the whole job.",
         ]),
     ],
     "asset-gbp-pricing": [
@@ -1133,6 +1147,56 @@ DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Do not claim guaranteed rankings, map-pack placement, review volume, or revenue.",
             "Use ethical review prompts only; never ask for fake, gated, or incentivized reviews.",
             "Keep business owner approval for categories, claims, services, and hours.",
+        ]),
+    ],
+    "asset-gbp-proof": [
+        ("Proof kit purpose", [
+            "This asset helps you turn a public profile audit into a small, credible proof sample before pitching the paid rescue sprint.",
+            "The goal is to show the owner what looks stale, unclear, or incomplete from a customer view.",
+            "The proof sample should be useful enough to start a conversation but not so complete that you deliver the full sprint for free.",
+            "Keep every claim inside what you can observe from screenshots or owner-approved facts.",
+        ]),
+        ("Before screenshot checklist", [
+            "Save the profile overview with business name, category, rating display, hours, and primary action button visible.",
+            "Capture services or products where descriptions are missing, vague, duplicated, or written in internal jargon.",
+            "Capture photos if the latest images are stale, dark, off-brand, low-trust, or not showing real work.",
+            "Capture FAQs if the section is empty, thin, or missing obvious buyer questions.",
+            "Capture review replies only when the issue is visible and relevant. Do not expose private customer details in outreach screenshots.",
+        ]),
+        ("After sample structure", [
+            "Page 1: headline the visible issue in plain English: Your profile does not clearly explain [service / hours / proof / next step].",
+            "Block 1: screenshot thumbnail plus one-sentence customer impact.",
+            "Block 2: proposed fix, such as a clearer service description, photo checklist, FAQ draft, or booking-link note.",
+            "Block 3: owner approval needed before anything changes.",
+            "Close: offer the paid rescue sprint with audit, copy drafts, FAQ prompts, review-request wording, and handoff notes.",
+        ]),
+        ("Copy blocks for the sample", [
+            "Visible issue: [Business] has strong reviews, but the profile does not clearly show [money service / emergency option / service area / current photos].",
+            "Suggested fix: add a customer-language service description for [service], a short FAQ for [buyer question], and current proof photos for [job type].",
+            "Approval needed: confirm service wording, hours, service area, licensing-sensitive language, prices if shown, and who can publish updates.",
+            "Safe framing: this is a profile clarity sample, not a ranking or lead-generation promise.",
+        ]),
+        ("Follow-up sequence after sending proof", [
+            "Day 2: Ask whether the owner wants the remaining profile gaps turned into a fixed rescue sprint.",
+            "Day 5: Send one extra useful observation, such as a missing FAQ or stale photo category.",
+            "Day 10: Offer the mini paid audit if the full sprint feels too much.",
+            "Day 21: Close the loop and say you can revisit when hours, services, reviews, or photos change.",
+        ]),
+        ("Proof log", [
+            "Business: [name]",
+            "Profile URL: [link]",
+            "Screenshots saved: [overview / services / photos / reviews / FAQs / hours]",
+            "Visible gaps found: [list]",
+            "Sample sent date: [date]",
+            "Reply / objection: [notes]",
+            "Paid next step offered: [mini audit / rescue sprint / monthly hygiene]",
+        ]),
+        ("Do not include", [
+            "No ranking charts unless the owner provides them and approves their use.",
+            "No fake before/after performance numbers.",
+            "No private review screenshots beyond what is already public and relevant.",
+            "No legal, medical, financial, trade-licensing, or safety claims without owner review.",
+            "No promise that profile changes will produce calls, map-pack placement, reviews, or revenue.",
         ]),
     ],
     "asset-airbnb-photo-outreach": [

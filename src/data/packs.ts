@@ -99,6 +99,7 @@ const basePacks: BusinessPack[] = [
     assets: [
       { id: "asset-gbp-audit", title: "Profile Audit Checklist", type: "PDF", description: "A scan list for profile photos, categories, hours, and FAQs." },
       { id: "asset-gbp-pitch", title: "Rescue Sprint Pitch", type: "DOCX", description: "Email and Loom pitch structure." },
+      { id: "asset-gbp-proof", title: "Profile Proof Kit", type: "DOCX", description: "Before/after screenshot plan, proof-safe sample notes, owner approval wording, and follow-up prompts for turning one public audit into a paid rescue sprint." },
       { id: "asset-gbp-pricing", title: "Profile Rescue Pricing Calculator", type: "XLSX", description: "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails." },
       { id: "asset-gbp-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery." },
       { id: "asset-gbp-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for profile access, services, hours, photos, FAQs, and approvals." },
@@ -619,7 +620,7 @@ export const packPageDetails: Record<string, PackPageDetail> = {
         "Safe pitch: frame the offer as profile clarity and approval-ready cleanup, not a promise to rank higher.",
       ],
       lockedAssetTease:
-        "Members get the full profile audit checklist, rescue sprint pitch, pricing calculator, intake form, approval emails, FAQ prompts, and handoff wording.",
+        "Members get the full profile audit checklist, rescue sprint pitch, Profile Proof Kit, pricing calculator, intake form, approval emails, FAQ prompts, and handoff wording.",
     },
     whyDetails: [
       "The buyer can see the problem immediately because Google is public and customer-facing.",
@@ -1356,6 +1357,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A PDF audit worksheet covering categories, services, photos, reviews, FAQs, profile trust gaps, profile rescue examples, and owner approval checkpoints.",
   "asset-gbp-pitch":
     "A DOCX pitch kit with email copy, Loom structure, proposal bullets, no-ranking-guarantee language, and risk-safe positioning for local business owners.",
+  "asset-gbp-proof":
+    "A DOCX proof kit for building a safe before/after profile sample, capturing dated screenshots, labelling owner approval items, and following up without implying rankings, leads, calls, or revenue.",
   "asset-gbp-pricing":
     "An XLSX workbook with mini-audit, rescue sprint, and monthly profile hygiene pricing, a quote builder, scope guardrails, profit check, and proposal wording that avoids ranking guarantees.",
   "asset-gbp-prompts":

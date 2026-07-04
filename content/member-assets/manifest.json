@@ -132,6 +132,17 @@
     "bytes": 6796
   },
   {
+    "id": "asset-gbp-proof",
+    "packSlug": "google-business-profile-rescue",
+    "packTitle": "Google Business Profile Rescue",
+    "title": "Profile Proof Kit",
+    "type": "DOCX",
+    "description": "Before/after screenshot plan, proof-safe sample notes, owner approval wording, and follow-up prompts for turning one public audit into a paid rescue sprint.",
+    "path": "content/member-assets/google-business-profile-rescue/profile-proof-kit.docx",
+    "filename": "profile-proof-kit.docx",
+    "bytes": 8217
+  },
+  {
     "id": "asset-gbp-pricing",
     "packSlug": "google-business-profile-rescue",
     "packTitle": "Google Business Profile Rescue",

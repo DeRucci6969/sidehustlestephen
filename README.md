@@ -18,7 +18,7 @@ http://localhost:3000
 ## Current MVP
 
 - Premium Liquid Glass light-mode homepage
-- Archive of 10 launch packs
+- Archive of 15 launch packs
 - Interactive pack matcher on the homepage
 - Searchable, filterable, sortable archive
 - Dedicated pack pages with public previews
@@ -86,7 +86,7 @@ Resend email setup:
 - Auth: Supabase magic link only
 - Join UI: modal
 - Access: all-access subscription only
-- Initial content: 10 packs
+- Initial content: 15 packs
 - Post-checkout return: back to original locked pack where possible
 
 ## Verification
