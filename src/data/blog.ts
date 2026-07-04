@@ -195,7 +195,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-06-30",
     updatedAt: "2026-06-30",
     readingTime: "11 min read",
-    relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "mobile-headlight-restoration"],
+    relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "drone-roof-photo-inspection"],
     shortAnswer:
       "To start a local service business this week, pick one visible problem for one type of local buyer, package the smallest paid fix, create a quick proof sample, and send 20 specific outreach messages. Do not start with a logo, a website, or a giant service menu. Start with a real buyer and a job you can deliver.",
     keyPoints: [
@@ -622,6 +622,7 @@ export const blogPosts: BlogPost[] = [
     relatedPackSlugs: [
       "cafe-menu-refresh-package",
       "google-business-profile-rescue",
+      "drone-roof-photo-inspection",
       "mobile-headlight-restoration",
       "power-washing-driveway-sprint",
       "shopify-cart-audit",
@@ -1399,6 +1400,163 @@ export const blogPosts: BlogPost[] = [
     ],
     disclaimer:
       "This guide is practical business education, not legal, safety, privacy, employment, emergency-response, or trade advice. Keep owner approval in the loop, protect customer data, check tool permissions, and escalate urgent or regulated messages to the business owner.",
+  },
+  {
+    slug: "how-to-start-a-drone-roof-photo-inspection-service",
+    title: "How to Start a Drone Roof Photo Inspection Service",
+    seoTitle: "How to Start a Drone Roof Photo Inspection Service | First-Client Guide",
+    description:
+      "A practical guide to starting a drone roof photo service with clear buyer lanes, visual-only scope, pricing guidance, outreach, safety checks, and a first-client plan.",
+    category: "Local Service",
+    publishedAt: "2026-07-05",
+    updatedAt: "2026-07-05",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["drone-roof-photo-inspection", "garage-shelf-installation", "google-business-profile-rescue"],
+    shortAnswer:
+      "To start a drone roof photo inspection service, sell visual roof photo documentation, not structural judgment. Choose one buyer lane, learn the local drone rules, create a sample photo report, and pitch roofers, agents, solar installers, property managers, or homeowners who need roof visibility without climbing a ladder. Keep the promise tight: clear photos, labelled areas, and a clean handoff for a qualified person to review.",
+    keyPoints: [
+      "The safest beginner offer is a visual roof photo report, not a building inspection, insurance assessment, engineering opinion, or repair diagnosis.",
+      "Best first buyers are roofers, solar installers, real estate agents, property managers, and homeowners who need clear roof photos before making a decision.",
+      "Drone work has real rules: check aviation requirements, airspace, permission, privacy, insurance, weather, and site hazards before taking paid jobs.",
+      "A useful starter price can sit in the low hundreds when the job is simple, but quote from travel, flight time, editing, report depth, weather risk, and compliance overhead.",
+      "The first-client route is sample-led: show one clear roof photo report, then pitch a fixed photo documentation sprint with firm exclusions.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for someone who already has access to a suitable drone, or is willing to learn the operating rules before selling anything. It is not the lowest-friction side hustle in the archive, but it has a clear buyer problem: people need roof visibility and they do not want someone casually climbing a ladder.",
+          "Good buyer lanes include roofers who want pre-quote photos, solar installers checking visible roof layout, real estate agents preparing listings, property managers documenting assets, and homeowners who want photos before calling a trade. The buyer is paying for visibility and documentation, not your opinion on whether the roof is structurally sound.",
+          "The clean positioning is visual roof photo documentation. That wording matters. It keeps you out of claims you are not qualified to make and makes the deliverable easier to understand.",
+        ],
+      },
+      {
+        heading: "Define the problem carefully",
+        paragraphs: [
+          "A roof is hard to see from the ground. A buyer may need to know whether gutters are visibly full, whether panels have obvious debris around them, whether a listing needs updated roof photos, or whether a roofer can quote the next step with better context.",
+          "Your job is to capture clear photos and organise them into a simple report. You can label roof faces, gutters, solar panels, visible debris, access points, and photo angles. You should not diagnose structural damage, certify condition, promise insurance outcomes, or tell the owner what repair is required.",
+          "That boundary is not weakness. It is the reason the service can be sold as a simple documentation sprint rather than a regulated professional inspection.",
+        ],
+      },
+      {
+        heading: "Check the rules before pitching",
+        paragraphs: [
+          "Before paid drone work, check the aviation rules where you operate. You may need registration, operator accreditation, a remote pilot certificate, airspace approval, insurance, or permission from the property owner. Rules vary by country, state, city, job type, drone weight, and whether the work is commercial.",
+          "Also check the site. Avoid flying near airports, crowds, roads, power lines, emergency activity, private windows, schools, prisons, or restricted sites unless you are certain it is permitted. Bad weather, strong wind, poor light, trees, birds, and signal interference can turn a simple job into a no-go.",
+          "Build this into your sales process. A professional answer is: I can only confirm the booking after checking airspace, weather, site permission, and visual-only scope.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "Keep the first offer small. A starter roof photo report might include one property, a pre-flight permission check, 15 to 30 edited photos, a short video pass if safe, labelled photo sections, and a PDF handoff with visual-only disclaimer language.",
+          "Do not bundle repairs, measurement promises, insurance wording, structural notes, thermal imaging, leak detection, roof access, or trade recommendations into the beginner offer. Those may require qualifications, specialist equipment, insurance, or a different business model.",
+          "A clean offer line is: I capture clear drone roof photos and package them into a simple visual report so the owner, roofer, agent, or installer can review the roof without guesswork.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Pricing depends on travel, flight time, editing, reporting, property size, permission checks, weather rescheduling, insurance, and how much client coordination is involved. Do not price a roof job like a quick phone photo edit.",
+          "As a starting point, a simple homeowner photo set might sit around $99-$250, a standard roof photo report around $250-$600, and recurring partner work for roofers, agents, or property managers around $300-$1,000+ per month depending on volume. Treat those as quote-building ranges, not guaranteed market rates.",
+          "If the buyer wants rush turnaround, multiple buildings, video, annotated reports, recurring property documentation, or coordination with another trade, quote that separately.",
+        ],
+      },
+      {
+        heading: "Create a sample report",
+        paragraphs: [
+          "Your first proof should be a permissioned sample. Use your own home, a friend's property, or a property where you have clear written permission and safe operating conditions. Do not use random roof photos from the internet and pretend they are yours.",
+          "A useful sample report includes a cover page, property notes, flight conditions, labelled roof faces, image grid, optional video link, visible-only observations, and a plain disclaimer that the report is not a structural, engineering, building, safety, or insurance inspection.",
+          "The report does not need to be fancy. It needs to be clear enough that a roofer, agent, or owner immediately sees what they are buying.",
+        ],
+      },
+      {
+        heading: "Find the first buyer lane",
+        paragraphs: [
+          "Pick one lane first. Roofers need quote context and before photos. Solar installers need roof layout visibility. Agents need listing and pre-sale documentation. Property managers need asset records. Homeowners need a simple way to see what is up there before deciding who to call.",
+          "Each lane needs different wording. A roofer cares about reducing wasted quote visits. An agent cares about listing confidence and seller communication. A property manager cares about repeatable documentation. Do not send the same message to all three.",
+          "Start with 20 prospects in one category. The goal is not to fly all week. The goal is to learn which buyer understands the report fastest.",
+        ],
+      },
+      {
+        heading: "Send specific outreach",
+        paragraphs: [
+          "The first message should mention one practical use case and offer to send the sample report. Keep it short. You are not selling drone wizardry. You are selling clearer information.",
+          "Example for roofers: Hi Sam, I am putting together visual-only drone roof photo reports for local roofers. The idea is simple: clear overhead photos before the quote visit, with no structural claims. I have a sample report I can send over. Useful for your team?",
+          "If they reply, pitch the paid sprint: one property, owner permission confirmed, safe flight conditions, labelled photos, PDF handoff, and clear exclusions. Want the report template, pricing sheet, safety checklist, and outreach scripts? Open the Drone Roof Photo Inspection launch pack.",
+        ],
+      },
+      {
+        heading: "Deliver with firm boundaries",
+        paragraphs: [
+          "Delivery starts before takeoff. Confirm property address, owner permission, intended use, no-go areas, weather window, access notes, report format, and whether anyone else will be on site. If anything feels unsafe or unclear, reschedule or decline.",
+          "During editing, remove weak images and organise the useful ones. Label photo angles, roof sections, gutters, visible obstructions, and obvious context only. Use language like visible from photo, appears in image, and client to verify with a qualified professional.",
+          "The final handoff should include the files, report, limitations, next-step suggestions, and a reminder that any repair, safety, insurance, building, or structural decision needs the appropriate qualified person.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first drone roof photo report for a roofer",
+      steps: [
+        "Choose one buyer lane: small local roofers who quote residential jobs.",
+        "Create one permissioned sample report from a safe property.",
+        "Include labelled roof faces, gutters, visible obstructions, optional short video, and visual-only limitations.",
+        "List 20 local roofers with active websites, Google profiles, or social pages.",
+        "Send a short message offering to share the sample report, not a broad drone-service pitch.",
+        "If a roofer replies, quote a fixed first job with property permission, safe flight conditions, photo set, PDF report, and exclusions.",
+        "After delivery, ask whether they want a partner price for repeat pre-quote photo reports.",
+      ],
+    },
+    firstActionChecklist: [
+      "Check your local drone rules for paid work.",
+      "Confirm your drone, insurance, batteries, image quality, and flight safety process are suitable.",
+      "Choose one buyer lane: roofer, solar installer, agent, property manager, or homeowner.",
+      "Create one permissioned sample roof photo report.",
+      "Write your visual-only scope and exclusions in plain English.",
+      "Build a starter price, standard report price, and recurring partner option.",
+      "List 20 prospects in one local market.",
+      "Send five sample-led outreach messages.",
+      "Track replies, permission questions, safety concerns, pricing objections, and report requests.",
+      "Tighten the offer before adding more buyer lanes.",
+    ],
+    commonMistakes: [
+      "Calling the work a structural inspection, damage assessment, safety certification, or insurance report.",
+      "Flying before checking aviation rules, airspace, weather, privacy, permission, and site hazards.",
+      "Pricing too low for travel, setup, editing, report writing, insurance, and rescheduling risk.",
+      "Using vague drone photography language instead of a specific roof photo report offer.",
+      "Sending generic outreach to every local business instead of choosing one buyer lane.",
+      "Publishing photos without permission or exposing private property details.",
+      "Ignoring no-go conditions because the client wants the job done today.",
+    ],
+    faqs: [
+      {
+        question: "Is this a roof inspection business?",
+        answer:
+          "For a beginner, it should be sold as visual roof photo documentation. Do not claim to provide structural, building, safety, insurance, or engineering inspection unless you have the proper qualifications, permissions, insurance, and local approval.",
+      },
+      {
+        question: "Who buys drone roof photo reports?",
+        answer:
+          "Potential buyers include roofers, solar installers, real estate agents, property managers, and homeowners. Start with one lane so your sample report and outreach match a real use case.",
+      },
+      {
+        question: "How much should I charge for a drone roof photo report?",
+        answer:
+          "A simple photo set might start around $99-$250, while a labelled report can sit around $250-$600 depending on travel, property size, report depth, permissions, weather risk, and turnaround. Quote from the actual work and local compliance overhead.",
+      },
+      {
+        question: "Do I need a license for paid drone roof work?",
+        answer:
+          "You need to check the rules where you operate. Paid drone work may require registration, accreditation, certification, airspace approval, insurance, or property permission depending on location and job type.",
+      },
+      {
+        question: "What should the first report include?",
+        answer:
+          "Include property details, flight date, weather notes, labelled photos, optional short video link, visible-only notes, file handoff, and clear limitations. Keep repair or safety decisions with qualified professionals.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not aviation, legal, insurance, safety, building, engineering, or roof inspection advice. Check local drone rules, property permission, privacy requirements, insurance, and qualified professional boundaries before taking paid work.",
   },
 ];
 
