@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { JoinButton } from "@/components/join-modal";
 import { TrackOnMount } from "@/components/track-on-mount";
 import { blogPosts } from "@/data/blog";
+import type { BusinessPack } from "@/data/packs";
 import { categorySlug, getPack, memberAssetDetails, packPageDetails, packs } from "@/data/packs";
 import { getMembershipContext } from "@/lib/membership";
 import { siteConfig } from "@/lib/site";
@@ -107,10 +108,25 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
       return b.popularityScore - a.popularityScore;
     })
     .slice(0, 3);
-  const relatedGuides = blogPosts
+  const directlyRelatedGuides = blogPosts
     .filter((post) => post.relatedPackSlugs.includes(pack.slug))
-    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt))
-    .slice(0, 3);
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt));
+  const fallbackGuides = blogPosts
+    .filter((post) => !post.relatedPackSlugs.includes(pack.slug))
+    .map((post) => {
+      const relatedPackMatches = post.relatedPackSlugs
+        .map((postPackSlug) => getPack(postPackSlug))
+        .filter((postPack): postPack is BusinessPack => Boolean(postPack))
+        .filter((postPack) => postPack.category === pack.category || postPack.buyer === pack.buyer).length;
+      return {
+        post,
+        score: Number(post.category === pack.category) + relatedPackMatches,
+      };
+    })
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score || b.post.updatedAt.localeCompare(a.post.updatedAt) || b.post.publishedAt.localeCompare(a.post.publishedAt))
+    .map(({ post }) => post);
+  const relatedGuides = [...directlyRelatedGuides, ...fallbackGuides].slice(0, 3);
   const launchSprint = detail?.launchSprintDetails ?? ["Pick a tight buyer segment", ...pack.firstSteps, "Package proof and follow up"].slice(0, 5);
   const assetTypes = Array.from(new Set(pack.assets.map((asset) => asset.type))).join(", ");
   const firstAssetTitle = pack.assets.find((asset) => asset.title !== "AI Automation Pack")?.title ?? pack.assets[0]?.title ?? "launch asset";

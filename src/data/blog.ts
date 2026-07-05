@@ -1558,6 +1558,163 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical business education, not aviation, legal, insurance, safety, building, engineering, or roof inspection advice. Check local drone rules, property permission, privacy requirements, insurance, and qualified professional boundaries before taking paid work.",
   },
+  {
+    slug: "how-to-start-a-shopify-cart-audit-service",
+    title: "How to Start a Shopify Cart Audit Service",
+    seoTitle: "How to Start a Shopify Cart Audit Service | First-Client Guide",
+    description:
+      "A practical guide to starting a Shopify cart audit service with buyer selection, screenshot-led outreach, pricing guidance, delivery scope, and safe conversion claims.",
+    category: "Ecommerce",
+    publishedAt: "2026-07-06",
+    updatedAt: "2026-07-06",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["shopify-cart-audit", "ugc-brief-generator", "manual-workflow-concierge"],
+    shortAnswer:
+      "To start a Shopify cart audit service, find small stores with visible checkout hesitation, capture one useful mobile screenshot, write a practical fix, and sell a fixed audit that ranks cart, trust, shipping, returns, and abandoned-cart email issues. Do not promise revenue, conversion lifts, or ad performance. Sell clearer buying paths and better owner decisions.",
+    keyPoints: [
+      "Best first buyers are founder-led Shopify stores that already post, launch products, or run ads but still have messy cart and trust details.",
+      "The starter offer should be a screenshot-backed audit, not a full conversion rate optimisation engagement.",
+      "Strong samples focus on mobile cart friction, shipping clarity, return confidence, product proof, discount-code distraction, and abandoned-cart copy.",
+      "A realistic first paid offer can sit in the low hundreds when scope is tight, with implementation quoted separately.",
+      "The clean next step is a monthly conversion cleanup for new products, seasonal campaigns, and abandoned-cart email refreshes.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for someone who can look at an ecommerce store like a buyer, spot hesitation, and turn that into plain-English fixes. You do not need to be a senior CRO consultant to start. You do need taste, care, screenshots, and discipline around claims.",
+          "Good first buyers are small Shopify stores where the founder or ecommerce manager can approve a small audit quickly. Look for brands launching new products, posting on social, running creator content, sending email campaigns, or testing paid traffic.",
+          "Avoid starting with huge stores, regulated products, complex subscriptions, medical claims, finance products, or anything where compliance review matters. Begin with simple consumer products where trust, shipping, returns, proof, and checkout clarity are the obvious problems.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Many stores spend money getting people to the product page, then lose momentum at the cart. The issue is rarely one magic button. It is usually a pile of small doubts: when will this arrive, can I return it, is the size right, is the brand real, why is the discount field shouting at me, and what happens after I pay?",
+          "Your job is to make those doubts visible to the owner. A useful cart audit shows the hesitation points, ranks them by confidence and effort, and gives copy or layout suggestions the owner can test without rebuilding the store.",
+          "This is a clarity service. You are not promising more sales. You are giving the owner a cleaner list of likely friction points so they can make better fixes before buying even more traffic.",
+        ],
+      },
+      {
+        heading: "Package the starter offer",
+        paragraphs: [
+          "The first version should be narrow: a mobile-first cart and trust audit for one store, one product line, or one current campaign. Keep it small enough to deliver in 48 hours.",
+          "A simple deliverable can include five screenshot-backed friction points, a priority score, two cart copy improvements, one shipping or returns wording improvement, one abandoned-cart email rewrite, and a short retest checklist.",
+          "Make the exclusions clear. The audit does not include theme development, analytics setup, legal policy writing, ad management, email platform implementation, product claims review, or guaranteed conversion improvement. Those can become separate paid work later.",
+        ],
+      },
+      {
+        heading: "Find stores worth auditing",
+        paragraphs: [
+          "Start where buyers are already trying to sell. Search Instagram, TikTok, Facebook ads libraries, founder communities, Shopify showcases, local maker directories, and niche product categories. You want stores with enough activity to care, but not so much polish that your first audit has no obvious angle.",
+          "Useful public clues include unclear shipping dates, buried returns, weak product proof, no review context, confusing product options, a loud coupon field, generic abandoned-cart copy, slow mobile product pages, or trust badges that feel pasted on instead of helpful.",
+          "Do not build a giant spreadsheet first. Pick one lane, such as skincare accessories, pet products, home decor, fitness gear, handmade gifts, coffee gear, or apparel basics. Ten focused stores are better than a hundred random ones.",
+        ],
+      },
+      {
+        heading: "Create a sample without giving away the whole job",
+        paragraphs: [
+          "Your sample should prove you can think clearly. Add one product to cart on mobile, capture one screenshot, and write one specific observation. Then write one better line the owner could test.",
+          "Example: the cart says calculated at checkout, but the product page says free shipping over $75. A better cart line might be: You are $18 away from free standard shipping. Orders usually leave our studio within two business days.",
+          "That is useful, concrete, and safe. You are not saying it will lift revenue by a percentage. You are showing the owner a buyer hesitation and a cleaner way to answer it.",
+        ],
+      },
+      {
+        heading: "Send screenshot-led outreach",
+        paragraphs: [
+          "The first message should be short and specific. Name the product, mention the friction point, and offer the paid audit only after you have earned attention.",
+          "Example: Hi Mia, I added the ceramic travel cup to cart on mobile and noticed shipping timing is only explained after checkout starts. I wrote one cleaner cart line you could test so buyers know what happens before they pay. Want me to send the screenshot?",
+          "If they reply, send the small sample and offer the fixed audit. Want the checklist, pricing file, abandoned-cart swipe, and delivery template? Open the Shopify Cart Audit launch pack and use it as the working system.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Price from scope, not from big-agency case studies. A mini teardown might sit around $99-$199 if it includes three screenshot-backed fixes and one copy sample. A fuller cart audit might sit around $300-$750 if it includes mobile cart review, trust copy, abandoned-cart email rewrite, and implementation notes.",
+          "Implementation should be separate. Writing the audit is one job. Editing theme sections, configuring apps, rewriting email flows, and coordinating approvals are different jobs with different risks.",
+          "A monthly cleanup can make sense once a store launches products regularly. That offer might include new product cart checks, email refreshes, campaign friction reviews, and a short monthly priority list. Keep the first job clean before selling a retainer.",
+        ],
+      },
+      {
+        heading: "Deliver the audit",
+        paragraphs: [
+          "Use a simple structure: audit scope, store URL, device used, product tested, screenshots, friction point, why it may create hesitation, suggested fix, effort level, owner decision needed, and retest note.",
+          "Rank issues by confidence and effort. A missing shipping line is high confidence and usually low effort. A full checkout redesign is high effort and may be outside your first offer. Owners need sequencing, not a dump of opinions.",
+          "Finish with a practical next step. Ask which fixes they want to implement first, whether they need copy-only support, and whether they want a monthly check for new launches. The goal is a useful audit that naturally opens the next paid conversation.",
+        ],
+      },
+      {
+        heading: "Stay honest about conversion claims",
+        paragraphs: [
+          "Do not promise a conversion lift, revenue increase, ad improvement, or checkout recovery rate. You usually do not control traffic quality, offer strength, product demand, price, fulfilment, customer support, or implementation quality.",
+          "Use careful language: likely hesitation, buyer clarity, trust gap, implementation priority, copy test, and starting point. If the store sells regulated or sensitive products, tell the owner to have claims, policies, and compliance language reviewed by the right person.",
+          "This restraint helps you sell. Serious store owners have heard enough miracle marketing. A specific audit with bounded claims is easier to trust than a dramatic promise.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first cart audit for a handmade home decor store",
+      steps: [
+        "Choose one buyer lane: founder-led Shopify stores selling home decor products.",
+        "List 10 active stores with recent social posts, new products, or visible email capture.",
+        "Add one product to cart on mobile for each store and record one hesitation point.",
+        "Pick the strongest lead where shipping, returns, proof, or cart copy is clearly weak.",
+        "Write one sample fix and send a short message asking if they want the screenshot.",
+        "If they reply, offer a fixed 48-hour audit with five screenshots, priority scores, cart copy, and abandoned-cart email suggestions.",
+        "After delivery, ask whether they want implementation help or a monthly launch cleanup for new products.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one Shopify product category.",
+      "Find 10 founder-led stores that are actively selling or launching.",
+      "Open each store on mobile and add one product to cart.",
+      "Look for shipping, returns, proof, discount, payment, trust, and email-capture friction.",
+      "Save one screenshot and one plain-English observation per store.",
+      "Write one improved cart line or abandoned-cart subject line for the best lead.",
+      "Create a fixed audit scope with turnaround, deliverables, price range, and exclusions.",
+      "Send five screenshot-led outreach messages today.",
+      "Track replies, objections, owner language, and repeated friction patterns.",
+      "Turn the first paid audit into a reusable checklist and delivery template.",
+    ],
+    commonMistakes: [
+      "Promising conversion lifts, revenue gains, ROAS improvement, or checkout recovery percentages.",
+      "Pitching broad ecommerce marketing instead of one specific cart and trust audit.",
+      "Giving away a full teardown in the first message instead of sharing one useful sample.",
+      "Ignoring mobile, even though many buyers discover and compare products there.",
+      "Mixing audit, copywriting, development, and email implementation into one underpriced job.",
+      "Rewriting product, health, legal, finance, or safety claims without review.",
+      "Sending generic outreach that could apply to any store.",
+    ],
+    faqs: [
+      {
+        question: "Do I need Shopify developer skills to sell a cart audit?",
+        answer:
+          "No, not for the first version. You can sell a screenshot-backed audit, copy suggestions, abandoned-cart email wording, and priority list without editing the theme. Charge separately if the client wants implementation.",
+      },
+      {
+        question: "Who buys Shopify cart audits?",
+        answer:
+          "Founder-led stores, small ecommerce teams, and brands launching new products are the cleanest first buyers. They already care about sales, but may not have a clear list of cart and trust fixes.",
+      },
+      {
+        question: "How much should I charge for a Shopify cart audit?",
+        answer:
+          "A mini teardown might start around $99-$199, while a fuller audit can sit around $300-$750 depending on product count, screenshots, email copy, implementation notes, and revision depth. Price from the work and keep implementation separate.",
+      },
+      {
+        question: "Can I promise a conversion rate increase?",
+        answer:
+          "No. You can identify likely hesitation points and suggest fixes, but results depend on traffic quality, product demand, offer, price, implementation, fulfilment, and many other factors.",
+      },
+      {
+        question: "What should the first audit include?",
+        answer:
+          "Include mobile screenshots, friction notes, priority scores, suggested cart copy, shipping or returns clarity, abandoned-cart email improvements, exclusions, and a retest checklist.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, financial, advertising, analytics, compliance, or platform advice. Results depend on store quality, implementation, traffic, offer, product demand, and buyer behaviour. Have regulated product claims, policies, and compliance language reviewed by the appropriate professional.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]
