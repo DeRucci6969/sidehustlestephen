@@ -1715,6 +1715,155 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical business education, not legal, financial, advertising, analytics, compliance, or platform advice. Results depend on store quality, implementation, traffic, offer, product demand, and buyer behaviour. Have regulated product claims, policies, and compliance language reviewed by the appropriate professional.",
   },
+  {
+    slug: "how-to-start-a-real-estate-suburb-snapshot-service",
+    title: "How to Start a Real Estate Suburb Snapshot Service",
+    seoTitle: "How to Start a Real Estate Suburb Snapshot Service | First Agent Plan",
+    description:
+      "A practical guide to selling source-backed suburb snapshot reports to real estate agents, with a starter offer, pricing guidance, first 20 leads plan, and safe delivery boundaries.",
+    category: "B2B Service",
+    publishedAt: "2026-07-06",
+    updatedAt: "2026-07-06",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["realtor-suburb-snapshot", "google-business-profile-rescue", "review-testimonial-service"],
+    shortAnswer:
+      "To start a real estate suburb snapshot service, pick one suburb, build one source-backed sample report, and pitch agents who already farm that area but post weak local content. Sell a small monthly content asset, not investment advice, valuation advice, or guaranteed lead generation.",
+    keyPoints: [
+      "Best buyers are agents, teams, and principals who need local content for sellers, buyers, email lists, and social posts.",
+      "The starter offer should be one suburb snapshot with source notes, plain-English talking points, one email intro, and two captions.",
+      "Use public data carefully. Include source names and dates, and avoid price predictions, appraisal claims, yield advice, or guaranteed leads.",
+      "A realistic first offer can be a paid sample or monthly snapshot, then expand into a four-week content retainer once the handoff works.",
+      "The first sale comes from a useful sample sitting in the agent's inbox, not a vague content marketing pitch.",
+    ],
+    body: [
+      {
+        heading: "Why agents buy suburb snapshots",
+        paragraphs: [
+          "Real estate agents need to look local every week. Listings, open homes, sold posts, and buyer alerts help, but those posts often say little about the actual suburb. A snapshot gives the agent a reusable local conversation starter.",
+          "The buyer is not paying you for secret market data. They are paying for collection, structure, wording, source notes, and a publish-ready handoff they can approve quickly.",
+          "Good snapshot content helps an agent email past leads, post on social, brief sellers, and keep a farm area warm. Keep the promise there. Do not sell predictions, valuations, legal advice, investment advice, or guaranteed enquiries.",
+        ],
+      },
+      {
+        heading: "Choose one suburb and one buyer lane",
+        paragraphs: [
+          "Start narrower than feels comfortable. Pick one suburb with active listings, recent sales, rental demand, open homes, and several agents publishing local content. If the suburb is too quiet, the report will feel thin.",
+          "Then choose one buyer lane: solo agents, small teams, principals, buyer agents, property managers, or listing-focused agents. Each lane cares about slightly different talking points.",
+          "For a first run, listing agents are usually easiest to understand. They want seller conversations, local authority, and content that makes their market knowledge visible without writing a fresh post from scratch.",
+        ],
+      },
+      {
+        heading: "Build the smallest useful report",
+        paragraphs: [
+          "Do not build a giant dashboard first. Build one clean sample that proves the service. A useful first snapshot can include three public data points, two local observations, one plain-English takeaway, one email intro, and two social captions.",
+          "Every number needs a source name and date. If a number is unavailable, stale, or unclear, say so. A missing metric handled honestly is better than a confident guess.",
+          "The value is not fancy charts. The value is turning scattered public information into a small content asset the agent can approve, adapt, and send this week.",
+        ],
+      },
+      {
+        heading: "Package the offer",
+        paragraphs: [
+          "The first offer should be easy to approve. A clean version is: I make a monthly suburb snapshot for one farm area, using public sources, plain-English talking points, and publish-ready captions for your approval.",
+          "Keep the scope tight. Include one suburb, one report, one email intro, two captions, a source log, and one revision round. Exclude custom research, valuations, compliance sign-off, ad management, guaranteed leads, and urgent daily updates.",
+          "Once one agent likes the handoff, the natural next step is a four-week retainer. That can cover weekly snapshots, more captions, email nurture angles, and a recurring approval workflow.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "A paid sample can sit around $99-$199 when the scope is small. A weekly snapshot might sit around $200-$350 depending on research depth, market complexity, revisions, turnaround, and the agent's approval needs.",
+          "A four-week content retainer can be priced higher because it includes cadence, source discipline, repeatable handoff, and less admin friction for the agent. Price from time, research difficulty, revision risk, and how many formats you deliver.",
+          "Do not copy the biggest number from a creator video. The first job is partly market research. Charge enough to make the work serious, then improve the offer after real feedback.",
+        ],
+      },
+      {
+        heading: "Find the first 20 agents",
+        paragraphs: [
+          "Start with one suburb and list agents who already have a reason to care about it. Look at current listings, recent sales, agency pages, Google profiles, Instagram, LinkedIn, local newsletters, and open-home posts.",
+          "Score each lead for fit. Do they post often? Do they use generic content? Do they mention the suburb? Do they have listings there? Do they send newsletters? Do they have a team that needs repeatable content?",
+          "Send a sample-led message. Mention the suburb, the content gap, and the specific sample you made. The ask should be small: Want me to send it over?",
+        ],
+      },
+      {
+        heading: "Deliver without creating claim risk",
+        paragraphs: [
+          "Use careful wording. Say recent public data suggests, this week's public listings show, or based on the source checked on this date. Avoid language that predicts prices, tells people when to buy, or implies a guaranteed result for the agent.",
+          "Ask the agent to approve every public-facing line before posting. They know their market, licensing rules, brand tone, and compliance process better than you do.",
+          "Your final handoff should include the snapshot, source log, approval note, captions, email intro, and a short list of excluded claims. That makes the work feel professional and keeps the boundary clear.",
+        ],
+      },
+      {
+        heading: "Turn it into recurring work",
+        paragraphs: [
+          "After the first sample, ask which part was most useful: seller email, social post, buyer talking point, suburb comparison, or appraisal follow-up. Their answer tells you how to shape the retainer.",
+          "Recurring work should be built around a calendar. For example: Monday source check, Tuesday snapshot draft, Wednesday agent approval, Thursday email and captions, Friday follow-up talking point.",
+          "This is not passive income. It is a repeatable B2B content service with a clear buyer, a simple delivery loop, and a reason for agents to keep buying if the work is useful.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first snapshot for a listing agent",
+      steps: [
+        "Choose one active suburb with recent listings and several agents competing for attention.",
+        "Pick one agent who already posts about listings or open homes in that suburb.",
+        "Collect three public data points with source names and dates.",
+        "Write one plain-English takeaway for sellers, one email intro, and two captions.",
+        "Send a short message offering to share the sample, not a broad marketing pitch.",
+        "If the agent replies, quote a paid monthly snapshot with source log, approval step, and tight exclusions.",
+        "After delivery, offer a four-week content retainer for that suburb or the agent's main farm area.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one suburb with enough recent activity to support a useful snapshot.",
+      "List 20 agents connected to that suburb.",
+      "Choose five agents who post often but lack strong local market content.",
+      "Collect public data from two or three sources and record source names and dates.",
+      "Build one small sample: three data points, one takeaway, one email intro, and two captions.",
+      "Write a fixed starter offer with scope, price range, turnaround, approval step, and exclusions.",
+      "Send five sample-led messages today.",
+      "Track replies, compliance questions, source objections, price pushback, and requested formats.",
+      "Revise the sample before pitching the next batch.",
+      "Turn one paid sample into a four-week retainer offer only after the agent sees the handoff.",
+    ],
+    commonMistakes: [
+      "Pitching generic social media management instead of a specific suburb snapshot.",
+      "Using numbers without source names, dates, or context.",
+      "Making price predictions, appraisal claims, buyer advice, investment advice, or lead guarantees.",
+      "Trying to cover too many suburbs before one sample is genuinely good.",
+      "Sending a huge free report instead of a small useful sample.",
+      "Ignoring the agent approval step before public posting.",
+      "Pricing too low for research, revisions, formatting, and source checking.",
+    ],
+    faqs: [
+      {
+        question: "Who buys suburb snapshot reports?",
+        answer:
+          "Real estate agents, small teams, agency principals, buyer agents, and property managers can buy them. Start with agents who already farm a suburb and need consistent local content.",
+      },
+      {
+        question: "What should a first suburb snapshot include?",
+        answer:
+          "Keep it small: source-backed data points, one local takeaway, one email intro, two social captions, and a source log. Add charts or design polish only after the core handoff is useful.",
+      },
+      {
+        question: "How much should I charge for a suburb snapshot service?",
+        answer:
+          "A paid sample might sit around $99-$199, while a weekly snapshot might sit around $200-$350 depending on research, formatting, turnaround, and revisions. Quote from the actual work.",
+      },
+      {
+        question: "Can I use AI to write the market commentary?",
+        answer:
+          "Yes, but treat AI output as a draft. Check every source, remove unsupported claims, use cautious wording, and get agent approval before anything public is posted.",
+      },
+      {
+        question: "Is this real estate advice?",
+        answer:
+          "It should not be. Keep the service to content support, public source summaries, captions, and approval-ready wording. Do not provide valuations, financial advice, legal advice, investment advice, or guaranteed market outcomes.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not real estate, legal, financial, tax, valuation, investment, or compliance advice. Check local rules, source terms, licensing boundaries, and agent approval requirements before publishing market content.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]
