@@ -1727,7 +1727,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "12 min read",
     relatedPackSlugs: ["realtor-suburb-snapshot", "google-business-profile-rescue", "review-testimonial-service"],
     shortAnswer:
-      "To start a real estate suburb snapshot service, pick one suburb, build one source-backed sample report, and pitch agents who already farm that area but post weak local content. Sell a small monthly content asset, not investment advice, valuation advice, or guaranteed lead generation.",
+      "To start a real estate suburb snapshot service, pick one suburb, build one source-backed sample report, and pitch agents who already focus on that suburb but post weak local content. Sell a small monthly content asset, not investment advice, valuation advice, or guaranteed lead generation.",
     keyPoints: [
       "Best buyers are agents, teams, and principals who need local content for sellers, buyers, email lists, and social posts.",
       "The starter offer should be one suburb snapshot with source notes, plain-English talking points, one email intro, and two captions.",
@@ -1763,15 +1763,15 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Package the offer",
         paragraphs: [
-          "The first offer should be easy to approve. A clean version is: I make a monthly suburb snapshot for one farm area, using public sources, plain-English talking points, and publish-ready captions for your approval.",
+          "The first offer should be easy to approve. A clean version is: I make a monthly suburb snapshot for one main suburb, using public sources, plain-English talking points, and publish-ready captions for your approval.",
           "Keep the scope tight. Include one suburb, one report, one email intro, two captions, a source log, and one revision round. Exclude custom research, valuations, compliance sign-off, ad management, guaranteed leads, and urgent daily updates.",
-          "Once one agent likes the handoff, the natural next step is a four-week retainer. That can cover weekly snapshots, more captions, email nurture angles, and a recurring approval workflow.",
+          "Once one agent likes the handoff, the natural next step is a four-week retainer. The Realtor Suburb Snapshot Reports launch pack gives you the workbook, pitch script, pricing calculator, prompts, and client emails for turning that first sample into a repeatable offer.",
         ],
       },
       {
         heading: "Set realistic pricing",
         paragraphs: [
-          "A paid sample can sit around $99-$199 when the scope is small. A weekly snapshot might sit around $200-$350 depending on research depth, market complexity, revisions, turnaround, and the agent's approval needs.",
+          "A paid sample can sit around $99-$199 when the scope is small. A weekly snapshot might sit around $200-$350 depending on research depth, market complexity, revisions, turnaround, and the agent's approval needs. Treat these as quote-building ranges, not guaranteed market rates.",
           "A four-week content retainer can be priced higher because it includes cadence, source discipline, repeatable handoff, and less admin friction for the agent. Price from time, research difficulty, revision risk, and how many formats you deliver.",
           "Do not copy the biggest number from a creator video. The first job is partly market research. Charge enough to make the work serious, then improve the offer after real feedback.",
         ],
@@ -1848,7 +1848,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "How much should I charge for a suburb snapshot service?",
         answer:
-          "A paid sample might sit around $99-$199, while a weekly snapshot might sit around $200-$350 depending on research, formatting, turnaround, and revisions. Quote from the actual work.",
+          "A paid sample might sit around $99-$199, while a weekly snapshot might sit around $200-$350 depending on research, formatting, turnaround, and revisions. Treat these as quote-building ranges, not guaranteed market rates, and quote from the actual work.",
       },
       {
         question: "Can I use AI to write the market commentary?",
