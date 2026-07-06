@@ -375,6 +375,21 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 </div>
               </div>
             ) : null}
+            {detail?.outreachPreview ? (
+              <div className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Outreach preview</p>
+                <h2 className="mt-3 text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{detail.outreachPreview.title}</h2>
+                <div className="mt-5 rounded-lg bg-white/72 p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
+                  <p className="text-sm font-semibold leading-6 text-[var(--text-primary)]">&ldquo;{detail.outreachPreview.copy}&rdquo;</p>
+                </div>
+                <p className="mt-3 text-xs font-semibold leading-5 text-[var(--graphite)]">{detail.outreachPreview.note}</p>
+                {!isMember ? (
+                  <div className="mt-5">
+                    <JoinButton label="Unlock the full script pack" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
             <div id="member-assets" className="liquid-panel glass relative scroll-mt-24 overflow-hidden rounded-lg p-5 shadow-[0_0_0_1px_rgba(246,245,242,0.18),0_28px_90px_rgba(0,0,0,0.28)] sm:p-6">
               <div className="absolute inset-0 rounded-lg ring-1 ring-[rgba(28,32,28,0.18)]" />
               <div className="relative">

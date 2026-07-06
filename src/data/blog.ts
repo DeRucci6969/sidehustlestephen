@@ -1864,6 +1864,171 @@ export const blogPosts: BlogPost[] = [
     disclaimer:
       "This guide is practical business education, not real estate, legal, financial, tax, valuation, investment, or compliance advice. Check local rules, source terms, licensing boundaries, and agent approval requirements before publishing market content.",
   },
+  {
+    slug: "google-business-profile-audit-checklist-for-local-businesses",
+    title: "Google Business Profile Audit Checklist for Local Businesses",
+    seoTitle: "Google Business Profile Audit Checklist | Local Business Cleanup Plan",
+    description:
+      "A practical Google Business Profile audit checklist for spotting local profile trust gaps, writing a 3-point cleanup sample, pricing a rescue sprint, and pitching the first client safely.",
+    category: "Checklist",
+    publishedAt: "2026-07-07",
+    updatedAt: "2026-07-07",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
+    shortAnswer:
+      "A useful Google Business Profile audit checks whether a local business looks accurate, current, trustworthy, and easy to contact on Search and Maps. Start with the public basics: name, category, services, hours, photos, reviews, questions, booking links, and obvious customer confusion. Turn the audit into a small cleanup sprint, not a ranking promise.",
+    keyPoints: [
+      "Best first buyers are local businesses where customers check Google before calling: trades, salons, clinics, cafes, mechanics, cleaners, gyms, and home services.",
+      "The audit should find visible trust gaps, not pretend to diagnose the entire local SEO universe.",
+      "Use a 3-point sample first: one accuracy issue, one trust issue, and one conversion issue.",
+      "A starter cleanup sprint can include service copy, FAQ drafts, photo checklist, review-request wording, and an owner approval handoff.",
+      "Do not promise rankings, calls, leads, reviews, revenue, or platform approval. Sell profile clarity and owner-approved cleanup.",
+    ],
+    body: [
+      {
+        heading: "Who this checklist is for",
+        paragraphs: [
+          "This checklist is for someone who wants to sell a simple Google Business Profile cleanup service to local businesses. It is also useful if you run a local business and want to see why your profile might look weaker than the business actually is.",
+          "The cleanest buyer is an owner-operated business where the profile matters before the first call: plumber, electrician, roofer, dentist, physio, salon, cleaner, mechanic, cafe, gym, studio, or home service company.",
+          "This is not advanced local SEO. It is a practical profile audit that spots public trust gaps and turns them into an approval-ready cleanup plan.",
+        ],
+      },
+      {
+        heading: "Start with the public trust check",
+        paragraphs: [
+          "Open the business profile like a customer would. Do not start in a spreadsheet. Ask the awkward question first: would a real buyer understand what this business does, where it works, whether it is open, and what to do next?",
+          "Check the basics: business name, primary category, address or service area, phone number, website link, booking link, opening hours, holiday hours, and whether the profile looks actively maintained.",
+          "If any of those are stale, vague, or mismatched with the website, you have a cleanup opportunity. Keep your wording cautious. The owner must verify the facts before anything changes.",
+        ],
+      },
+      {
+        heading: "Audit categories and services",
+        paragraphs: [
+          "Categories and services help customers understand the offer quickly. Google lets service businesses add services, organise them under categories, and add service descriptions or prices in supported cases. That makes the services section a useful place to find easy cleanup work.",
+          "Look for missing core services, unclear descriptions, old service names, duplicate wording, or services that customers ask about in reviews but cannot find on the profile.",
+          "Do not stuff the profile with every keyword you can imagine. Write customer-language services that the business genuinely offers and the owner can approve.",
+        ],
+      },
+      {
+        heading: "Audit photos and visual proof",
+        paragraphs: [
+          "Photos are often the fastest trust gap to explain. A business may have strong work, but the profile shows a blurry storefront, old team photo, empty counter, dark vehicle shot, or no recent project proof.",
+          "Score photos for recency, clarity, relevance, customer usefulness, and whether they show the actual service. For trades, show finished work and vehicles. For cafes, show current menus and food. For salons, show the space and approved examples. For clinics or regulated services, avoid claims and get owner approval.",
+          "Your cleanup offer can include a photo checklist, not professional photography. That is a neat beginner-friendly boundary.",
+        ],
+      },
+      {
+        heading: "Audit reviews without doing anything dodgy",
+        paragraphs: [
+          "Reviews are sensitive because bad operators get tempted to fake proof. Do not do that. Your job is to help the business respond professionally, request reviews honestly, and turn useful public feedback into better profile information.",
+          "Look for unanswered reviews, repeated questions in reviews, praise that reveals a missing service, complaints that need owner attention, or response wording that sounds defensive, robotic, or risky.",
+          "A safe deliverable is a review-response swipe file, review-request wording, and escalation notes for owner approval. Do not write fake reviews, pressure customers, or promise review volume.",
+        ],
+      },
+      {
+        heading: "Audit questions, answers, and customer friction",
+        paragraphs: [
+          "A good profile answers common questions before the buyer has to call. Look for missing FAQs around service area, booking, parking, emergency availability, turnaround, menu options, payment, preparation, or what the client needs to send before a quote.",
+          "Use real customer language. If reviews mention same-day blocked drains, colour correction, gluten-free options, mobile service, parking, or quote timing, those topics may deserve a profile FAQ or clearer service wording.",
+          "Keep answers factual and approved. For medical, legal, finance, building, safety, or regulated claims, stay conservative and let the owner review every sentence.",
+        ],
+      },
+      {
+        heading: "Turn the audit into a 3-point sample",
+        paragraphs: [
+          "Do not send a giant free report. The first sample should be useful enough to prove you looked properly, but small enough that the paid sprint still has value.",
+          "Use this structure: one accuracy gap, one trust gap, and one customer-action gap. For example: the profile says emergency plumbing, but the services section does not explain it; the latest photos do not show drain work; there is no FAQ for same-day callouts.",
+          "Then add one tiny draft fix. A sample service description, FAQ, or photo checklist is usually enough to start the sales conversation.",
+        ],
+      },
+      {
+        heading: "Package the paid cleanup sprint",
+        paragraphs: [
+          "The paid offer should feel bounded. A practical sprint can include profile audit notes, service description drafts, FAQ drafts, review-request wording, photo checklist, before screenshots, and a final owner approval handoff.",
+          "Make exclusions obvious. You are not promising rankings, calls, leads, review growth, website SEO, ad performance, legal compliance, or Google approval. You are not logging into the profile until access and approval are clear.",
+          "A simple offer line is: I clean up weak Google Business Profiles by finding public trust gaps and preparing owner-approved fixes for services, photos, FAQs, review wording, and customer next steps.",
+        ],
+      },
+      {
+        heading: "Set starter pricing",
+        paragraphs: [
+          "A mini audit is cheaper than a full cleanup sprint because it has less delivery risk. A full sprint costs more because you are writing drafts, collecting approvals, checking details, and producing a usable handoff.",
+          "As a starting point, a 3-point mini audit might sit around $49-$150. A profile rescue sprint might sit around $200-$600. A monthly hygiene check might sit around $100-$350 per month. These are quote-building ranges, not market guarantees.",
+          "Quote from time, access, owner responsiveness, number of services, photos, review work, revision risk, number of locations, and whether the business is in a regulated category.",
+        ],
+      },
+      {
+        heading: "Pitch the first client",
+        paragraphs: [
+          "Pick one local category and audit 20 profiles by hand. The point is to learn one buyer lane, not to spray the same generic message at every business with a phone number.",
+          "Send the smallest specific message: Hi Sam, I noticed your Google profile has recent reviews mentioning emergency callouts, but the services section does not explain that offer. I made a quick 3-point cleanup note. Want me to send it over?",
+          "If they reply, send the sample and offer the paid sprint. Want the scripts, pricing file, audit checklist, and delivery handoff? Open the Google Business Profile Rescue launch pack.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: 3-point audit for a local plumber",
+      steps: [
+        "Choose one suburb and search for plumbers with active reviews but thin profiles.",
+        "Pick one profile with visible trust gaps: unclear services, stale photos, missing FAQs, or unanswered reviews.",
+        "Write one accuracy note, such as hours or service area needing owner verification.",
+        "Write one trust note, such as old photos or missing job-type examples.",
+        "Write one customer-action note, such as no emergency callout FAQ or weak booking link.",
+        "Draft one safe service description or FAQ for owner approval.",
+        "Send the sample and pitch a fixed cleanup sprint with no ranking promises.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one buyer lane, such as plumbers, salons, cafes, dentists, mechanics, cleaners, or gyms.",
+      "List 20 Google Business Profiles in one suburb or service area.",
+      "Check name, category, address or service area, hours, phone, website, and booking links.",
+      "Check services for missing, vague, or outdated descriptions.",
+      "Check photos for recency, clarity, relevance, and actual service proof.",
+      "Check reviews for unanswered issues, repeated questions, and useful customer language.",
+      "Check questions and FAQs for missing buyer concerns.",
+      "Create one 3-point sample for the strongest prospect.",
+      "Write a fixed cleanup sprint with scope, price range, turnaround, and exclusions.",
+      "Send five specific outreach messages today.",
+    ],
+    commonMistakes: [
+      "Calling the service local SEO and then accidentally promising rankings.",
+      "Sending a huge free audit instead of one useful sample.",
+      "Changing profile facts without owner approval.",
+      "Stuffing services with keywords the business does not genuinely offer.",
+      "Writing fake reviews, fake testimonials, fake case studies, or fake urgency.",
+      "Ignoring regulated wording for medical, finance, legal, trades, safety, or property services.",
+      "Pricing the sprint without accounting for access, revisions, screenshots, and handoff time.",
+    ],
+    faqs: [
+      {
+        question: "What should a Google Business Profile audit include?",
+        answer:
+          "Start with business information, categories, services, hours, photos, reviews, questions, booking links, website links, and obvious customer confusion. Keep the first audit focused on public trust gaps and owner-approved fixes.",
+      },
+      {
+        question: "Can I charge for Google Business Profile audits?",
+        answer:
+          "Yes, if the audit is useful, specific, and bounded. A small paid audit might sit around $49-$150, while a fuller cleanup sprint might sit around $200-$600 depending on scope, access, revisions, and business complexity.",
+      },
+      {
+        question: "Is this the same as Google Business Profile optimization?",
+        answer:
+          "It overlaps, but a beginner-friendly audit should focus on profile hygiene and clarity. Avoid broad optimization promises unless you can deliver the wider local SEO work and explain the limits clearly.",
+      },
+      {
+        question: "Do I need profile access to sell this service?",
+        answer:
+          "No. You can start with a public audit and approval-ready draft fixes. If implementation is included, use proper owner-approved access and document the changes.",
+      },
+      {
+        question: "What should I avoid promising?",
+        answer:
+          "Avoid promises about rankings, calls, leads, revenue, review volume, ad performance, or Google approval. Sell clearer information, better trust signals, and a cleaner owner handoff.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, marketing, platform compliance, or local SEO advice. Google features and approval rules can change. Verify profile facts with the business owner and avoid guarantees about rankings, leads, calls, reviews, revenue, or platform approval.",
+  },
 ];
 
 export const featuredBlogPosts = [...blogPosts]

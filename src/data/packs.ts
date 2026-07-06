@@ -39,6 +39,11 @@ export type PackPageDetail = {
     steps: string[];
     lockedAssetTease: string;
   };
+  outreachPreview?: {
+    title: string;
+    copy: string;
+    note: string;
+  };
   whyDetails: string[];
   firstMoveAnalysis: string[];
   launchSprintDetails: string[];
@@ -565,6 +570,13 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       lockedAssetTease:
         "Members get the cafe outreach script, pricing sheet, delivery checklist, prompt pack, intake form, client emails, FAQs, and automation prompts.",
     },
+    outreachPreview: {
+      title: "Sample first message",
+      copy:
+        "I noticed your Google menu photo and current Instagram specials do not quite match, so customers may be seeing old items before they visit. I made a quick one-section cleanup sample. If useful, I can refresh the full menu files with one approval round this week. Want me to send the sample?",
+      note:
+        "Use this as a starting point only. Replace the menu mismatch, specials detail, and delivery timing before sending.",
+    },
     whyDetails: [
       "The pain is visible before a sales call, so prospecting is concrete: blurry menu photos, old specials, missing QR links, and mismatched pricing are easy to spot.",
       "The buyer already understands the value of menus because customers use them every day. You are not educating the market; you are removing a neglected operational annoyance.",
@@ -621,6 +633,13 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       ],
       lockedAssetTease:
         "Members get the full profile audit checklist, rescue sprint pitch, Profile Proof Kit, pricing calculator, intake form, approval emails, FAQ prompts, and handoff wording.",
+    },
+    outreachPreview: {
+      title: "Sample first message",
+      copy:
+        "I noticed your Google profile is missing a clear service summary and the latest photos do not show the work you probably want customers to ask about. I made a quick 3-point profile cleanup note. No ranking promises, just a practical trust cleanup you can approve before anything changes. Want me to send it over?",
+      note:
+        "Use this as a starting point only. Replace the visible issue, buyer type, and quick-win language before sending.",
     },
     whyDetails: [
       "The buyer can see the problem immediately because Google is public and customer-facing.",

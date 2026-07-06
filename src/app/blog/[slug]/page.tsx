@@ -88,6 +88,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "@type": "Organization",
       name: siteConfig.name,
     },
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
     mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
   };
   const faqSchema = {

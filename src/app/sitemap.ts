@@ -4,17 +4,29 @@ import { packCategories, packs } from "@/data/packs";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/packs", "/blog", "/pricing", "/terms", "/privacy"];
   const latestPackPublishedAt = packs.reduce(
     (latest, pack) => (pack.publishedAt > latest ? pack.publishedAt : latest),
     packs[0]?.publishedAt ?? "2026-06-09",
   );
+  const latestBlogUpdatedAt = blogPosts.reduce(
+    (latest, post) => (post.updatedAt > latest ? post.updatedAt : latest),
+    blogPosts[0]?.updatedAt ?? latestPackPublishedAt,
+  );
   const archiveUpdatedAt = new Date(latestPackPublishedAt);
+  const blogUpdatedAt = new Date(latestBlogUpdatedAt);
+  const staticRoutes = [
+    { path: "", lastModified: archiveUpdatedAt },
+    { path: "/packs", lastModified: archiveUpdatedAt },
+    { path: "/blog", lastModified: blogUpdatedAt },
+    { path: "/pricing", lastModified: undefined },
+    { path: "/terms", lastModified: undefined },
+    { path: "/privacy", lastModified: undefined },
+  ];
 
   return [
-    ...staticRoutes.map((path) => ({
-      url: `${siteConfig.url}${path}`,
-      lastModified: path === "/terms" || path === "/privacy" ? undefined : archiveUpdatedAt,
+    ...staticRoutes.map((route) => ({
+      url: `${siteConfig.url}${route.path}`,
+      lastModified: route.lastModified,
     })),
     ...packCategories.map((category) => ({
       url: `${siteConfig.url}/packs/categories/${category.slug}`,
