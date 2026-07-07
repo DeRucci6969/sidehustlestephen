@@ -29,6 +29,163 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-start-a-cafe-menu-refresh-service",
+    title: "How to Start a Cafe Menu Refresh Service",
+    seoTitle: "How to Start a Cafe Menu Refresh Service | First Cafe Client Plan",
+    description:
+      "A practical guide to starting a cafe menu refresh service with a clear buyer, fixed starter offer, realistic pricing, outreach script, delivery checklist, and launch pack links.",
+    category: "Local Service",
+    publishedAt: "2026-07-08",
+    updatedAt: "2026-07-08",
+    readingTime: "12 min read",
+    relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
+    shortAnswer:
+      "To start a cafe menu refresh service, find independent cafes with outdated menus across Google, Instagram, printed boards, or QR links, then sell a small fixed refresh sprint. The first offer should clean up one menu section, create approval-ready files, and give the owner a simple monthly update option. Do not promise more orders, better rankings, or viral posts.",
+    keyPoints: [
+      "Best buyers are independent cafes, bakeries, coffee carts, takeaway shops, and small restaurants that change specials, prices, or opening hours often.",
+      "Sell a practical menu cleanup, not a full rebrand. The faster the owner can approve it, the easier the first sale becomes.",
+      "Use visible proof: old Google menu photos, mismatched Instagram specials, unclear QR menus, low-contrast boards, or missing seasonal items.",
+      "A realistic starter ladder can include a mini audit, one-section refresh, full menu refresh, and monthly menu maintenance.",
+      "Keep claims conservative. You can improve clarity, consistency, and handoff quality. You cannot guarantee revenue, bookings, ranking, or foot traffic.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This is for beginners who can organise information, use a simple design tool, and communicate clearly with local business owners. You do not need to be a brand strategist. You need to spot messy customer-facing menu details and turn them into clean, approval-ready files.",
+          "The best early buyers are independent cafes, bakeries, food trucks, coffee carts, takeaway shops, juice bars, and small restaurants. They often change prices, seasonal specials, hours, suppliers, and menu items faster than their public assets get updated.",
+          "Start with owner-operated venues, not chains. A cafe owner can usually approve a small refresh faster than a head office can approve a design project. That speed matters when you are trying to land the first paid client.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Cafes often have the same menu scattered across too many places: printed menus, wall boards, table QR codes, Google Business Profile, Instagram highlights, delivery apps, website PDFs, and old photos uploaded by customers. One price changes and suddenly half the internet is wrong.",
+          "That mismatch creates customer confusion and staff friction. A customer sees a weekend special online, walks in, and finds the item is gone. Or they scan a QR code and land on a blurry PDF. Or Google shows a menu photo from two years ago.",
+          "Your service solves menu consistency and readability. The promise is not magic marketing. It is: I will help make your public menu details cleaner, easier to scan, and easier to update next month.",
+        ],
+      },
+      {
+        heading: "Package the first offer",
+        paragraphs: [
+          "Keep the starter package narrow. A useful first version is a menu refresh sprint that includes a menu issue scan, one refreshed menu section, one Instagram specials tile, one Google menu photo or PDF check, and a handoff note for the owner.",
+          "The offer should have tight boundaries. It does not include food photography, a full rebrand, printing, nutrition advice, allergen advice, delivery app management, unlimited revisions, or menu engineering unless those are quoted separately and reviewed by the owner.",
+          "A clean one-sentence offer is: I help local cafes clean up outdated menu assets across print, Instagram, Google, and QR links so customers see the same prices, specials, and ordering details everywhere.",
+        ],
+      },
+      {
+        heading: "Use public clues to find prospects",
+        paragraphs: [
+          "Start with one neighbourhood and list 20 cafes. Search their Google profiles, websites, Instagram pages, and public QR menu links. You are looking for visible friction, not private business problems.",
+          "Good clues include old menu photos on Google, different prices across platforms, blurry PDF menus, specials posted on Instagram but missing from the menu, QR codes that open a hard-to-read file, no clear takeaway menu, missing opening hours, and boards that are impossible to read in photos.",
+          "Google's restaurant Business Profile guidance supports menu updates and menu photo or PDF uploads, which makes menu hygiene a real owner task. Still, your pitch should be a practical cleanup, not a claim that changing a menu photo will produce more search traffic.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Price from time, scope, approval risk, and output count. A simple audit is cheaper than a full menu refresh because it does not require design iterations or final file delivery.",
+          "A practical starting ladder is: mini menu audit around $49-$125, one-section refresh around $100-$250, full cafe menu refresh around $250-$750, and monthly menu maintenance around $100-$400 per month. These are starting points, not market rules.",
+          "Charge more when the cafe has multiple menus, many item categories, poor source files, urgent turnaround, print coordination, delivery app updates, multiple locations, or more than one approval round. Charge less only when the scope is genuinely tiny.",
+        ],
+      },
+      {
+        heading: "Create a tiny proof sample",
+        paragraphs: [
+          "Do not redesign the whole menu for free. Create one small sample that proves you noticed a real issue. For example, take one blurry breakfast section and rebuild it as a clean phone-readable layout, clearly marked as a sample.",
+          "A useful proof sample has three parts: the current issue, the cleaned-up version, and the suggested paid sprint. Keep it respectful. Cafe owners are busy, and their menu is not messy because they are lazy. It is messy because running a cafe leaves very little quiet admin time.",
+          "Use only public information for the sample. Do not invent prices, dishes, allergens, ingredients, reviews, claims, or promotions. If you need anything verified, write 'owner to confirm' directly in the draft.",
+        ],
+      },
+      {
+        heading: "Send the first outreach message",
+        paragraphs: [
+          "The first message should be short and specific. Mention one visible menu issue, offer the sample, and ask whether they want to see it. Do not lead with a giant pitch deck.",
+          "Example: Hi Mia, I noticed your Google menu photo still shows the winter specials, but Instagram has the new lunch board. I mocked up a quick one-section cleanup so the menu matches better across both places. Want me to send it over?",
+          "If they reply, move to the paid offer: a fixed menu refresh sprint with source file cleanup, menu section refresh, social tile, Google menu photo or PDF check, delivery checklist, and one approval round. Want the scripts, pricing file, and delivery checklist? Open the Cafe Menu Refresh launch pack.",
+        ],
+      },
+      {
+        heading: "Deliver the refresh cleanly",
+        paragraphs: [
+          "Delivery starts with intake. Ask for current menu files, correct prices, item names, opening hours, specials, brand colours if they care, logo files, QR menu link, Google profile link, Instagram handle, required file formats, and who approves final wording.",
+          "Then build the refresh in a repeatable order: audit public assets, confirm facts, clean up the menu section, export files, prepare social and Google-ready versions, send for approval, revise once, and hand over final files with simple update notes.",
+          "Keep a before-and-after folder. It helps the owner see what changed, and it helps you build proof for the next pitch. Get permission before using any cafe assets, menu images, or before-and-after examples publicly.",
+        ],
+      },
+      {
+        heading: "Turn one job into monthly work",
+        paragraphs: [
+          "The recurring version is not complicated. Cafes change enough that a monthly menu hygiene check can be useful: specials tile, menu photo check, QR link check, holiday hours note, and one small copy or layout update.",
+          "Pitch it only after the first job lands cleanly. The owner has already seen the value, the files are organised, and you know how they approve changes. That is a much easier conversation than selling a retainer to a stranger.",
+          "This is not passive income. It is a small operational service with repeatable delivery. That is the point. Start with one buyer, one menu section, one outreach script, and one fixed sprint.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first cafe menu refresh sprint",
+      steps: [
+        "Choose one neighbourhood and list 20 independent cafes with public Google profiles and Instagram pages.",
+        "Find five cafes with visible menu friction: old Google menu photos, mismatched specials, blurry QR menus, or unclear takeaway files.",
+        "Pick one cafe and create a small sample for one menu section using only public information.",
+        "Send a short outreach message that mentions the specific issue and offers to send the sample.",
+        "If the owner replies, quote a fixed sprint: menu issue scan, one-section refresh, Instagram specials tile, Google menu photo or PDF check, and one approval round.",
+        "Collect approved prices, item names, hours, files, and brand details before editing anything.",
+        "Deliver final files, a handoff note, and a monthly menu maintenance option.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one neighbourhood or cafe-heavy suburb.",
+      "List 20 independent cafes, bakeries, coffee carts, or takeaway shops.",
+      "Check each Google profile, website, QR menu, and Instagram page.",
+      "Mark visible issues: outdated menu photo, mismatched prices, blurry PDF, missing specials, unclear hours, or poor mobile readability.",
+      "Choose the five cafes with the clearest public menu friction.",
+      "Create one small sample for one menu section.",
+      "Write a fixed menu refresh sprint with deliverables, price range, turnaround, revision limit, and exclusions.",
+      "Send five specific outreach messages today.",
+      "Track replies, objections, file issues, and approval questions.",
+      "Turn the first paid job into a reusable intake form and delivery checklist.",
+    ],
+    commonMistakes: [
+      "Selling a full rebrand when the buyer needs a fast menu cleanup.",
+      "Redesigning an entire menu for free before the cafe has shown buying intent.",
+      "Changing prices, ingredients, allergens, dietary labels, or claims without owner approval.",
+      "Promising more orders, higher rankings, viral posts, or guaranteed foot traffic.",
+      "Ignoring Google, QR links, and Instagram while only fixing a printable menu.",
+      "Offering unlimited revisions on a tiny starter package.",
+      "Using customer photos, menu images, or cafe branding publicly without permission.",
+    ],
+    faqs: [
+      {
+        question: "Who buys a cafe menu refresh service?",
+        answer:
+          "Independent cafes, bakeries, takeaway shops, coffee carts, and small restaurants are the cleanest first buyers. Look for venues that change specials, prices, or hours often and have visible menu mismatches online.",
+      },
+      {
+        question: "How much should I charge for a cafe menu refresh?",
+        answer:
+          "A starter ladder can begin with a $49-$125 mini audit, $100-$250 one-section refresh, $250-$750 full menu refresh, and $100-$400 monthly menu maintenance. Adjust for scope, files, urgency, revisions, and approval complexity.",
+      },
+      {
+        question: "Do I need design experience?",
+        answer:
+          "You need enough design judgment to make the menu clean, readable, and on-brand. You do not need to sell a full brand identity. Use simple layouts, clear spacing, readable type, and owner-approved facts.",
+      },
+      {
+        question: "Should I update the cafe's Google Business Profile?",
+        answer:
+          "You can prepare Google-ready menu photos or PDFs and owner-approved update notes. Only make profile changes if the owner gives proper access and approval. Do not promise rankings or lead growth from menu updates.",
+      },
+      {
+        question: "What should I sell after the first refresh?",
+        answer:
+          "Offer monthly menu maintenance: specials tile, menu photo check, QR link check, seasonal item update, holiday hours note, and a small refresh allowance. Keep it operational and easy to approve.",
+      },
+    ],
+    disclaimer:
+      "This guide is educational and practical, not a guarantee of customers, orders, rankings, revenue, or platform outcomes. Confirm menu facts, prices, ingredients, allergens, permissions, and local requirements with the cafe owner before publishing or printing anything.",
+  },
+  {
     slug: "how-to-start-a-google-business-profile-rescue-service",
     title: "How to Start a Google Business Profile Rescue Service",
     seoTitle: "How to Start a Google Business Profile Rescue Service | First-Client Plan",
