@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search, Video } from "lucide-react";
 import { BlogCard } from "@/components/blog-card";
 import { Header } from "@/components/header";
 import { AssetTypesSection } from "@/components/asset-types-section";
@@ -41,8 +41,38 @@ export const metadata = {
   },
 };
 
+const socialPackRoutes = [
+  {
+    slug: "cafe-menu-refresh-package",
+    label: "Cafe menu refresh",
+    cue: "Outdated menus, specials, QR links",
+    guideHref: "/blog/how-to-start-a-cafe-menu-refresh-service",
+  },
+  {
+    slug: "mobile-headlight-restoration",
+    label: "Cloudy headlight fix",
+    cue: "Before-and-after car-care proof",
+  },
+  {
+    slug: "airbnb-photo-refresh-service",
+    label: "Airbnb photo refresh",
+    cue: "Flat listing photos into stronger scenes",
+  },
+  {
+    slug: "drone-roof-photo-inspection",
+    label: "Drone roof photos",
+    cue: "Visual-only roof documentation",
+  },
+];
+
 export default function Home() {
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
+  const socialRoutes = socialPackRoutes
+    .map((route) => {
+      const pack = packs.find((item) => item.slug === route.slug);
+      return pack ? { ...route, pack } : null;
+    })
+    .filter((route): route is NonNullable<typeof route> => Boolean(route));
 
   return (
     <>
@@ -122,6 +152,55 @@ export default function Home() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="hero-character-image"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-7xl px-5 py-8 sm:px-8 sm:py-10">
+          <div className="grid gap-5 lg:grid-cols-[0.38fr_1fr] lg:items-stretch">
+            <div className="dark-pack-panel rounded-lg p-5 sm:p-6">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-[var(--orange-hot)] ring-1 ring-white/15">
+                <Video size={18} />
+              </div>
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-white/50">From the videos</p>
+              <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-white">Saw the idea? Open the working pack.</h2>
+              <p className="mt-3 text-sm font-semibold leading-6 text-white/70">
+                Recent short-form topics now point straight to the launch files, pricing, scripts, and delivery checklists behind the idea.
+              </p>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-2">
+              {socialRoutes.map((route) => (
+                <div key={route.slug} className="glass-soft rounded-lg p-4 sm:p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--safety-orange)]">{route.label}</p>
+                  <h3 className="mt-2 text-xl font-bold leading-tight tracking-normal text-[var(--navy-ink)]">{route.pack.title}</h3>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">{route.cue}</p>
+                  <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+                    <Link
+                      href={`/packs/${route.pack.slug}`}
+                      data-analytics-event="Social Route Pack Clicked"
+                      data-analytics-pack={route.pack.slug}
+                      data-analytics-location="homepage_social_routes"
+                      className="accent-cta inline-flex h-10 w-full items-center justify-center gap-2 rounded-full px-4 text-xs font-bold sm:w-auto"
+                    >
+                      Open pack
+                      <ArrowRight size={14} />
+                    </Link>
+                    {route.guideHref ? (
+                      <Link
+                        href={route.guideHref}
+                        data-analytics-event="Social Route Guide Clicked"
+                        data-analytics-pack={route.pack.slug}
+                        data-analytics-location="homepage_social_routes"
+                        className="frosted-pill inline-flex h-10 w-full items-center justify-center gap-2 rounded-full px-4 text-xs font-bold text-[var(--text-primary)] sm:w-auto"
+                      >
+                        Read guide
+                        <ArrowRight size={14} />
+                      </Link>
+                    ) : null}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
