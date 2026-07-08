@@ -6,6 +6,7 @@ import { JoinButton } from "@/components/join-modal";
 import { newlyAddedPacks, packs } from "@/data/packs";
 import { getMembershipContext } from "@/lib/membership";
 import { siteConfig } from "@/lib/site";
+import { safeInternalPath } from "@/lib/utils";
 
 export const metadata = {
   title: "Pricing | Side Hustle Stephen",
@@ -36,7 +37,13 @@ export const metadata = {
   },
 };
 
-export default async function PricingPage() {
+export default async function PricingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ return_to?: string }>;
+}) {
+  const params = await searchParams;
+  const returnTo = safeInternalPath(params.return_to);
   const viewer = await getMembershipContext();
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
   const includedToday = newlyAddedPacks.slice(0, 4);
@@ -148,7 +155,7 @@ export default async function PricingPage() {
               </div>
             ) : (
               <div className="mt-8">
-                <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock Packs"} returnTo="/packs" className="w-full" />
+                <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock Packs"} returnTo={returnTo} className="w-full" />
               </div>
             )}
             <div className="mt-5 flex items-start gap-3 rounded bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
@@ -193,7 +200,7 @@ export default async function PricingPage() {
             </div>
             {!viewer.isMember ? (
               <div className="mt-6">
-                <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock the archive"} returnTo="/packs" className="w-full" />
+                <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock the archive"} returnTo={returnTo} className="w-full" />
               </div>
             ) : null}
           </div>

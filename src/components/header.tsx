@@ -17,7 +17,7 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
     ["Pricing", "/pricing"],
     ["Account", "/account"],
   ];
-  const mobileNavItems = viewer.isAuthenticated ? navItems : navItems.filter(([label]) => label !== "Account");
+  const visibleNavItems = viewer.isAuthenticated ? navItems : navItems.filter(([label]) => label !== "Account");
 
   return (
     <header className="sticky top-0 z-40 mx-auto flex w-full max-w-7xl items-center justify-between gap-2 px-3 py-2 sm:gap-3 sm:px-8 sm:py-4">
@@ -36,7 +36,7 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
         />
       </Link>
       <nav className="frosted-pill hidden items-center gap-2 rounded-full p-1 text-sm font-semibold text-[var(--text-secondary)] md:flex">
-        {navItems.map(([label, href]) => (
+        {visibleNavItems.map(([label, href]) => (
           <Link key={label} href={href} className="rounded-full px-4 py-2 transition hover:bg-[rgba(0,148,255,0.1)] hover:text-[var(--navy-ink)]">
             {label}
           </Link>
@@ -44,7 +44,7 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
       </nav>
       <div className="flex shrink-0 items-center gap-3">
         <nav className="flex min-w-0 items-center gap-1 text-xs font-semibold text-[var(--navy-ink)] sm:gap-2 sm:text-sm md:hidden">
-          {mobileNavItems.map(([label, href]) => (
+          {visibleNavItems.map(([label, href]) => (
             <Link key={label} href={href} className="inline-flex h-11 items-center rounded-full px-2 transition hover:bg-white/70 hover:text-[var(--safety-orange)] sm:px-3">
               {label}
             </Link>
@@ -70,7 +70,7 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
               <UserCircle2 size={16} />
               Signed in
             </Link>
-            <JoinButton label="Continue checkout" returnTo="/packs" className="h-11 px-4 sm:px-5" />
+            <JoinButton label="Continue checkout" className="h-11 px-4 sm:px-5" />
           </div>
         ) : (
           <span className="hidden sm:block">

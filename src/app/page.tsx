@@ -52,16 +52,36 @@ const socialPackRoutes = [
     slug: "mobile-headlight-restoration",
     label: "Cloudy headlight fix",
     cue: "Before-and-after car-care proof",
+    guideHref: "/blog/how-to-start-a-mobile-headlight-restoration-business",
   },
   {
     slug: "airbnb-photo-refresh-service",
     label: "Airbnb photo refresh",
     cue: "Flat listing photos into stronger scenes",
+    guideHref: "/blog/how-to-start-an-airbnb-photo-refresh-service",
   },
   {
     slug: "drone-roof-photo-inspection",
     label: "Drone roof photos",
     cue: "Visual-only roof documentation",
+    guideHref: "/blog/how-to-start-a-drone-roof-photo-inspection-service",
+  },
+  {
+    slug: "garage-shelf-installation",
+    label: "Garage shelf install",
+    cue: "One-afternoon storage transformation",
+    guideHref: "/blog/how-to-start-a-garage-shelf-installation-business",
+  },
+  {
+    slug: "power-washing-driveway-sprint",
+    label: "Driveway power wash",
+    cue: "Dirty concrete before-and-after proof",
+  },
+  {
+    slug: "realtor-suburb-snapshot",
+    label: "Realtor suburb snapshots",
+    cue: "Weekly local content agents can use",
+    guideHref: "/blog/how-to-start-a-real-estate-suburb-snapshot-service",
   },
 ];
 

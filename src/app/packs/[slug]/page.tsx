@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!pack) return {};
   const description = pack.seoDescription ?? `${pack.hook} A practical launch pack for ${pack.buyer.toLowerCase()} with outreach, pricing, delivery, and member assets.`;
   const socialImage = pack.ogImage ?? siteConfig.ogImage;
+  const socialImageSize = pack.ogImage ? { width: 1600, height: 820 } : { width: 1200, height: 630 };
 
   return {
     title: pack.seoTitle ?? `${pack.title} | Side Hustle Stephen`,
@@ -48,8 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [
         {
           url: socialImage,
-          width: 1200,
-          height: 630,
+          ...socialImageSize,
           alt: `${pack.title} launch pack`,
         },
       ],
