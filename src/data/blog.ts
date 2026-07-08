@@ -930,7 +930,7 @@ export const blogPosts: BlogPost[] = [
       "A practical guide to starting a mobile headlight restoration business with starter tools, pricing, outreach, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-02",
+    updatedAt: "2026-07-09",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     shortAnswer:
@@ -980,6 +980,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "A sensible pricing ladder might include a single-car restoration, a two-car neighbour bundle, a dealer batch price, and a travel add-on outside your core area. Keep the menu short enough that the buyer can choose quickly.",
           "As a starting point, a single two-headlight job might sit around $60-$180, with higher quotes for travel, heavier oxidation, larger vehicles, awkward access, or extra prep time. Dealer or fleet batches may use a lower per-car rate because setup and travel are shared.",
+          "If pricing is the main question, use the dedicated Mobile Headlight Restoration Pricing Guide next. It breaks the offer into single-car, two-car, dealer batch, travel, and unsuitable-lens scenarios before you open the quote calculator.",
           "Price from the real job, not from a viral post. Count sanding discs, polish, sealant, tape, towels, travel, weather risk, setup, cleanup, customer messages, and the time spent taking proof photos.",
         ],
       },
@@ -1086,6 +1087,163 @@ export const blogPosts: BlogPost[] = [
     ],
     disclaimer:
       "This guide is practical business education, not automotive, legal, safety, roadworthiness, or inspection advice. Follow product instructions, use suitable protective gear, check local rules, and decline jobs where replacement or professional assessment is the better option.",
+  },
+  {
+    slug: "mobile-headlight-restoration-pricing-guide",
+    title: "Mobile Headlight Restoration Pricing Guide",
+    seoTitle: "Mobile Headlight Restoration Pricing Guide | First-Client Rates",
+    description:
+      "A practical pricing guide for mobile headlight restoration with starter packages, quote math, dealer batch pricing, travel add-ons, exclusions, and first-client rules.",
+    category: "Pricing",
+    publishedAt: "2026-07-09",
+    updatedAt: "2026-07-09",
+    readingTime: "11 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    shortAnswer:
+      "A simple mobile headlight restoration price should usually start with a fixed two-headlight package, then adjust for lens condition, travel, vehicle access, materials, weather, and batch size. A beginner-friendly starting range is around $80-$220 per car for a normal mobile job, with cheaper per-car rates for dealer batches and higher quotes for heavy oxidation, long travel, or awkward access. Do not promise like-new, permanent, legal, or roadworthiness outcomes.",
+    keyPoints: [
+      "Price the normal job first: two plastic headlights, mobile visit, inspection, masking, restoration, UV protection, cleanup, and before-and-after photos.",
+      "Use a private hourly floor so a cheap first job does not quietly become a six-hour favour.",
+      "Raise the quote for heavy oxidation, large vehicles, long travel, bad access, weather risk, or extra prep.",
+      "Dealer and fleet batches can use a lower per-car rate because travel and setup are shared.",
+      "The quote should include clear exclusions for cracked lenses, internal condensation, electrical faults, roadworthiness, and permanent-result claims.",
+    ],
+    body: [
+      {
+        heading: "Who this pricing guide is for",
+        paragraphs: [
+          "This is for someone trying to sell a small mobile headlight restoration service without guessing a number from a comment thread. You have a visible local problem, a practical service, and a buyer who wants the car to look cleaner before selling, driving, listing, or handing it to a family member.",
+          "The best early buyers are used-car sellers, neighbours, older-car owners, rideshare drivers, small delivery fleets, mechanics, local detailers, and used-car yards. They understand the problem quickly because cloudy headlights are easy to see.",
+          "The pricing goal is not to squeeze every dollar out of the first buyer. It is to quote a job you can deliver carefully, learn from, photograph honestly, and repeat without hating the work.",
+        ],
+      },
+      {
+        heading: "Define the standard job before naming a price",
+        paragraphs: [
+          "Your standard package should be boringly specific: two plastic headlights at the customer's location, suitable weather and access, inspection, cleaning, masking, sanding or restoration process, polishing, UV protection or sealant, cleanup, and matched before-and-after photos.",
+          "That scope gives the buyer a clear decision. It also stops you from being dragged into unrelated car-care work, electrical repairs, lens replacement, condensation fixes, paint correction, trim repair, or inspection promises.",
+          "A clean standard offer is: I restore cloudy plastic headlights at your location, include careful masking and UV protection, and tell you before starting if the lenses look unsuitable for restoration.",
+        ],
+      },
+      {
+        heading: "Use a simple quote formula",
+        paragraphs: [
+          "Start with this private formula: job time x hourly floor + materials + travel + risk buffer. Then turn that into a fixed package price the buyer can understand.",
+          "Job time includes messages, arrival, setup, inspection, masking, restoration steps, cleanup, photos, and payment. Materials include tape, towels, sanding discs, polish, compound, applicators, gloves, sealant, water, and replacement consumables.",
+          "The risk buffer is not greed. It covers weather delays, heavier oxidation than the photo suggested, awkward parking, extra masking, customer questions, and the first few jobs taking longer than you hoped.",
+        ],
+      },
+      {
+        heading: "Build a starter pricing ladder",
+        paragraphs: [
+          "A simple ladder is easier to sell than one random price. Start with a normal single-car package, a two-car same-address bundle, a dealer or fleet batch rate, and a travel add-on outside your core area.",
+          "A practical starting ladder could be: inspection-only quote for free or a small callout fee if travel is meaningful, standard two-headlight restoration around $80-$220, second car at the same address around 15%-30% less, dealer batch work around $50-$140 per car depending on volume and condition, and a travel add-on for jobs outside your normal radius.",
+          "Those numbers are starting points, not promises. Local demand, skill, products, vehicle type, climate, access, and proof quality all matter. If the job takes three hours, uses more materials, and includes 40 minutes of travel, the bottom of the range is probably too low.",
+        ],
+      },
+      {
+        heading: "Price by lens condition",
+        paragraphs: [
+          "Not every cloudy headlight deserves the same quote. Light haze is usually faster. Heavy yellowing, deep oxidation, failed coatings, awkward shapes, large SUV lenses, and neglected work vehicles can take longer and carry more result risk.",
+          "Use three condition bands in your notes. Light haze gets the standard price. Moderate oxidation gets the standard price or a small uplift. Heavy oxidation gets a higher quote or a careful no if replacement is the better answer.",
+          "The important move is to inspect before promising. Ask for clear photos in daylight, then confirm on arrival. If the lens is cracked, peeling badly, wet inside, damaged, or unsuitable, decline or refer the owner to replacement advice. Do not charge your way into a bad result.",
+        ],
+      },
+      {
+        heading: "Add travel without making the quote weird",
+        paragraphs: [
+          "Mobile services lose money quietly through travel. A job that looks profitable on the driveway can become weak once you count driving time, parking, setup, and the chance of a weather delay.",
+          "Pick a core service radius. Inside that radius, travel can be included in the standard package. Outside it, add a simple fee or require a minimum booking. For example, jobs beyond your normal area might need a two-car booking, a dealer batch, or a clear travel add-on.",
+          "Do not apologise for travel pricing. You are bringing the setup to the buyer. Keep the rule simple and state it before booking.",
+        ],
+      },
+      {
+        heading: "Use dealer batch pricing carefully",
+        paragraphs: [
+          "Used-car dealers can be useful because they may have several cars with cloudy headlights at once. That can reduce travel and setup time per vehicle. It can also create pressure to rush, underquote, or accept poor lens condition.",
+          "Batch pricing should reward volume without destroying your margin. Quote by number of cars, condition mix, access, water availability, shade, and whether all cars are ready when you arrive. A dealer who makes you wait between cars is not giving you real batch efficiency.",
+          "A sensible first dealer offer might be a paid sample car, then a batch day with a minimum number of cars and a lower per-car rate. Keep before-and-after permission separate if you want to use the photos for future proof.",
+        ],
+      },
+      {
+        heading: "Handle first-client pricing",
+        paragraphs: [
+          "A starter rate is fine if it is honest and bounded. Say you are taking the first few local jobs at an early rate while tightening the process and building permissioned proof. Do not pretend there is fake scarcity or a secret discount deadline.",
+          "The safer first-client structure is a paid pilot, not a free full job. You can discount the price, but keep the scope real: two headlights, one car, suitable condition, one location, no permanent-result promise, and permission requested separately for proof photos.",
+          "After the first few jobs, update the price from real delivery notes. If masking takes longer, travel eats the margin, or heavy oxidation is common in your area, the next quote should change.",
+        ],
+      },
+      {
+        heading: "Write the quote like an adult",
+        paragraphs: [
+          "Your quote should make the buyer feel safe, not dazzled. Include the vehicle, location, price, what is included, weather requirement, expected time window, payment method, photo permission, and exclusions.",
+          "Example wording: Mobile headlight restoration for one car, both plastic headlights, at your address. Includes inspection, masking, restoration process, UV protection, cleanup, and before-and-after photos. Excludes cracked lenses, internal moisture, electrical faults, lens replacement, roadworthiness certification, and guaranteed permanent results.",
+          "That language is not boring. It is how you avoid awkward conversations after the job. Want the quote calculator, outreach scripts, and safety checklist? Open the Mobile Headlight Restoration launch pack.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: pricing a first local headlight job",
+      steps: [
+        "The buyer sends daylight photos of a 2012 hatchback with moderate cloudy headlights.",
+        "You confirm the car is inside your normal service radius and the owner has a flat parking spot with suitable weather.",
+        "You estimate 90 minutes on site, 20 minutes travel each way, and normal material use.",
+        "Your private hourly floor says the job needs to clear at least $120 after materials and travel.",
+        "You quote $150 for both headlights, including inspection, masking, restoration, UV protection, cleanup, and proof photos.",
+        "You state exclusions clearly: no lens replacement, no electrical repair, no inspection guarantee, and no permanent-result promise.",
+        "After delivery, you record actual time, material use, objections, and whether $150 was too low, fair, or too high for the next quote.",
+      ],
+    },
+    firstActionChecklist: [
+      "Write your standard two-headlight package in one sentence.",
+      "Choose a private hourly floor before quoting anyone.",
+      "List every material you use on a normal job.",
+      "Choose your core service radius and travel add-on rule.",
+      "Create three condition bands: light haze, moderate oxidation, and heavy or unsuitable lenses.",
+      "Set a starter price for single-car, same-address second car, and dealer batch work.",
+      "Write the exclusions into the quote before the buyer asks.",
+      "Restore one permissioned practice car and time the entire job.",
+      "Send five quotes or outreach messages using the same scope language.",
+      "Update the price after the first paid job based on actual time and materials.",
+    ],
+    commonMistakes: [
+      "Quoting from a photo without checking lens condition on arrival.",
+      "Forgetting travel, setup, cleanup, messages, and proof photos in the price.",
+      "Charging one low price for every car, even heavy oxidation or awkward access.",
+      "Letting dealer batch pricing become rushed cheap labour.",
+      "Promising like-new headlights, permanent results, legal compliance, or roadworthiness.",
+      "Discounting the same scope instead of reducing travel, timing, or deliverables.",
+      "Leaving exclusions out of the quote because they feel uncomfortable.",
+    ],
+    faqs: [
+      {
+        question: "How much should I charge for mobile headlight restoration?",
+        answer:
+          "A practical beginner range for a normal two-headlight mobile job can be around $80-$220 per car. Adjust for lens condition, travel, access, materials, weather, proof quality, and local demand.",
+      },
+      {
+        question: "Should I charge per headlight or per car?",
+        answer:
+          "Per-car pricing is usually easier for normal consumer jobs because most buyers want both headlights restored. Per-headlight pricing can work for unusual cases, but make the scope clear before booking.",
+      },
+      {
+        question: "How should I price dealer batch work?",
+        answer:
+          "Use a lower per-car rate only when travel, setup, and access are genuinely efficient. Set a minimum number of cars, inspect condition first, and do not let batch work remove your safety steps or result boundaries.",
+      },
+      {
+        question: "Can I charge a travel fee?",
+        answer:
+          "Yes. Include travel inside a small core radius, then add a simple travel fee, minimum booking, or two-car requirement outside that area. State the rule before the buyer books.",
+      },
+      {
+        question: "What should my quote exclude?",
+        answer:
+          "Exclude cracked lenses, internal moisture, electrical faults, lens replacement, paint correction, roadworthiness certification, legal compliance, inspection outcomes, and permanent-result guarantees.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical pricing education, not automotive, legal, tax, safety, roadworthiness, or inspection advice. Pricing examples are starting points only. Follow product instructions, use suitable protective gear, check local rules, and decline unsuitable lenses.",
   },
   {
     slug: "how-to-start-an-airbnb-photo-refresh-service",
