@@ -106,6 +106,7 @@ const basePacks: BusinessPack[] = [
       { id: "asset-gbp-pitch", title: "Rescue Sprint Pitch", type: "DOCX", description: "Email and Loom pitch structure." },
       { id: "asset-gbp-proof", title: "Profile Proof Kit", type: "DOCX", description: "Before/after screenshot plan, proof-safe sample notes, owner approval wording, and follow-up prompts for turning one public audit into a paid rescue sprint." },
       { id: "asset-gbp-pricing", title: "Profile Rescue Pricing Calculator", type: "XLSX", description: "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails." },
+      { id: "asset-gbp-sales-call", title: "Profile Rescue Sales Call Script", type: "DOCX", description: "Discovery call script, objection handles, close language, and handoff notes for turning a 3-point audit into a paid rescue sprint." },
       { id: "asset-gbp-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery." },
       { id: "asset-gbp-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for profile access, services, hours, photos, FAQs, and approvals." },
       { id: "asset-gbp-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests." },
@@ -632,7 +633,7 @@ export const packPageDetails: Record<string, PackPageDetail> = {
         "Safe pitch: frame the offer as profile clarity and approval-ready cleanup, not a promise to rank higher.",
       ],
       lockedAssetTease:
-        "Members get the full profile audit checklist, rescue sprint pitch, Profile Proof Kit, pricing calculator, intake form, approval emails, FAQ prompts, and handoff wording.",
+        "Members get the full profile audit checklist, rescue sprint pitch, Profile Proof Kit, pricing calculator, sales call script, intake form, approval emails, FAQ prompts, and handoff wording.",
     },
     outreachPreview: {
       title: "Sample first message",
@@ -1380,6 +1381,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX proof kit for building a safe before/after profile sample, capturing dated screenshots, labelling owner approval items, and following up without implying rankings, leads, calls, or revenue.",
   "asset-gbp-pricing":
     "An XLSX workbook with mini-audit, rescue sprint, and monthly profile hygiene pricing, a quote builder, scope guardrails, profit check, and proposal wording that avoids ranking guarantees.",
+  "asset-gbp-sales-call":
+    "A DOCX sales call script for turning a 3-point profile audit into a paid rescue sprint, with discovery questions, ranking-safe objection handles, close language, owner approval notes, and monthly hygiene upsell wording.",
   "asset-gbp-prompts":
     "A DOCX AI prompt pack for Google Business Profile rescue work, including profile audit prompts, service-description prompts, FAQ prompts, ethical review-request prompts, and sprint handoff prompts.",
   "asset-gbp-intake":

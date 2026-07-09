@@ -154,6 +154,17 @@
     "bytes": 13157
   },
   {
+    "id": "asset-gbp-sales-call",
+    "packSlug": "google-business-profile-rescue",
+    "packTitle": "Google Business Profile Rescue",
+    "title": "Profile Rescue Sales Call Script",
+    "type": "DOCX",
+    "description": "Discovery call script, objection handles, close language, and handoff notes for turning a 3-point audit into a paid rescue sprint.",
+    "path": "content/member-assets/google-business-profile-rescue/profile-rescue-sales-call-script.docx",
+    "filename": "profile-rescue-sales-call-script.docx",
+    "bytes": 8105
+  },
+  {
     "id": "asset-gbp-prompts",
     "packSlug": "google-business-profile-rescue",
     "packTitle": "Google Business Profile Rescue",

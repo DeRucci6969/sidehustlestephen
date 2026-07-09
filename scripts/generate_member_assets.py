@@ -102,6 +102,7 @@ PACKS: list[Pack] = [
             Asset("asset-gbp-pitch", "Rescue Sprint Pitch", "DOCX", "Email and Loom pitch structure."),
             Asset("asset-gbp-proof", "Profile Proof Kit", "DOCX", "Before/after screenshot plan, proof-safe sample notes, owner approval wording, and follow-up prompts for turning one public audit into a paid rescue sprint."),
             Asset("asset-gbp-pricing", "Profile Rescue Pricing Calculator", "XLSX", "Mini audit, rescue sprint, and monthly hygiene pricing with quote builder and scope guardrails."),
+            Asset("asset-gbp-sales-call", "Profile Rescue Sales Call Script", "DOCX", "Discovery call script, objection handles, close language, and handoff notes for turning a 3-point audit into a paid rescue sprint."),
             Asset("asset-gbp-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for profile audits, service descriptions, FAQs, review prompts, and rescue sprint delivery."),
             Asset("asset-gbp-intake", "Client Intake Form", "DOCX", "Editable intake questions for profile access, services, hours, photos, FAQs, review rules, and approval owners."),
             Asset("asset-gbp-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for mini audits, rescue sprint sales, owner approvals, delivery, and review requests."),
@@ -590,6 +591,13 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "The rescue sprint price should rise when there are many services, multiple locations, messy hours, weak photos, or more than one approval owner.",
             "Monthly hygiene only makes sense when the business changes photos, services, opening hours, offers, FAQs, or review-response needs regularly.",
             "Keep the proposal language focused on profile clarity and current information. Do not imply map rankings, call volume, or review growth.",
+        ]),
+    ],
+    "asset-gbp-sales-call": [
+        ("Call positioning", [
+            "Use the call to confirm visible profile gaps, owner priorities, approval rules, and whether the rescue sprint is worth buying now.",
+            "Do not diagnose rankings or promise performance. Keep the value framed as clearer services, current information, better trust signals, and a cleaner handoff.",
+            "The best call outcome is a paid sprint with defined profile fields, approval owner, turnaround, and exclusions.",
         ]),
     ],
     "asset-gym-report": [
@@ -1147,6 +1155,54 @@ DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Do not claim guaranteed rankings, map-pack placement, review volume, or revenue.",
             "Use ethical review prompts only; never ask for fake, gated, or incentivized reviews.",
             "Keep business owner approval for categories, claims, services, and hours.",
+        ]),
+    ],
+    "asset-gbp-sales-call": [
+        ("Call goal", [
+            "Turn the public 3-point audit into a clear yes, no, or later. Do not drift into a broad marketing consultation.",
+            "Confirm the owner cares about the visible profile gap, identify who approves changes, and offer a fixed rescue sprint with no ranking guarantee.",
+            "End with either payment link/next step, a smaller paid mini audit, or a polite closeout.",
+        ]),
+        ("Opening script", [
+            "Thanks for taking the call. I looked at the profile like a customer would, not like an SEO dashboard.",
+            "The quick version is: I found [visible gap], [trust gap], and [customer action gap]. None of this is about promising rankings. It is about making the profile clearer and easier to trust.",
+            "Before I suggest the sprint, can I ask what customers usually need to understand before they call or book?",
+        ]),
+        ("Discovery questions", [
+            "Which service do you most want customers to ask about from Google?",
+            "Are your hours, service area, booking link, and emergency or same-day wording currently correct?",
+            "Who approves profile wording, photos, FAQs, and review-response rules?",
+            "Do customers often ask the same questions before booking?",
+            "Do you have recent photos that show the work, premises, team, vehicles, or finished jobs?",
+            "What would make this cleanup useful enough to approve this week?",
+        ]),
+        ("Audit walkthrough", [
+            "Start with the strongest visible issue, not a long checklist.",
+            "Explain the customer impact in plain language: If I am choosing between three businesses, this makes it harder to know [service / availability / proof / next step].",
+            "Show one proposed fix and label it clearly as owner-approved draft wording.",
+            "Ask: Does that match how you want customers to understand the business?",
+        ]),
+        ("Offer transition", [
+            "The paid sprint is deliberately narrow. I would audit the public profile, draft owner-approved service copy and FAQs, prepare a photo checklist, write ethical review-request wording, and send a final handoff note.",
+            "I do not promise map rankings, calls, leads, reviews, or revenue. The value is profile clarity and current information you can approve.",
+            "For your profile, I would recommend the [mini audit / rescue sprint / monthly hygiene] because [reason].",
+        ]),
+        ("Objection handles", [
+            "We already have SEO help: perfect. This can sit underneath that as profile hygiene and owner-approved copy cleanup, not a replacement.",
+            "Will it get us more calls: I cannot promise that. What I can do is remove visible trust gaps that may make customers hesitate.",
+            "Can you just make the changes: only after owner-approved access and written approval. Drafts first, changes second.",
+            "Too expensive: start with the paid mini audit and one copy sample, then decide whether the full sprint is worth doing.",
+            "We are too busy: I will send one input list and mark every approval item clearly so this does not become another open-ended admin job.",
+        ]),
+        ("Close language", [
+            "If this scope looks useful, I can send the fixed sprint summary today. Once approved, I need profile access or owner-confirmed details, recent photos if available, and the person who signs off wording.",
+            "The first delivery will be a profile score, service and FAQ drafts, photo checklist, review-request wording, and an implementation handoff.",
+            "After that, the monthly hygiene option is a lighter check for hours, services, photos, FAQs, and review-response prompts.",
+        ]),
+        ("After-call handoff", [
+            "Send a recap with the three visible issues, chosen package, price, inputs needed, approval owner, and what is not included.",
+            "Repeat the no-guarantee boundary in writing: no ranking, lead, call, review, revenue, or platform approval promises.",
+            "Attach or link the mini audit sample and give one clear next action: approve the scope, send inputs, or choose the smaller paid audit.",
         ]),
     ],
     "asset-gbp-proof": [
