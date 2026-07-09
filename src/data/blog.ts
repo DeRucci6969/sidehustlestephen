@@ -769,12 +769,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "service-business-pricing-guide-for-beginners",
     title: "Service Business Pricing Guide for Beginners",
-    seoTitle: "Service Business Pricing Guide for Beginners | First-Client Rates",
+    seoTitle: "Service Business Pricing Guide for Beginners | Starter Rates and Quote Math",
     description:
-      "A practical guide to pricing a beginner service business with starter offers, quote math, scope boundaries, examples, and first-client pricing rules.",
+      "A practical guide to pricing a beginner service business with starter rates, quote math, physical-service scope boundaries, examples, and first-client pricing rules.",
     category: "Pricing",
     publishedAt: "2026-07-01",
-    updatedAt: "2026-07-01",
+    updatedAt: "2026-07-10",
     readingTime: "12 min read",
     relatedPackSlugs: [
       "cafe-menu-refresh-package",
@@ -831,7 +831,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Scope boundaries make pricing stronger. They tell the buyer what they are buying, what they are not buying, and where a new quote starts. This is especially important for services with revisions, physical risk, compliance concerns, platform access, or client approvals.",
           "A Shopify cart audit might include screenshot-backed recommendations and one abandoned-cart email rewrite. It should not include full store implementation, legal policy writing, guaranteed conversion increases, or unlimited copy changes unless priced separately.",
-          "A driveway power washing job might include one surface, photos, surface-risk checks, and a fixed time window. It should not include repairs, stain removal guarantees, unsafe runoff handling, or extra surfaces unless quoted.",
+          "A driveway power washing job might include one surface, photos, surface-risk checks, local runoff checks, and a fixed time window. It should not include repairs, stain removal guarantees, unsafe runoff handling, roof work, delicate surfaces, chemical-heavy jobs, or extra surfaces unless quoted.",
         ],
       },
       {
@@ -889,6 +889,7 @@ export const blogPosts: BlogPost[] = [
       "Offering unlimited revisions because it sounds generous.",
       "Discounting the same scope instead of reducing the deliverable.",
       "Ignoring travel, materials, tool costs, access delays, and approval time.",
+      "Pricing physical services without checking surface risk, water access, runoff, setup time, and cleanup time.",
       "Using fake scarcity, fake proof, or guaranteed results to justify the price.",
       "Keeping first-client prices forever because raising prices feels awkward.",
     ],
@@ -917,6 +918,11 @@ export const blogPosts: BlogPost[] = [
         question: "What should be included in a starter package?",
         answer:
           "Include a clear output, turnaround, number of revisions or approvals, client inputs, and exclusions. Keep the package small enough to deliver well and specific enough that the buyer knows what they are approving.",
+      },
+      {
+        question: "How should I price physical local services like power washing?",
+        answer:
+          "Quote physical services from the surface, access, setup time, water or material needs, travel, risk, cleanup, and proof photos. For a driveway or path clean, start with one safe surface and add extra surfaces only after the buyer approves a new scope.",
       },
     ],
     disclaimer:
@@ -2343,6 +2349,171 @@ export const blogPosts: BlogPost[] = [
     ],
     disclaimer:
       "This guide is practical business education, not legal, marketing, platform compliance, or local SEO advice. Google features and approval rules can change. Verify profile facts with the business owner and avoid guarantees about rankings, leads, calls, reviews, revenue, or platform approval.",
+  },
+  {
+    slug: "how-to-start-a-power-washing-driveway-business",
+    title: "How to Start a Power Washing Driveway Business",
+    seoTitle: "How to Start a Power Washing Driveway Business | First-Client Plan",
+    description:
+      "A practical guide to starting a driveway power washing service with a clear first offer, safe prospecting plan, pricing ranges, outreach script, delivery checklist, and launch pack link.",
+    category: "Local Service",
+    publishedAt: "2026-07-10",
+    updatedAt: "2026-07-10",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["power-washing-driveway-sprint", "garage-shelf-installation", "mobile-headlight-restoration"],
+    shortAnswer:
+      "To start a power washing driveway business, sell one narrow clean first: a driveway, path, patio, shopfront entry, or bin pad with clear before-and-after proof. Check surface risk, water access, runoff, local rules, and safety before quoting. Do not promise permanent stain removal, property value increases, or damage-free results on surfaces you have not inspected.",
+    keyPoints: [
+      "Best first buyers are homeowners, landlords, property managers, small shop owners, and neighbours with visibly dirty but simple outdoor surfaces.",
+      "Start with one safe surface and one fixed starter offer. Broad exterior cleaning creates risk before you have a process.",
+      "Use public visual clues: dirty concrete, grimy paths, stained bin pads, shopfront entrances, and pre-listing property photos.",
+      "A realistic starter ladder can include a single-surface clean, full exterior refresh, and quarterly maintenance reminder.",
+      "Safety and runoff matter. Pressure washers can injure people and damage surfaces, and wash water may need containment or careful disposal depending on the job and local rules.",
+    ],
+    body: [
+      {
+        heading: "Who this business is for",
+        paragraphs: [
+          "This is for someone who wants a practical local service with visible proof and a simple first buyer. You do not need a complex brand, a fleet, or a giant website to test demand. You need a safe scope, a clean quote, and one permissioned before-and-after result.",
+          "The best early buyers are homeowners, landlords, property managers, small commercial sites, shop owners, and neighbours getting ready for a sale, inspection, event, open home, or tenant changeover. They can see the problem without a long pitch.",
+          "Start with simple surfaces: concrete driveways, paths, patios, shopfront entries, and bin pads. Avoid roofs, delicate stone, old timber, painted areas, sealed surfaces, cracked surfaces, electrical areas, steep access, heavy oil, chemical-heavy jobs, and anything with poor drainage until you know the equipment, rules, insurance, and risk properly.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Dirty outdoor surfaces make a property look neglected even when the inside is fine. A driveway, front path, bin area, or shop entrance can collect grime slowly enough that the owner stops seeing it. Then one clean strip shows the difference in five seconds.",
+          "Your first offer is not an exterior cleaning empire. It is a small visual reset: one surface, one quote, one safety check, one clean result, and before-and-after photos the buyer can understand.",
+          "This is why power washing keeps showing up in social content. The proof is obvious. The commercial trick is to keep the job bounded so the satisfying video does not turn into surface damage, runoff trouble, or a half-day quote you underpriced.",
+        ],
+      },
+      {
+        heading: "Package the first offer",
+        paragraphs: [
+          "A strong starter offer is a single-surface driveway or path clean. It includes a photo-based quote, surface-risk check, water-access check, weather window, one cleaned area, before-and-after photos, and a short handoff note.",
+          "Keep the exclusions blunt. The starter offer does not include roofs, house washing, gutters, delicate surfaces, oil remediation, paint removal, chemical treatment, repairs, stain guarantees, blocked drains, flood cleanup, or extra surfaces unless quoted separately.",
+          "A clean one-sentence offer is: I clean one visible outdoor surface, like a driveway, path, patio, shopfront entry, or bin pad, with a pre-job safety check and before-and-after proof.",
+        ],
+      },
+      {
+        heading: "Check safety and runoff before you sell",
+        paragraphs: [
+          "Pressure washers are not toys with a water habit. High-pressure spray can cause wounds that look small at first but need urgent medical attention. Keep the wand away from people, feet, hands, pets, vehicles, glass, electrical fittings, and fragile surfaces.",
+          "Runoff also matters. Dirty wash water can carry sediment, oil, detergent, metals, and grime into storm drains or waterways. Some jobs need drain protection, containment, dry sweeping first, or local approval. Check the rules where the work is being done before you accept the job.",
+          "The beginner move is to avoid risky jobs, not to sound brave on the internet. If you cannot explain the surface, drainage, chemical use, safety gear, and cleanup plan, do not quote it yet.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Price from surface size, condition, access, travel, water access, setup, equipment rental, detergents, runoff handling, risk, weather, cleanup, and proof photos. A tiny easy path is not the same job as a large stained driveway with awkward access.",
+          "A practical starting ladder is: single-surface clean around $80-$250, driveway plus paths or entry refresh around $250-$600, larger exterior refresh around $300-$750, and quarterly maintenance around $80-$200 per visit. These are starting points, not market rules.",
+          "Charge more for larger surfaces, poor access, heavy staining, long travel, extra setup, drain protection, faster turnaround, multiple surfaces, commercial timing, or jobs that require rental equipment. Charge less only when the scope is genuinely tiny and low risk.",
+        ],
+      },
+      {
+        heading: "Create one proof job",
+        paragraphs: [
+          "Before pitching strangers, get one permissioned proof job. Clean a small driveway, path, patio, or bin pad for yourself, family, a neighbour, or a friendly local owner. Take before and after photos from the same angle, in similar light, without exaggerated edits.",
+          "A proof job should show three things: the starting condition, the cleaned result, and your process boundary. A neat caption might say: single path clean, concrete only, owner-approved, no roof or delicate surfaces, finished with before-and-after photos.",
+          "Do not imply that every stain disappears or that every surface is safe. Some marks need specialist treatment. Some surfaces should be left alone. Honest proof sells better than a dramatic clip that creates the wrong expectation.",
+        ],
+      },
+      {
+        heading: "Find the first 20 prospects",
+        paragraphs: [
+          "Pick one small area first: your street, one suburb loop, a row of shops, or a set of rental properties. You are looking for visible, simple surfaces where the result would be obvious and the risk looks manageable.",
+          "Good clues include dirty concrete driveways, grimy paths, stained bin pads, shop entrances with blackened edges, patios before inspections, and small commercial entries that look tired before customers walk in.",
+          "Write a note for each prospect: surface type, visible issue, likely access, likely water source, drainage concern, and safest starter scope. This keeps the outreach specific and stops you from pitching jobs you should avoid.",
+        ],
+      },
+      {
+        heading: "Send the first outreach message",
+        paragraphs: [
+          "The message should be short and visual. Mention the specific surface, offer a photo-based quote or quick look, and make the scope feel easy to approve.",
+          "Example: Hi Sam, I am cleaning a few driveways and paths around Paddington this week. Your front path has the kind of concrete that usually shows a clear before-and-after, if the surface checks out. Want me to send a quick starter quote from photos?",
+          "If they reply, ask for photos, address area, water access, surface type if known, drainage, timing, and any previous sealing or repairs. Want the scripts, quote calculator, and job safety checklist? Open the Power Washing Driveway Sprint launch pack.",
+        ],
+      },
+      {
+        heading: "Deliver the first job cleanly",
+        paragraphs: [
+          "Before arrival, confirm scope, price, water access, parking, drainage, weather, surface type, nearby gardens, pets, electrical fittings, trip hazards, and whether anyone needs to avoid the area while you work.",
+          "On site, take before photos, do a small test patch, keep people away from the work area, protect obvious risk points, clean only the approved surface, and stop if the surface reacts badly. Do not add extra areas because they are nearby unless the buyer approves the new quote.",
+          "After the clean, take matched after photos, pack down properly, note any stains or surface issues that remain, and send a short completion message. Then ask whether they want a quarterly reminder or a neighbour referral while the result is fresh.",
+        ],
+      },
+      {
+        heading: "Turn one job into the next buyer",
+        paragraphs: [
+          "Power washing has a useful local loop. One clean driveway makes the next dirty driveway easier to notice. Ask for permission to use the before-and-after photos, then pitch the nearest neighbours or property contacts with the exact same narrow offer.",
+          "For landlords and property managers, the angle is not vanity. It is pre-listing, end-of-lease, bin-area hygiene, common-area refreshes, shopfront presentation, and quarterly maintenance. Keep the language operational.",
+          "This is not passive income. It is a physical local service with real work, real risk, and real proof. Start with one buyer, one surface, one quote, and one outreach script.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first driveway sprint",
+      steps: [
+        "Choose one suburb or street loop with visible driveways, paths, shopfronts, or bin pads.",
+        "Clean one permissioned sample surface and take matched before-and-after photos.",
+        "List 20 prospects with simple, visible surfaces and no obvious high-risk issues.",
+        "Write one starter offer: single-surface clean, photo quote, safety check, before-and-after proof, and clear exclusions.",
+        "Send five specific outreach messages with the proof photo and a request for photos before quoting.",
+        "Quote from surface size, access, water, drainage, travel, setup, risk, and cleanup time.",
+        "Deliver one paid job, ask for permission to use the proof, then pitch two neighbours or one property manager.",
+      ],
+    },
+    firstActionChecklist: [
+      "Check local water restrictions, stormwater rules, insurance needs, and equipment rental options.",
+      "Write a list of surfaces you will not clean yet: roofs, painted surfaces, delicate stone, old timber, electrical areas, sealed or cracked surfaces, and chemical-heavy stains.",
+      "Pick one simple surface for a permissioned proof clean.",
+      "Take before photos from fixed angles before starting.",
+      "Do a small test patch and stop if the surface reacts badly.",
+      "Take after photos from the same angles.",
+      "Write a single-surface starter offer with price range, turnaround, client inputs, and exclusions.",
+      "List 20 local prospects with visible dirty but simple surfaces.",
+      "Send five specific outreach messages today.",
+      "Track quote questions, surface concerns, objections, and actual job time after each clean.",
+    ],
+    commonMistakes: [
+      "Pitching every exterior cleaning job instead of one safe starter surface.",
+      "Using too much pressure on delicate, painted, old, sealed, cracked, or unknown surfaces.",
+      "Ignoring runoff, storm drains, nearby gardens, oil, detergent use, and local water rules.",
+      "Quoting from a single photo without asking about access, water, drainage, surface type, and timing.",
+      "Promising permanent stain removal, property value increases, inspection results, or damage-free outcomes.",
+      "Cleaning extra areas for free because the equipment is already set up.",
+      "Taking before-and-after photos from different angles so the proof looks slippery.",
+    ],
+    faqs: [
+      {
+        question: "Who buys a driveway power washing service?",
+        answer:
+          "Good first buyers include homeowners, landlords, property managers, shop owners, and small commercial sites with visible concrete, paths, patios, entries, or bin pads that look tired but not high risk.",
+      },
+      {
+        question: "How much should I charge for power washing a driveway?",
+        answer:
+          "A practical starter range can be around $80-$250 for a single simple surface, with larger driveway-plus-path jobs around $250-$600. Quote from size, access, water, drainage, staining, setup, travel, risk, and cleanup time.",
+      },
+      {
+        question: "Can I start by renting equipment?",
+        answer:
+          "Yes, renting or borrowing suitable equipment can be a sensible way to test demand before buying. Build rental cost, pickup time, fuel or power needs, attachments, PPE, and cleaning supplies into the quote.",
+      },
+      {
+        question: "What surfaces should beginners avoid pressure washing?",
+        answer:
+          "Avoid roofs, electrical areas, painted surfaces, delicate stone, old timber, glass, sealed or cracked surfaces, unstable pavers, heavy oil, poor drainage, and anything where you do not understand the surface or local runoff rules.",
+      },
+      {
+        question: "How do I get the first client?",
+        answer:
+          "Create one permissioned proof clean, then message nearby owners with a specific surface observation and a photo-based quote offer. Start with five researched prospects, not a generic blast.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not safety, legal, environmental, insurance, or trade advice. Pressure washing can injure people, damage surfaces, and create runoff issues. Check local rules, use proper PPE, avoid high-risk surfaces, and get qualified help where needed.",
   },
 ];
 
