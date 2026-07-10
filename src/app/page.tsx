@@ -76,6 +76,7 @@ const socialPackRoutes = [
     slug: "power-washing-driveway-sprint",
     label: "Driveway power wash",
     cue: "Dirty concrete before-and-after proof",
+    guideHref: "/blog/how-to-start-a-power-washing-driveway-business",
   },
   {
     slug: "realtor-suburb-snapshot",

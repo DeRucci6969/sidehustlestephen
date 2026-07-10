@@ -176,6 +176,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
     url: `${siteConfig.url}/packs/${pack.slug}`,
     image: pack.ogImage ? `${siteConfig.url}${pack.ogImage}` : `${siteConfig.url}${siteConfig.ogImage}`,
     datePublished: pack.publishedAt,
+    dateModified: pack.updatedAt ?? pack.publishedAt,
     about: pack.category,
     audience: {
       "@type": "Audience",

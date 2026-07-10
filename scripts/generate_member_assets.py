@@ -313,6 +313,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-realtor-report", "Suburb Snapshot Template", "XLSX", "A repeatable structure for local market summaries."),
             Asset("asset-realtor-pitch", "Agent Pitch Script", "DOCX", "Outreach script for agents and principals."),
+            Asset("asset-realtor-approval", "Source and Approval Delivery Checklist", "PDF", "A source, fact, claim, approval, export, and handoff checklist for every suburb snapshot."),
             Asset("asset-realtor-pricing", "Suburb Snapshot Pricing Calculator", "XLSX", "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy."),
             Asset("asset-realtor-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture."),
             Asset("asset-realtor-intake", "Client Intake Form", "DOCX", "Editable intake questions for target suburbs, data sources, agency tone, compliance approval, and posting cadence."),
@@ -931,6 +932,13 @@ def checklist_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
             "Any AI edit preserves real property layout, amenities, views, room size, furniture, and access details.",
             "Lifestyle models are realistic adults and do not imply amenities, parties, views, or experiences the property cannot provide.",
             "Before/after samples are labelled as visual refresh concepts and approved by the host before publication.",
+        ],
+        "asset-realtor-approval": [
+            "Record the source name, exact URL, reporting period, geography, access date, and metric definition for every number used.",
+            "Check that suburb names, price periods, listing counts, dates, agent details, links, and calls to action match the approved brief.",
+            "Label commentary as a plain-language summary, not a valuation, forecast, guarantee, or claim about future market performance.",
+            "Send the draft to the agent or nominated approver and record approval for facts, claims, branding, contact details, and publishing channel.",
+            "Export the approved formats, test every link, preserve a source copy, and include the next refresh date in the handoff.",
         ],
         "asset-drone-roof-safety": [
             "Confirm local drone rules, registration/licensing requirements, airspace restrictions, and any permission or notification requirements before accepting paid work.",
@@ -2763,6 +2771,27 @@ def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
 
 
 def pdf_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    if asset.id == "asset-realtor-approval":
+        return [
+            ("Source and number check", [
+                "Record the source name, exact URL, reporting period, geography, access date, and metric definition for every number used.",
+                "Recalculate totals and comparisons; do not mix median with average, asking with sale price, or listings with settled sales.",
+                "Check suburb boundaries, property types, dates, agent details, links, and calls to action against the brief.",
+                "Label stale, missing, estimated, incomplete, or conflicting data instead of filling gaps from memory or AI output.",
+            ]),
+            ("Delivery handoff", [
+                "Check every AI-written line; remove valuations, forecasts, guarantees, yield advice, investment advice, and future-performance claims.",
+                "Record named approval for facts, branding, links, captions, and channel. Silence is not approval.",
+                "Export the approved formats, test every link, and name files with the suburb and reporting date.",
+                "Send the final snapshot, source log, email intro, social captions, approval record, and next refresh date together.",
+                "Preserve the source evidence and approved files. Do not publish for the agent unless that service is separately agreed and approved.",
+            ]),
+            ("Stop and verify", [
+                "A source conflicts with another source or a number cannot be reproduced.",
+                "The requested wording sounds like a prediction, valuation, guarantee, or unsupported performance claim.",
+                "The client asks to remove source context or the approval owner is unclear.",
+            ]),
+        ]
     if asset.id in PDF_ASSET_SECTIONS:
         return PDF_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
     return checklist_sections(pack, asset) + asset_polish_sections(asset) + [shared_standard_pointer(pack)]

@@ -990,6 +990,17 @@
     "bytes": 6853
   },
   {
+    "id": "asset-realtor-approval",
+    "packSlug": "realtor-suburb-snapshot",
+    "packTitle": "Realtor Suburb Snapshot Reports",
+    "title": "Source and Approval Delivery Checklist",
+    "type": "PDF",
+    "description": "A source, fact, claim, approval, export, and handoff checklist for every suburb snapshot.",
+    "path": "content/member-assets/realtor-suburb-snapshot/source-and-approval-delivery-checklist.pdf",
+    "filename": "source-and-approval-delivery-checklist.pdf",
+    "bytes": 10770
+  },
+  {
     "id": "asset-realtor-pricing",
     "packSlug": "realtor-suburb-snapshot",
     "packTitle": "Realtor Suburb Snapshot Reports",

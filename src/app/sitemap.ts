@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...packs.map((pack) => ({
       url: `${siteConfig.url}/packs/${pack.slug}`,
-      lastModified: new Date(pack.publishedAt),
+      lastModified: new Date(pack.updatedAt ?? pack.publishedAt),
     })),
     ...blogPosts.map((post) => ({
       url: `${siteConfig.url}/blog/${post.slug}`,

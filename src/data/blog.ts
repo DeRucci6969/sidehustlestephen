@@ -2353,12 +2353,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-power-washing-driveway-business",
     title: "How to Start a Power Washing Driveway Business",
-    seoTitle: "How to Start a Power Washing Driveway Business | First-Client Plan",
+    seoTitle: "Start a Driveway Power Washing Business | First Client",
     description:
-      "A practical guide to starting a driveway power washing service with a clear first offer, safe prospecting plan, pricing ranges, outreach script, delivery checklist, and launch pack link.",
+      "Start a driveway power washing service with a safe first offer, realistic pricing, prospecting steps, an outreach script, and a delivery checklist.",
     category: "Local Service",
     publishedAt: "2026-07-10",
-    updatedAt: "2026-07-10",
+    updatedAt: "2026-07-11",
     readingTime: "13 min read",
     relatedPackSlugs: ["power-washing-driveway-sprint", "garage-shelf-installation", "mobile-headlight-restoration"],
     shortAnswer:

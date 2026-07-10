@@ -23,6 +23,7 @@ export type BusinessPack = {
   featured?: boolean;
   popularityScore: number;
   publishedAt: string;
+  updatedAt?: string;
   ogImage?: string;
   assets: PackAsset[];
 };
@@ -176,9 +177,9 @@ const basePacks: BusinessPack[] = [
     slug: "power-washing-driveway-sprint",
     title: "Power Washing Driveway Sprint",
     hook: "Dirty concrete is an easy before-and-after local service.",
-    seoTitle: "Power Washing Driveway Launch Pack | Quote Calculator and Outreach Scripts",
+    seoTitle: "Power Washing Driveway Pack | Scripts and Pricing",
     seoDescription:
-      "Start a driveway power washing service with local outreach scripts, quote calculator, job safety checklist, proof kit, prompts, and client templates.",
+      "Start a driveway power washing service with outreach scripts, a quote calculator, safety checklist, proof kit, prompts, and client templates.",
     category: "Local Service",
     buyer: "Homeowners, landlords, property managers, and small commercial sites",
     startupCost: "$101-$500",
@@ -191,6 +192,7 @@ const basePacks: BusinessPack[] = [
     featured: true,
     popularityScore: 94,
     publishedAt: "2026-06-17",
+    updatedAt: "2026-07-11",
     assets: [
       { id: "asset-powerwash-outreach", title: "Power Washing Outreach Scripts", type: "DOCX", description: "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around visible before-and-after proof." },
       { id: "asset-powerwash-pricing", title: "Power Washing Quote Calculator", type: "XLSX", description: "Starter, standard, add-on, travel, surface-risk, and recurring maintenance quote builder." },
@@ -350,9 +352,9 @@ const basePacks: BusinessPack[] = [
     slug: "realtor-suburb-snapshot",
     title: "Realtor Suburb Snapshot Reports",
     hook: "Real estate agents need local content every week.",
-    seoTitle: "Realtor Suburb Snapshot Launch Pack | Agent Pitch Script and Report Template",
+    seoTitle: "Realtor Suburb Snapshot Pack | Report and Pitch Scripts",
     seoDescription:
-      "Start a suburb snapshot report service for real estate agents with pitch scripts, report spreadsheet, client intake form, source-safe prompts, and emails.",
+      "Start a suburb snapshot service with an agent pitch, report template, pricing calculator, source checklist, prompts, intake form, and client emails.",
     category: "B2B Service",
     buyer: "Real estate agents",
     startupCost: "$0",
@@ -364,9 +366,11 @@ const basePacks: BusinessPack[] = [
     caveat: "Use public data carefully and cite sources.",
     popularityScore: 86,
     publishedAt: "2026-06-04",
+    updatedAt: "2026-07-11",
     assets: [
       { id: "asset-realtor-report", title: "Suburb Snapshot Template", type: "XLSX", description: "A repeatable structure for local market summaries." },
       { id: "asset-realtor-pitch", title: "Agent Pitch Script", type: "DOCX", description: "Outreach script for agents and principals." },
+      { id: "asset-realtor-approval", title: "Source and Approval Delivery Checklist", type: "PDF", description: "A source, fact, claim, approval, export, and handoff checklist for every suburb snapshot." },
       { id: "asset-realtor-pricing", title: "Suburb Snapshot Pricing Calculator", type: "XLSX", description: "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy." },
       { id: "asset-realtor-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture." },
       { id: "asset-realtor-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for suburbs, data sources, agency tone, compliance, and cadence." },
