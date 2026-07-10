@@ -463,21 +463,22 @@ const basePacks: BusinessPack[] = [
   {
     slug: "airbnb-guest-guide-refresh",
     title: "Airbnb Guest Guide Refresh",
-    hook: "Hosts forget the easiest guest-experience upgrade.",
-    seoTitle: "Airbnb Guest Guide Refresh Launch Pack | Host Guide Template and Upsells",
+    hook: "Turn scattered host notes into one clear, guest-ready guide.",
+    seoTitle: "Airbnb Guest Guide Service Launch Pack | Templates and Scripts",
     seoDescription:
-      "Start an Airbnb guest guide refresh service with guest guide outline, host upsell ideas, client intake form, host outreach emails, and AI prompts.",
+      "Start an Airbnb guest guide service with a guide outline, pricing plan, host outreach emails, client intake form, refresh checklist, and AI prompts.",
     category: "Local Service",
     buyer: "Short-term rental hosts",
     startupCost: "$0",
     timeToFirstSale: "1-7 days",
     difficulty: "Easy",
-    summary: "A polished digital guest guide with local tips, house rules, arrival info, and upsell opportunities.",
-    whyItWorks: "Hosts need fewer repetitive questions and better guest experience without installing new software.",
+    summary: "A fixed service for turning scattered property notes into a clear mobile-friendly guest guide with arrival, rules, local tips, and checkout information.",
+    whyItWorks: "Hosts already manage repeated property questions and changing local details, so a clear guide and refresh process solve a visible operational problem.",
     firstSteps: ["Audit one listing", "Draft a guide outline", "Offer a refresh package"],
-    caveat: "Local recommendations need to stay current.",
+    caveat: "Every property fact, access instruction, safety detail, local recommendation, and upsell needs host approval and regular review.",
     popularityScore: 79,
     publishedAt: "2026-05-31",
+    updatedAt: "2026-07-11",
     assets: [
       { id: "asset-airbnb-outline", title: "Guest Guide Outline", type: "DOCX", description: "Sections and prompts for a polished guest guide." },
       { id: "asset-airbnb-upsell", title: "Host Upsell Ideas", type: "PDF", description: "Simple optional add-ons hosts can include." },
@@ -1327,6 +1328,18 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Start with hosts whose listings mention repeated rules or have reviews referencing communication, arrival, parking, or amenities. Offer a fixed guest guide refresh.",
     startableOffer:
       "A guest guide refresh for one short-term rental, covering arrival, Wi-Fi, parking, house rules, local picks, checkout, and a host approval checklist.",
+    publicPreview: {
+      title: "Free preview: one-page guest guide sample",
+      intro:
+        "Use this before pitching a host. It proves you can simplify one guest question without building the whole guide for free.",
+      steps: [
+        "Choose one public clue: unclear parking, a hard-to-find entrance, repeated checkout questions, or missing local essentials.",
+        "Draft one phone-readable section with short steps and mark every unknown detail as host to confirm.",
+        "Test the section on a phone, then offer the paid refresh for arrival, Wi-Fi, rules, amenities, local picks, emergency details, and checkout.",
+      ],
+      lockedAssetTease:
+        "Members get the full guest guide outline, host upsell ideas, intake form, host email templates, client FAQs, AI prompts, and scheduled refresh workflows.",
+    },
     whyDetails: [
       "Hosts feel the cost through repeated guest messages and preventable confusion.",
       "The output is easy to judge because a good guide immediately feels clearer and more guest-friendly.",
@@ -1342,6 +1355,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 2: create one sample arrival/check-in page for a host.",
       "Day 3-5: pitch a fixed refresh with guide outline, local picks, and checkout instructions.",
       "Day 6-7: deliver the guide, approval checklist, and optional upsell ideas.",
+    ],
+    offerLadder: [
+      { name: "Guest guide audit", price: "$75-$150", detail: "Review one property, map the main guest questions, and deliver a prioritised guide outline." },
+      { name: "One-property refresh", price: "$250-$600", detail: "Host intake, rewritten guide, mobile or PDF setup, link and QR check, one approval round, and editable handoff." },
+      { name: "Quarterly guide check", price: "$75-$200 / property", detail: "Refresh links, local picks, rules, amenities, contacts, and the host's latest repeated guest questions." },
     ],
     firstTenLeadsPlan: [
       "List 10 short-term rental hosts or property managers with active listings in one destination or suburb.",

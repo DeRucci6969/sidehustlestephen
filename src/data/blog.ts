@@ -29,6 +29,176 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-start-an-airbnb-guest-guide-service",
+    title: "How to Start an Airbnb Guest Guide Service",
+    seoTitle: "How to Start an Airbnb Guest Guide Service | First Host Plan",
+    description:
+      "Start an Airbnb guest guide service with a fixed offer, realistic pricing, host outreach plan, delivery checklist, safety boundaries, and matching launch pack.",
+    category: "Local Service",
+    publishedAt: "2026-07-11",
+    updatedAt: "2026-07-11",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["airbnb-guest-guide-refresh", "airbnb-photo-refresh-service", "manual-workflow-concierge"],
+    shortAnswer:
+      "To start an Airbnb guest guide service, choose one short-term rental market, find listings with unclear arrival details or repeated guest questions, and sell a fixed guide refresh for one property. Collect host-approved facts, organise them into a mobile-friendly guide, test every instruction, and offer seasonal updates. Do not promise better reviews, fewer messages, more bookings, or extra revenue.",
+    keyPoints: [
+      "Best first buyers are self-managing hosts and small property managers with one to ten short-term rentals.",
+      "Sell a clear guest information refresh, not a custom app or a broad hospitality consultancy.",
+      "Start with arrival, parking, Wi-Fi, house rules, appliance help, local picks, emergency details, and checkout.",
+      "A practical starter ladder can include a guide audit, one-property refresh, and quarterly update plan.",
+      "Treat access codes, guest privacy, safety instructions, local recommendations, and platform rules as approval items.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This service suits a beginner who can organise messy information, write plain instructions, and make a clean document or mobile page. You do not need to build software. You need to turn scattered host notes into something a tired guest can use after a long trip.",
+          "The cleanest first buyers are self-managing hosts, co-hosts, boutique accommodation owners, and small property managers with one to ten listings. They are large enough to feel repeated guest questions, but small enough to approve a fixed refresh without a long procurement process.",
+          "Pick one destination, suburb, or property type first. Beach rentals, city apartments, regional cabins, and serviced accommodation have different arrival problems. A narrow lane helps you notice repeated gaps and write a more believable pitch.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Guest information often lives in too many places: the listing description, automated messages, a PDF, a printed binder, appliance labels, old screenshots, and whatever the host remembers to send on arrival day. When those sources disagree, the guest asks the host.",
+          "Your job is to create one approved source for the questions that matter most. That usually includes finding the property, parking, entry, Wi-Fi, heating or cooling, rubbish, house rules, local essentials, emergency contacts, and checkout.",
+          "The promise must stay practical. You can make instructions easier to find, scan, and update. You cannot guarantee fewer messages, higher ratings, more bookings, extra add-on sales, or platform approval.",
+        ],
+      },
+      {
+        heading: "Package the first offer",
+        paragraphs: [
+          "Start with one property and one fixed deliverable. A useful guest guide refresh includes a public listing audit, host intake, guest-question map, rewritten guide, mobile readability check, QR or share-link handoff, and one approval round.",
+          "Set boundaries before the work begins. The starter package should not include a booking website, property management system setup, translation, professional photography, legal review, emergency planning, local compliance advice, or unlimited changes unless quoted separately.",
+          "A clean offer sentence is: I turn scattered property instructions into one clear, mobile-friendly guest guide that your guests can open before arrival and during the stay.",
+        ],
+      },
+      {
+        heading: "Choose the guide format",
+        paragraphs: [
+          "Use the simplest format the host will maintain. A branded PDF can work for a host who wants an attachment and printable copy. A Notion-style page or dedicated guest guide platform can be easier to update and open by link or QR code. A Canva file is useful for designed exports, but the host still needs an editable source.",
+          "Current guest guide tools commonly compete on mobile access, QR codes, private sections, local recommendations, and per-property subscriptions. That means your service should be tool-neutral. Help the host choose a format, then charge for the audit, writing, organisation, setup, testing, and handoff rather than pretending the software itself is the value.",
+          "Keep a printable fallback for properties with weak mobile reception or guests who prefer paper. Test every link and QR code on a normal phone, not only on your laptop.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Price from property complexity, source quality, writing time, number of guide sections, platform setup, and approval risk. A studio with clear notes is not the same job as a rural house with gates, water systems, a fireplace, a spa, and three arrival routes.",
+          "A practical starting ladder is: guest guide audit around $75-$150, one-property guide refresh around $250-$600, multi-property setup from $600, and quarterly updates around $75-$200 per property. These are starting points, not market rules or earnings claims.",
+          "Charge separately for translations, on-site visits, custom photography, complex mapping, platform subscription costs, urgent delivery, extra revision rounds, or transferring several old guides into a new system. Put the software subscription in the host's name where possible so ownership stays clear.",
+        ],
+      },
+      {
+        heading: "Find hosts with visible guide friction",
+        paragraphs: [
+          "Choose one short-term rental area and review 20 public listings. Look for clues in the listing and reviews: guests struggling with parking, entry, heating, Wi-Fi, rubbish, appliances, noise rules, directions, or finding local essentials.",
+          "Do not copy private details or contact guests. Use only public information to identify a possible communication gap. A review that says the apartment was hard to find can justify offering a sample arrival outline, but it does not prove the host has a bad guide.",
+          "Prioritise hosts who manage their own listings or small portfolios. A listing with thoughtful photos and active reviews but unclear instructions is a better prospect than an abandoned property or a polished enterprise operator with an established guest app.",
+        ],
+      },
+      {
+        heading: "Create a useful sample",
+        paragraphs: [
+          "Do not build the whole guide for free. Create one sample section using public facts and obvious placeholders. An arrival page, parking sequence, checkout checklist, or local breakfast map is enough to show how you think.",
+          "Label every unknown fact as host to confirm. Never guess a lockbox code, emergency contact, boundary, appliance instruction, accessibility feature, fire procedure, pet rule, local law, or paid add-on. The sample is proof of structure and writing, not permission to publish.",
+          "A good sample is readable on a phone, uses short steps, puts the most important action first, and shows where a photo or map would remove confusion. Keep it to one screen or one page.",
+        ],
+      },
+      {
+        heading: "Send the first host outreach message",
+        paragraphs: [
+          "Keep the opening message short and respectful. Mention one public clue, explain the small sample, and ask whether the host wants to see it. Do not criticise the property or imply you know what happens inside their guest inbox.",
+          "Example: Hi Sam, I noticed two guests mentioned finding the rear parking entrance after dark. I drafted a one-page arrival sequence showing how that instruction could be clearer on a phone. Want me to send it over?",
+          "If the host replies, offer the fixed refresh: guide audit, fact intake, rewritten sections, mobile or PDF setup, link and QR check, one approval round, and editable handoff. Want the guide outline, host emails, intake form, prompts, and refresh checklist? Open the Airbnb Guest Guide Refresh launch pack.",
+        ],
+      },
+      {
+        heading: "Deliver without creating new problems",
+        paragraphs: [
+          "Start with a structured intake. Ask the host to confirm property name, address wording, arrival route, parking, entry process, Wi-Fi, amenities, appliance notes, house rules, quiet hours, rubbish, checkout, contacts, local picks, accessibility information, and which details must stay private.",
+          "Separate public and private information. A public guide can contain local recommendations and general house information. Access codes, alarm details, precise entry instructions, guest contact information, and security-sensitive content should use the host's approved delivery method and access controls.",
+          "Run a stranger test before handoff. Give the arrival and checkout instructions to someone unfamiliar with the property and ask where they hesitate. Then send the final guide to the host for factual approval. Keep a dated source file and a list of items that need seasonal review.",
+        ],
+      },
+      {
+        heading: "Turn one refresh into recurring work",
+        paragraphs: [
+          "Guest guides drift. Cafes close, parking rules change, appliance instructions get replaced, hosts add amenities, and checkout processes move. That creates a sensible maintenance offer without inventing a retainer for the sake of it.",
+          "Offer a quarterly or seasonal check covering links, QR code, local recommendations, photos, property rules, amenities, emergency contacts, and the top repeated guest question from the last period. The host supplies and approves the facts; you organise the update.",
+          "This is not passive income. It is a small information service with clear delivery. Start with one host, one property, one sample section, and one fixed refresh.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first Airbnb guest guide refresh",
+      steps: [
+        "Choose one short-term rental suburb or holiday area and list 20 active properties.",
+        "Read public listing details and recent reviews for arrival, parking, Wi-Fi, appliance, rule, local tip, or checkout friction.",
+        "Pick five suitable self-managing hosts or small property managers.",
+        "Create one phone-readable sample section using public facts and host-to-confirm placeholders.",
+        "Send a short message that mentions the public clue and offers to share the sample.",
+        "Quote a fixed one-property refresh with intake, rewritten guide, setup, testing, one approval round, and editable handoff.",
+        "After delivery, offer a quarterly link, local recommendation, rule, amenity, and contact check.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one destination, suburb, or short-term rental property type.",
+      "List 20 active listings and note whether the host appears self-managed or part of a small portfolio.",
+      "Review public listing details and recent reviews for repeated information gaps.",
+      "Choose five prospects with one clear, non-sensitive communication issue.",
+      "Write a one-property offer with deliverables, price range, turnaround, revision limit, and exclusions.",
+      "Build one arrival, parking, checkout, or local-picks sample with placeholders for unverified facts.",
+      "Test the sample on a phone and check every visible link or QR code.",
+      "Send five specific outreach messages.",
+      "Prepare a host intake and factual approval checklist before accepting payment.",
+      "Create a seasonal update reminder after the first paid delivery.",
+    ],
+    commonMistakes: [
+      "Building a custom app when the host needs clearer information in an existing tool.",
+      "Guessing access, safety, property, accessibility, or local recommendation details.",
+      "Putting security-sensitive information in a public link or unprotected QR code.",
+      "Promising better reviews, fewer messages, more bookings, or extra revenue.",
+      "Writing harsh house rules instead of clear, hospitable instructions.",
+      "Ignoring mobile readability, weak reception, broken links, and printable fallback needs.",
+      "Selling unlimited updates without defining a maintenance scope.",
+    ],
+    faqs: [
+      {
+        question: "Who buys an Airbnb guest guide service?",
+        answer:
+          "Self-managing hosts, co-hosts, boutique accommodation owners, and small property managers are the cleanest buyers. Start with operators who have active listings and visible arrival, parking, amenity, rule, or checkout information gaps.",
+      },
+      {
+        question: "How much should I charge for an Airbnb guest guide?",
+        answer:
+          "A starting ladder can be $75-$150 for an audit, $250-$600 for a one-property refresh, and $75-$200 per property for quarterly updates. Adjust for guide length, source quality, platform setup, revisions, property complexity, and extra services.",
+      },
+      {
+        question: "What should an Airbnb guest guide include?",
+        answer:
+          "Cover arrival, parking, entry, Wi-Fi, house rules, key amenities, appliance help, local essentials, emergency contacts, rubbish, and checkout. Keep private access information separate and require host approval for every fact.",
+      },
+      {
+        question: "Do I need special guest guide software?",
+        answer:
+          "No. A mobile-friendly page, editable document, or well-made PDF can work. Dedicated platforms add features such as QR access, private sections, and multi-property management. Choose the simplest format the host will maintain.",
+      },
+      {
+        question: "How do I get the first host client?",
+        answer:
+          "Review 20 public listings in one area, find five with a clear information gap, create one small sample section, and send a respectful message. Sell a fixed one-property refresh instead of a broad consulting package.",
+      },
+      {
+        question: "Can I include local business recommendations or host upsells?",
+        answer:
+          "Yes, with host approval and regular checks. Disclose paid relationships where required, confirm availability and prices, avoid unverified claims, and make sure optional add-ons fit the booking platform and local rules.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, safety, security, accessibility, insurance, tax, or platform advice. Hosts must verify property facts, access instructions, emergency details, rules, permissions, local recommendations, paid add-ons, and platform requirements before anything is shared with guests.",
+  },
+  {
     slug: "how-to-start-a-cafe-menu-refresh-service",
     title: "How to Start a Cafe Menu Refresh Service",
     seoTitle: "How to Start a Cafe Menu Refresh Service | First Cafe Client Plan",
