@@ -4,15 +4,18 @@ import { packCategories, packs } from "@/data/packs";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const latestPackPublishedAt = packs.reduce(
-    (latest, pack) => (pack.publishedAt > latest ? pack.publishedAt : latest),
-    packs[0]?.publishedAt ?? "2026-06-09",
+  const latestPackUpdatedAt = packs.reduce(
+    (latest, pack) => {
+      const packUpdatedAt = pack.updatedAt ?? pack.publishedAt;
+      return packUpdatedAt > latest ? packUpdatedAt : latest;
+    },
+    packs[0]?.updatedAt ?? packs[0]?.publishedAt ?? "2026-06-09",
   );
   const latestBlogUpdatedAt = blogPosts.reduce(
     (latest, post) => (post.updatedAt > latest ? post.updatedAt : latest),
-    blogPosts[0]?.updatedAt ?? latestPackPublishedAt,
+    blogPosts[0]?.updatedAt ?? latestPackUpdatedAt,
   );
-  const archiveUpdatedAt = new Date(latestPackPublishedAt);
+  const archiveUpdatedAt = new Date(latestPackUpdatedAt);
   const blogUpdatedAt = new Date(latestBlogUpdatedAt);
   const staticRoutes = [
     { path: "", lastModified: archiveUpdatedAt },
