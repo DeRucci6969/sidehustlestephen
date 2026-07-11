@@ -61,6 +61,12 @@ const socialPackRoutes = [
     guideHref: "/blog/how-to-start-an-airbnb-photo-refresh-service",
   },
   {
+    slug: "airbnb-guest-guide-refresh",
+    label: "Airbnb guest guide",
+    cue: "Scattered host notes into one clear guide",
+    guideHref: "/blog/how-to-start-an-airbnb-guest-guide-service",
+  },
+  {
     slug: "drone-roof-photo-inspection",
     label: "Drone roof photos",
     cue: "Visual-only roof documentation",
