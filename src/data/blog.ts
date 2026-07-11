@@ -29,6 +29,171 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-start-a-review-reply-service",
+    title: "How to Start a Review Reply Service for Local Businesses",
+    seoTitle: "How to Start a Review Reply Service | First Client Plan",
+    description:
+      "Start a review reply service for local businesses with a fixed offer, realistic pricing, outreach script, approval workflow, testimonial rules, and launch pack.",
+    category: "B2B Service",
+    publishedAt: "2026-07-12",
+    updatedAt: "2026-07-12",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "ugc-brief-generator"],
+    shortAnswer:
+      "To start a review reply service, choose one local business category, audit recent public reviews, and sell a fixed monthly batch of owner-approved replies. Add testimonial cards only when the customer wording is genuine and the business has permission to reuse it. Start with one buyer, one tone guide, one approval queue, and no promises about rankings, ratings, leads, or revenue.",
+    keyPoints: [
+      "Best first buyers are owner-operated businesses with regular reviews and inconsistent or missing replies.",
+      "Sell a defined reply and approval workflow, not vague reputation management or guaranteed rating growth.",
+      "A practical starter offer can cover 10 to 20 replies, an escalation list, a tone guide, and two approved testimonial cards.",
+      "Keep negative, sensitive, disputed, legal, medical, safety, and refund issues in an owner-review queue.",
+      "Never create fake reviews, offer incentives for positive sentiment, hide criticism, or invent testimonial claims.",
+    ],
+    body: [
+      {
+        heading: "Who this service is for",
+        paragraphs: [
+          "This service suits a beginner who can write short, calm copy, follow a process, and resist the urge to make every reply sound clever. You do not need to become a public relations agency. You need to help a busy owner answer real customers consistently.",
+          "The cleanest first buyers are cafes, salons, gyms, mechanics, cleaners, trades, accommodation operators, and other owner-operated businesses that receive regular public reviews. Look for a healthy flow of real feedback, but a patchy reply history or the same generic sentence under every review.",
+          "Pick one category first. A cafe owner, plumber, gym manager, and short-term rental host face different questions and escalation risks. A narrow buyer lane makes your tone guide, sample replies, and outreach more believable.",
+        ],
+      },
+      {
+        heading: "What problem you solve",
+        paragraphs: [
+          "Reviews are public customer conversations. When a business leaves them unanswered, replies arrive months late, or every response reads like a template, the owner misses a simple chance to show that someone is listening.",
+          "Your job is to turn a messy review inbox into a controlled workflow: collect new reviews, classify them, draft short replies, flag sensitive cases, get owner approval, publish through authorised access, and record what was approved.",
+          "Keep the promise grounded. You can improve reply consistency, response quality, and the owner's visibility over common feedback. You cannot guarantee higher ratings, better rankings, more calls, extra revenue, review removal, or a particular platform outcome.",
+        ],
+      },
+      {
+        heading: "Package a fixed starter offer",
+        paragraphs: [
+          "Start with a one-off reply cleanup or a small monthly batch. A useful starter package can include a 30-day review audit, a one-page tone guide, drafts for up to 15 reviews, an escalation list, one owner approval round, and a reply tracker.",
+          "Add two testimonial card drafts only if the business has customer wording it can legitimately reuse. The owner must confirm the source, wording, context, permission, and where the card may be published. A public review is not a blank cheque to change the claim or imply a result the customer did not describe.",
+          "A clean offer sentence is: I turn your latest customer reviews into short, owner-approved replies and a simple monthly action list, with sensitive cases held back for you.",
+        ],
+      },
+      {
+        heading: "Build the reply workflow before you sell it",
+        paragraphs: [
+          "Create four queues: straightforward positive, useful mixed feedback, routine negative, and owner escalation. Straightforward replies can follow an approved tone. Mixed and negative feedback needs more context. Anything involving injury, discrimination, threats, refunds, staff allegations, private details, legal claims, medical issues, safety incidents, or an active dispute stays with the owner.",
+          "For each draft, record the platform, review date, reviewer display name, star rating if shown, key point, reply draft, risk flag, approval status, and publication date. Keep the tracker lean enough that an owner will actually review it.",
+          "If you publish replies, use proper owner-authorised access and written approval. Do not ask for a shared password when a platform offers roles or delegated access. Do not claim, edit, or control a profile without the owner's clear permission.",
+        ],
+      },
+      {
+        heading: "Write replies that sound human",
+        paragraphs: [
+          "A useful reply usually does three things: acknowledges the specific point, adds one relevant fact, and closes without turning into a sales pitch. Keep it short. The customer has already bought, so a paragraph of promotional copy is rarely the right move.",
+          "For a positive cafe review, a specific reply might be: Thanks, Mia. Glad the team made the dairy-free options easy to navigate. I will pass your note about the iced latte to the Saturday crew.",
+          "For a critical review, acknowledge the concern without arguing in public or revealing private details. Example: Thanks for flagging the wait time, Sam. That is not the pace we aim for. Please email the manager with the visit date so we can check what happened and follow up privately.",
+        ],
+      },
+      {
+        heading: "Handle testimonials without inventing proof",
+        paragraphs: [
+          "A testimonial asset is advertising, so accuracy matters. Use words from a real customer experience, preserve the meaning, and keep the source record. If you shorten a quote, do not remove context that changes what the customer meant.",
+          "Get the business to confirm permission, attribution, platform terms, and intended channels before publishing a testimonial card. Use anonymous or first-name attribution only when that is actually approved. Do not add a job title, location, result, image, star rating, or before-and-after claim that was not supplied and cleared.",
+          "Do not write reviews for customers, purchase reviews, reward only positive sentiment, suppress criticism, or turn staff and family comments into undisclosed customer proof. AI can help sort or draft, but it must not manufacture the experience or the person behind it.",
+        ],
+      },
+      {
+        heading: "Set realistic pricing",
+        paragraphs: [
+          "Price from review volume, number of locations, approval time, access, escalation risk, reply complexity, turnaround, reporting, and whether testimonial design is included. Ten straightforward replies are a different job from 60 reviews across five locations with complaints and regulated claims.",
+          "A practical starting ladder is $75-$150 for a public review audit and five sample replies, $150-$350 for a one-off batch of up to 20 replies, and $200-$600 per month for monitoring, drafting, approval tracking, and a small testimonial asset allowance. These are starting points for quoting, not market rules or earnings claims.",
+          "Charge separately for extra locations, urgent issues, large backlogs, custom design systems, reporting meetings, translation, platform migration, or community management beyond review replies. Put the batch size and revision limit in writing.",
+        ],
+      },
+      {
+        heading: "Find the first buyer",
+        paragraphs: [
+          "Choose one suburb and one category, then review 20 public business profiles. Look for businesses with recent genuine reviews, unanswered feedback, copied-and-pasted replies, defensive responses, or praise that could support a clearer service message.",
+          "Do not embarrass the owner with a giant red-pen audit. Draft three useful replies: one positive, one mixed, and one careful negative response. Blur unnecessary personal details if you share a sample outside the original platform.",
+          "A simple outreach message is: Hi Alex, I noticed your workshop has a steady run of detailed reviews, but several recent ones have no owner reply. I drafted three short replies in a consistent tone, including one that moves a complaint offline. Want me to send them over?",
+        ],
+      },
+      {
+        heading: "Deliver the first month safely",
+        paragraphs: [
+          "Start with owner intake. Confirm the brand voice, sign-off person, normal response time, contact channel for complaints, words to avoid, refund and escalation boundaries, staff privacy rules, industries or claims that need review, and the platforms in scope.",
+          "Send drafts in one approval queue rather than scattered messages. Mark every sensitive reply clearly and never publish it by default. After approval, record the final wording and date so the next batch stays consistent.",
+          "At month end, provide a short summary: reviews received, replies approved, cases escalated, repeated customer questions, recurring praise, and suggested profile or website updates. The summary should describe patterns, not pretend to prove business performance.",
+        ],
+      },
+      {
+        heading: "Turn one batch into recurring work",
+        paragraphs: [
+          "A recurring offer makes sense when the business receives enough reviews to justify a routine. Set a weekly collection day, a fixed batch allowance, a 24-hour owner approval window, and a monthly pattern summary.",
+          "The natural add-ons are narrow: approved testimonial cards, FAQ ideas based on repeated questions, review-request wording that asks for honest feedback, or a Google Business Profile cleanup. Keep each add-on separately scoped.",
+          "This is not a scheme for manufacturing praise. It is a small communications service built around real customer feedback. Want the swipe file, testimonial card specs, prompts, intake form, and approval emails? Open the Review Reply + Testimonial Clips launch pack.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: first review reply batch for a local gym",
+      steps: [
+        "Choose one suburb and list 20 independent gyms or studios with recent public reviews.",
+        "Pick one business with active feedback and at least five unanswered or generic replies.",
+        "Draft one positive, one mixed, and one complaint-safe sample reply.",
+        "Send the three-reply sample with a fixed offer for a 30-day audit and up to 15 owner-approved replies.",
+        "Collect the gym's tone, escalation, privacy, staff, refund, and health-claim boundaries before drafting the paid batch.",
+        "Deliver one approval tracker and hold sensitive replies for the owner.",
+        "At month end, summarise repeated questions and praise, then offer the next fixed batch.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one local business category and one suburb or service area.",
+      "List 20 businesses with recent public reviews.",
+      "Note unanswered reviews, generic replies, risky responses, and repeated customer themes.",
+      "Choose five prospects with enough review activity for a paid batch.",
+      "Draft three sample replies for the strongest prospect.",
+      "Write a fixed offer with batch size, price, turnaround, approval step, and exclusions.",
+      "Prepare a tone, privacy, access, escalation, and testimonial-permission intake.",
+      "Send five specific outreach messages.",
+      "Keep owner approval mandatory for sensitive or disputed replies.",
+      "Track every approved reply and testimonial source before publication.",
+    ],
+    commonMistakes: [
+      "Selling guaranteed rating, ranking, lead, or revenue improvement.",
+      "Using the same empty thank-you reply under every review.",
+      "Arguing with customers or exposing private details in public replies.",
+      "Publishing sensitive replies without owner approval.",
+      "Buying reviews, inventing customers, or rewarding only positive sentiment.",
+      "Changing testimonial wording until it implies a result the customer never claimed.",
+      "Taking profile access without written owner authorisation and a clear offboarding process.",
+    ],
+    faqs: [
+      {
+        question: "Who buys a review reply service?",
+        answer:
+          "Owner-operated local businesses with regular public reviews are the cleanest buyers. Start with one category where the owner is busy, reviews influence trust, and reply volume is high enough to justify a fixed batch or monthly workflow.",
+      },
+      {
+        question: "How much should I charge for review replies?",
+        answer:
+          "A starting ladder can be $75-$150 for an audit and samples, $150-$350 for up to 20 replies, and $200-$600 per month for monitoring, drafting, approvals, and a small asset allowance. Adjust for volume, locations, access, risk, turnaround, and design work.",
+      },
+      {
+        question: "Can I use AI to write review replies?",
+        answer:
+          "AI can help classify and draft, but a person should verify the review context, tone, privacy, facts, and escalation risk. Never use it to invent a customer, experience, claim, or testimonial.",
+      },
+      {
+        question: "Can a business offer rewards for positive reviews?",
+        answer:
+          "Do not build that into the service. Ask for honest feedback without conditioning an incentive on positive sentiment, and check the current platform rules and applicable local law before running any review-request campaign.",
+      },
+      {
+        question: "Do I need permission to turn a review into a testimonial card?",
+        answer:
+          "Treat permission as required in your workflow. The business should confirm the source, wording, attribution, intended channel, platform terms, and any customer consent needed before the card is published.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, privacy, advertising, platform compliance, or reputation-management advice. Review and testimonial rules vary by platform and location. Use genuine customer feedback, obtain appropriate permission, protect private information, require owner approval, and avoid guarantees about ratings, rankings, leads, revenue, or removal outcomes.",
+  },
+  {
     slug: "how-to-start-an-airbnb-guest-guide-service",
     title: "How to Start an Airbnb Guest Guide Service",
     seoTitle: "How to Start an Airbnb Guest Guide Service | First Host Plan",
@@ -2363,7 +2528,7 @@ export const blogPosts: BlogPost[] = [
       "A practical Google Business Profile audit checklist for spotting local profile trust gaps, writing a 3-point cleanup sample, pricing a rescue sprint, and pitching the first client safely.",
     category: "Checklist",
     publishedAt: "2026-07-07",
-    updatedAt: "2026-07-07",
+    updatedAt: "2026-07-12",
     readingTime: "12 min read",
     relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
     shortAnswer:
@@ -2413,7 +2578,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Reviews are sensitive because bad operators get tempted to fake proof. Do not do that. Your job is to help the business respond professionally, request reviews honestly, and turn useful public feedback into better profile information.",
           "Look for unanswered reviews, repeated questions in reviews, praise that reveals a missing service, complaints that need owner attention, or response wording that sounds defensive, robotic, or risky.",
-          "A safe deliverable is a review-response swipe file, review-request wording, and escalation notes for owner approval. Do not write fake reviews, pressure customers, or promise review volume.",
+          "A safe deliverable is a review-response swipe file, review-request wording, and escalation notes for owner approval. If reply work is the main problem, use the review reply service guide to package a fixed batch, tone guide, approval queue, and sensitive-case handoff. Do not write fake reviews, pressure customers, or promise review volume.",
         ],
       },
       {
