@@ -82,6 +82,7 @@ PACKS: list[Pack] = [
             Asset("asset-cafe-intake", "Client Intake Form", "DOCX", "Editable client intake questions for menu source files, brand details, approvals, and delivery formats."),
             Asset("asset-cafe-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for outreach, intake, approvals, delivery, follow-up, and monthly refresh offers."),
             Asset("asset-cafe-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs that explain scope, turnaround, approvals, files, and what is not included."),
+            Asset("asset-cafe-mockup-kit", "Cafe Sample Mockup Kit", "DOCX", "Three copyable sample layouts, a 20-minute build workflow, export specs, and owner-approval checks for pitching cafes without redesigning the whole menu for free."),
         ],
     ),
     Pack(
@@ -1034,6 +1035,56 @@ def checklist_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
 
 
 DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
+    "asset-cafe-mockup-kit": [
+        ("Use this kit", [
+            "Build one small, buyer-specific sample before pitching. Do not redesign the full menu for free.",
+            "Choose the format that matches the visible problem: a menu section, an Instagram special, or a QR/menu-link audit note.",
+            "Use only public or owner-supplied facts. Mark uncertain prices, ingredients, allergens, dates, hours, and availability as [OWNER TO CONFIRM].",
+        ]),
+        ("Template 1: menu section before and after", [
+            "Cafe and section: [Cafe name] / [Coffee, breakfast, lunch, drinks, specials]",
+            "Visible problem: [small type / weak hierarchy / old price / inconsistent item naming / low contrast]",
+            "BEFORE: paste a permissioned screenshot or describe the current layout in one sentence.",
+            "AFTER structure: SECTION NAME; item name; short owner-approved description; price aligned consistently; dietary marker only if confirmed.",
+            "Sample note: I kept the existing wording and changed only hierarchy, spacing, contrast, and price alignment. Every fact still needs owner approval.",
+        ]),
+        ("Template 2: Instagram special", [
+            "Square post: 1080 x 1080 px. Story: 1080 x 1920 px. Keep essential text inside a generous safe area.",
+            "Layout: cafe name or logo; special name; one short description; confirmed price; valid day or date; clear order or visit cue.",
+            "Copy block: [SPECIAL NAME] / [one-line description] / [price] / [available when] / [order or visit instruction].",
+            "Do not add scarcity, ingredients, dietary claims, savings, or availability that the owner has not supplied.",
+        ]),
+        ("Template 3: QR and menu-link audit note", [
+            "Current destination: [URL]. Tested on: [phone/browser/date].",
+            "Result: [opens correctly / slow / broken / outdated file / hard to read on mobile / unclear next step].",
+            "Customer friction: [one sentence describing what a customer must guess or do twice].",
+            "Suggested fix: [replace destination / upload current PDF / use mobile menu page / enlarge QR / add short label].",
+            "Owner check: confirm the destination, current menu version, privacy settings, print placement, and a backup short URL before publishing.",
+        ]),
+        ("20-minute sample workflow", [
+            "Minutes 0-3: capture one visible mismatch and save the source URL or screenshot date.",
+            "Minutes 3-6: choose one template and copy only the minimum public facts needed for the sample.",
+            "Minutes 6-14: build one frame in Canva using the cafe's visible colours and a simple readable hierarchy.",
+            "Minutes 14-17: test at phone size, check contrast, alignment, spelling, prices, dates, and placeholders.",
+            "Minutes 17-20: export one watermarked JPG or PDF, write the specific observation, and ask permission to send the paid scope.",
+        ]),
+        ("Production and export checks", [
+            "Print: confirm final physical size, 3 mm bleed where the printer requires it, safe margins, image quality, colour mode, and PDF settings with the chosen printer.",
+            "Mobile: check the design at actual phone size. Body text, prices, dates, and the call to action must be readable without zooming.",
+            "Social: export square and story versions separately. Do not stretch one layout into both shapes.",
+            "File names: [cafe]-[asset]-[version]-[YYYYMMDD]. Keep editable source, approval PDF, and final exports separate.",
+        ]),
+        ("Owner approval checklist", [
+            "Item names, descriptions, modifiers, prices, taxes, dates, hours, availability, dietary markers, allergens, and claims are confirmed in writing.",
+            "Logo, photos, fonts, and brand assets are supplied by the cafe or cleared for the agreed use.",
+            "The owner has approved the exact QR destination, social copy, print size, and final files before publication.",
+            "The sample is labelled as a concept until approved. It does not imply a client relationship or a guaranteed sales result.",
+        ]),
+        ("Send the sample", [
+            "Message: I noticed [specific mismatch] and made one small concept showing how [menu section / special / QR path] could be clearer. I used only the information I could verify and marked anything the owner must confirm. Want me to send the sample and a fixed 48-hour scope?",
+            "Follow-up: If the sample is useful, the paid starter covers [deliverables], one approval round, and final exports for [formats] at [price].",
+        ]),
+    ],
     "asset-cafe-script": [
         ("Best prospects", [
             "Independent cafes with menu photos older than three months.",

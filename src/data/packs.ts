@@ -81,6 +81,7 @@ const basePacks: BusinessPack[] = [
       { id: "asset-cafe-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for menu files, brand details, approvals, and delivery formats." },
       { id: "asset-cafe-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for outreach, intake, approvals, delivery, follow-up, and monthly refresh offers." },
       { id: "asset-cafe-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for scope, turnaround, approvals, files, and exclusions." },
+      { id: "asset-cafe-mockup-kit", title: "Cafe Sample Mockup Kit", type: "DOCX", description: "Three copyable sample layouts, a 20-minute build workflow, export specs, and owner-approval checks for pitching cafes without redesigning the whole menu for free." },
     ],
   },
   {
@@ -1288,6 +1289,25 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Find niche operators who already do the painful workflow manually or inconsistently. Sell a pilot outcome, not software access.",
     startableOffer:
       "A two-week manual workflow pilot that delivers one repeated business outcome, logs exceptions, and produces a simple automation backlog after paid demand is proven.",
+    publicPreview: {
+      title: "Free preview: manual pilot test",
+      intro:
+        "Use this three-part test before building software. It turns a vague automation idea into a small paid service that can expose the real workflow and its failure points.",
+      steps: [
+        "Outcome: name one repeated result the buyer already needs each week, such as a cleaned lead list, quote draft, inbox summary, or client update.",
+        "Manual pilot: define the inputs, delivery day, approval step, and a hard scope cap for a two-week human-delivered test.",
+        "Evidence log: record delivery time, missing inputs, exceptions, corrections, and repeated steps before deciding what is safe to automate.",
+      ],
+      lockedAssetTease:
+        "Members get the workflow map, pilot scripts, pricing calculator, client intake, delivery SOP, validation scorecard, email templates, FAQs, and automation prompts.",
+    },
+    outreachPreview: {
+      title: "Sample operator message",
+      copy:
+        "I am testing a small manual service for [operator type] that turns [messy weekly input] into [specific approved output] every [day]. It is a two-week pilot, not new software, and the scope is capped so we can see whether the outcome is actually useful. How are you handling that workflow now?",
+      note:
+        "Replace every bracketed field. Lead with the weekly outcome, not AI or automation, and do not claim time savings before the pilot measures them.",
+    },
     whyDetails: [
       "Manual delivery proves willingness to pay before engineering spend.",
       "The workflow exposes real edge cases that a speculative product brief would miss.",
@@ -1315,6 +1335,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Track every exception, missing input, approval delay, and repeated step during delivery.",
       "After the pilot, present the result, time saved, failure points, and automation backlog.",
       "Only pitch automation after the buyer has paid for and used the manual outcome.",
+    ],
+    offerLadder: [
+      { name: "Two-week manual pilot", price: "$250-$750", detail: "One capped workflow, agreed inputs, two to four deliveries, human QA, and an exception log." },
+      { name: "Managed workflow", price: "$500-$2,000 / mo", detail: "A repeated weekly outcome with clear volume limits, approval steps, delivery reporting, and documented edge cases." },
+      { name: "Automation mapping sprint", price: "$500-$1,500", detail: "A post-pilot workflow map, risk review, prioritised automation backlog, and recommendation on what should stay manual." },
     ],
   },
   "airbnb-guest-guide-refresh": {

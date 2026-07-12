@@ -99,6 +99,17 @@
     "bytes": 7174
   },
   {
+    "id": "asset-cafe-mockup-kit",
+    "packSlug": "cafe-menu-refresh-package",
+    "packTitle": "Cafe Menu Refresh Package",
+    "title": "Cafe Sample Mockup Kit",
+    "type": "DOCX",
+    "description": "Three copyable sample layouts, a 20-minute build workflow, export specs, and owner-approval checks for pitching cafes without redesigning the whole menu for free.",
+    "path": "content/member-assets/cafe-menu-refresh-package/cafe-sample-mockup-kit.docx",
+    "filename": "cafe-sample-mockup-kit.docx",
+    "bytes": 8375
+  },
+  {
     "id": "asset-gbp-automation",
     "packSlug": "google-business-profile-rescue",
     "packTitle": "Google Business Profile Rescue",
