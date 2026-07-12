@@ -29,6 +29,163 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "google-business-profile-service-pricing-guide",
+    title: "Google Business Profile Service Pricing Guide",
+    seoTitle: "Google Business Profile Service Pricing Guide (2026)",
+    description:
+      "Price a Google Business Profile service with realistic AUD ranges, quote formulas, scope limits, package examples, and a first-client plan.",
+    category: "Local Service",
+    publishedAt: "2026-07-13",
+    updatedAt: "2026-07-13",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
+    shortAnswer:
+      "A practical starting point is AUD $79-$149 for a small public profile audit, $300-$750 for a one-location cleanup sprint, and $180-$500 per month for a tightly scoped hygiene service. Build the final quote from audit time, writing, access, approvals, locations, revisions, risk, and recurring workload. Sell clearer information and a controlled workflow, not rankings, calls, leads, reviews, or revenue.",
+    keyPoints: [
+      "Price the actual scope: locations, services, photos, reviews, posts, access, approvals, and reporting.",
+      "Use a paid audit, fixed cleanup sprint, and monthly hygiene plan as three separate offers.",
+      "Keep implementation, review replies, photo work, website edits, and multi-location delivery as named line items.",
+      "Take a deposit or full payment for small fixed sprints and define revision limits before starting.",
+      "Never support the price with promises about rankings, map positions, calls, leads, review growth, or revenue.",
+    ],
+    body: [
+      {
+        heading: "Who this pricing guide is for",
+        paragraphs: [
+          "This guide is for a beginner selling Google Business Profile audits, cleanup sprints, or monthly profile hygiene to owner-operated local businesses. The cleanest first buyers are trades, salons, cafes, cleaners, mechanics, studios, accommodation operators, and other businesses where an owner can approve a small job without a long buying process.",
+          "The service is operational, not magical. You inspect public information, identify trust and clarity gaps, prepare accurate owner-approved changes, and keep the profile from drifting. You are not selling guaranteed local SEO results.",
+          "Start with one buyer lane and one location. A plumber with 18 services, emergency callouts, several suburbs, and licensing language needs a different scope from a cafe with one venue, changing hours, menu photos, and weekly specials.",
+        ],
+      },
+      {
+        heading: "What the client is paying for",
+        paragraphs: [
+          "The buyer is paying for the work between spotting a messy profile and having safe, approved updates ready to publish. That includes the audit, screenshots, fact collection, writing, asset chasing, approval rounds, implementation notes, quality checks, and a useful handoff.",
+          "Do not price from the number of words you write. A short service description can require more checking than a long blog post because the business name, category, hours, service area, booking link, qualifications, prices, and claims all need to be correct.",
+          "Your scope should say what you will inspect, what you will draft, who verifies the facts, who publishes the changes, how many revisions are included, and what happens when profile access or platform approval delays the work.",
+        ],
+      },
+      {
+        heading: "Use a three-offer pricing ladder",
+        paragraphs: [
+          "The first offer is a paid mini audit. A useful version covers one location, a screenshot-backed review of the main public details, three to five priority fixes, and one sample rewrite. AUD $79-$149 is a practical starting range when the scope is small and no implementation is included.",
+          "The second offer is a cleanup sprint. It might cover one location, profile fact checking, service and description drafts, a photo action list, FAQ ideas, review-request wording, owner approval, and a final handoff. AUD $300-$750 is a starting range for a bounded one-location sprint, not a rule for every market.",
+          "The third offer is monthly hygiene. It can include one monthly profile check, stale-detail scan, a small update allowance, photo prompts, review-reply drafts, and a short action note. AUD $180-$500 per month can suit a small single-location account when the allowance and exclusions are clear.",
+        ],
+      },
+      {
+        heading: "Build the quote from time and risk",
+        paragraphs: [
+          "Estimate each delivery block: audit, client intake, writing, asset collection, approval coordination, implementation, quality assurance, handoff, and admin. Multiply the hours by a sustainable working rate, add direct costs, then add a buffer for the revision and access risk you can reasonably expect.",
+          "For example, a five-hour cleanup at a target working rate of AUD $80 per hour starts at AUD $400. If the project includes messy access, two approval rounds, or a regulated service category, a fixed quote around AUD $480-$600 may be more sensible. This is an example calculation, not a recommended universal rate.",
+          "Check the result against the buyer and the scope. If the quote feels too high for the first sale, reduce the deliverables instead of hiding hours or promising more. A smaller paid sprint teaches you more than a broad underpriced package that takes a week to finish.",
+        ],
+      },
+      {
+        heading: "Charge separately for scope that expands",
+        paragraphs: [
+          "Add a clear price or custom quote trigger for extra locations, large service menus, review reply backlogs, ongoing posts, photography, image editing, website updates, booking setup, duplicate listing work, suspensions, reinstatement support, translation, urgent turnaround, or extra revision rounds.",
+          "Multi-location work is not one job copied five times. Each location can have different hours, staff, services, photos, links, categories, reviews, and approval owners. Quote per location, then offer a modest system discount only when the information and workflow are genuinely shared.",
+          "Be careful with regulated and disputed content. Medical, legal, financial, safety, licensing, employment, and active complaint wording should stay with the client or an appropriate reviewer. Higher risk does not mean you should bluff with a higher fee. It means you narrow the scope and require approval.",
+        ],
+      },
+      {
+        heading: "Write package boundaries before the sales call",
+        paragraphs: [
+          "A useful fixed sprint states one profile, up to a named number of services, one description draft, a photo checklist, up to five FAQ drafts, review-request wording, one approval round, and a final change log. It also states whether the client or you publishes the approved changes.",
+          "List exclusions directly: no ranking guarantee, no lead guarantee, no fake reviews, no review removal promise, no business suspension appeal, no website work, no photography, no ad management, no legal review, and no unlimited revisions unless separately quoted.",
+          "For a small fixed sprint, full payment upfront or a 50 percent deposit with the balance due at handoff can keep the job simple. State the payment point, cancellation terms, approval deadline, and what happens if the client does not supply accurate information. Check the rules that apply to your location and customer before using any contract or payment term.",
+        ],
+      },
+      {
+        heading: "Find the first buyer without discounting everything",
+        paragraphs: [
+          "Choose one suburb and one category, then inspect 20 public profiles by hand. Look for stale hours, thin services, old photos, missing booking links, unanswered reviews, vague descriptions, or customer questions that the profile does not answer.",
+          "Create a three-point sample for the strongest prospect. Show one factual gap, one trust gap, and one customer-action gap. Label draft changes as suggestions and ask the owner to verify every service, hour, price, qualification, and claim before publication.",
+          "A simple message is: Hi Mia, I noticed your profile has recent reviews for emergency callouts, but that service is hard to find in the profile details. I made a short three-point cleanup note. Want me to send it over? If the sample lands, offer the paid audit or fixed sprint instead of doing the full cleanup for free.",
+        ],
+      },
+      {
+        heading: "Present the price so the buyer can compare scope",
+        paragraphs: [
+          "Give the client two or three choices with different deliverables, not three vague quality levels. For example: Audit at AUD $119, Cleanup Sprint at AUD $490, or Cleanup plus 30 days of hygiene at AUD $690. The exact numbers should come from your workload and market.",
+          "Under each option, show the location count, deliverables, access required, approval rounds, turnaround, and exclusions. A buyer should be able to see why the sprint costs more than the audit without sitting through a strategy presentation.",
+          "Avoid fake discounts and invented urgency. If you offer a lower first-client price, say what you receive in return, such as a tighter scope, flexible timeline, or permission to use an anonymised before-and-after sample. Do not make a testimonial or positive review a condition of the discount.",
+        ],
+      },
+      {
+        heading: "Turn a cleanup sprint into recurring work",
+        paragraphs: [
+          "Offer monthly hygiene only after you understand the real update volume. A cafe may need frequent hours, menu, photo, and post changes. A trades business may need fewer updates but more service, suburb, photo, and review coordination.",
+          "Set a monthly allowance, such as one profile check, two approved updates, five reply drafts, one photo request list, and a short action summary. Anything beyond the allowance becomes next month's priority or a separately approved add-on.",
+          "Review the retainer after the first 60 to 90 days. If the client rarely uses the allowance, reduce the plan or move to quarterly maintenance. If approvals and updates consistently exceed it, show the record and re-scope. Want the pricing calculator, audit checklist, proof kit, outreach scripts, and delivery files? Open the Google Business Profile Rescue launch pack.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: quote a cleanup sprint for a local plumber",
+      steps: [
+        "Audit one public profile and record five visible clarity or trust gaps.",
+        "Scope one location, up to 12 service drafts, five FAQ ideas, a photo list, review-request wording, and one approval round.",
+        "Estimate 1 hour for audit and intake, 2 hours for drafts, 1 hour for approval and implementation notes, and 1 hour for quality checks and handoff.",
+        "At an example target rate of AUD $80 per hour, use AUD $400 as the working base before access, revision, and risk adjustments.",
+        "Quote AUD $490 for the bounded sprint, with a 50 percent deposit and the client responsible for verifying all service, licensing, hours, and area details.",
+        "Offer review reply backlog work, extra locations, website edits, photography, and urgent turnaround as separate line items.",
+        "After delivery, offer a AUD $240 monthly hygiene plan with a named update and reply allowance.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one local business category and one suburb or service area.",
+      "Define a mini audit, cleanup sprint, and monthly hygiene offer.",
+      "Name the location, service, FAQ, photo, review, post, and revision limits for each.",
+      "Estimate delivery time and choose a sustainable target working rate.",
+      "Write add-on prices or custom quote triggers for expanding scope.",
+      "Prepare owner verification, access, approval, payment, and handoff steps.",
+      "Audit 20 public profiles and choose five with clear visible gaps.",
+      "Create one three-point sample using only public information.",
+      "Send five specific outreach messages with a low-friction question.",
+      "Track actual delivery time before changing your next quote.",
+    ],
+    commonMistakes: [
+      "Copying an online price without calculating the actual scope and time.",
+      "Including implementation, posts, review replies, photos, and website edits in one vague fee.",
+      "Charging one-location pricing for a multi-location business.",
+      "Offering unlimited revisions or waiting indefinitely for client approvals.",
+      "Discounting the full service before the buyer has seen a useful sample.",
+      "Promising rankings, map positions, calls, leads, reviews, revenue, or Google approval.",
+      "Publishing unverified services, prices, hours, qualifications, or regulated claims.",
+    ],
+    faqs: [
+      {
+        question: "How much should I charge for a Google Business Profile audit?",
+        answer:
+          "AUD $79-$149 is a practical starting range for a small one-location public audit with screenshots, three to five priority fixes, and one sample rewrite. Increase the quote when the profile, service list, locations, research, or reporting is more complex.",
+      },
+      {
+        question: "How much should I charge to manage a Google Business Profile each month?",
+        answer:
+          "AUD $180-$500 per month can be a starting range for a small, tightly scoped one-location hygiene plan. State the number of checks, updates, posts, reply drafts, photo requests, approval rounds, and reports included. Quote extra volume separately.",
+      },
+      {
+        question: "Should I charge per hour or use a fixed package?",
+        answer:
+          "Calculate from hours internally, then use a fixed package when the scope is predictable. Use an hourly rate or a new quote for uncertain access, large backlogs, investigation, extra revisions, and work outside the agreed package.",
+      },
+      {
+        question: "Can I guarantee Google Maps rankings at a higher price?",
+        answer:
+          "No. Price the work you control, such as audit quality, accurate drafts, approvals, implementation notes, and maintenance. Do not guarantee rankings, map positions, calls, leads, review growth, revenue, or platform approval.",
+      },
+      {
+        question: "What should be included in a profile cleanup sprint?",
+        answer:
+          "A bounded sprint can include one public audit, fact-check intake, service and description drafts, a photo action list, FAQ ideas, review-request wording, one approval round, and a final change log. State whether implementation is included and list exclusions.",
+      },
+    ],
+    disclaimer:
+      "This guide provides practical business education and example AUD pricing, not legal, tax, accounting, platform compliance, or financial advice. Prices are starting points, not market rules or earnings claims. Verify current Google requirements, local rules, client facts, access, permissions, contracts, and regulated wording before delivery.",
+  },
+  {
     slug: "how-to-start-a-review-reply-service",
     title: "How to Start a Review Reply Service for Local Businesses",
     seoTitle: "How to Start a Review Reply Service | First Client Plan",
@@ -523,12 +680,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-google-business-profile-rescue-service",
     title: "How to Start a Google Business Profile Rescue Service",
-    seoTitle: "How to Start a Google Business Profile Rescue Service | First-Client Plan",
+    seoTitle: "Start a Google Business Profile Service | First Client",
     description:
-      "A practical guide to starting a Google Business Profile rescue service with a clear buyer, fixed starter offer, pricing guidance, outreach plan, and safe delivery boundaries.",
+      "Start a Google Business Profile service with a fixed cleanup offer, realistic pricing, a three-point audit, first-client outreach, and safe delivery limits.",
     category: "Local Service",
     publishedAt: "2026-06-30",
-    updatedAt: "2026-06-30",
+    updatedAt: "2026-07-13",
     readingTime: "13 min read",
     relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
     shortAnswer:
