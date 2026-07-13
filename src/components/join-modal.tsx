@@ -17,7 +17,7 @@ type JoinButtonProps = {
 export function JoinButton({ label = "Unlock Packs", returnTo, className }: JoinButtonProps) {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "checking" | "sending" | "sent" | "setup" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "setup" | "error">("idle");
   const triggerRef = useRef<HTMLButtonElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
   async function openModal() {
     track("Join Modal Opened", { returnTo: returnTo ?? "current_path" });
     trackFirstPartyEvent("Join Modal Opened", { properties: { return_to: returnTo ?? "current_path" } });
-    setStatus("checking");
+    setOpen(true);
 
     try {
       const checkoutReturnTo = returnTo ?? window.location.pathname;
@@ -45,11 +45,8 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
         }
       }
     } catch {
-      // Fall back to email sign-in below.
+      // The email sign-in modal is already available as the fallback.
     }
-
-    setStatus("idle");
-    setOpen(true);
   }
 
   function closeModal() {
@@ -131,13 +128,12 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
         type="button"
         ref={triggerRef}
         onClick={openModal}
-        disabled={status === "checking"}
         className={cx(
-          "accent-cta inline-flex h-11 max-w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-80",
+          "accent-cta inline-flex h-11 max-w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition hover:-translate-y-0.5",
           className,
         )}
       >
-        <span className="truncate">{status === "checking" ? "Opening checkout" : label}</span>
+        <span className="truncate">{label}</span>
         <ArrowRight size={16} />
       </button>
       {open ? createPortal(
