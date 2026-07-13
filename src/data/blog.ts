@@ -2379,7 +2379,7 @@ export const blogPosts: BlogPost[] = [
       "A practical guide to starting a Shopify cart audit service with buyer selection, screenshot-led outreach, pricing guidance, delivery scope, and safe conversion claims.",
     category: "Ecommerce",
     publishedAt: "2026-07-06",
-    updatedAt: "2026-07-06",
+    updatedAt: "2026-07-13",
     readingTime: "12 min read",
     relatedPackSlugs: ["shopify-cart-audit", "ugc-brief-generator", "manual-workflow-concierge"],
     shortAnswer:
@@ -2540,10 +2540,11 @@ export const blogPosts: BlogPost[] = [
     readingTime: "12 min read",
     relatedPackSlugs: ["realtor-suburb-snapshot", "google-business-profile-rescue", "review-testimonial-service"],
     shortAnswer:
-      "To start a real estate suburb snapshot service, pick one suburb, build one source-backed sample report, and pitch agents who already focus on that suburb but post weak local content. Sell a small monthly content asset, not investment advice, valuation advice, or guaranteed lead generation.",
+      "To start a real estate suburb snapshot service, choose one suburb and ask a browsing-capable AI agent to research credible public figures, cite every number, flag uncertainty, and draft the report, email, and social posts in one run. Verify every citation, style the sample, and pitch agents who already focus on that suburb.",
     keyPoints: [
       "Best buyers are agents, teams, and principals who need local content for sellers, buyers, email lists, and social posts.",
       "The starter offer should be one suburb snapshot with source notes, plain-English talking points, one email intro, and two captions.",
+      "Use one research-and-production prompt instead of manually collecting figures, but personally open and check every cited source before delivery.",
       "Use public data carefully. Include source names and dates, and avoid price predictions, appraisal claims, yield advice, or guaranteed leads.",
       "A realistic first offer can be a paid sample or monthly snapshot, then expand into a four-week content retainer once the handoff works.",
       "The first sale comes from a useful sample sitting in the agent's inbox, not a vague content marketing pitch.",
@@ -2566,9 +2567,17 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: "Use one AI prompt for the first draft",
+        paragraphs: [
+          "Do not spend an afternoon copying figures into a notes file. Give a browsing-capable AI agent the suburb, reporting period, audience, approved source preferences, and the exact outputs you need. Ask it to research, cite, flag uncertainty, and package the report in one run.",
+          "A useful instruction is: Research the latest available property market data for [suburb] using credible public sources. Cite every figure with a direct source link and reporting period, flag anything you cannot verify, then produce a one-page market snapshot, one client email, and three social posts. Separate facts from commentary and do not make forecasts, valuations, or investment recommendations.",
+          "AI removes the collection and blank-page work. It does not remove verification. Open every citation, confirm the geography, date, property type, and metric definition, then delete anything you cannot reproduce.",
+        ],
+      },
+      {
         heading: "Build the smallest useful report",
         paragraphs: [
-          "Do not build a giant dashboard first. Build one clean sample that proves the service. A useful first snapshot can include three public data points, two local observations, one plain-English takeaway, one email intro, and two social captions.",
+          "Do not build a giant dashboard first. Use the AI draft to create one clean sample that proves the service. A useful first snapshot can include three public data points, two local observations, one plain-English takeaway, one email intro, and two social captions.",
           "Every number needs a source name and date. If a number is unavailable, stale, or unclear, say so. A missing metric handled honestly is better than a confident guess.",
           "The value is not fancy charts. The value is turning scattered public information into a small content asset the agent can approve, adapt, and send this week.",
         ],
@@ -2609,7 +2618,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Turn it into recurring work",
         paragraphs: [
           "After the first sample, ask which part was most useful: seller email, social post, buyer talking point, suburb comparison, or appraisal follow-up. Their answer tells you how to shape the retainer.",
-          "Recurring work should be built around a calendar. For example: Monday source check, Tuesday snapshot draft, Wednesday agent approval, Thursday email and captions, Friday follow-up talking point.",
+          "Recurring work should be built around a simple trigger. A scheduled AI agent or Make/Zapier workflow can create a fresh research draft on the reporting date, save the output to a client folder, and prepare an approval email. Keep source verification and final approval as human steps.",
           "This is not passive income. It is a repeatable B2B content service with a clear buyer, a simple delivery loop, and a reason for agents to keep buying if the work is useful.",
         ],
       },
@@ -2619,8 +2628,8 @@ export const blogPosts: BlogPost[] = [
       steps: [
         "Choose one active suburb with recent listings and several agents competing for attention.",
         "Pick one agent who already posts about listings or open homes in that suburb.",
-        "Collect three public data points with source names and dates.",
-        "Write one plain-English takeaway for sellers, one email intro, and two captions.",
+        "Run the one-prompt AI workflow to research and draft the report, email, and social posts.",
+        "Open every cited source, verify the figures, then keep one takeaway, one email intro, and two captions.",
         "Send a short message offering to share the sample, not a broad marketing pitch.",
         "If the agent replies, quote a paid monthly snapshot with source log, approval step, and tight exclusions.",
         "After delivery, offer a four-week content retainer for that suburb or the agent's main farm area.",
@@ -2630,8 +2639,8 @@ export const blogPosts: BlogPost[] = [
       "Pick one suburb with enough recent activity to support a useful snapshot.",
       "List 20 agents connected to that suburb.",
       "Choose five agents who post often but lack strong local market content.",
-      "Collect public data from two or three sources and record source names and dates.",
-      "Build one small sample: three data points, one takeaway, one email intro, and two captions.",
+      "Run the one-prompt AI workflow for the strongest prospect and require direct source links, dates, and uncertainty flags.",
+      "Open every citation, verify the figures, and turn the approved output into one small sample.",
       "Write a fixed starter offer with scope, price range, turnaround, approval step, and exclusions.",
       "Send five sample-led messages today.",
       "Track replies, compliance questions, source objections, price pushback, and requested formats.",
@@ -2666,7 +2675,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Can I use AI to write the market commentary?",
         answer:
-          "Yes, but treat AI output as a draft. Check every source, remove unsupported claims, use cautious wording, and get agent approval before anything public is posted.",
+          "Yes. A browsing-capable AI agent can research public figures and draft the report, email, and social copy in one run. Treat the output as a draft: open every citation, remove unsupported claims, use cautious wording, and get agent approval before anything public is posted.",
       },
       {
         question: "Is this real estate advice?",

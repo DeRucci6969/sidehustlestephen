@@ -976,7 +976,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/realtor-suburb-snapshot/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8025
+    "bytes": 8532
   },
   {
     "id": "asset-realtor-report",
@@ -984,10 +984,10 @@
     "packTitle": "Realtor Suburb Snapshot Reports",
     "title": "Suburb Snapshot Template",
     "type": "XLSX",
-    "description": "A repeatable structure for local market summaries.",
+    "description": "An AI research brief, source ledger, report builder, content pack, and approval log for repeatable local market reports.",
     "path": "content/member-assets/realtor-suburb-snapshot/suburb-snapshot-template.xlsx",
     "filename": "suburb-snapshot-template.xlsx",
-    "bytes": 12205
+    "bytes": 14680
   },
   {
     "id": "asset-realtor-pitch",
@@ -998,7 +998,7 @@
     "description": "Outreach script for agents and principals.",
     "path": "content/member-assets/realtor-suburb-snapshot/agent-pitch-script.docx",
     "filename": "agent-pitch-script.docx",
-    "bytes": 6853
+    "bytes": 6866
   },
   {
     "id": "asset-realtor-approval",
@@ -1020,7 +1020,7 @@
     "description": "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy.",
     "path": "content/member-assets/realtor-suburb-snapshot/suburb-snapshot-pricing-calculator.xlsx",
     "filename": "suburb-snapshot-pricing-calculator.xlsx",
-    "bytes": 13257
+    "bytes": 13296
   },
   {
     "id": "asset-realtor-prompts",
@@ -1028,10 +1028,10 @@
     "packTitle": "Realtor Suburb Snapshot Reports",
     "title": "AI Prompt Pack",
     "type": "DOCX",
-    "description": "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture.",
+    "description": "A one-prompt research-and-production workflow plus verification, Canva handoff, content, and delivery prompts.",
     "path": "content/member-assets/realtor-suburb-snapshot/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8673
+    "bytes": 9924
   },
   {
     "id": "asset-realtor-intake",
@@ -1039,10 +1039,10 @@
     "packTitle": "Realtor Suburb Snapshot Reports",
     "title": "Client Intake Form",
     "type": "DOCX",
-    "description": "Editable intake questions for target suburbs, data sources, agency tone, compliance approval, and posting cadence.",
+    "description": "Editable intake for suburb scope, source rules, report cadence, branding, automation, and named approval.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7327
+    "bytes": 7455
   },
   {
     "id": "asset-realtor-email-templates",
@@ -1050,10 +1050,10 @@
     "packTitle": "Realtor Suburb Snapshot Reports",
     "title": "Client Email Templates",
     "type": "DOCX",
-    "description": "Ready-to-adapt emails for agent outreach, sample delivery, source requests, weekly handoff, and retainer renewal.",
+    "description": "Finished emails and DMs for sample-led outreach, intake, approval, delivery, and recurring reports.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7236
+    "bytes": 7589
   },
   {
     "id": "asset-realtor-faqs",
@@ -1061,10 +1061,10 @@
     "packTitle": "Realtor Suburb Snapshot Reports",
     "title": "Client FAQs",
     "type": "DOCX",
-    "description": "Buyer-facing FAQs that explain source use, compliance, market commentary limits, cadence, and deliverables.",
+    "description": "Buyer-facing answers on AI research, source verification, report limits, approvals, automation, and deliverables.",
     "path": "content/member-assets/realtor-suburb-snapshot/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7187
+    "bytes": 7682
   },
   {
     "id": "asset-trades-automation",

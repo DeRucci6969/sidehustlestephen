@@ -4,6 +4,7 @@ import json
 import math
 import os
 import re
+import sys
 import zipfile
 from datetime import date
 from dataclasses import dataclass
@@ -301,25 +302,25 @@ PACKS: list[Pack] = [
     Pack(
         "realtor-suburb-snapshot",
         "Realtor Suburb Snapshot Reports",
-        "Real estate agents need local content every week.",
+        "Turn one suburb and one AI prompt into a report agents can publish.",
         "B2B Service",
         "Real estate agents",
         "$0",
         "2-4 weeks",
         "Medium",
-        "A recurring local market snapshot agents can post, email, or use in lead nurture.",
-        "Agents already pay for local positioning and lead generation; suburb-specific reports are repeatable.",
-        ["Choose one suburb", "Create a sample report", "Pitch local agents"],
-        "Use public data carefully and cite sources.",
+        "An AI-assisted local market report service that turns public sources into an approval-ready snapshot, email, and social content.",
+        "Agents need fresh local content, while an AI agent can research, cite, draft, and repackage one suburb in a repeatable workflow.",
+        ["Choose one active suburb", "Run the one-prompt research workflow", "Verify and pitch the sample"],
+        "AI speeds up the work. You still verify every source and get agent approval.",
         [
-            Asset("asset-realtor-report", "Suburb Snapshot Template", "XLSX", "A repeatable structure for local market summaries."),
+            Asset("asset-realtor-report", "Suburb Snapshot Template", "XLSX", "An AI research brief, source ledger, report builder, content pack, and approval log for repeatable local market reports."),
             Asset("asset-realtor-pitch", "Agent Pitch Script", "DOCX", "Outreach script for agents and principals."),
             Asset("asset-realtor-approval", "Source and Approval Delivery Checklist", "PDF", "A source, fact, claim, approval, export, and handoff checklist for every suburb snapshot."),
             Asset("asset-realtor-pricing", "Suburb Snapshot Pricing Calculator", "XLSX", "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy."),
-            Asset("asset-realtor-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture."),
-            Asset("asset-realtor-intake", "Client Intake Form", "DOCX", "Editable intake questions for target suburbs, data sources, agency tone, compliance approval, and posting cadence."),
-            Asset("asset-realtor-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for agent outreach, sample delivery, source requests, weekly handoff, and retainer renewal."),
-            Asset("asset-realtor-faqs", "Client FAQs", "DOCX", "Buyer-facing FAQs that explain source use, compliance, market commentary limits, cadence, and deliverables."),
+            Asset("asset-realtor-prompts", "AI Prompt Pack", "DOCX", "A one-prompt research-and-production workflow plus verification, Canva handoff, content, and delivery prompts."),
+            Asset("asset-realtor-intake", "Client Intake Form", "DOCX", "Editable intake for suburb scope, source rules, report cadence, branding, automation, and named approval."),
+            Asset("asset-realtor-email-templates", "Client Email Templates", "DOCX", "Finished emails and DMs for sample-led outreach, intake, approval, delivery, and recurring reports."),
+            Asset("asset-realtor-faqs", "Client FAQs", "DOCX", "Buyer-facing answers on AI research, source verification, report limits, approvals, automation, and deliverables."),
         ],
     ),
     Pack(
@@ -2395,24 +2396,32 @@ PROMPT_PACK_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
     ],
     "asset-realtor-prompts": [
         ("How to use these prompts", [
-            "Use public data carefully, cite sources, and date every data point.",
-            "Separate factual market observations from agent opinion. Avoid investment advice and unsupported predictions.",
-            "Have the agent or agency approve branded market commentary before publishing.",
+            "Use a browsing-capable AI model or research agent. The core workflow should research and draft the complete content pack in one run, not ask you to collect figures manually.",
+            "Treat every AI output as a draft. Open each cited link, confirm the reporting period, geography, property type, and metric definition, and remove anything you cannot reproduce.",
+            "Separate sourced facts from plain-English commentary. Avoid valuations, forecasts, investment advice, legal advice, and unsupported predictions.",
+            "Have the agent or agency approve every branded report, email, and social post before publishing.",
         ]),
-        ("Market snapshot prompts", [
-            "Act as a real estate content analyst. Turn these source notes for [suburb]: [paste sources/data] into a one-page weekly snapshot with key movements, plain-English interpretation, seller talking points, buyer talking points, and source log.",
-            "Summarise this suburb data without making predictions: [paste]. Identify what changed, what stayed flat, what sellers may care about, what buyers may ask, and what needs source verification.",
-            "Create three agent-safe talking points from this market data: [paste]. Use cautious language, cite the source/date, and avoid investment advice.",
+        ("The one-prompt research and production workflow", [
+            "You are a careful real estate content researcher and production assistant. Research the latest available property market data for [SUBURB, STATE/REGION, COUNTRY] for the reporting period [DATE RANGE] using credible public sources you can open on the web. Prefer primary, government, industry, major listing-platform, and clearly dated local sources. Cite every figure with the source name, direct URL, publication or reporting date, geography, property type, and metric definition. If a figure is unavailable, conflicting, paywalled, stale, or cannot be verified, label it UNVERIFIED and leave it out of client-facing copy. Do not estimate, infer missing numbers, predict prices, provide a valuation, give investment advice, or promise leads. Then produce, in this order: (1) a source ledger with every proposed figure and verification status; (2) a one-page suburb market snapshot for [AUDIENCE: sellers/buyers/general] in a plain, local, non-hyped tone; (3) three short talking points; (4) one client email of 150-220 words; (5) three social posts with distinct angles; (6) a list of statements that need agent approval. Separate sourced facts from commentary. Use [AGENCY NAME], [AGENT NAME], [CTA], and [TONE NOTES] only where supplied. Return clean headings and copy ready to paste into the report template.",
+            "Before you run it, replace the bracketed fields. If the model cannot browse and open sources, stop and switch to a research-enabled model instead of pasting invented data into the report.",
+        ]),
+        ("Verification prompt", [
+            "Audit this draft and its source ledger: [PASTE OUTPUT]. Open every cited URL. For each figure return PASS, FAIL, STALE, CONFLICT, or CANNOT ACCESS, with the exact source wording and reporting period. Check suburb boundary, property type, median versus average, asking versus sold price, listing versus settled-sale count, and weekly versus monthly period. Remove failed figures from the client-facing copy, preserve direct links, and return a corrected draft. Do not replace a failed figure with an uncited estimate.",
+            "After the AI audit, complete your own spot check. Human verification and the agent's approval are required even when the model says PASS.",
+        ]),
+        ("Report and Canva handoff prompt", [
+            "Turn this verified suburb snapshot into a one-page design brief for my Canva template: [PASTE VERIFIED OUTPUT]. Return only these fields: headline, reporting period, four metric cards, 60-word market summary, three talking points, source footer, agent CTA, and image direction. Keep every metric exactly as verified. Do not add new facts. Keep text short enough for one A4 page and a mobile PDF.",
+            "Paste the fields into one reusable Canva brand template. Export an approval PDF and retain the editable design link. Do not ask AI to redesign the layout every month.",
         ]),
         ("Content and nurture prompts", [
-            "Create a weekly content pack for a real estate agent in [suburb]. Include LinkedIn post, Instagram caption, email intro, appraisal lead follow-up, and a short video script using this source-backed snapshot: [paste].",
+            "Create a content pack from this verified snapshot only: [paste]. Include a LinkedIn post, Instagram caption, email intro, appraisal lead follow-up, and a 30-second video script. Do not introduce a number or claim that is not in the verified snapshot.",
             "Write an appraisal lead nurture email using this suburb snapshot: [paste]. Keep it helpful and local, not pushy.",
             "Create a principal-facing pitch for a weekly suburb snapshot retainer. Emphasise consistency, source discipline, and reuse across social/email/sales.",
         ]),
         ("Sales and delivery prompts", [
             "Write a cold email to a real estate agent who posts generic market updates. Offer a one-suburb sample snapshot and mention source-backed local content.",
             "Create a client intake checklist for a suburb snapshot service. Include target suburbs, agency tone, compliance process, data sources, posting cadence, and approval workflow.",
-            "Create a handoff note for a completed suburb snapshot with source log, publishable captions, caveats, and next week's data needs.",
+            "Create a handoff note for a completed suburb snapshot with the source ledger, approval items, report PDF, editable Canva link, publishable captions, caveats, and next reporting date.",
         ]),
     ],
     "asset-trades-prompts": [
@@ -2541,6 +2550,60 @@ PACK_DELIVERABLES: dict[str, str] = {
 
 
 def client_intake_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    if pack.slug == "realtor-suburb-snapshot":
+        return [
+            ("How to use this form", [
+                "Send this once before the first snapshot. The agent should not have to collect public market figures for you.",
+                "Use the answers to configure the one-prompt AI workflow, report template, source rules, and approval process.",
+                "Ask the client to write 'not sure' where needed. Mark every claim or source preference that needs principal or compliance approval.",
+                "Keep the completed form in the client folder so the next reporting run needs only a new date and any campaign changes.",
+            ]),
+            ("Agent and agency details", [
+                "Agency name: [answer]",
+                "Agent name and role: [answer]",
+                "Email, phone, website, and booking/appraisal link: [answer]",
+                "Final approval owner: [name and role]",
+                "Best approval channel and usual review window: [answer]",
+            ]),
+            ("Report scope", [
+                "Primary suburb and state/region/country: [answer]",
+                "Secondary suburbs, if separately scoped: [answer]",
+                "Audience: sellers / buyers / landlords / general local audience",
+                "Property types to include or exclude: [answer]",
+                "Reporting cadence and preferred delivery day: [weekly / fortnightly / monthly]",
+                "Deliverables: one-page report / email / social posts / video script / other",
+            ]),
+            ("Source and commentary rules", [
+                "Approved or preferred public sources: [answer]",
+                "Sources the agency does not want used: [answer]",
+                "Metrics the audience cares about: [answer]",
+                "Minimum reporting recency or comparison period: [answer]",
+                "Approved local phrases, market terms, and disclaimers: [answer]",
+                "Topics, claims, predictions, or advice that must never appear: [answer]",
+            ]),
+            ("Brand and CTA", [
+                "Tone: plain / premium / conversational / data-led / other",
+                "Logo, colours, fonts, Canva brand kit, and existing template link: [answer]",
+                "Preferred CTA: appraisal / call / reply / download / open-home conversation / other",
+                "Agent bio or sign-off: [answer]",
+                "Examples the agency likes and dislikes: [links or notes]",
+            ]),
+            ("Approval and automation", [
+                "Who checks the source ledger and market commentary? [answer]",
+                "Who gives final publish approval? [answer]",
+                "May the workflow create drafts automatically on the reporting date? yes / no",
+                "Where should drafts and source ledgers be saved? [Drive / Notion / other]",
+                "Confirm that no report, email, or post will be published automatically without named approval: yes / no",
+            ]),
+            ("Pre-flight approval checklist", [
+                "The suburb, audience, property types, reporting period, and cadence are approved.",
+                "The source preferences, metric definitions, brand assets, CTA, and restricted claims are recorded.",
+                "The agent understands AI creates a draft and every source is checked before delivery.",
+                "The approval owner and publish boundary are in writing.",
+                "Any extra suburb, custom source, rush delivery, or extra revision is separately scoped.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     return [
         ("How to use this form", [
             f"Send this form before starting the {pack.title.lower()} so the client provides {PACK_DELIVERABLES[pack.slug]}.",
@@ -2588,6 +2651,54 @@ def client_intake_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str
 
 
 def client_email_template_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    if pack.slug == "realtor-suburb-snapshot":
+        return [
+            ("How to use these emails", [
+                "Replace every bracketed field and mention one real suburb-specific observation.",
+                "Lead with the sample and the saved writing time, not with AI jargon or a broad social-media service.",
+                "Keep the first ask small: permission to send the one-page sample.",
+                "Never imply the report predicts prices, provides a valuation, or guarantees appraisals or listings.",
+            ]),
+            ("Cold outreach: sample-led", [
+                "Subject: made a one-page [SUBURB] snapshot",
+                "Hi [NAME], I noticed you are active around [SUBURB], but most of the local market content I found is spread across listing posts and broad updates.",
+                "I made a short [SUBURB] snapshot from dated public sources, then turned it into an email and three social angles. It is designed to be checked and approved quickly, not to make market predictions.",
+                "Want me to send the one-page sample?",
+            ]),
+            ("DM version", [
+                "Hi [NAME], quick one. I made a source-backed one-page [SUBURB] market snapshot that can also become an email and three posts. It is a sample, not a valuation or forecast. Want me to send it over?",
+            ]),
+            ("Sample delivery", [
+                "Subject: your [SUBURB] sample",
+                "Hi [NAME], here is the one-page sample. I included the source links and dates so you can see exactly where each figure came from.",
+                "For a paid version I would use your tone, CTA, approved sources, and branding, then send the report, email, and social copy together for approval.",
+                "The starter is [PRICE] for one suburb and one approval round. If that is useful, I can send the short scope.",
+            ]),
+            ("Client intake request", [
+                "Subject: five inputs for the first [SUBURB] report",
+                "Thanks for confirming. Please complete the intake form with the suburb, audience, reporting cadence, approved source preferences, agency tone, CTA, branding, and final approval owner.",
+                "You do not need to collect the public market figures. I will run the research workflow, verify the source ledger, and flag anything uncertain before it reaches you.",
+                "Once those inputs are approved, I will send the first draft by [DATE/TIME].",
+            ]),
+            ("Approval request", [
+                "Subject: [SUBURB] snapshot ready for approval",
+                "Hi [NAME], the draft report, source ledger, email, and social posts are ready. Please review the items marked [APPROVAL NEEDED], especially market commentary, brand wording, CTA, and contact details.",
+                "Reply APPROVED, CHANGES, or HOLD. Nothing will be published or sent to your audience until you approve it.",
+            ]),
+            ("Final delivery and renewal", [
+                "Subject: final [SUBURB] snapshot and next reporting date",
+                "Hi [NAME], attached are the approved report PDF, source ledger, email copy, and social posts. The editable design link is [LINK].",
+                "The next draft is scheduled for [DATE]. I will rerun the research, verify the citations, and send it back through the same approval step.",
+                "If you want to add [SECOND SUBURB] or extra content formats, I can quote that separately without changing the core workflow.",
+            ]),
+            ("Follow-up sequence", [
+                "Day 2: resend the sample with one specific local angle the agent could use this week.",
+                "Day 5: ask whether local market content is handled internally.",
+                "Day 10: offer the $99-$199 paid one-suburb starter rather than a retainer.",
+                "Day 21: close the loop politely and offer to send the source-and-approval checklist.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     return [
         ("How to use these emails", [
             "Replace every bracketed field with buyer-specific context before sending.",
@@ -2634,6 +2745,40 @@ def client_email_template_sections(pack: Pack, asset: Asset) -> list[tuple[str, 
 
 
 def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
+    if pack.slug == "realtor-suburb-snapshot":
+        return [
+            ("How to use these FAQs", [
+                "Use these answers in the proposal, checkout page, or sample-delivery email.",
+                "Keep the service positioned as source-backed content production with agent approval.",
+                "Adjust any licensing, advertising, or disclosure wording to local rules before publishing.",
+                "Add real objections from agent conversations as the offer develops.",
+            ]),
+            ("Buyer FAQs", [
+                "What do I receive? You receive a one-page suburb snapshot, source ledger, three talking points, one client email, three social posts, and an approval-ready handoff for the agreed suburb and reporting period.",
+                "Do I need to collect the data? No. The workflow uses a browsing-capable AI research agent to find and structure credible public information. The operator then opens and checks every cited source before the draft is sent to you.",
+                "Is the report written entirely by AI? AI handles the first research and production pass. A human verifies the source links and figures, removes unsupported claims, applies your brief, and prepares the report for your approval.",
+                "Can I choose the sources? Yes. The intake form records preferred and prohibited sources, metric definitions, property types, reporting periods, and any agency-specific requirements.",
+                "Is this a valuation, forecast, or investment report? No. It is public-source content support. It does not provide a valuation, appraisal, legal advice, investment advice, compliance advice, or a prediction of future market performance.",
+                "How current will the figures be? The report states the source date and reporting period for each figure. Stale, conflicting, paywalled, or inaccessible figures are flagged or removed rather than guessed.",
+                "How fast is delivery? A paid one-suburb sample can often be prepared within 48-72 hours after the brief is approved. Recurring delivery follows the weekly, fortnightly, or monthly date agreed in the scope.",
+                "How do approvals work? You receive the draft report, source ledger, email, and posts together. Nothing is published or sent to your audience until the named approval owner confirms the facts, commentary, branding, CTA, and channel.",
+                "Can this run automatically? The research and draft-production stage can be scheduled with an AI agent, Make, or Zapier. Source verification and final publishing approval remain human steps.",
+                "How do revisions work? The starter includes one approval round. Extra suburbs, new formats, custom data collection, rush work, or additional rounds are quoted separately.",
+                "Do you guarantee leads or listings? No. The service gives you a consistent local content asset. It does not guarantee enquiries, appraisals, listings, sales, reach, or revenue.",
+            ]),
+            ("Objection-handling notes", [
+                "We already receive market reports: position this as an agent-branded content layer that turns approved public data into a concise report, email, and social pack.",
+                "AI gets facts wrong: agree, then show the source ledger, verification statuses, human check, and named approval step.",
+                "We do not have time: the agent supplies the brief once, then reviews one bundled approval pack on a fixed date.",
+                "Compliance handles our content: make compliance or the principal the named approval owner and keep automated publishing off.",
+            ]),
+            ("Website preview copy", [
+                "A one-suburb content service built around one AI research run, one source ledger, one reusable design, and one human approval step.",
+                "The operator handles public-source research, verification, writing, and packaging. The agent approves the final market commentary before use.",
+                "Start with a paid sample, then schedule the next reporting date only after the handoff works.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     if pack.slug == "drone-roof-photo-inspection":
         return [
             ("How to use these FAQs", [
@@ -2704,6 +2849,53 @@ def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]
 def automation_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     buyer = pack.buyer
     service = pack.title.lower()
+    if pack.slug == "realtor-suburb-snapshot":
+        return [
+            ("The easiest reliable stack", [
+                "Research and drafting: ChatGPT, Claude, or another agent that can browse, open sources, and return direct citations.",
+                "Client control sheet: one row per client in Google Sheets, Airtable, Notion, or your CRM with suburb, reporting date, audience, sources, tone, CTA, folder, and approval owner.",
+                "Production: one reusable Canva or document template. The AI returns fixed fields so you paste or map the same blocks every run.",
+                "Automation: Make, Zapier, or an agent schedule creates the research draft, saves files, and prepares the approval email. Keep verification and publishing human-controlled.",
+            ]),
+            ("Minimum viable delivery loop", [
+                "1. Trigger: the client row reaches its next reporting date.",
+                "2. Research: the AI agent runs the one-prompt workflow for that suburb and reporting period.",
+                "3. Gate: the workflow stops if a required figure is unverified, conflicting, stale, or inaccessible.",
+                "4. Human verify: open the cited sources and approve or remove every proposed figure.",
+                "5. Package: map the verified fields into the report template and create the email and social files.",
+                "6. Client approve: prepare one bundled approval email; do not send or publish audience content automatically.",
+                "7. Repeat: after approval, update the next reporting date and retain the source ledger with the final files.",
+            ]),
+            ("Scheduled research-agent prompt", [
+                "Read this client configuration: [CLIENT ROW]. Research the latest available property market data for the configured suburb and reporting period using credible public sources you can open. Cite every figure with a direct URL, source name, reporting date, geography, property type, and metric definition. Label inaccessible, conflicting, stale, or uncertain figures UNVERIFIED and exclude them from client-facing copy. Do not estimate, forecast, value property, give investment advice, or promise leads. Produce a source ledger, one-page snapshot fields, three talking points, one client email, three social posts, and an approval list. Save the output to [CLIENT FOLDER] as [SUBURB]-draft-[REPORTING DATE]. Do not email, publish, or overwrite an approved file.",
+            ]),
+            ("Verification gate prompt", [
+                "Open every URL in this source ledger: [PASTE LEDGER]. Return one row per figure with PASS, FAIL, STALE, CONFLICT, or CANNOT ACCESS. Compare the exact source wording, period, geography, property type, and metric definition. Remove failed figures from the draft and list the remaining items for human verification. Do not invent a replacement number. If fewer than three useful figures pass, stop the workflow and request human review.",
+            ]),
+            ("Template mapping", [
+                "Require fixed output keys: headline, reporting_period, metric_1 through metric_4, summary, talking_point_1 through talking_point_3, source_footer, email, social_1 through social_3, agent_cta, approval_items.",
+                "Map only verified fields into the Canva, Google Docs, or document-generation template. Never let the layout step research or rewrite facts.",
+                "Export an approval PDF, preserve the editable template link, and save both beside the source ledger.",
+            ]),
+            ("Approval email draft", [
+                "Draft an email to [APPROVAL OWNER] for the [SUBURB] snapshot. Link the approval PDF, source ledger, email copy, and social copy. Summarise the reporting period and list only the items that need a decision. Ask for APPROVED, CHANGES, or HOLD. State clearly that nothing will be published before approval. Save as a draft; do not send.",
+            ]),
+            ("Monthly rerun rule", [
+                "After named approval, set next_reporting_date to the agreed cadence and duplicate the previous job as a new draft record.",
+                "Carry forward the client brief, source preferences, design template, CTA, and approval owner. Change only the reporting date and any newly approved campaign notes.",
+                "Never reuse last month's numbers or source dates. Every run creates a fresh source ledger.",
+            ]),
+            ("Lead-finding automation", [
+                "Once a week, research 10 active agents in [SUBURB] who post listings, open homes, or broad market updates but do not appear to publish a consistent source-backed suburb snapshot. Return agent, agency, visible evidence, profile URL, contact channel, and one specific sample angle. Do not scrape private data or send outreach.",
+                "For the three strongest prospects, draft a message under 70 words offering to send a one-page sample. Keep every message in drafts for human review.",
+            ]),
+            ("Failure and safety rules", [
+                "Stop when browsing is unavailable, a source cannot be opened, sources conflict materially, the requested copy sounds like a valuation or forecast, or the approval owner is missing.",
+                "Do not automate public posting, client-audience email sends, valuations, investment recommendations, appraisal claims, or guaranteed-performance language.",
+                "Log the model, run date, source URLs, verification result, human verifier, client approval, and final filename for every delivery.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     return [
         ("How to use these automations", [
             "Each automation below is a ready prompt you can paste into an AI agent (ChatGPT, Claude, or an agent platform) and run on a schedule.",
@@ -3632,7 +3824,9 @@ def sheet_xml(rows: list[list[Any]], sheet_name: str = "") -> str:
                      rowlabel=rowlabel)
             for c_idx, value in enumerate(row, start=1)
         )
-        height = 26 if r_idx == 1 else 42
+        longest_cell = max((len(str(value)) for value in row), default=0)
+        wrapped_lines = max(1, math.ceil(longest_cell / 62))
+        height = 26 if r_idx == 1 else min(240, max(42, 18 * (wrapped_lines + 1)))
         row_xml.append(f'<row r="{r_idx}" ht="{height}" customHeight="1">{cells}</row>')
     max_cols = max((len(row) for row in rows), default=1)
     max_rows = max(len(rows), 1)
@@ -4345,8 +4539,8 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
             "Profit Check": [
                 ["Metric", "Illustrative Value", "Formula/Note"],
                 ["Quote", "='Quote Builder'!B11", "From quote builder"],
-                ["Source research hours", 1.5, "Public data collection and source log"],
-                ["Writing hours", 1.5, "Snapshot, talking points, email intro, captions"],
+                ["AI research + verification hours", 0.75, "One-prompt research, citation checks, and source ledger"],
+                ["Production hours", 0.75, "Template, talking points, email, captions, and export"],
                 ["Approval/handoff hours", 0.75, "Client review notes and revisions"],
                 ["Total hours", "=B3+B4+B5", ""],
                 ["Software/tools", 10, "Use actual costs"],
@@ -4359,6 +4553,79 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Boundary", "This is content production using public sources. It does not include price predictions, appraisal advice, investment advice, legal advice, or guaranteed leads/listings."],
                 ["Approval", "You approve all market commentary, source references, compliance wording, and publish-ready content before use."],
                 ["Not included", "Ad management, CRM setup, private client data work, valuation advice, legal/compliance advice, and unapproved market claims are not included unless scoped separately."],
+            ],
+        }
+    if asset_id == "asset-realtor-report":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Complete AI Research Brief once for the client, then change only the reporting date and campaign notes on each run."],
+                [2, "Run the one-prompt workflow in a browsing-capable AI agent. Paste the source ledger and verified figures into this workbook."],
+                [3, "Open every cited source. Mark each row PASS, FAIL, STALE, CONFLICT, or CANNOT ACCESS before using a figure."],
+                [4, "Use Report Copy and Content Pack to prepare the approval PDF, email, and social posts. Nothing publishes before agent approval."],
+            ],
+            "AI Research Brief": [
+                ["Field", "Client value"],
+                ["Suburb", "Example Suburb, State/Region, Country"],
+                ["Reporting period", "Replace with current period"],
+                ["Audience", "Sellers / buyers / general local audience"],
+                ["Property types", "All residential unless client specifies"],
+                ["Preferred sources", "Government, industry, major listing platforms, approved local sources"],
+                ["Agency name", "Example Agency"],
+                ["Agent name", "Example Agent"],
+                ["Tone", "Plain, local, useful, not hyped"],
+                ["CTA", "Reply for a local appraisal conversation"],
+                ["Restricted claims", "No valuation, forecast, investment advice, or guaranteed leads"],
+                ["One-prompt instruction", "Research the latest available property market data for the configured suburb and reporting period using credible public sources you can open. Cite every figure with direct URL, date, geography, property type, and metric definition. Flag anything unverified and exclude it from client-facing copy. Then produce a source ledger, one-page snapshot, three talking points, one client email, and three social posts. Separate facts from commentary and do not forecast, value property, give investment advice, or promise leads."],
+            ],
+            "Source Ledger": [
+                ["Metric", "Proposed value", "Source name", "Direct URL", "Reporting period", "Definition", "Status", "Verifier note"],
+                ["Median sale price", "", "", "", "", "Median, property type", "Open", ""],
+                ["Listing or sales activity", "", "", "", "", "Define listing vs settled sale", "Open", ""],
+                ["Auction result", "", "", "", "", "Define geography and sample", "Open", ""],
+                ["Median rent", "", "", "", "", "Weekly asking rent and property type", "Open", ""],
+                ["Days on market", "", "", "", "", "Median or average", "Open", ""],
+                ["Other approved metric", "", "", "", "", "", "Open", ""],
+            ],
+            "Verified Inputs": [
+                ["Field", "Current", "Previous", "Change", "Source row", "Approved?"],
+                ["Median sale price", "", "", '=IF(OR(B2="",C2=""),"",B2-C2)', "Source Ledger row", "No"],
+                ["Listings or sales", "", "", '=IF(OR(B3="",C3=""),"",B3-C3)', "Source Ledger row", "No"],
+                ["Median rent", "", "", '=IF(OR(B4="",C4=""),"",B4-C4)', "Source Ledger row", "No"],
+                ["Days on market", "", "", '=IF(OR(B5="",C5=""),"",B5-C5)', "Source Ledger row", "No"],
+            ],
+            "Report Copy": [
+                ["Block", "Approved copy", "Limit / note"],
+                ["Headline", "[Suburb] market snapshot", "One line"],
+                ["Reporting period", "", "Match source periods"],
+                ["Metric card 1", "", "Verified figure only"],
+                ["Metric card 2", "", "Verified figure only"],
+                ["Metric card 3", "", "Verified figure only"],
+                ["Metric card 4", "", "Verified figure only"],
+                ["Plain-English summary", "", "60 words; facts separate from commentary"],
+                ["Talking point 1", "", "No forecast"],
+                ["Talking point 2", "", "No valuation"],
+                ["Talking point 3", "", "No investment advice"],
+                ["Agent CTA", "", "Approved CTA only"],
+                ["Source footer", "", "Source names, periods, access date"],
+            ],
+            "Content Pack": [
+                ["Asset", "Copy", "Approval status"],
+                ["Client email subject", "", "Draft"],
+                ["Client email body", "", "Draft"],
+                ["Social post 1 - seller angle", "", "Draft"],
+                ["Social post 2 - buyer angle", "", "Draft"],
+                ["Social post 3 - local conversation", "", "Draft"],
+                ["30-second video script", "", "Optional"],
+            ],
+            "Approval Log": [
+                ["Item", "Owner", "Status", "Date", "Notes"],
+                ["Source ledger and figures", "Operator", "Open", "", "Every URL opened"],
+                ["Market commentary", "Agent / principal", "Open", "", ""],
+                ["Brand, CTA, and contact details", "Agent", "Open", "", ""],
+                ["Report PDF", "Agent / principal", "Open", "", ""],
+                ["Email and social copy", "Agent / principal", "Open", "", ""],
+                ["Next reporting date", "Operator", "Open", "", ""],
             ],
         }
     return {
@@ -4509,10 +4776,19 @@ def make_xlsx(path: Path, pack: Pack, asset: Asset) -> None:
 </styleSheet>""")
 
 
-def generate() -> list[dict[str, Any]]:
+def generate(pack_slug: str | None = None) -> list[dict[str, Any]]:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    selected_packs = [pack for pack in PACKS if pack_slug is None or pack.slug == pack_slug]
+    if pack_slug and not selected_packs:
+        raise ValueError(f"Unknown pack slug: {pack_slug}")
+
+    manifest_path = OUT_DIR / "manifest.json"
     manifest: list[dict[str, Any]] = []
-    for pack in PACKS:
+    if pack_slug and manifest_path.exists():
+        current = json.loads(manifest_path.read_text())
+        manifest = [item for item in current if item.get("packSlug") != pack_slug]
+
+    for pack in selected_packs:
         pack_dir = OUT_DIR / pack.slug
         pack_dir.mkdir(parents=True, exist_ok=True)
         for asset in pack.assets:
@@ -4538,10 +4814,20 @@ def generate() -> list[dict[str, Any]]:
                 "filename": filename,
                 "bytes": path.stat().st_size,
             })
-    (OUT_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+
+    pack_order = {pack.slug: index for index, pack in enumerate(PACKS)}
+    asset_order = {
+        asset.id: index
+        for pack in PACKS
+        for index, asset in enumerate(pack.assets)
+    }
+    manifest.sort(key=lambda item: (pack_order[item["packSlug"]], asset_order[item["id"]]))
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest
 
 
 if __name__ == "__main__":
-    generated = generate()
-    print(f"Generated {len(generated)} assets in {OUT_DIR}")
+    requested_slug = sys.argv[1] if len(sys.argv) > 1 else None
+    generated = generate(requested_slug)
+    label = requested_slug or "all packs"
+    print(f"Generated assets for {label}; manifest contains {len(generated)} assets")

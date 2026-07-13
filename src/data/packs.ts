@@ -193,7 +193,7 @@ const basePacks: BusinessPack[] = [
     featured: true,
     popularityScore: 94,
     publishedAt: "2026-06-17",
-    updatedAt: "2026-07-11",
+    updatedAt: "2026-07-13",
     assets: [
       { id: "asset-powerwash-outreach", title: "Power Washing Outreach Scripts", type: "DOCX", description: "Door-hanger, neighbour note, DM, email, call, and follow-up scripts built around visible before-and-after proof." },
       { id: "asset-powerwash-pricing", title: "Power Washing Quote Calculator", type: "XLSX", description: "Starter, standard, add-on, travel, surface-risk, and recurring maintenance quote builder." },
@@ -352,31 +352,31 @@ const basePacks: BusinessPack[] = [
   {
     slug: "realtor-suburb-snapshot",
     title: "Realtor Suburb Snapshot Reports",
-    hook: "Real estate agents need local content every week.",
-    seoTitle: "Realtor Suburb Snapshot Pack | Report and Pitch Scripts",
+    hook: "Turn one suburb and one AI prompt into a report agents can publish.",
+    seoTitle: "AI Realtor Suburb Snapshot Pack | Reports, Prompts and Pricing",
     seoDescription:
-      "Start a suburb snapshot service with an agent pitch, report template, pricing calculator, source checklist, prompts, intake form, and client emails.",
+      "Start an AI-assisted suburb report service with a one-prompt workflow, report template, agent pitch, pricing calculator, source checks, automations, and client emails.",
     category: "B2B Service",
     buyer: "Real estate agents",
     startupCost: "$0",
     timeToFirstSale: "2-4 weeks",
     difficulty: "Medium",
-    summary: "A recurring local market snapshot agents can post, email, or use in lead nurture.",
-    whyItWorks: "Agents already pay for local positioning and lead generation; suburb-specific reports are repeatable.",
-    firstSteps: ["Choose one suburb", "Create a sample report", "Pitch local agents"],
-    caveat: "Use public data carefully and cite sources.",
+    summary: "An AI-assisted local market report service that turns public sources into an approval-ready one-page snapshot, email, and social content.",
+    whyItWorks: "Agents need fresh local content, while an AI agent can research, cite, draft, and repackage one suburb in a repeatable workflow.",
+    firstSteps: ["Choose one active suburb", "Run the one-prompt research workflow", "Verify and pitch the sample"],
+    caveat: "AI speeds up the work. You still verify every source and get agent approval.",
     popularityScore: 86,
     publishedAt: "2026-06-04",
     updatedAt: "2026-07-11",
     assets: [
-      { id: "asset-realtor-report", title: "Suburb Snapshot Template", type: "XLSX", description: "A repeatable structure for local market summaries." },
+      { id: "asset-realtor-report", title: "Suburb Snapshot Template", type: "XLSX", description: "An AI research brief, source ledger, report builder, content pack, and approval log for repeatable local market reports." },
       { id: "asset-realtor-pitch", title: "Agent Pitch Script", type: "DOCX", description: "Outreach script for agents and principals." },
       { id: "asset-realtor-approval", title: "Source and Approval Delivery Checklist", type: "PDF", description: "A source, fact, claim, approval, export, and handoff checklist for every suburb snapshot." },
       { id: "asset-realtor-pricing", title: "Suburb Snapshot Pricing Calculator", type: "XLSX", description: "Sample, weekly, and monthly retainer pricing with quote builder, source-scope guardrails, and compliance-safe proposal copy." },
-      { id: "asset-realtor-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for suburb summaries, agent content, source-safe commentary, and appraisal lead nurture." },
-      { id: "asset-realtor-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for suburbs, data sources, agency tone, compliance, and cadence." },
-      { id: "asset-realtor-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for agent outreach, sample delivery, source requests, weekly handoff, and renewal." },
-      { id: "asset-realtor-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing FAQs for source use, compliance, market commentary limits, cadence, and deliverables." },
+      { id: "asset-realtor-prompts", title: "AI Prompt Pack", type: "DOCX", description: "A one-prompt research-and-production workflow plus verification, Canva handoff, content, and delivery prompts." },
+      { id: "asset-realtor-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake for suburb scope, source rules, report cadence, branding, automation, and named approval." },
+      { id: "asset-realtor-email-templates", title: "Client Email Templates", type: "DOCX", description: "Finished emails and DMs for sample-led outreach, intake, approval, delivery, and recurring reports." },
+      { id: "asset-realtor-faqs", title: "Client FAQs", type: "DOCX", description: "Buyer-facing answers on AI research, source verification, report limits, approvals, automation, and deliverables." },
     ],
   },
   {
@@ -1141,23 +1141,23 @@ export const packPageDetails: Record<string, PackPageDetail> = {
   },
   "realtor-suburb-snapshot": {
     problem:
-      "Real estate agents need weekly local content, but many posts are generic, reactive, or not backed by useful suburb-specific data. Sellers and buyers want local context, while agents need repeatable material for social, email, and lead nurture.",
+      "Real estate agents need regular local content, but many posts are generic, reactive, or not backed by useful suburb-specific data. Sellers and buyers want local context, while agents do not want another research job on their calendar.",
     solution:
-      "You create a weekly suburb snapshot that turns public market data into plain-English talking points, social captions, email copy, and follow-up prompts.",
+      "You use a browsing-capable AI agent to research one suburb, cite every figure, flag uncertainty, and turn the result into a one-page report, client email, and social posts in one run. You verify the sources, apply the agent's branding, and send it for approval.",
     delivery:
-      "Choose one suburb, collect public data with sources, summarize movements carefully, write three talking points, and package the snapshot into content formats the agent can publish after approval.",
+      "Enter the suburb, reporting period, audience, and approved source preferences once. The AI agent researches and drafts the whole content pack, you open each cited source and check every number, then place the approved copy into the report template or Canva design. A scheduled monthly or weekly trigger can prepare the next draft automatically while keeping human approval before publishing.",
     firstClients:
       "Target agents who post regularly but lack consistent suburb-specific analysis. Send a one-page sample for their core suburb.",
     startableOffer:
-      "A weekly suburb snapshot for one agent, with sourced local notes, three plain-English talking points, one email intro, and two social captions for approval.",
+      "A paid AI-assisted snapshot for one suburb, with a one-page report, source ledger, three plain-English talking points, one client email, three social posts, and one approval round.",
     publicPreview: {
       title: "Free preview: suburb content sample check",
       intro:
         "Use this check before pitching an agent. It keeps the sample useful, source-backed, and small enough that you are not doing a full weekly report for free.",
       steps: [
         "Suburb lane: choose one suburb the agent already farms through listings, open homes, appraisal content, or local social posts.",
-        "Source note: collect two or three public data points with source names and dates. If a metric is missing, say so instead of guessing.",
-        "Sample output: write one talking point, one email intro, and one caption for approval. Do not predict prices, appraisals, yields, listings, or leads.",
+        "AI run: ask a browsing-capable model to research the latest credible public figures, cite every number, flag anything it cannot verify, and produce the report, email, and social copy in one response.",
+        "Human check: open every cited source, verify the reporting period and metric definition, then send only a small approved sample. Do not predict prices, appraisals, yields, listings, or leads.",
       ],
       lockedAssetTease:
         "Members get the suburb snapshot workbook, agent pitch script, pricing calculator, prompt pack, intake form, client emails, FAQs, and automation prompts.",
@@ -1165,27 +1165,28 @@ export const packPageDetails: Record<string, PackPageDetail> = {
     whyDetails: [
       "Agents already pay for positioning and content; this gives them a recurring local asset.",
       "The deliverable is repeatable by suburb, agency, or agent pod.",
+      "A single research-and-production prompt removes most of the manual collection and first-draft work.",
       "Source discipline makes the service feel professional and reduces risk around unsupported market claims.",
       "A fixed pricing ladder makes the first sale easier because agents can buy one sample before committing to weekly local content.",
     ],
     firstMoveAnalysis: [
       "Do not pitch national market commentary. Pick one suburb and one agent's existing audience.",
-      "Use sources and dates. If a metric is missing, say so rather than guessing.",
+      "Let the AI agent collect and structure public data, then personally open the citations and verify every figure before delivery.",
       "Make the output immediately publishable: one snapshot, one email intro, two captions.",
       "Sell a one-suburb sample first, then move to a four-week content retainer once the agent sees the handoff and approval workflow.",
     ],
     launchSprintDetails: [
-      "Week 1: build one source-backed sample for a suburb with active agents.",
-      "Week 1-2: pitch 25 agents or principals with the sample.",
-      "Week 2-3: deliver one paid weekly snapshot and get approval feedback.",
-      "Week 4: propose a four-week content retainer for one suburb.",
+      "Day 1: choose one active suburb and run the one-prompt research workflow.",
+      "Day 2: verify the citations, style the one-page sample, and list 20 local agents.",
+      "Days 3-5: send five sample-led messages per day and offer the paid $99-$199 starter.",
+      "After the first delivery: propose a monthly or four-week retainer and schedule the next draft trigger.",
     ],
     firstTenLeadsPlan: [
       "Choose one suburb with active listings, recent sales, and several agents posting online.",
       "List 10 agents who consistently post listings, auctions, open homes, or market updates.",
       "Skip agents who already publish polished data-backed suburb reports every week.",
       "For each lead, identify their core suburb and one missing content angle buyers or sellers would care about.",
-      "Build one sample snapshot using public sources and include source names or dates.",
+      "Run the one-prompt AI workflow for the strongest lead, then open and verify every cited source.",
       "Write one email intro and two caption options in the agent's likely tone.",
       "Send the sample with a fixed weekly snapshot offer for one suburb.",
       "Avoid unsupported market predictions. Make it clear that the agent approves all commentary before publishing.",
