@@ -347,8 +347,8 @@ PACKS: list[Pack] = [
     ),
     Pack(
         "review-testimonial-service",
-        "Review Reply + Testimonial Clips",
-        "Turn boring customer reviews into sales assets.",
+        "AI Review Repurposing Service",
+        "Turn one customer review into replies, website proof, email copy, and social content.",
         "B2B Service",
         "Local businesses",
         "$1-$50",
@@ -361,6 +361,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-reviews-replies", "Review Reply Swipe File", "DOCX", "Tone-safe reply examples for positive and negative reviews."),
             Asset("asset-reviews-cards", "Testimonial Card Specs", "PDF", "Formats for turning reviews into social proof graphics."),
+            Asset("asset-reviews-pricing", "Review Service Pricing Calculator", "XLSX", "Starter batch, monthly reply, proof asset, and retainer pricing with quote builder and scope guardrails."),
             Asset("asset-reviews-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for review replies, testimonial extraction, trust-card copy, and escalation-safe language."),
             Asset("asset-reviews-intake", "Client Intake Form", "DOCX", "Editable intake questions for review platforms, reply tone, escalation rules, proof claims, and design approvals."),
             Asset("asset-reviews-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for local business outreach, review approval, monthly delivery, escalation notes, and testimonial usage."),
@@ -733,6 +734,14 @@ ASSET_POLISH_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Use one quote, one proof context, and one business mark per card.",
             "Keep typography large enough for mobile feeds.",
             "File naming: review-source_claim-format_date.",
+        ]),
+    ],
+    "asset-reviews-pricing": [
+        ("Pricing calibration", [
+            "Price the first sample as a small paid decision tool, not a full reputation-management engagement.",
+            "Raise price when the owner needs multiple locations, several platforms, old review backlogs, design production, or more than one approval stakeholder.",
+            "Keep sensitive complaints, legal claims, medical claims, staff allegations, refunds, and crisis responses outside the standard batch.",
+            "Sell the monthly retainer only after the owner approves the tone, escalation rules, proof permissions, and fixed review volume.",
         ]),
     ],
     "asset-manual-score": [
@@ -2604,6 +2613,49 @@ def client_intake_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str
             ]),
             shared_standard_pointer(pack),
         ]
+    if pack.slug == "review-testimonial-service":
+        return [
+            ("The simplest reliable stack", [
+                "Review source: the client's approved Google Business Profile, Facebook page, marketplace profile, or exported review list.",
+                "Control sheet: one row per review with source URL, date, rating, sentiment, reply status, escalation status, exact quote, approved use, and final asset links.",
+                "Production: one reply template library and one original Canva system for square, story, website, and email proof blocks.",
+                "Automation: a scheduled AI routine can classify, draft, extract, and bundle. A named human still approves every public reply and proof asset before use.",
+            ]),
+            ("Minimum viable weekly loop", [
+                "1. Collect: import only new reviews from the agreed public sources or client export.",
+                "2. Classify: mark positive, neutral, routine negative, or escalate before drafting.",
+                "3. Draft: prepare a short owner-voice reply using only approved business facts.",
+                "4. Extract: copy the strongest customer phrase exactly and retain its source URL.",
+                "5. Gate: stop on privacy, safety, medical, legal, discrimination, refund, staff, or disputed-fact issues.",
+                "6. Approve: send one batch to the named owner for reply and testimonial-use approval.",
+                "7. Package: map approved wording into social, website, email, and sales-graphic copy blocks.",
+            ]),
+            ("Scheduled review sweep prompt", [
+                "Review the new items in [APPROVED REVIEW EXPORT OR LINKS] for [BUSINESS]. Return one row per review with source URL, review date, rating, sentiment, reply priority, sensitive-risk flag, short reply draft, exact customer quote worth reusing, and suggested proof format. Use only words and facts present in the review or approved business brief. Do not browse for private information, invent context, post replies, contact reviewers, or create unsupported claims. Mark legal, medical, safety, discrimination, privacy, staff, refund, threat, or disputed-fact content ESCALATE and provide no public reply beyond a neutral owner-review note.",
+            ]),
+            ("Exact-quote and permission gate", [
+                "Compare every proposed testimonial line against its source review. Return PASS only when the wording is exact or clearly marked as an owner-approved edit.",
+                "Record the source URL, reviewer display name as allowed by platform rules, original wording, proposed crop, context kept, intended channel, and owner approval status.",
+                "Do not shorten wording in a way that changes meaning. Do not imply a result, timeframe, product, location, or customer identity that the review does not support.",
+                "Hold every proof asset until the owner confirms the business can reuse the review and approves the final wording and design context.",
+            ]),
+            ("Monthly content pack prompt", [
+                "Using only the rows marked APPROVED in [CONTROL SHEET], prepare this month's client pack. Include the approved reply drafts, five strongest exact quotes, four social captions, four website proof blocks, four email proof lines, and Canva-ready copy for square and story cards. Label each item with its source URL and approval record. Do not reuse held, disputed, sensitive, or unapproved material. End with an activity summary showing reviews processed, replies approved, items escalated, and proof blocks produced. Do not claim rating, ranking, lead, booking, or revenue impact.",
+            ]),
+            ("Approval email draft", [
+                "Draft one email to [APPROVAL OWNER] linking the review log and content pack. Group items into APPROVE, EDIT, and HOLD. List sensitive items separately with no recommendation beyond owner review. Ask the owner to confirm the reply wording, testimonial-use permission, business facts, design context, and channels before anything is posted. Save as a draft and do not send.",
+            ]),
+            ("First 20 leads routine", [
+                "Once a week, review 20 public local-business profiles in [AREA OR NICHE]. Return only businesses with strong recent reviews plus visible reply gaps or unused proof. For each, record the public profile URL, two specific observations, one safe three-review sample angle, and the best public contact channel. Do not collect private data or send outreach.",
+                "For the five strongest prospects, draft a message under 70 words offering a three-review sample. Mention one real visible pattern, not AI. Keep every message in drafts for human review.",
+            ]),
+            ("Failure and safety rules", [
+                "Stop when the review source cannot be verified, wording is ambiguous, a complaint includes sensitive claims, owner approval is missing, or reuse rights are unclear.",
+                "Do not automate public posting, reviewer contact, review requests, review gating, incentives, removals, dispute submissions, crisis replies, or testimonial publishing.",
+                "Log the source, run date, draft, risk decision, human approver, approved wording, intended channel, and final filename for every item.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     return [
         ("How to use this form", [
             f"Send this form before starting the {pack.title.lower()} so the client provides {PACK_DELIVERABLES[pack.slug]}.",
@@ -3986,6 +4038,66 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Boundary", "This is a profile clarity and trust-signal cleanup. It does not guarantee rankings, calls, reviews, or revenue."],
                 ["Approval", "You approve categories, services, hours, service areas, photos, FAQs, and any review-request wording before use."],
                 ["Not included", "SEO campaigns, ads, review gating, legal/compliance advice, photography, website edits, and ongoing management are not included unless scoped separately."],
+            ],
+        }
+    if asset_id == "asset-reviews-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Choose the smallest package that matches the visible review backlog and approval complexity."],
+                [2, "Use Quote Builder for one business. Edit only the input values in column B."],
+                [3, "Check Scope Guardrails before sending a proposal or drafting a sensitive response."],
+                [4, "Offer the monthly retainer only after the owner approves the reply tone and proof-use rules."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "Price", "Best For", "Notes"],
+                ["Three-Review Sample", "3 reply drafts, 1 escalation note, 1 testimonial reuse concept", 99, "First paid test", "Use public review wording only"],
+                ["Review Hygiene Sprint", "Up to 20 replies, escalation log, 5 proof quotes, 3 card copy blocks", 399, "Most local businesses", "Core starter offer"],
+                ["Proof Asset Add-On", "5 approved quote blocks for social, website, or email", 175, "Businesses with strong reviews", "Copy only, not finished graphic design"],
+                ["Monthly Trust Retainer", "Up to 25 replies, approval round, proof copy, monthly summary", 449, "Steady review volume", "Fixed monthly cadence"],
+                ["Extra Location", "Separate tone rules, approval log, and review batch for one location", 225, "Multi-location operators", "Per location"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base package price", 399],
+                ["Reviews requested", 28],
+                ["Reviews included", 20],
+                ["Price per extra review", 12],
+                ["Extra proof asset blocks", 3],
+                ["Price per extra proof block", 25],
+                ["Extra locations", 1],
+                ["Price per extra location", 225],
+                ["Rush fee", 75],
+                ["Estimated quote", "=B2+MAX(0,B3-B4)*B5+B6*B7+B8*B9+B10"],
+                ["Deposit due at 50%", "=B11*0.5"],
+            ],
+            "Scope Guardrails": [
+                ["Scope Item", "Included?", "Notes"],
+                ["Replies to routine positive and neutral reviews", "Yes", "Owner-approved tone and business facts"],
+                ["Drafts for ordinary negative reviews", "Yes", "Move details to a private channel"],
+                ["Exact approved testimonial quote extraction", "Yes", "Keep a source link and approval record"],
+                ["Simple quote-card copy blocks", "Yes", "Design production is separate unless scoped"],
+                ["Legal, medical, safety, discrimination, privacy, or staff allegations", "No", "Escalate to the owner or qualified adviser"],
+                ["Fake reviews, invented claims, review gating, or incentives", "No", "Never offer or imply these"],
+                ["Ranking, rating, lead, booking, or revenue guarantees", "No", "Sell consistent handling and proof reuse only"],
+            ],
+            "Profit Check": [
+                ["Metric", "Illustrative Value", "Formula/Note"],
+                ["Quote", "='Quote Builder'!B11", "From quote builder"],
+                ["Review audit hours", 1.5, "Read, classify, and flag escalation items"],
+                ["Reply drafting hours", 2.5, "Draft routine replies only"],
+                ["Proof asset and handoff hours", 1.5, "Extract, approve, and package quote blocks"],
+                ["Total hours", "=B3+B4+B5", ""],
+                ["Software and design costs", 15, "Replace with actual costs"],
+                ["Gross before time", "=B2-B7", ""],
+                ["Hourly gross", "=IF(B6=0,\"\",B8/B6)", ""],
+            ],
+            "Proposal Copy": [
+                ["Section", "Client-facing copy"],
+                ["Scope", "I will draft the agreed review batch, flag sensitive items, extract approved customer proof, and provide the handoff files listed in the quote."],
+                ["Approval", "You approve all public replies, testimonial wording, business facts, and proof assets before they are posted or published."],
+                ["Boundary", "This service improves consistency and proof reuse. It does not guarantee ratings, rankings, reviews, leads, bookings, or revenue."],
+                ["Not included", "Crisis communications, legal responses, medical or regulated claims, review removal, fake reviews, incentives, platform disputes, and finished graphic design are not included unless separately reviewed and scoped."],
             ],
         }
     if asset_id == "asset-airbnb-photo-pricing":

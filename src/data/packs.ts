@@ -408,11 +408,11 @@ const basePacks: BusinessPack[] = [
   },
   {
     slug: "review-testimonial-service",
-    title: "Review Reply + Testimonial Clips",
-    hook: "Turn boring customer reviews into sales assets.",
-    seoTitle: "Review Reply and Testimonial Clips Launch Pack | Swipe File and Specs",
+    title: "AI Review Repurposing Service",
+    hook: "Turn one customer review into replies, website proof, email copy, and social content.",
+    seoTitle: "AI Review Repurposing Service Pack | Pricing and Scripts",
     seoDescription:
-      "Start a review reply and testimonial asset service with reply swipe file, testimonial card specs, client intake form, approval emails, and AI prompts.",
+      "Start a review reply and testimonial asset service with a pricing calculator, reply scripts, testimonial card specs, client intake, approval emails, and AI prompts.",
     category: "B2B Service",
     buyer: "Local businesses",
     startupCost: "$1-$50",
@@ -424,9 +424,11 @@ const basePacks: BusinessPack[] = [
     caveat: "Do not invent claims; only repackage real customer language.",
     popularityScore: 82,
     publishedAt: "2026-06-02",
+    updatedAt: "2026-07-14",
     assets: [
       { id: "asset-reviews-replies", title: "Review Reply Swipe File", type: "DOCX", description: "Tone-safe reply examples for positive and negative reviews." },
       { id: "asset-reviews-cards", title: "Testimonial Card Specs", type: "PDF", description: "Formats for turning reviews into social proof graphics." },
+      { id: "asset-reviews-pricing", title: "Review Service Pricing Calculator", type: "XLSX", description: "Starter batch, monthly reply, proof asset, and retainer pricing with quote builder and scope guardrails." },
       { id: "asset-reviews-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for review replies, testimonial extraction, trust-card copy, and escalation-safe language." },
       { id: "asset-reviews-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for review platforms, reply tone, escalation, claims, and design approvals." },
       { id: "asset-reviews-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for outreach, review approval, monthly delivery, escalation notes, and testimonial usage." },
@@ -1250,6 +1252,25 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Find local businesses with recent reviews and inconsistent responses. Send two sample replies and one testimonial card idea using only approved public review language.",
     startableOffer:
       "A monthly review hygiene sprint with reply drafts, escalation notes, testimonial quote extraction, and simple card copy using only real customer language.",
+    publicPreview: {
+      title: "Free preview: three-review trust audit",
+      intro:
+        "Use this small audit to make the service tangible without writing a full month of replies for free.",
+      steps: [
+        "Choose three recent public reviews: one positive review, one neutral review, and one review that needs a careful owner response.",
+        "Draft one short reply for each. Keep private details out, flag sensitive complaints for owner review, and never invent what happened.",
+        "Pull one exact customer phrase from the positive review and show how it could become a quote card, website proof block, or sales email line after approval.",
+      ],
+      lockedAssetTease:
+        "Members get the reply swipe file, pricing calculator, testimonial card specs, intake form, approval emails, FAQs, AI prompts, and scheduled review workflows.",
+    },
+    outreachPreview: {
+      title: "Sample owner message",
+      copy:
+        "Hi [Name], I noticed you have strong recent reviews, but a few are unanswered and the best customer language is not being reused anywhere. I drafted three sample replies and one quote-card idea using only public review wording. Want me to send the one-page audit?",
+      note:
+        "Replace the brackets and refer to a real public pattern. Do not send a generic reputation-management pitch or promise better rankings, reviews, or revenue.",
+    },
     whyDetails: [
       "Reviews are already proof; the business just has not operationalized them.",
       "The monthly cadence matches how reviews arrive over time.",
@@ -1265,6 +1286,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Day 2: create 5 sample reply packs and testimonial card concepts.",
       "Day 3-5: pitch a monthly review hygiene and testimonial service.",
       "Day 6-7: deliver one batch: replies, escalation log, extracted claims, and card specs.",
+    ],
+    offerLadder: [
+      { name: "Three-review sample", price: "$75-$150", detail: "Three reply drafts, one escalation note, and one approved testimonial reuse concept." },
+      { name: "Review hygiene sprint", price: "$250-$550", detail: "Up to 20 review replies, escalation log, five proof quotes, and three testimonial card copy blocks." },
+      { name: "Monthly trust asset retainer", price: "$250-$500 / month", detail: "A fixed monthly review batch, owner approval round, proof asset copy, and a simple activity summary without outcome guarantees." },
     ],
     firstTenLeadsPlan: [
       "List 10 local businesses with recent Google reviews, Facebook reviews, or marketplace reviews.",
@@ -1611,6 +1637,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX swipe file for review replies with positive, neutral, negative, escalation, privacy, testimonial extraction, and public tone rules.",
   "asset-reviews-cards":
     "A PDF testimonial card spec covering square, story, and website banner layouts, quote limits, source context, file naming, and production standards.",
+  "asset-reviews-pricing":
+    "An XLSX pricing workbook with three-review sample, review hygiene sprint, monthly retainer, extra reply, and extra proof asset pricing, plus a quote builder, scope guardrails, profit check, and claim-safe proposal wording.",
   "asset-reviews-prompts":
     "A DOCX AI prompt pack for review and testimonial services, including reply prompts, escalation prompts, testimonial extraction prompts, social proof copy prompts, and monthly content-plan prompts.",
   "asset-reviews-intake":
