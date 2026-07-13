@@ -29,6 +29,178 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "google-review-response-templates-for-small-businesses",
+    title: "Google Review Response Templates for Small Businesses",
+    seoTitle: "Google Review Response Templates for Small Businesses (2026)",
+    description:
+      "Use practical Google review response templates for positive, mixed, and negative feedback, plus a safe approval workflow and first-client service plan.",
+    category: "B2B Service",
+    publishedAt: "2026-07-14",
+    updatedAt: "2026-07-14",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
+    shortAnswer:
+      "A useful Google review response is short, specific, calm, and approved by the business. Mention one real detail from the review, add only facts the owner has confirmed, and move complaints involving private information or disputes into a private channel. If you sell this as a service, start with one local business category, three sample replies, a fixed batch of 10 to 20 drafts, and an owner approval queue.",
+    keyPoints: [
+      "Use templates as a starting structure, then customise one detail from the real review.",
+      "Keep public replies short and professional, without stuffing in offers, keywords, or private customer details.",
+      "Send complaints involving injury, refunds, discrimination, staff allegations, legal claims, or safety issues to the owner before drafting or publishing.",
+      "A practical starter service can include a review audit, tone guide, 10 to 20 reply drafts, one approval round, and a reply tracker.",
+      "Never write fake customer reviews, reward positive sentiment, suppress genuine criticism, or promise ratings, rankings, leads, or revenue.",
+    ],
+    body: [
+      {
+        heading: "Who these review response templates are for",
+        paragraphs: [
+          "These templates are for small business owners and beginners who want to sell a review reply service. The cleanest businesses to practise on are cafes, salons, gyms, cleaners, mechanics, trades, accommodation operators, and other local businesses with a steady flow of genuine public reviews.",
+          "The problem is not a lack of clever words. It is a lack of time, consistency, and a safe approval process. A useful service turns incoming reviews into short drafts, flags risky cases, gets the owner to approve the wording, and records what was published.",
+          "Google says replies are public and recommends keeping them clear, helpful, polite, short, and relevant. Use the structures below as starting points. Change the detail, tone, sign-off, and next step for the actual business and review before anything goes live.",
+        ],
+      },
+      {
+        heading: "Use a simple three-part reply structure",
+        paragraphs: [
+          "Most straightforward replies only need three parts: acknowledge the customer's point, mention one specific detail, and close naturally. Example: Thanks, Mia. Glad the dairy-free options were easy to navigate and that the iced latte landed well. I will pass that on to the Saturday team.",
+          "The specific detail is what stops the reply sounding copied. It might be the service used, staff member praised, product ordered, problem raised, visit timing, or result the customer described. Do not add a detail that is not in the review or confirmed by the owner.",
+          "Skip the miniature sales pitch. The person has already bought. A public reply should show that the business listened, not wedge a discount code, list of services, suburb keywords, and booking link into every thank-you.",
+        ],
+      },
+      {
+        heading: "Positive Google review response templates",
+        paragraphs: [
+          "For a detailed positive review: Thanks, [name]. Glad [specific part of the experience] made the visit easier. I will share your note about [staff member, product, or service] with the team. We appreciate you taking the time to be specific.",
+          "For praise about a staff member: Thanks, [name]. It is great to hear [staff member] helped with [specific need]. I will make sure they see your feedback. Thanks for choosing us for [service or visit type]. Only name a staff member when the review already does so and the business is comfortable repeating it.",
+          "For a returning customer: Thanks for coming back, [name]. We are glad [specific product or service] was consistent again. Your note means a lot to the team, and we look forward to helping next time. Avoid claiming how long they have been a customer unless the owner can verify it.",
+        ],
+      },
+      {
+        heading: "Short and no-text review response templates",
+        paragraphs: [
+          "For a five-star rating with no written comment: Thanks for the rating, [name]. We appreciate you choosing [business name or service]. Keep this one simple because the customer did not give you a detail to reflect back.",
+          "For a short comment such as great service: Thanks, [name]. Glad the team made [visit, booking, repair, or order] straightforward. We appreciate the feedback. Customise the middle phrase to something the business knows happened.",
+          "You do not need to answer every rating with the same sentence. If a business receives high review volume, prioritise replies where you can answer a question, acknowledge a useful detail, clarify a process, or handle a concern. Agree the reply frequency with the owner before selling the batch.",
+        ],
+      },
+      {
+        heading: "Mixed review response templates",
+        paragraphs: [
+          "For a review with praise and a small complaint: Thanks, [name]. We are glad [positive detail] went well, and we appreciate the note about [concern]. We are reviewing that with the team so the next visit is smoother. Only say the issue is being reviewed when the owner has agreed to do that.",
+          "For a delay: Thanks for flagging the wait, [name]. That is longer than we aim for. If you are open to it, please contact [approved channel] with the visit date so the manager can check what happened. Do not ask the customer to post an order number, phone number, address, medical detail, or other private information in public.",
+          "For a product or service mismatch: Thanks, [name]. It sounds like [brief neutral description] did not match what you expected. Please contact [approved channel] so we can confirm the details and explain the available next step. Do not promise a refund, replacement, fix, or outcome unless the owner has approved it.",
+        ],
+      },
+      {
+        heading: "Negative review response templates",
+        paragraphs: [
+          "For a routine complaint: Thanks for raising this, [name]. We are sorry the experience fell short, particularly around [specific issue]. Please contact [manager or approved channel] with [minimal information needed] so the team can look into it and respond privately.",
+          "For a review the owner disputes: Thanks for the feedback, [name]. We want to understand the details before responding further. Please contact [approved channel] with the date and service involved so the owner can review the record. Keep the public reply neutral. Do not accuse the reviewer of lying or reveal customer records to win an argument.",
+          "For a suspected policy violation: Thanks for bringing this to our attention. We are checking the details through the appropriate process. The owner should decide whether to reply, flag the review, or both. Google says a negative review is not removable merely because a business dislikes or disagrees with it, so do not sell removal as a guaranteed service.",
+        ],
+      },
+      {
+        heading: "Know which replies need owner escalation",
+        paragraphs: [
+          "Stop the normal drafting workflow when a review mentions injury, threats, discrimination, harassment, refunds, chargebacks, staff misconduct, private information, a child, medical matters, legal claims, insurance, licensing, safety incidents, or an active dispute. Mark it clearly and send it to the owner or their appropriate adviser.",
+          "The service provider should not decide whether an allegation is true, admit liability, quote private records, offer compensation, or threaten the reviewer. Your job is to control the queue and prevent an improvised public reply from making the situation worse.",
+          "Create a one-page escalation list during onboarding. Name the owner contact, backup contact, urgent channel, response deadline, topics you never draft without instructions, and the exact private contact route that approved replies may use.",
+        ],
+      },
+      {
+        heading: "Turn the templates into a fixed service",
+        paragraphs: [
+          "A useful starter package can cover a 30-day public review audit, a one-page tone guide, up to 15 reply drafts, an escalation list, one owner approval round, and a tracker. State the platform, location count, batch limit, turnaround, revisions, publishing responsibility, and exclusions before work starts.",
+          "A practical AUD starting ladder is $75-$150 for an audit and five samples, $150-$350 for a one-off batch of up to 20 replies, and $200-$600 per month for monitoring, drafting, approval tracking, and a small monthly allowance. These are quoting examples, not market rules or earnings claims. Adjust for volume, locations, access, risk, turnaround, and design work.",
+          "The owner is buying a controlled communication workflow. Do not support the price with a promise of higher ratings, more positive reviews, better rankings, extra calls, leads, revenue, review removal, or a specific platform outcome.",
+        ],
+      },
+      {
+        heading: "Find the first buyer with three tailored samples",
+        paragraphs: [
+          "Choose one suburb and one business category, then inspect 20 public profiles. Look for recent genuine reviews with no replies, repetitive thank-you messages, defensive owner responses, useful mixed feedback, or a review backlog that is large enough to justify a fixed batch.",
+          "Pick the strongest prospect and draft three replies: one positive, one mixed, and one routine negative reply that moves private details off the public page. Do not publish them, impersonate the business, or share unnecessary customer information. They are private samples for the owner.",
+          "A simple outreach message is: Hi Alex, I noticed your workshop has several detailed recent reviews but the replies are inconsistent. I drafted three short responses in a steady tone, including one that moves a complaint offline. Want me to send the samples? If the samples land, offer the fixed batch instead of doing the entire backlog for free.",
+        ],
+      },
+      {
+        heading: "Keep review requests and testimonials genuine",
+        paragraphs: [
+          "Reply writing is separate from manufacturing reviews. Google prohibits fake engagement, paid or incentivised reviews, conflicts of interest, and selectively soliciting only positive feedback. Ask for an honest review from genuine customers without telling them what rating or wording to use.",
+          "Australian businesses also need to avoid fake or misleading reviews. The ACCC warns against creating or arranging fake reviews, editing reviews until they misrepresent the customer's opinion, and suppressing genuine negative feedback in a misleading way.",
+          "If the service includes testimonial cards, preserve the meaning of the genuine customer wording and keep the source. Get the business to confirm permission, attribution, platform terms, and intended channel before publication. Want the reply swipe file, testimonial specs, pricing calculator, intake form, and approval emails? Open the Review Reply + Testimonial Clips launch pack.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: build the first reply batch for a local cafe",
+      steps: [
+        "Choose one suburb and list 20 independent cafes with recent Google reviews.",
+        "Pick one cafe with at least 10 recent reviews and a patchy or repetitive reply history.",
+        "Draft one positive reply about a specific menu item, one mixed reply about a wait, and one complaint-safe reply that moves details to the manager.",
+        "Send the three private samples with a fixed offer for a tone guide and up to 15 owner-approved replies.",
+        "Collect the cafe's spelling, voice, staff naming, allergy, refund, privacy, escalation, and contact-channel rules.",
+        "Quote an example AUD $220 for the bounded first batch, with one location, one approval round, and no publishing access included.",
+        "Deliver the drafts in one tracker, hold risky reviews for the owner, and record the final approved wording.",
+        "Offer a monthly batch only after the first job shows the real review volume and approval workload.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one local business category and one suburb or service area.",
+      "Find 20 businesses with recent genuine public reviews.",
+      "Pick five prospects with missing, generic, delayed, or risky replies.",
+      "Draft one positive, one mixed, and one routine negative sample for the strongest prospect.",
+      "Write a fixed offer with platform, locations, batch size, price, turnaround, revisions, and exclusions.",
+      "Create a tone, privacy, access, escalation, and approval intake checklist.",
+      "Send five specific outreach messages without publishing or publicly sharing the samples.",
+      "Keep sensitive, disputed, regulated, or private matters in an owner-review queue.",
+      "Track every draft, approval, edit, and publication date.",
+      "Ask for genuine feedback only, without incentives tied to a rating or positive wording.",
+    ],
+    commonMistakes: [
+      "Copying the same empty thank-you sentence under every review.",
+      "Adding sales copy, discounts, booking links, and location keywords to every reply.",
+      "Arguing with a reviewer or revealing private customer information in public.",
+      "Promising a refund, fix, investigation, or outcome without owner approval.",
+      "Publishing sensitive or disputed replies without an escalation step.",
+      "Writing fake customer reviews or offering rewards for positive sentiment.",
+      "Selling guaranteed rating, ranking, lead, revenue, or review-removal outcomes.",
+      "Using a testimonial outside its original meaning or without checking permission and platform terms.",
+    ],
+    faqs: [
+      {
+        question: "How long should a Google review response be?",
+        answer:
+          "Use the shortest reply that acknowledges the useful detail and gives an appropriate next step. Many straightforward replies can be two or three sentences. Complex complaints should not become public essays; move private details to an owner-approved channel.",
+      },
+      {
+        question: "Should every Google review receive a response?",
+        answer:
+          "Not necessarily. Agree the priority and volume with the owner. Focus on reviews where the business can acknowledge a specific detail, answer a question, clarify a process, or handle a concern rather than posting the same sentence under every rating.",
+      },
+      {
+        question: "Can I use AI for Google review responses?",
+        answer:
+          "AI can help classify reviews and prepare first drafts. A person still needs to check the source review, facts, tone, privacy, owner instructions, and escalation risk before publication. Never use AI to invent a customer, event, promise, or testimonial.",
+      },
+      {
+        question: "How much can I charge for a review response service?",
+        answer:
+          "A practical AUD starting point is $75-$150 for an audit and samples, $150-$350 for up to 20 replies, or $200-$600 per month for a defined monitoring and drafting allowance. Adjust for locations, volume, access, risk, turnaround, approvals, and design work.",
+      },
+      {
+        question: "Can a business pay customers for five-star reviews?",
+        answer:
+          "Do not build paid or positively conditioned reviews into the service. Google prohibits incentives in exchange for reviews, changes, or removal, and the ACCC warns Australian businesses against fake or misleading reviews. Ask genuine customers for honest feedback without controlling the rating or wording.",
+      },
+      {
+        question: "Can a business remove a negative Google review?",
+        answer:
+          "A business can flag a review it believes violates platform policy, but disagreement or dislike alone does not make a review eligible for removal. Avoid promising removal. Keep a factual record, use Google's reporting process, and let the owner decide on the public response.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, privacy, advertising, consumer law, or platform compliance advice. Review rules vary by platform and location. Use genuine customer feedback, check current rules, protect private information, require owner approval, and avoid guarantees about ratings, rankings, leads, revenue, or removal outcomes.",
+  },
+  {
     slug: "google-business-profile-service-pricing-guide",
     title: "Google Business Profile Service Pricing Guide",
     seoTitle: "Google Business Profile Service Pricing Guide (2026)",
@@ -188,12 +360,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-review-reply-service",
     title: "How to Start a Review Reply Service for Local Businesses",
-    seoTitle: "How to Start a Review Reply Service | First Client Plan",
+    seoTitle: "How to Start a Review Reply Service (2026 First-Client Plan)",
     description:
-      "Start a review reply service for local businesses with a fixed offer, realistic pricing, outreach script, approval workflow, testimonial rules, and launch pack.",
+      "Start a review reply service with a fixed offer, realistic AUD pricing, three-sample outreach plan, owner approval workflow, and launch pack.",
     category: "B2B Service",
     publishedAt: "2026-07-12",
-    updatedAt: "2026-07-12",
+    updatedAt: "2026-07-14",
     readingTime: "13 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "ugc-brief-generator"],
     shortAnswer:
