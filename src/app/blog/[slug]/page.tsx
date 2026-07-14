@@ -67,7 +67,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       return { candidate, score: sharedPacks + categoryMatch };
     })
     .sort((a, b) => b.score - a.score || b.candidate.publishedAt.localeCompare(a.candidate.publishedAt))
-    .slice(0, 2)
+    .slice(0, 4)
     .map(({ candidate }) => candidate);
   const bottomCtaPacks = [
     ...relatedPacks,

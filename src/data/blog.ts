@@ -29,6 +29,166 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "google-business-profile-outreach-scripts",
+    title: "Google Business Profile Outreach Scripts That Do Not Sound Like Spam",
+    seoTitle: "Google Business Profile Outreach Scripts (2026)",
+    description:
+      "Use practical Google Business Profile outreach scripts for email, phone, DM, and follow-up, with a first-client plan, pricing examples, and safe access rules.",
+    category: "Outreach",
+    publishedAt: "2026-07-15",
+    updatedAt: "2026-07-15",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
+    shortAnswer:
+      "A useful Google Business Profile outreach message names one visible, verifiable profile gap and asks permission to send a short audit. It does not pretend to be Google, promise rankings, or demand account access. Start with one local business category, research 20 profiles, send five tailored messages, and sell a fixed cleanup sprint only after the owner sees the small sample.",
+    keyPoints: [
+      "Lead with one public observation, such as stale hours, missing services, old photos, or unanswered reviews.",
+      "Ask a low-pressure question instead of pitching a vague local SEO retainer in the first message.",
+      "Use a three-point audit as proof, but keep the full cleanup, copy drafts, and delivery workflow inside the paid scope.",
+      "A practical AUD starter ladder is $75-$150 for an audit, $250-$650 for a cleanup sprint, and $150-$450 per month for bounded profile hygiene.",
+      "Never imply Google affiliation, guarantee placement, claim a profile without consent, ask for a password, or publish changes without approval.",
+    ],
+    body: [
+      {
+        heading: "Who these outreach scripts are for",
+        paragraphs: [
+          "These scripts are for beginners selling a practical Google Business Profile audit or cleanup service to owner-operated local businesses. Good first buyers include plumbers, electricians, cleaners, salons, mechanics, cafes, gyms, photographers, landscapers, and other businesses where the owner can approve a small job without a procurement marathon.",
+          "The problem is visible profile drift. Hours change, service lists stay thin, photos age, booking links break, review replies pile up, and important customer questions never make it into the profile. Your offer is to organise those gaps into an approval-ready cleanup. It is not a promise to manufacture rankings, leads, calls, reviews, or revenue.",
+          "Start with one buyer lane. A message to a plumber should notice emergency service wording, service areas, job photos, or booking friction. A message to a cafe should notice hours, menu links, current photos, attributes, or unanswered reviews. Specificity is what makes the script feel researched rather than sprayed across the internet.",
+        ],
+      },
+      {
+        heading: "Find one reason to contact each business",
+        paragraphs: [
+          "Open the public profile and record one gap a customer can actually see. Useful observations include missing service details, a website or booking link that fails, obviously outdated hours, old exterior photos, no recent owner photos, unanswered reviews, an unclear service area, or a business description that does not explain the core offer.",
+          "Do not invent a diagnosis from data you cannot see. You do not know how many calls the business loses, whether an edit will improve rankings, or why the owner has left a field blank. Write what you observed and what you can prepare: a three-point audit, owner-approved draft copy, a photo request list, or a clean handoff.",
+          "Keep a simple tracker with business name, profile URL, buyer category, public contact channel, observed gap, sample status, date contacted, reply, follow-up date, and next step. Twenty careful records are enough for the first test. You do not need a scraped list of two thousand strangers.",
+        ],
+      },
+      {
+        heading: "Use this first-email script",
+        paragraphs: [
+          "Subject: Three profile cleanup notes for [Business]. Hi [Name], I noticed [specific public gap] on the Google profile for [Business]. I wrote a short three-point cleanup note covering [relevant item one], [item two], and [item three]. Would you like me to send it? It is an independent audit, not a message from Google, and I have not accessed or changed the profile. [Your name].",
+          "Example for a plumber: Hi Sam, I noticed the profile has strong recent reviews for blocked drains, but that service is difficult to find in the service list and the booking link returns an error on mobile. I wrote a short three-point cleanup note with a service draft and link check. Want me to send it? I have not accessed or changed the profile.",
+          "The first email has one job: earn permission to send the useful sample. Do not attach a giant proposal, criticise the whole business, add a fake deadline, or bury the observation under a paragraph about your agency. If the contact name is not public, use a neutral greeting and do not guess it.",
+        ],
+      },
+      {
+        heading: "Use this direct-message script",
+        paragraphs: [
+          "Hi [Name], I found [Business] while checking [buyer category] profiles in [area]. The profile still shows [specific visible gap], so I drafted a three-point cleanup note using only public information. Want me to send the screenshots? Nothing has been changed, and the business would approve every edit before it went live.",
+          "Keep a DM shorter than an email. Mention the exact profile, the observed issue, and the small proof asset. Do not send the audit as a pile of unsolicited images in the first message. Asking permission gives the owner a clean way to say yes or no.",
+          "Use the contact channel the business publishes for enquiries and respect the platform, privacy, spam, and do-not-contact rules that apply where you operate and where the recipient is located. If a business asks you to stop, record it and stop.",
+        ],
+      },
+      {
+        heading: "Use this phone opener",
+        paragraphs: [
+          "Hi, my name is [Name]. I run an independent profile cleanup service. I was checking the public Google profile for [Business] and noticed [specific gap]. I made three short notes, but I do not want to pitch you blind. Is the owner or profile manager open to receiving the audit by email?",
+          "If they ask what you sell, answer plainly: I audit the public profile, prepare owner-approved service and FAQ drafts, organise a current photo list, check links and details, and hand over a change record. A fixed cleanup sprint starts at [your relevant starting price] after I confirm the scope.",
+          "Do not say you are calling from Google, imply the profile is about to be removed, or create a false emergency. The owner should understand that Google Business Profile itself is a Google product and your work is a separate paid service.",
+        ],
+      },
+      {
+        heading: "Follow up once with another useful detail",
+        paragraphs: [
+          "Subject: One screenshot for [Business]. Hi [Name], one extra detail from the profile check: [specific observation]. I can send the three-point note if useful. If profile cleanup is not a priority, no problem and I will close the loop. [Your name].",
+          "Send one follow-up after two to four business days. Add a real observation rather than writing just checking in. If there is no reply, move on. A quiet inbox is feedback about the buyer, problem, channel, message, or proof. It is not permission to send daily nudges.",
+          "Track replies by reason: wrong contact, already managed, not a priority, wants the audit, price question, access concern, or asks to stop. After 20 researched prospects, use that record to improve the next batch instead of pretending every rejection is a volume problem.",
+        ],
+      },
+      {
+        heading: "Turn interest into a fixed paid offer",
+        paragraphs: [
+          "When the owner asks for the audit, send three screenshots with a short explanation and one suggested draft. Then offer a bounded next step. A cleanup sprint can include one profile, a verified details checklist, up to 10 service drafts, five FAQ drafts, a photo request list, review-request wording, link checks, one approval round, and a final change record.",
+          "A practical AUD pricing ladder is $75-$150 for a paid audit with screenshots, $250-$650 for a one-location cleanup sprint, and $150-$450 per month for a defined profile hygiene allowance. These are quote-building examples, not market rules or earnings claims. Adjust for locations, services, photos, review volume, implementation, approvals, regulated wording, and turnaround.",
+          "List add-ons separately: extra locations, review reply backlogs, photo editing, website changes, reinstatement or suspension work, urgent delivery, translations, ongoing posts, and additional revision rounds. Exclude work you cannot safely deliver. The owner should know exactly what the fee covers before granting any access.",
+        ],
+      },
+      {
+        heading: "Use safe access and approval rules",
+        paragraphs: [
+          "You can complete the public audit and prepare drafts without account access. If the paid scope includes implementation, the owner should add your own Google Account with the minimum suitable role instead of sharing a password. Keep the business as owner, explain what you will change, and remove access when the work ends if it is no longer needed.",
+          "Google's current third-party policies require transparency about your service, costs, changes, and performance reporting. They also prohibit claiming or managing a profile without the business owner's express consent, misleading Google affiliation, unrealistic placement claims, and making changes without consent. Review the current official policies before delivery because platform rules can change.",
+          "Send drafts for written approval and keep a change log. Ask the owner to verify the real business name, address or service area, hours, categories, services, phone, website, booking links, qualifications, prices, photos, and regulated claims. Do not auto-reject Google updates or edit facts just to fit a keyword plan.",
+        ],
+      },
+      {
+        heading: "Build the first-client routine",
+        paragraphs: [
+          "Choose one category and one suburb today. Research 20 profiles, rank the clearest five gaps, create one complete three-point audit, and send five permission-based messages. The goal is not to build an agency. The goal is to learn whether one real owner wants the cleanup.",
+          "If a buyer replies, confirm the profile, decision-maker, scope, facts, access method, approvals, price, payment timing, revision limit, and handoff before work starts. Deliver the first job cleanly, record the real time, and use that evidence to price the next one.",
+          "Want the audit checklist, outreach scripts, pricing calculator, sales call script, client intake, prompt pack, and delivery files? Open the Google Business Profile Rescue launch pack. The article gives you the shape of the move. The pack gives you the working files.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: book a profile cleanup call with a local electrician",
+      steps: [
+        "List 20 owner-operated electricians in one service area and record one public profile gap for each.",
+        "Choose a business with recent genuine reviews, an active website, and missing service detail for work it publicly offers.",
+        "Create a private three-point audit covering the service list, a broken or weak customer link, and a current job-photo request.",
+        "Send the permission-based email and one follow-up with a useful screenshot after three business days.",
+        "On reply, send the audit and offer a AUD $390 one-location cleanup sprint with up to eight service drafts, four FAQs, link checks, a photo list, and one approval round.",
+        "Confirm that the owner will verify all services, electrical licensing language, service areas, emergency wording, hours, and contact details.",
+        "Use manager access only if implementation is included, keep a change log, and send every draft through owner approval.",
+        "At handoff, offer a AUD $190 monthly check with a named update allowance rather than an unlimited retainer.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one local business category and one suburb or service area.",
+      "Define the public gaps your audit will check without needing private data.",
+      "Research 20 profiles and record one specific observation for each.",
+      "Choose five prospects with active businesses and clear, fixable profile drift.",
+      "Create one three-point audit with screenshots and one labelled draft improvement.",
+      "Write a fixed cleanup scope, AUD starting price, turnaround, revision limit, and exclusions.",
+      "Send five tailored permission-based emails, DMs, or calls using a published business channel.",
+      "Follow up once with a useful extra detail, then stop if there is no interest.",
+      "Use your own manager account and written owner approval if implementation is sold.",
+      "Track replies, objections, delivery time, changes, approvals, and handoff actions.",
+    ],
+    commonMistakes: [
+      "Opening with a vague promise to improve local SEO instead of one visible profile gap.",
+      "Pretending to represent Google or using fear about suspension to force a reply.",
+      "Guaranteeing rankings, map placement, calls, leads, reviews, or revenue.",
+      "Sending an unresearched template to hundreds of businesses or ignoring a request to stop.",
+      "Giving away the whole cleanup instead of a useful three-point sample.",
+      "Asking the client to share a password instead of adding your own manager account.",
+      "Claiming a profile, changing facts, replying to reviews, or publishing drafts without consent.",
+      "Hiding add-on costs, access requirements, revision limits, or reporting boundaries.",
+      "Writing services, qualifications, locations, prices, or customer claims the owner has not verified.",
+    ],
+    faqs: [
+      {
+        question: "What should I say in a Google Business Profile outreach email?",
+        answer:
+          "Name one public profile gap, explain the small audit you prepared, and ask permission to send it. State that you are an independent service and have not accessed or changed the profile. Keep the broad sales pitch for after the owner sees the useful sample.",
+      },
+      {
+        question: "How many outreach messages should I send for the first client?",
+        answer:
+          "Start with five tailored messages from a researched list of 20 businesses. Review the replies and objections before increasing volume. Better problem selection and proof usually teach a beginner more than sending hundreds of generic messages.",
+      },
+      {
+        question: "How much should I charge for a Google Business Profile cleanup?",
+        answer:
+          "A one-location cleanup sprint can use AUD $250-$650 as a starting range when scope is bounded. Price from the number of services, locations, photos, links, approvals, revisions, access needs, regulated wording, and implementation time. It is an example range, not a market rule.",
+      },
+      {
+        question: "Do I need access before sending an audit?",
+        answer:
+          "No. Audit the public profile and prepare labelled drafts first. If the owner buys implementation, have them add your own Google Account with the minimum suitable manager access. Do not ask them to email or message a password.",
+      },
+      {
+        question: "Can I promise better Google rankings after the cleanup?",
+        answer:
+          "No. Sell the work you control: accurate information, clearer service drafts, current photos, working links, owner approvals, and a documented handoff. Do not guarantee placement, rankings, leads, calls, reviews, or revenue.",
+      },
+    ],
+    disclaimer:
+      "This guide provides practical business education and example AUD pricing, not legal, privacy, marketing compliance, platform compliance, or financial advice. Google policies and local outreach rules can change. Check the current official requirements, use business-owner consent, verify every claim, and adapt each message before sending.",
+  },
+  {
     slug: "google-review-response-templates-for-small-businesses",
     title: "Google Review Response Templates for Small Businesses",
     seoTitle: "Google Review Response Templates for Small Businesses (2026)",
@@ -857,7 +1017,7 @@ export const blogPosts: BlogPost[] = [
       "Start a Google Business Profile service with a fixed cleanup offer, realistic pricing, a three-point audit, first-client outreach, and safe delivery limits.",
     category: "Local Service",
     publishedAt: "2026-06-30",
-    updatedAt: "2026-07-13",
+    updatedAt: "2026-07-15",
     readingTime: "13 min read",
     relatedPackSlugs: ["google-business-profile-rescue", "review-testimonial-service", "cafe-menu-refresh-package"],
     shortAnswer:
@@ -972,6 +1132,7 @@ export const blogPosts: BlogPost[] = [
       "Selling local SEO when the first offer is really profile cleanup.",
       "Creating fake reviews, fake photos, fake customer stories, or unverified claims.",
       "Asking for profile access before trust, scope, and approvals are clear.",
+      "Asking a client to share a password instead of adding your own Google Account with suitable manager access.",
       "Auditing every type of business instead of learning one buyer lane first.",
       "Doing the full rescue for free instead of sharing a tiny sample.",
       "Ignoring regulated wording for medical, legal, finance, trades, or safety-heavy services.",
@@ -995,7 +1156,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Do I need access to the client's Google profile?",
         answer:
-          "Not for the first audit or draft. For implementation, use proper owner-approved access and document what you are changing. Some clients may prefer to publish your handoff themselves.",
+          "Not for the first audit or draft. For implementation, the owner should add your own Google Account with the minimum suitable manager access instead of sharing a password. Get written approval, document every change, and let the client keep ownership. Some clients may prefer to publish your handoff themselves.",
       },
       {
         question: "What should I offer after the first cleanup?",
