@@ -11,7 +11,8 @@
     "supabase:email-templates": "node scripts/apply_supabase_auth_email_templates.mjs",
     "supabase:auth-security": "node scripts/update_supabase_auth_security.mjs",
     "assets:generate": "python3 scripts/generate_member_assets.py",
-    "assets:validate": "python3 scripts/validate_assets.py"
+    "assets:validate": "python3 scripts/validate_assets.py",
+    "analytics:report": "node scripts/report_analytics.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.7.0",
