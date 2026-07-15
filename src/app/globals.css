@@ -26,7 +26,7 @@
   --amber-risk: #bd7a16;
   --card-texture: url("/visuals/eleven-soft-noise-gradient-2k.png");
   --section-texture: url("/visuals/eleven-soft-noise-gradient-2k.png");
-  --dark-texture: url("/visuals/eleven-dark-noise-gradient-2k.png");
+  --dark-texture: url("/visuals/eleven-dark-noise-gradient-1k.jpg");
   --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
