@@ -57,9 +57,9 @@ const basePacks: BusinessPack[] = [
     slug: "cafe-menu-refresh-package",
     title: "Cafe Menu Refresh Package",
     hook: "If you can use Canva, sell this to local cafes.",
-    seoTitle: "Cafe Menu Refresh Launch Pack | Outreach Scripts and Pricing Sheet",
+    seoTitle: "Cafe Menu Refresh Pack | Scripts and Pricing",
     seoDescription:
-      "Start a cafe menu refresh service with local cafe outreach scripts, pricing sheet, delivery checklist, client intake form, prompt pack, and handoff templates.",
+      "Start a cafe menu refresh service with outreach scripts, a pricing sheet, delivery checklist, quote template, client intake form, and AI prompts.",
     category: "Local Service",
     buyer: "Independent cafes",
     startupCost: "$0-$50",
@@ -88,9 +88,9 @@ const basePacks: BusinessPack[] = [
     slug: "google-business-profile-rescue",
     title: "Google Business Profile Rescue",
     hook: "Most local businesses lose trust before people visit.",
-    seoTitle: "Google Business Profile Rescue Launch Pack | Audit Checklist and Outreach Scripts",
+    seoTitle: "Google Business Profile Service Pack | Scripts and Pricing",
     seoDescription:
-      "Start a Google Business Profile rescue service with a practical audit checklist, local business outreach scripts, pricing guidance, FAQ prompts, and delivery assets.",
+      "Start a Google Business Profile rescue service with an audit checklist, outreach scripts, pricing calculator, sales call script, prompts, and client forms.",
     category: "Local Service",
     buyer: "Local service businesses",
     startupCost: "$0",
@@ -239,9 +239,9 @@ const basePacks: BusinessPack[] = [
     slug: "mobile-headlight-restoration",
     title: "Mobile Headlight Restoration",
     hook: "Cloudy headlights are a small fix with obvious before-and-after proof.",
-    seoTitle: "Mobile Headlight Restoration Launch Pack | Pricing, Outreach Scripts, and Safety Checklist",
+    seoTitle: "Mobile Headlight Restoration Pack | Pricing and Scripts",
     seoDescription:
-      "Start a mobile headlight restoration service with a pricing calculator, car-owner outreach scripts, safety checklist, intake form, proof kit, prompts, and client templates.",
+      "Start a mobile headlight restoration service with a pricing calculator, outreach scripts, safety checklist, intake form, proof kit, and AI prompts.",
     category: "Local Service",
     buyer: "Car owners, used-car sellers, landlords with fleets, and local dealers",
     startupCost: "$51-$150",
@@ -412,7 +412,7 @@ const basePacks: BusinessPack[] = [
     hook: "Turn one customer review into replies, website proof, email copy, and social content.",
     seoTitle: "AI Review Repurposing Service Pack | Pricing and Scripts",
     seoDescription:
-      "Start a review reply and testimonial asset service with a pricing calculator, reply scripts, testimonial card specs, client intake, approval emails, and AI prompts.",
+      "Start a review repurposing service with reply scripts, testimonial templates, a pricing calculator, intake form, approval emails, and AI prompts.",
     category: "B2B Service",
     buyer: "Local businesses",
     startupCost: "$1-$50",
@@ -439,9 +439,9 @@ const basePacks: BusinessPack[] = [
     slug: "manual-workflow-concierge",
     title: "Manual Workflow Concierge",
     hook: "Do not build the AI app. Sell the manual workflow first.",
-    seoTitle: "Manual Workflow Concierge Launch Pack | Workflow Template and Scorecard",
+    seoTitle: "Manual Workflow Concierge Pack | Scripts and Templates",
     seoDescription:
-      "Start a manual workflow concierge service with validation scorecard, workflow template, client intake form, outreach emails, and automation prompts.",
+      "Start a manual workflow concierge service with pilot sales scripts, a workflow template, validation scorecard, client intake form, emails, and AI prompts.",
     category: "AI Tool",
     buyer: "Niche B2B operators",
     startupCost: "$0",
@@ -454,9 +454,11 @@ const basePacks: BusinessPack[] = [
     featured: true,
     popularityScore: 91,
     publishedAt: "2026-06-01",
+    updatedAt: "2026-07-16",
     assets: [
       { id: "asset-manual-score", title: "Manual Validation Scorecard", type: "PDF", description: "Criteria for deciding whether to automate." },
       { id: "asset-manual-workflow", title: "Workflow Concierge Template", type: "DOCX", description: "Offer structure and delivery map." },
+      { id: "asset-manual-outreach", title: "Manual Pilot Outreach and Sales Script", type: "DOCX", description: "Prospect filters, cold outreach, discovery call, pilot close, follow-ups, and objection handling for selling the first manual workflow." },
       { id: "asset-manual-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for niche selection, workflow mapping, manual SOPs, client reports, and automation backlog decisions." },
       { id: "asset-manual-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for workflow pain, process, inputs, approvals, exceptions, and success criteria." },
       { id: "asset-manual-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for niche outreach, pilot setup, input requests, weekly reporting, and renewal." },
@@ -1326,7 +1328,7 @@ export const packPageDetails: Record<string, PackPageDetail> = {
         "Evidence log: record delivery time, missing inputs, exceptions, corrections, and repeated steps before deciding what is safe to automate.",
       ],
       lockedAssetTease:
-        "Members get the workflow map, pilot scripts, pricing calculator, client intake, delivery SOP, validation scorecard, email templates, FAQs, and automation prompts.",
+        "Members get pilot outreach and sales scripts, the workflow map, client intake form, validation scorecard, email templates, FAQs, AI prompts, and the automation pack.",
     },
     outreachPreview: {
       title: "Sample operator message",

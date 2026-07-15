@@ -43,6 +43,18 @@ export const metadata = {
 
 const socialPackRoutes = [
   {
+    slug: "review-testimonial-service",
+    label: "AI review repurposing",
+    cue: "One review into replies, website proof, email copy, and social content",
+    guideHref: "/blog/how-to-start-a-review-reply-service",
+  },
+  {
+    slug: "realtor-suburb-snapshot",
+    label: "Realtor suburb snapshots",
+    cue: "Weekly local content agents can use",
+    guideHref: "/blog/how-to-start-a-real-estate-suburb-snapshot-service",
+  },
+  {
     slug: "cafe-menu-refresh-package",
     label: "Cafe menu refresh",
     cue: "Outdated menus, specials, QR links",
@@ -83,12 +95,6 @@ const socialPackRoutes = [
     label: "Driveway power wash",
     cue: "Dirty concrete before-and-after proof",
     guideHref: "/blog/how-to-start-a-power-washing-driveway-business",
-  },
-  {
-    slug: "realtor-suburb-snapshot",
-    label: "Realtor suburb snapshots",
-    cue: "Weekly local content agents can use",
-    guideHref: "/blog/how-to-start-a-real-estate-suburb-snapshot-service",
   },
 ];
 

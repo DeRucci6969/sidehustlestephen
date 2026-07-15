@@ -1240,7 +1240,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/manual-workflow-concierge/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8028
+    "bytes": 8027
   },
   {
     "id": "asset-manual-score",
@@ -1262,7 +1262,18 @@
     "description": "Offer structure and delivery map.",
     "path": "content/member-assets/manual-workflow-concierge/workflow-concierge-template.docx",
     "filename": "workflow-concierge-template.docx",
-    "bytes": 7181
+    "bytes": 7179
+  },
+  {
+    "id": "asset-manual-outreach",
+    "packSlug": "manual-workflow-concierge",
+    "packTitle": "Manual Workflow Concierge",
+    "title": "Manual Pilot Outreach and Sales Script",
+    "type": "DOCX",
+    "description": "Prospect filters, cold outreach, discovery call, pilot close, follow-ups, and objection handling for selling the first manual workflow.",
+    "path": "content/member-assets/manual-workflow-concierge/manual-pilot-outreach-and-sales-script.docx",
+    "filename": "manual-pilot-outreach-and-sales-script.docx",
+    "bytes": 9552
   },
   {
     "id": "asset-manual-prompts",
@@ -1273,7 +1284,7 @@
     "description": "Practical prompts for niche selection, workflow mapping, manual SOPs, client reports, and automation backlog decisions.",
     "path": "content/member-assets/manual-workflow-concierge/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8703
+    "bytes": 8702
   },
   {
     "id": "asset-manual-intake",
@@ -1295,7 +1306,7 @@
     "description": "Ready-to-adapt emails for niche outreach, pilot setup, input requests, weekly reporting, and renewal after validation.",
     "path": "content/member-assets/manual-workflow-concierge/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7253
+    "bytes": 7252
   },
   {
     "id": "asset-manual-faqs",
@@ -1306,7 +1317,7 @@
     "description": "Buyer-facing FAQs that explain manual-first delivery, software boundaries, pilot scope, data handling, and automation timing.",
     "path": "content/member-assets/manual-workflow-concierge/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7213
+    "bytes": 7212
   },
   {
     "id": "asset-airbnb-automation",

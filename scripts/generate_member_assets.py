@@ -384,6 +384,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-manual-score", "Manual Validation Scorecard", "PDF", "Criteria for deciding whether to automate."),
             Asset("asset-manual-workflow", "Workflow Concierge Template", "DOCX", "Offer structure and delivery map."),
+            Asset("asset-manual-outreach", "Manual Pilot Outreach and Sales Script", "DOCX", "Prospect filters, cold outreach, discovery call, pilot close, follow-ups, and objection handling for selling the first manual workflow."),
             Asset("asset-manual-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for niche selection, workflow mapping, manual SOPs, client reports, and automation backlog decisions."),
             Asset("asset-manual-intake", "Client Intake Form", "DOCX", "Editable intake questions for workflow pain, current process, inputs, approvals, exceptions, and success criteria."),
             Asset("asset-manual-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for niche outreach, pilot setup, input requests, weekly reporting, and renewal after validation."),
@@ -1045,6 +1046,86 @@ def checklist_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
 
 
 DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
+    "asset-manual-outreach": [
+        ("Use this script", [
+            "Pick one buyer type and one repeated weekly outcome before sending anything. Do not pitch a vague AI service.",
+            "Replace every bracketed field. The message should name the current workflow, the output you can deliver manually, the cadence, and the scope cap.",
+            "Send the first 20 messages in small batches so you can adjust the offer when prospects describe the problem differently.",
+            "The goal is a paid two-week pilot. Compliments, survey replies, and free trials do not prove willingness to pay.",
+        ]),
+        ("Best first prospects", [
+            "Owner-led agencies, recruiters, brokers, consultancies, or niche operators with a repeated weekly admin task and a reachable decision maker.",
+            "A visible trigger exists: new hiring, more listings, active client delivery, frequent reports, repeated public updates, or a small team handling rising volume.",
+            "The desired output is easy to inspect, such as a cleaned lead list, quote draft, inbox summary, weekly report, research brief, or client update.",
+            "Avoid workflows involving medical decisions, legal advice, financial decisions, emergency response, safety-critical actions, or unrestricted access to sensitive data.",
+        ]),
+        ("Write the pilot promise", [
+            "Buyer: [one narrow operator type].",
+            "Current input: [what they already collect or receive each week].",
+            "Manual output: [one finished result they can approve and use].",
+            "Cadence: [day and frequency].",
+            "Scope cap: [number of records, requests, reports, or hours].",
+            "Approval step: [named person and review window].",
+            "Pilot promise: For two weeks, I will turn [input] into [approved output] every [cadence], capped at [scope], so we can test whether the workflow is useful before anyone builds software.",
+        ]),
+        ("Cold email: current process opener", [
+            "Subject: how are you handling [weekly workflow]?",
+            "Hi [Name], I noticed [specific trigger that suggests repeated volume]. How are you currently turning [messy input] into [useful weekly output]?",
+            "I am testing a small manual service for [buyer type]. For two weeks, I handle that workflow by hand, deliver [output] every [day], and log the exceptions before anyone talks about software or automation.",
+            "The pilot is capped at [scope] and needs one approval owner. If this is a real bottleneck, would a 10-minute workflow check be useful?",
+        ]),
+        ("Cold email: paid pilot offer", [
+            "Subject: two-week [output] pilot",
+            "Hi [Name], I help [buyer type] turn [input] into [output] without adding another tool to the stack.",
+            "The starter is a paid two-week pilot: [number] deliveries, up to [scope], human QA, an exception log, and a short recommendation on what should stay manual.",
+            "The fee is [price]. It does not include custom software, system integrations, or guaranteed time savings. Want the one-page scope?",
+        ]),
+        ("DM and LinkedIn versions", [
+            "Short DM: Hi [Name], quick workflow question. How are you currently turning [input] into [output] each week? I am testing a capped manual service for [buyer type] before building any automation. Happy to send the two-week pilot scope if that task is still messy.",
+            "Trigger-led DM: Saw that [business] is [hiring / adding listings / taking on clients / publishing weekly reports]. That usually creates more [workflow] work. I run the outcome manually for two weeks, with human QA and a hard scope cap. Worth comparing it with your current process?",
+            "Referral ask: Who owns [workflow] at [business]? I have a small manual pilot for [output]. I am not selling software. I want to see whether the result is worth paying for first.",
+        ]),
+        ("Ten-minute discovery call", [
+            "Minute 0-1: I want to understand the current workflow, not force a software pitch. If the task is not frequent or painful, I will say so.",
+            "Minute 1-4: What triggers the work? What inputs arrive? Who does it now? How often? What gets delayed, corrected, or missed?",
+            "Minute 4-6: What does a usable finished output look like? Who approves it? What information is sensitive or off-limits?",
+            "Minute 6-8: If I delivered [output] on [cadence], capped at [scope], what would make the two-week test useful enough to pay for?",
+            "Minute 8-10: Confirm the pilot fee, input list, approval owner, delivery dates, exclusions, and the exact yes-or-no next step.",
+        ]),
+        ("Pilot close", [
+            "Based on what you described, I would test one narrow workflow: [input] to [output], delivered [cadence], capped at [scope].",
+            "The two-week pilot is [price]. It includes [deliveries], human QA, an exception log, and a final workflow recommendation.",
+            "It does not include custom software, integrations, unrestricted volume, autonomous sending, or guaranteed savings. Anything uncertain goes to [approval owner].",
+            "If that scope is right, I will send the one-page agreement and input checklist today. If it is not worth [price] as a manual outcome, we should not automate it.",
+        ]),
+        ("Objection handling", [
+            "We want automation, not manual work: the pilot is how we learn the real rules and exceptions before paying to automate the wrong process.",
+            "Can you do a free trial: I can show the workflow map, but delivery is paid. Payment is part of validating whether the outcome matters.",
+            "That price is high: we can reduce the scope cap or delivery count. I would not remove QA or the approval step.",
+            "We already use a tool: that is fine. The pilot can cover the messy handoff before or after the tool, but only if the result is still painful enough to buy.",
+            "Will this save us time: the pilot will measure handling time, corrections, delays, and exceptions. I will not promise savings before we have that evidence.",
+            "Can the AI send messages automatically: not in the starter pilot. Client-facing communication stays draft-only until the approval rules are proven.",
+        ]),
+        ("Follow-up sequence", [
+            "Day 2: I wrote the pilot in one sentence: [input] to [output], [cadence], capped at [scope]. Is that the workflow you own?",
+            "Day 5: If the full pilot is too broad, I can reduce it to [one delivery or smaller cap] while keeping the approval and exception log.",
+            "Day 10: I am closing the loop. The useful question is whether [output] is valuable enough to pay for before anyone builds software. If yes, I can hold [start date].",
+            "After a no: Thanks for being direct. What made it a no: the problem, timing, scope, price, or trust? I use that to decide whether the offer should exist.",
+        ]),
+        ("No-go checks", [
+            "The buyer cannot name a repeated outcome or approval owner.",
+            "The work is too rare to support a recurring service.",
+            "The pilot requires regulated advice, safety-critical judgment, hidden credentials, or access you should not hold.",
+            "The buyer expects unlimited requests, automatic public sending, or a guaranteed result.",
+            "The fee cannot cover manual delivery, QA, exception logging, and communication inside the agreed cap.",
+        ]),
+        ("Next action", [
+            "Choose one buyer lane and write the pilot promise using the seven fields above.",
+            "Build a list of 20 prospects with one visible trigger each.",
+            "Send five current-process emails, record the replies, and rewrite the language before sending the next five.",
+            "Book one 10-minute discovery call and ask for a paid pilot, not general feedback.",
+        ]),
+    ],
     "asset-cafe-mockup-kit": [
         ("Use this kit", [
             "Build one small, buyer-specific sample before pitching. Do not redesign the full menu for free.",
@@ -3016,7 +3097,10 @@ def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     if asset.id.endswith("-faqs"):
         return client_faq_sections(pack, asset)
     if asset.id in DOCX_ASSET_SECTIONS:
-        return DOCX_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
+        sections = DOCX_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset)
+        if asset.id == "asset-manual-outreach":
+            return sections
+        return sections + [shared_standard_pointer(pack)]
     if any(token in asset.title for token in ["Script", "Swipe", "Template", "Outline", "Pitch", "Pack"]):
         sections = script_sections(pack, asset)
     else:
@@ -3200,7 +3284,7 @@ def static_contents(sections: list[tuple[str, list[str]]]) -> list[str]:
         rows.append([f"{index:02d}", f"{heading} - {_smart_trim(preview, 92)}"])
     return [
         p("In this document", "Kicker"),
-        table(rows, [1180, 7940], header=True),
+        table(rows, [1500, 7620], header=True),
     ]
 
 
@@ -3301,6 +3385,8 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
     is_intake = asset.title.lower().endswith("intake form") or "intake" in asset.id
     intake_field_headings = {"client details", "project scope", "pack-specific intake prompts"}
     for index, (heading, items) in enumerate(sections, start=1):
+        if asset.id == "asset-manual-outreach" and heading == "Follow-up sequence":
+            body.append(page_break())
         body.append(p(f"{index:02d} / {heading}", "Heading1"))
         heading_key = heading.lower()
         if is_intake and heading_key in intake_field_headings:
