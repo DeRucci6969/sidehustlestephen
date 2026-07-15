@@ -72,6 +72,7 @@ const basePacks: BusinessPack[] = [
     featured: true,
     popularityScore: 98,
     publishedAt: "2026-06-09",
+    updatedAt: "2026-07-16",
     assets: [
       { id: "asset-cafe-script", title: "Cafe Outreach Script", type: "DOCX", description: "Cold DM and email scripts for first contact." },
       { id: "asset-cafe-pricing", title: "Menu Refresh Pricing Sheet", type: "XLSX", description: "Starter, standard, and retainer pricing ladder." },

@@ -29,6 +29,173 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cafe-menu-design-pricing-guide",
+    title: "Cafe Menu Design Pricing: What to Charge for a Menu Refresh",
+    seoTitle: "Cafe Menu Design Pricing Guide (2026)",
+    description:
+      "Use practical cafe menu design pricing for one-section fixes, full refreshes, and monthly updates, with quote math, scope rules, and a first-client plan.",
+    category: "Pricing",
+    publishedAt: "2026-07-16",
+    updatedAt: "2026-07-16",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
+    shortAnswer:
+      "For a beginner cafe menu refresh service, a practical AUD starting ladder is $99-$249 for one menu section or digital asset, $300-$750 for a bounded full-menu refresh, and $150-$500 per month for a defined update allowance. Build the quote from real delivery time, source-file quality, output formats, approval rounds, and urgency. Treat these figures as starting points, then adjust after one paid job shows you the real workload.",
+    keyPoints: [
+      "Price a clear output, such as one menu section, a full asset refresh, or a monthly update allowance, rather than vague design help.",
+      "Independent cafes, bakeries, takeaway shops, food trucks, and coffee carts are practical first buyers because menu changes are frequent and the decision-maker is usually close to the work.",
+      "Count intake, fact checking, design, exports, owner approvals, revisions, handoff, and admin when checking whether a package is worth delivering.",
+      "Keep printing, photography, full branding, copy strategy, delivery-app updates, and extra locations outside the base package unless they are explicitly quoted.",
+      "Use a tiny permissioned sample to open the conversation, then sell the smallest paid refresh that fixes one visible mismatch.",
+    ],
+    body: [
+      {
+        heading: "Who this pricing guide is for",
+        paragraphs: [
+          "This guide is for a beginner selling menu cleanup and design support to independent cafes, bakeries, coffee carts, takeaway shops, food trucks, and small restaurants. It assumes you can use a straightforward design tool, organise messy information, and ask an owner to verify every customer-facing fact before anything is published or printed.",
+          "The buyer is usually an owner or manager who has menu information scattered across a printed sheet, counter board, QR link, Google profile, Instagram posts, website PDF, and delivery platforms. They do not need a lecture about brand strategy. They need current prices, items, specials, and ordering details turned into files staff and customers can actually use.",
+          "Your job is not to promise more orders. Sell clarity, consistency, readable files, faster updates, and a cleaner approval process. That makes the offer useful without drifting into claims you cannot prove.",
+        ],
+      },
+      {
+        heading: "Price the deliverable, not the word design",
+        paragraphs: [
+          "Cafe menu design can mean almost anything. One owner wants a single breakfast section fixed. Another has six pages, two locations, old source files, a QR menu, takeaway panels, and a printer waiting for final artwork. A single menu design price hides those differences and invites scope creep.",
+          "Write the paid outcome before setting the fee. A starter offer might include one menu section, one mobile-friendly PDF export, one social specials tile, one approval round, and final handoff notes. A full refresh might include the main menu, one takeaway version, web and print-ready exports, a QR-link check, one Google menu note, and two approval rounds.",
+          "Name the limits in numbers. State pages or sections, output sizes, file formats, locations, turnaround, approval rounds, and the number of owner-supplied change lists included. The buyer gets a cleaner decision and you get a job you can finish.",
+        ],
+      },
+      {
+        heading: "Use a simple cafe menu pricing ladder",
+        paragraphs: [
+          "A practical AUD starter tier is $99-$249 for one menu section, specials tile, QR menu cleanup, or another narrow asset with one approval round. Use the lower end when the owner supplies clean copy and usable brand files. Move higher when you must reconstruct a layout, tidy a long item list, or export several versions.",
+          "A bounded full-menu refresh can start around $300-$750. That range can cover a small independent venue with a verified item list, a manageable number of sections, web and print-ready exports, and one or two approval rounds. It should not quietly include a full rebrand, food photography, printer management, delivery-app entry, or unlimited changes.",
+          "A monthly specials or menu-maintenance allowance can start around $150-$500 per month. Define the allowance, such as one specials tile, up to 10 price or item changes, one QR-link check, and one approved export batch. These figures are quote-building examples, not market rules or income claims.",
+        ],
+      },
+      {
+        heading: "Calculate your private pricing floor",
+        paragraphs: [
+          "Use package pricing with the buyer, but calculate an hourly floor privately. Estimate discovery and intake, file cleanup, fact checking, layout work, exports, owner communication, revisions, handoff, invoicing, and follow-up. A two-hour design estimate can become a five-hour job once the price list arrives in screenshots and three people send separate edits.",
+          "A simple check is: estimated hours multiplied by your private hourly floor, plus direct costs, plus a buffer for messy inputs and approvals. If the result is above the package price, reduce the scope, improve the workflow, or raise the quote. Do not hope the missing hours disappear.",
+          "Record actual time after delivery. Note how long intake, first draft, approvals, revisions, exports, and admin took. One real paid job gives you better pricing evidence than a month of copying rates from strangers.",
+        ],
+      },
+      {
+        heading: "Budget for the tools you actually need",
+        paragraphs: [
+          "You can validate this offer with a low startup cost. The basic toolkit is a design editor, spreadsheet or document for the approved item list, PDF viewer, cloud folder, email, and a simple quote or invoice template. A paid design plan, stock library, font licence, or proofing tool is optional until a client scope requires it.",
+          "Do not buy a stack of subscriptions before the first buyer. Use tools you already understand, make one private sample, and confirm that your exports remain readable on a phone and printable at the required size. The goal is reliable delivery, not an impressive software list.",
+          "Treat licensed fonts, approved stock images, specialist file conversion, physical proofs, courier fees, and printer charges as direct costs when they apply. Get written approval before purchasing anything on the client's behalf and state whether the client pays the supplier directly.",
+        ],
+      },
+      {
+        heading: "Control revisions and owner approvals",
+        paragraphs: [
+          "Most menu jobs become unprofitable through fragmented changes rather than the first layout. Ask the owner to provide one verified source list for item names, descriptions, prices, sizes, dietary labels, ingredients, ordering details, and opening hours. Ask for one person to consolidate feedback.",
+          "Include one or two approval rounds, not unlimited revisions. Define a round as one consolidated change list returned by the named approver. New menu sections, a new visual direction, new source copy, late price changes, or edits from another location should trigger a fresh quote or add-on.",
+          "Mark unverified details clearly and do not make food, allergen, nutrition, ingredient, origin, discount, or availability claims for the owner. The cafe must verify the facts and local requirements before publication or print.",
+        ],
+      },
+      {
+        heading: "Quote common add-ons separately",
+        paragraphs: [
+          "Useful add-ons include an extra menu size, additional social tiles, a second location, rush turnaround, source-file reconstruction, extra approval rounds, a seasonal menu, a catering menu, table inserts, and recurring updates. Price each add-on from the extra work instead of attaching a random percentage.",
+          "Printing coordination is also a separate job. If you are not experienced with print production, deliver files to the printer's supplied specifications and let the cafe approve the proof and order directly. Do not absorb paper choice, colour matching, delivery dates, reprints, or supplier errors into a basic design fee.",
+          "Website edits, Google Business Profile changes, QR-code hosting, delivery-platform updates, photography, copywriting, brand identity work, and menu engineering can all expand the project. Include them only when you can deliver them safely and the written scope names the access, outputs, approvals, and exclusions.",
+        ],
+      },
+      {
+        heading: "Use a small sample to win the first cafe",
+        paragraphs: [
+          "Choose one cafe-heavy suburb and review 20 independent venues using public information. Look for one visible issue: an old Google menu photo, a blurry phone PDF, mismatched specials, a hard-to-read takeaway menu, a broken QR destination, or different prices across current public assets.",
+          "Create a private sample for one small section only. Keep the cafe's words and prices exactly as published, label anything uncertain, watermark the draft if appropriate, and do not post it publicly. The sample should prove that you noticed the problem without giving away a full redesign.",
+          "Send a short permission-based message: Hi [Name], I noticed [specific menu mismatch] and rebuilt one small section as a phone-readable sample. Want me to send it? If useful, I can deliver the approved section and matching exports for [fixed price]. Adapt the details, use a published business contact channel, and stop if the owner is not interested.",
+        ],
+      },
+      {
+        heading: "Turn the first quote into repeatable delivery",
+        paragraphs: [
+          "For the first paid job, confirm the decision-maker, verified source list, existing brand files, required outputs, printer specifications if relevant, deadline, approval rounds, price, payment timing, exclusions, and who publishes each file. Put that scope in writing before work starts.",
+          "Deliver in a fixed order: collect inputs, save the original state, build one representative section, get direction approved, finish the remaining scope, run a mobile and print-readiness check, collect final fact approval, export files, and send a change log. Keep permissioned before-and-after proof for future outreach.",
+          "After a clean handoff, offer a monthly allowance based on how often the venue changes specials, prices, events, or seasonal items. Want the pricing workbook, outreach scripts, proposal, intake form, mockup kit, and delivery checklist? Open the Cafe Menu Refresh launch pack and customise the working files before contacting owners.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: quote a two-page cafe menu refresh",
+      steps: [
+        "Confirm the buyer needs one two-page main menu, a phone-readable PDF, and one Instagram specials tile for a single location.",
+        "Ask for one owner-approved spreadsheet containing every item, description, price, size, dietary label, and ordering note.",
+        "Exclude photography, printing, a new logo, delivery-app entry, website edits, allergen advice, and new menu copy from the base scope.",
+        "Estimate 45 minutes for intake and file setup, three hours for layout, 45 minutes for exports and checks, one hour for consolidated revisions, and 30 minutes for handoff and admin.",
+        "Check the total against your private hourly floor and direct costs, then quote an illustrative AUD $590 fixed package with two approval rounds.",
+        "Offer optional add-ons only if requested, such as a second specials tile, extra location, reconstructed source file, or rush delivery.",
+        "Build one representative section first and get layout direction approved before completing the remaining menu.",
+        "Collect written fact approval, export the agreed files, and send a short change log with owner publishing responsibilities.",
+        "After delivery, record the real hours and offer a clearly limited monthly update allowance if the cafe changes specials frequently.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose independent cafes, bakeries, takeaway shops, food trucks, or coffee carts in one small area.",
+      "Define one starter deliverable with exact sections, formats, turnaround, approval rounds, and exclusions.",
+      "Set a private hourly floor and estimate intake, design, checks, revisions, exports, handoff, and admin.",
+      "Create starter, full-refresh, and monthly-maintenance price ranges that match the actual scope.",
+      "List direct costs and decide which supplier charges the client will approve and pay separately.",
+      "Review 20 public cafe menu journeys and record one visible issue for each.",
+      "Build one private, fact-safe sample for the strongest prospect without redesigning the whole menu for free.",
+      "Send five tailored messages using published business contact channels.",
+      "Use a written quote, one verified source list, one decision-maker, and consolidated feedback before delivery.",
+      "Record actual hours and scope changes after the first paid job, then update the next quote.",
+    ],
+    commonMistakes: [
+      "Quoting one flat menu design fee before counting sections, locations, formats, files, and approval rounds.",
+      "Pricing only the design time and forgetting intake, fact checks, exports, messages, revisions, and admin.",
+      "Offering unlimited revisions or accepting separate change lists from several staff members.",
+      "Redesigning the entire menu for free before the owner shows buying intent.",
+      "Changing prices, ingredients, dietary labels, availability, or customer claims without owner verification.",
+      "Including printing, photography, branding, website edits, and platform updates inside a small refresh fee.",
+      "Buying expensive tools before validating that one local buyer wants the service.",
+      "Using a cafe's menu, logo, photos, or before-and-after example publicly without permission.",
+      "Promising revenue, foot traffic, search rankings, orders, or conversion improvements from a design refresh.",
+      "Keeping the starter price after real delivery proves the scope takes much longer than expected.",
+    ],
+    faqs: [
+      {
+        question: "How much should I charge to design a cafe menu?",
+        answer:
+          "A practical AUD starting range is $99-$249 for one section or narrow digital asset and $300-$750 for a bounded full-menu refresh. Adjust for sections, source-file quality, formats, locations, approvals, revisions, urgency, and direct costs. These are examples, not market rules.",
+      },
+      {
+        question: "What should a cafe menu design package include?",
+        answer:
+          "Name the menu sections or pages, final formats, locations, turnaround, client inputs, approval rounds, fact-check responsibilities, handoff files, and exclusions. A simple package might include one main menu, a phone PDF, one social tile, and two consolidated approval rounds.",
+      },
+      {
+        question: "Should I include printing in the design price?",
+        answer:
+          "Usually keep printing and delivery separate. Use the printer's specifications, state whether print coordination is included, and have the cafe approve proofs, quantities, paper, price, and delivery. Do not absorb supplier errors or reprints into a basic design fee.",
+      },
+      {
+        question: "How many menu revisions should I include?",
+        answer:
+          "One or two consolidated approval rounds are a practical starting point. Define a round as one change list from the named approver. A new direction, new section, late source copy, or extra location should be re-quoted.",
+      },
+      {
+        question: "What tools do I need for a cafe menu refresh service?",
+        answer:
+          "Start with a design editor, spreadsheet or document for the verified menu list, PDF viewer, cloud folder, email, and a quote template. Add paid fonts, stock assets, proofing tools, or specialist software only when the client scope requires them.",
+      },
+      {
+        question: "How do I get the first cafe menu client?",
+        answer:
+          "Review 20 independent cafes in one area, find five visible menu mismatches, create one small private sample, and send five specific permission-based messages. Sell a fixed paid section refresh before pitching a full redesign or monthly plan.",
+      },
+    ],
+    disclaimer:
+      "This guide provides practical pricing examples, not financial, legal, tax, food-safety, allergen, nutrition, print-production, or earnings advice. Prices, demand, costs, and requirements vary. The cafe owner must verify all menu facts, claims, permissions, and local requirements before publishing or printing.",
+  },
+  {
     slug: "google-business-profile-outreach-scripts",
     title: "Google Business Profile Outreach Scripts That Do Not Sound Like Spam",
     seoTitle: "Google Business Profile Outreach Scripts (2026)",
@@ -855,12 +1022,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-cafe-menu-refresh-service",
     title: "How to Start a Cafe Menu Refresh Service",
-    seoTitle: "How to Start a Cafe Menu Refresh Service | First Cafe Client Plan",
+    seoTitle: "How to Start a Cafe Menu Refresh Service (2026)",
     description:
-      "A practical guide to starting a cafe menu refresh service with a clear buyer, fixed starter offer, realistic pricing, outreach script, delivery checklist, and launch pack links.",
+      "Start a cafe menu refresh service with a fixed offer, practical AUD pricing, a first-client outreach plan, delivery steps, scope rules, and matching launch-pack files.",
     category: "Local Service",
     publishedAt: "2026-07-08",
-    updatedAt: "2026-07-08",
+    updatedAt: "2026-07-16",
     readingTime: "12 min read",
     relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
     shortAnswer:
@@ -909,7 +1076,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Set realistic pricing",
         paragraphs: [
           "Price from time, scope, approval risk, and output count. A simple audit is cheaper than a full menu refresh because it does not require design iterations or final file delivery.",
-          "A practical starting ladder is: mini menu audit around $49-$125, one-section refresh around $100-$250, full cafe menu refresh around $250-$750, and monthly menu maintenance around $100-$400 per month. These are starting points, not market rules.",
+          "A practical AUD starting ladder is $99-$249 for one menu section or narrow digital asset, $300-$750 for a bounded full-menu refresh, and $150-$500 per month for a defined menu-update allowance. These are quote-building examples, not market rules or earnings claims.",
           "Charge more when the cafe has multiple menus, many item categories, poor source files, urgent turnaround, print coordination, delivery app updates, multiple locations, or more than one approval round. Charge less only when the scope is genuinely tiny.",
         ],
       },
@@ -988,7 +1155,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "How much should I charge for a cafe menu refresh?",
         answer:
-          "A starter ladder can begin with a $49-$125 mini audit, $100-$250 one-section refresh, $250-$750 full menu refresh, and $100-$400 monthly menu maintenance. Adjust for scope, files, urgency, revisions, and approval complexity.",
+          "A practical AUD starter ladder is $99-$249 for one section or narrow digital asset, $300-$750 for a bounded full-menu refresh, and $150-$500 per month for a defined update allowance. Adjust for scope, files, urgency, revisions, locations, formats, and approval complexity.",
       },
       {
         question: "Do I need design experience?",
