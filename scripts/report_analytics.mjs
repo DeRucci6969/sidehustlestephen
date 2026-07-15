@@ -72,6 +72,7 @@ let stripeSummary = null;
 
 if (process.env.STRIPE_SECRET_KEY) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+  const stripeMode = process.env.STRIPE_SECRET_KEY.includes("_live_") ? "live" : "test";
   const sessions = await stripe.checkout.sessions.list({
     created: { gte: sinceUnix },
     limit: 100,
@@ -79,7 +80,7 @@ if (process.env.STRIPE_SECRET_KEY) {
   const completed = sessions.data.filter((session) => session.status === "complete");
 
   stripeSummary = {
-    mode: sessions.data.some((session) => session.livemode) ? "live" : "test",
+    mode: stripeMode,
     totalSessions: sessions.data.length,
     byStatus: tally(sessions.data, (session) => session.status),
     byPaymentStatus: tally(sessions.data, (session) => session.payment_status),
