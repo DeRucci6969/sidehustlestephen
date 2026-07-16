@@ -455,7 +455,7 @@ const basePacks: BusinessPack[] = [
     featured: true,
     popularityScore: 91,
     publishedAt: "2026-06-01",
-    updatedAt: "2026-07-16",
+    updatedAt: "2026-07-17",
     assets: [
       { id: "asset-manual-score", title: "Manual Validation Scorecard", type: "PDF", description: "Criteria for deciding whether to automate." },
       { id: "asset-manual-workflow", title: "Workflow Concierge Template", type: "DOCX", description: "Offer structure and delivery map." },

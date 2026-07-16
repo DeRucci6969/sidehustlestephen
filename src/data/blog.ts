@@ -29,6 +29,174 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "concierge-mvp-guide",
+    title: "Concierge MVP Guide: Sell the Service Before You Build Software",
+    seoTitle: "Concierge MVP Guide: Validate Before Building (2026)",
+    description:
+      "Learn how to run a paid concierge MVP: choose one buyer and workflow, price a manual pilot, find the first client, log exceptions, and decide what to automate.",
+    category: "AI Tool",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["manual-workflow-concierge", "ai-inbox-triage-trades", "shopify-cart-audit"],
+    shortAnswer:
+      "A concierge MVP is a transparent manual version of a product or automated service. You choose one narrow buyer, deliver one useful outcome by hand, charge for a tightly scoped pilot, and record the steps, exceptions, approvals, and real delivery time. The point is not to pretend the software already exists. It is to learn whether a buyer values the outcome before you spend weeks building it.",
+    keyPoints: [
+      "Sell one repeated business outcome, not access to imaginary software or a vague promise to automate everything.",
+      "Choose a buyer you can reach and a workflow that can be delivered safely by one person for a small pilot.",
+      "A practical AUD starting range is $250-$750 for a capped two-week pilot, adjusted for volume, access, risk, and approval work.",
+      "Tell the buyer what is manual, keep a human approval step, collect only the inputs you need, and never hide risky work behind the word AI.",
+      "Build only after paid delivery reveals a repeated step that is stable, valuable, and safe enough to automate.",
+    ],
+    body: [
+      {
+        heading: "Who this concierge MVP guide is for",
+        paragraphs: [
+          "This guide is for a solo founder, consultant, operator, or technically curious beginner with an idea for software, AI automation, or a productized workflow. You suspect a business would pay for the result, but you do not yet know the exact inputs, edge cases, approval steps, or price.",
+          "The first customer is not everybody who uses software. Pick a narrow operator such as a small web agency owner, independent property manager, bookkeeping firm administrator, or local trade business. Then choose one repeated outcome they already need, such as a Friday client update, a cleaned quote-request summary, a listing information check, or an owner-approved report draft.",
+          "Avoid workflows involving medical decisions, legal advice, employment decisions, financial recommendations, safety-critical actions, or sensitive customer communications unless qualified human review and appropriate controls are already in place. A beginner needs a low-risk workflow where the buyer can approve the final output.",
+        ],
+      },
+      {
+        heading: "What a concierge MVP actually is",
+        paragraphs: [
+          "A concierge MVP delivers the proposed value manually and openly. The buyer knows a person is doing the work. You might use a form, spreadsheet, document, email, and a few AI-assisted drafts behind the scenes, but the customer is buying an outcome rather than a finished app.",
+          "This is different from secretly making a service look automated. Do not invent a dashboard, claim instant processing, or imply that an autonomous system is handling work when you are doing it manually. Transparency gives you room to ask questions, learn the messy workflow, and keep approvals where they belong.",
+          "The useful evidence is paid use, completed delivery, repeat demand, buyer behaviour, corrections, and a clearer process. Compliments, wait-list emails, and friendly survey answers can help, but they do not prove that the workflow is valuable enough to buy.",
+        ],
+      },
+      {
+        heading: "Choose one buyer and one weekly outcome",
+        paragraphs: [
+          "Start with a workflow the buyer already performs badly, slowly, or inconsistently. Look for repeated input collection, sorting, checking, summarising, drafting, routing, or reporting. The output should be easy to inspect and useful even when a human produces it.",
+          "Write the offer as: I help [specific buyer] turn [messy repeated input] into [approved output] every [cadence]. For example: I help small web agencies turn scattered project notes into an owner-approved Friday client update for up to five active projects.",
+          "Keep the outcome narrow. A promise to automate agency operations is fog. A weekly draft covering progress, blockers, decisions, and next steps is a deliverable. The buyer can understand it, inspect it, approve it, and tell you what is wrong.",
+        ],
+      },
+      {
+        heading: "Define a pilot that cannot quietly double",
+        paragraphs: [
+          "A useful first pilot usually lasts one or two weeks and has hard volume limits. State the number of outputs, input sources, projects or records, delivery days, turnaround, approval rounds, and exclusions. Decide what happens when the buyer sends late or incomplete information.",
+          "A two-week agency update pilot might include four draft updates across two Fridays, up to five source notes per project, one owner approval round, and an exception log. It should exclude direct client sending, project management changes, meeting attendance, unlimited revisions, new software setup, and access to unrelated inboxes or files.",
+          "Put the scope in a short written proposal before delivery. If the first week reveals a different workflow, change the next cycle deliberately. Do not absorb a new department, extra channel, or new customer-facing action because the buyer says it will only take a minute.",
+        ],
+      },
+      {
+        heading: "Price the learning without giving the work away",
+        paragraphs: [
+          "A practical AUD starting range for a capped two-week manual pilot is $250-$750. Use the lower end for a simple output with clean buyer-supplied inputs and little access. Move higher when the workflow has more records, messy source material, several stakeholders, tighter turnaround, or more checking and approval work.",
+          "A managed weekly workflow can start around $500-$2,000 per month once you know the real delivery time and volume. A separate automation mapping sprint can start around $500-$1,500 when the buyer wants a documented process, exception list, risk notes, and a prioritised backlog after the manual pilot. These are quote-building examples, not market rules or income claims.",
+          "Calculate a private floor before quoting. Estimate intake, delivery, QA, communication, revisions, reporting, admin, and a buffer for the first unfamiliar cycle. Add direct tool costs. If your fixed price does not cover the realistic work, narrow the pilot or raise the fee. Do not call unpaid labour validation when the buyer receives a useful business output.",
+        ],
+      },
+      {
+        heading: "Use a small, controlled tool stack",
+        paragraphs: [
+          "You usually need less technology than you think: a simple intake form, spreadsheet or tracker, document template, calendar, cloud folder, and email. Add an AI tool only for a bounded draft or classification step that you can inspect. The workflow should still make sense if the AI tool is unavailable for a day.",
+          "Collect the minimum data needed to deliver the pilot. Ask the buyer to provide selected notes or exports instead of granting broad inbox, drive, CRM, or customer-account access. Use separate client folders, strong authentication, and a written deletion or handoff step. Never paste confidential material into a tool unless the buyer has approved that use and the tool is suitable for the data.",
+          "Keep irreversible actions manual. Do not auto-send customer messages, change records, approve refunds, publish content, or trigger payments during an early experiment. Draft, flag, and recommend. Let the authorised buyer approve the action.",
+        ],
+      },
+      {
+        heading: "Find the first buyer with workflow questions",
+        paragraphs: [
+          "List 20 operators in one niche. Look for visible signs of repeated admin: many active client projects, frequent listings, a busy quote form, a small team, regular reports, or public comments about slow updates. Use published business contact details and research each prospect before writing.",
+          "Lead with the outcome and a question: Hi [Name], I am testing a small manual service for web agencies that turns scattered project notes into owner-approved Friday client updates. It is a two-week capped pilot, not new software. How are you handling weekly client updates across active projects now?",
+          "If the problem is real, offer a short call to map one current cycle. Do not promise hours saved, fewer errors, happier clients, or a future app before the pilot measures anything. Sell the small paid delivery and agree on what would make the test worth continuing.",
+        ],
+      },
+      {
+        heading: "Deliver manually and keep an exception log",
+        paragraphs: [
+          "For each cycle, record the input received, missing information, manual decisions, clarifying questions, draft time, QA time, approval changes, final outcome, and any step that repeated. This is the evidence that turns a loose service into a reliable workflow.",
+          "Separate standard steps from exceptions. Standard steps happen in nearly the same order each time. Exceptions need judgement, missing context, permission, or escalation. Automating a stable formatting step may be sensible. Automating a judgement-heavy exception because it is annoying is how bad systems get built.",
+          "Send the buyer a short end-of-pilot summary: what was delivered, what changed after approval, how long each cycle took, where inputs broke, what should stay manual, what could be templated, and whether the next offer is another managed cycle, a narrower pilot, or no further work.",
+        ],
+      },
+      {
+        heading: "Decide what to automate after the pilot",
+        paragraphs: [
+          "Do not build because the manual work felt tedious. Build when the same valuable step repeats, the input is predictable enough, the output can be checked, and the buyer wants the outcome again. One paid pilot is evidence for the next test, not proof of a large market.",
+          "A simple decision is to keep delivering manually, narrow the buyer, change the offer, stop the idea, or automate one low-risk step. For the agency update example, you might template the approved update structure or automate collection reminders while leaving judgement, missing-context questions, and client sending with the owner.",
+          "The goal is not to build a startup on schedule. The goal is to get a real buyer, learn the real workflow, and avoid spending months polishing a solution for an imaginary process. Want the outreach script, pilot template, intake form, validation scorecard, prompts, and automation backlog? Open the Manual Workflow Concierge launch pack and customise the working files before contacting buyers.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: a two-week client update concierge pilot",
+      steps: [
+        "Choose small web agencies with several active client projects and an owner who still assembles weekly updates.",
+        "Offer one outcome: owner-approved Friday update drafts covering progress, blockers, decisions, and next steps.",
+        "Cap the pilot at four drafts across two Fridays, five approved source notes per project, and one consolidated approval round.",
+        "Exclude direct client sending, meeting attendance, project-plan edits, CRM changes, unlimited revisions, and broad inbox access.",
+        "Quote an illustrative AUD $450 fixed pilot after estimating intake, four drafts, QA, owner questions, revisions, reporting, and admin.",
+        "Collect only the project notes the owner selects and store each client's material in a separate access-controlled folder.",
+        "Draft the update manually, mark missing context, and have the agency owner approve every client-facing statement.",
+        "Log time, missing inputs, repeated formatting, judgement calls, corrections, and late approvals for each cycle.",
+        "At the end, recommend a managed monthly workflow, a narrower test, or no continuation based on paid use and delivery evidence.",
+        "Automate only a stable low-risk step, such as input reminders or document formatting, after the buyer approves the process.",
+      ],
+    },
+    firstActionChecklist: [
+      "Pick one narrow B2B operator type you can reach this week.",
+      "Name one repeated weekly input and one inspectable output.",
+      "Write the offer in one sentence without using vague words such as transformation or end-to-end automation.",
+      "Set the pilot length, output count, input sources, approval round, turnaround, and exclusions.",
+      "Choose a low-risk workflow and keep customer-facing or irreversible actions behind buyer approval.",
+      "Estimate every delivery task and set a fixed pilot price that covers realistic work.",
+      "Create an intake form, delivery template, QA checklist, and exception log.",
+      "List 20 prospects and write five messages based on real workflow clues.",
+      "Sell one paid pilot, then record time, corrections, missing inputs, and repeat demand.",
+      "Choose what to keep manual, stop, narrow, template, or automate after the evidence review.",
+    ],
+    commonMistakes: [
+      "Building a dashboard before one buyer pays for the outcome.",
+      "Calling the pilot automated when a person is doing the work behind the scenes.",
+      "Choosing a broad buyer such as small businesses instead of one reachable operator type.",
+      "Selling a vague efficiency promise instead of one defined output and cadence.",
+      "Running the pilot for free even though the buyer receives useful work.",
+      "Leaving volume, inputs, approvals, revisions, and exclusions out of the scope.",
+      "Requesting broad system access when a selected export or forwarded note would work.",
+      "Using confidential data in unapproved tools or keeping client files after the agreed handoff.",
+      "Automating customer-facing actions before the owner has approved the workflow and controls.",
+      "Treating one enthusiastic client as proof that the service will scale.",
+    ],
+    faqs: [
+      {
+        question: "What is a concierge MVP?",
+        answer:
+          "A concierge MVP is a transparent manual version of a proposed product or automated service. A person delivers the outcome for a small number of customers, learns the real workflow, and tests willingness to pay before building software.",
+      },
+      {
+        question: "Is a concierge MVP the same as a manual MVP?",
+        answer:
+          "The terms are often used for the same manual-first test. The important boundary is transparency: the customer should know the service is being delivered manually rather than being misled into believing finished automation exists.",
+      },
+      {
+        question: "How much should I charge for a concierge MVP pilot?",
+        answer:
+          "A practical AUD starting range is $250-$750 for a capped two-week pilot. Adjust for output volume, source quality, access, checking, stakeholder approvals, turnaround, direct costs, and risk. Narrow the scope if the price cannot cover the real work.",
+      },
+      {
+        question: "How do I find the first concierge MVP customer?",
+        answer:
+          "Choose one narrow operator type, list 20 prospects with signs of repeated admin, ask how they handle one specific workflow, and offer a small paid pilot with a clear output. Start with five researched messages rather than a generic automation blast.",
+      },
+      {
+        question: "What should I measure during a manual pilot?",
+        answer:
+          "Track paid use, repeat requests, delivery time, input quality, missing information, questions, corrections, approval delays, exceptions, and which steps repeat consistently. Measure the workflow before claiming time savings or deciding what to build.",
+      },
+      {
+        question: "When should I automate a concierge workflow?",
+        answer:
+          "Automate a small step after buyers have paid for repeated delivery and the step has stable inputs, clear rules, inspectable output, and manageable failure risk. Keep judgement-heavy, sensitive, and irreversible actions under human control.",
+      },
+    ],
+    disclaimer:
+      "This guide provides business testing and pricing examples, not legal, privacy, security, employment, financial, medical, or earnings advice. Data rules, consent, contracts, access requirements, and costs vary. Use qualified review for sensitive or regulated workflows, obtain buyer approval, and validate demand before investing in software.",
+  },
+  {
     slug: "cafe-menu-design-pricing-guide",
     title: "Cafe Menu Design Pricing: What to Charge for a Menu Refresh",
     seoTitle: "Cafe Menu Design Pricing Guide (2026)",
@@ -1619,12 +1787,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "what-makes-a-side-hustle-actually-startable",
     title: "What Makes a Side Hustle Actually Startable?",
-    seoTitle: "What Makes a Side Hustle Actually Startable? | Practical Side Hustle Filter",
+    seoTitle: "How to Choose a Side Hustle You Can Actually Start (2026)",
     description:
-      "A practical filter for choosing side hustle ideas with a real buyer, clear first offer, low startup complexity, realistic delivery, and a believable first action.",
+      "Use a practical filter to choose a side hustle with a reachable buyer, clear first offer, realistic delivery, honest risks, and a first action you can take today.",
     category: "Business Ideas",
     publishedAt: "2026-06-30",
-    updatedAt: "2026-06-30",
+    updatedAt: "2026-07-17",
     readingTime: "10 min read",
     relatedPackSlugs: ["manual-workflow-concierge", "airbnb-guest-guide-refresh", "ugc-brief-generator"],
     shortAnswer:
@@ -1657,6 +1825,7 @@ export const blogPosts: BlogPost[] = [
         heading: "The first offer should be manually deliverable",
         paragraphs: [
           "Manual delivery is not a failure. It is how you learn what the buyer actually values. Before building an app, sell the manual workflow. Before designing a full service menu, sell one starter sprint.",
+          "If the idea could eventually become software, use a concierge MVP: tell the buyer the service is manual, charge for a capped pilot, and log the inputs, approvals, corrections, delivery time, and exceptions. That gives you evidence about the outcome before you automate the process.",
           "A startable first offer might be a menu refresh, profile cleanup, cart audit, guest guide refresh, churn snapshot, creator brief, or workflow map. It should be deliverable with tools you already have or can responsibly access.",
           "If the first version requires custom software, a large team, expensive inventory, advanced licensing, or a complicated funnel, it may still be a business, but it is not the simplest first-client move.",
         ],
