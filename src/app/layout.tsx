@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AnalyticsInteractionTracker } from "@/components/analytics-interaction-tracker";
 import { SiteSchema } from "@/components/site-schema";
-import { UnlockActivityToast } from "@/components/unlock-activity-toast";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -55,7 +54,6 @@ export default function RootLayout({
       <body className="antialiased">
         <SiteSchema />
         {children}
-        <UnlockActivityToast />
         <AnalyticsInteractionTracker />
         <Analytics />
         <SpeedInsights />

@@ -72,10 +72,10 @@ const basePacks: BusinessPack[] = [
     featured: true,
     popularityScore: 98,
     publishedAt: "2026-06-09",
-    updatedAt: "2026-07-16",
+    updatedAt: "2026-07-17",
     assets: [
       { id: "asset-cafe-script", title: "Cafe Outreach Script", type: "DOCX", description: "Cold DM and email scripts for first contact." },
-      { id: "asset-cafe-pricing", title: "Menu Refresh Pricing Sheet", type: "XLSX", description: "Starter, standard, and retainer pricing ladder." },
+      { id: "asset-cafe-pricing", title: "Menu Refresh Pricing Sheet", type: "XLSX", description: "Starter, full-refresh, and retainer pricing with a delivery-time and private-floor quote check." },
       { id: "asset-cafe-quote", title: "Cafe Proposal & Quote Template", type: "DOCX", description: "Copyable proposal, quote, scope, approval, and monthly refresh wording for cafe owners." },
       { id: "asset-cafe-checklist", title: "Delivery Checklist", type: "PDF", description: "What to check before sending final assets." },
       { id: "asset-cafe-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for cafe audits, menu copy, outreach, handoff notes, and monthly refresh ideas." },
@@ -1437,7 +1437,7 @@ export const memberAssetDetails: Record<string, string> = {
   "asset-cafe-script":
     "A DOCX outreach pack with cold email, DM, Loom, follow-up, objection handling, intake prompts, a worked cafe prospect example, and handoff copy you can adapt before contacting owners.",
   "asset-cafe-pricing":
-    "An XLSX workbook with pricing ladder, quote builder, retainer tracker, client input checklist, worked example, delivery runbook, QA checklist, and renewal tracker.",
+    "An XLSX workbook with a bounded refresh pricing ladder, delivery-time and private-floor quote builder, retainer tracker, client input checklist, worked example, delivery runbook, QA checklist, and renewal tracker.",
   "asset-cafe-quote":
     "A DOCX proposal and quote template with cafe owner summary copy, starter/full/retainer scopes, approval terms, exclusions, timeline, invoice wording, and monthly refresh upsell language.",
   "asset-cafe-checklist":

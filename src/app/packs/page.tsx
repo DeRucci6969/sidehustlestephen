@@ -35,7 +35,13 @@ export const metadata = {
   },
 };
 
-export default function PacksPage() {
+export default async function PacksPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ search?: string | string[] }>;
+}) {
+  const params = await searchParams;
+  const initialSearch = typeof params.search === "string" ? params.search : "";
   const totalAssets = packs.reduce((total, pack) => total + pack.assets.length, 0);
   const schemaPacks = [...packs].sort((a, b) => b.popularityScore - a.popularityScore);
   const archiveSchema = {
@@ -115,7 +121,7 @@ export default function PacksPage() {
             </Link>
           ))}
         </section>
-        <ArchiveBrowser packs={packs} />
+        <ArchiveBrowser packs={packs} initialSearch={initialSearch} />
       </main>
       <Footer />
     </>

@@ -8,7 +8,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/cafe-menu-refresh-package/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8037
+    "bytes": 8035
   },
   {
     "id": "asset-cafe-script",
@@ -19,7 +19,7 @@
     "description": "Cold DM and email scripts for first contact.",
     "path": "content/member-assets/cafe-menu-refresh-package/cafe-outreach-script.docx",
     "filename": "cafe-outreach-script.docx",
-    "bytes": 7644
+    "bytes": 7642
   },
   {
     "id": "asset-cafe-pricing",
@@ -27,10 +27,10 @@
     "packTitle": "Cafe Menu Refresh Package",
     "title": "Menu Refresh Pricing Sheet",
     "type": "XLSX",
-    "description": "Starter, standard, and retainer pricing ladder.",
+    "description": "Starter, full-refresh, and retainer pricing with a delivery-time and private-floor quote check.",
     "path": "content/member-assets/cafe-menu-refresh-package/menu-refresh-pricing-sheet.xlsx",
     "filename": "menu-refresh-pricing-sheet.xlsx",
-    "bytes": 12592
+    "bytes": 12838
   },
   {
     "id": "asset-cafe-quote",
@@ -41,7 +41,7 @@
     "description": "Copyable proposal, quote, scope, approval, and monthly refresh wording for cafe owners.",
     "path": "content/member-assets/cafe-menu-refresh-package/cafe-proposal-quote-template.docx",
     "filename": "cafe-proposal-quote-template.docx",
-    "bytes": 8301
+    "bytes": 8300
   },
   {
     "id": "asset-cafe-checklist",
@@ -63,7 +63,7 @@
     "description": "Practical prompts for cafe audits, menu copy, outreach, handoff notes, and monthly refresh ideas.",
     "path": "content/member-assets/cafe-menu-refresh-package/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9116
+    "bytes": 9115
   },
   {
     "id": "asset-cafe-intake",
@@ -74,7 +74,7 @@
     "description": "Editable client intake questions for menu source files, brand details, approvals, and delivery formats.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 7288
+    "bytes": 7287
   },
   {
     "id": "asset-cafe-email-templates",
@@ -85,7 +85,7 @@
     "description": "Ready-to-adapt emails for outreach, intake, approvals, delivery, follow-up, and monthly refresh offers.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7203
+    "bytes": 7199
   },
   {
     "id": "asset-cafe-faqs",
@@ -96,7 +96,7 @@
     "description": "Buyer-facing FAQs that explain scope, turnaround, approvals, files, and what is not included.",
     "path": "content/member-assets/cafe-menu-refresh-package/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7174
+    "bytes": 7173
   },
   {
     "id": "asset-cafe-mockup-kit",
@@ -107,7 +107,7 @@
     "description": "Three copyable sample layouts, a 20-minute build workflow, export specs, and owner-approval checks for pitching cafes without redesigning the whole menu for free.",
     "path": "content/member-assets/cafe-menu-refresh-package/cafe-sample-mockup-kit.docx",
     "filename": "cafe-sample-mockup-kit.docx",
-    "bytes": 8375
+    "bytes": 8372
   },
   {
     "id": "asset-gbp-automation",

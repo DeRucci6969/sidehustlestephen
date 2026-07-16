@@ -14,11 +14,8 @@ const timeRank: Record<string, number> = {
   "2-4 weeks": 2,
 };
 
-export function ArchiveBrowser({ packs }: { packs: BusinessPack[] }) {
-  const [query, setQuery] = useState(() => {
-    if (typeof window === "undefined") return "";
-    return new URLSearchParams(window.location.search).get("search") ?? "";
-  });
+export function ArchiveBrowser({ packs, initialSearch = "" }: { packs: BusinessPack[]; initialSearch?: string }) {
+  const [query, setQuery] = useState(initialSearch);
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState<SortMode>("popular");
   const lastTrackedQueryRef = useRef("");
