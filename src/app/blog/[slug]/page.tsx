@@ -59,16 +59,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const relatedPacks = post.relatedPackSlugs
     .map((packSlug) => getPack(packSlug))
     .filter((pack): pack is BusinessPack => Boolean(pack));
-  const relatedPosts = blogPosts
+  const explicitRelatedPosts = (post.relatedArticleSlugs ?? [])
+    .map((relatedSlug) => blogPosts.find((candidate) => candidate.slug === relatedSlug))
+    .filter((candidate): candidate is (typeof blogPosts)[number] => Boolean(candidate));
+  const explicitRelatedSlugs = new Set(explicitRelatedPosts.map((candidate) => candidate.slug));
+  const discoveredRelatedPosts = blogPosts
     .filter((candidate) => candidate.slug !== post.slug)
+    .filter((candidate) => !explicitRelatedSlugs.has(candidate.slug))
     .map((candidate) => {
       const sharedPacks = candidate.relatedPackSlugs.filter((packSlug) => post.relatedPackSlugs.includes(packSlug)).length;
       const categoryMatch = candidate.category === post.category ? 2 : 0;
       return { candidate, score: sharedPacks + categoryMatch };
     })
     .sort((a, b) => b.score - a.score || b.candidate.publishedAt.localeCompare(a.candidate.publishedAt))
-    .slice(0, 4)
     .map(({ candidate }) => candidate);
+  const relatedPosts = [...explicitRelatedPosts, ...discoveredRelatedPosts].slice(0, 4);
   const bottomCtaPacks = [
     ...relatedPacks,
     ...popularPacks.filter((pack) => !post.relatedPackSlugs.includes(pack.slug)),

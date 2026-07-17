@@ -8,6 +8,7 @@ export type BlogPost = {
   updatedAt: string;
   readingTime: string;
   relatedPackSlugs: string[];
+  relatedArticleSlugs?: string[];
   shortAnswer: string;
   keyPoints: string[];
   body: {
@@ -28,6 +29,175 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "how-to-get-headlight-restoration-customers",
+    title: "How to Get Headlight Restoration Customers",
+    seoTitle: "How to Get Headlight Restoration Customers (2026)",
+    description:
+      "A practical first-10-jobs plan for finding headlight restoration customers through used-car sellers, local partners, proof photos, and direct outreach.",
+    category: "Outreach",
+    publishedAt: "2026-07-18",
+    updatedAt: "2026-07-18",
+    readingTime: "13 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "mobile-headlight-restoration-pricing-guide",
+    ],
+    shortAnswer:
+      "To get headlight restoration customers, start with one permissioned before-and-after result, one fixed two-headlight offer, and a list of 20 nearby buyers with a visible reason to act. Contact used-car sellers, older-car owners, detailers, mechanics, and small dealers with a short message tied to the cloudy lenses you can actually see. Aim for five tailored messages a day, quote from photos and condition, and ask each happy buyer for permissioned proof and one introduction.",
+    keyPoints: [
+      "Sell a clear two-headlight service to buyers who already care about the car's appearance, not a vague car-care package.",
+      "Use honest matched proof photos from a permissioned car before asking strangers to trust your process.",
+      "Start with used-car sellers and same-address referrals, then approach detailers, mechanics, and small dealers for repeat work.",
+      "A practical consumer starting range is about $80-$220 per car, adjusted for condition, travel, access, materials, and local demand.",
+      "Track replies, photo requests, quotes, bookings, time, and reasons for no so the next 20 messages improve.",
+    ],
+    body: [
+      {
+        heading: "Who this customer plan is for",
+        paragraphs: [
+          "This guide is for someone who has practised a safe headlight restoration process and now needs real buyers. You might have one useful before-and-after result, a basic kit, and a free weekend, but no audience and no idea where the first ten jobs should come from.",
+          "Do not advertise yet if you have never completed the process on a permissioned practice car. Learn the product steps, masking, cleanup, weather limits, and unsuitable-lens signs first. Customer acquisition only helps when the service is ready to deliver carefully.",
+          "The goal is not to become a famous detailing brand. The goal is to find one nearby buyer, complete one bounded job, collect honest proof, and repeat the parts that worked.",
+        ],
+      },
+      {
+        heading: "Choose the buyer with a reason to act now",
+        paragraphs: [
+          "The easiest prospect is not every driver. It is someone who can see that cloudy headlights weaken the look of a car and has a reason to care this week. Used-car sellers want cleaner listing photos. A family may want an older car tidied before handing it over. A rideshare driver, detailer, mechanic, or small dealer may value a visible add-on that can be scheduled with other work.",
+          "Start with one lane for seven days. Used-car sellers are usually the cleanest first test because the vehicle is public, the photos show the condition, and the seller is already taking action. Local automotive partners become more useful after you can show two or three consistent results and explain your process without overselling it.",
+          "Avoid contacting owners because you saw a car parked at a private home or collecting personal details through questionable methods. Use public business channels, seller contact options, referrals, community groups that allow service posts, and respectful in-person conversations where approaching is appropriate.",
+        ],
+      },
+      {
+        heading: "Build one offer that is easy to quote",
+        paragraphs: [
+          "Your starter offer should cover two suitable plastic headlights at the customer's location. Include inspection, cleaning, careful masking, the restoration process, UV protection or sealant, cleanup, and matched before-and-after photos. State the weather, access, water, parking, and photo requirements before booking.",
+          "A practical beginner range for a normal mobile job is about $80-$220 per car. That is a starting point, not a market rule. Quote from lens condition, travel, setup, materials, vehicle access, expected time, and your actual skill. Keep cracked lenses, internal moisture, electrical faults, lens replacement, roadworthiness, and permanent-result promises outside the offer.",
+          "Give the buyer one price after seeing clear daylight photos, then confirm condition on arrival before starting. If the job is unsuitable, say so. A clean no builds more trust than charging into a result you cannot stand behind.",
+        ],
+      },
+      {
+        heading: "Create proof without manufacturing a miracle",
+        paragraphs: [
+          "Restore one car you own or have clear permission to use. Photograph both lenses before and after from the same distance, angle, and lighting. Keep the edit to normal cropping and exposure consistency. Do not darken the before photo, boost the after photo, or claim the lens is new.",
+          "Your proof post needs four facts: the vehicle type, visible starting condition, what the service included, and the result boundary. A useful caption is: Practice restoration on a 2012 hatchback with moderate exterior haze. Both lenses were cleaned, masked, restored, protected, and photographed in the same driveway light. Results vary by lens condition.",
+          "Ask separately before using a customer's car, number plate, message, name, or testimonial in marketing. If permission only covers private quoting, keep it private. One honest image you can legally and comfortably reuse is worth more than a folder of questionable screenshots.",
+        ],
+      },
+      {
+        heading: "Find 20 used-car sellers worth contacting",
+        paragraphs: [
+          "Choose one public marketplace or listing site and one small service radius. Look for older cars with clear seller photos, visibly cloudy exterior lenses, an active listing, and a price that suggests the seller cares about presentation. Skip listings where the condition is unclear or the contact channel does not allow service approaches.",
+          "Record only what you need: listing link, vehicle, suburb, visible lens condition, contact channel, message date, reply, quote, and outcome. Do not scrape private data or blast the same message to hundreds of people. Twenty researched prospects are enough to learn whether the angle works.",
+          "Lead with the observed issue and a low-pressure next step. Example: Hi Mia, I saw your Mazda listing and noticed the headlights look cloudy in the daylight photos. I restore suitable plastic headlights locally and can quote both lenses from two close photos. No pressure if it is not useful. Want me to send the scope and starting range?",
+        ],
+      },
+      {
+        heading: "Turn local automotive businesses into partners",
+        paragraphs: [
+          "Detailers, mechanics, tyre shops, windscreen businesses, used-car yards, and vehicle photographers already meet owners who care about presentation. Do not ask them for a partnership before you have proof. Show a relevant result, explain the narrow service, and offer one paid sample job or a simple referral conversation.",
+          "A useful message is: Hi Dan, I run a small mobile headlight restoration service for suitable cloudy plastic lenses. I noticed you do detailing but do not list headlights as a standalone service. I have a matched before-and-after example and a fixed scope. Would a paid sample car be useful before we discuss referrals or batch work?",
+          "Keep any referral fee, customer ownership, scheduling, damage responsibility, payment, and photo permission clear in writing. A batch rate only makes sense when several ready cars share the same site and setup. Waiting around a yard for vehicles to appear is not efficient batch work.",
+        ],
+      },
+      {
+        heading: "Use neighbourhood proof after the first job",
+        paragraphs: [
+          "A local service becomes easier to sell when the proof is recognisably local. After a good job, ask the customer whether a second car at the same address, a neighbour, or a friend has the same visible problem. Offer a same-address quote based on the second vehicle's condition, not an automatic giveaway.",
+          "Post in neighbourhood or community groups only when their rules allow business promotion. Use one useful photo, name the suburb or service radius, explain the exact scope, and invite daylight photos for a quote. Do not post fake scarcity, guaranteed results, or a giant list of unrelated services.",
+          "A simple local post is enough: I am taking a small number of mobile headlight restoration jobs around [area]. The service covers two suitable plastic lenses, inspection, masking, restoration, UV protection, cleanup, and matched photos. Send two daylight photos for a condition check and fixed quote. Results depend on lens condition.",
+        ],
+      },
+      {
+        heading: "Follow up without becoming the nuisance",
+        paragraphs: [
+          "If a prospect does not reply, send one useful follow-up three to five days later. Add information rather than pretending the previous message was urgent. You can mention your service radius, the two-photo quote process, the next suitable weather window, or the fact that you will say no when replacement is more sensible.",
+          "Example: Quick follow-up in case the headlight note was useful. If you send one front photo and one close photo in daylight, I can confirm whether the lenses look suitable and quote both before you decide. If they look cracked or internally damaged, I will tell you rather than push a booking.",
+          "Stop after that unless the person replies. Respect opt-outs, platform rules, and published contact preferences. Good direct outreach feels relevant and easy to decline. Repeated unsolicited messages make a tiny local market remember you for the wrong reason.",
+        ],
+      },
+      {
+        heading: "Measure the first 50 messages",
+        paragraphs: [
+          "Track five numbers by channel: tailored messages sent, replies, photo checks, quotes, and paid jobs. Also note the reason for no, such as price, distance, unsuitable lens, sold vehicle, no response, or poor timing. You do not need fancy software. A spreadsheet is enough.",
+          "After every ten messages, change one variable. Try a clearer first line, a smaller radius, stronger proof, a more specific buyer, or a simpler quote step. Do not change the audience, price, message, proof, and offer at once because you will not know what helped.",
+          "The article gives you the acquisition plan. The Mobile Headlight Restoration launch pack gives you the outreach scripts, quote calculator, intake form, safety checklist, proof kit, prompts, and client emails. Customise them, send the first five messages, and record the result.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: a seven-day first-customer sprint",
+      steps: [
+        "Monday: finish one permissioned practice car, record the full job time, and take matched photos.",
+        "Tuesday: write the fixed two-headlight scope, starting range, service radius, exclusions, and two-photo quote rule.",
+        "Wednesday: shortlist 20 active used-car listings with clearly visible cloudy lenses and appropriate contact channels.",
+        "Thursday: send five tailored seller messages and contact two local detailers with the paid-sample partner offer.",
+        "Friday: reply to interested prospects, request daylight photos, decline unsuitable lenses, and send fixed quotes.",
+        "Saturday: complete the first suitable paid job carefully, then request separate permission for proof and one introduction.",
+        "Sunday: review replies, quotes, bookings, time, costs, and objections before sending the next ten messages.",
+      ],
+    },
+    firstActionChecklist: [
+      "Complete one permissioned practice restoration before advertising.",
+      "Create one honest matched before-and-after image and a fact-safe caption.",
+      "Write a fixed two-headlight scope with inclusions, exclusions, weather needs, and service radius.",
+      "Set a private price floor and a public starting range based on real costs and time.",
+      "Choose used-car sellers or one other buyer lane for the first seven days.",
+      "Build a list of 20 relevant prospects using permitted public contact channels.",
+      "Send five tailored messages today and schedule one follow-up for non-replies.",
+      "Approach two automotive businesses only after your proof and scope are ready.",
+      "Track replies, photo checks, quotes, jobs, reasons for no, and actual delivery time.",
+      "Ask each happy customer for separate proof permission and one relevant introduction.",
+    ],
+    commonMistakes: [
+      "Posting a vague announcement instead of contacting buyers with a visible reason to act.",
+      "Advertising before completing a safe permissioned practice job.",
+      "Using mismatched lighting or aggressive editing to exaggerate proof.",
+      "Sending the same spam message to hundreds of sellers or ignoring platform rules.",
+      "Offering a cheap price before checking condition, travel, access, weather, and materials.",
+      "Promising like-new lenses, permanent protection, roadworthiness, or safety outcomes.",
+      "Asking businesses for a partnership without proof, scope, pricing, or responsibility boundaries.",
+      "Following up repeatedly after a prospect has ignored or declined the offer.",
+      "Adding detailing, paint, electrical, or replacement work before the core service is repeatable.",
+      "Failing to record why prospects said no and repeating the same weak message.",
+    ],
+    faqs: [
+      {
+        question: "Who needs headlight restoration most?",
+        answer:
+          "Good first prospects include used-car sellers, owners of older cars with cloudy exterior lenses, rideshare drivers, small fleets, detailers, mechanics, and used-car yards. Prioritise buyers with a visible issue and a current reason to improve presentation.",
+      },
+      {
+        question: "How do I advertise a headlight restoration business?",
+        answer:
+          "Start with permissioned before-and-after proof, a narrow local service radius, tailored outreach to used-car sellers, allowed community-group posts, and conversations with automotive businesses that do not offer the service. Track each channel before paying for ads.",
+      },
+      {
+        question: "What should I say to a potential headlight restoration customer?",
+        answer:
+          "Mention the visible cloudy lenses, explain that you restore suitable plastic headlights locally, and offer a simple two-photo condition check before quoting. Keep the message specific, low pressure, and easy to decline.",
+      },
+      {
+        question: "Should I do the first headlight restoration job for free?",
+        answer:
+          "Use your own car or a clearly permissioned practice car to learn and create honest proof. Once the process is ready, a small paid first-customer offer is usually more useful than giving a full job away. Reduce scope or price openly instead of inventing fake urgency.",
+      },
+      {
+        question: "How many outreach messages should I send?",
+        answer:
+          "Start with five tailored messages a day and review results after every ten. Quality matters more than volume because the visible issue, buyer timing, service radius, proof, and contact-channel rules all affect whether the message is relevant.",
+      },
+      {
+        question: "How much should I charge a first headlight restoration customer?",
+        answer:
+          "A practical starting range for a normal two-headlight mobile job is about $80-$220 per car. Adjust for lens condition, travel, access, materials, weather, actual job time, skill, and local demand. Quote only after reviewing clear photos and confirming condition on arrival.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not automotive, legal, safety, roadworthiness, privacy, platform, or marketing-law advice. Follow product instructions, use suitable protective gear, respect contact and community rules, obtain permission for proof, check local requirements, and decline unsuitable lenses.",
+  },
   {
     slug: "concierge-mvp-guide",
     title: "Concierge MVP Guide: Sell the Service Before You Build Software",
@@ -2092,20 +2262,24 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-mobile-headlight-restoration-business",
     title: "How to Start a Mobile Headlight Restoration Business",
-    seoTitle: "How to Start a Mobile Headlight Restoration Business | First-Client Guide",
+    seoTitle: "Start a Mobile Headlight Restoration Business (2026)",
     description:
-      "A practical guide to starting a mobile headlight restoration business with starter tools, pricing, outreach, safety boundaries, proof photos, and a first-client plan.",
+      "Learn how to start a mobile headlight restoration business with tools, pricing, proof photos, safety boundaries, outreach, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-09",
+    updatedAt: "2026-07-18",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-get-headlight-restoration-customers",
+      "mobile-headlight-restoration-pricing-guide",
+    ],
     shortAnswer:
       "To start a mobile headlight restoration business, learn one safe restoration process, restore one permissioned car for proof, price a narrow mobile service, and pitch car owners with cloudy headlights. Sell cosmetic restoration and better lens clarity, not roadworthiness, legal compliance, permanent results, or guaranteed night-driving performance.",
     keyPoints: [
       "Best first buyers are used-car sellers, neighbours, small fleets, local dealers, rideshare drivers, and car owners with visibly cloudy plastic headlights.",
       "Start with one service: two-headlight restoration with masking, sanding, polishing, UV protection, cleanup, and before-and-after photos.",
-      "A practical starter price can sit around $60-$180 per car, but quote from materials, travel, lens condition, time, weather, and batch size.",
+      "A practical starter price can sit around $80-$220 per car, but quote from materials, travel, lens condition, time, weather, and batch size.",
       "Use proof photos carefully: matched angles, same lighting, permission to use the images, and no exaggerated claims.",
       "The first job should teach your process, timing, material cost, and how often lenses are too far gone for restoration.",
     ],
@@ -2146,7 +2320,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Set realistic pricing",
         paragraphs: [
           "A sensible pricing ladder might include a single-car restoration, a two-car neighbour bundle, a dealer batch price, and a travel add-on outside your core area. Keep the menu short enough that the buyer can choose quickly.",
-          "As a starting point, a single two-headlight job might sit around $60-$180, with higher quotes for travel, heavier oxidation, larger vehicles, awkward access, or extra prep time. Dealer or fleet batches may use a lower per-car rate because setup and travel are shared.",
+          "As a starting point, a single two-headlight job might sit around $80-$220, with higher quotes for travel, heavier oxidation, larger vehicles, awkward access, or extra prep time. Dealer or fleet batches may use a lower per-car rate because setup and travel are shared.",
           "If pricing is the main question, use the dedicated Mobile Headlight Restoration Pricing Guide next. It breaks the offer into single-car, two-car, dealer batch, travel, and unsuitable-lens scenarios before you open the quote calculator.",
           "Price from the real job, not from a viral post. Count sanding discs, polish, sealant, tape, towels, travel, weather risk, setup, cleanup, customer messages, and the time spent taking proof photos.",
         ],
@@ -2164,7 +2338,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Start close to home. Walk your street, ask friends, check local marketplace listings, visit small used-car yards, and look for older cars with cloudy headlights in public places where approaching the owner is appropriate.",
           "Used-car sellers are a strong first lane because photos matter. If a seller is asking a real price for a car but the headlights make it look tired, your message has a clear reason to exist.",
-          "Build a simple list with the car type, location, visible condition, likely buyer type, and outreach angle. Twenty researched prospects will beat a lazy post that says you now do headlights.",
+          "Build a simple list with the car type, location, visible condition, likely buyer type, and outreach angle. Twenty researched prospects will beat a lazy post that says you now do headlights. Use the dedicated customer-acquisition guide next for the seven-day sprint, seller scripts, automotive partner pitch, follow-up, and tracking plan.",
         ],
       },
       {
@@ -2234,7 +2408,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "How much should I charge for headlight restoration?",
         answer:
-          "A starter two-headlight job might sit around $60-$180, depending on lens condition, materials, travel, weather, vehicle type, and local demand. Batch work for dealers or fleets may use a different per-car rate because setup and travel are shared.",
+          "A starter two-headlight job might sit around $80-$220, depending on lens condition, materials, travel, weather, vehicle type, and local demand. Batch work for dealers or fleets may use a different per-car rate because setup and travel are shared.",
       },
       {
         question: "What tools do I need to start?",
@@ -2266,6 +2440,10 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-07-09",
     readingTime: "11 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-get-headlight-restoration-customers",
+      "how-to-start-a-mobile-headlight-restoration-business",
+    ],
     shortAnswer:
       "A simple mobile headlight restoration price should usually start with a fixed two-headlight package, then adjust for lens condition, travel, vehicle access, materials, weather, and batch size. A beginner-friendly starting range is around $80-$220 per car for a normal mobile job, with cheaper per-car rates for dealer batches and higher quotes for heavy oxidation, long travel, or awkward access. Do not promise like-new, permanent, legal, or roadworthiness outcomes.",
     keyPoints: [
