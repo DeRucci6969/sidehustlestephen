@@ -43,7 +43,7 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
         ))}
       </nav>
       <div className="flex shrink-0 items-center gap-3">
-        <nav className="flex min-w-0 items-center gap-1 text-xs font-semibold text-[var(--navy-ink)] sm:gap-2 sm:text-sm md:hidden">
+        <nav className="hidden min-w-0 items-center gap-1 text-xs font-semibold text-[var(--navy-ink)] sm:flex sm:gap-2 sm:text-sm md:hidden">
           {visibleNavItems.map(([label, href]) => (
             <Link key={label} href={href} className="inline-flex h-11 items-center rounded-full px-2 transition hover:bg-white/70 hover:text-[var(--safety-orange)] sm:px-3">
               {label}
@@ -73,9 +73,17 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
             <JoinButton label="Continue checkout" className="h-11 px-4 sm:px-5" />
           </div>
         ) : (
-          <span className="hidden sm:block">
+          <div className="hidden items-center gap-2 md:flex">
+            <Link
+              href="/account"
+              data-analytics-event="Sign In Opened"
+              data-analytics-location="header"
+              className="inline-flex h-11 items-center rounded-full px-3 text-sm font-bold text-[var(--navy-ink)] transition hover:bg-white/70 hover:text-[var(--safety-orange)]"
+            >
+              Sign in
+            </Link>
             <JoinButton label="Unlock" className="h-11 px-4 sm:px-5" />
-          </span>
+          </div>
         )}
         {viewer.isMember ? (
           <Link
@@ -94,9 +102,18 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
             <UserCircle2 size={18} />
           </Link>
         ) : (
-          <span className="sm:hidden">
+          <div className="flex items-center gap-1 md:hidden">
+            <Link
+              href="/account"
+              data-analytics-event="Sign In Opened"
+              data-analytics-location="header_mobile"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[rgba(28,32,28,0.12)] bg-white/86 text-[var(--navy-ink)] shadow-[0_12px_32px_rgba(10,12,16,0.08)]"
+              aria-label="Sign in"
+            >
+              <UserCircle2 size={18} />
+            </Link>
             <JoinButton label="Unlock" className="h-11 px-3 text-xs" />
-          </span>
+          </div>
         )}
       </div>
     </header>
