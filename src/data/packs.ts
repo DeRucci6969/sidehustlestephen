@@ -398,6 +398,7 @@ const basePacks: BusinessPack[] = [
     caveat: "Keep human approval in the loop.",
     popularityScore: 84,
     publishedAt: "2026-06-03",
+    updatedAt: "2026-07-19",
     assets: [
       { id: "asset-trades-map", title: "Inbox Workflow Map", type: "PDF", description: "A simple lead triage workflow diagram." },
       { id: "asset-trades-replies", title: "Reply Template Pack", type: "DOCX", description: "Common quote and follow-up response templates." },
@@ -1242,6 +1243,11 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Keep human approval central. Say clearly that nothing customer-facing is sent automatically without owner approval.",
       "Follow up with one practical example of a cleaner quote request message for their trade.",
       "After setup, offer weekly triage maintenance or automation of only the lowest-risk repeated steps.",
+    ],
+    offerLadder: [
+      { name: "Inbox gap audit", price: "$99-$250", detail: "One trade-specific enquiry audit with channel map, urgent-message risks, missing-field review, and three screenshot-backed fixes." },
+      { name: "Triage setup sprint", price: "$500-$1k", detail: "Labels, reply templates, required job fields, owner approval rules, urgent-message routing, and a daily lead summary format." },
+      { name: "Monitored triage", price: "$300-$750 / mo", detail: "Ongoing low-risk triage support, template maintenance, weekly exception review, and owner-approved workflow updates." },
     ],
   },
   "review-testimonial-service": {

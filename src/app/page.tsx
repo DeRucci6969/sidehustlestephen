@@ -49,6 +49,12 @@ const socialPackRoutes = [
     guideHref: "/blog/how-to-start-a-review-reply-service",
   },
   {
+    slug: "ai-inbox-triage-trades",
+    label: "AI inbox triage for trades",
+    cue: "Messy enquiries into owner-approved lead summaries",
+    guideHref: "/blog/how-to-start-an-ai-inbox-triage-service-for-trades",
+  },
+  {
     slug: "realtor-suburb-snapshot",
     label: "Realtor suburb snapshots",
     cue: "Weekly local content agents can use",
