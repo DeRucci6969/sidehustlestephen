@@ -30,6 +30,168 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ugc-brief-template",
+    title: "UGC Brief Template: How to Write a Creator Brief",
+    seoTitle: "UGC Brief Template: Write Better Creator Briefs (2026)",
+    description:
+      "Use this practical UGC brief template to define the buyer, hooks, shots, claims, deliverables, approvals, usage rights, and first-client offer.",
+    category: "Creator Business",
+    publishedAt: "2026-07-19",
+    updatedAt: "2026-07-19",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["ugc-brief-generator", "shopify-cart-audit", "review-testimonial-service"],
+    relatedArticleSlugs: [
+      "how-to-start-a-shopify-cart-audit-service",
+      "how-to-get-your-first-client-without-a-big-audience",
+      "service-business-pricing-guide-for-beginners",
+    ],
+    shortAnswer:
+      "A useful UGC brief tells a creator who the video is for, what the product can honestly do, which angle to explore, what must appear on screen, which claims are approved, how the files should be delivered, and where the brand may use them. Keep it specific without scripting every breath. If you sell briefs as a service, start with one ecommerce product, one buyer problem, three hook options, one shot plan, and a clear approval and usage-rights section.",
+    keyPoints: [
+      "Write the brief for one product, one audience, one problem, and one intended placement rather than asking for a generic viral video.",
+      "Separate approved product facts from creative suggestions so the creator knows what is fixed and where they have room to sound natural.",
+      "Define deliverables, raw footage, edit versions, deadlines, revisions, disclosure, usage, paid media, and approval responsibility before filming.",
+      "A practical AUD starting point is $180-$450 for one bounded brief or $500-$1,200 for a three-angle sprint, adjusted for research and risk.",
+      "Sell a cleaner production decision and a usable filming plan, not guaranteed views, conversions, or creator performance.",
+    ],
+    body: [
+      {
+        heading: "Who this UGC brief template is for",
+        paragraphs: [
+          "This guide is for a freelance marketer, junior strategist, creator manager, or commercially minded beginner who wants to turn messy product information into a creator-ready brief. Your buyer is usually a small ecommerce brand, paid social freelancer, boutique agency, or founder who can find creators but struggles to give them useful direction.",
+          "The problem is not a lack of document templates. It is that the brand has scattered product facts, vague audience notes, risky claims, old ad examples, and no agreement about what the creator must deliver. Your service turns that pile into one approved filming plan.",
+          "The goal is not to predict a viral video. It is to reduce guesswork before filming, protect the creator's room to perform naturally, and make the delivered files easier for the buyer to review and use.",
+        ],
+      },
+      {
+        heading: "Start with one product and one job for the video",
+        paragraphs: [
+          "A weak brief starts with make us three engaging videos. A useful brief starts with the product, intended viewer, buyer problem, awareness level, placement, and next action. A 20-second prospecting ad for a cold viewer needs a different opening from an organic tutorial for an existing customer.",
+          "Write a one-sentence assignment before anything else: Create a 25 to 35 second vertical video for first-time visitors who want a faster way to pack weekday lunches, showing the product in a real morning routine and ending with an invitation to view the product page. The sentence is narrow enough to guide decisions without writing the performance for the creator.",
+          "Confirm whether the content is intended for the brand's organic channels, the creator's account, paid advertising, a product page, email, or several placements. Do not assume that buying a video automatically buys every form of usage, editing, paid amplification, or creator-handle access.",
+        ],
+      },
+      {
+        heading: "Collect facts before writing hooks",
+        paragraphs: [
+          "Ask the brand for the current product page, target buyer, common objections, approved proof points, prohibited claims, pronunciation, package contents, setup steps, care notes, visual restrictions, previous creative, competitor boundaries, and the action the viewer should take. If an important fact is missing, mark it for approval rather than filling the gap with confident copy.",
+          "Customer reviews can reveal everyday language and objections, but they are not a free claim library. A customer saying a product cured a problem does not automatically make that statement suitable for an ad. Keep a simple source column beside every material fact so the brand can approve, correct, or remove it.",
+          "Regulated or sensitive categories need qualified review. Health, finance, employment, legal, safety, children's products, environmental claims, competitions, testimonials, endorsements, and before-and-after content can carry extra rules. A beginner should choose a straightforward low-risk product and keep final claim approval with the brand.",
+        ],
+      },
+      {
+        heading: "Use a nine-part UGC brief structure",
+        paragraphs: [
+          "A practical brief can use nine sections: campaign job, target viewer, product truth, creative angle, hook options, story beats, shot list, production requirements, and commercial terms. Keep the campaign job and target viewer short. Put approved facts and no-go claims in separate boxes so they cannot be confused.",
+          "Give the creator three or four hook directions, not twelve nearly identical lines. Then map the middle as beats: show the problem, introduce the product in use, demonstrate one approved proof point, handle one objection, and close with the agreed action. A beat gives structure while leaving room for natural wording.",
+          "The shot list should cover what the editor actually needs: product in hand, product in use, packaging, a clear result state when truthful, detail shots, reaction, and a clean closing frame. Label mandatory shots, optional coverage, and anything that must not appear. State orientation, approximate length, framing, audio, captions, safe zones, background, wardrobe, file naming, and delivery method.",
+        ],
+      },
+      {
+        heading: "Define approval, revisions, disclosure, and usage",
+        paragraphs: [
+          "Put the boring commercial details in the brief or its attached agreement before the product is shipped. Name the deliverables, whether raw footage is included, number of edit versions, due date, feedback deadline, included revision rounds, reshoot triggers, payment timing, cancellation process, product return expectations, and who gives final approval.",
+          "State whether the creator must make an advertising disclosure and who checks the final wording for the intended market and platform. Do not tell a creator to hide a paid relationship or imitate an unprompted customer review. If the content includes a testimonial, demonstration, comparison, or measurable result, require brand approval of the exact representation.",
+          "Usage terms should name the channels, organic or paid use, territory, duration, editing permission, raw-footage rights, and whether the brand wants access to run advertising through the creator's identity or account. These details affect value and risk. Do not copy legal clauses from a random template and present them as universal. Ask the buyer to use its approved agreement or obtain appropriate advice.",
+        ],
+      },
+      {
+        heading: "Package the service so a small brand can buy it",
+        paragraphs: [
+          "Your starter offer might include one product intake, one audience and objection summary, three hook directions, one 25 to 35 second beat map, one shot list, one production-spec section, one claims and no-go table, one usage-details checklist, and one revision after brand feedback. Exclude creator sourcing, contracts, product shipping, filming, editing, media buying, performance reporting, and legal approval unless they are priced separately.",
+          "A practical AUD starting point is $180-$450 for one bounded brief. A three-angle sprint for one product can start around $500-$1,200. Once the process is proven, a monthly package of four to eight briefs might start around $1,200-$3,000. These are quote-building examples, not market rates or income promises.",
+          "Price from the real work: intake, product and review research, angle development, hook writing, shot planning, claims checking, brand communication, revision time, and admin. Raise the price or narrow the scope when there are several products, markets, stakeholders, regulated claims, complex usage terms, or a short deadline.",
+        ],
+      },
+      {
+        heading: "Find the first buyer with a tiny brief audit",
+        paragraphs: [
+          "Choose one ecommerce niche you can understand without making sensitive claims. Look for a brand already posting creator-led videos or running a creator call. Review one public product page and one public video, then note a single fix such as an unclear audience, a missing demonstration shot, too many messages, or a call to action that does not match the landing page.",
+          "Send a short message tied to that public clue: Hi Sam, I watched the lunch container video on your product page. The demo is clear, but the first ten seconds do not name the weekday meal-prep problem the page solves. I drafted three example hook directions and a one-page brief outline for this product. Want me to send it? Label the work as an example and do not pretend you have access to campaign results.",
+          "Offer a paid starter only after they show interest: one complete product brief, one feedback round, three business days, fixed price, and clear exclusions. Ask what happened during creator handoff, not whether the document looked nice. Repeated clarification questions, unusable shots, late approvals, and avoidable reshoots are the process signals your next brief should improve.",
+        ],
+      },
+      {
+        heading: "Use AI as a drafting assistant, not the product expert",
+        paragraphs: [
+          "AI can sort intake notes, group review language, generate hook alternatives, check whether every required field is present, and turn an approved angle into a first-pass shot list. It cannot verify a product fact, grant usage rights, approve an advertising claim, or know whether a creator can safely perform a demonstration.",
+          "Keep the source material beside the draft. Remove invented benefits, unsupported numbers, fake customer language, and generic hooks that could fit any product. Ask the brand to approve the factual and commercial sections before sending the brief to a creator.",
+          "The article gives you the method. The UGC Brief Generator launch pack gives you the editable brief, hook bank, intake form, prompts, client emails, and client FAQs. Customise the files for one product, send one useful audit, and make the first paid brief small enough to deliver properly.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: a one-product UGC brief sprint",
+      steps: [
+        "Monday morning: choose one low-risk ecommerce product and collect its product page, approved facts, target buyer, objections, previous videos, placement, and usage details.",
+        "Monday afternoon: write the one-sentence assignment, three hook directions, five story beats, mandatory shots, optional coverage, and the no-go claim list.",
+        "Tuesday morning: add format, framing, audio, caption, file-delivery, deadline, disclosure, approval, revision, and usage fields.",
+        "Tuesday afternoon: send the factual and commercial sections to the brand for corrections before polishing creative language.",
+        "Wednesday: revise once, create a clean creator version, and include a separate unresolved-questions list rather than guessing.",
+        "After delivery: ask which questions the creator still asked, which footage was missing, and what approval step slowed the job.",
+        "Before the next brief: turn repeated questions into intake fields and repeated missing shots into explicit requirements.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one straightforward ecommerce niche and one product.",
+      "Write the intended viewer, problem, placement, and next action in one sentence.",
+      "Collect current product facts and record the source for each material claim.",
+      "Separate approved facts, creative suggestions, mandatory elements, and no-go claims.",
+      "Draft three hook directions and one five-beat video structure.",
+      "List mandatory shots, optional coverage, and technical delivery requirements.",
+      "Add approval, revision, disclosure, usage, raw-footage, and payment questions.",
+      "Set one fixed starter scope, price, turnaround, and exclusion list.",
+      "Create a tiny public-information audit for one relevant brand.",
+      "Send five tailored messages and track replies, questions, and objections.",
+    ],
+    commonMistakes: [
+      "Trying to brief several products, audiences, messages, and placements in one video.",
+      "Writing a rigid word-for-word performance that leaves no room for the creator's natural voice.",
+      "Giving vague instructions such as make it viral, authentic, or high converting.",
+      "Turning reviews or AI-generated copy into product claims without brand approval.",
+      "Leaving raw footage, edit versions, revisions, reshoots, deadlines, or payment undefined.",
+      "Assuming organic usage, paid advertising, editing, and creator-handle access are the same permission.",
+      "Offering creator sourcing, filming management, media buying, and reporting inside a low-priced brief.",
+      "Promising views, conversions, sales, or fewer reshoots when you do not control execution.",
+      "Sending the creative brief before the brand approves factual and commercial details.",
+      "Measuring success by document length instead of a cleaner creator handoff.",
+    ],
+    faqs: [
+      {
+        question: "What should a UGC brief include?",
+        answer:
+          "Include the campaign job, target viewer, product facts, approved and prohibited claims, creative angle, hook options, story beats, shot list, format requirements, deliverables, deadline, revisions, disclosure, approval process, payment, and usage details.",
+      },
+      {
+        question: "How long should a UGC brief be?",
+        answer:
+          "Use the shortest document that removes important ambiguity. One to three well-structured pages can be enough for a simple product and video, with a separate agreement or appendix for detailed commercial terms. Clarity matters more than page count.",
+      },
+      {
+        question: "Should a UGC brief include a full script?",
+        answer:
+          "Usually, start with hook directions, approved talking points, story beats, and mandatory wording rather than scripting every sentence. A full script may be appropriate for tightly controlled claims or formats, but the brand and creator should agree on that level of control before filming.",
+      },
+      {
+        question: "How much can I charge to write a UGC brief?",
+        answer:
+          "A practical AUD starting point is $180-$450 for one bounded product brief or $500-$1,200 for a three-angle sprint. Adjust for research depth, products, markets, claims risk, stakeholders, usage complexity, revisions, and deadline. These are starting examples, not fixed market rates.",
+      },
+      {
+        question: "Can I use AI to create UGC briefs?",
+        answer:
+          "Use AI to organise approved inputs, explore hook options, draft shot lists, and check completeness. A person still needs to verify facts, remove invented claims, confirm usage and disclosure details, judge safety, and obtain brand approval.",
+      },
+      {
+        question: "Who buys a UGC brief service?",
+        answer:
+          "Potential buyers include small ecommerce brands, paid social freelancers, boutique agencies, creator managers, and founders who already commission creator content but need a more consistent handoff. Start with buyers who have an active product and visible creator workflow.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, advertising, platform, intellectual-property, endorsement, or contract advice. Use brand-approved facts and agreements, make required disclosures, obtain appropriate permissions, check the rules that apply to the product and market, and get qualified review for sensitive claims or usage terms.",
+  },
+  {
     slug: "how-to-get-headlight-restoration-customers",
     title: "How to Get Headlight Restoration Customers",
     seoTitle: "How to Get Headlight Restoration Customers (2026)",
@@ -1821,9 +1983,10 @@ export const blogPosts: BlogPost[] = [
       "A practical outreach guide for getting your first client without a big audience, using public clues, tiny samples, follow-ups, and a fixed starter offer.",
     category: "First Clients",
     publishedAt: "2026-06-30",
-    updatedAt: "2026-06-30",
+    updatedAt: "2026-07-19",
     readingTime: "12 min read",
     relatedPackSlugs: ["google-business-profile-rescue", "shopify-cart-audit", "review-testimonial-service"],
+    relatedArticleSlugs: ["ugc-brief-template", "service-business-pricing-guide-for-beginners"],
     shortAnswer:
       "You get your first client without a big audience by doing the unglamorous bit well: choose a specific buyer, find public evidence of a problem, create a small useful sample, send a direct message, and ask for a small paid next step. Audience helps later. Specific outreach gets the first conversation started.",
     keyPoints: [
@@ -3226,9 +3389,10 @@ export const blogPosts: BlogPost[] = [
       "A practical guide to starting a Shopify cart audit service with buyer selection, screenshot-led outreach, pricing guidance, delivery scope, and safe conversion claims.",
     category: "Ecommerce",
     publishedAt: "2026-07-06",
-    updatedAt: "2026-07-13",
+    updatedAt: "2026-07-19",
     readingTime: "12 min read",
     relatedPackSlugs: ["shopify-cart-audit", "ugc-brief-generator", "manual-workflow-concierge"],
+    relatedArticleSlugs: ["ugc-brief-template", "how-to-get-your-first-client-without-a-big-audience"],
     shortAnswer:
       "To start a Shopify cart audit service, find small stores with visible checkout hesitation, capture one useful mobile screenshot, write a practical fix, and sell a fixed audit that ranks cart, trust, shipping, returns, and abandoned-cart email issues. Do not promise revenue, conversion lifts, or ad performance. Sell clearer buying paths and better owner decisions.",
     keyPoints: [
