@@ -222,6 +222,7 @@ PACKS: list[Pack] = [
         [
             Asset("asset-headlight-outreach", "Headlight Outreach Scripts", "DOCX", "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof."),
             Asset("asset-headlight-pricing", "Headlight Restoration Quote Calculator", "XLSX", "Single-car, two-car, dealer batch, add-on, travel, material cost, and profit-check pricing workbook."),
+            Asset("asset-headlight-delivery-sop", "On-Site Delivery SOP", "DOCX", "A step-by-step job workflow for condition checks, setup, paint protection, restoration, QA, client handoff, aftercare, proof capture, and job records."),
             Asset("asset-headlight-safety", "Restoration Safety Checklist", "PDF", "Pre-job checklist for lens condition, masking, sanding grit sequence, UV sealant, PPE, weather, paint protection, and result boundaries."),
             Asset("asset-headlight-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy."),
             Asset("asset-headlight-intake", "Client Intake Form", "DOCX", "Editable intake questions for car make/model, lens condition, photos, location, access, weather window, expectations, and approval boundaries."),
@@ -1926,7 +1927,7 @@ DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
 }
 
 
-PDF_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
+SPECIAL_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
     "asset-cafe-checklist": checklist_sections(*find_pack_for_asset("asset-cafe-checklist")) + [
         ("Final export checklist", [
             "[ ] Print PDF exported with readable item hierarchy.",
@@ -2088,6 +2089,68 @@ PDF_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "Mount brackets/uprights into marked fixings, fit shelves/racks, then load test gently within rating.",
             "Tidy the work area, vacuum debris, and remove or haul away packaging as agreed.",
             "Take after photos from the same angles plus one close-up proof shot, and confirm weight-limit guidance with the owner.",
+        ]),
+    ],
+    "asset-headlight-delivery-sop": [
+        ("Purpose and when to use it", [
+            "Use this SOP after the client has accepted the written scope and before every mobile headlight restoration job.",
+            "Follow the restoration product manufacturer's instructions for surface preparation, sanding, polishing, curing, PPE, weather, and UV protection. This document organises the job; it does not replace product instructions or qualified advice.",
+            "The service is cosmetic restoration of suitable plastic lenses. It is not a roadworthiness check, electrical repair, inspection, permanent-result promise, or guarantee of night-driving performance.",
+        ]),
+        ("Before accepting the job", [
+            "Collect clear daylight photos of both headlights, the full front of the car, and close views of any cracks, peeling coating, moisture, deep crazing, or previous repair marks.",
+            "Confirm the vehicle, address, safe workspace, shade or weather window, access, water or power needs, quoted price, payment method, approximate duration, and who can approve the result.",
+            "Decline or pause lenses that appear cracked, moisture-filled, internally damaged, heavily crazed, unsafe to work around, or better suited to replacement or professional assessment.",
+            "Send the written scope and limitations before booking. Get approval for before-and-after photos separately from approval to use those photos publicly.",
+        ]),
+        ("Arrival and stop-go condition check", [
+            "Park and set up only where you can work safely without blocking traffic, driveways, pedestrians, emergency access, or the client's use of the property.",
+            "Inspect both lenses with the client before unpacking. Compare the car with the submitted photos and point out cracks, internal moisture, peeling, previous damage, paint risks, or result limits.",
+            "Confirm the agreed price and scope. If the condition is materially different, stop and re-scope, re-quote, refer, or decline before touching the vehicle.",
+            "Take permissioned before photos from fixed positions: wide front, left close-up, right close-up, and an angled haze view.",
+        ]),
+        ("Set up and protect the vehicle", [
+            "Lay out only the products and tools required for the agreed system. Check labels, expiry, pads, cloths, masking, PPE, and UV-protection materials before starting.",
+            "Clean loose dirt from the work area without dragging grit across paint. Dry the lens and nearby trim fully.",
+            "Mask surrounding paint, trim, rubber, badges, and panel gaps carefully. Add extra protection where hands, pads, water, compound, or tools could contact the vehicle.",
+            "Keep clean and used cloths separate. Keep liquids controlled and remove trip, spill, electrical, child, pet, and public-access hazards.",
+        ]),
+        ("Run the restoration workflow", [
+            "Complete the approved cleaning, preparation, sanding, polishing, and UV-protection sequence exactly as the chosen product system requires.",
+            "Work one controlled stage at a time. Keep the lens, pads, abrasives, cloths, and surrounding protection clean enough to avoid reintroducing scratches or contamination.",
+            "Check progress in consistent light between stages. Do not chase a perfect result when the lens condition, coating, heat damage, internal damage, or previous repairs set a practical limit.",
+            "If paint protection moves, weather changes, the lens behaves unexpectedly, or a new defect appears, stop, protect the vehicle, explain the issue, and agree on the next step before continuing.",
+            "Apply the final UV-protection step and observe the stated cure, weather, handling, and washing requirements from the product instructions.",
+        ]),
+        ("Quality check and client handoff", [
+            "Remove masking and residue carefully. Check paint, trim, lens edges, panel gaps, and the surrounding work area before calling the client over.",
+            "Inspect the result from the front and both angles in the same lighting used for the before photos. Record any remaining haze, crazing, internal moisture, damage, or replacement recommendation.",
+            "Take matched after photos from the same positions. Do not change lighting or edit the images to exaggerate the result.",
+            "Show the client both lenses, explain the actual result and remaining limits, give product-specific curing and aftercare instructions, collect approval, and confirm payment.",
+            "Leave the workspace clean and return keys, access items, or moved property before departure.",
+        ]),
+        ("Copyable completion message", [
+            "Hi [Client name], your [vehicle] headlight restoration is complete. I cleaned, prepared, restored, and UV-protected the two agreed plastic lenses using [product system].",
+            "Result notes: [what improved]. Remaining limits: [haze, crazing, moisture, damage, or none observed]. This was a cosmetic restoration, not a roadworthiness, electrical, compliance, or permanent-result assessment.",
+            "Aftercare: keep the lenses [dry / out of washing / otherwise protected] for [manufacturer-stated time]. Avoid [manufacturer-stated restrictions]. If you notice [specific concern], contact [you / a qualified automotive professional] before attempting another treatment.",
+            "I have attached the matched before-and-after photos. Reply to confirm the handoff looks right. I will only use the photos publicly if you separately approve that in writing.",
+        ]),
+        ("Close the job record", [
+            "Save the intake, photos, quote, approval, product system, batch or expiry details where relevant, start and finish time, weather, condition notes, aftercare message, payment status, and public-photo consent in one job folder.",
+            "Record actual travel, setup, restoration, cleanup, materials, rework, and communication time so the next quote reflects real delivery effort.",
+            "Ask for a review or referral only after the client approves the handoff. Offer a second-car, same-address, dealer-batch, or referral option without implying a permanent result or required maintenance schedule.",
+        ]),
+        ("Common mistakes", [
+            "Starting before the client confirms the current condition, price, limitations, and photo permissions.",
+            "Using one universal sanding or curing process instead of the chosen product manufacturer's instructions.",
+            "Under-masking paint and trim, working through unsafe weather, or continuing after a new defect appears.",
+            "Promising like-new, permanent, legal, safety, roadworthiness, or night-driving outcomes.",
+            "Taking after photos in more flattering light, losing the job notes, or asking for public proof without written consent.",
+        ]),
+        ("Next action", [
+            "Customise the completion message, job-folder naming rule, payment step, and product-specific aftercare fields before the first paid booking.",
+            "Run this SOP on one permissioned practice car and note every missing tool, unclear instruction, delay, and cleanup issue.",
+            "Update your quote calculator and booking message using the real time and materials from that practice run.",
         ]),
     ],
     "asset-headlight-proof": [
@@ -3096,6 +3159,8 @@ def docx_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
         return client_email_template_sections(pack, asset)
     if asset.id.endswith("-faqs"):
         return client_faq_sections(pack, asset)
+    if asset.type == "DOCX" and asset.id in SPECIAL_ASSET_SECTIONS:
+        return SPECIAL_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
     if asset.id in DOCX_ASSET_SECTIONS:
         sections = DOCX_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset)
         if asset.id == "asset-manual-outreach":
@@ -3171,8 +3236,8 @@ def pdf_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
                 "The client asks to remove source context or the approval owner is unclear.",
             ]),
         ]
-    if asset.id in PDF_ASSET_SECTIONS:
-        return PDF_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
+    if asset.id in SPECIAL_ASSET_SECTIONS:
+        return SPECIAL_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
     return checklist_sections(pack, asset) + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
 
 

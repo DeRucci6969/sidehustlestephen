@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { JoinButton } from "@/components/join-modal";
 import { blogPosts, getBlogPost } from "@/data/blog";
 import type { BusinessPack } from "@/data/packs";
 import { getPack, popularPacks } from "@/data/packs";
@@ -175,19 +176,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <div>
                     <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{relatedPacks[0].title}</h2>
                     <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">
-                      Want the scripts, pricing file, and delivery checklist? Open the launch pack and use the working files with this guide.
+                      Open the free preview, or unlock all {relatedPacks[0].assets.length} working files for outreach, pricing, delivery, and client handoff.
                     </p>
                   </div>
-                  <Link
-                    href={`/packs/${relatedPacks[0].slug}`}
-                    data-analytics-event="Blog Top Pack CTA Clicked"
-                    data-analytics-pack={relatedPacks[0].slug}
-                    data-analytics-location="blog_top_cta"
-                    className="accent-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-bold md:w-auto"
-                  >
-                    Open pack
-                    <ArrowRight size={16} />
-                  </Link>
+                  <div className="flex w-full flex-col gap-2 sm:flex-row md:w-auto md:flex-col">
+                    <Link
+                      href={`/packs/${relatedPacks[0].slug}`}
+                      data-analytics-event="Blog Top Pack CTA Clicked"
+                      data-analytics-pack={relatedPacks[0].slug}
+                      data-analytics-location="blog_top_cta"
+                      className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-bold text-[var(--text-primary)] md:w-auto"
+                    >
+                      Open free preview
+                      <ArrowRight size={16} />
+                    </Link>
+                    <JoinButton
+                      label={`Unlock ${relatedPacks[0].assets.length} assets`}
+                      returnTo={`/packs/${relatedPacks[0].slug}`}
+                      className="w-full md:w-auto"
+                    />
+                  </div>
                 </div>
               </section>
             ) : null}

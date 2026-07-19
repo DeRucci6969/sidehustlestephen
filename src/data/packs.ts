@@ -254,9 +254,11 @@ const basePacks: BusinessPack[] = [
     caveat: "Do not promise like-new results, roadworthiness, legal compliance, or permanent restoration. Some lenses need replacement.",
     popularityScore: 93,
     publishedAt: "2026-06-28",
+    updatedAt: "2026-07-20",
     assets: [
       { id: "asset-headlight-outreach", title: "Headlight Outreach Scripts", type: "DOCX", description: "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof." },
       { id: "asset-headlight-pricing", title: "Headlight Restoration Quote Calculator", type: "XLSX", description: "Single-car, two-car, dealer batch, add-on, travel, material cost, and profit-check pricing workbook." },
+      { id: "asset-headlight-delivery-sop", title: "On-Site Delivery SOP", type: "DOCX", description: "A step-by-step job workflow for condition checks, setup, paint protection, restoration, QA, client handoff, aftercare, proof capture, and job records." },
       { id: "asset-headlight-safety", title: "Restoration Safety Checklist", type: "PDF", description: "Pre-job checklist for lens condition, masking, sanding grit sequence, UV sealant, PPE, weather, paint protection, and result boundaries." },
       { id: "asset-headlight-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy." },
       { id: "asset-headlight-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for car make/model, lens condition, photos, location, access, weather window, expectations, and approval boundaries." },
@@ -949,7 +951,7 @@ export const packPageDetails: Record<string, PackPageDetail> = {
         "Proof pitch: send a matched before/after sample and quote a fixed pair-of-headlights price with clear result and weather boundaries.",
       ],
       lockedAssetTease:
-        "Members get the outreach scripts, quote calculator, restoration safety checklist, proof kit, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+        "Members get the outreach scripts, quote calculator, on-site delivery SOP, restoration safety checklist, proof kit, prompt pack, intake form, client emails, FAQs, and automation prompts.",
     },
     whyDetails: [
       "The sales proof is obvious. A cloudy headlight beside a restored headlight makes the value visible without a long explanation.",
@@ -1216,6 +1218,25 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Start with trades businesses that visibly use forms or social DMs and have slow or inconsistent response patterns. Pitch a manual triage setup before offering automation.",
     startableOffer:
       "A trades inbox triage setup with inquiry labels, missing-info reply templates, urgent-message rules, and a daily owner-approved lead summary.",
+    publicPreview: {
+      title: "Free preview: five-minute inbox gap audit",
+      intro:
+        "Use this quick check to turn a vague AI pitch into three visible workflow fixes without asking for inbox access.",
+      steps: [
+        "Choose one local trade business and list every public enquiry channel: form, email, Facebook, Instagram, SMS, quote platform, and phone.",
+        "Review the public form without submitting sensitive details. Note whether it asks for suburb, job type, urgency, photos, access, and preferred timing.",
+        "Write three specific fixes: one missing field, one urgent-message route, and one owner-approved reply template. Offer the full setup only after the owner confirms the workflow.",
+      ],
+      lockedAssetTease:
+        "Members get the inbox workflow map, reply templates, intake form, prompt pack, client emails, FAQs, and scheduled human-approved workflows.",
+    },
+    outreachPreview: {
+      title: "Sample plumber outreach",
+      copy:
+        "Hi [Name], I noticed your quote form asks for contact details but not suburb, urgency, photos, or access. I mapped three small changes that could make enquiries easier to quote without adding an autonomous chatbot. Want the one-page audit?",
+      note:
+        "Reference a real public form or channel. Do not claim the business is losing revenue, and do not ask for inbox access in the first message.",
+    },
     whyDetails: [
       "The buyer understands missed calls and unanswered messages as lost revenue.",
       "The service improves response quality without asking the business to trust a fully autonomous AI agent.",
@@ -1552,6 +1573,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A DOCX outreach kit with neighbour notes, marketplace messages, DMs, emails, call scripts, dealer batch pitches, follow-ups, and before/after proof angles for selling mobile headlight restoration.",
   "asset-headlight-pricing":
     "An XLSX quote calculator with single-car, two-car, dealer batch, travel, material cost, lens-condition, quote builder, job profit, and referral tracking sheets.",
+  "asset-headlight-delivery-sop":
+    "A DOCX on-site delivery SOP covering lead acceptance, arrival checks, paint and trim protection, product-led restoration steps, stop conditions, QA, client handoff, aftercare, proof capture, job records, and a copyable completion message.",
   "asset-headlight-safety":
     "A PDF restoration checklist for lens condition, masking, grit sequence, polishing, UV sealant, PPE, weather, paint protection, before/after photos, and no-like-new-result boundaries.",
   "asset-headlight-prompts":

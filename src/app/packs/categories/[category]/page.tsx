@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const result = getPacksByCategorySlug(categoryParam);
   if (!result) return {};
 
-  const title = `${result.category.name} Business Packs | Side Hustle Stephen`;
+  const title = `${result.category.name} Launch Packs | Side Hustle Stephen`;
   const description = `${categoryCopy[result.category.name] ?? "Browse practical launch packs with scripts, pricing, delivery files, and first-client plans."} Unlock the execution assets with membership.`;
 
   return {
@@ -67,7 +67,7 @@ export default async function PackCategoryPage({ params }: { params: Promise<{ c
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${result.category.name} Business Packs`,
+    name: `${result.category.name} Launch Packs`,
     description: categoryCopy[result.category.name] ?? "Practical launch packs for simple businesses.",
     url: `${siteConfig.url}/packs/categories/${result.category.slug}`,
     mainEntity: {
@@ -116,7 +116,7 @@ export default async function PackCategoryPage({ params }: { params: Promise<{ c
           <div className="min-w-0 max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Category</p>
             <h1 className="display-type balanced mt-3 break-words text-[clamp(2.35rem,11.5vw,4rem)] leading-[1.03]">
-              {result.category.name} business packs.
+              {result.category.name} launch packs.
             </h1>
             <p className="premium-copy mt-4 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">
               {categoryCopy[result.category.name] ?? "Browse practical launch packs with scripts, pricing, delivery files, and first-client plans."}

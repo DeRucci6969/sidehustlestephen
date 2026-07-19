@@ -110,7 +110,11 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
     .slice(0, 3);
   const directlyRelatedGuides = blogPosts
     .filter((post) => post.relatedPackSlugs.includes(pack.slug))
-    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt));
+    .sort((a, b) => {
+      const primaryPackScore = Number(b.relatedPackSlugs[0] === pack.slug) - Number(a.relatedPackSlugs[0] === pack.slug);
+      if (primaryPackScore !== 0) return primaryPackScore;
+      return b.updatedAt.localeCompare(a.updatedAt) || b.publishedAt.localeCompare(a.publishedAt);
+    });
   const fallbackGuides = blogPosts
     .filter((post) => !post.relatedPackSlugs.includes(pack.slug))
     .map((post) => {

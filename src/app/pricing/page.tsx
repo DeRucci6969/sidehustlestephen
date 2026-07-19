@@ -88,7 +88,7 @@ export default async function PricingPage({
         <section className="grid min-h-[60vh] items-center gap-8 lg:grid-cols-[0.9fr_0.7fr]">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Membership</p>
-            <h1 className="display-type mt-3 break-words text-[clamp(2.35rem,11vw,4rem)] leading-[1.02]">Every pack. Every asset. {siteConfig.priceLabel}.</h1>
+            <h1 className="display-type mt-3 break-words text-[clamp(2.35rem,11vw,4rem)] leading-[1.02]">Every pack. Every asset. {`${siteConfig.priceLabel}.`}</h1>
             <p className="premium-copy mt-6 max-w-2xl text-lg leading-8">
               All-access membership to the business pack archive, including {packs.length} business packs and every new pack added after launch.
             </p>

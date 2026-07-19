@@ -613,7 +613,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/mobile-headlight-restoration/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8071
+    "bytes": 8068
   },
   {
     "id": "asset-headlight-outreach",
@@ -624,7 +624,7 @@
     "description": "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof.",
     "path": "content/member-assets/mobile-headlight-restoration/headlight-outreach-scripts.docx",
     "filename": "headlight-outreach-scripts.docx",
-    "bytes": 8011
+    "bytes": 8008
   },
   {
     "id": "asset-headlight-pricing",
@@ -635,7 +635,18 @@
     "description": "Single-car, two-car, dealer batch, add-on, travel, material cost, and profit-check pricing workbook.",
     "path": "content/member-assets/mobile-headlight-restoration/headlight-restoration-quote-calculator.xlsx",
     "filename": "headlight-restoration-quote-calculator.xlsx",
-    "bytes": 15101
+    "bytes": 15126
+  },
+  {
+    "id": "asset-headlight-delivery-sop",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "On-Site Delivery SOP",
+    "type": "DOCX",
+    "description": "A step-by-step job workflow for condition checks, setup, paint protection, restoration, QA, client handoff, aftercare, proof capture, and job records.",
+    "path": "content/member-assets/mobile-headlight-restoration/on-site-delivery-sop.docx",
+    "filename": "on-site-delivery-sop.docx",
+    "bytes": 9031
   },
   {
     "id": "asset-headlight-safety",
@@ -657,7 +668,7 @@
     "description": "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy.",
     "path": "content/member-assets/mobile-headlight-restoration/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 9401
+    "bytes": 9396
   },
   {
     "id": "asset-headlight-intake",
@@ -679,7 +690,7 @@
     "description": "Emails for sample-led outreach, quote requests, booking confirmation, pre-job prep, completion handoff, referral asks, and dealer batch follow-ups.",
     "path": "content/member-assets/mobile-headlight-restoration/client-email-templates.docx",
     "filename": "client-email-templates.docx",
-    "bytes": 7351
+    "bytes": 7348
   },
   {
     "id": "asset-headlight-faqs",
@@ -690,7 +701,7 @@
     "description": "Buyer-facing FAQs for what restoration can and cannot fix, sealant, weather, timing, price, safety, and when replacement is better.",
     "path": "content/member-assets/mobile-headlight-restoration/client-faqs.docx",
     "filename": "client-faqs.docx",
-    "bytes": 7264
+    "bytes": 7265
   },
   {
     "id": "asset-headlight-proof",
@@ -701,7 +712,7 @@
     "description": "Photo playbook for matched headlight shots, consent wording, file naming, marketplace captions, and referral follow-ups.",
     "path": "content/member-assets/mobile-headlight-restoration/before-after-proof-kit.docx",
     "filename": "before-after-proof-kit.docx",
-    "bytes": 6295
+    "bytes": 6803
   },
   {
     "id": "asset-gym-automation",
