@@ -30,6 +30,173 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-tools-and-startup-cost",
+    title: "Headlight Restoration Tools and Startup Cost Checklist",
+    seoTitle: "Headlight Restoration Tools & Startup Cost (2026)",
+    description:
+      "Use this practical headlight restoration tools list and AUD startup budget to build a lean mobile kit, practise safely, quote one clear offer, and find a first buyer.",
+    category: "Local Service",
+    publishedAt: "2026-07-20",
+    updatedAt: "2026-07-20",
+    readingTime: "15 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "how-to-get-headlight-restoration-customers",
+      "mobile-headlight-restoration-pricing-guide",
+      "service-business-pricing-guide-for-beginners",
+    ],
+    shortAnswer:
+      "A lean mobile headlight restoration setup needs one restoration system you have tested, the exact abrasives and coating it requires, careful masking supplies, clean water, microfibre cloths, suitable eye and hand protection, lighting, weather protection, and a tidy way to transport everything. A practical starting budget is about AUD $180-$500 if you already own a suitable drill and vehicle, or roughly $400-$1,000 if you need dedicated power tools, shade, extra stock, and job-site storage. Treat those figures as planning ranges, follow product instructions and safety data sheets, and practise on permissioned vehicles before charging anyone.",
+    keyPoints: [
+      "Choose one complete restoration system first, then buy only the tools and consumables required by its current instructions.",
+      "Budget separately for the restoration kit, masking and cleaning supplies, PPE, mobile setup, practice stock, admin, insurance, and local requirements.",
+      "A lean AUD equipment budget can start around $180-$500 when you already own a suitable drill and vehicle, but a more independent setup can reach $400-$1,000.",
+      "Do not learn on a paying customer's car. Practise the full process, cure time, weather limits, cleanup, and photo routine on permissioned vehicles.",
+      "Sell a narrow two-headlight service with honest condition checks, not a vague detailing package or a promise of permanent, roadworthy, like-new results.",
+    ],
+    body: [
+      {
+        heading: "Who this headlight restoration tools list is for",
+        paragraphs: [
+          "This guide is for a beginner who wants to test a small mobile headlight restoration service without buying a van full of detailing gear. Your first buyers are likely to be used-car sellers, older-car owners, rideshare drivers, neighbours, detailers, mechanics, or small dealers with visibly cloudy plastic headlights.",
+          "The problem is that shopping lists often mix three different setups: a one-car DIY kit, a repeatable mobile service, and a full detailing business. You do not need all three. You need enough equipment to practise one documented process, protect the vehicle and yourself, deliver a consistent job, and know when to decline damaged lenses.",
+          "Start with one buyer, one offer, and one restoration system. The goal is not to look professional by owning every machine. The goal is to complete a safe permissioned practice job, record the real time and material use, and decide whether the service is worth selling in your area.",
+        ],
+      },
+      {
+        heading: "Choose the restoration system before the shopping list",
+        paragraphs: [
+          "Different kits use different abrasive sequences, cleaning steps, applicators, power tools, coatings, cure times, weather limits, and protective equipment. Pick a reputable system with current instructions and locally available refills. Read the full instructions and the safety information before buying extra pads, paper, compounds, or coatings that may not belong in that process.",
+          "A basic consumer kit can be useful for a first practice car, but do not assume it is automatically the cheapest repeat-job system. Record how many lenses the supplied abrasives, cleaner, polish, and coating actually cover when used as directed. Check whether replacement consumables can be bought separately and whether the coating has storage, temperature, ventilation, or cure requirements that affect mobile work.",
+          "Avoid combining steps from several online videos into an improvised method. If one manufacturer specifies a particular drill speed, grit sequence, drying time, or coating application, follow that system rather than guessing. Training, practice, and manufacturer instructions are part of the startup cost even when the video itself was free.",
+        ],
+      },
+      {
+        heading: "Essential restoration and preparation tools",
+        paragraphs: [
+          "Your core kit normally includes the chosen restoration system, its specified abrasive discs or sheets, backing pad or hand block, cleaner, polish or compound where required, coating or UV protection where required, applicators, and a suitable drill or polisher only if the instructions call for one. Do not buy a high-powered machine simply because a creator uses it. Control and compatibility matter more than impressive specifications.",
+          "For preparation and protection, allow for automotive masking tape, masking film or towels, car-safe wash solution, clean spray bottles, clean water, several colour-coded microfibre cloths, disposable applicators, a soft brush, and a waste bag or container for used abrasives and contaminated cloths. Fresh tape and clean cloths are cheap compared with damaging paint or dragging grit back across the lens.",
+          "For inspection and proof, use a bright portable work light, your phone camera, a neutral cloth for reflections, and a repeatable photo position. Take a front view and close view before accepting the job. Photograph both lenses in similar light before and after, with the vehicle stationary and the owner's permission. Photos show cosmetic change; they do not prove legal compliance, beam performance, or roadworthiness.",
+        ],
+      },
+      {
+        heading: "PPE, chemical information, and job-site controls",
+        paragraphs: [
+          "At minimum, check the product label and safety data sheet for every cleaner, compound, coating, and solvent used for work. The correct gloves, eye protection, ventilation, respiratory protection, storage, spill response, and disposal method depend on the product and how you use it. A generic shopping list cannot replace that information.",
+          "Build your PPE list from those instructions. It may include suitable safety glasses or splash goggles, product-compatible gloves, protective clothing, hearing protection for power tools, and respiratory protection where the safety information or your risk assessment requires it. PPE is the last line of defence, so also control dust, overspray, access, trip hazards, weather, ignition sources, bystanders, pets, and runoff.",
+          "Keep products in labelled original containers, transport them upright, separate clean and used cloths, and keep current safety information accessible. Check the work health and safety, waste, water, insurance, business registration, and mobile-trading rules that apply where you operate. If you are unsure how a coating or abrasive system should be used, pause and get manufacturer or qualified guidance before selling the job.",
+        ],
+      },
+      {
+        heading: "A realistic AUD startup budget",
+        paragraphs: [
+          "For a lean test using an existing suitable drill and vehicle, a planning range of AUD $180-$500 can cover a restoration system and practice refills, masking and cleaning supplies, basic job-site protection, PPE selected for the products, cloths, lighting, and simple storage. This is a planning example, not a vendor quote. Local prices and the chosen process will move it.",
+          "If you need a dedicated cordless drill or polisher, batteries, charger, extension or portable power solution, shade, stronger lighting, organised storage, and enough stock for several jobs, the equipment range can move closer to AUD $400-$1,000. Do not buy portable power equipment until you know the actual tool requirements, job location, electrical controls, and weather limits.",
+          "Keep admin outside the tool number. Business registration, insurance, vehicle costs, payment fees, training, local permits, website, advertising, phone, cancellations, damaged stock, and tax can cost more than the abrasives. Get insurance details in writing and make sure the policy matches paid work on customer vehicles. Check local requirements instead of copying another operator's setup.",
+        ],
+      },
+      {
+        heading: "Build a mobile kit that prevents mistakes",
+        paragraphs: [
+          "Pack the kit in job order. One box can hold inspection, cleaning, masking, and PPE. A second can hold clean abrasives, pads, and tools. A third sealed area can hold coatings and chemical products upright. Keep used cloths, wet abrasives, and waste separate so they do not contaminate clean gear or the vehicle.",
+          "Use a restock card with minimum quantities for tape, abrasives, applicators, gloves, cloths, coating, and waste bags. After each practice job, record what was opened, what was used, what was wasted, and what needs replacement. That turns a rough startup budget into a real per-job material cost.",
+          "Add a go or no-go checklist to the lid. Confirm lens material and condition, cracks, internal moisture, failed or peeling surfaces, previous work, paint condition, weather, shade, access, power, water, cure window, bystanders, and owner expectations. Decline the job or refer it for assessment when the lens or site falls outside your tested process.",
+        ],
+      },
+      {
+        heading: "What not to buy before the first paid job",
+        paragraphs: [
+          "Skip the vehicle wrap, bulk chemical order, expensive logo package, large paid-ad budget, and full detailing inventory. They do not fix an untested process. A clean shirt, labelled boxes, a written scope, an organised arrival, and permissioned before-and-after proof are enough to test whether buyers care.",
+          "Do not buy several restoration systems at once. You will create more variables, more safety information to manage, and more half-used stock. Run the same suitable system across several permissioned practice cars, note where it works and where it does not, and expand only when a clear job type requires it.",
+          "Do not buy your way around training. A more expensive polisher will not teach edge control, paint protection, pressure, grit progression, coating application, or condition assessment. Put time aside for instruction, controlled practice, cleanup, and honest review of the finished lens in different light.",
+        ],
+      },
+      {
+        heading: "Turn the equipment into one clear offer",
+        paragraphs: [
+          "Your first offer can be simple: mobile cosmetic restoration of two suitable plastic headlights, including condition check, cleaning, careful masking, the tested restoration process, specified protection or coating, cleanup, and matched photos. State the required access, weather, cure time, service radius, and payment terms before booking.",
+          "Exclude cracked lenses, internal moisture, electrical faults, replacement, opening the assembly, paint repair, roadworthiness certification, legal compliance, guaranteed beam performance, permanent results, and a like-new promise. If the inspection reveals an issue outside scope, stop before beginning and explain the next sensible step.",
+          "Price after practice. Count travel, setup, inspection, masking, restoration, coating, cure or handoff time, cleanup, admin, material use, payment costs, and a buffer for normal waste. A first normal two-headlight mobile quote might sit around AUD $80-$220, but your actual price must reflect the condition, local market, skill, risk, and real delivery cost.",
+        ],
+      },
+      {
+        heading: "Use the kit to find the first buyer",
+        paragraphs: [
+          "Complete one or more permissioned practice cars before outreach. Keep the most honest matched photo, record the job time, and write down the conditions you would now refuse. Your first proof should show the result and your process discipline, not pretend to be a customer case study.",
+          "Then shortlist 20 nearby prospects with a visible reason to care, such as an active used-car listing with cloudy lenses or a detailer that does not advertise this service. Send five tailored messages a day. Mention the observed issue, offer a two-photo condition check, give the starting range only when useful, and make the message easy to decline.",
+          "Want the scripts, pricing file, delivery checklist, intake form, safety checklist, and proof kit? Open the Mobile Headlight Restoration launch pack. The article gives you the buying logic. The pack gives you the working files. Customise them, practise the process, and send the first five useful messages.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: a lean weekend setup",
+      steps: [
+        "Monday: choose one locally available restoration system and read its instructions, label, safety data, tool requirements, cure time, and weather limits.",
+        "Tuesday: price the exact restoration supplies, masking, cleaning gear, PPE, lighting, storage, and practice stock without adding unrelated detailing equipment.",
+        "Wednesday: inspect a permissioned practice vehicle in daylight and decline it if the lens condition falls outside the system you are learning.",
+        "Thursday: complete the practice process as instructed, record time and material use, keep the site controlled, and photograph the result honestly.",
+        "Friday: review the lens after the stated cure period, note defects or uncertainties, and repeat on another permissioned vehicle if the process is not consistent.",
+        "Saturday: write the two-headlight offer, exclusions, service radius, photo-quote request, starting range, and go or no-go checklist.",
+        "Sunday: contact five suitable local prospects using one permissioned result, then track replies, photo checks, quotes, paid jobs, and reasons for no.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one documented restoration system with locally available refills.",
+      "Read its instructions, label, safety data, cure time, tool requirements, and weather limits.",
+      "Price the core system, preparation supplies, PPE, job-site controls, lighting, storage, and practice stock.",
+      "Separate equipment costs from registration, insurance, vehicle, payment, training, and marketing costs.",
+      "Create a condition, paint, weather, access, power, water, and bystander go or no-go checklist.",
+      "Complete at least one permissioned practice car and record time, materials, waste, and result limits.",
+      "Write a narrow two-headlight offer with inclusions, exclusions, service radius, and quote process.",
+      "Use one honest before-and-after result to send five tailored first-buyer messages.",
+    ],
+    commonMistakes: [
+      "Buying a full detailing setup before proving one headlight process.",
+      "Mixing products and steps from different systems without verified compatibility.",
+      "Using a paying customer's car as the first practice vehicle.",
+      "Choosing PPE from a generic list instead of the product instructions and safety data.",
+      "Leaving registration, insurance, travel, payment fees, and waste out of the startup budget.",
+      "Accepting cracked, internally wet, peeling, heavily damaged, or otherwise unsuitable lenses.",
+      "Promising like-new appearance, permanent results, legal compliance, roadworthiness, or improved night-driving performance.",
+      "Buying branding and advertising before producing permissioned proof and a clear quote process.",
+    ],
+    faqs: [
+      {
+        question: "What tools do I need to start a headlight restoration business?",
+        answer:
+          "Start with one tested restoration system, its required abrasives and applicators, cleaning and masking supplies, clean water, microfibre cloths, product-appropriate PPE, lighting, storage, and any drill or polisher specified by the instructions. Add job-site controls, proof photos, and a condition checklist before taking paid work.",
+      },
+      {
+        question: "How much does it cost to start a mobile headlight restoration service?",
+        answer:
+          "A practical AUD planning range is about $180-$500 if you already own a suitable drill and vehicle. A setup with dedicated power tools, shade, stronger lighting, storage, and more stock may reach roughly $400-$1,000. Registration, insurance, vehicle, training, and marketing sit outside those equipment examples.",
+      },
+      {
+        question: "Do I need a drill or polisher for headlight restoration?",
+        answer:
+          "Only if the restoration system you choose requires or supports one. Some kits are designed for hand use and others specify a drill, pad, attachment, or speed range. Follow the current manufacturer instructions and practise control before working on a customer vehicle.",
+      },
+      {
+        question: "What safety equipment is needed for headlight restoration?",
+        answer:
+          "The correct eye, hand, skin, hearing, and respiratory protection depends on the abrasives, tools, and chemical products used. Read each label and safety data sheet, control dust and overspray, store products correctly, and check the work health and safety rules that apply to your business and location.",
+      },
+      {
+        question: "Should I buy a professional headlight restoration kit first?",
+        answer:
+          "Buy the smallest reputable system that lets you learn a complete, repeatable process and source refills. A more expensive kit is not a substitute for instructions, training, condition assessment, practice, safe handling, and an honest service scope.",
+      },
+      {
+        question: "What should I charge for the first headlight restoration job?",
+        answer:
+          "A normal two-headlight mobile job might start around AUD $80-$220, but quote only after checking lens condition, travel, access, weather, materials, actual job time, local demand, risk, and your skill. Do not use a low price to hide an untested process.",
+      },
+    ],
+    disclaimer:
+      "This guide provides general business planning examples, not automotive, work health and safety, insurance, legal, or financial advice. Follow current manufacturer instructions and safety data sheets, practise on permissioned vehicles, check local rules, confirm appropriate insurance, and refer unsuitable or uncertain lenses to a qualified professional.",
+  },
+  {
     slug: "ugc-brief-template",
     title: "UGC Brief Template: How to Write a Creator Brief",
     seoTitle: "UGC Brief Template: Write Better Creator Briefs (2026)",
@@ -2425,15 +2592,16 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-mobile-headlight-restoration-business",
     title: "How to Start a Mobile Headlight Restoration Business",
-    seoTitle: "Start a Mobile Headlight Restoration Business (2026)",
+    seoTitle: "How to Start a Headlight Restoration Business (2026)",
     description:
-      "Learn how to start a mobile headlight restoration business with tools, pricing, proof photos, safety boundaries, outreach, and a first-client plan.",
+      "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-18",
+    updatedAt: "2026-07-20",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-tools-and-startup-cost",
       "how-to-get-headlight-restoration-customers",
       "mobile-headlight-restoration-pricing-guide",
     ],
