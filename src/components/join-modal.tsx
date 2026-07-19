@@ -12,9 +12,10 @@ type JoinButtonProps = {
   label?: string;
   returnTo?: string;
   className?: string;
+  intent?: "join" | "signIn";
 };
 
-export function JoinButton({ label = "Unlock Packs", returnTo, className }: JoinButtonProps) {
+export function JoinButton({ label = "Unlock Packs", returnTo, className, intent = "join" }: JoinButtonProps) {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "setup" | "error">("idle");
@@ -23,8 +24,9 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
   const modalRef = useRef<HTMLDivElement>(null);
 
   async function openModal() {
-    track("Join Modal Opened", { returnTo: returnTo ?? "current_path" });
-    trackFirstPartyEvent("Join Modal Opened", { properties: { return_to: returnTo ?? "current_path" } });
+    const openEvent = intent === "signIn" ? "Sign In Modal Opened" : "Join Modal Opened";
+    track(openEvent, { returnTo: returnTo ?? "current_path" });
+    trackFirstPartyEvent(openEvent, { properties: { return_to: returnTo ?? "current_path" } });
     setOpen(true);
 
     try {
@@ -156,10 +158,12 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
               <Mail size={24} />
             </div>
             <h2 id="join-title" className="pr-10 text-2xl font-semibold tracking-normal text-[var(--navy-ink)] sm:text-3xl">
-              Unlock every pack
+              {intent === "signIn" ? "Sign in to your account" : "Unlock every pack"}
             </h2>
             <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">
-              Enter your email and we will send a secure sign-in link. Then you can unlock every business pack and asset for {siteConfig.priceLabel}.
+              {intent === "signIn"
+                ? "Enter the email linked to your account and we will send a secure sign-in link. No password needed."
+                : `Enter your email and we will send a secure sign-in link. Then you can unlock every business pack and asset for ${siteConfig.priceLabel}.`}
             </p>
             <form onSubmit={submit} className="mt-7 space-y-3">
               <input
@@ -176,7 +180,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className }: Join
                 disabled={status === "sending"}
                 className="accent-cta flex h-13 w-full items-center justify-center gap-2 rounded px-5 font-semibold transition disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {status === "sending" ? "Sending secure link" : "Send secure link"}
+                {status === "sending" ? "Sending secure link" : intent === "signIn" ? "Send sign-in link" : "Send secure link"}
                 <ArrowRight size={17} />
               </button>
             </form>

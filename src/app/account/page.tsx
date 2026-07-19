@@ -46,7 +46,7 @@ export default async function AccountPage() {
                 ? "Your membership is active. Use this page to manage billing or jump back into the archive."
                 : viewer.isAuthenticated
                   ? "You are signed in, but this account does not have active membership access yet."
-                  : "Sign in with a secure link to unlock the archive, downloads, and billing tools."}
+                  : "Sign in with the email linked to your account to return to member access, downloads, and billing tools."}
             </p>
             <div className="mt-7 min-w-0 rounded-lg bg-[var(--deep-forest)] p-4 text-white shadow-[0_22px_70px_rgba(0,0,0,0.18)] sm:p-5">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/48">Current access</p>
@@ -65,8 +65,18 @@ export default async function AccountPage() {
                       Browse packs
                       <ArrowRight size={16} />
                     </Link>
+                  ) : viewer.isAuthenticated ? (
+                    <JoinButton label="Continue checkout" returnTo="/packs" className="w-full sm:w-auto" />
                   ) : (
-                    <JoinButton label={viewer.isAuthenticated ? "Continue checkout" : "Unlock membership"} returnTo="/packs" className="w-full sm:w-auto" />
+                    <>
+                      <JoinButton label="Sign in with secure link" returnTo="/account" intent="signIn" className="w-full sm:w-auto" />
+                      <Link
+                        href="/pricing"
+                        className="inline-flex h-11 items-center justify-center rounded-full bg-white/10 px-5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                      >
+                        View membership
+                      </Link>
+                    </>
                   )}
                   {viewer.isAuthenticated ? <SignOutButton className="border-white/15 bg-white/10 text-white shadow-none hover:bg-white/15" /> : null}
                 </div>
