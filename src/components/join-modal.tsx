@@ -29,6 +29,8 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className, intent
     trackFirstPartyEvent(openEvent, { properties: { return_to: returnTo ?? "current_path" } });
     setOpen(true);
 
+    if (intent === "signIn") return;
+
     try {
       const checkoutReturnTo = returnTo ?? window.location.pathname;
       const res = await fetch("/api/checkout", {
@@ -186,7 +188,9 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className, intent
             </form>
             {status === "sent" ? (
               <p className="mt-4 text-sm text-[var(--graphite)]" role="status" aria-live="polite">
-                Check your email for the secure sign-in link. It will return you to checkout after sign-in.
+                {intent === "signIn"
+                  ? "Check your email for the secure sign-in link. It will return you to your account."
+                  : "Check your email for the secure sign-in link. It will return you to checkout after sign-in."}
               </p>
             ) : null}
             {status === "setup" ? (
