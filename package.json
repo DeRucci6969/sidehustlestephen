@@ -12,7 +12,7 @@
     "supabase:auth-security": "node scripts/update_supabase_auth_security.mjs",
     "assets:generate": "python3 scripts/generate_member_assets.py",
     "assets:validate": "python3 scripts/validate_assets.py",
-    "analytics:report": "node scripts/report_analytics.mjs"
+    "analytics:report": "node --env-file-if-exists=.env.local scripts/report_analytics.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.7.0",
