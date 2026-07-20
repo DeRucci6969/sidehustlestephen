@@ -30,6 +30,169 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-quote-template",
+    title: "Headlight Restoration Quote Template and Photo Checklist",
+    seoTitle: "Headlight Restoration Quote Template (2026 Checklist)",
+    description:
+      "Use this headlight restoration quote template, photo checklist, AUD pricing logic, exclusions, and follow-up plan to turn enquiries into clear bookings.",
+    category: "Pricing",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "mobile-headlight-restoration-pricing-guide",
+      "how-to-get-headlight-restoration-customers",
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "headlight-restoration-tools-and-startup-cost",
+    ],
+    shortAnswer:
+      "A useful headlight restoration quote names the vehicle, location, two-headlight scope, price, inclusions, access and weather needs, expected time window, payment terms, and the conditions that may change or cancel the job. Ask for clear daylight photos before pricing, then confirm the lenses and surrounding paint in person before starting. For a normal mobile job, AUD $80-$220 can be a planning range, but the actual quote should come from condition, travel, materials, time, access, risk, and your tested process.",
+    keyPoints: [
+      "Request one front photo, one close photo and one side-angle photo of each lens, plus the vehicle, suburb, access, and known damage details before quoting.",
+      "Quote one narrow service: two suitable exterior plastic headlight lenses, inspection, masking, your tested process, specified protection, cleanup, and matched photos.",
+      "Use AUD $80-$220 only as a planning range for a normal mobile job, then calculate the real price from time, materials, travel, access, condition, and local demand.",
+      "State that the quote is subject to an on-arrival condition check and exclude cracked lenses, internal moisture, electrical work, replacement, roadworthiness, and permanent-result promises.",
+      "Send a short follow-up once, record the reason for no, and improve the photo request or scope before changing the price blindly.",
+    ],
+    body: [
+      {
+        heading: "Who this headlight restoration quote template is for",
+        paragraphs: [
+          "This guide is for a beginner or small mobile operator who has practised one restoration process and needs a clean way to turn an enquiry into a booked job. Your likely buyers are used-car sellers, older-car owners, neighbours, rideshare drivers, detailers, mechanics, and small dealers with suitable cloudy exterior plastic lenses.",
+          "The problem is not writing a fancy PDF. It is collecting enough information to price the visit, setting honest expectations, and keeping unsuitable work outside the booking. A rushed one-line price can become a long drive to a cracked lens, internal condensation, damaged paint, poor access, or a buyer expecting replacement-level results.",
+          "Start with one buyer, one offer, and one quote format. The goal is not to win every enquiry. The goal is to accept work that fits your tested process and make the next step obvious to a suitable buyer.",
+        ],
+      },
+      {
+        heading: "Ask for the right photos before naming a price",
+        paragraphs: [
+          "Ask the buyer to photograph the vehicle outdoors in clear daylight without filters or flash glare. Request one front view showing both headlights, one close view and one side-angle view of each lens. Those five photos help reveal surface haze, yellowing, peeling, chips, cracks, and reflections. Ask for extra photos if the condition is hidden by rain, darkness, shadow, or a tight crop.",
+          "Collect the year, make, model, suburb, parking arrangement, access to the work area, preferred timing, and whether there is visible cracking, peeling, previous restoration, internal moisture, electrical trouble, paint damage, or a recent inspection concern. Do not diagnose roadworthiness or beam performance from a phone photo.",
+          "Photos are a screening tool, not a final condition report. Tell the buyer that you will confirm lens and site suitability on arrival before touching the car. If the in-person condition falls outside the quoted scope, pause, explain the difference, and let the buyer accept a revised scope or decline the job without pressure.",
+        ],
+      },
+      {
+        heading: "Define the standard two-headlight offer",
+        paragraphs: [
+          "A quote works best when the standard job is specific. A sensible starter offer is mobile cosmetic restoration of two suitable exterior plastic headlight lenses at one address. It can include a condition check, cleaning, careful masking, the restoration process you have practised, specified coating or protection where required, cleanup, and matched before-and-after photos.",
+          "State the site needs your process depends on, such as a stationary vehicle, safe working space, suitable weather, shade, clean water, power, ventilation, cure time, or no vehicle movement. Use the current product instructions and your own tested workflow to decide which requirements actually apply.",
+          "Keep unrelated work outside the quote. Lens replacement, opening assemblies, internal condensation, bulbs, wiring, paint repair, trim repair, inspection preparation, roadworthiness certification, and guaranteed beam improvement are different scopes. Refer or decline work you are not trained, insured, equipped, or permitted to perform.",
+        ],
+      },
+      {
+        heading: "Calculate the quote before you format it",
+        paragraphs: [
+          "Use a private formula before giving the buyer a fixed number: total job time multiplied by your sustainable hourly floor, plus materials, travel, payment costs, and a sensible risk or waste allowance. Total time includes messages, travel, setup, inspection, masking, every restoration step, cure or handoff time, cleanup, photos, invoicing, and restocking.",
+          "For a normal two-headlight mobile job, AUD $80-$220 can be a practical planning range. Public Australian offers vary widely, including lower studio or add-on prices and higher mobile or specialist packages. Do not copy the cheapest listing or the most premium promise. Your price must fit your process, local market, skill, insurance, tax position, travel, and actual delivery cost.",
+          "Use condition bands only when they change real work. Light exterior haze, moderate oxidation, and heavy or uncertain condition may need different time, consumables, or a no-go decision. Charge travel outside a small core radius, and offer a lower per-car batch rate only when several ready vehicles genuinely share travel and setup.",
+        ],
+      },
+      {
+        heading: "Write the quote in plain language",
+        paragraphs: [
+          "Put the buyer, vehicle, address or suburb, quote date, validity period, price, scope, site needs, expected time window, payment terms, and next step in one short message or document. A buyer should be able to see what happens, what it costs, and how to book without decoding a paragraph of sales copy.",
+          "Example: Mobile cosmetic headlight restoration for one 2013 Mazda 3 at your Parramatta address. Price: AUD $150 for both suitable exterior plastic lenses. Includes on-arrival condition check, cleaning, masking, tested restoration process, specified protection, cleanup, and matched photos. Allow about two hours plus any required cure or handoff time. Booking is subject to suitable weather, access, and final condition check.",
+          "Then add the boundary: Excludes cracked lenses, internal moisture, failed internal surfaces, electrical faults, bulbs, lens replacement, paint repair, roadworthiness certification, legal compliance, guaranteed beam performance, and permanent or like-new results. If the condition differs from the photos, I will stop and confirm any change before work begins.",
+        ],
+      },
+      {
+        heading: "Set payment, cancellation, and photo permission clearly",
+        paragraphs: [
+          "Choose payment terms you can explain in one sentence. For a small local job, that might be payment after the agreed service is completed, or a clearly disclosed booking deposit where travel, reserved time, or local practice makes it reasonable. State accepted payment methods, tax treatment where applicable, and when an invoice or receipt will be supplied.",
+          "Write a simple weather, rescheduling, late-access, and cancellation rule before it becomes a problem. Keep fees proportionate and transparent. Check the consumer, tax, business, and local requirements that apply to you rather than copying another operator's terms.",
+          "Separate service approval from marketing permission. The owner can approve the work and receive private before-and-after photos without agreeing to public use. Ask separately before using the vehicle, number plate, message, name, review, or photos in ads, social posts, outreach, or your portfolio.",
+        ],
+      },
+      {
+        heading: "Send the quote and follow up once",
+        paragraphs: [
+          "Send the quote in the same channel the buyer used unless they ask for something else. Lead with the fixed price and scope, then the condition and site checks, then the booking step. Do not bury the number under a long explanation or create fake urgency around a normal service slot.",
+          "If the buyer does not reply, follow up once after three to five days with something useful: the quote expiry, the next suitable weather window, the two-photo requirement, or an invitation to ask about the scope. Stop if they decline or do not engage. A small local market rewards relevance and respect.",
+          "Track enquiries, complete photo sets, quotes sent, accepted quotes, unsuitable jobs, no replies, price objections, travel objections, and completed jobs. If buyers disappear before sending photos, simplify the photo request. If suitable buyers accept quotes but do not book, inspect the next step and timing before automatically dropping the price.",
+        ],
+      },
+      {
+        heading: "Turn one quote into the first booked job",
+        paragraphs: [
+          "Start with 20 nearby prospects who have a visible reason to care, such as active used-car sellers with cloudy lenses or detailers that do not advertise a standalone restoration. Send five tailored messages a day and offer the same photo-led condition check. Do not spam owners or collect private details through questionable methods.",
+          "When a suitable buyer responds, use the quote template without improvising a new offer. Confirm the vehicle, photos, location, access, price, exclusions, and next step. On arrival, complete the condition check before unpacking the full kit. A clean decline is better than forcing an unsuitable job into the day.",
+          "Want the editable intake form, pricing calculator, outreach scripts, delivery checklist, safety checklist, proof kit, and client emails? Open the Mobile Headlight Restoration launch pack. The article gives you the quote logic. The pack gives you the working files. Customise them and send the first five useful messages.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: quote a used-car seller from photos",
+      steps: [
+        "A seller replies to your outreach with a front photo and one close photo of a 2013 hatchback, but the second lens and parking area are not visible.",
+        "You request the missing lens close-up, a side-angle photo, the suburb, access details, and any known cracks, internal moisture, or previous restoration.",
+        "The completed photo set suggests moderate exterior oxidation, normal access, and a location inside your core radius, with no obvious issue outside scope.",
+        "Your private calculation allows for messages, travel, setup, inspection, masking, restoration, protection, cleanup, photos, materials, and normal waste.",
+        "You send a fixed AUD $150 quote for both suitable exterior plastic lenses, subject to the on-arrival condition and weather check.",
+        "The quote lists inclusions, expected time, payment method, site needs, exclusions, validity, and one clear booking step.",
+        "On arrival, you inspect both lenses and surrounding paint before starting, then complete or decline the job according to the agreed scope.",
+      ],
+    },
+    firstActionChecklist: [
+      "Write the standard two-headlight scope in one sentence.",
+      "Create a five-photo request: one front view, both close-ups, and both side angles.",
+      "Collect vehicle, suburb, access, timing, weather, damage, moisture, and previous-work details.",
+      "Choose a private hourly floor and list the full time and material cost of a normal job.",
+      "Set a core service radius, travel rule, condition bands, and no-go conditions.",
+      "Write inclusions, site needs, exclusions, payment terms, validity, and the booking step.",
+      "Keep marketing photo permission separate from service approval.",
+      "Send five tailored photo-quote invitations to suitable nearby prospects.",
+      "Follow up once after three to five days, then stop if there is no interest.",
+      "Record photo completion, quotes, bookings, unsuitable jobs, objections, delivery time, and material use.",
+    ],
+    commonMistakes: [
+      "Giving a fixed price from one dark or tightly cropped photo.",
+      "Treating photos as a final diagnosis instead of confirming condition on arrival.",
+      "Leaving travel, messages, setup, cleanup, payment costs, and restocking out of the price.",
+      "Quoting vague restoration without naming the two-headlight scope and process boundaries.",
+      "Accepting cracked lenses, internal moisture, electrical issues, or failed surfaces outside your tested work.",
+      "Promising like-new appearance, permanent protection, beam performance, roadworthiness, or legal compliance.",
+      "Hiding payment, weather, access, cancellation, or rescheduling rules until after the buyer agrees.",
+      "Assuming permission to perform the job also gives permission to publish the photos.",
+      "Dropping the price before checking whether the photo request or booking step caused the buyer to disappear.",
+      "Sending repeated follow-ups after a buyer has declined or stopped responding.",
+    ],
+    faqs: [
+      {
+        question: "What should a headlight restoration quote include?",
+        answer:
+          "Include the buyer and vehicle, location, price, two-headlight scope, inclusions, site and weather needs, expected time window, payment terms, quote validity, exclusions, on-arrival condition check, and one clear booking step.",
+      },
+      {
+        question: "What photos do I need for a headlight restoration quote?",
+        answer:
+          "Ask for one clear front photo showing both headlights, one close photo and one side-angle photo of each lens in daylight. Also collect the vehicle, suburb, access, known damage, internal moisture, and previous restoration details.",
+      },
+      {
+        question: "How much should I quote for headlight restoration?",
+        answer:
+          "AUD $80-$220 can be a planning range for a normal two-headlight mobile job, but calculate the actual quote from total time, materials, travel, access, condition, payment costs, risk, skill, and local demand.",
+      },
+      {
+        question: "Can I guarantee the quote from photos?",
+        answer:
+          "Treat a photo quote as subject to an on-arrival condition and site check. Photos may not reveal cracks, internal moisture, failed surfaces, previous repairs, paint issues, access problems, or other conditions outside scope.",
+      },
+      {
+        question: "What should I exclude from a headlight restoration quote?",
+        answer:
+          "Typical exclusions include cracked lenses, internal moisture, failed internal surfaces, electrical faults, bulbs, opening assemblies, lens replacement, paint repair, roadworthiness certification, legal compliance, guaranteed beam performance, and permanent or like-new results.",
+      },
+      {
+        question: "Should I charge a deposit for mobile headlight restoration?",
+        answer:
+          "A deposit may be reasonable when you reserve travel and time, but it should be clearly disclosed, proportionate, and consistent with the consumer, tax, cancellation, and business requirements that apply where you operate. A simple pay-on-completion model may suit some small local jobs.",
+      },
+    ],
+    disclaimer:
+      "This guide provides general business and quoting examples, not automotive, consumer-law, tax, insurance, safety, roadworthiness, or legal advice. Follow current manufacturer instructions, confirm appropriate insurance, check the rules that apply where you operate, inspect each vehicle before work, and refer unsuitable or uncertain conditions to a qualified professional.",
+  },
+  {
     slug: "headlight-restoration-tools-and-startup-cost",
     title: "Headlight Restoration Tools and Startup Cost Checklist",
     seoTitle: "Headlight Restoration Tools & Startup Cost (2026)",
@@ -37,10 +200,11 @@ export const blogPosts: BlogPost[] = [
       "Use this practical headlight restoration tools list and AUD startup budget to build a lean mobile kit, practise safely, quote one clear offer, and find a first buyer.",
     category: "Local Service",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
     readingTime: "15 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-quote-template",
       "how-to-start-a-mobile-headlight-restoration-business",
       "how-to-get-headlight-restoration-customers",
       "mobile-headlight-restoration-pricing-guide",
@@ -366,10 +530,11 @@ export const blogPosts: BlogPost[] = [
       "A practical first-10-jobs plan for finding headlight restoration customers through used-car sellers, local partners, proof photos, and direct outreach.",
     category: "Outreach",
     publishedAt: "2026-07-18",
-    updatedAt: "2026-07-18",
+    updatedAt: "2026-07-21",
     readingTime: "13 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-quote-template",
       "how-to-start-a-mobile-headlight-restoration-business",
       "mobile-headlight-restoration-pricing-guide",
     ],
@@ -2597,10 +2762,11 @@ export const blogPosts: BlogPost[] = [
       "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-quote-template",
       "headlight-restoration-tools-and-startup-cost",
       "how-to-get-headlight-restoration-customers",
       "mobile-headlight-restoration-pricing-guide",
@@ -2768,10 +2934,11 @@ export const blogPosts: BlogPost[] = [
       "A practical pricing guide for mobile headlight restoration with starter packages, quote math, dealer batch pricing, travel add-ons, exclusions, and first-client rules.",
     category: "Pricing",
     publishedAt: "2026-07-09",
-    updatedAt: "2026-07-09",
+    updatedAt: "2026-07-21",
     readingTime: "11 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-quote-template",
       "how-to-get-headlight-restoration-customers",
       "how-to-start-a-mobile-headlight-restoration-business",
     ],
