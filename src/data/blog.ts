@@ -30,6 +30,194 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-ask-for-google-reviews",
+    title: "How to Ask for Google Reviews: 12 Customer Templates",
+    seoTitle: "How to Ask for Google Reviews: 12 Templates (2026)",
+    description:
+      "Use 12 practical Google review request templates for SMS, email, receipts, and in-person asks, plus a compliant workflow and first-client offer.",
+    category: "B2B Service",
+    publishedAt: "2026-07-22",
+    updatedAt: "2026-07-22",
+    readingTime: "15 min read",
+    relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
+    relatedArticleSlugs: [
+      "google-review-response-templates-for-small-businesses",
+      "how-to-start-a-review-reply-service",
+      "google-business-profile-service-pricing-guide",
+      "google-business-profile-outreach-scripts",
+    ],
+    shortAnswer:
+      "Ask a genuine customer for an honest Google review soon after a real service, purchase, visit, or resolved interaction. Use the business's direct review link, keep the message short, mention the actual job, and make the request optional. Do not ask for a five-star review, reward a positive rating, write the review for the customer, or send requests only to people you expect will praise the business. If you sell this as a service, package the link, message templates, timing rules, approval steps, and tracking into one small workflow.",
+    keyPoints: [
+      "Ask genuine customers for honest feedback without telling them which rating, sentiment, or words to use.",
+      "Send one direct review link or use a tested QR code so the customer does not have to search for the profile.",
+      "Match the timing and channel to the real customer journey, then send no more than one polite reminder unless the person engages.",
+      "Keep service recovery separate from review requests and never suppress criticism by routing unhappy customers away from Google.",
+      "A beginner can sell a fixed review-request setup with templates, staff instructions, testing, approval, and a simple tracker.",
+    ],
+    body: [
+      {
+        heading: "Who these Google review request templates are for",
+        paragraphs: [
+          "These templates are for owner-operated local businesses and beginners who want to set up a review-request service for them. Cafes, salons, mechanics, cleaners, trades, studios, clinics with appropriate review controls, and accommodation operators often have real customers but no consistent way to ask for feedback.",
+          "The problem is usually operational. Staff forget to ask, the link is hard to find, the message sounds pushy, or requests go out long after the customer can remember useful details. A good workflow makes the ask timely, optional, easy to complete, and honest about the kind of feedback wanted.",
+          "The goal is not to manufacture a perfect rating. The goal is to invite genuine customers to describe genuine experiences, then help the business read and respond to what arrives. Start with one buyer, one review link, one customer moment, and one approved message.",
+        ],
+      },
+      {
+        heading: "Build the review link and test the journey first",
+        paragraphs: [
+          "The business owner should open their verified Google Business Profile and use the current Ask for reviews option to copy the review link or create a QR code. Platform screens change, so do not promise an exact menu path in a client document. If the option is missing, the owner should confirm profile ownership and use official Google Business Profile help.",
+          "Test the link on a phone while signed out of the business account. Confirm it opens the intended location, does not point to another branch, and is readable in SMS, email, invoices, receipts, and printed QR material. Customers need a Google Account to post, but it does not have to use a Gmail address.",
+          "Record the approved link, location name, message owner, sending channel, trigger, delay, reminder rule, and stop conditions in one sheet. A short link is useful only if the workflow sends it to the right customer at the right time and stops when consent, privacy, or service concerns make the request inappropriate.",
+        ],
+      },
+      {
+        heading: "Choose the right moment to ask",
+        paragraphs: [
+          "Ask after the customer has had enough of the service to form a real opinion. For a mobile service, that may be after the customer inspects the finished work. For a cafe, it may be on the receipt or after an online order is collected. For a project, it may be after handoff and acceptance rather than when the deposit is paid.",
+          "Do not tie the ask to a promise, discount, refund, warranty decision, complaint outcome, or staff pressure. If a customer has raised a problem, handle the problem through the normal service process. Do not make changing or removing a review a condition of help, and do not steer criticism into a private form while sending only happy customers to Google.",
+          "Choose one primary request and one optional reminder. A practical starting rule is to send the first message on completion or within one or two days, then one short reminder several days later if the business can do so lawfully and respectfully. Stop after that unless the customer replies or asks for the link again.",
+        ],
+      },
+      {
+        heading: "In-person review request templates",
+        paragraphs: [
+          "Template 1, completed local service: Thanks for choosing us for [specific job]. If you have a minute later, would you be open to leaving an honest Google review about the experience? I can text you the direct link. Keep the question optional and wait for permission before sending a message that was not already expected.",
+          "Template 2, cafe or counter service: Thanks for coming in. If you would like to share honest feedback, the Google review QR code is on the receipt. It helps other customers understand what to expect. Do not stand over the person while they write or ask them to show the rating.",
+          "Template 3, repeat customer: We appreciate you coming back for [service or visit]. If you have not reviewed us before and want to share your experience, I can send the direct Google link. Do not keep asking regulars who have already reviewed, declined, or asked not to receive messages.",
+        ],
+      },
+      {
+        heading: "SMS and messaging review request templates",
+        paragraphs: [
+          "Template 4, same-day service text: Hi [first name], thanks for choosing [business] for [job] today. If you would like to share an honest review of the experience, here is our Google link: [link]. No pressure, and thanks again. Use customer details only through an approved business system and follow the messaging and privacy rules that apply.",
+          "Template 5, appointment follow-up: Hi [first name], thanks for visiting [business] on [day]. We would value your honest feedback about the booking and visit: [link]. If you need help with anything from the appointment, reply here or contact [approved channel]. Keep health, legal, financial, child-related, or other sensitive services out of a generic automation until the owner has appropriate review and privacy guidance.",
+          "Template 6, completed project: Hi [first name], thanks for working with us on [project type]. If you are comfortable sharing an honest Google review, this direct link should make it easy: [link]. Please write only what reflects your own experience. Do not supply a finished review for the customer to paste.",
+        ],
+      },
+      {
+        heading: "Email review request templates",
+        paragraphs: [
+          "Template 7, invoice or job completion email. Subject: How did [job] go? Hi [first name], thanks for choosing [business] for [specific service]. If you have a moment, we would appreciate an honest Google review about your experience. Leave a review: [link]. If something needs attention, contact [normal support channel] and the team will follow the usual process.",
+          "Template 8, hospitality follow-up. Subject: Thanks for visiting [business]. Hi [first name], thanks for joining us on [day or occasion]. If you would like to help future guests know what to expect, you can share an honest Google review here: [link]. We read all feedback, including suggestions about what could be better.",
+          "Template 9, business-to-business handoff. Subject: Feedback on the [project or service]. Hi [first name], now that [deliverable] has been handed over, would you be open to reviewing your experience with [business]? Here is the direct Google link: [link]. Please use your own words and share only details you are comfortable making public.",
+        ],
+      },
+      {
+        heading: "QR code, receipt, and reminder templates",
+        paragraphs: [
+          "Template 10, QR card or counter sign: Used our service? Share an honest Google review. Scan the code to tell future customers what the experience was like. Feedback of every kind is welcome. Test the printed code at its final size, in normal light, and from the distance a customer will actually scan it.",
+          "Template 11, receipt footer: Thank you for choosing [business]. To share an honest Google review, visit [short link] or scan the QR code. Need support with your order or service? Contact [support channel]. Keep the support route visible without using it to divert negative sentiment away from the public review option.",
+          "Template 12, one reminder: Hi [first name], a quick reminder in case you meant to share feedback about [service]. Our Google review link is [link]. No need to reply, and we will not send another reminder. A clear final sentence sets the stop rule and reduces the risk of turning a request into a chase.",
+        ],
+      },
+      {
+        heading: "Keep the request honest and platform-safe",
+        paragraphs: [
+          "Google says reviews should reflect a genuine experience. Its policies prohibit incentives in exchange for reviews, changes, or removal, as well as selectively soliciting positive reviews. Do not ask for five stars, run a review swap, use staff or family reviews that hide the relationship, or make a reward depend on the rating or wording.",
+          "Australian consumer guidance also warns businesses against fake or misleading reviews, arranging reviews from people who did not have the experience, editing reviews so they misrepresent the customer, and suppressing genuine negative feedback in a misleading way. Requirements differ by place and platform, so the client must approve the workflow and check the current rules that apply.",
+          "Keep the raw customer wording and source when turning a review into a testimonial asset. Do not change the meaning, add a result the customer did not claim, or assume a public review automatically grants permission for every advertisement, email, social post, or printed promotion.",
+        ],
+      },
+      {
+        heading: "Package this as a small review-request service",
+        paragraphs: [
+          "A useful starter setup can include one location review link, a tested QR code, four channel-specific request templates, one reminder, a staff instruction card, a trigger map, an approval checklist, and a simple request tracker. Keep CRM integrations, bulk sends, complex consent work, multi-location routing, and regulated categories outside the first package.",
+          "Practical AUD planning ranges are $120-$250 for a public workflow audit and recommendations, $250-$700 for a one-location setup with templates, testing, and handoff, and $150-$500 per month for a tightly bounded review and reply workflow. These are quote-building examples, not market rules or earnings claims. Price from volume, locations, systems, approvals, risk, staff training, and ongoing reply work.",
+          "State exactly what the business receives and what it still owns. The client should control customer eligibility, contact permission, platform access, service recovery, legal review, and final approval. You can organise the workflow, write the drafts, test the links, and track the process without promising review volume, ratings, rankings, leads, revenue, or removal outcomes.",
+        ],
+      },
+      {
+        heading: "Find the first buyer with a five-minute audit",
+        paragraphs: [
+          "Choose one suburb and one business type with a clear completion moment, such as cleaners, mobile detailers, photographers, repairers, or cafes. Review 20 public profiles and their normal customer journey. Look for businesses with genuine recent reviews but no visible request process, inconsistent replies, a hard-to-find profile, or printed material that sends customers to a generic homepage.",
+          "Create a private sample showing one improved SMS, one receipt line, one QR placement idea, and the direct link test you would complete after owner approval. Use only public business information and do not contact or message the business's customers. You are demonstrating the workflow, not running it without permission.",
+          "A simple outreach message is: Hi Alex, I noticed your team gets useful Google reviews, but the request path is not obvious after a completed job. I drafted a short SMS and receipt prompt that ask every genuine customer for honest feedback without asking for five stars. Want me to send the one-page example? If it lands, offer the fixed setup rather than a vague reputation package.",
+        ],
+      },
+      {
+        heading: "Use the matching launch pack",
+        paragraphs: [
+          "Want the intake form, pricing calculator, review reply swipe file, client emails, testimonial specs, prompt pack, and approval workflow? Open the AI Review Repurposing Service launch pack. Use its working files to turn the templates into a bounded client offer.",
+          "The article gives you the request wording. The pack gives you the files for auditing, quoting, drafting, approving, and delivering the wider service. Customise everything for the client's real customer journey and current platform rules before sending it.",
+          "Start with one buyer, one location, one review link, and one trigger this week. Once the request works cleanly, add owner-approved review replies or testimonial assets as separate, clearly scoped services.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: set up a review request workflow for a mobile cleaner",
+      steps: [
+        "Audit the cleaner's current job-complete SMS, invoice email, Google review link, support route, and customer contact permissions.",
+        "Choose one trigger: the owner marks a completed job after the customer has had a chance to inspect the work.",
+        "Write one same-day SMS, one invoice footer, and one final reminder that ask for an honest review without naming a rating.",
+        "Test the direct review link and QR code on two phones while signed out of the business account.",
+        "Create stop rules for complaints, declined messages, repeat customers who already reviewed, and anyone who asks not to be contacted.",
+        "Quote an example AUD $390 for one location, three templates, link and QR testing, a staff instruction card, one approval round, and handoff.",
+        "Let the owner approve eligibility, wording, timing, access, and the final send process before any customer receives a message.",
+        "Review the first 20 requests for delivery failures, customer replies, staff confusion, complaints, and workflow gaps without promising a review target.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one local business category with a clear service-completion moment.",
+      "Review 20 public profiles and identify five businesses with a weak or inconsistent request path.",
+      "Write one sentence describing the fixed review-request setup you sell.",
+      "Prepare one SMS, one email, one receipt or QR prompt, and one reminder.",
+      "Ask for honest feedback and remove every reference to five stars, positive wording, rewards, or review swaps.",
+      "Create owner approval, customer eligibility, privacy, service recovery, and stop rules.",
+      "Test the direct review link and printed QR code on more than one device.",
+      "Set a price from locations, systems, templates, testing, approvals, training, and ongoing workload.",
+      "Send five tailored outreach messages using only public business information.",
+      "Track the workflow, not a guaranteed rating, ranking, lead, or revenue result.",
+    ],
+    commonMistakes: [
+      "Asking for a five-star or positive review instead of an honest account of the experience.",
+      "Offering a discount, gift, competition entry, refund, or service outcome in exchange for a review.",
+      "Sending Google links only to customers expected to be happy while routing criticism elsewhere.",
+      "Writing a finished review for the customer to copy and paste.",
+      "Using the wrong location link or an unreadable QR code that nobody tested.",
+      "Sending repeated reminders after a customer declines, stays silent, or asks to stop.",
+      "Automating sensitive customer journeys without appropriate privacy, platform, and professional review.",
+      "Reusing public review wording in advertising without checking meaning, permission, attribution, and platform terms.",
+      "Promising a number of reviews, average rating, map position, leads, revenue, or review removal.",
+      "Selling software or bulk messaging before one manual workflow has been tested and approved.",
+    ],
+    faqs: [
+      {
+        question: "Can a business ask customers for Google reviews?",
+        answer:
+          "Yes. Google provides a review link and QR code feature for businesses to share. Ask genuine customers for honest feedback, keep the request optional, and follow current platform, privacy, messaging, and local requirements.",
+      },
+      {
+        question: "What is the best message to ask for a Google review?",
+        answer:
+          "Use a short message that names the real service, asks for an honest review, gives the direct link, and avoids pressure. Example: Thanks for choosing us for [service]. If you would like to share an honest review of the experience, here is our Google link: [link]. No pressure, and thanks again.",
+      },
+      {
+        question: "Can I ask for a five-star Google review?",
+        answer:
+          "Ask for an honest review without specifying a rating or positive sentiment. Google policies prohibit selectively soliciting positive reviews and incentives tied to reviews, changes, or removal.",
+      },
+      {
+        question: "Can I offer a discount for a Google review?",
+        answer:
+          "Do not offer a discount, gift, payment, free service, or other benefit in exchange for a Google review. Google treats incentivised reviews as fake and misleading content. Check the current rules for every platform and location you work in.",
+      },
+      {
+        question: "When should I ask a customer for a review?",
+        answer:
+          "Ask after the customer has enough experience to give genuine feedback, such as after job inspection, project handoff, collection, or a completed visit. Keep complaints in the normal service recovery process and do not condition help on review changes.",
+      },
+      {
+        question: "How much can I charge to set up a review request workflow?",
+        answer:
+          "A practical AUD planning range is $120-$250 for an audit, $250-$700 for a one-location template and workflow setup, or $150-$500 per month for a clearly limited ongoing review and reply process. Adjust for systems, volume, locations, approvals, risk, training, and delivery scope.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not legal, privacy, advertising, consumer law, professional, or platform compliance advice. Google and local requirements can change. Use genuine customer experiences, check current rules, obtain necessary approvals, protect customer information, honour messaging preferences, and avoid guarantees about reviews, ratings, rankings, leads, revenue, or removal outcomes.",
+  },
+  {
     slug: "headlight-restoration-quote-template",
     title: "Headlight Restoration Quote Template and Photo Checklist",
     seoTitle: "Headlight Restoration Quote Template (2026 Checklist)",
@@ -1195,9 +1383,14 @@ export const blogPosts: BlogPost[] = [
       "Use practical Google review response templates for positive, mixed, and negative feedback, plus a safe approval workflow and first-client service plan.",
     category: "B2B Service",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-07-14",
+    updatedAt: "2026-07-22",
     readingTime: "14 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
+    relatedArticleSlugs: [
+      "how-to-ask-for-google-reviews",
+      "how-to-start-a-review-reply-service",
+      "google-business-profile-service-pricing-guide",
+    ],
     shortAnswer:
       "A useful Google review response is short, specific, calm, and approved by the business. Mention one real detail from the review, add only facts the owner has confirmed, and move complaints involving private information or disputes into a private channel. If you sell this as a service, start with one local business category, three sample replies, a fixed batch of 10 to 20 drafts, and an owner approval queue.",
     keyPoints: [
@@ -1524,9 +1717,14 @@ export const blogPosts: BlogPost[] = [
       "Start a review reply service with a fixed offer, realistic AUD pricing, three-sample outreach plan, owner approval workflow, and launch pack.",
     category: "B2B Service",
     publishedAt: "2026-07-12",
-    updatedAt: "2026-07-14",
+    updatedAt: "2026-07-22",
     readingTime: "13 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "ugc-brief-generator"],
+    relatedArticleSlugs: [
+      "how-to-ask-for-google-reviews",
+      "google-review-response-templates-for-small-businesses",
+      "google-business-profile-service-pricing-guide",
+    ],
     shortAnswer:
       "To start a review reply service, choose one local business category, audit recent public reviews, and sell a fixed monthly batch of owner-approved replies. Add testimonial cards only when the customer wording is genuine and the business has permission to reuse it. Start with one buyer, one tone guide, one approval queue, and no promises about rankings, ratings, leads, or revenue.",
     keyPoints: [
