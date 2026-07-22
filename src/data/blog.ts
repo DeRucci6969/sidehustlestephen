@@ -30,6 +30,194 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "google-review-management-pricing-guide",
+    title: "Google Review Management Pricing: What to Charge",
+    seoTitle: "Google Review Management Pricing Guide (2026)",
+    description:
+      "Price a Google review management service with realistic AUD ranges, scope limits, quote math, package examples, and a first-client plan.",
+    category: "B2B Service",
+    publishedAt: "2026-07-23",
+    updatedAt: "2026-07-23",
+    readingTime: "15 min read",
+    relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
+    relatedArticleSlugs: [
+      "how-to-start-a-review-reply-service",
+      "google-review-response-templates-for-small-businesses",
+      "how-to-ask-for-google-reviews",
+      "google-business-profile-service-pricing-guide",
+    ],
+    shortAnswer:
+      "For a small one-location business, practical AUD starting points are $75-$150 for a public review audit and samples, $150-$350 for a one-off batch of up to 20 reply drafts, $200-$600 per month for a defined reply workflow, or $350-$900 per month when the scope also includes review requests, monitoring, approval tracking, and a small testimonial asset allowance. These are quote-building examples, not market rules. Price from review volume, locations, risk, access, turnaround, approvals, reporting, and the work you can actually deliver.",
+    keyPoints: [
+      "Separate software cost from the fee for research, writing, approvals, escalation, reporting, and client communication.",
+      "Sell a named allowance, such as 20 reply drafts and one monthly review summary, instead of unlimited reputation management.",
+      "Use a one-off audit or backlog sprint to learn the client's real volume before offering a monthly plan.",
+      "Keep sensitive reviews, disputed facts, private information, refunds, safety issues, and regulated claims in an owner-review queue.",
+      "Do not support the price with promises about ratings, rankings, review volume, removals, leads, or revenue.",
+    ],
+    body: [
+      {
+        heading: "Who this review management pricing guide is for",
+        paragraphs: [
+          "This guide is for a beginner pricing review reply, review request, monitoring, and testimonial repurposing work for owner-operated local businesses. It also helps a small business buyer compare a freelancer's service with software or a broader agency package.",
+          "The cleanest first clients are businesses with a steady but manageable flow of genuine reviews, one clear owner or manager, and an obvious approval path. Think cafes, salons, gyms, mechanics, cleaners, trades, accommodation operators, and other local services where public feedback arrives regularly.",
+          "Start with one location and one platform. A single cafe with 12 reviews a month is a different job from five venues, three platforms, daily alerts, complaint escalation, multilingual replies, and weekly reporting. Your price should make that difference visible.",
+        ],
+      },
+      {
+        heading: "Separate software pricing from service pricing",
+        paragraphs: [
+          "Review management software and a managed review service are not the same purchase. Software may collect alerts, organise locations, draft replies, send requests, or display reviews. A managed service adds research, tone decisions, factual checks, owner coordination, escalation, publishing, record keeping, and reporting.",
+          "If the client already has suitable software, do not hide another tool inside the quote. State whether the subscription is client-paid, included for one location, or billed separately. Confirm who owns the account, data, review links, templates, and access when the engagement ends.",
+          "A buyer should be able to read the proposal and understand what is automation, what is human work, and what still requires owner approval. The tool may save drafting time, but it does not remove the need to check context, privacy, promises, complaint history, and sensitive facts.",
+        ],
+      },
+      {
+        heading: "Choose the unit you are actually selling",
+        paragraphs: [
+          "You can price by a fixed batch, monthly allowance, location, platform, or project. Fixed batches are easiest for the first job because both sides can see the volume, deadline, approval round, and finish line.",
+          "Per-reply pricing looks simple but can punish careful work. One straightforward five-star reply may take minutes. A detailed complaint involving staff conduct, a refund, safety, private information, or disputed events may need owner handling and should not be treated as one cheap unit.",
+          "For recurring work, use a base plan with named limits. State the number of locations, platforms, monitored reviews, drafted replies, request templates, approval rounds, testimonial assets, reports, meetings, and response windows. Anything outside those limits needs a price or a new scope.",
+        ],
+      },
+      {
+        heading: "Use a four-step pricing ladder",
+        paragraphs: [
+          "A public mini audit can start around AUD $75-$150. Keep it small: one location, a recent review sample, reply gaps, tone notes, risk flags, and three to five sample drafts. No profile access or publication is required.",
+          "A one-off backlog sprint can start around AUD $150-$350 for up to 20 owner-approved drafts, a short tone guide, an escalation list, and one approval round. Raise the quote for large backlogs, multiple platforms, complex complaints, research, translation, or urgent delivery.",
+          "A reply-only monthly plan can start around AUD $200-$600 for one location and a defined volume. A broader review workflow can start around AUD $350-$900 when it also includes monitoring, honest review-request templates, approval tracking, a small testimonial asset allowance, and a useful monthly pattern summary. Treat every range as a planning example, then check the actual work.",
+        ],
+      },
+      {
+        heading: "Build the quote from hours, costs, and risk",
+        paragraphs: [
+          "Estimate the real delivery blocks: public audit, onboarding, tone guide, access setup, review collection, drafting, fact checks, owner questions, revisions, publication, testimonial permission checks, reporting, meetings, and admin. Add direct software or design costs only when they belong to this client.",
+          "Multiply the expected hours by a sustainable internal working rate. Then add a reasonable buffer for the approval and escalation work you can predict. If a monthly allowance looks profitable only when every review is easy and every owner approves instantly, the price or scope is wrong.",
+          "For example, a first month might require six hours of delivery at an internal target of AUD $70 per hour. That produces a working base of AUD $420 before unusual access, design, or risk. You might quote AUD $420 for a tightly bounded reply desk, or reduce the batch if the buyer's budget is lower. Do not quietly promise a larger service for the same fee.",
+        ],
+      },
+      {
+        heading: "Define what the monthly fee includes",
+        paragraphs: [
+          "A useful one-location plan might include a weekly review check, up to 20 reply drafts, one consolidated approval queue, routine publication after approval, five sensitive-case flags, one monthly pattern summary, and a 72-hour draft window on business days.",
+          "Name the client's responsibilities too. The owner verifies facts, controls platform access, approves sensitive language, handles service recovery, decides refunds, supplies permission for testimonial reuse, and confirms any regulated or legal wording. Your work cannot move safely when those decisions have no owner.",
+          "State the exclusions in plain language: no fake reviews, no guaranteed review growth, no five-star campaigns, no review removal promise, no public arguments, no crisis communications, no legal response, no unlimited revisions, and no around-the-clock monitoring unless separately agreed.",
+        ],
+      },
+      {
+        heading: "Price add-ons without turning the offer into soup",
+        paragraphs: [
+          "Useful add-ons include extra locations, additional platforms, a larger reply batch, a review request workflow, QR and direct-link testing, custom testimonial cards, multilingual drafts with qualified review, rush work, historical backlog cleanup, and a Google Business Profile audit.",
+          "Keep each add-on tied to a deliverable. Instead of saying premium reputation support, say one extra location, up to 15 additional reply drafts, or two owner-approved testimonial cards. The buyer can compare the work and you can measure whether the add-on is worth keeping.",
+          "Do not bundle sensitive industries into a higher price and assume money solves the risk. Health, legal, finance, employment, child-related, safety, and active dispute content may need client-side or professional review. Narrow the service when you cannot safely verify or approve the wording.",
+        ],
+      },
+      {
+        heading: "Find the first buyer with a priced sample",
+        paragraphs: [
+          "Choose one suburb and one business type, then inspect 20 public profiles. Look for recent genuine reviews, unanswered feedback, generic copied replies, slow response patterns, useful praise that is buried, or complaints that need a calmer owner-approved process.",
+          "Create three private sample replies for the strongest prospect: one positive, one mixed, and one routine negative review. Do not publish them, embarrass the business in public, or pretend to know facts that are not in the review. Use the sample to show your judgment and boundaries.",
+          "A direct message can be simple: Hi Alex, I noticed your workshop gets detailed customer reviews, but several recent ones have no owner reply. I drafted three short examples and marked one that should stay with the owner. Want me to send the page? If the sample lands, offer the paid audit or fixed batch, not a vague free strategy call.",
+        ],
+      },
+      {
+        heading: "Run the first month before selling a long retainer",
+        paragraphs: [
+          "Use a paid pilot or cancel-anytime first month to learn the real workload. Track review volume, drafting time, owner questions, approval delay, sensitive cases, revisions, publishing time, platform access issues, and reporting effort.",
+          "At the end of the month, compare the allowance with the actual work. If the client had eight simple reviews and little coordination, a smaller plan may be fair. If the account produced 45 reviews, several complaints, two managers, and repeated urgent requests, show the record and re-scope the next month.",
+          "Recurring work should be easier to understand after the pilot, not harder to leave. Document the cancellation point, offboarding steps, account ownership, handoff files, data deletion, final approvals, and any unpaid work. Avoid fake urgency and long commitments before the workflow is proven.",
+        ],
+      },
+      {
+        heading: "Keep review requests and testimonials honest",
+        paragraphs: [
+          "Google prohibits incentives in exchange for reviews, changes, or removal, and prohibits selectively asking only for positive reviews. If you create a request workflow, ask genuine customers for honest feedback without controlling the rating, sentiment, or words.",
+          "Australian consumer guidance says businesses must not create or arrange fake or misleading reviews. It also warns that suppressing genuine negative feedback, editing reviews so they misrepresent the customer, or offering benefits only for positive sentiment can mislead consumers. Platform rules can be stricter than local minimums, so check both before launch.",
+          "Treat testimonial repurposing as a separate approval step. Preserve the customer's meaning, record the source, confirm the intended channel and attribution, and have the business verify any permission needed. Never invent a result, person, star rating, image, job title, or before-and-after claim.",
+        ],
+      },
+      {
+        heading: "Use the matching launch pack",
+        paragraphs: [
+          "Want the pricing calculator, outreach and sales script, review reply swipe file, intake form, testimonial card specs, client emails, AI prompts, and approval workflow? Open the Review Reply + Testimonial Clips launch pack and customise the files for one buyer.",
+          "The article gives you the pricing logic. The pack gives you the working files for prospecting, quoting, onboarding, drafting, approving, and handing off the service. Start with the smallest package you can deliver cleanly.",
+          "Pick one local category, audit 20 profiles, prepare three samples, and send the first five messages. The goal is not to build an agency this afternoon. The goal is to price one honest job and get a real owner to consider it.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: price a first monthly review desk for a local mechanic",
+      steps: [
+        "Audit the mechanic's last 30 public reviews and note reply volume, tone, unanswered feedback, repeated questions, and sensitive cases.",
+        "Scope one Google profile, up to 20 reply drafts, one tone guide, one weekly approval queue, routine publication after approval, and one monthly summary.",
+        "Keep refunds, safety complaints, staff allegations, disputed work, private customer details, and legal threats with the owner.",
+        "Estimate six hours for onboarding, drafting, approvals, publication, reporting, and admin in the first month.",
+        "At an example internal target of AUD $70 per hour, use AUD $420 as the working base.",
+        "Quote AUD $420 for the first month, with review requests, extra platforms, extra locations, rush replies, and testimonial design priced separately.",
+        "Track actual time and review volume instead of assuming the allowance is profitable.",
+        "After 30 days, keep, reduce, or re-scope the plan using the delivery record and the owner's real needs.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one local business category and one platform.",
+      "Define a public audit, one-off backlog sprint, reply-only monthly plan, and broader review workflow.",
+      "Name the location, platform, review, reply, approval, asset, report, meeting, and turnaround limits.",
+      "Estimate onboarding, drafting, fact checking, approvals, publication, reporting, and admin time.",
+      "Choose a sustainable internal working rate and calculate the smallest profitable scope.",
+      "Write add-on prices or quote triggers for extra volume, locations, platforms, design, translation, and urgent work.",
+      "Create owner approval, privacy, access, escalation, testimonial permission, and offboarding steps.",
+      "Audit 20 public profiles and choose five with a visible review workflow gap.",
+      "Prepare three private sample replies for the strongest prospect.",
+      "Send five specific messages and track replies, objections, volume questions, and price feedback.",
+    ],
+    commonMistakes: [
+      "Copying a software subscription price and treating it as the value of a managed service.",
+      "Offering unlimited replies, locations, revisions, platforms, or meetings for one small monthly fee.",
+      "Pricing every review as if the risk and research were identical.",
+      "Including review requests, testimonial design, profile cleanup, reporting, and crisis responses without naming them.",
+      "Letting sensitive replies publish automatically without owner review.",
+      "Paying for reviews, asking only happy customers, writing reviews for customers, or requesting five-star wording.",
+      "Reusing customer words as advertising without checking source, meaning, permission, attribution, and platform terms.",
+      "Promising ratings, rankings, review volume, removals, leads, customer recovery, or revenue.",
+      "Selling a long retainer before measuring one real month of work.",
+      "Discounting the full service instead of reducing the deliverables.",
+    ],
+    faqs: [
+      {
+        question: "How much should I charge for Google review management?",
+        answer:
+          "Practical AUD starting points are $75-$150 for an audit and samples, $150-$350 for up to 20 reply drafts, $200-$600 per month for a defined reply workflow, or $350-$900 per month for a broader one-location workflow with monitoring, requests, approvals, and a small testimonial allowance. Adjust for the actual scope and workload.",
+      },
+      {
+        question: "Should I charge per review or per month?",
+        answer:
+          "Use a fixed batch for a first job and a monthly allowance once you know the volume. Pure per-review pricing can hide the extra work in complaints, fact checks, approvals, access, publication, and reporting.",
+      },
+      {
+        question: "What should a review management package include?",
+        answer:
+          "Name the locations, platforms, monitoring cadence, reply allowance, turnaround, approval workflow, sensitive-case handling, publication responsibility, report, meetings, revisions, and exclusions. Review requests and testimonial assets should be explicit deliverables, not assumed extras.",
+      },
+      {
+        question: "Does the monthly price include review management software?",
+        answer:
+          "Only if the proposal says so. State the software, account owner, included locations, data ownership, access, cancellation, and any separate subscription cost. Keep the human service fee visible so the buyer knows what work is being delivered.",
+      },
+      {
+        question: "Can I guarantee more five-star reviews?",
+        answer:
+          "No. Sell the workflow you control, such as timely drafts, clear requests for honest feedback, approval tracking, escalation, and reporting. Do not guarantee a rating, number of reviews, ranking, lead, revenue result, or removal outcome.",
+      },
+      {
+        question: "Can AI publish review replies automatically?",
+        answer:
+          "AI can help classify and draft routine replies, but automatic publication creates avoidable risk. A person should verify context, facts, tone, privacy, promises, and escalation needs. Keep sensitive, disputed, regulated, safety, refund, and legal matters behind owner approval.",
+      },
+    ],
+    disclaimer:
+      "This guide provides practical business education and example AUD pricing, not legal, consumer law, privacy, tax, accounting, platform compliance, or financial advice. Prices are starting points, not market rules or earnings claims. Check current platform policies, local requirements, client facts, permissions, access, and regulated wording before delivery.",
+  },
+  {
     slug: "how-to-ask-for-google-reviews",
     title: "How to Ask for Google Reviews: 12 Customer Templates",
     seoTitle: "How to Ask for Google Reviews: 12 Templates (2026)",
@@ -37,10 +225,11 @@ export const blogPosts: BlogPost[] = [
       "Use 12 practical Google review request templates for SMS, email, receipts, and in-person asks, plus a compliant workflow and first-client offer.",
     category: "B2B Service",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-07-23",
     readingTime: "15 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
     relatedArticleSlugs: [
+      "google-review-management-pricing-guide",
       "google-review-response-templates-for-small-businesses",
       "how-to-start-a-review-reply-service",
       "google-business-profile-service-pricing-guide",
@@ -1383,10 +1572,11 @@ export const blogPosts: BlogPost[] = [
       "Use practical Google review response templates for positive, mixed, and negative feedback, plus a safe approval workflow and first-client service plan.",
     category: "B2B Service",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-07-23",
     readingTime: "14 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
     relatedArticleSlugs: [
+      "google-review-management-pricing-guide",
       "how-to-ask-for-google-reviews",
       "how-to-start-a-review-reply-service",
       "google-business-profile-service-pricing-guide",
@@ -1717,10 +1907,11 @@ export const blogPosts: BlogPost[] = [
       "Start a review reply service with a fixed offer, realistic AUD pricing, three-sample outreach plan, owner approval workflow, and launch pack.",
     category: "B2B Service",
     publishedAt: "2026-07-12",
-    updatedAt: "2026-07-22",
+    updatedAt: "2026-07-23",
     readingTime: "13 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "ugc-brief-generator"],
     relatedArticleSlugs: [
+      "google-review-management-pricing-guide",
       "how-to-ask-for-google-reviews",
       "google-review-response-templates-for-small-businesses",
       "google-business-profile-service-pricing-guide",
