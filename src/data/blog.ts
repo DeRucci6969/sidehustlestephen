@@ -30,6 +30,186 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-intake-form-template",
+    title: "Headlight Restoration Intake Form Template",
+    seoTitle: "Headlight Restoration Intake Form Template (2026)",
+    description:
+      "Copy a practical headlight restoration intake form for photo quotes, condition screening, mobile bookings, scope limits, and first-client follow-up.",
+    category: "Template",
+    publishedAt: "2026-07-24",
+    updatedAt: "2026-07-24",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "headlight-restoration-quote-template",
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "how-to-get-headlight-restoration-customers",
+      "headlight-restoration-tools-and-startup-cost",
+    ],
+    shortAnswer:
+      "A useful headlight restoration intake form collects the customer's contact details, vehicle year, make and model, suburb, clear daylight photos, lens concerns, known damage, previous work, access, weather options, preferred timing, and permission boundaries. Keep the form short enough to finish on a phone. Use it to screen the enquiry and prepare a quote, then confirm the lens and work area in person before starting. The form does not replace a condition check or prove that a lens is suitable for restoration.",
+    keyPoints: [
+      "Ask only for information that changes the quote, suitability check, booking, or safe delivery of the job.",
+      "Request a front photo plus close and side-angle photos of each lens in clear daylight, without filters or heavy glare.",
+      "Separate the enquiry form, quote acceptance, and on-arrival condition check so a customer photo is never treated as a diagnosis.",
+      "State the standard two-headlight scope, planning price range, access needs, exclusions, and conditions that can stop the job.",
+      "Use the matching launch pack when you want the editable intake document, quote calculator, outreach scripts, job SOP, safety checklist, and proof kit.",
+    ],
+    body: [
+      {
+        heading: "Who this headlight restoration intake form is for",
+        paragraphs: [
+          "This template is for a beginner or small mobile operator who has already practised one restoration process and needs a cleaner way to turn enquiries into suitable bookings. Likely buyers include older-car owners, used-car sellers, neighbours, rideshare drivers, detailers, mechanics, small dealers, and local fleet operators.",
+          "The form solves a simple problem: a message saying how much for my headlights does not tell you enough to quote or schedule the work. You still need to know which vehicle, where it is, what the lenses look like, whether the issue appears external, what access is available, and what the customer expects.",
+          "Do not use a polished form to pretend you can assess everything remotely. Photos can help you screen obvious issues, but reflections, rain, shadows, image compression, and camera angles can hide damage. Confirm the lens condition, surrounding paint, weather, access, and work area before you touch the car.",
+        ],
+      },
+      {
+        heading: "Use three checkpoints instead of one giant form",
+        paragraphs: [
+          "The enquiry form should collect enough detail for a provisional quote. Keep it short and mobile-friendly. A customer should be able to send useful information in a few minutes without reading a contract or hunting for technical terms.",
+          "The quote should then name the vehicle, address area, two-headlight scope, fixed price, inclusions, exclusions, timing, site requirements, payment point, expiry, and conditions that may change or cancel the booking. Ask the customer to accept that specific quote, not a vague starting price.",
+          "The third checkpoint happens on arrival. Inspect the exterior lenses and nearby paint, compare the condition with the submitted photos, confirm the site and weather, restate the expected result, and stop if the work falls outside your tested process. Three small checkpoints are easier to use than one form trying to do everything.",
+        ],
+      },
+      {
+        heading: "Copy these customer and vehicle fields",
+        paragraphs: [
+          "Start with: full name, mobile number, email if needed, preferred contact method, suburb or postcode, and the address only when it is required for a confirmed mobile booking. Add the customer's preferred days or time windows and whether the vehicle can stay parked for the full service and any product cure time.",
+          "For the vehicle, ask for the year, make, model, colour, registration only if you genuinely need it for job records, and whether the customer owns or is authorised to approve work on the vehicle. Avoid collecting licence details, identity documents, or unrelated personal information for a simple quote.",
+          "Use plain questions. Ask what the customer has noticed about the headlights rather than asking them to diagnose oxidation. Give simple options such as light haze, yellowing, patchy or peeling surface, scratches or chips, visible crack, moisture inside, previous restoration, previous coating, electrical issue, or not sure.",
+        ],
+      },
+      {
+        heading: "Request photos that help you screen the enquiry",
+        paragraphs: [
+          "Ask for five clear daylight photos: one front view showing both headlights, one close photo of each lens, and one side-angle photo of each lens. A side angle can reveal surface texture that disappears in a straight-on reflection. Ask for another set if the lenses are wet, the car is in deep shadow, flash hides the surface, or the images are too tightly cropped.",
+          "Tell the customer not to edit the images or use a beauty filter. You need an honest look at the lenses and the paint immediately around them. If they mention a crack, moisture, peeling, an old coating, or previous sanding, ask for one extra close photo of that area.",
+          "Add one optional photo of the proposed work area if access is uncertain. A mobile job may need safe space around the front of the car, suitable light, shade or weather protection, water or power when your process requires it, and permission to work at that property. Do not assume a street, shared garage, workplace car park, or apartment basement is suitable.",
+        ],
+      },
+      {
+        heading: "Use a simple suitability and expectations section",
+        paragraphs: [
+          "Ask whether there is visible cracking, damage inside the assembly, condensation, failed bulbs, wiring trouble, loose fittings, paint damage, or a recent roadworthiness concern. These answers do not diagnose the vehicle. They tell you when the enquiry may need replacement, electrical work, inspection, or qualified assessment instead of cosmetic exterior restoration.",
+          "Ask what result the customer wants: a tidier car for sale photos, improvement to a cloudy exterior surface, a mobile appointment, or an honest opinion on whether restoration looks sensible. Do not offer an option that promises like-new condition, permanent clarity, a passed inspection, legal compliance, or a guaranteed lighting result.",
+          "Include a short acknowledgement: photos support a provisional quote only; final suitability is confirmed before work starts; some lenses improve only partly or should be replaced; internal faults and roadworthiness decisions are outside the service. Keep the wording readable and have locally appropriate terms reviewed before relying on them.",
+        ],
+      },
+      {
+        heading: "Add mobile access and booking questions",
+        paragraphs: [
+          "Ask where the vehicle will be parked, whether there is safe working room at the front and sides, and whether the customer has permission for work at that location. Confirm any water, power, shade, ventilation, temperature, or dry-weather requirements from the actual products and process you use.",
+          "Ask whether the vehicle needs to move immediately after the appointment. Some systems have application, drying, or cure requirements. Follow the current product instructions and communicate the practical restriction before booking instead of surprising the customer on site.",
+          "Collect a preferred day and a backup weather window. State how you handle rain, unsuitable temperature, unsafe access, no-show customers, and a lens that looks materially different on arrival. The policy should be calm and specific. Fake scarcity and vague cancellation threats will not make the job more professional.",
+        ],
+      },
+      {
+        heading: "Connect the intake form to a clear quote",
+        paragraphs: [
+          "Once the form is complete, send a provisional fixed quote for one defined service. A practical starter offer can cover two suitable exterior plastic lenses, inspection, cleaning, careful masking, your tested restoration process, specified protection where required, cleanup, and matched before-and-after photos.",
+          "A normal mobile two-headlight job might use AUD $80-$220 as a planning range, but your quote must come from the actual condition, materials, travel, setup, time, access, weather risk, payment costs, local demand, and your tested process. Do not let the form automatically produce a price when the images or answers are uncertain.",
+          "Name the exclusions next to the price: lens replacement, opening assemblies, internal condensation, bulbs, wiring, paint or trim repair, roadworthiness certification, inspection outcomes, permanent results, and anything outside the photographed and approved vehicle. A short quote with clear limits is easier to buy than a cheap number followed by surprises.",
+        ],
+      },
+      {
+        heading: "Handle photos and customer details carefully",
+        paragraphs: [
+          "Collect only the details you need for quoting, scheduling, delivering, and recording the job. Restrict access to the form responses, use a reputable form or storage tool, turn on sensible account security, and remove stale enquiries when you no longer need them. Check the privacy and record-keeping requirements that apply to your business and location.",
+          "Do not paste names, phone numbers, addresses, registration details, or customer photos into random AI tools. If you use AI to organise quote notes or draft a reply, remove personal information and verify every output yourself. The customer should not become training material for your convenience.",
+          "Job photos are not automatically marketing assets. Add a separate optional permission field for using before-and-after images, state where they may appear, and let the customer say no without affecting the service. Confirm permission again before publishing identifiable vehicles, plates, homes, people, or location details.",
+        ],
+      },
+      {
+        heading: "Use the form to get the first buyer",
+        paragraphs: [
+          "The form is not the offer. Start with one permissioned proof result and a short message to a suitable buyer. Used-car sellers are a practical first lane because the listing photos may show the visible problem and the seller already cares about presentation. Neighbours, detailers, mechanics, and small dealers can be the next lane.",
+          "A simple message is: Hi Sam, I noticed the headlights look cloudy in the Corolla listing. I do a mobile two-headlight restoration locally. If you send five daylight photos through this short form, I can tell you whether it looks suitable and send a fixed provisional quote. No need to book if it is not a fit.",
+          "Send five researched messages, not 100 generic blasts. Track who completes the form, which questions cause drop-off, how often photos are unusable, which conditions you decline, quote acceptance, actual job time, and the reason for no. Improve the form when the same problem appears twice.",
+        ],
+      },
+      {
+        heading: "Turn the template into a repeatable workflow",
+        paragraphs: [
+          "After each job, compare the submitted form with what you found on arrival. If customers often miss internal moisture, previous coating, parking limits, or the need for a dry weather window, make that question clearer. Do not add ten fields because one unusual job went badly.",
+          "Keep a standard sequence: outreach, intake, provisional quote, acceptance, booking confirmation, on-arrival check, delivery, payment, handoff, optional review request, and separate proof permission. Each step should have one owner and one clear next action.",
+          "Want the editable intake document, quote calculator, outreach scripts, on-site SOP, safety checklist, proof kit, client emails, FAQs, and AI prompts? Open the Mobile Headlight Restoration launch pack. The article gives you the questions. The pack gives you the working files to customise before the first 20 messages.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: turn a used-car seller enquiry into a clean booking",
+      steps: [
+        "Message a seller whose public listing photos show cloudy exterior lenses and offer a photo-based suitability check.",
+        "Send the short intake form asking for contact preference, vehicle details, suburb, five daylight photos, known damage, previous work, access, and timing.",
+        "Review the photos for uncertainty and ask one follow-up question if glare, rain, shadow, a crack, peeling, or moisture is unclear.",
+        "Send a provisional AUD $140 quote for two suitable exterior plastic lenses, naming inclusions, exclusions, site needs, weather window, and on-arrival confirmation.",
+        "Record the customer's acceptance and send the appointment, parking, access, and vehicle-preparation details.",
+        "On arrival, compare the vehicle with the form, inspect the lenses and surrounding paint, and stop if the condition is unsuitable or materially different.",
+        "Complete only the approved scope, send the matched photos and aftercare note, then request payment.",
+        "Ask separately for an honest review and optional permission to use the images. Record the actual time, consumables, questions, and quote accuracy.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one form tool or a simple message template that works well on a phone.",
+      "Add customer contact preference, suburb, vehicle year, make, model, and preferred timing.",
+      "Add plain-language lens condition, known damage, previous work, and customer expectation questions.",
+      "Request one front, two close, and two side-angle daylight photos.",
+      "Add work-area, parking, weather, water, power, shade, and cure-time questions only when your process needs them.",
+      "Write a short photo limitation and on-arrival condition statement.",
+      "Create a separate optional before-and-after marketing permission field.",
+      "Connect the form to a provisional quote template and booking confirmation.",
+      "Test the complete flow on your own phone and with one permissioned practice enquiry.",
+      "Send the form to five researched prospects and record where the process becomes unclear.",
+    ],
+    commonMistakes: [
+      "Asking so many questions that a suitable customer gives up on a phone.",
+      "Collecting identity documents, detailed registration data, or unrelated personal information for a simple quote.",
+      "Accepting one dark front photo as proof that the lenses are suitable.",
+      "Treating the customer's description as an automotive diagnosis.",
+      "Sending an automatic fixed price when the photos show uncertainty.",
+      "Hiding exclusions, weather needs, access requirements, or cure restrictions until arrival.",
+      "Using one permission checkbox for service delivery and public marketing.",
+      "Uploading identifiable customer information and photos to unapproved AI tools.",
+      "Promising like-new, permanent, roadworthy, inspection, legal, or lighting-performance outcomes.",
+      "Buying ads before testing whether five real prospects can complete the form and understand the offer.",
+    ],
+    faqs: [
+      {
+        question: "What should a headlight restoration intake form include?",
+        answer:
+          "Include contact preference, suburb, vehicle year, make and model, five clear daylight photos, lens concerns, known damage, previous work, access, weather options, preferred timing, expectations, and permission boundaries. Collect only what changes the quote, booking, or delivery.",
+      },
+      {
+        question: "How many headlight photos should I request?",
+        answer:
+          "Request at least five: one front view showing both headlights, one close view of each lens, and one side-angle view of each lens. Ask for extra close photos of cracks, peeling, moisture, old coating, or previous repair.",
+      },
+      {
+        question: "Can I give a final quote from customer photos?",
+        answer:
+          "You can give a provisional fixed quote when the information is clear, but state that lens and site suitability will be confirmed on arrival. Photos can hide damage, internal problems, reflections, paint condition, and access limits.",
+      },
+      {
+        question: "What price should the intake form show?",
+        answer:
+          "You may show AUD $80-$220 as a planning range for a normal mobile two-headlight job, then quote from condition, materials, travel, access, time, weather, risk, and your tested process. Avoid an automatic price when the job is uncertain.",
+      },
+      {
+        question: "Should the form include photo permission?",
+        answer:
+          "Yes, but keep marketing permission separate and optional. State where before-and-after images may be used, avoid exposing plates, people, homes, or location details, and confirm permission before publishing.",
+      },
+      {
+        question: "What should happen after the form is submitted?",
+        answer:
+          "Review the information, ask only necessary follow-up questions, send a specific provisional quote, record acceptance, confirm the booking, and inspect the vehicle before work. After delivery, send the handoff and request proof permission separately.",
+      },
+    ],
+    disclaimer:
+      "This template is practical business education, not automotive, privacy, consumer-law, safety, roadworthiness, insurance, or legal advice. Adapt the form to your tested process, current product instructions, local requirements, and qualified advice. Inspect every vehicle before work and refer unsuitable or uncertain conditions to an appropriate professional.",
+  },
+  {
     slug: "google-review-management-pricing-guide",
     title: "Google Review Management Pricing: What to Charge",
     seoTitle: "Google Review Management Pricing Guide (2026)",
@@ -414,10 +594,11 @@ export const blogPosts: BlogPost[] = [
       "Use this headlight restoration quote template, photo checklist, AUD pricing logic, exclusions, and follow-up plan to turn enquiries into clear bookings.",
     category: "Pricing",
     publishedAt: "2026-07-21",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-07-24",
     readingTime: "14 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-intake-form-template",
       "mobile-headlight-restoration-pricing-guide",
       "how-to-get-headlight-restoration-customers",
       "how-to-start-a-mobile-headlight-restoration-business",
@@ -577,10 +758,11 @@ export const blogPosts: BlogPost[] = [
       "Use this practical headlight restoration tools list and AUD startup budget to build a lean mobile kit, practise safely, quote one clear offer, and find a first buyer.",
     category: "Local Service",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-07-24",
     readingTime: "15 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "how-to-start-a-mobile-headlight-restoration-business",
       "how-to-get-headlight-restoration-customers",
@@ -907,10 +1089,11 @@ export const blogPosts: BlogPost[] = [
       "A practical first-10-jobs plan for finding headlight restoration customers through used-car sellers, local partners, proof photos, and direct outreach.",
     category: "Outreach",
     publishedAt: "2026-07-18",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-07-24",
     readingTime: "13 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "how-to-start-a-mobile-headlight-restoration-business",
       "mobile-headlight-restoration-pricing-guide",
@@ -3151,10 +3334,11 @@ export const blogPosts: BlogPost[] = [
       "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-07-24",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "headlight-restoration-tools-and-startup-cost",
       "how-to-get-headlight-restoration-customers",
