@@ -428,11 +428,12 @@ const basePacks: BusinessPack[] = [
     caveat: "Do not invent claims; only repackage real customer language.",
     popularityScore: 82,
     publishedAt: "2026-06-02",
-    updatedAt: "2026-07-14",
+    updatedAt: "2026-07-23",
     assets: [
       { id: "asset-reviews-replies", title: "Review Reply Swipe File", type: "DOCX", description: "Tone-safe reply examples for positive and negative reviews." },
       { id: "asset-reviews-cards", title: "Testimonial Card Specs", type: "PDF", description: "Formats for turning reviews into social proof graphics." },
       { id: "asset-reviews-pricing", title: "Review Service Pricing Calculator", type: "XLSX", description: "Starter batch, monthly reply, proof asset, and retainer pricing with quote builder and scope guardrails." },
+      { id: "asset-reviews-outreach", title: "Review Service Outreach and Sales Script", type: "DOCX", description: "Prospect filters, first-20-leads plan, three-review sample pitch, cold outreach, discovery call, follow-ups, objections, and a bounded close." },
       { id: "asset-reviews-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for review replies, testimonial extraction, trust-card copy, and escalation-safe language." },
       { id: "asset-reviews-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for review platforms, reply tone, escalation, claims, and design approvals." },
       { id: "asset-reviews-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for outreach, review approval, monthly delivery, escalation notes, and testimonial usage." },
@@ -502,6 +503,9 @@ const basePacks: BusinessPack[] = [
 const AUTOMATION_ASSET_DESCRIPTION =
   "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.";
 
+const REVIEW_AUTOMATION_ASSET_DESCRIPTION =
+  "Scheduled review-service workflows for weekly review collection, risk classification, owner-voice reply drafts, exact-quote permission checks, monthly testimonial content packs, approval emails, and first-20-leads research. Every public reply and proof asset stays behind human approval.";
+
 const packOgImages: Record<string, string> = {
   "ai-inbox-triage-trades": "/visuals/pack-cards/ai-inbox-triage-trades-v2.jpg",
   "airbnb-guest-guide-refresh": "/visuals/pack-cards/airbnb-guest-guide-refresh-v2.jpg",
@@ -515,7 +519,8 @@ const packOgImages: Record<string, string> = {
   "ugc-brief-generator": "/visuals/pack-cards/ugc-brief-generator-v2.jpg",
 };
 
-function automationAssetFor(assets: PackAsset[]): PackAsset {
+function automationAssetFor(pack: BusinessPack): PackAsset {
+  const { assets } = pack;
   const parts = assets.map((asset) => asset.id.replace(/^asset-/, ""));
   let prefix = parts[0] ?? "";
   for (const part of parts) {
@@ -526,7 +531,7 @@ function automationAssetFor(assets: PackAsset[]): PackAsset {
     id: `asset-${token}-automation`,
     title: "AI Automation Pack",
     type: "DOCX",
-    description: AUTOMATION_ASSET_DESCRIPTION,
+    description: pack.slug === "review-testimonial-service" ? REVIEW_AUTOMATION_ASSET_DESCRIPTION : AUTOMATION_ASSET_DESCRIPTION,
   };
 }
 
@@ -534,7 +539,7 @@ function automationAssetFor(assets: PackAsset[]): PackAsset {
 export const packs: BusinessPack[] = basePacks.map((pack) => ({
   ...pack,
   ogImage: packOgImages[pack.slug],
-  assets: [automationAssetFor(pack.assets), ...pack.assets],
+  assets: [automationAssetFor(pack), ...pack.assets],
 }));
 
 export function getPack(slug: string) {
@@ -1671,6 +1676,8 @@ export const memberAssetDetails: Record<string, string> = {
     "A PDF testimonial card spec covering square, story, and website banner layouts, quote limits, source context, file naming, and production standards.",
   "asset-reviews-pricing":
     "An XLSX pricing workbook with three-review sample, review hygiene sprint, monthly retainer, extra reply, and extra proof asset pricing, plus a quote builder, scope guardrails, profit check, and claim-safe proposal wording.",
+  "asset-reviews-outreach":
+    "A DOCX sales kit with prospect filters, a first-20-leads plan, three-review sample scope, cold email, DM and call scripts, discovery questions, follow-ups, objections, close language, and review-service compliance boundaries.",
   "asset-reviews-prompts":
     "A DOCX AI prompt pack for review and testimonial services, including reply prompts, escalation prompts, testimonial extraction prompts, social proof copy prompts, and monthly content-plan prompts.",
   "asset-reviews-intake":

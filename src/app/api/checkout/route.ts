@@ -29,13 +29,18 @@ export async function POST(req: Request) {
   console.log(JSON.stringify({ level: "info", msg: "checkout_requested", route: "/api/checkout", requestId, returnTo, hasEmail: Boolean(body.email) }));
   void trackServer("Checkout Requested", { return_to: returnTo, has_email: Boolean(body.email) }, { request: req });
   void recordAnalyticsEvent(req, {
-    eventName: "Checkout Requested Server",
+    eventName: "Checkout Existing Session Probed Server",
     path: "/api/checkout",
     properties: { return_to: returnTo, has_email: Boolean(body.email) },
   });
 
   if (!hasSupabaseConfig()) {
     console.warn(JSON.stringify({ level: "warn", msg: "checkout_setup_required", route: "/api/checkout", requestId, reason: "supabase_missing", ms: Date.now() - start }));
+    void recordAnalyticsEvent(req, {
+      eventName: "Checkout Setup Required Server",
+      path: "/api/checkout",
+      properties: { reason: "supabase_missing", return_to: returnTo },
+    });
     return NextResponse.json({
       mode: "setup_required",
       message: "Supabase env vars are not configured yet. Checkout requires an authenticated magic-link session.",
@@ -44,6 +49,11 @@ export async function POST(req: Request) {
 
   if (!hasStripeConfig()) {
     console.warn(JSON.stringify({ level: "warn", msg: "checkout_setup_required", route: "/api/checkout", requestId, reason: "stripe_missing", ms: Date.now() - start }));
+    void recordAnalyticsEvent(req, {
+      eventName: "Checkout Setup Required Server",
+      path: "/api/checkout",
+      properties: { reason: "stripe_missing", return_to: returnTo },
+    });
     return NextResponse.json({
       mode: "setup_required",
       message: "Stripe env vars are not configured yet. Add STRIPE_SECRET_KEY and STRIPE_PRICE_ID.",
@@ -57,6 +67,11 @@ export async function POST(req: Request) {
 
   if (!user) {
     console.warn(JSON.stringify({ level: "warn", msg: "checkout_auth_required", route: "/api/checkout", requestId, ms: Date.now() - start }));
+    void recordAnalyticsEvent(req, {
+      eventName: "Checkout Authentication Required Server",
+      path: "/api/checkout",
+      properties: { return_to: returnTo },
+    });
     return NextResponse.json({ error: "Authentication required before checkout." }, { status: 401 });
   }
 

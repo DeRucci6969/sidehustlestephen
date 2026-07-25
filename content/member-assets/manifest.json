@@ -115,7 +115,7 @@
     "packTitle": "Google Business Profile Rescue",
     "title": "AI Automation Pack",
     "type": "DOCX",
-    "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
+    "description": "Scheduled review-service workflows for weekly review collection, risk classification, owner-voice reply drafts, exact-quote permission checks, monthly testimonial content packs, approval emails, and first-20-leads research. Every public reply and proof asset stays behind human approval.",
     "path": "content/member-assets/google-business-profile-rescue/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
     "bytes": 8039
@@ -1163,7 +1163,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/review-testimonial-service/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8033
+    "bytes": 8270
   },
   {
     "id": "asset-reviews-replies",
@@ -1199,6 +1199,17 @@
     "bytes": 13291
   },
   {
+    "id": "asset-reviews-outreach",
+    "packSlug": "review-testimonial-service",
+    "packTitle": "AI Review Repurposing Service",
+    "title": "Review Service Outreach and Sales Script",
+    "type": "DOCX",
+    "description": "Prospect filters, first-20-leads plan, three-review sample pitch, cold outreach, discovery call, follow-ups, objections, and a bounded close.",
+    "path": "content/member-assets/review-testimonial-service/review-service-outreach-and-sales-script.docx",
+    "filename": "review-service-outreach-and-sales-script.docx",
+    "bytes": 10802
+  },
+  {
     "id": "asset-reviews-prompts",
     "packSlug": "review-testimonial-service",
     "packTitle": "AI Review Repurposing Service",
@@ -1218,7 +1229,7 @@
     "description": "Editable intake questions for review platforms, reply tone, escalation rules, proof claims, and design approvals.",
     "path": "content/member-assets/review-testimonial-service/client-intake-form.docx",
     "filename": "client-intake-form.docx",
-    "bytes": 8243
+    "bytes": 7907
   },
   {
     "id": "asset-reviews-email-templates",

@@ -363,6 +363,7 @@ PACKS: list[Pack] = [
             Asset("asset-reviews-replies", "Review Reply Swipe File", "DOCX", "Tone-safe reply examples for positive and negative reviews."),
             Asset("asset-reviews-cards", "Testimonial Card Specs", "PDF", "Formats for turning reviews into social proof graphics."),
             Asset("asset-reviews-pricing", "Review Service Pricing Calculator", "XLSX", "Starter batch, monthly reply, proof asset, and retainer pricing with quote builder and scope guardrails."),
+            Asset("asset-reviews-outreach", "Review Service Outreach and Sales Script", "DOCX", "Prospect filters, first-20-leads plan, three-review sample pitch, cold outreach, discovery call, follow-ups, objections, and a bounded close."),
             Asset("asset-reviews-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for review replies, testimonial extraction, trust-card copy, and escalation-safe language."),
             Asset("asset-reviews-intake", "Client Intake Form", "DOCX", "Editable intake questions for review platforms, reply tone, escalation rules, proof claims, and design approvals."),
             Asset("asset-reviews-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for local business outreach, review approval, monthly delivery, escalation notes, and testimonial usage."),
@@ -423,6 +424,12 @@ _AUTOMATION_DESC = (
     "run on a cadence with human approval."
 )
 
+_REVIEW_AUTOMATION_DESC = (
+    "Scheduled review-service workflows for weekly review collection, risk classification, owner-voice reply drafts, "
+    "exact-quote permission checks, monthly testimonial content packs, approval emails, and first-20-leads research. "
+    "Every public reply and proof asset stays behind human approval."
+)
+
 
 def _pack_token(assets: list[Asset]) -> str:
     common = os.path.commonprefix([asset.id[len("asset-"):] for asset in assets])
@@ -432,7 +439,8 @@ def _pack_token(assets: list[Asset]) -> str:
 # Every pack leads with a scheduled-automation pack - the most appealing asset for buyers.
 for _pack in PACKS:
     _token = _pack_token(_pack.assets)
-    _pack.assets.insert(0, Asset(f"asset-{_token}-automation", "AI Automation Pack", "DOCX", _AUTOMATION_DESC))
+    _automation_description = _REVIEW_AUTOMATION_DESC if _pack.slug == "review-testimonial-service" else _AUTOMATION_DESC
+    _pack.assets.insert(0, Asset(f"asset-{_token}-automation", "AI Automation Pack", "DOCX", _automation_description))
 
 
 def find_pack_for_asset(asset_id: str) -> tuple[Pack, Asset]:
@@ -1047,6 +1055,91 @@ def checklist_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
 
 
 DOCX_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
+    "asset-reviews-outreach": [
+        ("Use this script", [
+            "Choose one local-business lane before sending anything. Good starting lanes include cleaners, detailers, photographers, cafes, salons, repairers, and other owner-led services with recent public reviews and a clear completion moment.",
+            "Replace every bracketed field and mention one real, public observation. Do not imply you are a customer, contact reviewers, collect private customer details, or use a business's reviews in public samples without approval.",
+            "Sell a bounded first result: three owner-approved reply drafts and three exact-quote proof ideas. Do not promise more reviews, a higher rating, ranking gains, leads, bookings, revenue, or removal of negative reviews.",
+            "The goal is a paid starter batch or a short discovery call with the owner. Keep every public reply, testimonial crop, and proof asset behind named human approval.",
+        ]),
+        ("Best first prospects", [
+            "The business has at least 10 genuine public reviews and has received new reviews in the last 90 days.",
+            "Several recent reviews have no owner reply, or the replies repeat the same generic wording.",
+            "Strong customer phrases are visible but not reused on the website, social channels, sales material, or email in an approved and traceable way.",
+            "The owner or manager is reachable through a public business email, contact form, phone number, or social account.",
+            "Avoid regulated, highly sensitive, crisis-heavy, or disputed-review situations until the client has appropriate platform, privacy, professional, and legal review.",
+        ]),
+        ("First 20 leads plan", [
+            "Pick one suburb and one business type so the observations and offer stay specific.",
+            "Create a sheet with Business, Website, Review profile, Recent review date, Unanswered reviews, Reply pattern, Reusable exact quote, Public contact channel, Risk flag, and Next step.",
+            "Review 20 public profiles. Shortlist only businesses with a visible reply or proof gap and a reachable decision maker.",
+            "For the best five, record two observations and prepare one private three-review sample angle. Do not publish or send customer wording outside the owner conversation.",
+            "Send five tailored messages, review the replies, then adjust the offer before sending the next five. Track replies, calls, samples requested, proposals, wins, losses, and the reason for each no.",
+        ]),
+        ("Three-review sample scope", [
+            "Input: three public reviews selected from the owner's approved profile, plus approved business facts and reply tone.",
+            "Output: three owner-voice reply drafts, three exact customer quotes worth considering, one suggested format for each quote, and a source-and-permission checklist.",
+            "Boundary: the sample is private and draft-only. It excludes posting, reviewer contact, review requests, incentives, review gating, disputes, removals, crisis replies, and public testimonial use.",
+            "Sample close: I can prepare this private three-review sample for [price or agreed test fee]. You approve every word and any testimonial use before anything goes public. If it is useful, the monthly service starts at [price] for [review cap and deliverables].",
+        ]),
+        ("Cold email: visible reply gap", [
+            "Subject: three review replies for [Business]",
+            "Hi [Name], I noticed [specific number or pattern] recent reviews on [platform] without a tailored owner reply. There are also a few useful customer phrases that could become proof assets after you confirm the wording and permission rules.",
+            "I run a small review repurposing service. The starter is a private three-review batch: reply drafts, exact-quote ideas, source links, and an approval checklist. Nothing is posted or reused without your approval.",
+            "Would you like me to send the one-page scope and fixed price?",
+        ]),
+        ("Cold email: generic reply pattern", [
+            "Subject: make the next three replies sound like [Business]",
+            "Hi [Name], your team is replying to reviews, but several responses use almost the same wording. I drafted a simple approach that keeps the replies short while reflecting the actual service each customer mentioned.",
+            "The paid starter covers three owner-voice drafts plus three exact-quote proof ideas, all source-linked and held for approval. It does not automate posting or promise rating or ranking results.",
+            "Worth a 10-minute look at the scope?",
+        ]),
+        ("DM and phone opener", [
+            "DM: Hi [Name], quick observation from [Business]'s public reviews. [Specific reply or proof gap]. I offer a private three-review starter with owner-voice replies, exact-quote ideas, source links, and an approval checklist. Nothing is posted automatically. Want the fixed scope?",
+            "Phone: Hi, I am calling with one specific idea about how [Business] handles public reviews. I noticed [observation]. I prepare small owner-approved batches of reply drafts and exact-quote proof ideas. Who is the right person to ask about a private three-review sample?",
+            "Referral ask: If review replies and testimonial assets sit with someone else, could you point me to the person who approves public wording? I will send one short scope, not a generic marketing deck.",
+        ]),
+        ("Fifteen-minute discovery call", [
+            "Minutes 0-3: Which platforms matter, how many reviews arrive each month, and who currently replies?",
+            "Minutes 3-6: What should replies sound like? Which business facts, policies, names, offers, apologies, or promises are approved or prohibited?",
+            "Minutes 6-9: Which topics must be escalated with no draft? Who owns complaints, disputed facts, privacy issues, staff issues, refunds, threats, legal, medical, safety, or discrimination concerns?",
+            "Minutes 9-12: Can review wording be proposed for testimonial reuse? Who checks platform rules, exact-quote accuracy, identity fields, permission, channels, and final design context?",
+            "Minutes 12-15: Confirm the first batch size, deliverables, cadence, approval owner, turnaround, revision limit, exclusions, fee, and one yes-or-no next step.",
+        ]),
+        ("Close the starter and monthly option", [
+            "Starter close: I recommend one batch of [number] reviews for [price]. You receive [reply drafts], [exact-quote ideas], [proof copy blocks], a source log, and one approval round by [date]. Nothing is posted, sent, or published by me.",
+            "Monthly close: After the starter, the monthly scope is up to [review cap] new reviews, one approval batch, [number] approved proof assets, an escalation log, and an activity summary for [price] per month.",
+            "Exclusions: direct posting, reviewer contact, review requests, incentives, review gating, dispute submission, removal promises, crisis communication, unsupported edits, and unapproved testimonial publishing.",
+            "Next step: If the scope is right, I will send the intake form and invoice. Work starts after payment, approved source access, reply rules, testimonial rules, and the named approval owner are confirmed.",
+        ]),
+        ("Follow-up sequence", [
+            "Day 2: I can keep the test to three reviews: three reply drafts, three exact-quote ideas, source links, and one approval checklist. Want the fixed scope?",
+            "Day 5: One extra observation: [specific unanswered review or repeated reply pattern]. I would use that as the first sample item and keep it private until you approve the wording.",
+            "Day 10: If a monthly service is too broad, start with the paid three-review batch. It is designed to show the workflow without changing how your team posts replies.",
+            "Day 21: I am closing the loop. If review replies or testimonial reuse become a priority later, I can resend the starter scope. I will not contact the reviewers or use their wording without your process and approval.",
+        ]),
+        ("Objection handling", [
+            "We can use AI ourselves: you can. The paid value is the source log, owner voice, risk classification, exact-quote check, approval workflow, and consistent delivery, not raw text generation.",
+            "We already reply to reviews: the service can focus on consistency, sensitive-item escalation, exact-quote proof ideas, and a clean monthly approval batch. If those are already handled well, you may not need it.",
+            "Can you guarantee more reviews or better rankings: no. The service organises replies and approved proof assets. It does not guarantee ratings, rankings, leads, bookings, or revenue.",
+            "Can you post for us: not in the starter. Public posting stays with the named owner until access, platform rules, approval, security, and liability are separately reviewed.",
+            "Can you make this negative review disappear: no. I do not offer review removal, disputes, suppression, gating, or crisis management.",
+            "Can you do a free sample: show the one-page method, but keep production work paid. Reduce the batch size before removing source checks or approval controls.",
+        ]),
+        ("No-go and approval checks", [
+            "Stop when the source cannot be verified, the wording is ambiguous, the reviewer identity or permission rule is unclear, or the owner has not approved the business facts and reply tone.",
+            "Escalate legal, medical, safety, privacy, discrimination, threats, staff, refunds, disputed facts, or other sensitive matters. Do not improvise a public response.",
+            "Keep raw review wording, source URL, review date, proposed crop, intended channel, approver, approval date, and final asset link together.",
+            "Do not change customer meaning, invent context, add a result, or imply a relationship, timeframe, location, product, or outcome the source does not support.",
+            "Before delivery, confirm the reply wording, testimonial permission, attribution, design context, channel, and named human approval for every item.",
+        ]),
+        ("Next action", [
+            "Choose one suburb and one local-business category.",
+            "Build the 20-lead sheet and shortlist five businesses with a visible review-reply or proof gap.",
+            "Customise the three-review starter scope and one outreach message for each shortlisted owner.",
+            "Send five messages, follow up using the sequence above, and ask for one paid starter batch.",
+        ]),
+    ],
     "asset-manual-outreach": [
         ("Use this script", [
             "Pick one buyer type and one repeated weekly outcome before sending anything. Do not pitch a vague AI service.",
@@ -2759,44 +2852,66 @@ def client_intake_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str
         ]
     if pack.slug == "review-testimonial-service":
         return [
-            ("The simplest reliable stack", [
-                "Review source: the client's approved Google Business Profile, Facebook page, marketplace profile, or exported review list.",
-                "Control sheet: one row per review with source URL, date, rating, sentiment, reply status, escalation status, exact quote, approved use, and final asset links.",
-                "Production: one reply template library and one original Canva system for square, story, website, and email proof blocks.",
-                "Automation: a scheduled AI routine can classify, draft, extract, and bundle. A named human still approves every public reply and proof asset before use.",
+            ("How to use this intake", [
+                "Send this form before the first review sweep. Ask the client to write 'not sure' instead of guessing, and resolve missing approval rules before drafting public replies.",
+                "Use one completed form to configure the review log, reply tone, escalation rules, testimonial permission gate, content formats, and approval cadence.",
+                "Do not request reviewer contact details, private customer records, account passwords, or access beyond the agreed public sources or client-provided export.",
+                "Keep the approved form with the client folder and review it whenever the business changes its offer, policies, brand voice, team, or approval owner.",
             ]),
-            ("Minimum viable weekly loop", [
-                "1. Collect: import only new reviews from the agreed public sources or client export.",
-                "2. Classify: mark positive, neutral, routine negative, or escalate before drafting.",
-                "3. Draft: prepare a short owner-voice reply using only approved business facts.",
-                "4. Extract: copy the strongest customer phrase exactly and retain its source URL.",
-                "5. Gate: stop on privacy, safety, medical, legal, discrimination, refund, staff, or disputed-fact issues.",
-                "6. Approve: send one batch to the named owner for reply and testimonial-use approval.",
-                "7. Package: map approved wording into social, website, email, and sales-graphic copy blocks.",
+            ("Business and approval details", [
+                "Business name, location, website, and main service: [answer]",
+                "Primary contact and role: [name, email, phone]",
+                "Named owner for public reply approval: [name and role]",
+                "Named owner for testimonial reuse and design approval: [name and role]",
+                "Best approval channel and normal response window: [answer]",
+                "Who handles sensitive complaints or factual disputes? [name and escalation channel]",
             ]),
-            ("Scheduled review sweep prompt", [
-                "Review the new items in [APPROVED REVIEW EXPORT OR LINKS] for [BUSINESS]. Return one row per review with source URL, review date, rating, sentiment, reply priority, sensitive-risk flag, short reply draft, exact customer quote worth reusing, and suggested proof format. Use only words and facts present in the review or approved business brief. Do not browse for private information, invent context, post replies, contact reviewers, or create unsupported claims. Mark legal, medical, safety, discrimination, privacy, staff, refund, threat, or disputed-fact content ESCALATE and provide no public reply beyond a neutral owner-review note.",
+            ("Review sources and service scope", [
+                "Approved review platforms and profile URLs: [Google / Facebook / marketplace / other]",
+                "Will the client provide a review export? If yes, name the format and secure handoff method: [answer]",
+                "Starting date or number of historic reviews in the first batch: [answer]",
+                "Ongoing cadence and expected new-review volume: [weekly / fortnightly / monthly, estimate]",
+                "Included work: reply drafts / escalation log / exact-quote extraction / testimonial copy / Canva-ready copy / activity summary",
+                "Excluded work: direct posting / reviewer contact / dispute submission / review requests / review gating / incentives / other",
             ]),
-            ("Exact-quote and permission gate", [
-                "Compare every proposed testimonial line against its source review. Return PASS only when the wording is exact or clearly marked as an owner-approved edit.",
-                "Record the source URL, reviewer display name as allowed by platform rules, original wording, proposed crop, context kept, intended channel, and owner approval status.",
-                "Do not shorten wording in a way that changes meaning. Do not imply a result, timeframe, product, location, or customer identity that the review does not support.",
-                "Hold every proof asset until the owner confirms the business can reuse the review and approves the final wording and design context.",
+            ("Reply voice and content rules", [
+                "Preferred reply tone: [plain / warm / premium / concise / other]",
+                "Two approved reply examples that sound like the owner: [paste or link]",
+                "Two examples the owner dislikes and why: [paste or link]",
+                "Approved business facts, service names, location wording, policies, and sign-off: [answer]",
+                "Words, promises, humour, apologies, offers, discounts, or phrases that must not appear: [answer]",
+                "Should replies use the reviewer's display name? [yes / no / only after approval]",
             ]),
-            ("Monthly content pack prompt", [
-                "Using only the rows marked APPROVED in [CONTROL SHEET], prepare this month's client pack. Include the approved reply drafts, five strongest exact quotes, four social captions, four website proof blocks, four email proof lines, and Canva-ready copy for square and story cards. Label each item with its source URL and approval record. Do not reuse held, disputed, sensitive, or unapproved material. End with an activity summary showing reviews processed, replies approved, items escalated, and proof blocks produced. Do not claim rating, ranking, lead, booking, or revenue impact.",
+            ("Escalation and no-draft rules", [
+                "Which topics must be marked ESCALATE with no public reply draft? [legal / medical / safety / privacy / discrimination / threats / staff / refunds / disputed facts / other]",
+                "Which low-risk complaints may receive a neutral draft for owner review? [answer]",
+                "What private details must be removed from the working log and drafts? [answer]",
+                "Who decides whether a disputed review receives a reply, private follow-up, platform report, or no action? [answer]",
+                "Maximum response time for urgent or sensitive items: [answer]",
+                "Confirm the service provider cannot admit fault, promise compensation, or state an unverified fact: yes / no",
             ]),
-            ("Approval email draft", [
-                "Draft one email to [APPROVAL OWNER] linking the review log and content pack. Group items into APPROVE, EDIT, and HOLD. List sensitive items separately with no recommendation beyond owner review. Ask the owner to confirm the reply wording, testimonial-use permission, business facts, design context, and channels before anything is posted. Save as a draft and do not send.",
+            ("Testimonial permission and reuse", [
+                "May public review wording be proposed for testimonial reuse? [yes / no / case by case]",
+                "Who confirms platform rules, required permission, and reuse approval? [answer]",
+                "May wording be shortened without changing meaning? [exact quote only / owner-approved edit / no]",
+                "May the reviewer's name, initials, location, rating, or image appear? [record each rule]",
+                "Approved channels: [website / social / email / sales deck / print / other]",
+                "Required source record: [URL / platform / review date / original wording / approval date / approver]",
             ]),
-            ("First 20 leads routine", [
-                "Once a week, review 20 public local-business profiles in [AREA OR NICHE]. Return only businesses with strong recent reviews plus visible reply gaps or unused proof. For each, record the public profile URL, two specific observations, one safe three-review sample angle, and the best public contact channel. Do not collect private data or send outreach.",
-                "For the five strongest prospects, draft a message under 70 words offering a three-review sample. Mention one real visible pattern, not AI. Keep every message in drafts for human review.",
+            ("Content formats and delivery cadence", [
+                "Reply batch format: [DOCX / spreadsheet / shared document / other]",
+                "Testimonial outputs: [square / story / website / email / sales graphic / other]",
+                "Brand assets and approved Canva template links: [answer]",
+                "Number of approved proof items expected per delivery: [answer]",
+                "Delivery day, approval deadline, revision limit, and handoff channel: [answer]",
+                "Summary fields: [processed / drafted / escalated / approved / produced / other]",
             ]),
-            ("Failure and safety rules", [
-                "Stop when the review source cannot be verified, wording is ambiguous, a complaint includes sensitive claims, owner approval is missing, or reuse rights are unclear.",
-                "Do not automate public posting, reviewer contact, review requests, review gating, incentives, removals, dispute submissions, crisis replies, or testimonial publishing.",
-                "Log the source, run date, draft, risk decision, human approver, approved wording, intended channel, and final filename for every item.",
+            ("Pre-flight approval checklist", [
+                "Every review source, profile URL, batch limit, cadence, deliverable, and exclusion is recorded.",
+                "The reply voice, approved facts, prohibited phrases, escalation owner, and no-draft topics are approved.",
+                "Testimonial reuse rules name the exact-quote standard, identity fields, channels, source record, and approval owner.",
+                "The client understands no reply or proof asset is posted, sent, or published automatically.",
+                "The delivery day, approval window, revision limit, and recurring scope are in writing.",
             ]),
             shared_standard_pointer(pack),
         ]
@@ -3045,6 +3160,49 @@ def client_faq_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]
 def automation_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
     buyer = pack.buyer
     service = pack.title.lower()
+    if pack.slug == "review-testimonial-service":
+        return [
+            ("The simplest reliable stack", [
+                "Review source: the client's approved Google Business Profile, Facebook page, marketplace profile, or exported review list.",
+                "Control sheet: one row per review with source URL, date, rating, sentiment, reply status, escalation status, exact quote, approved use, and final asset links.",
+                "Production: one reply template library and one original Canva system for square, story, website, and email proof blocks.",
+                "Automation: a scheduled AI routine can classify, draft, extract, and bundle. A named human still approves every public reply and proof asset before use.",
+            ]),
+            ("Minimum viable weekly loop", [
+                "1. Collect: import only new reviews from the agreed public sources or client export.",
+                "2. Classify: mark positive, neutral, routine negative, or escalate before drafting.",
+                "3. Draft: prepare a short owner-voice reply using only approved business facts.",
+                "4. Extract: copy the strongest customer phrase exactly and retain its source URL.",
+                "5. Gate: stop on privacy, safety, medical, legal, discrimination, refund, staff, or disputed-fact issues.",
+                "6. Approve: send one batch to the named owner for reply and testimonial-use approval.",
+                "7. Package: map approved wording into social, website, email, and sales-graphic copy blocks.",
+            ]),
+            ("Scheduled review sweep prompt", [
+                "Review the new items in [APPROVED REVIEW EXPORT OR LINKS] for [BUSINESS]. Return one row per review with source URL, review date, rating, sentiment, reply priority, sensitive-risk flag, short reply draft, exact customer quote worth reusing, and suggested proof format. Use only words and facts present in the review or approved business brief. Do not browse for private information, invent context, post replies, contact reviewers, or create unsupported claims. Mark legal, medical, safety, discrimination, privacy, staff, refund, threat, or disputed-fact content ESCALATE and provide no public reply beyond a neutral owner-review note.",
+            ]),
+            ("Exact-quote and permission gate", [
+                "Compare every proposed testimonial line against its source review. Return PASS only when the wording is exact or clearly marked as an owner-approved edit.",
+                "Record the source URL, reviewer display name as allowed by platform rules, original wording, proposed crop, context kept, intended channel, and owner approval status.",
+                "Do not shorten wording in a way that changes meaning. Do not imply a result, timeframe, product, location, or customer identity that the review does not support.",
+                "Hold every proof asset until the owner confirms the business can reuse the review and approves the final wording and design context.",
+            ]),
+            ("Monthly content pack prompt", [
+                "Using only APPROVED rows in [CONTROL SHEET], prepare this month's client pack: reply drafts, five exact quotes, four social captions, four website proof blocks, four email lines, and square and story card copy. Keep the source URL and approval record beside each item. Exclude held, disputed, sensitive, or unapproved material. End with reviews processed, replies approved, items escalated, and proof blocks produced. Do not claim rating, ranking, lead, booking, or revenue impact.",
+            ]),
+            ("Approval email draft", [
+                "Draft one email to [APPROVAL OWNER] linking the review log and content pack. Group items into APPROVE, EDIT, and HOLD. List sensitive items separately with no recommendation beyond owner review. Ask the owner to confirm the reply wording, testimonial-use permission, business facts, design context, and channels before anything is posted. Save as a draft and do not send.",
+            ]),
+            ("First 20 leads routine", [
+                "Once a week, review 20 public local-business profiles in [AREA OR NICHE]. Return only businesses with strong recent reviews plus visible reply gaps or unused proof. For each, record the public profile URL, two specific observations, one safe three-review sample angle, and the best public contact channel. Do not collect private data or send outreach.",
+                "For the five strongest prospects, draft a message under 70 words offering a three-review sample. Mention one real visible pattern, not AI. Keep every message in drafts for human review.",
+            ]),
+            ("Failure and safety rules", [
+                "Stop when the review source cannot be verified, wording is ambiguous, a complaint includes sensitive claims, owner approval is missing, or reuse rights are unclear.",
+                "Do not automate public posting, reviewer contact, review requests, review gating, incentives, removals, dispute submissions, crisis replies, or testimonial publishing.",
+                "Log the source, run date, draft, risk decision, human approver, approved wording, intended channel, and final filename for every item.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     if pack.slug == "realtor-suburb-snapshot":
         return [
             ("The easiest reliable stack", [
@@ -3476,8 +3634,12 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
             continue
         for item in items:
             body.extend(render_section_item(heading, item))
-    body.append(p("Commercial use note", "Heading1"))
-    body.append(p("These templates are practical launch materials. They do not guarantee revenue, rankings, retention, or advertising performance. Validate claims with buyer data and keep approvals in writing."))
+    review_asset_already_has_compliance_note = pack.slug == "review-testimonial-service" and (
+        asset.id.endswith("-automation") or asset.id.endswith("-intake")
+    )
+    if not review_asset_already_has_compliance_note:
+        body.append(p("Commercial use note", "Heading1"))
+        body.append(p("These templates are practical launch materials. They do not guarantee revenue, rankings, retention, or advertising performance. Validate claims with buyer data and keep approvals in writing."))
     document_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
   <w:body>

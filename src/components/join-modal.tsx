@@ -168,7 +168,9 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className, intent
                 : `Enter your email and we will send a secure sign-in link. Then you can unlock every business pack and asset for ${siteConfig.priceLabel}.`}
             </p>
             <form onSubmit={submit} className="mt-7 space-y-3">
+              <label htmlFor="join-email" className="sr-only">Email address</label>
               <input
+                id="join-email"
                 ref={emailRef}
                 required
                 type="email"
@@ -185,6 +187,11 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className, intent
                 {status === "sending" ? "Sending secure link" : intent === "signIn" ? "Send sign-in link" : "Send secure link"}
                 <ArrowRight size={17} />
               </button>
+              {intent === "join" ? (
+                <p className="px-1 text-xs font-semibold leading-5 text-[var(--graphite)]">
+                  Sending the link is free. Review the {siteConfig.priceLabel} subscription in secure checkout before paying.
+                </p>
+              ) : null}
             </form>
             {status === "sent" ? (
               <p className="mt-4 text-sm text-[var(--graphite)]" role="status" aria-live="polite">

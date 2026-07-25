@@ -79,6 +79,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ...relatedPacks,
     ...popularPacks.filter((pack) => !post.relatedPackSlugs.includes(pack.slug)),
   ].slice(0, 3);
+  const topPackCta = post.slug === "how-to-start-a-mobile-headlight-restoration-business"
+    ? {
+        copy: "Open the free cloudy-headlight lead check, then unlock the quote calculator, outreach scripts, on-site SOP, safety checklist, and the rest of the working files.",
+        label: "Open the free lead check",
+      }
+    : {
+        copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
+        label: "Open free preview",
+      };
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -176,7 +185,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <div>
                     <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{relatedPacks[0].title}</h2>
                     <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">
-                      Open the free preview, or unlock all {relatedPacks[0].assets.length} working files for outreach, pricing, delivery, and client handoff.
+                      {topPackCta.copy}
                     </p>
                   </div>
                   <div className="flex w-full flex-col gap-2 sm:flex-row md:w-auto md:flex-col">
@@ -187,7 +196,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       data-analytics-location="blog_top_cta"
                       className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-bold text-[var(--text-primary)] md:w-auto"
                     >
-                      Open free preview
+                      {topPackCta.label}
                       <ArrowRight size={16} />
                     </Link>
                     <JoinButton

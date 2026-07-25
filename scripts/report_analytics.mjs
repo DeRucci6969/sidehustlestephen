@@ -68,6 +68,7 @@ const pageViews = events.filter((event) => event.event_name === "Page Viewed");
 const organicViews = pageViews.filter((event) => /google\.|bing\.|duckduckgo\.|yahoo\./i.test(event.referrer ?? ""));
 const socialViews = pageViews.filter((event) => /instagram|tiktok|youtube|youtu\.be|facebook|threads|linkedin|x\.com|twitter/i.test(event.referrer ?? ""));
 const recentEvents = sinceLastRun ? events.filter((event) => event.created_at >= sinceLastRun) : [];
+const countEvent = (eventName) => events.filter((event) => event.event_name === eventName).length;
 let stripeSummary = null;
 
 if (process.env.STRIPE_SECRET_KEY) {
@@ -116,6 +117,19 @@ const report = {
     newSubscriptions: subscriptions.filter((subscription) => subscription.created_at >= since).length,
   },
   checkout: stripeSummary,
+  checkoutFunnel: {
+    joinModalOpened: countEvent("Join Modal Opened"),
+    magicLinkRequested: countEvent("Magic Link Requested"),
+    magicLinkSent: countEvent("Magic Link Sent"),
+    magicLinkFailed: countEvent("Magic Link Failed"),
+    existingSessionProbes:
+      countEvent("Checkout Existing Session Probed Server") +
+      countEvent("Checkout Requested Server"),
+    authenticationRequired: countEvent("Checkout Authentication Required Server"),
+    setupRequired: countEvent("Checkout Setup Required Server"),
+    checkoutUrlsCreated: countEvent("Checkout URL Created Server"),
+    note: "Existing-session probes are join-button checks, not authenticated Stripe Checkout attempts. The legacy Checkout Requested Server event is counted as a probe.",
+  },
 };
 
 console.log(JSON.stringify(report, null, 2));
