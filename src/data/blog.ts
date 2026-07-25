@@ -30,6 +30,196 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-business-plan",
+    title: "Headlight Restoration Business Plan: Start With One Car",
+    seoTitle: "Headlight Restoration Business Plan (2026 First-Job Plan)",
+    description:
+      "Build a practical headlight restoration business plan with a one-car pilot, lean AUD budget, starter pricing, first-20-leads plan, delivery workflow, and honest scope limits.",
+    category: "Business Plan",
+    publishedAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+    readingTime: "16 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "how-to-get-headlight-restoration-customers",
+      "headlight-restoration-tools-and-startup-cost",
+      "mobile-headlight-restoration-pricing-guide",
+      "headlight-restoration-quote-template",
+      "headlight-restoration-intake-form-template",
+    ],
+    shortAnswer:
+      "A useful headlight restoration business plan does not need a 30-page forecast. Start with a one-car pilot: choose one tested restoration system, practise on a permissioned vehicle, sell one two-headlight mobile offer, build a list of 20 suitable local prospects, and track replies, photo checks, quotes, paid jobs, time, materials, and reasons for no. Use AUD $180-$500 as a lean equipment planning range when you already own a suitable drill and vehicle, and quote a normal two-headlight job from roughly AUD $80-$220 only after checking condition, travel, access, weather, and your real delivery cost.",
+    keyPoints: [
+      "Plan the first paid job before planning a full-time business. One clean pilot gives you better numbers than a speculative annual forecast.",
+      "Choose one buyer lane, such as used-car sellers, older-car owners, rideshare drivers, small dealers, or automotive partners.",
+      "Sell one bounded result: mobile cosmetic restoration of two suitable exterior plastic lenses, with honest exclusions.",
+      "Track the funnel from 20 researched leads to replies, photo checks, quotes, jobs, referrals, actual time, and material use.",
+      "Use the matching launch pack for the quote calculator, outreach scripts, intake form, on-site SOP, safety checklist, proof kit, and client handoff files.",
+    ],
+    body: [
+      {
+        heading: "Who this headlight restoration business plan is for",
+        paragraphs: [
+          "This plan is for someone testing a small mobile service, not preparing an investor deck or pretending the first month is predictable. You may already have a suitable vehicle and drill, or you may be comparing headlight restoration with other local service ideas. Either way, your first decision is whether you can deliver one careful job and find one real buyer.",
+          "The buyer is a car owner or automotive business with suitable cloudy exterior plastic lenses and a reason to improve the car's presentation. Practical first lanes include used-car sellers, neighbours with older cars, rideshare drivers, detailers, mechanics, small dealers, and local fleets.",
+          "The problem is visible, but the work is not automatic. Lens condition, previous restoration, internal moisture, cracks, surrounding paint, product instructions, weather, access, cure requirements, and customer expectations can all change the job. Your plan needs a clear decline rule, not just a sales target.",
+        ],
+      },
+      {
+        heading: "Use a one-page plan instead of a fantasy forecast",
+        paragraphs: [
+          "Write six boxes on one page: buyer, visible problem, starter offer, proof, first 20 leads, and delivery rules. Add a seventh box for the numbers you will measure. That is enough to run a useful first test.",
+          "Your buyer box should name one lane, not everyone with a car. Your offer box should describe two suitable exterior plastic headlights, what the service includes, where you travel, and what stops the job. Your proof box should name the permissioned practice car and the exact photo angles you will repeat.",
+          "Do not start with a revenue forecast built from the number of cars in your suburb. A market is not the same as booked work. Your first plan should answer a smaller question: can you turn 20 suitable prospects into useful conversations, a correctly scoped quote, and one paid job you can deliver without rushing?",
+        ],
+      },
+      {
+        heading: "Choose one buyer lane for the first seven days",
+        paragraphs: [
+          "Used-car sellers are a practical first lane because their public listing photos can show the problem and presentation matters now. Neighbours can be easier to reach and may trust a local operator. Detailers and mechanics can introduce repeat work, but they will usually expect reliable proof, clear responsibility boundaries, and a process that does not create customer complaints.",
+          "Pick the lane you can research without scraping private data or ignoring platform rules. For each prospect, record the car type, suburb, visible clue, likely reason to care, permitted contact route, and one sentence explaining why the offer may be relevant.",
+          "Stay inside a small service radius for the pilot. Long travel hides weak pricing and makes rescheduling harder when weather or access changes. You can widen the radius after you know the real time spent on messages, travel, setup, restoration, cure or handoff, cleanup, and follow-up.",
+        ],
+      },
+      {
+        heading: "Define the starter offer and the jobs you will decline",
+        paragraphs: [
+          "A clean starter offer is mobile cosmetic restoration of two suitable exterior plastic headlight lenses. It can include a condition check, cleaning, careful masking, your tested restoration process, the specified protective finish where required, cleanup, matched before-and-after photos, and a short aftercare handoff.",
+          "State the exclusions before quoting. The first offer should not include lens replacement, opening assemblies, internal condensation, bulbs, wiring, paint or trim repair, roadworthiness certification, inspection outcomes, legal compliance, permanent clarity, guaranteed beam performance, or a like-new promise.",
+          "Create a go or no-go check for cracks, internal moisture, severe crazing, peeling or failed surfaces, previous work, nearby paint damage, unsuitable weather, poor access, unsafe work areas, missing product requirements, and customer expectations outside your scope. If the lens or site is uncertain, pause, ask for better information, decline, or refer the owner to an appropriate professional.",
+        ],
+      },
+      {
+        heading: "Validate the process before spending on a brand",
+        paragraphs: [
+          "Choose one reputable restoration system with current instructions, safety information, locally available refills, and a process you can practise completely. Do not combine several creator videos into a new chemical or abrasive system on a customer's car.",
+          "Complete at least one permissioned practice vehicle. Record the inspection, setup, masking, each product used, active work time, waiting or cure time, cleanup, waste, photo routine, result in different light, and any reason you would refuse a similar job next time.",
+          "Skip the vehicle wrap, bulk stock, paid lead package, expensive website, and full detailing menu during the pilot. A tidy kit, a tested process, a written scope, honest proof, and a clean quote matter more. Branding can wait until the service survives contact with a real buyer.",
+        ],
+      },
+      {
+        heading: "Build a lean startup budget and quote floor",
+        paragraphs: [
+          "A lean equipment planning range is about AUD $180-$500 when you already own a suitable drill and vehicle. That can cover one restoration system and practice refills, masking and cleaning supplies, product-appropriate protective equipment, cloths, lighting, simple storage, and job-site controls. A more independent setup with dedicated power tools, shade, stronger lighting, organised storage, and more stock may reach roughly AUD $400-$1,000.",
+          "Keep registration, insurance, training, vehicle costs, payment fees, phone, local requirements, cancellations, damaged stock, waste, and tax outside the equipment number. Check the rules and insurance that apply where you operate. A cheap kit does not mean the whole business costs the same amount.",
+          "For a normal two-headlight mobile job, AUD $80-$220 can be a planning range rather than a promise or fixed market rate. Build your actual quote from inspection, travel, setup, materials, labour, waiting time, cleanup, admin, payment costs, normal waste, condition risk, access, weather, local demand, and your tested skill level.",
+        ],
+      },
+      {
+        heading: "Turn the first 20 leads into a real demand test",
+        paragraphs: [
+          "Build a list of 20 relevant prospects in one lane. For used-car sellers, look for active local listings where public photos show cloudy exterior lenses and the seller has a current reason to improve presentation. For automotive partners, confirm that they do not already advertise the service and prepare one permissioned proof result before approaching them.",
+          "Send five researched messages a day. A simple version is: Hi Sam, I noticed the Corolla listing photos show cloudy headlights. I run a small mobile restoration service locally for suitable exterior plastic lenses. If you send two clear daylight photos, I can tell you whether it looks like a fit and give you a fixed provisional quote. No pressure if it is not useful.",
+          "Track delivered messages, replies, photo checks, suitable enquiries, provisional quotes, accepted quotes, completed jobs, permissioned proof, reviews, referrals, and reasons for no. Twenty leads will not prove the size of a market, but they can expose a vague buyer, weak proof, confusing offer, poor contact route, bad timing, or a quote that does not match the job.",
+        ],
+      },
+      {
+        heading: "Use a simple delivery workflow for every pilot job",
+        paragraphs: [
+          "Use the same sequence each time: outreach, intake, photo review, provisional quote, acceptance, booking confirmation, on-arrival condition and site check, delivery, quality check, payment, aftercare, optional review request, and separate permission for public proof.",
+          "The intake should collect only information that changes suitability, quote, booking, or delivery. Ask for the vehicle year, make and model, suburb, five useful daylight photos, known damage, previous work, access, timing, weather options, and expectations. Confirm the actual lens and surrounding area before starting.",
+          "At handoff, show the result honestly and repeat the limits. Send the approved photos and any product-specific care information. Record what took longer than planned, how much stock was used, what the customer asked, whether the quote was accurate, and what should change before the next job.",
+        ],
+      },
+      {
+        heading: "Run a weekly scoreboard that leads to decisions",
+        paragraphs: [
+          "Your scoreboard needs counts and notes, not motivational slogans. Record prospects researched, useful messages sent, reply rate, photo-check rate, suitable lead rate, quotes sent, quote acceptance, jobs completed, average travel, total delivery time, consumables used, rework, proof permissions, referrals, and reasons for no.",
+          "Do not treat silence as a reason to double message volume immediately. Review whether the prospect had a visible problem, a reason to act, a permitted contact route, relevant proof, a clear next step, and a sensible service radius. Improve one weak point before the next batch of ten.",
+          "After each paid job, compare planned and actual time and cost. If access, weather, customer messages, cleanup, coating requirements, or travel repeatedly add time, change the quote or service boundary. The plan should get more accurate as evidence arrives.",
+        ],
+      },
+      {
+        heading: "Know when to continue, change lane, or stop",
+        paragraphs: [
+          "Continue when suitable prospects reply, the quote covers the real work, the result is repeatable, and customers understand the scope. Change the buyer lane or outreach angle when the service works but your first prospects have weak urgency, poor access, or no suitable contact route.",
+          "Pause when you cannot produce a consistent practice result, the product or process requirements are unclear, insurance or local rules are unresolved, or the jobs you find mostly involve cracks, internal moisture, electrical faults, replacement, or conditions outside your skill.",
+          "Stopping a weak pilot is useful information. Do not spend more on ads to rescue a process you cannot yet deliver or an offer buyers do not understand. Fix the operation first, choose a different startable service, or get qualified training where the problem is technical.",
+        ],
+      },
+      {
+        heading: "Use the launch pack to run the plan",
+        paragraphs: [
+          "The article gives you the business-plan decisions. The Mobile Headlight Restoration launch pack gives you the working files: outreach scripts, quote calculator, on-site delivery SOP, safety checklist, intake form, client emails, FAQs, proof kit, AI prompts, and automation prompts.",
+          "Open the free cloudy-headlight lead check first. Use it to decide whether a prospect is worth approaching without promising a result from one photo. Then customise the full files to your tested process, current product instructions, service radius, local requirements, and buyer lane.",
+          "Start with one buyer, one offer, one outreach script. Complete the permissioned practice job, research the first 20 leads, and send the first five useful messages. That is a business plan you can test this week.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: a seven-day one-car pilot",
+      steps: [
+        "Day 1: choose one restoration system, read its instructions and safety information, and write the lens and site conditions that stop the job.",
+        "Day 2: price the core kit, refills, masking, cleaning, protective equipment, lighting, storage, insurance, vehicle, and local requirements separately.",
+        "Day 3: inspect and complete one permissioned practice car, then record time, materials, waste, result limits, and matched photos.",
+        "Day 4: write the two-headlight offer, inclusions, exclusions, service radius, planning range, photo request, and provisional quote process.",
+        "Day 5: find 20 active used-car listings with a visible reason to care and a permitted, relevant contact route.",
+        "Day 6: send five tailored messages, review replies, request useful daylight photos, and decline lenses that do not suit the tested process.",
+        "Day 7: send a fixed provisional quote to a suitable lead, record the funnel, and change one weak part of the offer before the next five messages.",
+        "After the first paid job: compare planned and actual time and cost, request honest feedback, ask separately for proof permission, and update the next quote.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one buyer lane and a small local service radius.",
+      "Write the visible problem and the one-sentence two-headlight offer.",
+      "Choose one documented restoration system and read its current instructions and safety information.",
+      "Write the lens, site, weather, access, and expectation conditions that stop the job.",
+      "Build separate equipment, operating, admin, vehicle, insurance, and local-requirement budgets.",
+      "Complete one permissioned practice car and record real time, materials, waste, and result limits.",
+      "Take honest matched before-and-after photos and record permission before using them.",
+      "Create the intake, provisional quote, booking, on-arrival check, handoff, and follow-up sequence.",
+      "Research 20 relevant prospects and send the first five tailored messages.",
+      "Track replies, photo checks, suitable leads, quotes, jobs, reasons for no, actual time, and actual cost.",
+    ],
+    commonMistakes: [
+      "Writing a multi-year revenue forecast before completing one consistent practice job.",
+      "Calling every car owner the target customer instead of choosing one buyer lane.",
+      "Buying branding, ads, bulk stock, or a full detailing setup before validating the offer.",
+      "Learning on a paying customer's car or mixing unverified process steps.",
+      "Leaving insurance, vehicle, admin, local requirements, waste, and payment costs out of the plan.",
+      "Quoting from one poor photo without a clear on-arrival condition check.",
+      "Accepting cracked, internally wet, severely damaged, or otherwise unsuitable lenses.",
+      "Promising like-new, permanent, roadworthy, legal, inspection, or lighting-performance outcomes.",
+      "Using mismatched or edited before-and-after photos to exaggerate proof.",
+      "Measuring message volume without recording suitability, quote accuracy, delivery time, and reasons for no.",
+    ],
+    faqs: [
+      {
+        question: "What should a headlight restoration business plan include?",
+        answer:
+          "Include one buyer lane, the visible problem, a bounded two-headlight offer, proof plan, startup and operating costs, pricing method, first-20-leads plan, intake and delivery workflow, decline rules, and a weekly scoreboard. Add forecasts only after real jobs give you reliable inputs.",
+      },
+      {
+        question: "How much does it cost to start a headlight restoration business?",
+        answer:
+          "A lean AUD equipment planning range is about $180-$500 when you already own a suitable drill and vehicle. A setup with dedicated tools, shade, lighting, storage, and more stock may reach roughly $400-$1,000. Registration, insurance, training, vehicle, payment, local requirements, and marketing sit outside those equipment examples.",
+      },
+      {
+        question: "How much should a beginner charge for headlight restoration?",
+        answer:
+          "AUD $80-$220 can be a planning range for a normal mobile two-headlight job, but quote from lens condition, materials, travel, access, weather, actual time, payment costs, local demand, risk, and your tested skill. Confirm suitability before work.",
+      },
+      {
+        question: "Who are the best first customers for headlight restoration?",
+        answer:
+          "Useful first lanes include used-car sellers, neighbours with older cars, rideshare drivers, detailers, mechanics, small dealers, and local fleets. Choose one lane where the problem is visible, the buyer has a reason to act, and you can use a permitted contact route.",
+      },
+      {
+        question: "Do I need a website before getting the first customer?",
+        answer:
+          "No. You need a tested process, written scope, honest permissioned proof, a clear quote, suitable insurance and local setup, and a reliable contact method. Build a fuller website after the first jobs show which buyer, questions, proof, and offer actually matter.",
+      },
+      {
+        question: "How do I know whether the pilot worked?",
+        answer:
+          "The pilot worked when you learned whether suitable prospects respond, whether the quote covers the real job, whether you can repeat the result safely, and what buyers ask before booking. One paid job is useful, but the quality of the operational evidence matters too.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not automotive, work health and safety, insurance, legal, tax, financial, roadworthiness, or inspection advice. Planning ranges are examples, not earnings claims or vendor quotes. Follow current manufacturer instructions and safety data, practise on permissioned vehicles, confirm suitable insurance, check local rules, and refer unsuitable or uncertain conditions to an appropriate professional.",
+  },
+  {
     slug: "headlight-restoration-intake-form-template",
     title: "Headlight Restoration Intake Form Template",
     seoTitle: "Headlight Restoration Intake Form Template (2026)",
@@ -1089,10 +1279,11 @@ export const blogPosts: BlogPost[] = [
       "A practical first-10-jobs plan for finding headlight restoration customers through used-car sellers, local partners, proof photos, and direct outreach.",
     category: "Outreach",
     publishedAt: "2026-07-18",
-    updatedAt: "2026-07-24",
+    updatedAt: "2026-07-25",
     readingTime: "13 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-business-plan",
       "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "how-to-start-a-mobile-headlight-restoration-business",
@@ -3334,10 +3525,11 @@ export const blogPosts: BlogPost[] = [
       "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-24",
+    updatedAt: "2026-07-25",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-business-plan",
       "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "headlight-restoration-tools-and-startup-cost",
