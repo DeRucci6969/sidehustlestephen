@@ -30,6 +30,186 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-long-does-headlight-restoration-last",
+    title: "How Long Does Headlight Restoration Last?",
+    seoTitle: "How Long Does Headlight Restoration Last? (2026 Guide)",
+    description:
+      "Learn what controls headlight restoration lifespan, what customers should ask, and how new operators can sell a clear service without promising permanent results.",
+    category: "Local Service",
+    publishedAt: "2026-07-26",
+    updatedAt: "2026-07-26",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "headlight-restoration-business-plan",
+      "headlight-restoration-tools-and-startup-cost",
+      "mobile-headlight-restoration-pricing-guide",
+      "headlight-restoration-quote-template",
+      "headlight-restoration-intake-form-template",
+    ],
+    shortAnswer:
+      "There is no honest universal lifespan for headlight restoration. A quick polish without suitable protection may lose clarity relatively quickly, while a complete process using a compatible UV-protection step can last much longer. The real result depends on the lens, preparation, product system, application, cure, Australian sun exposure, parking, washing, and maintenance. Customers should ask what protection is applied, what the product maker claims, what care is required, and what the operator will actually put in writing.",
+    keyPoints: [
+      "Do not sell a permanent result. Sell a documented process, a suitable UV-protection step, clear care instructions, and an honest scope.",
+      "Product-specific claims matter more than a generic internet lifespan. Read the current instructions, cure requirements, maintenance notes, and exclusions.",
+      "Outdoor parking, strong UV exposure, heat, harsh cleaning, poor preparation, coating incompatibility, and difficult lens condition can shorten the useful result.",
+      "A practical mobile two-headlight job may be quoted from roughly AUD $80-$220, but condition, process, travel, materials, cure, access, and aftercare change the real price.",
+      "The matching launch pack includes the quote calculator, intake form, on-site SOP, safety checklist, client emails, proof kit, and outreach scripts needed to set expectations properly.",
+    ],
+    body: [
+      {
+        heading: "Who this guide is for",
+        paragraphs: [
+          "This guide is for two people having the same awkward conversation. The car owner wants to know whether the clear result will last. The new mobile operator wants to answer without bluffing, underselling the work, or promising that an old plastic lens will stay perfect forever.",
+          "For the owner, the problem is uncertainty. Two services can both be called headlight restoration while using very different preparation, protection, cure, and aftercare. A low quote may be a simple clean and polish. A higher quote may include a more complete process, but price alone does not prove quality.",
+          "For the operator, lifespan is part of the offer even when it is not a guarantee. Your job is to explain the process, use one tested product system, inspect the lens, record what was applied, give the customer useful care instructions, and keep claims inside the evidence you actually have.",
+        ],
+      },
+      {
+        heading: "Why there is no single lifespan number",
+        paragraphs: [
+          "Modern headlight lenses are commonly made from polycarbonate with a protective outer layer. Sun, weather, heat, road contamination, cleaning, age, and wear can degrade that surface. Restoration may remove damaged material and improve clarity, but the finished lens still needs a suitable protection step where the chosen system requires it.",
+          "That is why a single promise such as lasts three years is weak. It ignores the starting condition, whether the damage is outside or inside, how much preparation was needed, the exact product used, how it was applied, whether it cured correctly, where the vehicle is parked, and how the owner maintains it.",
+          "Use ranges only as context, not certainty. Some consumer products make claims measured in months. Some professional systems and service warranties run longer. Those claims are not interchangeable. Check the current manufacturer information for the exact system and do not stretch a product claim into your own unconditional promise.",
+        ],
+      },
+      {
+        heading: "The protection step changes the conversation",
+        paragraphs: [
+          "Polishing can make a tired lens look dramatically clearer on the day. That immediate result is useful, but appearance at handoff is not the whole job. If your process removes or disturbs degraded surface material, the compatible protection and cure steps matter to what happens next.",
+          "Choose one restoration system with clear instructions for preparation, protective finish, compatible materials, temperature, shade or sunlight, moisture, cure time, and maintenance. Do not combine a sanding sequence from one video, a coating from another product, and a cure method guessed from a forum.",
+          "Tell the customer exactly what you are using in plain language. You do not need a chemistry lecture. A useful handoff says which system was applied, when the vehicle can get wet or be washed, what the product maker says about care, and what change should prompt a recheck.",
+        ],
+      },
+      {
+        heading: "Check the lens before discussing durability",
+        paragraphs: [
+          "A lifespan answer starts with suitability. Ask for clear daylight photos, then inspect again in person. Look for external haze, yellowing, surface texture, crazing, cracks, chips, internal moisture, peeling, previous sanding, previous coating, heat damage, nearby paint damage, and anything suggesting the problem is not a normal exterior restoration job.",
+          "Restoration cannot fix every headlight problem. A cracked lens, internal condensation, damaged reflector, failed mounting, electrical fault, severe crazing, or damage outside your tested process may need an automotive professional, repair, or replacement. Declining the wrong job is better than writing heroic promises into the quote.",
+          "Record the condition with matched photos and simple notes before starting. That protects both sides from a fuzzy memory later. It also helps you compare how different lens conditions hold up over time without pretending a handful of jobs is a scientific durability study.",
+        ],
+      },
+      {
+        heading: "Explain the factors that can shorten the result",
+        paragraphs: [
+          "UV exposure is an obvious factor, especially for vehicles parked outside in strong Australian sun. Parking under cover can reduce exposure, but do not turn that into a guarantee. Climate, heat, weather, road use, washing habits, storage, contamination, and the original lens condition still matter.",
+          "Preparation and application matter too. Residue, moisture, incompatible products, rushed sanding, uneven application, poor masking, wrong conditions, or ignored cure requirements can weaken the finish. The fix is not a confident sales sentence. It is a repeatable checklist based on the exact system you use.",
+          "Maintenance advice should stay product-specific. Avoid inventing a universal wax, coating, cleaner, or reapplication schedule. Tell the owner to follow the current instructions for the applied system, avoid harsh or abrasive cleaning, and contact you if new haze, peeling, spotting, cracking, or moisture appears.",
+        ],
+      },
+      {
+        heading: "Write a quote that sets the right expectation",
+        paragraphs: [
+          "A useful quote names the vehicle, two exterior plastic lenses, visible condition, included preparation, restoration process, protection step, mobile location, weather requirements, expected improvement, cure or aftercare notes, price, payment point, and the conditions that stop or change the job.",
+          "State the exclusions directly: no lens replacement, opening of assemblies, internal moisture repair, bulb or wiring work, paint repair, permanent clarity, like-new promise, roadworthiness certification, inspection outcome, legal compliance, or guaranteed beam performance. If the customer needs a safety, electrical, inspection, or compliance answer, refer them to an appropriate professional.",
+          "A normal mobile two-headlight restoration might use roughly AUD $80-$220 as a planning range. Build the actual quote from inspection, materials, labour, preparation, protection system, cure requirements, travel, setup, cleanup, access, weather, rework risk, and your tested skill. Do not charge for a multi-step service while quietly delivering a quick polish.",
+        ],
+      },
+      {
+        heading: "Offer a simple customer handoff",
+        paragraphs: [
+          "At handoff, show the lenses in honest light and compare the same photo angles. Repeat what was and was not treated. Give the owner the product-specific cure and care instructions in writing, along with the service date and the protection system used.",
+          "Add a simple check-in rather than a fake lifetime warranty. For an early business, a permission-based message after 30 days and again at a sensible product-led interval can reveal application issues, confusing care instructions, and the conditions your first jobs are facing.",
+          "If you offer a workmanship promise or written warranty, define the duration, coverage, exclusions, customer care responsibilities, remedy, evidence needed, and local consumer-law review before publishing it. Do not copy another operator's warranty or use lifetime language you cannot support.",
+        ],
+      },
+      {
+        heading: "Turn lifespan questions into a first-client offer",
+        paragraphs: [
+          "Used-car sellers are a practical first lane because cloudy headlights are visible in listing photos and the seller has a current presentation problem. Build a list of 20 active local listings where the exterior lenses appear cloudy, then request better photos before deciding the job is suitable.",
+          "A direct message can say: Hi Sam, I noticed the Corolla listing photos show cloudy headlights. I run a small mobile restoration service for suitable exterior plastic lenses. The service includes a condition check, restoration, a protection step, and written aftercare. If you send two clear daylight photos, I can tell you whether it looks like a fit and give you a provisional quote.",
+          "Do not lead with a durability claim. Lead with the visible problem, the bounded process, the photo check, and a clear next step. After one permissioned practice job and one paid job, track condition, product, application, weather, time, customer questions, follow-up photos, and any return issue.",
+        ],
+      },
+      {
+        heading: "Know when restoration or replacement is the better next step",
+        paragraphs: [
+          "Restoration can be a sensible option when the issue is suitable exterior surface degradation and the lens assembly is otherwise serviceable. Replacement or specialist assessment may be the better route when there are cracks, internal moisture, structural damage, electrical faults, badly failed surfaces, unavailable safe working conditions, or a result expectation the process cannot meet.",
+          "Do not frame replacement as a failure to close the sale. A clear no-go rule protects the vehicle, customer, operator, and reputation. It also makes your yes more credible when the lens is a genuine fit for the service.",
+          "The goal is not to rescue every enquiry. The goal is to run a careful service for suitable buyers, quote the actual work, follow the product system, and make the next action obvious when restoration is not appropriate.",
+        ],
+      },
+      {
+        heading: "Use the launch pack to make the promise operational",
+        paragraphs: [
+          "The article gives you the honest lifespan answer. The Mobile Headlight Restoration launch pack gives you the working files: quote calculator, intake form, outreach scripts, on-site delivery SOP, safety checklist, before-and-after proof kit, client emails, FAQs, AI prompts, and automation prompts.",
+          "Open the free cloudy-headlight lead check before pitching. It helps you separate a useful first lead from an enquiry that needs better photos, a narrower expectation, or professional assessment. Then adapt the full files to your chosen product system, current instructions, service radius, local requirements, and tested process.",
+          "Start with one buyer, one offer, one outreach script. The article gives you the shape of the move. The pack gives you the working files. Browse the related launch packs and pick one buyer to pitch this week.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: answer a used-car seller without overpromising",
+      steps: [
+        "The seller sends five daylight photos of an older Corolla with exterior haze but no obvious crack or internal moisture.",
+        "You explain that photos are a screening step and the final go or no-go decision happens on site.",
+        "Your provisional quote is AUD $140 for two suitable lenses within your local service radius, subject to inspection, access, weather, and the agreed product process.",
+        "The quote includes preparation, restoration, the compatible protection step, cleanup, matched photos, and written cure and care notes.",
+        "You state that the result is not permanent and depends on lens condition, product application, cure, UV exposure, parking, washing, and maintenance.",
+        "On arrival, you recheck the lens and surrounding area, confirm expectations, record the starting condition, and stop if the job falls outside your process.",
+        "After handoff, you send the care note and ask permission for a 30-day follow-up photo so you can improve the service record.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one complete restoration system and read its current instructions and safety information.",
+      "Write down its preparation, protection, weather, cure, maintenance, and incompatibility requirements.",
+      "Create a photo-screening list for cracks, moisture, crazing, peeling, previous work, and surrounding damage.",
+      "Complete one permissioned practice car and record the product, conditions, time, material use, and result.",
+      "Write a two-headlight offer with inclusions, exclusions, price range, aftercare, and no permanent-result promise.",
+      "Create a one-page customer handoff with the service date, protection used, cure requirements, care, and recheck signs.",
+      "Find 20 suitable used-car sellers, neighbours, or automotive partners in one small service area.",
+      "Send five specific photo-check messages today.",
+      "Track every quote, job, product batch, condition note, follow-up photo, complaint, and reason for declining.",
+      "Open the Mobile Headlight Restoration launch pack and customise the quote, intake, SOP, proof, and client-email files.",
+    ],
+    commonMistakes: [
+      "Giving every customer the same lifespan promise without checking the lens, product, conditions, or care.",
+      "Polishing for an impressive handoff photo while ignoring the compatible protection step.",
+      "Mixing products and methods without checking instructions or compatibility.",
+      "Using a product claim as an unconditional business guarantee.",
+      "Skipping cure instructions because the customer needs to drive or wash the car immediately.",
+      "Accepting cracked, internally wet, severely crazed, peeling, electrical, or otherwise unsuitable headlights.",
+      "Promising roadworthiness, inspection, legal, safety, permanent, or like-new outcomes.",
+      "Quoting only the time spent polishing and forgetting inspection, masking, travel, cure, cleanup, messages, and follow-up.",
+      "Giving universal maintenance advice instead of the current instructions for the applied system.",
+    ],
+    faqs: [
+      {
+        question: "How long does professional headlight restoration last?",
+        answer:
+          "There is no universal professional lifespan. It depends on lens condition, preparation, the protection system, application, cure, climate, UV exposure, parking, washing, and maintenance. Ask what product is used, what its maker claims, what care is required, and what the operator puts in writing.",
+      },
+      {
+        question: "Does headlight restoration last without a UV-protection step?",
+        answer:
+          "A polish-only result may look clear at handoff but can lose clarity relatively quickly. Use a complete system and follow its current instructions for any required protective finish, application, cure, and maintenance rather than assuming polishing alone is durable.",
+      },
+      {
+        question: "Can I guarantee headlight restoration for life?",
+        answer:
+          "Do not make a lifetime promise without evidence, precise written terms, a supportable remedy, and appropriate legal review. A new operator is safer explaining the process, product claim, variables, care, exclusions, and workmanship commitment in plain language.",
+      },
+      {
+        question: "How much does mobile headlight restoration cost?",
+        answer:
+          "A practical planning range for a normal two-headlight mobile job is roughly AUD $80-$220. The final quote should reflect lens condition, preparation, materials, protection system, travel, access, weather, cure, cleanup, and the operator's tested process.",
+      },
+      {
+        question: "When should cloudy headlights be replaced instead?",
+        answer:
+          "Replacement or specialist assessment may be more suitable for cracks, internal moisture, structural damage, electrical faults, severe crazing, badly failed surfaces, or problems outside a normal exterior cosmetic restoration. An operator should decline work they cannot inspect or deliver safely.",
+      },
+      {
+        question: "How can a new operator get the first customer?",
+        answer:
+          "Complete one permissioned practice car, create honest matched photos, then contact 20 local used-car sellers or owners with visibly cloudy headlights. Ask for clear photos, offer a condition check and provisional quote, and sell the documented process rather than a bold lifespan claim.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not automotive, product, warranty, legal, consumer-law, safety, roadworthiness, or inspection advice. Follow current manufacturer instructions, check local requirements, use suitable protective equipment, define any written warranty carefully, and refer unsuitable lenses or vehicle faults to an appropriate professional.",
+  },
+  {
     slug: "headlight-restoration-business-plan",
     title: "Headlight Restoration Business Plan: Start With One Car",
     seoTitle: "Headlight Restoration Business Plan (2026 First-Job Plan)",
@@ -37,10 +217,11 @@ export const blogPosts: BlogPost[] = [
       "Build a practical headlight restoration business plan with a one-car pilot, lean AUD budget, starter pricing, first-20-leads plan, delivery workflow, and honest scope limits.",
     category: "Business Plan",
     publishedAt: "2026-07-25",
-    updatedAt: "2026-07-25",
+    updatedAt: "2026-07-26",
     readingTime: "16 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "how-long-does-headlight-restoration-last",
       "how-to-start-a-mobile-headlight-restoration-business",
       "how-to-get-headlight-restoration-customers",
       "headlight-restoration-tools-and-startup-cost",
@@ -1279,11 +1460,12 @@ export const blogPosts: BlogPost[] = [
       "A practical first-10-jobs plan for finding headlight restoration customers through used-car sellers, local partners, proof photos, and direct outreach.",
     category: "Outreach",
     publishedAt: "2026-07-18",
-    updatedAt: "2026-07-25",
+    updatedAt: "2026-07-26",
     readingTime: "13 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
       "headlight-restoration-business-plan",
+      "how-long-does-headlight-restoration-last",
       "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "how-to-start-a-mobile-headlight-restoration-business",
@@ -3525,11 +3707,12 @@ export const blogPosts: BlogPost[] = [
       "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-25",
+    updatedAt: "2026-07-26",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
       "headlight-restoration-business-plan",
+      "how-long-does-headlight-restoration-last",
       "headlight-restoration-intake-form-template",
       "headlight-restoration-quote-template",
       "headlight-restoration-tools-and-startup-cost",
