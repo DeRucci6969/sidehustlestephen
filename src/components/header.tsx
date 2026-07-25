@@ -50,6 +50,14 @@ export async function Header({ viewer: providedViewer }: HeaderProps = {}) {
             </Link>
           ))}
         </nav>
+        <Link
+          href="/packs"
+          data-analytics-event="Mobile Header Packs Clicked"
+          data-analytics-location="header_mobile"
+          className="inline-flex h-11 items-center rounded-full border border-[rgba(28,32,28,0.12)] bg-white/86 px-3 text-xs font-bold text-[var(--navy-ink)] shadow-[0_12px_32px_rgba(10,12,16,0.08)] transition hover:-translate-y-0.5 hover:bg-white sm:hidden"
+        >
+          Packs
+        </Link>
         {viewer.isMember ? (
           <div className="hidden items-center gap-2 sm:flex">
             <Link
