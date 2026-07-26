@@ -30,6 +30,190 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-aftercare",
+    title: "Headlight Restoration Aftercare: A Practical Customer Guide",
+    seoTitle: "Headlight Restoration Aftercare Guide (2026)",
+    description:
+      "Use this practical headlight restoration aftercare guide to handle curing, washing, cleaning, maintenance, customer handoff, and realistic result expectations.",
+    category: "Local Service",
+    publishedAt: "2026-07-27",
+    updatedAt: "2026-07-27",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-long-does-headlight-restoration-last",
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "headlight-restoration-business-plan",
+      "headlight-restoration-intake-form-template",
+      "headlight-restoration-quote-template",
+      "headlight-restoration-tools-and-startup-cost",
+      "mobile-headlight-restoration-pricing-guide",
+    ],
+    shortAnswer:
+      "After headlight restoration, follow the exact curing and care instructions for the product system that was applied. Do not use a universal wait time. Some finishes need protection from touching, driving, water, rain, condensation, dust, or commercial washing for a stated period, while other systems are cured before handoff. The operator should give the customer the product name, application time, cure instructions, first safe wash time, cleaning limits, result photos, and a contact route if the finish is disturbed.",
+    keyPoints: [
+      "The product maker's current cure and care instructions outrank a generic internet rule.",
+      "Tell the customer what was applied, when it was applied, what to avoid, and when normal use or washing can resume.",
+      "After the stated cure, use gentle cleaning that is compatible with the applied system and avoid unapproved abrasives, solvents, compounds, or aggressive chemicals.",
+      "A normal mobile two-headlight service may be planned around AUD $80-$220, with written aftercare included rather than sold as vague premium protection.",
+      "The matching launch pack gives an operator the intake, quote calculator, on-site SOP, client emails, proof kit, safety checklist, and outreach files needed to make the handoff repeatable.",
+    ],
+    body: [
+      {
+        heading: "Who this aftercare guide is for",
+        paragraphs: [
+          "This guide is for a car owner who has just paid for clearer headlights and for the new mobile operator who needs to explain what happens next. The owner wants to know whether the car can be driven, parked outside, washed, or touched. The operator needs an answer that matches the actual finish rather than a confident guess.",
+          "Headlight restoration is not one standard chemical process. A service may use a wipe-on coating, spray coating, sealant, polishing system, UV-cured finish, film, or another documented product system. Those finishes can have different application, touch-dry, full-cure, water-exposure, washing, temperature, and maintenance requirements.",
+          "That makes aftercare part of the job, not an optional message sent later. A clear handoff protects the fresh result, reduces avoidable callbacks, and shows the customer exactly what the operator did and did not promise.",
+        ],
+      },
+      {
+        heading: "Use the applied product instructions, not one universal wait time",
+        paragraphs: [
+          "Do not publish a blanket rule such as wait 24 hours before driving or wash the car after one week. Current manufacturer instructions differ. One system may tell the user to avoid touching and water exposure while it cures. Another may use a controlled UV cure and be ready for normal use sooner. A third may permit driving but delay commercial washing.",
+          "Before accepting a paid job, read the current application sheet, safety information, cure conditions, temperature or weather limits, water-exposure guidance, and maintenance notes for the complete system. Keep the source available on the job. Do not combine the cure time from one coating with the application process from another.",
+          "Write the exact customer instruction before starting. If the product documentation is missing, unclear, outdated, or unsuitable for the day's conditions, pause the job. A busy driveway is a bad place to invent coating chemistry.",
+        ],
+      },
+      {
+        heading: "What to do immediately after restoration",
+        paragraphs: [
+          "At handoff, confirm whether the finish is fully cured, partly cured, touch-dry, or still inside a protected cure window. Give the customer a plain list of restrictions taken from the applied system. That may include avoiding touch, water, rain, condensation, dust, driving, covers, cleaners, tape, or commercial washing until a stated time.",
+          "Record the application finish time and calculate the customer's next safe action from that time. Use a specific date and local time, not later today. If weather, temperature, shade, sunlight, or a curing device changes the instruction, write that condition beside the time.",
+          "If the fresh finish is exposed to rain, water, dust, a fingerprint, cleaner, or another contaminant during the restricted period, the customer should photograph it and contact the operator before rubbing, polishing, recoating, or using a solvent. The correct response depends on the system and the condition of the finish.",
+        ],
+      },
+      {
+        heading: "How to wash restored headlights after curing",
+        paragraphs: [
+          "Once the documented cure and wash window has passed, use a gentle cleaning method that is compatible with the applied finish. A normal starting approach is clean water, a suitable car shampoo, and a clean, soft wash mitt or microfiber, but the product instructions still decide what is approved.",
+          "Rinse away loose grit before wiping. Do not scrub a dry, dusty lens. Avoid abrasive pads, household scouring products, aggressive compounds, unapproved solvents, harsh spot cleaners, or automatic equipment that may damage the coating. If a bug remover, pressure washer, wax, sealant, polish, or detailing spray will be used, check its compatibility and method first.",
+          "Do not tell every customer to polish or wax the lens on a fixed schedule. Some systems may allow or recommend compatible maintenance products after cure. Others may have different care requirements. Put the actual maintenance instruction in writing and avoid turning casual internet advice into a warranty condition.",
+        ],
+      },
+      {
+        heading: "Help the result last without promising permanence",
+        paragraphs: [
+          "Long-term results depend on the starting lens, preparation, product system, application, cure, Australian UV exposure, heat, parking, washing, contamination, wear, previous work, and maintenance. Aftercare can reduce avoidable damage, but it cannot make an old plastic lens permanent.",
+          "Encourage the owner to keep the lens reasonably clean, avoid unnecessary abrasion, follow compatible maintenance instructions, and report changes early. Where practical, reducing intense exposure and harsh treatment may help, but the operator should not invent a lifespan from parking habits alone.",
+          "Take matched handoff photos and keep a dated job record. If clarity changes later, compare the same angles in similar light and inspect before suggesting another treatment. Haze may be on the outside, inside the assembly, inside the coating, or related to damage outside a normal cosmetic restoration scope.",
+        ],
+      },
+      {
+        heading: "Give every customer a one-page aftercare handoff",
+        paragraphs: [
+          "The handoff should name the vehicle, lens condition, service date, product system, batch or reference if useful, finish time, cure status at departure, actions to avoid, first safe water exposure, first safe wash, compatible cleaning method, maintenance note, result limits, photos supplied, and operator contact details.",
+          "Keep the wording short enough to read beside the car. A useful line is: Your finish was applied at 2:10 pm on 27 July. Keep it dry and untouched until the time below, following the attached product instruction. Contact me with a photo before trying to fix any mark during the cure period.",
+          "Do not hide the important restriction in a long terms and conditions document. Send the one-page version by email or message and keep the approved job record. The customer should leave knowing the next action without having to search for it.",
+        ],
+      },
+      {
+        heading: "Put aftercare inside the quote and delivery workflow",
+        paragraphs: [
+          "A standard two-headlight mobile restoration may be planned from roughly AUD $80-$220, depending on condition, process, materials, travel, access, weather, cure, local demand, and the operator's tested skill. Written aftercare, handoff photos, and the relevant product instruction should be included in the standard scope.",
+          "Do not add a mysterious protection fee without naming the product, process, cure, and deliverable. If the chosen system, controlled curing, return inspection, maintenance visit, or compatible protective service adds real time and cost, show it as a clear line item or package difference.",
+          "Quote the time needed to finish the handoff properly. If the system cannot be left safely at the customer's site, the cure window conflicts with weather, or the customer must drive immediately, change the booking, choose a suitable documented system, or decline. The aftercare plan starts before the sanding begins.",
+        ],
+      },
+      {
+        heading: "Use aftercare to win the first buyer",
+        paragraphs: [
+          "New operators often sell the dramatic before-and-after photo and barely mention what protects the result. A better first-client offer includes the condition check, tested process, suitable protection step, matched photos, written aftercare, and honest scope limits.",
+          "Restore one permissioned practice car and create the exact handoff you would give a paying customer. Then approach 20 local used-car sellers, older-car owners, detailers, mechanics, or small dealers with suitable cloudy exterior lenses. Show the proof and the care process without claiming permanent clarity or a guaranteed inspection result.",
+          "A practical message is: Hi Sam, I restore suitable cloudy plastic headlights locally. The two-headlight service includes a condition check, careful restoration, the specified protection step, matched photos, and written aftercare for the exact finish used. Send two daylight photos if you want a provisional quote.",
+        ],
+      },
+      {
+        heading: "Know when aftercare is not the answer",
+        paragraphs: [
+          "Aftercare does not fix a cracked lens, internal condensation, electrical fault, failed bulb, severe crazing, structural damage, unsafe assembly, poor previous repair, or a result outside the capability of the selected system. These conditions need a proper inspection and may require replacement or an appropriate automotive professional.",
+          "Do not tell a customer that a cosmetic restoration proves legal compliance, roadworthiness, beam performance, safety, or suitability for night driving. If those questions matter, refer them to the relevant qualified professional and local requirements.",
+          "Want the quote calculator, intake form, on-site SOP, client emails, safety checklist, proof kit, and outreach scripts? Open the Mobile Headlight Restoration launch pack. Customise the working files to the product system you have tested and send the aftercare at every handoff.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: build the aftercare card before the first paid job",
+      steps: [
+        "Choose one complete restoration and protection system with current application, safety, cure, water-exposure, washing, and maintenance instructions.",
+        "Complete one permissioned practice car in suitable conditions and record the finish time, cure conditions, materials, result, and any issue.",
+        "Create a one-page card with the vehicle, product system, application time, cure status, restrictions, first safe wash, cleaning method, maintenance note, limits, and contact route.",
+        "Rewrite every timing instruction as a specific local date and time for the customer.",
+        "Attach the relevant product instruction rather than paraphrasing technical steps from memory.",
+        "Take matched handoff photos and ask separately for permission before using them in marketing.",
+        "Send the card by email or message, ask the customer to reply that it was received, and keep the dated job record.",
+        "After the first job, update the quote and booking workflow if cure, weather, handoff, or follow-up took longer than planned.",
+      ],
+    },
+    firstActionChecklist: [
+      "Read the current instructions and safety information for the complete product system.",
+      "Write down application, touch, full-cure, water, driving, washing, weather, temperature, and maintenance requirements.",
+      "Confirm the job conditions can meet those requirements before booking.",
+      "Create a one-page aftercare handoff with specific dates and times.",
+      "Include written aftercare, product information, and result photos in the standard quote.",
+      "Complete one permissioned practice job and test the handoff from start to finish.",
+      "Create a photo-and-contact process for a finish disturbed during cure.",
+      "Write clear limits for cracks, internal moisture, severe damage, roadworthiness, safety, and permanent-result claims.",
+      "Build a list of 20 suitable local prospects and send the first five photo-check messages.",
+      "Open the Mobile Headlight Restoration launch pack and adapt its client emails, intake, SOP, quote, and proof files.",
+    ],
+    commonMistakes: [
+      "Giving every customer the same cure or washing time regardless of the product system.",
+      "Saying fully cured when the finish is only touch-dry or still inside a restricted period.",
+      "Forgetting to record the application time and the conditions that affect curing.",
+      "Telling a customer to rub, polish, solvent-clean, or recoat a disturbed finish without checking the system.",
+      "Recommending an abrasive or chemical maintenance routine without confirming compatibility.",
+      "Hiding aftercare in long terms instead of giving a simple handoff beside the vehicle.",
+      "Promising a permanent result, a fixed lifespan, roadworthiness, legal compliance, safety, or beam performance.",
+      "Using before-and-after photos without permission or changing the lighting to exaggerate the result.",
+      "Quoting only the active restoration time and forgetting cure planning, handoff, photos, messages, and follow-up.",
+    ],
+    faqs: [
+      {
+        question: "How long after headlight restoration can the car get wet?",
+        answer:
+          "Use the exact water-exposure instruction for the product system that was applied. The safe window varies by finish and curing method. The operator should give the customer a specific date and time rather than a universal estimate.",
+      },
+      {
+        question: "Can I drive immediately after headlight restoration?",
+        answer:
+          "It depends on the applied system, cure method, weather, and manufacturer instruction. Some finishes restrict driving or exposure during cure, while another system may be cured before handoff. Confirm the written instruction before moving the vehicle.",
+      },
+      {
+        question: "When can I wash the car after headlight restoration?",
+        answer:
+          "Wait until the applied system's stated cure and wash window has passed. Water exposure and commercial washing may have different restrictions. Ask for the product name, finish time, and first safe wash time in writing.",
+      },
+      {
+        question: "What should I clean restored headlights with?",
+        answer:
+          "After cure, use a gentle method that is compatible with the applied finish. Rinse loose grit first and avoid unapproved abrasives, solvents, compounds, aggressive chemicals, or tools. Follow the product maker's current cleaning and maintenance guidance.",
+      },
+      {
+        question: "What if it rains before the headlight coating cures?",
+        answer:
+          "Photograph the finish and contact the operator before wiping, polishing, solvent-cleaning, or recoating it. The correct response depends on the product, cure stage, exposure, and visible condition.",
+      },
+      {
+        question: "What should an operator include in a headlight restoration aftercare card?",
+        answer:
+          "Include the vehicle, service date, lens condition, product system, finish time, cure status, restrictions, first safe water exposure, first safe wash, approved cleaning method, maintenance note, result limits, photos, and operator contact details.",
+      },
+      {
+        question: "How much should a mobile headlight restoration service cost?",
+        answer:
+          "A practical planning range for a normal two-headlight mobile job is roughly AUD $80-$220. Condition, process, materials, travel, weather, cure, access, local demand, and operator experience change the final quote. Written aftercare should be part of the defined scope.",
+      },
+      {
+        question: "How can a new operator get the first customer?",
+        answer:
+          "Complete one permissioned practice car, create honest matched photos and a real aftercare handoff, then contact 20 suitable used-car sellers, owners, detailers, mechanics, or small dealers. Ask for clear daylight photos and offer a provisional condition-based quote.",
+      },
+    ],
+    disclaimer:
+      "This guide is practical business education, not automotive, product, coating, warranty, legal, consumer-law, safety, roadworthiness, or inspection advice. Follow the current instructions and safety information for the complete product system, check local requirements, use suitable protective equipment, document the handoff, and refer unsuitable lenses or vehicle faults to an appropriate professional.",
+  },
+  {
     slug: "how-long-does-headlight-restoration-last",
     title: "How Long Does Headlight Restoration Last?",
     seoTitle: "How Long Does Headlight Restoration Last? (2026 Guide)",
@@ -41,6 +225,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "14 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-aftercare",
       "how-to-start-a-mobile-headlight-restoration-business",
       "headlight-restoration-business-plan",
       "headlight-restoration-tools-and-startup-cost",
@@ -217,10 +402,11 @@ export const blogPosts: BlogPost[] = [
       "Build a practical headlight restoration business plan with a one-car pilot, lean AUD budget, starter pricing, first-20-leads plan, delivery workflow, and honest scope limits.",
     category: "Business Plan",
     publishedAt: "2026-07-25",
-    updatedAt: "2026-07-26",
+    updatedAt: "2026-07-27",
     readingTime: "16 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-aftercare",
       "how-long-does-headlight-restoration-last",
       "how-to-start-a-mobile-headlight-restoration-business",
       "how-to-get-headlight-restoration-customers",
@@ -3707,10 +3893,11 @@ export const blogPosts: BlogPost[] = [
       "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-26",
+    updatedAt: "2026-07-27",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-aftercare",
       "headlight-restoration-business-plan",
       "how-long-does-headlight-restoration-last",
       "headlight-restoration-intake-form-template",
@@ -3882,10 +4069,11 @@ export const blogPosts: BlogPost[] = [
       "A practical pricing guide for mobile headlight restoration with starter packages, quote math, dealer batch pricing, travel add-ons, exclusions, and first-client rules.",
     category: "Pricing",
     publishedAt: "2026-07-09",
-    updatedAt: "2026-07-21",
+    updatedAt: "2026-07-27",
     readingTime: "11 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-aftercare",
       "headlight-restoration-quote-template",
       "how-to-get-headlight-restoration-customers",
       "how-to-start-a-mobile-headlight-restoration-business",
