@@ -30,6 +30,198 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "is-headlight-restoration-business-profitable",
+    title: "Is a Headlight Restoration Business Profitable?",
+    seoTitle: "Is Headlight Restoration Profitable? First-Job Guide",
+    description:
+      "Test whether a headlight restoration business can be profitable using realistic Australian pricing, job costs, time, travel, and first-customer maths.",
+    category: "Pricing",
+    publishedAt: "2026-07-29",
+    updatedAt: "2026-07-29",
+    readingTime: "15 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "mobile-headlight-restoration-pricing-guide",
+      "headlight-restoration-tools-and-startup-cost",
+      "headlight-restoration-quote-template",
+      "headlight-restoration-cost-australia",
+      "how-to-get-headlight-restoration-customers",
+      "headlight-restoration-business-plan",
+      "headlight-restoration-aftercare",
+    ],
+    shortAnswer:
+      "A headlight restoration business can produce a positive job margin when the price covers materials, travel, setup, restoration time, cleanup, customer admin, rework risk, tax and overhead. Current advertised Australian prices vary widely, so there is no universal profit figure. Test one narrow two-headlight package, record the complete time and consumable cost, and calculate profit per working hour before buying more equipment or promising a cheap fixed price.",
+    keyPoints: [
+      "Profit is the selling price minus every job cost, not the cash left after buying sandpaper and coating.",
+      "Public Australian offers checked in July 2026 ranged from about AUD $99 to $350 plus GST for a pair, with different processes, inclusions, locations, warranties, and service models.",
+      "A practical beginner test may use an AUD $80-$220 planning range, but the quote must reflect the actual lens condition, process, protection, travel, weather, access, and local market.",
+      "A two-car booking at one address can improve the numbers because travel and setup are shared. A distant one-off discount job can do the opposite.",
+      "The matching launch pack includes a quote calculator, outreach scripts, intake form, on-site SOP, proof kit, customer aftercare card, safety checklist, and client emails.",
+    ],
+    body: [
+      {
+        heading: "Who this profit guide is for",
+        paragraphs: [
+          "This guide is for someone considering a small mobile headlight restoration service in Australia. You may be testing a weekend service, adding headlights to an existing detailing offer, or looking for one practical local business to start without renting a workshop.",
+          "The problem is that social posts often confuse revenue with profit. A person says they charged $150 for a job, then skips the travel, messages, setup, consumables, cleanup, equipment wear, insurance, payment fees, tax, warranty exposure, and time spent finding the customer.",
+          "The right question is not whether somebody else made money from one car. The useful question is whether your tested process, price, local buyers, and complete job time leave a sensible margin without rushing the work or making claims you cannot support.",
+        ],
+      },
+      {
+        heading: "What you are selling and who buys it",
+        paragraphs: [
+          "The starter offer is a defined cosmetic service for two suitable exterior plastic headlight lenses. It may include a condition check, careful masking, the tested restoration process, the specified protection step, cleanup, matched before-and-after photos, and written aftercare.",
+          "Likely first buyers include used-car sellers, owners of older cars, rideshare drivers, neighbours, small vehicle fleets, detailers that want a specialist add-on, mechanics that do not offer the work, and small dealers with several suitable vehicles.",
+          "Used-car sellers are a useful first lane because cloudy lenses can be visible in listing photos and the owner has a current presentation problem. The pitch is not that restoration guarantees a higher sale price. The pitch is that a suitable cosmetic restoration can improve the presentation of the agreed lenses before the next buyer inspection.",
+        ],
+      },
+      {
+        heading: "Start with the complete job cost",
+        paragraphs: [
+          "List variable costs first. Depending on the system, these can include abrasives, compound, polish, coating or sealant, masking tape, towels, applicators, gloves, cleaning products, water, waste handling, payment fees, and a fair allowance for damaged or contaminated consumables.",
+          "Then count time that happens away from the lens. Include the initial photo check, quote, booking messages, loading the vehicle, travel in both directions, setup, customer handoff, cleanup, sending result photos, aftercare, payment follow-up, and job records. Twenty minutes of restoration admin is still working time.",
+          "Add overhead that exists even when one job uses only a small amount of it. Equipment replacement, vehicle running costs, phone, software, insurance, registrations, marketing, accounting, cancellations, weather disruption, and rework all need to be recovered across paid work. Get current professional advice for your own tax, insurance, registration, and legal position.",
+        ],
+      },
+      {
+        heading: "Use contribution and hourly return, not wishful maths",
+        paragraphs: [
+          "A simple first calculation is job contribution: selling price minus the direct costs created by that booking. This shows what remains to pay for overhead, your labour, tax, future equipment, and profit. It is more useful than calling the full selling price earnings.",
+          "Next calculate the return on complete working time. Divide the amount remaining after direct job costs by every hour spent quoting, travelling, setting up, restoring, cleaning, handing over, and following up. Compare that figure with the return you need for the service to be worth continuing.",
+          "This is a validation tool, not an earnings promise. Your first permissioned practice car may be deliberately slow. Keep the record anyway. A messy first result is useful if it stops you pricing a 150-minute booking as though it were a 45-minute job.",
+        ],
+      },
+      {
+        heading: "A realistic first-job example",
+        paragraphs: [
+          "Suppose you test a normal local pair at AUD $150. Your measured consumables and payment cost are $24, and the round-trip vehicle allowance for that booking is $16. That leaves $110 before overhead, your labour, tax, equipment replacement, warranty work, and profit.",
+          "Now count complete time. You spend 15 minutes checking photos and confirming the booking, 30 minutes travelling, 15 minutes setting up, 75 minutes restoring and protecting the lenses, 15 minutes on cleanup and handoff, and 10 minutes sending photos and records. The booking used 160 minutes, or about 2.67 hours.",
+          "In this example, $110 divided by 2.67 hours is about $41 per working hour before overhead, tax, equipment replacement, warranty work, and profit. That is not a take-home rate. It is a starting diagnostic. If your real overhead allocation is $25 for the booking, $85 remains for your labour, tax, and profit.",
+          "The lesson is not that $150 is the correct price. The lesson is to measure the whole job. A closer booking, faster tested process, lower rework rate, sensible add-on, or two cars at one address can improve the result. Heavy correction, long travel, poor access, weather delays, or an unsuitable lens accepted by mistake can reduce it.",
+        ],
+      },
+      {
+        heading: "Choose a price from scope, not a competitor headline",
+        paragraphs: [
+          "Public Australian prices checked in July 2026 showed how wide the market is. Examples ranged from fixed services around AUD $99-$130 for a pair to offers around $150-$199, with more involved mobile work advertised around $350 plus GST. Those offers did not all include the same process, travel, coating, warranty, location, vehicle rules, or job time.",
+          "Use competitor prices to understand what a buyer may compare, not to copy a number. One operator may already be travelling for a full detail. Another may run a tight suburb route. Another may include a written warranty and a more involved process. Their headline price does not reveal their margin.",
+          "Your quote should state whether the price covers one lens or the pair, the condition assumed, mobile travel area, preparation, protection system, photos, aftercare, GST if applicable, weather rules, access needs, cancellation terms, and the conditions that require a new quote or a decline.",
+        ],
+      },
+      {
+        heading: "Build a small pricing ladder",
+        paragraphs: [
+          "Start with one normal local package for a suitable pair. Add a clearly priced travel zone outside the core area rather than hiding travel inside every quote. Use a condition surcharge only when the extra work is observable, explained, and approved before starting.",
+          "A two-car same-address package can improve convenience for the buyer and reduce duplicated travel and setup. Work out the saving from your real shared costs before offering the discount. Do not cut both jobs by an arbitrary percentage and hope the volume fixes it.",
+          "Dealer, mechanic, fleet, or detailer batches need their own maths. A lower per-car price may work when the vehicles are ready, suitable, close together, and paid in one transaction. It may fail when you wait for keys, move cars, handle separate approvals, or accept inconsistent lens conditions.",
+        ],
+      },
+      {
+        heading: "Get the first buyer without buying an audience",
+        paragraphs: [
+          "Restore one permissioned practice car before selling. Record the exact products, material use, total time, weather, mistakes, remaining lens limits, and matched photos. That practice record becomes the evidence for the first quote.",
+          "Build a list of 20 researched prospects. Start with suitable used-car listings, neighbours who have asked about their car, local detailers without a named headlight service, and small automotive businesses where a polite partner offer makes sense. Do not scrape personal details or spam a suburb.",
+          "A direct seller message can be: Hi Sam, I noticed the exterior headlight lenses look cloudy in the listing photos. I offer a local two-headlight cosmetic restoration with careful masking, a specified protection step, matched photos, and written aftercare. If you send two clear daylight photos, I can tell you whether they look suitable and give you a provisional quote.",
+          "Start with one buyer, one offer, and one outreach script. The goal is not to look busy. The goal is to learn whether a real buyer will accept a price that supports careful delivery.",
+        ],
+      },
+      {
+        heading: "Protect profit by declining the wrong work",
+        paragraphs: [
+          "A bad-fit job can erase several good margins. Decline or refer cracked lenses, internal condensation, electrical faults, failed bulbs, broken mounts, severe crazing, damaged reflectors, peeling previous coatings outside your tested process, and deterioration inside the assembly.",
+          "Do not sell cosmetic restoration as roadworthiness, legal compliance, a beam-performance test, a permanent repair, or a guarantee of safer night driving. Those claims create expectations beyond the service. Use an appropriate automotive professional where diagnosis, replacement, compliance, or safety assessment is required.",
+          "Confirm the expected improvement and remaining limits in writing. Use intake photos, matched proof, the product-specific aftercare card, and a record of what was applied. A clean decline is cheaper than guessing on a lens you do not understand.",
+        ],
+      },
+      {
+        heading: "Know when the model is working",
+        paragraphs: [
+          "After five to ten paid jobs, review the median selling price, complete time, direct cost, travel distance, rework, quote acceptance, cancellations, source of each customer, and pack or script that helped win the booking. One unusually easy car should not set the plan.",
+          "The model is becoming useful when buyers accept a clearly defined package, your delivery time is predictable, the price covers the complete work, result quality is consistent, unsuitable jobs are filtered early, and customers understand the aftercare and limits.",
+          "If buyers only accept a price that leaves no room for careful work, change the route, buyer, package, proof, or service. Do not rescue weak maths by skipping protection, rushing preparation, overstating the result, or pretending your own time is free.",
+          "Want the quote calculator, outreach scripts, intake form, on-site SOP, safety checklist, proof kit, customer aftercare card, and client emails? Open the Mobile Headlight Restoration launch pack. The article gives you the maths. The pack gives you the working files.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: validate one local pair before scaling",
+      steps: [
+        "Restore one permissioned practice car using the exact product system you plan to offer.",
+        "Record every consumable, minute of admin, travel, setup, restoration, cleanup, handoff, and follow-up.",
+        "Define a normal local two-headlight package with inclusions, exclusions, travel radius, weather rule, and provisional price.",
+        "List 20 suitable prospects, including used-car sellers, neighbours, detailers, mechanics, or small dealers.",
+        "Send five specific photo-check messages and record replies, objections, quotes, and bookings.",
+        "Deliver the first suitable paid job without rushing and complete the written aftercare card.",
+        "Calculate job contribution and return on complete working time before setting the second price.",
+        "Repeat for five to ten jobs, then review the median result rather than the best one.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one tested restoration and protection system.",
+      "Restore one permissioned practice pair and record the complete time.",
+      "List direct consumables and a fair vehicle cost for the job.",
+      "Write down recurring overhead that paid bookings need to recover.",
+      "Set one normal local package and one clear travel boundary.",
+      "Create intake rules for cracks, internal moisture, electrical faults, severe damage, and previous coatings.",
+      "Take honest matched before-and-after photos with separate permission for public use.",
+      "Build a list of 20 specific local prospects.",
+      "Send the first five photo-check messages.",
+      "Calculate the first paid job before buying more tools.",
+      "Open the Mobile Headlight Restoration launch pack and adapt the quote, outreach, intake, proof, SOP, safety, and aftercare files.",
+    ],
+    commonMistakes: [
+      "Calling revenue profit.",
+      "Counting only the minutes spent sanding and polishing.",
+      "Copying the cheapest local price without comparing scope or route economics.",
+      "Offering distant travel or heavy correction inside one cheap fixed price.",
+      "Buying a full setup before completing one measured practice job.",
+      "Discounting two-car or dealer work without calculating the actual shared saving.",
+      "Ignoring equipment replacement, insurance, admin, cancellations, weather, rework, payment fees, tax, and customer acquisition.",
+      "Accepting unsuitable lenses because the day is quiet.",
+      "Promising like-new, permanent, roadworthy, legally compliant, or guaranteed safety results.",
+    ],
+    faqs: [
+      {
+        question: "Is a headlight restoration business profitable?",
+        answer:
+          "It can produce a positive job margin when your selling price covers direct costs, complete working time, overhead, tax, equipment replacement, and rework risk. Profit depends on your process, price, route, demand, job fit, and delivery quality, so measure several paid jobs before drawing a conclusion.",
+      },
+      {
+        question: "How much can I charge for headlight restoration in Australia?",
+        answer:
+          "Public Australian offers checked in July 2026 ranged from roughly AUD $99 to $350 plus GST for a pair, but the inclusions, process, location, vehicle rules, travel, protection, warranty, and condition varied. A new operator should quote from the real job rather than copy the top or bottom number.",
+      },
+      {
+        question: "What is the profit on a $150 headlight restoration?",
+        answer:
+          "There is no universal figure. Subtract measured consumables, payment fees, travel, and other direct costs first. Then allow for the complete working time, overhead, equipment replacement, tax, warranty exposure, and rework. A $150 sale can be sensible for one route and weak for another.",
+      },
+      {
+        question: "How many jobs should I test before deciding?",
+        answer:
+          "Start with one permissioned practice car, then review five to ten suitable paid jobs. Track the median selling price, complete time, direct cost, travel, rework, quote acceptance, cancellations, and customer source. A single easy or difficult job can distort the picture.",
+      },
+      {
+        question: "Who is the best first customer?",
+        answer:
+          "Used-car sellers are a practical first lane because the cloudy lenses may be visible in current listing photos. Neighbours, rideshare drivers, detailer partners, mechanics, small dealers, and local fleets can also fit when the lenses are suitable and the offer is specific.",
+      },
+      {
+        question: "Should I offer a cheap launch price?",
+        answer:
+          "Only after measuring a practice job and defining the scope. A clearly labelled starter rate can help validate demand, but it still needs to cover the work you agreed to do. Do not use a discount to hide an untested process or vague exclusions.",
+      },
+      {
+        question: "Do I need a workshop?",
+        answer:
+          "Not necessarily for a mobile test, but you do need suitable access, weather, lighting, product conditions, safe work practices, cleanup, and a defined service area. Check the current rules, insurance, registrations, and permissions that apply to your location and setup.",
+      },
+    ],
+    disclaimer:
+      "Prices were reviewed from publicly listed Australian service offers on 29 July 2026 and can change. The calculations are examples, not earnings forecasts. This is practical business education, not automotive, safety, roadworthiness, legal, insurance, tax, employment, or financial advice. Follow current product instructions, check local requirements, obtain appropriate professional advice, and decline work outside cosmetic exterior restoration.",
+  },
+  {
     slug: "headlight-restoration-cost-australia",
     title: "How Much Does Headlight Restoration Cost in Australia?",
     seoTitle: "Headlight Restoration Cost Australia (2026 Price Guide)",
@@ -41,6 +233,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "14 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "is-headlight-restoration-business-profitable",
       "mobile-headlight-restoration-pricing-guide",
       "how-to-start-a-mobile-headlight-restoration-business",
       "headlight-restoration-quote-template",
@@ -210,7 +403,7 @@ export const blogPosts: BlogPost[] = [
       "Use this practical headlight restoration aftercare guide to handle curing, washing, cleaning, maintenance, customer handoff, and realistic result expectations.",
     category: "Local Service",
     publishedAt: "2026-07-27",
-    updatedAt: "2026-07-27",
+    updatedAt: "2026-07-29",
     readingTime: "14 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
@@ -230,7 +423,7 @@ export const blogPosts: BlogPost[] = [
       "Tell the customer what was applied, when it was applied, what to avoid, and when normal use or washing can resume.",
       "After the stated cure, use gentle cleaning that is compatible with the applied system and avoid unapproved abrasives, solvents, compounds, or aggressive chemicals.",
       "A normal mobile two-headlight service may be planned around AUD $80-$220, with written aftercare included rather than sold as vague premium protection.",
-      "The matching launch pack gives an operator the intake, quote calculator, on-site SOP, client emails, proof kit, safety checklist, and outreach files needed to make the handoff repeatable.",
+      "The matching launch pack now includes a dedicated customer aftercare card alongside the intake, quote calculator, on-site SOP, client emails, proof kit, safety checklist, and outreach files.",
     ],
     body: [
       {
@@ -302,7 +495,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Aftercare does not fix a cracked lens, internal condensation, electrical fault, failed bulb, severe crazing, structural damage, unsafe assembly, poor previous repair, or a result outside the capability of the selected system. These conditions need a proper inspection and may require replacement or an appropriate automotive professional.",
           "Do not tell a customer that a cosmetic restoration proves legal compliance, roadworthiness, beam performance, safety, or suitability for night driving. If those questions matter, refer them to the relevant qualified professional and local requirements.",
-          "Want the quote calculator, intake form, on-site SOP, client emails, safety checklist, proof kit, and outreach scripts? Open the Mobile Headlight Restoration launch pack. Customise the working files to the product system you have tested and send the aftercare at every handoff.",
+          "Want the copyable customer aftercare card, quote calculator, intake form, on-site SOP, client emails, safety checklist, proof kit, and outreach scripts? Open the Mobile Headlight Restoration launch pack. Customise the working files to the product system you have tested and send the aftercare card at every handoff.",
         ],
       },
     ],
@@ -329,7 +522,7 @@ export const blogPosts: BlogPost[] = [
       "Create a photo-and-contact process for a finish disturbed during cure.",
       "Write clear limits for cracks, internal moisture, severe damage, roadworthiness, safety, and permanent-result claims.",
       "Build a list of 20 suitable local prospects and send the first five photo-check messages.",
-      "Open the Mobile Headlight Restoration launch pack and adapt its client emails, intake, SOP, quote, and proof files.",
+      "Open the Mobile Headlight Restoration launch pack and adapt its customer aftercare card, client emails, intake, SOP, quote, and proof files.",
     ],
     commonMistakes: [
       "Giving every customer the same cure or washing time regardless of the product system.",
@@ -4062,15 +4255,16 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-a-mobile-headlight-restoration-business",
     title: "How to Start a Mobile Headlight Restoration Business",
-    seoTitle: "How to Start a Headlight Restoration Business (2026)",
+    seoTitle: "Start a Headlight Restoration Business: 2026 Guide",
     description:
-      "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
+      "Start a mobile headlight restoration business with realistic costs, pricing, proof, safety limits, and a practical plan to win your first local customer.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-28",
+    updatedAt: "2026-07-29",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "is-headlight-restoration-business-profitable",
       "headlight-restoration-cost-australia",
       "headlight-restoration-aftercare",
       "headlight-restoration-business-plan",
@@ -4129,6 +4323,7 @@ export const blogPosts: BlogPost[] = [
           "A sensible pricing ladder might include a single-car restoration, a two-car neighbour bundle, a dealer batch price, and a travel add-on outside your core area. Keep the menu short enough that the buyer can choose quickly.",
           "As a starting point, a single two-headlight job might sit around $80-$220, with higher quotes for travel, heavier oxidation, larger vehicles, awkward access, or extra prep time. Dealer or fleet batches may use a lower per-car rate because setup and travel are shared.",
           "If pricing is the main question, use the dedicated Mobile Headlight Restoration Pricing Guide next. It breaks the offer into single-car, two-car, dealer batch, travel, and unsuitable-lens scenarios before you open the quote calculator.",
+          "If profit is the main question, use the headlight restoration profitability guide to count consumables, complete working time, travel, overhead, and rework before treating the first sale as proof of a viable service.",
           "Price from the real job, not from a viral post. Count sanding discs, polish, sealant, tape, towels, travel, weather risk, setup, cleanup, customer messages, and the time spent taking proof photos.",
         ],
       },
@@ -4169,7 +4364,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "After one clean job, the next move is not a rebrand. It is repetition. Use the same proof format, same quote checklist, same scope boundaries, and same follow-up message for the next 20 prospects.",
           "Add simple upsells only when they fit: second car at the same address, neighbour bundle, dealer batch day, or a basic exterior quick-clean partner offer with a detailer. Do not pile on services before the core job is repeatable.",
-          "If you want the practical version, open the Mobile Headlight Restoration launch pack. It gives you the quote calculator, outreach scripts, safety checklist, intake form, proof kit, prompts, and client email templates.",
+          "If you want the practical version, open the Mobile Headlight Restoration launch pack. It gives you the quote calculator, outreach scripts, safety checklist, intake form, proof kit, customer aftercare card, prompts, and client email templates.",
         ],
       },
     ],
@@ -4248,6 +4443,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "11 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "is-headlight-restoration-business-profitable",
       "headlight-restoration-cost-australia",
       "headlight-restoration-aftercare",
       "headlight-restoration-quote-template",

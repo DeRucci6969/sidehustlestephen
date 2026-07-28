@@ -79,15 +79,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ...relatedPacks,
     ...popularPacks.filter((pack) => !post.relatedPackSlugs.includes(pack.slug)),
   ].slice(0, 3);
-  const topPackCta = post.slug === "how-to-start-a-mobile-headlight-restoration-business"
-    ? {
-        copy: "Open the free cloudy-headlight lead check, then unlock the quote calculator, outreach scripts, on-site SOP, safety checklist, and the rest of the working files.",
-        label: "Open the free lead check",
-      }
-    : {
-        copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
-        label: "Open free preview",
-      };
+  const topPackCta =
+    post.slug === "how-to-start-a-mobile-headlight-restoration-business"
+      ? {
+          copy: "Open the free cloudy-headlight lead check, then unlock the quote calculator, outreach scripts, on-site SOP, safety checklist, and the rest of the working files.",
+          label: "Open the free lead check",
+        }
+      : post.slug === "is-headlight-restoration-business-profitable"
+        ? {
+            copy: "Check the free cloudy-headlight lead screen, then use the member quote calculator to test material cost, travel, package price, and job margin.",
+            label: "Open the pricing pack",
+          }
+        : {
+            copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
+            label: "Open free preview",
+          };
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

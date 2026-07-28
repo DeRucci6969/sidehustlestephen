@@ -649,6 +649,17 @@
     "bytes": 9031
   },
   {
+    "id": "asset-headlight-aftercare",
+    "packSlug": "mobile-headlight-restoration",
+    "packTitle": "Mobile Headlight Restoration",
+    "title": "Customer Aftercare Card",
+    "type": "DOCX",
+    "description": "Copyable customer handoff card for the applied product, cure restrictions, first safe wash, cleaning limits, result notes, and contact route.",
+    "path": "content/member-assets/mobile-headlight-restoration/customer-aftercare-card.docx",
+    "filename": "customer-aftercare-card.docx",
+    "bytes": 8361
+  },
+  {
     "id": "asset-headlight-safety",
     "packSlug": "mobile-headlight-restoration",
     "packTitle": "Mobile Headlight Restoration",

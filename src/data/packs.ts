@@ -242,7 +242,7 @@ const basePacks: BusinessPack[] = [
     hook: "Cloudy headlights are a small fix with obvious before-and-after proof.",
     seoTitle: "Mobile Headlight Restoration Pack | Pricing and Scripts",
     seoDescription:
-      "Start a mobile headlight restoration service with a pricing calculator, outreach scripts, safety checklist, intake form, proof kit, and AI prompts.",
+      "Start a mobile headlight restoration service with a pricing calculator, outreach scripts, safety checklist, aftercare card, proof kit, and delivery SOP.",
     category: "Local Service",
     buyer: "Car owners, used-car sellers, landlords with fleets, and local dealers",
     startupCost: "$51-$150",
@@ -254,11 +254,12 @@ const basePacks: BusinessPack[] = [
     caveat: "Do not promise like-new results, roadworthiness, legal compliance, or permanent restoration. Some lenses need replacement.",
     popularityScore: 93,
     publishedAt: "2026-06-28",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-07-29",
     assets: [
       { id: "asset-headlight-outreach", title: "Headlight Outreach Scripts", type: "DOCX", description: "Neighbour note, marketplace, dealer, DM, email, call, and follow-up scripts built around cloudy-headlight before-and-after proof." },
       { id: "asset-headlight-pricing", title: "Headlight Restoration Quote Calculator", type: "XLSX", description: "Single-car, two-car, dealer batch, add-on, travel, material cost, and profit-check pricing workbook." },
       { id: "asset-headlight-delivery-sop", title: "On-Site Delivery SOP", type: "DOCX", description: "A step-by-step job workflow for condition checks, setup, paint protection, restoration, QA, client handoff, aftercare, proof capture, and job records." },
+      { id: "asset-headlight-aftercare", title: "Customer Aftercare Card", type: "DOCX", description: "Copyable customer handoff card for the applied product, cure restrictions, first safe wash, cleaning limits, result notes, and contact route." },
       { id: "asset-headlight-safety", title: "Restoration Safety Checklist", type: "PDF", description: "Pre-job checklist for lens condition, masking, sanding grit sequence, UV sealant, PPE, weather, paint protection, and result boundaries." },
       { id: "asset-headlight-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for photo-based lead scoring, quote notes, marketplace posts, follow-ups, safety language, and handoff copy." },
       { id: "asset-headlight-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for car make/model, lens condition, photos, location, access, weather window, expectations, and approval boundaries." },
@@ -956,7 +957,7 @@ export const packPageDetails: Record<string, PackPageDetail> = {
         "Proof pitch: send a matched before/after sample and quote a fixed pair-of-headlights price with clear result and weather boundaries.",
       ],
       lockedAssetTease:
-        "Members get the outreach scripts, quote calculator, on-site delivery SOP, restoration safety checklist, proof kit, prompt pack, intake form, client emails, FAQs, and automation prompts.",
+        "Members get the outreach scripts, quote calculator, on-site delivery SOP, customer aftercare card, restoration safety checklist, proof kit, prompt pack, intake form, client emails, FAQs, and automation prompts.",
     },
     whyDetails: [
       "The sales proof is obvious. A cloudy headlight beside a restored headlight makes the value visible without a long explanation.",
@@ -1580,6 +1581,8 @@ export const memberAssetDetails: Record<string, string> = {
     "An XLSX quote calculator with single-car, two-car, dealer batch, travel, material cost, lens-condition, quote builder, job profit, and referral tracking sheets.",
   "asset-headlight-delivery-sop":
     "A DOCX on-site delivery SOP covering lead acceptance, arrival checks, paint and trim protection, product-led restoration steps, stop conditions, QA, client handoff, aftercare, proof capture, job records, and a copyable completion message.",
+  "asset-headlight-aftercare":
+    "A DOCX customer aftercare card with product and application fields, exact cure restrictions, first safe wash, cleaning limits, remaining result notes, weather interruption copy, and a handoff checklist.",
   "asset-headlight-safety":
     "A PDF restoration checklist for lens condition, masking, grit sequence, polishing, UV sealant, PPE, weather, paint protection, before/after photos, and no-like-new-result boundaries.",
   "asset-headlight-prompts":
