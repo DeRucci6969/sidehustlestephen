@@ -30,6 +30,179 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-cost-australia",
+    title: "How Much Does Headlight Restoration Cost in Australia?",
+    seoTitle: "Headlight Restoration Cost Australia (2026 Price Guide)",
+    description:
+      "Compare headlight restoration costs in Australia for DIY kits, mobile services, heavier correction, and replacement, with a practical quote checklist.",
+    category: "Pricing",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "mobile-headlight-restoration-pricing-guide",
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "headlight-restoration-quote-template",
+      "headlight-restoration-tools-and-startup-cost",
+      "how-long-does-headlight-restoration-last",
+      "headlight-restoration-aftercare",
+      "how-to-get-headlight-restoration-customers",
+    ],
+    shortAnswer:
+      "In Australia, a DIY headlight restoration kit can cost roughly AUD $30-$100, while published professional mobile services commonly start around $100 and can reach $200-$350 or more for a pair, depending on the lens condition, process, protection, travel, and warranty. Those are planning ranges, not a universal quote. Cracks, internal moisture, electrical faults, failed reflectors, or damage inside the assembly may require diagnosis, repair, or replacement instead of cosmetic restoration.",
+    keyPoints: [
+      "Ask whether the quote covers one headlight or the pair, mobile travel, masking, correction, UV protection, cleanup, photos, aftercare, GST, and any warranty.",
+      "A low price is not automatically poor value, and a high price is not automatically a better process. Compare the actual steps, product system, scope limits, and proof.",
+      "DIY kits can be a sensible option for suitable exterior haze, but the real cost includes preparation, protective equipment, time, weather, and the risk of an uneven result.",
+      "Restoration is not the right fix for every fault. Internal condensation, cracks, electrical problems, severe crazing, or damaged assemblies need appropriate assessment.",
+      "If you want to sell the service, the matching launch pack includes a quote calculator, intake form, on-site SOP, safety checklist, proof kit, outreach scripts, and client emails.",
+    ],
+    body: [
+      {
+        heading: "Who this price guide is for",
+        paragraphs: [
+          "This guide is for an Australian car owner comparing a DIY kit, a mobile restoration service, and replacement. It is also useful for a new operator who wants to understand what a buyer sees before sending the first quote.",
+          "The buyer's problem is usually simple: the plastic lens looks cloudy, yellow, dull, or tired. The buying decision is less simple. Two quotes can use the same words while including different preparation, correction, protection, travel, aftercare, and warranty terms.",
+          "Use the ranges below as a starting point for questions, not a promise about your vehicle. The right option depends on whether the deterioration is on the exterior surface, whether the assembly has other faults, and whether the proposed process is suitable for that lens.",
+        ],
+      },
+      {
+        heading: "A practical Australian headlight restoration cost range",
+        paragraphs: [
+          "For a DIY attempt, budget roughly AUD $30-$100 for a retail kit. Some kits are designed for hand application. Others need a drill, extra abrasives, masking supplies, towels, water, protective equipment, or a separate coating, which raises the complete job cost.",
+          "For a professional mobile service, a useful planning range is around AUD $100-$350 or more for a pair. Published Australian offers checked in July 2026 included entry services close to $100, mid-range mobile packages around $199, and more involved services around $350 plus GST. Prices, inclusions, service areas, and promotions can change.",
+          "The range is wide because headlight restoration is not one standard package. A quick clean-and-coat service, a multi-stage correction, and a heavily weathered lens requiring more preparation are different jobs. A call-out fee, regional travel, difficult access, vehicle size, coating system, and written warranty can also change the total.",
+        ],
+      },
+      {
+        heading: "What should be included in a professional quote",
+        paragraphs: [
+          "Start by confirming whether the price is for one headlight or both. Then ask whether it includes an inspection, masking around paint and trim, the stated correction process, cleaning between steps, the protection system, cleanup, matched result photos, and written aftercare.",
+          "Ask the operator to name the product system or at least explain the protection step and its current cure requirements. There is no useful universal answer such as every coating is ready for water in one hour. The correct instruction comes from the actual system used and the conditions on the day.",
+          "If a warranty is offered, read what it covers, how long it lasts, what aftercare is required, and what is excluded. A warranty should be written and understandable. It should not be treated as proof that every lens will restore perfectly or stay clear permanently.",
+        ],
+      },
+      {
+        heading: "Why one car can cost more than another",
+        paragraphs: [
+          "Light exterior haze on an accessible plastic lens may need less time than heavy oxidation, failed coating, previous uneven sanding, deep pitting, difficult shapes, or contamination. More correction time, more consumables, and a more involved protection system can justify a higher quote.",
+          "Mobile work also has travel and site conditions. The operator may need suitable shade, dry weather, safe access, space around the vehicle, power or water, and enough time for the documented application and cure process. A booking that looks simple in one photo can become unsuitable when inspected.",
+          "Batch work can reduce the per-car price because travel and setup are shared. A used-car seller, small dealer, fleet, or household with two suitable cars may receive a different rate from a one-off booking outside the normal service area.",
+        ],
+      },
+      {
+        heading: "DIY kit versus professional restoration",
+        paragraphs: [
+          "A DIY kit can make sense when the issue appears to be suitable exterior deterioration, the instructions are clear, the weather is appropriate, and the owner is comfortable protecting nearby paint and following every step. The cash cost can be lower, but allow for preparation, cleanup, cure time, and the possibility of buying extra supplies.",
+          "Professional restoration may suit an owner who wants the operator to inspect the lens, bring the system, manage the steps, document the result, and provide written care instructions. The value is the complete delivery, not merely the bottle or abrasive used.",
+          "Do not use toothpaste, an unknown solvent, an aggressive abrasive, or a random clear product because a short video made it look easy. A temporary change in appearance is not the same as a tested restoration and protection process. Follow current product instructions and stop if the lens or surrounding materials react unexpectedly.",
+        ],
+      },
+      {
+        heading: "When replacement or diagnosis is the better spend",
+        paragraphs: [
+          "Cosmetic exterior restoration does not repair a cracked lens, damaged housing, broken mounting point, failed bulb, wiring fault, reflector problem, severe crazing, internal condensation, or deterioration on the inside of the assembly. Those issues may need an automotive professional, specialist repair, or replacement.",
+          "Ask for an inspection before paying for restoration if the lens is cracked, the light has water inside, the beam behaves abnormally, the assembly is loose, or a previous repair has failed. A responsible operator should be willing to decline work outside the service scope.",
+          "Do not treat a clearer-looking lens as proof of roadworthiness, legal compliance, beam performance, or night-driving safety. Those questions sit outside a cosmetic quote and may require appropriate testing or qualified assessment under local requirements.",
+        ],
+      },
+      {
+        heading: "How a new operator should price the first job",
+        paragraphs: [
+          "Start with one buyer, one offer, and one tested process. A narrow starter offer can cover a suitable pair of exterior plastic lenses, local mobile travel, inspection, masking, the documented restoration and protection process, cleanup, matched photos, and written aftercare.",
+          "Build the quote from materials, consumables, travel, setup, hands-on time, cleanup, customer messages, weather risk, payment cost, rework allowance, and the skill required. Keep a private hourly floor, then present the buyer with a clear package price rather than a messy calculation.",
+          "A lean operator may test a normal local pair around AUD $80-$220 after completing a permissioned practice job, while recognising that published market offers can sit outside that range. Do not copy the cheapest advertisement. Record the real time and material cost, then adjust the next quote from evidence.",
+        ],
+      },
+      {
+        heading: "Get the first buyer without making slippery claims",
+        paragraphs: [
+          "Restore one permissioned practice car and take matched photos from the same distance, angle, and lighting. Label it as practice work. Write down the product system, conditions, time, material cost, finish, aftercare, and anything that went wrong.",
+          "Build a list of 20 suitable prospects such as used-car sellers, neighbours, rideshare drivers, small dealers, detailers, or mechanics that do not offer the service. Offer a photo check before quoting and confirm the final scope after an in-person inspection.",
+          "A direct message can be: Hi Sam, I noticed the exterior lenses look cloudy in the listing photos. I offer a local two-headlight restoration with inspection, careful masking, the specified protection step, matched photos, and written aftercare. Send two daylight photos if you want a provisional price.",
+        ],
+      },
+      {
+        heading: "Use this quote comparison before paying",
+        paragraphs: [
+          "Put each option on one page. Compare total price, one lens or the pair, mobile or workshop delivery, travel and GST, preparation, correction steps, protection system, cure instructions, photos, aftercare, warranty terms, exclusions, and what happens if the lens is unsuitable.",
+          "Choose the clearest suitable scope, not the loudest promise. Ask for clarification if a quote says premium coating, permanent result, roadworthy, like new, or guaranteed visibility without explaining the process and limits.",
+          "Want the quote calculator, intake form, on-site SOP, client emails, safety checklist, proof kit, and outreach scripts? Open the Mobile Headlight Restoration launch pack. The article gives you the buying and pricing logic. The pack gives you the working files.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: compare three options for one cloudy-headlight pair",
+      steps: [
+        "Take two clear daylight photos of the exterior lenses and note any cracks, moisture, looseness, failed lights, or previous repairs.",
+        "Price the complete DIY route, including the kit, tape, towels, protective equipment, extra supplies, time, weather, and cure requirements.",
+        "Request two professional quotes that both state whether the price covers the pair, travel, GST, inspection, correction, protection, aftercare, and warranty.",
+        "Ask each operator what conditions would make them decline restoration and recommend diagnosis, repair, or replacement.",
+        "Compare the actual scope and limits rather than choosing from the headline price alone.",
+        "If proceeding professionally, confirm the final quote after the operator inspects the vehicle and before work starts.",
+        "At handoff, collect the applied product information, finish time, cure restrictions, first safe wash time, result photos, and contact route.",
+        "If starting the service, repeat the same comparison from the seller's side and make your own quote easier to understand than the alternatives.",
+      ],
+    },
+    firstActionChecklist: [
+      "Photograph both exterior lenses in daylight from matching angles.",
+      "Check for cracks, internal moisture, loose assemblies, failed lights, or obvious previous repairs.",
+      "Decide whether you are comparing DIY, mobile service, workshop service, diagnosis, repair, or replacement.",
+      "Ask whether each professional price covers one lens or the pair.",
+      "Confirm travel, GST, preparation, correction, protection, cleanup, photos, aftercare, and warranty terms.",
+      "Ask for the current cure and water-exposure instructions for the actual product system.",
+      "Get the final scope in writing before work begins.",
+      "Avoid offers that promise permanent results, roadworthiness, legal compliance, or a perfect outcome for every lens.",
+      "If selling the service, complete one permissioned practice job and record the real delivery cost.",
+      "Open the Mobile Headlight Restoration launch pack and customise the quote, intake, safety, delivery, and outreach files.",
+    ],
+    commonMistakes: [
+      "Comparing a one-headlight price with a two-headlight package.",
+      "Choosing only by price without checking the correction and protection steps.",
+      "Assuming every cloudy appearance is suitable exterior oxidation.",
+      "Ignoring travel, GST, call-out fees, extra supplies, cure time, and site conditions.",
+      "Treating a verbal warranty as a clear written scope.",
+      "Using a universal cure or wash time instead of the applied product instructions.",
+      "Expecting cosmetic restoration to fix cracks, internal moisture, electrical faults, or damaged assemblies.",
+      "Promising or accepting permanent, like-new, roadworthy, or guaranteed night-visibility outcomes.",
+    ],
+    faqs: [
+      {
+        question: "How much does headlight restoration cost in Australia?",
+        answer:
+          "A DIY kit can cost roughly AUD $30-$100. Published professional mobile services commonly start around $100 and can reach $200-$350 or more for a pair, depending on condition, process, protection, travel, GST, and warranty. Confirm the current written quote and inclusions.",
+      },
+      {
+        question: "Is professional headlight restoration worth it?",
+        answer:
+          "It can be worthwhile when the deterioration is suitable for exterior restoration and the quote includes a clear process, protection step, aftercare, and honest limits. It is not the right spend for every cracked, internally wet, electrically faulty, or severely damaged assembly.",
+      },
+      {
+        question: "How much does a DIY headlight restoration kit cost?",
+        answer:
+          "A practical Australian retail planning range is around AUD $30-$100 for the kit itself. Add any required drill, abrasives, tape, towels, protective equipment, coating, cleanup supplies, and your time before comparing it with a professional quote.",
+      },
+      {
+        question: "Does the price usually cover both headlights?",
+        answer:
+          "Many services advertise a pair, but some price per headlight or add travel, GST, heavy-correction, or call-out costs. Ask for the number of lenses and the complete total in writing.",
+      },
+      {
+        question: "When should a headlight be replaced instead of restored?",
+        answer:
+          "Replacement, repair, or qualified diagnosis may be more appropriate for cracks, damaged housings, broken mounts, internal condensation, electrical faults, failed reflectors, severe crazing, or deterioration inside the assembly.",
+      },
+      {
+        question: "What should a new mobile operator charge?",
+        answer:
+          "After a permissioned practice job, a lean operator might test a normal local pair around AUD $80-$220, then adjust for the real condition, materials, travel, setup, weather, process, protection, time, and local market. Use a clear package and avoid copying a competitor's headline price.",
+      },
+    ],
+    disclaimer:
+      "Prices were researched from publicly listed Australian retail and service offers on 28 July 2026 and can change. This guide is practical buying and business education, not automotive, safety, legal, roadworthiness, insurance, tax, or financial advice. Follow current product instructions and use an appropriate automotive professional for faults outside cosmetic exterior restoration.",
+  },
+  {
     slug: "headlight-restoration-aftercare",
     title: "Headlight Restoration Aftercare: A Practical Customer Guide",
     seoTitle: "Headlight Restoration Aftercare Guide (2026)",
@@ -41,6 +214,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "14 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-cost-australia",
       "how-long-does-headlight-restoration-last",
       "how-to-start-a-mobile-headlight-restoration-business",
       "headlight-restoration-business-plan",
@@ -3893,10 +4067,11 @@ export const blogPosts: BlogPost[] = [
       "Learn how to start a headlight restoration business with a lean tool list, realistic pricing, safety boundaries, proof photos, and a first-client plan.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-27",
+    updatedAt: "2026-07-28",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-cost-australia",
       "headlight-restoration-aftercare",
       "headlight-restoration-business-plan",
       "how-long-does-headlight-restoration-last",
@@ -4069,10 +4244,11 @@ export const blogPosts: BlogPost[] = [
       "A practical pricing guide for mobile headlight restoration with starter packages, quote math, dealer batch pricing, travel add-ons, exclusions, and first-client rules.",
     category: "Pricing",
     publishedAt: "2026-07-09",
-    updatedAt: "2026-07-27",
+    updatedAt: "2026-07-28",
     readingTime: "11 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-cost-australia",
       "headlight-restoration-aftercare",
       "headlight-restoration-quote-template",
       "how-to-get-headlight-restoration-customers",
