@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   return {
     title,
     description,
+    robots: result.packs.length < 3 ? { index: false, follow: true } : undefined,
     alternates: {
       canonical: `/packs/categories/${result.category.slug}`,
     },
@@ -130,7 +131,7 @@ export default async function PackCategoryPage({ params }: { params: Promise<{ c
         </section>
         <section className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {result.packs.map((pack) => (
-            <PackCard key={pack.slug} pack={pack} featured={pack.featured} />
+            <PackCard key={pack.slug} pack={pack} featured={pack.featured} headingLevel="h2" />
           ))}
         </section>
       </main>

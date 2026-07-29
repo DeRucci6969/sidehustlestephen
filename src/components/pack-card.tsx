@@ -2,7 +2,17 @@ import Link from "next/link";
 import { ArrowUpRight, Clock3, LockKeyhole, Target, WalletCards } from "lucide-react";
 import type { BusinessPack } from "@/data/packs";
 
-export function PackCard({ pack, featured = false }: { pack: BusinessPack; featured?: boolean }) {
+export function PackCard({
+  pack,
+  featured = false,
+  headingLevel = "h3",
+}: {
+  pack: BusinessPack;
+  featured?: boolean;
+  headingLevel?: "h2" | "h3";
+}) {
+  const Heading = headingLevel;
+
   return (
     <Link
       href={`/packs/${pack.slug}`}
@@ -25,7 +35,7 @@ export function PackCard({ pack, featured = false }: { pack: BusinessPack; featu
 
         <div className="dark-pack-panel rounded-lg p-4 sm:p-5">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Launch pack</p>
-          <h3 className="mt-3 break-words text-2xl font-semibold leading-[1.03] tracking-normal text-white sm:text-3xl sm:leading-[1.02]">{pack.title}</h3>
+          <Heading className="mt-3 break-words text-2xl font-semibold leading-[1.03] tracking-normal text-white sm:text-3xl sm:leading-[1.02]">{pack.title}</Heading>
           <p className="mt-4 min-h-12 text-sm leading-6 text-white/70">{pack.hook}</p>
         </div>
 

@@ -31,10 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.url}${route.path}`,
       lastModified: route.lastModified,
     })),
-    ...packCategories.map((category) => ({
-      url: `${siteConfig.url}/packs/categories/${category.slug}`,
-      lastModified: archiveUpdatedAt,
-    })),
+    ...packCategories
+      .filter((category) => packs.filter((pack) => pack.category === category.name).length >= 3)
+      .map((category) => ({
+        url: `${siteConfig.url}/packs/categories/${category.slug}`,
+        lastModified: archiveUpdatedAt,
+      })),
     ...packs.map((pack) => ({
       url: `${siteConfig.url}/packs/${pack.slug}`,
       lastModified: new Date(pack.updatedAt ?? pack.publishedAt),
