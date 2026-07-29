@@ -85,6 +85,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           copy: "Open the free cloudy-headlight lead check, then unlock the quote calculator, outreach scripts, on-site SOP, customer aftercare card, safety checklist, and the rest of the working files.",
           label: "Open the free lead check",
         }
+      : post.slug === "headlight-restoration-vs-replacement"
+        ? {
+            copy: "Use the free cloudy-headlight lead screen to filter obvious poor-fit jobs, then unlock the intake form, quote calculator, delivery SOP, and aftercare files.",
+            label: "Screen a lead",
+          }
       : post.slug === "is-headlight-restoration-business-profitable"
         ? {
             copy: "Check the free cloudy-headlight lead screen, then use the member quote calculator to test material cost, travel, package price, and job margin.",

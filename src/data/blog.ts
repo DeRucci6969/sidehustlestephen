@@ -30,6 +30,195 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "headlight-restoration-vs-replacement",
+    title: "Headlight Restoration vs Replacement: Which Is Right?",
+    seoTitle: "Headlight Restoration vs Replacement: 2026 Guide",
+    description:
+      "Compare headlight restoration vs replacement, learn which lens problems suit each option, and use a practical photo check before quoting the work.",
+    category: "Local Service",
+    publishedAt: "2026-07-30",
+    updatedAt: "2026-07-30",
+    readingTime: "15 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "headlight-restoration-cost-australia",
+      "is-headlight-restoration-business-profitable",
+      "headlight-restoration-intake-form-template",
+      "headlight-restoration-quote-template",
+      "how-long-does-headlight-restoration-last",
+      "headlight-restoration-aftercare",
+      "headlight-restoration-tools-and-startup-cost",
+    ],
+    shortAnswer:
+      "Restoration can suit exterior yellowing, haze, dullness, and light surface damage on a sound plastic lens. Replacement, repair, or qualified diagnosis is usually the safer recommendation when there are cracks, broken mounts, internal moisture, electrical faults, failed reflectors, serious crazing, or damage inside the assembly. Do not decide from one distant photo. Screen the condition, explain the cosmetic limits, and quote only the work your tested process can reasonably address.",
+    keyPoints: [
+      "Restoration treats suitable exterior lens deterioration. It does not repair every fault inside a headlight assembly.",
+      "A four-photo check can filter obvious cracks, condensation, broken mounts, failed lights, and previous coating damage before travel.",
+      "Published Australian restoration prices reviewed in July 2026 varied from about AUD $75 per light to $350 plus GST for a pair, with different processes, travel, protection, and warranties.",
+      "Replacement cost varies sharply by vehicle, assembly type, parts choice, labour, calibration, and availability. Get a vehicle-specific written quote.",
+      "The matching launch pack includes the intake form, quote calculator, on-site SOP, proof kit, safety checklist, aftercare card, outreach scripts, and client emails.",
+    ],
+    body: [
+      {
+        heading: "Who this comparison is for",
+        paragraphs: [
+          "This guide is for a new mobile headlight restoration operator who needs to answer a buyer's first serious question: can you restore these headlights, or do they need repair or replacement? It is also useful for an Australian car owner comparing the available options.",
+          "The practical buyer is often a used-car seller, an owner of an older daily driver, a rideshare driver, a detailer with a referral, or a small dealer with one visibly cloudy vehicle. They do not need a lecture about plastics. They need a clear next step, an honest scope, and a price they can compare.",
+          "Your job is not to make every enquiry fit the service. Your job is to separate suitable cosmetic exterior work from faults that need an automotive repairer, auto electrician, lighting specialist, body repairer, parts supplier, or another appropriately qualified professional.",
+        ],
+      },
+      {
+        heading: "What headlight restoration actually sells",
+        paragraphs: [
+          "A narrow starter offer is cosmetic restoration of two suitable exterior polycarbonate headlight lenses. The package may include a condition check, careful masking, the tested correction process, the specified protection step, cleanup, matched before-and-after photos, and written aftercare.",
+          "That scope can address exterior oxidation, yellowing, dullness, and some surface marks when the lens and assembly are otherwise suitable. The exact improvement depends on the starting condition, previous work, lens material, damage depth, products, process, weather, access, and operator skill.",
+          "Do not sell restoration as a permanent repair, a new headlight, a roadworthiness inspection, legal compliance, beam testing, or guaranteed night-driving performance. Those are different outcomes. State what you can inspect cosmetically, what you will do, and what remains outside the service.",
+        ],
+      },
+      {
+        heading: "When restoration may be the sensible first option",
+        paragraphs: [
+          "Restoration may suit a sound plastic lens with deterioration on the exterior surface. Common enquiries show yellowing, cloudy patches, a dull top edge, or a rough oxidised surface while the assembly remains secure, dry inside, and operational.",
+          "A suitable job should fit the exact product system you have practised. Read the current manufacturer instructions for compatible surfaces, preparation, application conditions, curing, water exposure, maintenance, and protective equipment. Do not combine internet methods and hope the chemistry agrees.",
+          "Restoration can be a lower-cost test than replacing a complete assembly, but cheap is not the only decision. Compare the expected cosmetic improvement, protection step, aftercare, warranty wording, remaining lens limits, vehicle plans, and the cost of rework if the wrong method is used.",
+        ],
+      },
+      {
+        heading: "When to recommend repair, diagnosis, or replacement",
+        paragraphs: [
+          "Pause the restoration quote when photos show cracks, holes, loose or broken mounts, water droplets inside the assembly, recurring internal condensation, a failed bulb, wiring trouble, damaged reflectors, heavy internal haze, severe crazing through the lens, impact damage, or obvious heat damage.",
+          "Previous coatings can also change the job. Peeling clear coat, film adhesive, deep sanding marks, chemical damage, or an unknown repair may need a different process or a clean decline. Do not use a normal package price for a condition you have not tested.",
+          "A clear exterior lens with poor light output is not automatically a restoration job. The cause may sit with the bulb, aim, wiring, reflector, projector, moisture, voltage, or another component. Refer the customer for appropriate diagnosis instead of polishing a lens that is not the problem.",
+        ],
+      },
+      {
+        heading: "Use a four-photo check before quoting",
+        paragraphs: [
+          "Ask for one straight-on daylight photo, one close photo of the worst exterior area, one side angle that catches the surface texture, and one wider photo showing both lights and the front of the vehicle. Ask whether the problem is outside or inside, whether moisture appears after rain, whether every light works, and whether the lenses have been restored or coated before.",
+          "The photo check is a filter, not a diagnosis. It can identify obvious mismatches and save an unnecessary trip, but lighting can hide cracks, internal haze, coating edges, and surface depth. Call the price provisional until you inspect the vehicle in person.",
+          "Reply with one of three outcomes: likely suitable for an on-site inspection and provisional restoration quote, more information needed, or outside your cosmetic scope with a recommendation to seek qualified diagnosis, repair, or replacement advice.",
+        ],
+      },
+      {
+        heading: "Compare restoration and replacement costs honestly",
+        paragraphs: [
+          "Public Australian restoration offers checked in July 2026 ranged from about AUD $75 per headlight to $350 plus GST for a pair. The advertised services did not all include the same correction process, protection, mobile travel, condition rules, cure instructions, or warranty.",
+          "A beginner may test a normal local two-headlight package around AUD $80 to $220 after completing a permissioned practice job, but that is a planning range, not a universal price. Quote from the lens condition, complete working time, consumables, travel, setup, weather, protection system, risk, tax, overhead, and local market.",
+          "Do not publish one replacement number as though every car uses the same assembly. Halogen, HID, LED, adaptive, projector, and integrated units can have very different parts, labour, aiming, programming, or calibration requirements. Ask for a written vehicle-specific quote that identifies the part choice and included labour.",
+        ],
+      },
+      {
+        heading: "Give the buyer a clean decision table",
+        paragraphs: [
+          "For restoration, write down the number of lenses, condition assumed, preparation, correction steps, protection system, mobile area, travel, GST if applicable, photos, aftercare, cure restrictions, warranty terms, exclusions, and the conditions that can change or cancel the quote.",
+          "For repair or replacement, the buyer should ask what fault was identified, whether the quote is for a lens or complete assembly, whether the part is genuine, aftermarket, used, or reconditioned, what labour is included, and whether aiming, coding, programming, calibration, sealing, or further diagnosis may be required.",
+          "The best recommendation is the option that addresses the actual condition with a clear scope. Restoration is weak value when the fault sits inside the assembly. Replacement can be unnecessary when the assembly is sound and the issue is suitable exterior oxidation. An honest inspection prevents both mistakes.",
+        ],
+      },
+      {
+        heading: "Turn the comparison into a first-client offer",
+        paragraphs: [
+          "Restore one permissioned practice car and record the complete process, materials, time, weather, mistakes, result limits, and aftercare. Take matched photos from the same angle and lighting. Ask separately for permission before using the images in marketing.",
+          "Build a list of 20 specific prospects. Used-car listings with visibly cloudy exterior lenses can be a practical first lane because the owner has a current presentation problem. Local detailers, mechanics, dealers, neighbours, and small fleets can also fit when your message is relevant and respectful.",
+          "A simple message is: Hi Sam, I noticed the exterior headlight lenses look cloudy in the listing photos. I offer a local two-headlight cosmetic restoration for suitable lenses. If you send four clear daylight photos, I can screen for obvious issues and give you a provisional quote. If the condition looks outside restoration scope, I will say so before arranging a visit.",
+        ],
+      },
+      {
+        heading: "Handle the replacement objection without bluffing",
+        paragraphs: [
+          "If a buyer says they could just replace the lights, agree that replacement may be the right option when the assembly is damaged or faulty. Then explain your narrower offer: a cosmetic exterior restoration for suitable lenses, with a written scope, named protection step, honest limits, and aftercare.",
+          "Do not claim your result is identical to a new original assembly. Do not use an unverified replacement price to make your service look cheap. Invite the buyer to compare your complete quote with a vehicle-specific repair or replacement quote.",
+          "Start with one buyer, one offer, and one photo-screening script. The goal is not to win every enquiry. The goal is to accept the right job, deliver it carefully, and leave the buyer with a result and handoff that match the promise.",
+        ],
+      },
+      {
+        heading: "Build the decline into your process",
+        paragraphs: [
+          "Put unsuitable conditions in the intake form and quote. Repeat them during the on-site inspection. Photograph any concern before touching the lens and obtain agreement on the remaining limits. If the condition changes the scope, stop and re-quote or decline.",
+          "A referral list makes the decline useful. Identify reputable local mechanics, auto electricians, lighting specialists, body repairers, and parts suppliers that can assess faults outside cosmetic restoration. Verify the current business and do not promise their diagnosis, price, availability, or outcome.",
+          "Want the intake form, quote calculator, on-site SOP, proof kit, safety checklist, customer aftercare card, outreach scripts, and client emails? Open the Mobile Headlight Restoration launch pack. The article gives you the decision logic. The pack gives you the working files.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: screen one cloudy-headlight enquiry",
+      steps: [
+        "Ask for four daylight photos, vehicle year and model, previous restoration history, moisture history, and confirmation that every light operates.",
+        "Check for obvious cracks, broken mounts, internal condensation, deep crazing, previous coating failure, and damage inside the assembly.",
+        "Label the result as likely suitable, more information needed, or outside cosmetic restoration scope.",
+        "For a likely fit, send a provisional two-headlight quote with the assumed condition, process, protection, travel, GST, aftercare, exclusions, and inspection rule.",
+        "For a poor fit, explain the visible reason and recommend appropriate diagnosis, repair, or replacement advice without guessing at the fault.",
+        "Inspect the vehicle before starting and photograph any condition that could limit the result.",
+        "Deliver the agreed process, matched photos, applied product details, cure instructions, maintenance guidance, and contact route.",
+        "Record the complete time and cost, then decide whether the next similar enquiry still fits the package price.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one restoration and protection system you can follow exactly.",
+      "Complete one permissioned practice job before selling.",
+      "Write the four-photo request and six intake questions.",
+      "List the conditions that require more information, a re-quote, or a decline.",
+      "Define one normal local two-headlight package and travel boundary.",
+      "State what is cosmetic, what is excluded, and what the service does not guarantee.",
+      "Create a shortlist of appropriate local repair and diagnosis options.",
+      "Build a list of 20 specific prospects with visible, relevant need.",
+      "Send the first five photo-screening messages.",
+      "Measure the first paid job from initial message through final handoff.",
+      "Open the Mobile Headlight Restoration launch pack and adapt the intake, quote, safety, delivery, proof, aftercare, and outreach files.",
+    ],
+    commonMistakes: [
+      "Quoting from one distant photo as though it were a diagnosis.",
+      "Trying to restore cracks, internal moisture, electrical faults, failed reflectors, or broken assemblies.",
+      "Assuming a clear-looking exterior lens is the cause of poor light output.",
+      "Using one price for normal oxidation, previous coating failure, and deep damage.",
+      "Claiming the result will be permanent, like new, roadworthy, legally compliant, or guaranteed to improve night-driving safety.",
+      "Comparing restoration with an invented replacement price.",
+      "Skipping the protection step or ignoring the product-specific cure instructions.",
+      "Accepting a poor-fit job because the schedule is quiet.",
+      "Using customer photos publicly without clear permission.",
+    ],
+    faqs: [
+      {
+        question: "Is it better to restore or replace headlights?",
+        answer:
+          "Restoration can suit exterior oxidation, yellowing, haze, and light surface damage on a sound plastic lens. Repair, diagnosis, or replacement may be more appropriate for cracks, broken mounts, internal moisture, electrical faults, damaged reflectors, severe crazing, or faults inside the assembly.",
+      },
+      {
+        question: "How do I know if headlights can be restored?",
+        answer:
+          "Start with clear daylight photos and an in-person inspection. Suitable work is usually limited to tested exterior lens deterioration. Photos cannot reliably confirm every defect, so keep the quote provisional and decline conditions outside your process.",
+      },
+      {
+        question: "How much does headlight restoration cost in Australia?",
+        answer:
+          "Public Australian offers reviewed in July 2026 ranged from about AUD $75 per headlight to $350 plus GST for a pair. Process, condition, protection, travel, GST, and warranty varied, so compare the written inclusions rather than the headline alone.",
+      },
+      {
+        question: "How much does headlight replacement cost?",
+        answer:
+          "There is no useful universal replacement price. Cost depends on the vehicle, assembly technology, genuine or aftermarket part, labour, availability, aiming, programming, calibration, and the underlying fault. Get a written vehicle-specific quote.",
+      },
+      {
+        question: "Can internal headlight condensation be restored?",
+        answer:
+          "Exterior cosmetic restoration does not fix internal moisture or the cause of condensation. The assembly may need appropriate diagnosis, sealing work, repair, or replacement. Do not open or alter it unless that work is within your competence and insured scope.",
+      },
+      {
+        question: "Can a headlight with cracks be restored?",
+        answer:
+          "Cosmetic exterior restoration will not repair a cracked lens or damaged housing. Refer the customer for appropriate repair or replacement advice rather than hiding the crack with a cosmetic service.",
+      },
+      {
+        question: "What should a new operator charge?",
+        answer:
+          "After one measured practice job, a beginner might test a normal local pair around AUD $80 to $220, then adjust for condition, process, protection, travel, setup, complete time, weather, overhead, tax, risk, and local demand. It is a starting range, not an earnings claim.",
+      },
+    ],
+    disclaimer:
+      "Restoration prices were reviewed from publicly listed Australian service offers on 30 July 2026 and can change. This guide is practical business and buying education, not automotive diagnosis, safety, roadworthiness, legal, insurance, tax, or financial advice. Follow current product instructions and use an appropriately qualified professional for faults outside cosmetic exterior restoration.",
+  },
+  {
     slug: "is-headlight-restoration-business-profitable",
     title: "Is a Headlight Restoration Business Profitable?",
     seoTitle: "Is Headlight Restoration Profitable? First-Job Guide",
@@ -37,10 +226,11 @@ export const blogPosts: BlogPost[] = [
       "Test whether a headlight restoration business can be profitable using realistic Australian pricing, job costs, time, travel, and first-customer maths.",
     category: "Pricing",
     publishedAt: "2026-07-29",
-    updatedAt: "2026-07-29",
+    updatedAt: "2026-07-30",
     readingTime: "15 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-vs-replacement",
       "how-to-start-a-mobile-headlight-restoration-business",
       "mobile-headlight-restoration-pricing-guide",
       "headlight-restoration-tools-and-startup-cost",
@@ -229,10 +419,11 @@ export const blogPosts: BlogPost[] = [
       "Compare headlight restoration costs in Australia for DIY kits, mobile services, heavier correction, and replacement, with a practical quote checklist.",
     category: "Pricing",
     publishedAt: "2026-07-28",
-    updatedAt: "2026-07-28",
+    updatedAt: "2026-07-30",
     readingTime: "14 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-vs-replacement",
       "is-headlight-restoration-business-profitable",
       "mobile-headlight-restoration-pricing-guide",
       "how-to-start-a-mobile-headlight-restoration-business",
@@ -4260,10 +4451,11 @@ export const blogPosts: BlogPost[] = [
       "Start a mobile headlight restoration business with realistic costs, pricing, proof, safety limits, and a practical plan to win your first local customer.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-29",
+    updatedAt: "2026-07-30",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-vs-replacement",
       "is-headlight-restoration-business-profitable",
       "headlight-restoration-cost-australia",
       "headlight-restoration-aftercare",
