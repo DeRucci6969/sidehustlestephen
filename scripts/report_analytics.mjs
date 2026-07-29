@@ -119,9 +119,12 @@ const report = {
   checkout: stripeSummary,
   checkoutFunnel: {
     joinModalOpened: countEvent("Join Modal Opened"),
-    magicLinkRequested: countEvent("Magic Link Requested"),
-    magicLinkSent: countEvent("Magic Link Sent"),
-    magicLinkFailed: countEvent("Magic Link Failed"),
+    magicLinkRequestedClient: countEvent("Magic Link Requested"),
+    magicLinkRequestedServer: countEvent("Magic Link Requested Server"),
+    magicLinkSentClient: countEvent("Magic Link Sent"),
+    magicLinkSentServer: countEvent("Magic Link Sent Server"),
+    magicLinkFailedClient: countEvent("Magic Link Failed"),
+    magicLinkFailedServer: countEvent("Magic Link Failed Server"),
     existingSessionProbes:
       countEvent("Checkout Existing Session Probed Server") +
       countEvent("Checkout Requested Server"),

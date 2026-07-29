@@ -264,7 +264,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 Member downloads
               </a>
             ) : (
-              <JoinButton label="Unlock pack" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+              <JoinButton label="Unlock pack" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full sm:w-auto" />
             )}
             <a
               href="#member-assets"
@@ -316,7 +316,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
               </div>
               {!isMember ? (
                 <div className="mt-6">
-                  <JoinButton label="Get the scripts and assets" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+                  <JoinButton label="Get the scripts and assets" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full sm:w-auto" />
                 </div>
               ) : null}
             </div>
@@ -374,7 +374,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                   <p className="text-sm font-semibold leading-6 text-white/78">{detail.publicPreview.lockedAssetTease}</p>
                   {!isMember ? (
                     <div className="mt-4">
-                      <JoinButton label="Unlock the full workflow" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+                      <JoinButton label="Unlock the full workflow" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full sm:w-auto" />
                     </div>
                   ) : null}
                 </div>
@@ -390,7 +390,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                 <p className="mt-3 text-xs font-semibold leading-5 text-[var(--graphite)]">{detail.outreachPreview.note}</p>
                 {!isMember ? (
                   <div className="mt-5">
-                    <JoinButton label="Unlock the full script pack" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+                    <JoinButton label="Unlock the full script pack" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full sm:w-auto" />
                   </div>
                 ) : null}
               </div>
@@ -505,7 +505,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                       Unlock this pack when you want the practical files, not just the idea. Use them to send the first pitch, scope the first paid job, and deliver with a clean handoff.
                     </p>
                     <div className="mt-4">
-                    <JoinButton label="Unlock these assets" returnTo={`/packs/${pack.slug}`} className="w-full sm:w-auto" />
+                    <JoinButton label="Unlock these assets" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full sm:w-auto" />
                     </div>
                   </div>
                 ) : null}
@@ -666,7 +666,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
               </div>
               {!isMember ? (
                 <div className="mt-5">
-                  <JoinButton label="Unlock and start" returnTo={`/packs/${pack.slug}`} className="w-full" />
+                  <JoinButton label="Unlock and start" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full" />
                 </div>
               ) : null}
             </div>
@@ -734,7 +734,7 @@ export default async function PackPage({ params }: { params: Promise<{ slug: str
                   Become a member to access the complete playbook, asset downloads, outreach scripts, and launch checklist.
                 </p>
                 <div className="mt-6">
-                  <JoinButton label="Unlock this pack" returnTo={`/packs/${pack.slug}`} className="w-full" />
+                  <JoinButton label="Unlock this pack" returnTo={`/packs/${pack.slug}`} offerTitle={pack.title} assetCount={pack.assets.length} className="w-full" />
                 </div>
               </div>
             )}

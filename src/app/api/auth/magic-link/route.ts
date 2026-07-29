@@ -66,6 +66,12 @@ export async function POST(req: Request) {
 
   if (error) {
     console.error(JSON.stringify({ level: "error", msg: "magic_link_failed", route: "/api/auth/magic-link", requestId, error: error.message, ms: Date.now() - start }));
+    void trackServer("Magic Link Failed Server", { return_to: returnTo }, { request: req });
+    void recordAnalyticsEvent(req, {
+      eventName: "Magic Link Failed Server",
+      path: "/api/auth/magic-link",
+      properties: { return_to: returnTo },
+    });
     return NextResponse.json({ error: "Unable to send sign-in link." }, { status: 400 });
   }
 

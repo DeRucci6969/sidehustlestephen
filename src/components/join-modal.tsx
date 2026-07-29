@@ -13,9 +13,18 @@ type JoinButtonProps = {
   returnTo?: string;
   className?: string;
   intent?: "join" | "signIn";
+  offerTitle?: string;
+  assetCount?: number;
 };
 
-export function JoinButton({ label = "Unlock Packs", returnTo, className, intent = "join" }: JoinButtonProps) {
+export function JoinButton({
+  label = "Unlock Packs",
+  returnTo,
+  className,
+  intent = "join",
+  offerTitle,
+  assetCount,
+}: JoinButtonProps) {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "setup" | "error">("idle");
@@ -160,13 +169,25 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className, intent
               <Mail size={24} />
             </div>
             <h2 id="join-title" className="pr-10 text-2xl font-semibold tracking-normal text-[var(--navy-ink)] sm:text-3xl">
-              {intent === "signIn" ? "Sign in to your account" : "Unlock every pack"}
+              {intent === "signIn"
+                ? "Sign in to your account"
+                : offerTitle
+                  ? `Get the ${offerTitle} files`
+                  : "Unlock every pack"}
             </h2>
             <p className="mt-3 text-sm leading-6 text-[var(--graphite)]">
               {intent === "signIn"
                 ? "Enter the email linked to your account and we will send a secure sign-in link. No password needed."
-                : `Enter your email and we will send a secure sign-in link. Then you can unlock every business pack and asset for ${siteConfig.priceLabel}.`}
+                : `Enter your email and we will send a secure sign-in link. Then review the ${siteConfig.priceLabel} membership in secure checkout before paying.`}
             </p>
+            {intent === "join" && offerTitle && assetCount ? (
+              <div className="mt-5 rounded-lg bg-[rgba(28,32,28,0.045)] p-4 ring-1 ring-[rgba(28,32,28,0.08)]">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--safety-orange)]">Included with membership</p>
+                <p className="mt-2 text-sm font-semibold leading-6 text-[var(--navy-ink)]">
+                  {assetCount} working files for {offerTitle}, plus every other launch pack and future archive updates.
+                </p>
+              </div>
+            ) : null}
             <form onSubmit={submit} className="mt-7 space-y-3">
               <label htmlFor="join-email" className="sr-only">Email address</label>
               <input
@@ -184,7 +205,7 @@ export function JoinButton({ label = "Unlock Packs", returnTo, className, intent
                 disabled={status === "sending"}
                 className="accent-cta flex h-13 w-full items-center justify-center gap-2 rounded px-5 font-semibold transition disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {status === "sending" ? "Sending secure link" : intent === "signIn" ? "Send sign-in link" : "Send secure link"}
+                {status === "sending" ? "Sending secure link" : intent === "signIn" ? "Send sign-in link" : "Email my secure link"}
                 <ArrowRight size={17} />
               </button>
               {intent === "join" ? (

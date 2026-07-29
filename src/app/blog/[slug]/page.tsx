@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const topPackCta =
     post.slug === "how-to-start-a-mobile-headlight-restoration-business"
       ? {
-          copy: "Open the free cloudy-headlight lead check, then unlock the quote calculator, outreach scripts, on-site SOP, safety checklist, and the rest of the working files.",
+          copy: "Open the free cloudy-headlight lead check, then unlock the quote calculator, outreach scripts, on-site SOP, customer aftercare card, safety checklist, and the rest of the working files.",
           label: "Open the free lead check",
         }
       : post.slug === "is-headlight-restoration-business-profitable"
@@ -208,6 +208,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <JoinButton
                       label={`Unlock ${relatedPacks[0].assets.length} assets`}
                       returnTo={`/packs/${relatedPacks[0].slug}`}
+                      offerTitle={relatedPacks[0].title}
+                      assetCount={relatedPacks[0].assets.length}
                       className="w-full md:w-auto"
                     />
                   </div>
