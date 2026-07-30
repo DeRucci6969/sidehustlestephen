@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Fragment } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -75,6 +76,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     .sort((a, b) => b.score - a.score || b.candidate.publishedAt.localeCompare(a.candidate.publishedAt))
     .map(({ candidate }) => candidate);
   const relatedPosts = [...explicitRelatedPosts, ...discoveredRelatedPosts].slice(0, 4);
+  const inlineRelatedPost = relatedPosts[0];
   const bottomCtaPacks = [
     ...relatedPacks,
     ...popularPacks.filter((pack) => !post.relatedPackSlugs.includes(pack.slug)),
@@ -116,6 +118,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
     image: `${siteConfig.url}${siteConfig.ogImage}`,
     mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
+    citation: post.sources?.map((source) => source.url),
   };
   const faqSchema = {
     "@context": "https://schema.org",
@@ -234,17 +237,42 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
             </section>
 
-            {post.body.map((section) => (
-              <section key={section.heading} className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
-                <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{section.heading}</h2>
-                <div className="mt-4 space-y-4">
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph} className="text-base font-semibold leading-7 text-[var(--text-primary)]">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </section>
+            {post.body.map((section, index) => (
+              <Fragment key={section.heading}>
+                <section className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
+                  <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">{section.heading}</h2>
+                  <div className="mt-4 space-y-4">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph} className="text-base font-semibold leading-7 text-[var(--text-primary)]">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+                {index === 2 && inlineRelatedPost ? (
+                  <section className="rounded-lg bg-[var(--orange-glass)] p-5 ring-1 ring-[rgba(255,103,31,0.2)] sm:p-6">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--safety-orange)]">Next practical guide</p>
+                    <div className="mt-3 grid gap-4 sm:grid-cols-[1fr_auto] sm:items-center">
+                      <div>
+                        <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)]">{inlineRelatedPost.title}</h2>
+                        <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">
+                          Continue with the closest working guide before you build the offer from scratch.
+                        </p>
+                      </div>
+                      <Link
+                        href={`/blog/${inlineRelatedPost.slug}`}
+                        data-analytics-event="Blog Inline Guide Clicked"
+                        data-analytics-article={inlineRelatedPost.slug}
+                        data-analytics-location="blog_inline_guide"
+                        className="frosted-pill inline-flex h-11 w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-bold text-[var(--text-primary)] sm:w-auto"
+                      >
+                        Read next
+                        <ArrowRight size={16} />
+                      </Link>
+                    </div>
+                  </section>
+                ) : null}
+              </Fragment>
             ))}
 
             <section className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
@@ -296,6 +324,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 ))}
               </div>
             </section>
+
+            {post.sources?.length ? (
+              <section className="glass-soft rounded-lg p-5 sm:rounded-[1.75rem] sm:p-6">
+                <h2 className="text-2xl font-bold tracking-normal text-[var(--navy-ink)] sm:text-3xl">Sources and useful references</h2>
+                <div className="mt-5 grid gap-3">
+                  {post.sources.map((source) => (
+                    <a
+                      key={source.url}
+                      href={source.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="pack-detail-tile group rounded-2xl p-4 transition hover:-translate-y-0.5 hover:bg-white"
+                    >
+                      <span className="inline-flex items-center gap-1 text-sm font-bold text-[var(--safety-orange)]">
+                        {source.title}
+                        <ArrowRight size={14} className="transition group-hover:translate-x-0.5" />
+                      </span>
+                      <p className="mt-2 text-sm font-semibold leading-6 text-[var(--text-primary)]">{source.note}</p>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             <section className="rounded-lg bg-[rgba(28,32,28,0.045)] p-5 ring-1 ring-[rgba(28,32,28,0.08)]">
               <p className="text-sm font-semibold leading-6 text-[var(--graphite)]">{post.disclaimer}</p>

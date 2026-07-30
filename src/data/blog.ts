@@ -25,10 +25,210 @@ export type BlogPost = {
     question: string;
     answer: string;
   }[];
+  sources?: {
+    title: string;
+    url: string;
+    note: string;
+  }[];
   disclaimer: string;
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "headlight-restoration-before-and-after-photos",
+    title: "Headlight Restoration Before and After Photos: Proof Guide",
+    seoTitle: "Headlight Restoration Before and After Photos | Proof Guide",
+    description:
+      "Take honest headlight restoration before and after photos with matched angles, clear permissions, useful captions, and a first-client proof plan.",
+    category: "Local Service",
+    publishedAt: "2026-07-31",
+    updatedAt: "2026-07-31",
+    readingTime: "14 min read",
+    relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
+    relatedArticleSlugs: [
+      "how-to-start-a-mobile-headlight-restoration-business",
+      "how-to-get-headlight-restoration-customers",
+      "headlight-restoration-quote-template",
+      "headlight-restoration-intake-form-template",
+      "headlight-restoration-aftercare",
+      "headlight-restoration-vs-replacement",
+      "how-long-does-headlight-restoration-last",
+      "headlight-restoration-cost-australia",
+    ],
+    shortAnswer:
+      "Useful headlight restoration before and after photos show the same vehicle, lens, angle, distance, crop, and similar lighting before and after the work. Keep the original files, record the process and remaining limits, remove or obscure identifying details where appropriate, and get separate permission before using a customer's car or comments in marketing. The goal is credible proof of one real job, not a dramatic image that promises every lens will produce the same result.",
+    keyPoints: [
+      "Capture both lenses before touching the car, then repeat the same six-photo sequence after delivery.",
+      "Use the same angle, distance, camera, exposure approach, and similar light so the comparison does not exaggerate the result.",
+      "Separate permission to perform the work from permission to publish photos, number plates, names, reviews, or messages.",
+      "Describe the visible starting condition, work completed, protection step, result limits, and aftercare instead of claiming like new or permanent results.",
+      "The matching launch pack includes a before-and-after proof kit, intake form, quote calculator, on-site SOP, aftercare card, outreach scripts, and client emails.",
+    ],
+    body: [
+      {
+        heading: "Who this proof guide is for",
+        paragraphs: [
+          "This guide is for a new mobile headlight restoration operator who needs credible proof before asking strangers to book. It is also useful for an established detailer adding a defined headlight offer and for a car owner trying to judge whether a provider's gallery shows a fair comparison.",
+          "The first buyer is often a used-car seller, owner of an older daily driver, rideshare driver, neighbour, small dealer, or detailing customer with visibly cloudy exterior plastic lenses. They want to see work on a relevant vehicle and understand what the quoted service includes.",
+          "One clear, permissioned example is more useful than a folder of mystery images. You need enough context to show what changed, what did not change, and why the job was suitable for your tested process.",
+        ],
+      },
+      {
+        heading: "What honest before and after proof should show",
+        paragraphs: [
+          "A useful comparison shows the same lens from the same position before and after the agreed service. The camera should be at roughly the same height and distance, with the vehicle parked in the same place where practical. Use similar daylight or the same controlled light source.",
+          "Do not darken the before image, brighten the after image, increase clarity on only one file, wet the lens for the after shot, or choose a flattering angle that hides remaining damage. Basic cropping and number-plate obscuring can be reasonable when applied consistently, but keep the original files.",
+          "The caption matters as much as the image. Name the visible starting condition, the cosmetic exterior work completed, the protection step used, the date, and any remaining internal haze, chips, crazing, coating damage, or other limitation the photo cannot resolve.",
+        ],
+      },
+      {
+        heading: "Use a repeatable six-photo sequence",
+        paragraphs: [
+          "Start with a wide front photo that shows the whole vehicle and both headlights. Take a straight-on image of each lens, a close image of the worst area, and a side angle that catches surface texture. Add one wider site photo if access or surroundings affect the job.",
+          "Mark your standing point before work. A small piece of removable tape on the ground, a paving joint, or a measured step count can help you return to the same position. Keep the phone orientation and zoom setting consistent. Clean the camera lens before both sets.",
+          "Repeat the full sequence after cleanup and customer inspection. Do not rely on one split image. The straight-on pair helps the buyer compare the overall result, while the close and angled images show whether the surface still has visible limits.",
+        ],
+      },
+      {
+        heading: "Keep service approval and marketing permission separate",
+        paragraphs: [
+          "A customer can approve the restoration without agreeing to public marketing. Put the service scope in the quote or intake workflow, then ask separately whether you may use selected photos. Make the choice optional and record the answer.",
+          "Be specific about where the images may appear, such as your website gallery, social accounts, marketplace listing, or direct sales messages. Ask again before using the customer's name, number plate, location, written message, voice, face, review, or other identifying detail.",
+          "If the customer declines marketing use, keep the job record only for the legitimate operational purpose you explained and handle it according to your privacy process. Do not treat payment as permission to turn somebody's car into an advertisement.",
+        ],
+      },
+      {
+        heading: "Build a proof record, not just a photo collage",
+        paragraphs: [
+          "Create one folder for the booking with the quote reference, intake photos, on-arrival photos, delivery photos, product or system used, weather, complete working time, material notes, aftercare sent, and the customer's permission choice. Keep access limited to people who need it.",
+          "Record the conditions you declined or left unchanged. A cracked lens, internal moisture, electrical fault, failed reflector, broken mount, severe crazing, or damage inside the assembly is not fixed by a stronger caption. Refer uncertain faults for appropriate diagnosis, repair, or replacement advice.",
+          "The record helps with more than marketing. It can expose inconsistent camera angles, repeat condition problems, underquoted travel, forgotten aftercare, and jobs that do not fit the standard package.",
+        ],
+      },
+      {
+        heading: "Turn one permissioned job into a first-client offer",
+        paragraphs: [
+          "Complete one practice restoration on a car you have permission to use. Follow one tested product system and record the real process, total time, consumables, weather, mistakes, result limits, and handoff. Label it as a practice job if that is what it was.",
+          "Choose three useful images: a straight-on pair, a close matched comparison, and one wider vehicle view. Write a plain caption explaining the starting condition, included work, named protection step, and remaining limits. Avoid miracle, factory new, guaranteed, permanent, or roadworthy claims.",
+          "Build a list of 20 relevant prospects. Used-car listings with visibly cloudy exterior lenses can be a practical lane because the seller has a current presentation problem. Local detailers, mechanics, small dealers, neighbours, and older-car owners can also fit when the message is specific and respectful.",
+        ],
+      },
+      {
+        heading: "Use a direct outreach message",
+        paragraphs: [
+          "A simple seller message is: Hi Sam, I noticed the Corolla listing photos show cloudy exterior headlight lenses. I offer a local two-headlight cosmetic restoration for suitable lenses. Here is one matched, permissioned example from a similar condition. If you send four daylight photos, I can screen for obvious poor-fit issues and give you a provisional quote.",
+          "The proof supports the offer, but it should not replace the condition check. Ask for the vehicle year and model, clear photos of both lenses, previous restoration history, moisture history, confirmation that the lights operate, location, access, and timing.",
+          "Send five researched messages, then record replies, complete photo sets, suitable leads, provisional quotes, bookings, objections, and declines. The goal is not to blast a satisfying image across the internet. The goal is to help one suitable buyer make a clear decision.",
+        ],
+      },
+      {
+        heading: "Price the job behind the photo",
+        paragraphs: [
+          "A normal mobile two-headlight job may use roughly AUD $80-$220 as a planning range after you have completed a permissioned practice car. The actual quote should cover lens condition, process, materials, protection, complete working time, travel, setup, cleanup, weather, access, payment costs, overhead, tax, and rework risk.",
+          "Matched photos and a written handoff are part of the delivery time. Count the intake review, photo capture, file selection, permission record, caption, aftercare, and customer message. If the proof workflow adds 20 minutes, do not pretend it took zero.",
+          "Do not discount a job in exchange for a positive review or broad image rights. If you offer a genuine practice rate, state the normal scope, practice status, exact price, and optional permission separately. The customer should remain free to give honest feedback or decline marketing use.",
+        ],
+      },
+      {
+        heading: "Publish the proof without overselling it",
+        paragraphs: [
+          "Lead with the specific vehicle and visible condition rather than a huge performance claim. A useful post might say: Example result on suitable exterior oxidation. Two-lens mobile restoration, careful masking, the tested correction process, specified protection, cleanup, matched photos, and written aftercare. Some marks and internal issues cannot be corrected by this service.",
+          "Add useful alt text when the image is published on a website. Describe what is visible, such as cloudy exterior headlight lens before cosmetic restoration and the same lens after the documented service. Do not stuff locations, prices, and keywords into every image description.",
+          "Link the example to a clear next step: send the required daylight photos, read the quote guide, or open the Mobile Headlight Restoration launch pack. A gallery without a relevant action can earn attention and still produce no useful enquiry.",
+        ],
+      },
+      {
+        heading: "Use the launch pack to make proof repeatable",
+        paragraphs: [
+          "The Mobile Headlight Restoration launch pack includes the before-and-after proof kit, customer intake form, quote calculator, on-site delivery SOP, safety checklist, customer aftercare card, outreach scripts, client emails, FAQs, and AI prompt files.",
+          "Customise the working files to the exact process and product instructions you have tested. Put the photo sequence into the on-site workflow, the permission choice into the intake, and the agreed use into the job record.",
+          "Start with one buyer, one offer, and one honest comparison. The article gives you the proof standard. The pack gives you the working files to screen the lead, quote the job, deliver it, and make the next message easier.",
+        ],
+      },
+    ],
+    practicalExample: {
+      title: "Example: create one credible proof set",
+      steps: [
+        "Choose one permissioned practice car with suitable exterior lens deterioration and confirm that the owner understands the scope.",
+        "Record the vehicle, visible condition, previous work, product system, weather, site, expected result limits, and marketing permission choice.",
+        "Take the six-photo before sequence with a clean camera lens, fixed orientation, repeatable position, and similar exposure.",
+        "Complete the tested restoration and protection process without changing the scope for the sake of a dramatic result.",
+        "Repeat the six-photo sequence after cleanup from the same marked positions.",
+        "Keep the original files and choose three matched comparisons that show the overall result, worst starting area, and remaining limits.",
+        "Send the private result and aftercare to the owner before publishing anything.",
+        "Publish only the approved images with a specific caption, useful alt text, honest limits, and a link to the photo-screening or quote step.",
+        "Use the proof in five tailored messages and track whether recipients send usable photos, request quotes, book, or decline.",
+      ],
+    },
+    firstActionChecklist: [
+      "Choose one permissioned practice vehicle with suitable exterior lens deterioration.",
+      "Write the six-photo sequence into the delivery checklist.",
+      "Set a repeatable standing point, phone orientation, zoom, and lighting approach.",
+      "Create separate service approval and optional marketing permission fields.",
+      "Record the starting condition, process, protection step, weather, time, and remaining limits.",
+      "Keep the unedited original before and after files.",
+      "Select three matched comparisons and obscure identifying details where required.",
+      "Write one plain caption without like-new, permanent, guaranteed, or roadworthy claims.",
+      "Add a next step that asks for four daylight photos or opens the launch pack.",
+      "Send five tailored messages and track the full lead-to-booking path.",
+    ],
+    commonMistakes: [
+      "Using different light, distance, angle, crop, zoom, or exposure to make the result look stronger.",
+      "Taking the before photo after part of the lens has already been cleaned or tested.",
+      "Treating service approval as automatic permission to use customer images in marketing.",
+      "Publishing number plates, names, locations, messages, reviews, or faces without specific permission.",
+      "Calling one successful result proof that every cloudy, cracked, internally wet, or damaged assembly can be restored.",
+      "Claiming permanent, factory-new, roadworthy, or guaranteed performance outcomes that the job record does not support.",
+      "Forgetting to count photo capture, file handling, permission, captioning, and handoff time in the quote.",
+      "Posting a gallery without a photo-screening request, quote step, relevant guide, or launch pack link.",
+    ],
+    faqs: [
+      {
+        question: "How do I take fair headlight restoration before and after photos?",
+        answer:
+          "Use the same vehicle position, lens, camera, orientation, zoom, height, distance, angle, crop, and similar lighting. Repeat a fixed sequence and keep the original files so the comparison can be checked.",
+      },
+      {
+        question: "Can I use customer car photos in my advertising?",
+        answer:
+          "Ask for specific, optional permission separate from approval to perform the service. State where the images may be used and get additional permission before publishing names, number plates, reviews, messages, faces, locations, or other identifying details.",
+      },
+      {
+        question: "What should a before and after caption include?",
+        answer:
+          "Name the visible starting condition, vehicle context where approved, work completed, protection step, result limits, date, and next action. Avoid claims that the lens is permanently restored, factory new, roadworthy, or guaranteed to perform in a particular way.",
+      },
+      {
+        question: "How many photos do I need for a headlight restoration job?",
+        answer:
+          "A repeatable six-photo set is a practical starting point: wide front, straight-on left, straight-on right, close view of the worst area, side angle for surface texture, and a wider site or access view. Repeat the same set after delivery.",
+      },
+      {
+        question: "How much should I charge for a mobile headlight restoration?",
+        answer:
+          "AUD $80-$220 can be a planning range for a normal two-headlight mobile job after a practice restoration. Quote from condition, process, materials, protection, complete time, travel, access, weather, overhead, tax, risk, and local demand.",
+      },
+      {
+        question: "Which launch pack helps me create proof and get the first customer?",
+        answer:
+          "The Mobile Headlight Restoration launch pack includes a before-and-after proof kit, intake form, quote calculator, outreach scripts, on-site SOP, safety checklist, aftercare card, client emails, FAQs, and AI prompts.",
+      },
+    ],
+    sources: [
+      {
+        title: "ACCC: False or misleading claims",
+        url: "https://www.accc.gov.au/consumers/advertising-and-promotions/false-or-misleading-claims",
+        note: "Australian guidance on accurate images, descriptions, prices, benefits, and service claims.",
+      },
+      {
+        title: "ACCC: Social media promotions",
+        url: "https://www.accc.gov.au/business/advertising-and-promotions/social-media-promotions",
+        note: "Australian guidance relevant to service images and claims used in social advertising.",
+      },
+    ],
+    disclaimer:
+      "This guide provides practical business and content workflow education, not automotive, privacy, consumer law, legal, safety, roadworthiness, insurance, tax, or financial advice. Follow current product instructions, obtain appropriate permissions, keep claims accurate, check local requirements, and refer uncertain vehicle conditions to an appropriately qualified professional.",
+  },
   {
     slug: "headlight-restoration-vs-replacement",
     title: "Headlight Restoration vs Replacement: Which Is Right?",
@@ -230,6 +430,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "15 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-before-and-after-photos",
       "headlight-restoration-vs-replacement",
       "how-to-start-a-mobile-headlight-restoration-business",
       "mobile-headlight-restoration-pricing-guide",
@@ -4451,10 +4652,11 @@ export const blogPosts: BlogPost[] = [
       "Start a mobile headlight restoration business with realistic costs, pricing, proof, safety limits, and a practical plan to win your first local customer.",
     category: "Local Service",
     publishedAt: "2026-07-02",
-    updatedAt: "2026-07-30",
+    updatedAt: "2026-07-31",
     readingTime: "12 min read",
     relatedPackSlugs: ["mobile-headlight-restoration", "power-washing-driveway-sprint", "garage-shelf-installation"],
     relatedArticleSlugs: [
+      "headlight-restoration-before-and-after-photos",
       "headlight-restoration-vs-replacement",
       "is-headlight-restoration-business-profitable",
       "headlight-restoration-cost-australia",
