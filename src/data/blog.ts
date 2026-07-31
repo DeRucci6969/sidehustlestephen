@@ -1,3 +1,5 @@
+import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -34,6 +36,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  howToGetReviewManagementClients,
   {
     slug: "headlight-restoration-before-and-after-photos",
     title: "Headlight Restoration Before and After Photos: Proof Guide",
@@ -1533,10 +1536,11 @@ export const blogPosts: BlogPost[] = [
       "Price a Google review management service with realistic AUD ranges, scope limits, quote math, package examples, and a first-client plan.",
     category: "B2B Service",
     publishedAt: "2026-07-23",
-    updatedAt: "2026-07-23",
+    updatedAt: "2026-08-01",
     readingTime: "15 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
     relatedArticleSlugs: [
+      "how-to-get-review-management-clients",
       "how-to-start-a-review-reply-service",
       "google-review-response-templates-for-small-businesses",
       "how-to-ask-for-google-reviews",
@@ -1721,10 +1725,11 @@ export const blogPosts: BlogPost[] = [
       "Use 12 practical Google review request templates for SMS, email, receipts, and in-person asks, plus a compliant workflow and first-client offer.",
     category: "B2B Service",
     publishedAt: "2026-07-22",
-    updatedAt: "2026-07-23",
+    updatedAt: "2026-08-01",
     readingTime: "15 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
     relatedArticleSlugs: [
+      "how-to-get-review-management-clients",
       "google-review-management-pricing-guide",
       "google-review-response-templates-for-small-businesses",
       "how-to-start-a-review-reply-service",
@@ -3073,10 +3078,11 @@ export const blogPosts: BlogPost[] = [
       "Use practical Google review response templates for positive, mixed, and negative feedback, plus a safe approval workflow and first-client service plan.",
     category: "B2B Service",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-07-23",
+    updatedAt: "2026-08-01",
     readingTime: "14 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
     relatedArticleSlugs: [
+      "how-to-get-review-management-clients",
       "google-review-management-pricing-guide",
       "how-to-ask-for-google-reviews",
       "how-to-start-a-review-reply-service",
@@ -3408,10 +3414,11 @@ export const blogPosts: BlogPost[] = [
       "Start a review reply service with a fixed offer, realistic AUD pricing, three-sample outreach plan, owner approval workflow, and launch pack.",
     category: "B2B Service",
     publishedAt: "2026-07-12",
-    updatedAt: "2026-07-23",
+    updatedAt: "2026-08-01",
     readingTime: "13 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "ugc-brief-generator"],
     relatedArticleSlugs: [
+      "how-to-get-review-management-clients",
       "google-review-management-pricing-guide",
       "how-to-ask-for-google-reviews",
       "google-review-response-templates-for-small-businesses",
