@@ -97,6 +97,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             copy: "Check the free cloudy-headlight lead screen, then use the member quote calculator to test material cost, travel, package price, and job margin.",
             label: "Open the pricing pack",
           }
+        : post.slug === "how-to-get-cafe-menu-design-clients"
+          ? {
+              copy: "Use the free cafe offer preview, then unlock the outreach script, pricing workbook, proposal, mockup kit, intake form, and delivery checklist.",
+              label: "Open the cafe client kit",
+            }
         : {
             copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
             label: "Open free preview",

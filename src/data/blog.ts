@@ -1,3 +1,4 @@
+import { howToGetCafeMenuDesignClients } from "@/data/blog/how-to-get-cafe-menu-design-clients";
 import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
 
 export type BlogPost = {
@@ -36,6 +37,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  howToGetCafeMenuDesignClients,
   howToGetReviewManagementClients,
   {
     slug: "headlight-restoration-before-and-after-photos",
@@ -2751,9 +2753,10 @@ export const blogPosts: BlogPost[] = [
       "Use practical cafe menu design pricing for one-section fixes, full refreshes, and monthly updates, with quote math, scope rules, and a first-client plan.",
     category: "Pricing",
     publishedAt: "2026-07-16",
-    updatedAt: "2026-07-16",
+    updatedAt: "2026-08-02",
     readingTime: "14 min read",
     relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
+    relatedArticleSlugs: ["how-to-get-cafe-menu-design-clients", "how-to-start-a-cafe-menu-refresh-service"],
     shortAnswer:
       "For a beginner cafe menu refresh service, a practical AUD starting ladder is $99-$249 for one menu section or digital asset, $300-$750 for a bounded full-menu refresh, and $150-$500 per month for a defined update allowance. Build the quote from real delivery time, source-file quality, output formats, approval rounds, and urgency. Treat these figures as starting points, then adjust after one paid job shows you the real workload.",
     keyPoints: [
@@ -3756,9 +3759,10 @@ export const blogPosts: BlogPost[] = [
       "Start a cafe menu refresh service with a fixed offer, practical AUD pricing, a first-client outreach plan, delivery steps, scope rules, and matching launch-pack files.",
     category: "Local Service",
     publishedAt: "2026-07-08",
-    updatedAt: "2026-07-16",
+    updatedAt: "2026-08-02",
     readingTime: "12 min read",
     relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
+    relatedArticleSlugs: ["how-to-get-cafe-menu-design-clients", "cafe-menu-design-pricing-guide"],
     shortAnswer:
       "To start a cafe menu refresh service, find independent cafes with outdated menus across Google, Instagram, printed boards, or QR links, then sell a small fixed refresh sprint. The first offer should clean up one menu section, create approval-ready files, and give the owner a simple monthly update option. Do not promise more orders, better rankings, or viral posts.",
     keyPoints: [
