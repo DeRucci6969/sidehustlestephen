@@ -1,4 +1,5 @@
 import { howToGetCafeMenuDesignClients } from "@/data/blog/how-to-get-cafe-menu-design-clients";
+import { howToGetAiAutomationClientsForTrades } from "@/data/blog/how-to-get-ai-automation-clients-for-trades";
 import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
 
 export type BlogPost = {
@@ -37,6 +38,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  howToGetAiAutomationClientsForTrades,
   howToGetCafeMenuDesignClients,
   howToGetReviewManagementClients,
   {
@@ -5315,9 +5317,15 @@ export const blogPosts: BlogPost[] = [
       "A practical guide to starting an AI-assisted inbox triage service for trades with one buyer lane, reply templates, urgent-message rules, pricing, outreach, and safe human approval.",
     category: "AI Tool",
     publishedAt: "2026-07-04",
-    updatedAt: "2026-07-04",
+    updatedAt: "2026-08-03",
     readingTime: "12 min read",
     relatedPackSlugs: ["ai-inbox-triage-trades", "manual-workflow-concierge", "google-business-profile-rescue"],
+    relatedArticleSlugs: [
+      "how-to-get-ai-automation-clients-for-trades",
+      "how-to-get-your-first-client-without-a-big-audience",
+      "concierge-mvp-guide",
+      "service-business-pricing-guide-for-beginners",
+    ],
     shortAnswer:
       "To start an AI inbox triage service for trades, pick one trade, map the common enquiry types, create owner-approved reply templates, and sell a small setup that labels messages, collects missing job details, and gives the owner a daily lead summary. Do not sell a fully autonomous AI agent on day one. Sell cleaner inbox handling with human approval.",
     keyPoints: [

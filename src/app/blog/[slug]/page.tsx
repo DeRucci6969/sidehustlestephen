@@ -102,6 +102,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               copy: "Use the free cafe offer preview, then unlock the outreach script, pricing workbook, proposal, mockup kit, intake form, and delivery checklist.",
               label: "Open the cafe client kit",
             }
+        : post.slug === "how-to-get-ai-automation-clients-for-trades"
+          ? {
+              copy: "Open the free inbox triage preview, then unlock the workflow map, reply templates, prompts, intake form, client emails, and delivery files.",
+              label: "Open the trades inbox kit",
+            }
         : {
             copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
             label: "Open free preview",
