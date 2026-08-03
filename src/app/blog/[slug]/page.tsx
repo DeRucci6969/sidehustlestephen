@@ -107,6 +107,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               copy: "Open the free inbox triage preview, then unlock the workflow map, reply templates, prompts, intake form, client emails, and delivery files.",
               label: "Open the trades inbox kit",
             }
+        : post.slug === "ai-automation-pricing-guide-small-business"
+          ? {
+              copy: "Use the free inbox triage preview, then unlock the workflow map, reply templates, prompts, intake form, client emails, and delivery files behind the quote.",
+              label: "Open the pricing-ready kit",
+            }
         : {
             copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
             label: "Open free preview",

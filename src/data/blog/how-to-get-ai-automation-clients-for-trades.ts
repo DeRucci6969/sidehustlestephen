@@ -8,10 +8,11 @@ export const howToGetAiAutomationClientsForTrades: BlogPost = {
     "Get AI automation clients by auditing one trades inbox workflow, selling a bounded paid pilot, and using realistic AUD pricing, outreach, and approval rules.",
   category: "AI Tool",
   publishedAt: "2026-08-03",
-  updatedAt: "2026-08-03",
+  updatedAt: "2026-08-04",
   readingTime: "15 min read",
   relatedPackSlugs: ["ai-inbox-triage-trades", "manual-workflow-concierge", "google-business-profile-rescue"],
   relatedArticleSlugs: [
+    "ai-automation-pricing-guide-small-business",
     "how-to-start-an-ai-inbox-triage-service-for-trades",
     "how-to-get-your-first-client-without-a-big-audience",
     "concierge-mvp-guide",

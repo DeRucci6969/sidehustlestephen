@@ -1,3 +1,4 @@
+import { aiAutomationPricingGuideSmallBusiness } from "@/data/blog/ai-automation-pricing-guide-small-business";
 import { howToGetCafeMenuDesignClients } from "@/data/blog/how-to-get-cafe-menu-design-clients";
 import { howToGetAiAutomationClientsForTrades } from "@/data/blog/how-to-get-ai-automation-clients-for-trades";
 import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
@@ -38,6 +39,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  aiAutomationPricingGuideSmallBusiness,
   howToGetAiAutomationClientsForTrades,
   howToGetCafeMenuDesignClients,
   howToGetReviewManagementClients,
@@ -5317,10 +5319,11 @@ export const blogPosts: BlogPost[] = [
       "A practical guide to starting an AI-assisted inbox triage service for trades with one buyer lane, reply templates, urgent-message rules, pricing, outreach, and safe human approval.",
     category: "AI Tool",
     publishedAt: "2026-07-04",
-    updatedAt: "2026-08-03",
+    updatedAt: "2026-08-04",
     readingTime: "12 min read",
     relatedPackSlugs: ["ai-inbox-triage-trades", "manual-workflow-concierge", "google-business-profile-rescue"],
     relatedArticleSlugs: [
+      "ai-automation-pricing-guide-small-business",
       "how-to-get-ai-automation-clients-for-trades",
       "how-to-get-your-first-client-without-a-big-audience",
       "concierge-mvp-guide",
