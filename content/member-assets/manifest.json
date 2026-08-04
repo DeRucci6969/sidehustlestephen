@@ -921,7 +921,7 @@
     "description": "Scheduled AI-agent prompts for this service: daily lead triage, weekly prospecting, outreach drafting, follow-ups, delivery QA, weekly reporting, and proof repurposing - each ready to paste into an agent and run on a cadence with human approval.",
     "path": "content/member-assets/ugc-brief-generator/ai-automation-pack.docx",
     "filename": "ai-automation-pack.docx",
-    "bytes": 8013
+    "bytes": 8304
   },
   {
     "id": "asset-ugc-brief",
@@ -946,6 +946,39 @@
     "bytes": 14922
   },
   {
+    "id": "asset-ugc-pricing",
+    "packSlug": "ugc-brief-generator",
+    "packTitle": "UGC Brief Generator",
+    "title": "UGC Brief Pricing Calculator",
+    "type": "XLSX",
+    "description": "One-product sprint, campaign pack, and monthly brief pricing with a scope and profit check.",
+    "path": "content/member-assets/ugc-brief-generator/ugc-brief-pricing-calculator.xlsx",
+    "filename": "ugc-brief-pricing-calculator.xlsx",
+    "bytes": 14583
+  },
+  {
+    "id": "asset-ugc-outreach",
+    "packSlug": "ugc-brief-generator",
+    "packTitle": "UGC Brief Generator",
+    "title": "UGC Brief Outreach and Sales Script",
+    "type": "DOCX",
+    "description": "Prospect filters, mini-brief pitch, discovery questions, follow-ups, objections, and a fixed-scope close.",
+    "path": "content/member-assets/ugc-brief-generator/ugc-brief-outreach-and-sales-script.docx",
+    "filename": "ugc-brief-outreach-and-sales-script.docx",
+    "bytes": 7696
+  },
+  {
+    "id": "asset-ugc-delivery-checklist",
+    "packSlug": "ugc-brief-generator",
+    "packTitle": "UGC Brief Generator",
+    "title": "Claims, Rights and Delivery Checklist",
+    "type": "PDF",
+    "description": "Pre-delivery checks for product claims, source evidence, creator instructions, usage rights, approvals, exports, and handoff.",
+    "path": "content/member-assets/ugc-brief-generator/claims-rights-and-delivery-checklist.pdf",
+    "filename": "claims-rights-and-delivery-checklist.pdf",
+    "bytes": 15104
+  },
+  {
     "id": "asset-ugc-prompts",
     "packSlug": "ugc-brief-generator",
     "packTitle": "UGC Brief Generator",
@@ -954,7 +987,7 @@
     "description": "Practical prompts for product angles, creator briefs, hook variations, shot lists, and usage-rights checks.",
     "path": "content/member-assets/ugc-brief-generator/ai-prompt-pack.docx",
     "filename": "ai-prompt-pack.docx",
-    "bytes": 8640
+    "bytes": 8560
   },
   {
     "id": "asset-ugc-intake",

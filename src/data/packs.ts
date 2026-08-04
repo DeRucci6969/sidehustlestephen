@@ -330,9 +330,9 @@ const basePacks: BusinessPack[] = [
     slug: "ugc-brief-generator",
     title: "UGC Brief Generator",
     hook: "Brands do not need more creators. They need better briefs.",
-    seoTitle: "UGC Brief Generator Launch Pack | Creator Brief Template and Hook Bank",
+    seoTitle: "UGC Brief Generator Pack | Pricing, Scripts and Template",
     seoDescription:
-      "Start a UGC brief service for ecommerce brands with creator brief templates, hook bank, client intake form, outreach emails, and AI prompt pack.",
+      "Start a UGC brief service with a creator brief template, pricing calculator, sales scripts, claims and usage-rights checklist, hooks, and AI prompts.",
     category: "Creator Business",
     buyer: "Ecommerce brands",
     startupCost: "$0",
@@ -341,12 +341,16 @@ const basePacks: BusinessPack[] = [
     summary: "A productized service that creates product-specific creator briefs, hooks, shot lists, and usage notes.",
     whyItWorks: "Short-form ad production breaks down when brands give creators vague instructions.",
     firstSteps: ["Pick one product", "Write five hooks", "Package a creator brief"],
-    caveat: "The brief must be specific enough to improve output.",
+    caveat: "Use approved product facts, claims, disclosures, and usage rights. Do not promise content or ad performance.",
     popularityScore: 88,
     publishedAt: "2026-06-05",
+    updatedAt: "2026-07-30",
     assets: [
       { id: "asset-ugc-brief", title: "UGC Brief Template", type: "DOCX", description: "A complete structure for product-specific creator briefs." },
       { id: "asset-ugc-hooks", title: "Hook Bank", type: "PDF", description: "Reusable short-form ad hook patterns." },
+      { id: "asset-ugc-pricing", title: "UGC Brief Pricing Calculator", type: "XLSX", description: "One-product sprint, campaign pack, and monthly brief pricing with a scope and profit check." },
+      { id: "asset-ugc-outreach", title: "UGC Brief Outreach and Sales Script", type: "DOCX", description: "Prospect filters, mini-brief pitch, discovery questions, follow-ups, objections, and a fixed-scope close." },
+      { id: "asset-ugc-delivery-checklist", title: "Claims, Rights and Delivery Checklist", type: "PDF", description: "Pre-delivery checks for product claims, source evidence, creator instructions, usage rights, approvals, exports, and handoff." },
       { id: "asset-ugc-prompts", title: "AI Prompt Pack", type: "DOCX", description: "Practical prompts for product angles, creator briefs, hook variations, shot lists, and usage-rights checks." },
       { id: "asset-ugc-intake", title: "Client Intake Form", type: "DOCX", description: "Editable intake questions for product facts, objections, proof points, creator constraints, and rights." },
       { id: "asset-ugc-email-templates", title: "Client Email Templates", type: "DOCX", description: "Emails for brand outreach, product info requests, brief delivery, revisions, and retainers." },
@@ -1124,10 +1128,30 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Start with ecommerce brands already using creators or ads. Rewrite one weak product brief as a sample and send it to the founder or marketing lead.",
     startableOffer:
       "A creator brief sprint for one product, including five hooks, a shot list, claim boundaries, objection angles, usage notes, and creator handoff copy.",
+    publicPreview: {
+      title: "Free preview: one-product mini-brief",
+      intro:
+        "Use this three-part sample to prove you understand the product without writing the full campaign brief for free.",
+      steps: [
+        "Buyer language: choose one product and pull one recurring problem or objection from approved product information and customer language.",
+        "Filmable angle: write one hook and a three-shot sequence a creator could film with the actual product, location, time, and equipment available.",
+        "Commercial boundary: name one claim that needs evidence and one usage-rights question the brand must answer before the footage is commissioned or reused.",
+      ],
+      lockedAssetTease:
+        "Members get the full creator brief template, pricing calculator, outreach and sales script, claims and rights checklist, hook bank, prompt pack, intake form, client emails, FAQs, and scheduled approval-led workflows.",
+    },
+    outreachPreview: {
+      title: "Sample first message",
+      copy:
+        "Hi [Name], I watched the recent creator posts for [product] and noticed most lead with [generic angle]. I drafted one review-led hook, a three-shot sequence, and one claim boundary your creator should not cross. Want the one-page mini-brief?",
+      note:
+        "Reference a real product and visible creative pattern. Check the customer-language source and do not imply the brand's current content is failing.",
+    },
     whyDetails: [
       "Brands do not need to be convinced that content matters; they need better direction for the content they already commission.",
       "The deliverable is fast to understand because a good brief immediately feels more specific than a generic creator request.",
       "The service can expand into monthly briefs, hook testing, creator feedback, or ad concept libraries.",
+      "A claims and usage-rights gate makes the pack useful after ideation, when the brand must approve what the creator can say and where the footage can run.",
     ],
     firstMoveAnalysis: [
       "Do not sell content strategy broadly. Sell one improved brief for one product.",
@@ -1151,6 +1175,12 @@ export const packPageDetails: Record<string, PackPageDetail> = {
       "Position the service as better creator direction, not content strategy.",
       "Follow up with a second hook based on a customer objection or review phrase.",
       "After delivery, pitch a monthly brief pack for new products, seasonal campaigns, or ad tests.",
+    ],
+    offerLadder: [
+      { name: "Mini brief", price: "$75-$150", detail: "One product, one hook, a three-shot outline, one claim boundary, and one rights question." },
+      { name: "One-product brief sprint", price: "$250-$500", detail: "Five hooks, shot list, proof notes, creator instructions, claim boundaries, and one revision round." },
+      { name: "Campaign brief pack", price: "$600-$1.2k", detail: "Three concepts, 15 hooks, creator-ready shot lists, claims and rights checks, and approval handoff." },
+      { name: "Monthly brief retainer", price: "$900-$2k / mo", detail: "A fixed monthly cadence of product or campaign briefs, approval tracking, and learning notes." },
     ],
   },
   "realtor-suburb-snapshot": {

@@ -295,6 +295,9 @@ PACKS: list[Pack] = [
         [
             Asset("asset-ugc-brief", "UGC Brief Template", "DOCX", "A complete structure for product-specific creator briefs."),
             Asset("asset-ugc-hooks", "Hook Bank", "PDF", "Reusable short-form ad hook patterns."),
+            Asset("asset-ugc-pricing", "UGC Brief Pricing Calculator", "XLSX", "One-product sprint, campaign pack, and monthly brief pricing with a scope and profit check."),
+            Asset("asset-ugc-outreach", "UGC Brief Outreach and Sales Script", "DOCX", "Prospect filters, mini-brief pitch, discovery questions, follow-ups, objections, and a fixed-scope close."),
+            Asset("asset-ugc-delivery-checklist", "Claims, Rights and Delivery Checklist", "PDF", "Pre-delivery checks for product claims, source evidence, creator instructions, usage rights, approvals, exports, and handoff."),
             Asset("asset-ugc-prompts", "AI Prompt Pack", "DOCX", "Practical prompts for product angles, creator briefs, hook variations, shot lists, and usage-rights checks."),
             Asset("asset-ugc-intake", "Client Intake Form", "DOCX", "Editable intake questions for product facts, buyer objections, proof points, creator constraints, and usage rights."),
             Asset("asset-ugc-email-templates", "Client Email Templates", "DOCX", "Ready-to-adapt emails for ecommerce brand outreach, product info requests, brief delivery, revision requests, and monthly brief retainers."),
@@ -483,7 +486,7 @@ def premium_handoff_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[s
         ("Buyer-ready deliverable standard", [
             f"This asset is for {pack.buyer.lower()}; remove generic language before sending it to a prospect or client.",
             "The finished version should name the buyer context, the visible problem, the exact output, and the next decision required.",
-            "Use concrete operational language. Replace broad promises with observable improvements: clearer menu, faster reply, cleaner handoff, fewer repeat questions, better approval trail.",
+            "Use concrete operational language. Replace broad promises with observable improvements: clearer instructions, cleaner handoff, fewer repeat questions, stronger source notes, and a better approval trail.",
             "Keep one owner-facing summary at the top and one implementation checklist at the end so the buyer can act without a second explanation.",
         ]),
         ("Inputs to collect before delivery", [
@@ -2070,6 +2073,88 @@ SPECIAL_ASSET_SECTIONS: dict[str, list[tuple[str, list[str]]]] = {
             "I would skip this if [bad-fit buyer], but use it if [good-fit buyer].",
         ]),
     ],
+    "asset-ugc-outreach": [
+        ("Best first prospects", [
+            "Choose ecommerce brands already posting creator-style videos, running paid social, gifting products, or recruiting creators.",
+            "Prioritise one product with clear reviews, repeat buyer questions, visible use cases, and enough margin for paid creative.",
+            "Look for vague creator instructions, repeated generic hooks, unclear product proof, or footage that lacks a usable call to action.",
+            "Skip regulated, medical, financial, adult, or high-risk claims until a qualified reviewer approves the brief process.",
+        ]),
+        ("One-product mini-brief pitch", [
+            "Subject: three creator angles for [product]",
+            "Hi [Name], I watched the recent creator posts for [product] and noticed most of them lead with [generic angle].",
+            "I drafted a small sample with one customer-language hook, a three-shot sequence, and one claim boundary your creator should not cross.",
+            "I sell fixed one-product UGC briefs with hooks, shots, proof notes, creator instructions, and approval fields. Want me to send the mini-brief?",
+        ]),
+        ("Short DM", [
+            "Hi [Name], quick idea for [product]. I wrote one review-led hook and a three-shot outline that is more specific than a generic show-the-product brief.",
+            "It includes the claim source and a usage-rights question, so the team can review it properly. Want the one-page sample?",
+        ]),
+        ("Discovery questions", [
+            "Which product and audience must this brief cover?",
+            "Where will the footage run: organic social, paid ads, product page, email, or multiple channels?",
+            "Which product facts and customer claims are approved, and where is the source evidence?",
+            "What must the creator show, avoid, disclose, pronounce, or demonstrate?",
+            "Who approves the brief, creator footage, usage rights, paid usage, revisions, and final exports?",
+        ]),
+        ("Fixed-scope close", [
+            "The one-product sprint includes five hooks, one shot list, three objection angles, approved proof points, claim boundaries, creator handoff copy, and one revision round.",
+            "You provide the product page, approved claims, brand examples, channel, creator constraints, usage-rights terms, and named approver.",
+            "I deliver the first draft in [timeframe] for [price]. Extra products, scripts, creators, revision rounds, legal review, creator sourcing, and ad management are separate.",
+        ]),
+        ("Follow-up sequence", [
+            "Day 2: send one alternate hook based on a different customer objection.",
+            "Day 5: ask whether creator briefs sit with the founder, performance marketer, or creator manager.",
+            "Day 10: offer the paid one-product brief instead of a campaign-wide project.",
+            "Day 21: close the loop and share a short brief-quality checklist.",
+        ]),
+        ("Objection handling", [
+            "We already write briefs: offer a one-product outside pass focused on review language, claim evidence, and filmability.",
+            "Creators should improvise: agree, then explain that the brief sets the commercial boundaries and required proof while leaving delivery natural.",
+            "Can you guarantee better ads: no. The service improves direction, approval clarity, and usable footage structure. It does not guarantee performance.",
+            "That price is too high: reduce the number of products, hooks, channels, or revision rounds rather than hiding extra scope.",
+        ]),
+        ("Next action", [
+            "Pick one product, review its page and recent customer language, and draft one mini-brief before contacting 10 brands.",
+            "Rewrite every bracketed field for the actual product. Do not send generic claims or copy customer reviews without checking the source and permitted use.",
+        ]),
+    ],
+    "asset-ugc-delivery-checklist": [
+        ("Product facts and claim evidence", [
+            "The product name, variant, price, availability, features, materials, instructions, limitations, and offer terms match the current approved source.",
+            "Every performance, comparison, durability, ingredient, environmental, testimonial, or outcome claim has an approved source.",
+            "Customer review language is quoted accurately, kept in context, and marked for permission or platform-rule review before reuse.",
+            "Unsupported superlatives, guarantees, before-and-after implications, and invented proof are removed.",
+        ]),
+        ("Creator-ready brief", [
+            "The target buyer, situation, problem, product role, hook, proof point, shot order, call to action, and required disclosures are specific.",
+            "The creator can film each shot with the product, location, equipment, time, and access available.",
+            "Required words, prohibited words, pronunciation, captions, aspect ratio, duration, safe margins, raw-footage needs, and filename rules are listed.",
+            "Creative freedom is clear: required beats are separated from optional delivery ideas.",
+        ]),
+        ("Claims and disclosure gate", [
+            "The named brand approver has checked claims, pricing, promotions, testimonials, comparisons, and required disclosures.",
+            "The brief does not ask the creator to hide sponsorship, fake personal experience, invent results, or present a script as an independent review.",
+            "Regulated, medical, health, financial, legal, safety, children, alcohol, or other sensitive claims are held for qualified review.",
+            "If a claim source is missing or unclear, mark it HOLD and remove it from the creator brief.",
+        ]),
+        ("Usage rights and permissions", [
+            "The agreement identifies creator, brand, channels, territory, usage period, organic usage, paid usage, whitelisting, editing, raw footage, exclusivity, and renewal terms.",
+            "Music, stock footage, fonts, logos, locations, people, screenshots, reviews, and third-party products are cleared for the intended use.",
+            "The brief does not expand usage rights beyond the signed agreement.",
+            "A named owner confirms whether the brand may cut, caption, translate, resize, or combine the footage.",
+        ]),
+        ("Delivery and approval", [
+            "The client receives the editable brief, final PDF or export, source and claim notes, approval log, creator handoff message, and revision deadline.",
+            "All bracketed placeholders are replaced or marked for approval.",
+            "Links open, exports use the agreed format, and filenames identify product, creator, concept, version, and date.",
+            "Nothing is sent to a creator, published, boosted, or reused until the named approver clears the relevant stage.",
+        ]),
+        ("Next action", [
+            "Send the client only the items that need a decision: claims, rights, required shots, disclosures, and final call to action.",
+            "After approval, send one clean creator handoff and keep the source notes and signed usage terms with the final files.",
+        ]),
+    ],
     "asset-trades-map": checklist_sections(*find_pack_for_asset("asset-trades-map")) + [
         ("Workflow map", [
             "Inbound message -> classify type -> check missing details -> urgency route.",
@@ -3263,6 +3348,49 @@ def automation_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]
             ]),
             shared_standard_pointer(pack),
         ]
+    if pack.slug == "ugc-brief-generator":
+        return [
+            ("The simplest reliable stack", [
+                "Source folder: approved product page, brand guide, claim evidence, customer-language notes, creator constraints, and signed usage-rights terms.",
+                "Control sheet: one row per product and concept with audience, channel, hook, proof source, claim status, creator, due date, rights scope, approver, and final file link.",
+                "Production: one reusable creator brief template, one claims and rights checklist, and one approval email for each product.",
+                "Automation: use AI to organise approved inputs, draft options, and run QA. Keep claims, rights, creator contact, publishing, and paid usage behind named human approval.",
+            ]),
+            ("Minimum viable weekly loop", [
+                "1. Select: choose one approved product, audience, channel, and creative goal.",
+                "2. Research: collect product facts, customer language, objections, use cases, and current creator examples from approved sources.",
+                "3. Draft: produce hook options, shot sequence, proof notes, call to action, creator instructions, and disclosure fields.",
+                "4. Gate: hold every unsupported claim, unclear review quote, missing disclosure, or usage-rights conflict.",
+                "5. Approve: send one brief and its claim-source list to the named brand approver.",
+                "6. Handoff: deliver only the approved version to the creator with the agreed rights, deadline, formats, and revision route.",
+                "7. Learn: record creator questions, rejected claims, missing shots, and reusable patterns for the next brief.",
+            ]),
+            ("Weekly product opportunity prompt", [
+                "Review [APPROVED PRODUCT PAGES, REVIEWS OR EXPORTS, AND RECENT CREATIVE] for [BRAND]. Return up to five product-specific UGC angles. For each, list the target buyer, customer-language problem, hook, required proof, three-shot sequence, call to action, source link, claim risk, and creator constraint. Use only facts and customer language in the supplied sources. Do not invent product experience, results, testimonials, comparisons, discounts, or usage rights. Mark any uncertain item HOLD.",
+            ]),
+            ("Brief drafting prompt", [
+                "Create a creator-ready brief for [PRODUCT] using only [APPROVED SOURCE PACK]. Include objective, target buyer, one core angle, five hook options, required shots, optional delivery ideas, approved proof points, prohibited claims, disclosure field, pronunciation notes, caption needs, call to action, aspect ratio, duration, raw-footage requirement, and approval checklist. Separate required beats from creative freedom. Do not contact a creator or publish anything.",
+            ]),
+            ("Claims and source gate", [
+                "Compare every proposed product statement in [DRAFT BRIEF] with [APPROVED SOURCE PACK]. Return a table with exact statement, source, status PASS or HOLD, reason, safer rewrite, and named approval needed. Hold unsupported outcomes, comparisons, superlatives, testimonials, regulated claims, before-and-after implications, and price or offer details that cannot be verified.",
+            ]),
+            ("Rights and handoff gate", [
+                "Check [DRAFT BRIEF] against [SIGNED USAGE TERMS]. Return PASS or HOLD for creator identity, organic channels, paid usage, whitelisting, territory, duration, raw footage, editing, resizing, translation, exclusivity, music, third-party assets, and renewal. Do not infer missing rights. Produce a clean handoff list only for approved items.",
+            ]),
+            ("Approval email draft", [
+                "Draft one email to [BRAND APPROVER] linking the brief, claim-source list, rights checklist, and creator handoff. Group decisions into APPROVE, EDIT, and HOLD. Ask the approver to confirm claims, required shots, disclosures, call to action, channels, rights, and deadline. Save as a draft. Do not send or share the brief with the creator.",
+            ]),
+            ("First 20 leads routine", [
+                "Once a week, review 20 ecommerce brands in [PRODUCT CATEGORY] that already post creator-style content. Return brands with one product that has clear reviews, repeated buyer objections, and visible brief gaps. Record the public product URL, creative evidence, one mini-brief angle, likely decision-maker role, and public contact channel. Do not collect private data or send outreach.",
+                "For the five strongest prospects, draft a message under 70 words offering a one-product mini-brief with one hook, three shots, and one claim boundary. Keep every message in drafts for human review.",
+            ]),
+            ("Failure and safety rules", [
+                "Stop when source evidence is missing, rights are unclear, the request involves sensitive or regulated claims, a creator is asked to fake experience, or a named approver is absent.",
+                "Do not automate creator contact, contract acceptance, rights expansion, public posting, paid boosting, whitelisting, legal review, payment, or final approval.",
+                "Log the source pack, model, run date, draft version, held claims, rights status, human approver, creator handoff date, and final filename.",
+            ]),
+            shared_standard_pointer(pack),
+        ]
     if pack.slug == "realtor-suburb-snapshot":
         return [
             ("The easiest reliable stack", [
@@ -3454,6 +3582,8 @@ def pdf_sections(pack: Pack, asset: Asset) -> list[tuple[str, list[str]]]:
                 "The client asks to remove source context or the approval owner is unclear.",
             ]),
         ]
+    if asset.id == "asset-ugc-delivery-checklist":
+        return SPECIAL_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset)
     if asset.id in SPECIAL_ASSET_SECTIONS:
         return SPECIAL_ASSET_SECTIONS[asset.id] + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
     return checklist_sections(pack, asset) + asset_polish_sections(asset) + [shared_standard_pointer(pack)]
@@ -3697,7 +3827,12 @@ def make_docx(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, li
     review_asset_already_has_compliance_note = pack.slug == "review-testimonial-service" and (
         asset.id.endswith("-automation") or asset.id.endswith("-intake")
     )
-    if not review_asset_already_has_compliance_note:
+    ugc_asset_already_has_compliance_note = asset.id in {
+        "asset-ugc-automation",
+        "asset-ugc-prompts",
+        "asset-ugc-outreach",
+    }
+    if not review_asset_already_has_compliance_note and not ugc_asset_already_has_compliance_note:
         body.append(p("Commercial use note", "Heading1"))
         body.append(p("These templates are practical launch materials. They do not guarantee revenue, rankings, retention, or advertising performance. Validate claims with buyer data and keep approvals in writing."))
     document_xml = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -4075,8 +4210,8 @@ def wrap(text: str, width: int) -> list[str]:
 
 def _pdf_line_step(text: str, size: int, bold: bool) -> int:
     if text == "":
-        return 14
-    return max(14, size + 5) + (6 if (bold and size >= 15) else 0)
+        return 11
+    return max(14, size + 6) + (8 if (bold and size >= 15) else 0)
 
 
 def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, list[str]]]) -> None:
@@ -4084,7 +4219,11 @@ def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, lis
     contents = ("Inside this document", [f"{i:02d}  {heading}" for i, (heading, _items) in enumerate(sections, start=1)])
     sections = [contents, *sections]
 
-    lines: list[tuple[str, int, bool]] = [(BRAND, 10, False), (asset.title, 22, True), (pack.title, 13, False), (asset.description, 11, False), ("", 11, False)]
+    lines: list[tuple[str, int, bool]] = []
+    lines.extend((line, 22, True) for line in wrap(asset.title, 42))
+    lines.extend((line, 13, False) for line in wrap(pack.title, 68))
+    lines.extend((line, 11, False) for line in wrap(asset.description, 82))
+    lines.append(("", 11, False))
     for heading, items in sections:
         lines.append((heading, 15, True))
         for item in items:
@@ -4094,13 +4233,18 @@ def make_pdf(path: Path, pack: Pack, asset: Asset, sections: list[tuple[str, lis
         lines.append(("", 10, False))
     pages: list[list[tuple[str, int, bool]]] = []
     current: list[tuple[str, int, bool]] = []
-    y = 760
+    # Keep pagination in lockstep with the rendered body cursor below. The
+    # previous 760 estimate gave each page 42 px more room than the renderer,
+    # which could push the final checklist lines into the footer.
+    y = 718
     for line in lines:
         step = _pdf_line_step(*line)
-        if y - step < 54:
+        if y - step < 72:
             pages.append(current)
             current = []
-            y = 760
+            y = 718
+            if line[0] == "":
+                continue
         current.append(line)
         y -= step
     if current:
@@ -4875,6 +5019,79 @@ def workbook_for(asset_id: str) -> dict[str, list[list[Any]]]:
                 ["Boundary", "This audit is designed to reduce hesitation and improve clarity. It does not guarantee revenue, conversion rate, ROAS, or email performance."],
                 ["Approval", "You approve policy wording, discounts, testimonials, product claims, and any live-store changes before they are published."],
                 ["Not included", "Theme redesign, paid ads, analytics setup, app installs, legal review, and implementation are not included unless scoped separately."],
+            ],
+        }
+    if asset_id == "asset-ugc-pricing":
+        return {
+            "Instructions": [
+                ["Step", "What to do"],
+                [1, "Choose the package based on product count, hook count, channel, claim complexity, creator count, usage-rights review, and revision rounds."],
+                [2, "Use Quote Builder for one brand. Edit only the input values in column B."],
+                [3, "Use Scope Guardrails before sending the proposal so creator sourcing, contracts, filming, editing, and ad management do not hide inside the brief fee."],
+                [4, "Use Profit Check before quoting. Do not guarantee content, ad, conversion, or revenue performance."],
+            ],
+            "Pricing Ladder": [
+                ["Package", "Deliverables", "Price", "Best For", "Notes"],
+                ["Mini Brief", "1 hook + 3-shot outline + 1 claim boundary", 99, "Paid sample", "One product and one channel"],
+                ["One-Product Brief Sprint", "5 hooks + shot list + proof notes + creator handoff", 350, "First full brief", "Core starter offer"],
+                ["Campaign Brief Pack", "3 concepts + 15 hooks + shot lists + claims and rights checklist", 850, "Active campaign", "One product, up to 3 creators"],
+                ["Monthly Brief Retainer", "4 product or campaign briefs + approval tracking", 1400, "Brands shipping creative regularly", "Fixed monthly cadence"],
+                ["Extra Product Add-On", "Research and brief for one additional product", 250, "Multi-product campaigns", "Per product"],
+                ["Rush Add-On", "Priority turnaround inside the agreed minimum window", 150, "Launch deadlines", "Subject to capacity"],
+            ],
+            "Quote Builder": [
+                ["Input", "Value"],
+                ["Base package price", 850],
+                ["Products included", 1],
+                ["Products requested", 2],
+                ["Price per extra product", 250],
+                ["Hooks included", 15],
+                ["Hooks requested", 20],
+                ["Price per extra hook", 20],
+                ["Extra creator handoffs", 1],
+                ["Price per extra creator handoff", 75],
+                ["Extra revision rounds", 1],
+                ["Price per extra revision round", 125],
+                ["Rush fee", 0],
+                ["Estimated quote", "=B2+MAX(0,B4-B3)*B5+MAX(0,B7-B6)*B8+B9*B10+B11*B12+B13"],
+                ["Deposit due at 50%", "=B14*0.5"],
+            ],
+            "Scope Guardrails": [
+                ["Scope Item", "Included?", "Notes"],
+                ["Product and customer-language research", "Yes", "Use approved sources and record links"],
+                ["Hooks, shot list, proof notes, and creator instructions", "Yes", "Stay inside the selected package"],
+                ["Claims and usage-rights checklist", "Yes", "Operational check only, not legal advice"],
+                ["Creator sourcing or contracting", "No", "Quote separately or refer"],
+                ["Filming, editing, posting, or paid media", "No", "Not included in the brief service"],
+                ["Legal or regulatory review", "No", "Client obtains qualified review where needed"],
+                ["Performance guarantee", "No", "Never promise views, conversions, ROAS, sales, or revenue"],
+            ],
+            "Profit Check": [
+                ["Metric", "Illustrative Value", "Formula/Note"],
+                ["Quote", "='Quote Builder'!B14", "From quote builder"],
+                ["Research hours", 2, "Product, reviews, current creative, and source notes"],
+                ["Brief writing hours", 3, "Hooks, shots, proof points, and creator instructions"],
+                ["Approval and handoff hours", 2, "Claims, rights, revisions, and delivery"],
+                ["Total hours", "=B3+B4+B5", ""],
+                ["Software/tools", 20, "Use actual costs"],
+                ["Gross before time", "=B2-B7", ""],
+                ["Hourly gross", "=IF(B6=0,\"\",B8/B6)", ""],
+            ],
+            "Client Inputs": [
+                ["Input", "Owner", "Required?", "Status"],
+                ["Current product page and approved product facts", "Client", "Yes", "Open"],
+                ["Target buyer, channel, objective, and call to action", "Client", "Yes", "Open"],
+                ["Approved claims, evidence, testimonials, and prohibited wording", "Client", "Yes", "Open"],
+                ["Creator constraints, examples, pronunciation, and required shots", "Client", "Yes", "Open"],
+                ["Signed usage-rights terms and disclosure requirements", "Client", "Yes", "Open"],
+                ["Named approver and revision deadline", "Client", "Yes", "Open"],
+            ],
+            "Proposal Copy": [
+                ["Section", "Client-facing copy"],
+                ["Scope", "I will create the agreed product-specific creator brief with hooks, shot sequence, proof notes, claim boundaries, creator instructions, and approval fields."],
+                ["Boundary", "The brief is designed to improve direction and approval clarity. It does not guarantee views, creator performance, ad results, conversions, sales, or revenue."],
+                ["Approval", "You approve product facts, claims, testimonials, disclosures, call to action, creator instructions, channels, usage rights, and final wording before handoff."],
+                ["Not included", "Creator sourcing, contracts, legal review, filming, editing, posting, whitelisting, paid media, and extra revisions are not included unless scoped separately."],
             ],
         }
     if asset_id == "asset-gym-report":
