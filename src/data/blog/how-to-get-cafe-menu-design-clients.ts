@@ -8,10 +8,11 @@ export const howToGetCafeMenuDesignClients: BlogPost = {
     "Get cafe menu design clients with a practical 20-cafe audit, a one-section sample, realistic AUD pricing, safe outreach, and a paid pilot offer.",
   category: "Outreach",
   publishedAt: "2026-08-02",
-  updatedAt: "2026-08-02",
+  updatedAt: "2026-08-06",
   readingTime: "14 min read",
   relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
   relatedArticleSlugs: [
+    "cafe-menu-audit-checklist",
     "how-to-start-a-cafe-menu-refresh-service",
     "cafe-menu-design-pricing-guide",
     "google-business-profile-outreach-scripts",
