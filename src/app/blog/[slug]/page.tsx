@@ -112,6 +112,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               copy: "Use the free inbox triage preview, then unlock the workflow map, reply templates, prompts, intake form, client emails, and delivery files behind the quote.",
               label: "Open the pricing-ready kit",
             }
+        : post.slug === "how-to-turn-customer-reviews-into-social-media-posts"
+          ? {
+              copy: "Use the free three-review trust audit, then unlock the reply swipe file, testimonial card specs, pricing calculator, outreach script, intake, approval emails, FAQs, and AI prompts.",
+              label: "Open the review proof kit",
+            }
         : {
             copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
             label: "Open free preview",

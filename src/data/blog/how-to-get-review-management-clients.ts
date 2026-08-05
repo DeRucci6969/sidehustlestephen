@@ -8,10 +8,11 @@ export const howToGetReviewManagementClients: BlogPost = {
     "Find review management clients with a practical audit, a fixed starter offer, realistic AUD pricing, safe outreach routes, and a 20-prospect plan.",
   category: "B2B Service",
   publishedAt: "2026-08-01",
-  updatedAt: "2026-08-01",
+  updatedAt: "2026-08-05",
   readingTime: "14 min read",
   relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
   relatedArticleSlugs: [
+    "how-to-turn-customer-reviews-into-social-media-posts",
     "how-to-start-a-review-reply-service",
     "google-review-management-pricing-guide",
     "google-review-response-templates-for-small-businesses",

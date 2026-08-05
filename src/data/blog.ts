@@ -2,6 +2,7 @@ import { aiAutomationPricingGuideSmallBusiness } from "@/data/blog/ai-automation
 import { howToGetCafeMenuDesignClients } from "@/data/blog/how-to-get-cafe-menu-design-clients";
 import { howToGetAiAutomationClientsForTrades } from "@/data/blog/how-to-get-ai-automation-clients-for-trades";
 import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
+import { howToTurnCustomerReviewsIntoSocialMediaPosts } from "@/data/blog/how-to-turn-customer-reviews-into-social-media-posts";
 
 export type BlogPost = {
   slug: string;
@@ -39,6 +40,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  howToTurnCustomerReviewsIntoSocialMediaPosts,
   aiAutomationPricingGuideSmallBusiness,
   howToGetAiAutomationClientsForTrades,
   howToGetCafeMenuDesignClients,
@@ -3085,10 +3087,11 @@ export const blogPosts: BlogPost[] = [
       "Use practical Google review response templates for positive, mixed, and negative feedback, plus a safe approval workflow and first-client service plan.",
     category: "B2B Service",
     publishedAt: "2026-07-14",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-05",
     readingTime: "14 min read",
     relatedPackSlugs: ["review-testimonial-service", "google-business-profile-rescue", "cafe-menu-refresh-package"],
     relatedArticleSlugs: [
+      "how-to-turn-customer-reviews-into-social-media-posts",
       "how-to-get-review-management-clients",
       "google-review-management-pricing-guide",
       "how-to-ask-for-google-reviews",
