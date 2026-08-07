@@ -12,6 +12,7 @@ export const cafeMenuAuditChecklist: BlogPost = {
   readingTime: "15 min read",
   relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
   relatedArticleSlugs: [
+    "cafe-menu-design-brief-template",
     "how-to-get-cafe-menu-design-clients",
     "how-to-start-a-cafe-menu-refresh-service",
     "cafe-menu-design-pricing-guide",

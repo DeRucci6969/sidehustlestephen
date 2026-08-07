@@ -1,5 +1,6 @@
 import { aiAutomationPricingGuideSmallBusiness } from "@/data/blog/ai-automation-pricing-guide-small-business";
 import { cafeMenuAuditChecklist } from "@/data/blog/cafe-menu-audit-checklist";
+import { cafeMenuDesignBriefTemplate } from "@/data/blog/cafe-menu-design-brief-template";
 import { howToGetCafeMenuDesignClients } from "@/data/blog/how-to-get-cafe-menu-design-clients";
 import { howToGetAiAutomationClientsForTrades } from "@/data/blog/how-to-get-ai-automation-clients-for-trades";
 import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
@@ -42,6 +43,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  cafeMenuDesignBriefTemplate,
   howToStartAUgcBriefWritingService,
   cafeMenuAuditChecklist,
   howToTurnCustomerReviewsIntoSocialMediaPosts,
@@ -2768,6 +2770,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "14 min read",
     relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
     relatedArticleSlugs: [
+      "cafe-menu-design-brief-template",
       "cafe-menu-audit-checklist",
       "how-to-get-cafe-menu-design-clients",
       "how-to-start-a-cafe-menu-refresh-service",
@@ -3779,6 +3782,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "12 min read",
     relatedPackSlugs: ["cafe-menu-refresh-package", "google-business-profile-rescue", "review-testimonial-service"],
     relatedArticleSlugs: [
+      "cafe-menu-design-brief-template",
       "cafe-menu-audit-checklist",
       "how-to-get-cafe-menu-design-clients",
       "cafe-menu-design-pricing-guide",
