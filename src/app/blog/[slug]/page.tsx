@@ -117,6 +117,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               copy: "Use the free three-review trust audit, then unlock the reply swipe file, testimonial card specs, pricing calculator, outreach script, intake, approval emails, FAQs, and AI prompts.",
               label: "Open the review proof kit",
             }
+        : post.slug === "how-to-start-a-ugc-brief-writing-service"
+          ? {
+              copy: "Use the free one-product mini-brief, then unlock the editable brief, hook bank, pricing calculator, outreach script, claims and rights checklist, intake, client emails, FAQs, and AI prompts.",
+              label: "Open the UGC client kit",
+            }
         : {
             copy: `Open the free preview, or unlock all ${relatedPacks[0]?.assets.length ?? 0} working files for outreach, pricing, delivery, and client handoff.`,
             label: "Open free preview",

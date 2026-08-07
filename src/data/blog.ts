@@ -3,6 +3,7 @@ import { cafeMenuAuditChecklist } from "@/data/blog/cafe-menu-audit-checklist";
 import { howToGetCafeMenuDesignClients } from "@/data/blog/how-to-get-cafe-menu-design-clients";
 import { howToGetAiAutomationClientsForTrades } from "@/data/blog/how-to-get-ai-automation-clients-for-trades";
 import { howToGetReviewManagementClients } from "@/data/blog/how-to-get-review-management-clients";
+import { howToStartAUgcBriefWritingService } from "@/data/blog/how-to-start-a-ugc-brief-writing-service";
 import { howToTurnCustomerReviewsIntoSocialMediaPosts } from "@/data/blog/how-to-turn-customer-reviews-into-social-media-posts";
 
 export type BlogPost = {
@@ -41,6 +42,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  howToStartAUgcBriefWritingService,
   cafeMenuAuditChecklist,
   howToTurnCustomerReviewsIntoSocialMediaPosts,
   aiAutomationPricingGuideSmallBusiness,
@@ -2258,10 +2260,11 @@ export const blogPosts: BlogPost[] = [
       "Use this practical UGC brief template to define the buyer, hooks, shots, claims, deliverables, approvals, usage rights, and first-client offer.",
     category: "Creator Business",
     publishedAt: "2026-07-19",
-    updatedAt: "2026-07-19",
+    updatedAt: "2026-08-07",
     readingTime: "14 min read",
     relatedPackSlugs: ["ugc-brief-generator", "shopify-cart-audit", "review-testimonial-service"],
     relatedArticleSlugs: [
+      "how-to-start-a-ugc-brief-writing-service",
       "how-to-start-a-shopify-cart-audit-service",
       "how-to-get-your-first-client-without-a-big-audience",
       "service-business-pricing-guide-for-beginners",
